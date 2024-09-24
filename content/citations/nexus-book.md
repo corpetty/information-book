@@ -24,3 +24,13 @@ He defines three types of reality:
 We have developed tools over the ages that have grown our ability to create information networks:
 1. Stories - binding tribes together through shared narrative, but ultimately difficult to pass around and stay the same
 2. Documents - keeping the story the same throughout the ages while also allowing for larger complexity because it doesn't need to be all kept in the brain and shared through story-tellers, but ultimately leads to bureaucracy which has a masking effect on how the system works. 
+
+Documents lead to books, which are important in that they are the same piece of information that spreads without (hopefully), change. These are used as central pillars to large information networks to create the intersubjective reality of the network. 
+
+It is important to note that even these books are subject to the infallibility of humans. 
+
+>[!QUOTE] While churches made decisions about texts, the texts themselves shaped the churches
+
+He then goes on to explain that the free flow of information doesn't always lead to truth (the naive interpretation of information). He does this by comparing the growth of witch hunts and related conspiracies vs the growth of the scientific revolution via the invention of the printing press. The former influence was from a book _The Hammer of the Witches_, which sold out and was widespread, instantly, leading to multiple versions and editions, leading to cult like fantasies and inquisitions against witches, killing tens of thousands of innocent people, even children. Even today, our modern vision of what witches are is shaped by this book and its cultural influence. 
+
+On the other hand, Copernicus''s _On the Revolutions of the Heavenly Bodies_ was hailed as "an all-time worst seller" by Arthur Koestler. 
