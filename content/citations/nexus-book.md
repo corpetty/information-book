@@ -43,6 +43,21 @@ The way a given information network tends towards truth is through the instituti
 
 This, although, comes at the cost of order. As a "strong self-correcting mechanism tends towards disagreements, arguments, conflicts, and rifts."
 
+The next section discusses democracies as an information network, and how the institutions and check/balances of that democracy serve as the self-correcting functions. How autocracy comes into play and some of the pitfals that can happen. 
+
+The key institutions he identifies are: 
+1. academic institutions: The peer review process is robust, publish or perish graduation path is mandatory, thus there is a pressure to always be looking to self-correct and find errors in the current level of understanding. It is assumed we aren't right.
+2. the media: free competition allows for independent bias to be checked
+3. the judiciary: "a judge who takes bribes can be tried and punished like any other citizen (lol)"
+
+>[!QUOTE] The existence of several independent institutions that seek the truth in different ways allows these institutions to check and correct one another. 
+
+From there, examples of early democracies throughout time with a main focus on one of the largest in earlier times, the Roman Empire. 
+
+One thing he harps on is that a key requirement for a healthy democracy is a "conversation." In early history, there weren't large successful democracies because we didn't have a good communication technology to allow for a productive conversation, hence, Rome fell to autocracies, and eventually apart. 
+
+> [!QUOTE] Mass media makes mass democracy possible.
+
 The next part of the book going into how strong/large information networks can lead towards two extremes: democratic and authoritarian/totalitarianism governments. These extremes are differentiated by how information flows. Democratic has a decentralized and competing landscape of information sources, which authoritarian regimes force all information to flow through a central party. Each of these have various benefits and consequences in terms of holding control and power, despite the fact that authoritarian regimes have no desire to find truth, only optimize for control. 
 
 He uses Nazi Germany and Stalin's U.S.S.R.'s history to go through how effective these regimes were at controlling large groups of people. 
@@ -50,3 +65,4 @@ He uses Nazi Germany and Stalin's U.S.S.R.'s history to go through how effective
 One trade-off is effienciency of decision making. Authoritarian regimes are very efficient at making decisions and following through with the, as they're done by a single central party, and there _can't_ be dissent, whereas democratic decisions making is slower and harder to do because it fosters differing opinions and checks and balances of power. 
 
 Another is resilience. If you bottleneck an authoritarian decision making process, it falls apart completely. This seems to be an inevitability because those underneath are afraid of giving bad information, thus withholding information so they don't get in trouble (killed). 
+
