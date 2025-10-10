@@ -68,3 +68,5 @@ The first thing you should notice is that the amount of code you need to write t
 There's much to be said about how to make a "good abstraction" for users, but that is the point of another article in the future. The point here is that `seaborn` was created to lower the barrier of entry for users so that they can plot things without having to go through the more complicated process of learning how to use `matplotlib`, but by doing so, it as removed the user's ability to fully explore what can be done with plotting in python. 
 
 **They've constrained the user's options for the benefit of increasing overall accessibility.** 
+
+NOTE: Often called "opinionated"
