@@ -1,6 +1,6 @@
 ---
 title: "The Democratization Paradox: When Access Kills Quality"
-date: 2026-02-18
+created: 2026-02-18
 tags:
   - innovation
   - technology
