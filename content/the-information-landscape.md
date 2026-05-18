@@ -152,6 +152,20 @@ A medium that rewards engagement-bait produces engagement-bait. A medium that re
 
 This is a thread the book picks up later. For now, the point is: every node and every arrow in this two-pipeline picture has a medium attached to it. The selection criteria at each gate are downstream of what that medium can hold and what it rewards. Changing the medium changes the criteria. The pipeline operates inside a specific media ecosystem, and the ecosystem is doing most of the work.
 
+## Where manufactured content enters
+
+The diagram has The Out There as the source. Everything else descends from it. That's the cleanest version of the picture, and it's wrong for a substantial chunk of what circulates as information.
+
+A lot of content is manufactured. Generated wholesale, never measured against anything in particular, and injected into the pipeline at later stages. Astrology is the canonical example. The astronomical positions involved are real measurements. The interpretive framework that turns those positions into personality claims and predictions was invented. It didn't survive peer review at the consensus stage, because it never went through that stage. It got injected directly at the curation stage (horoscope columns in newspapers, daily app readings) and at the meme stage (sun sign discourse, "as a Scorpio…").
+
+This generalizes. Religious doctrines about how reality works. Conspiracy theories. Marketing claims. Political propaganda. AI-generated text. Folk wisdom with no empirical grounding. Manufactured statistics passed around without sources. All of these can enter the pipeline without ever passing through measurement, and once in, they're subject to the same selection pressures and compressions as anything else.
+
+The implication is that downstream selection criteria can't easily tell measured content from manufactured content. A horoscope and a peer-reviewed psychological finding look about the same shape by the time they reach a reader's attention. Both are short, both make claims about the reader's life, both fit a narrative. The newsworthiness gate doesn't ask "did this come from data?" It asks "will this get clicked?" The same goes for the memetic gate, the curation gate, and in some cases the consensus gate. Fields exist where manufactured frameworks won consensus and then propagated through the same channels as anything else.
+
+So the diagram needs a softer claim. The Out There is *a* source, not *the* source. Manufactured content is the other source. Most content is some mixture: real astronomical positions plus invented framework, real medical observation plus invented mechanism, real economic data plus invented causal story. The pipeline doesn't distinguish between the components.
+
+This is one of the threads that connects to the truth-value question (slated for Chapter 5c). The truth value of a piece of content depends partly on what the manufactured component is doing: preserving approximate truth, inverting it, or wandering off into orthogonal territory. Astrology inverts (planetary positions don't cause personality traits). Some folk medicine preserves (remedies that work for reasons people didn't understand). AI-generated content can do any of the three, depending on what it's trained on and what it's asked.
+
 ## A note on feedback loops
 
 The pipeline I just walked through is linear. The reality it represents is messier. Memes feed back into what research gets funded, since "interesting" topics follow cultural attention. News shapes what consensus forms around (climate science took the form it did partly because of how it was being reported on). Theories shape what we choose to measure (we measure GDP because economic theory said GDP matters, and we measure it differently in different decades because economic theory changed). Selection criteria at one stage propagate backward and affect what gets done at earlier stages.
