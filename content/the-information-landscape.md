@@ -10,21 +10,20 @@ This is the diagram I keep coming back to. I drew it years ago, on a whim, to tr
 
 ![[Pasted image 20240922201821.png]]
 
-```graphviz
-digraph {
-void [label="The Out There", shape=egg];
-data [label="Raw Data"];
-insight [label="Insight"];
-theory [label="Theory"];
-news [label="News/Journalism"];
-meme [label="Meme"];
+```mermaid
+flowchart LR
+    void([The Out There])
+    data[Raw Data]
+    insight[Insight]
+    theory[Theory]
+    news[News/Journalism]
+    meme[Meme]
 
-void -> data[label="Measurement"];
-data -> insight[label="Analysis"];
-insight -> theory[label="Consensus"];
-theory -> news[label="Abstraction/Curation"];
-news -> meme[label="Abstraction/Emote"];
-}
+    void -->|Measurement| data
+    data -->|Analysis| insight
+    insight -->|Consensus| theory
+    theory -->|Abstraction/Curation| news
+    news -->|Abstraction/Emote| meme
 ```
 
 The idea: reality, on the left, is the source. By the time it reaches a meme on the right, it has been transformed five times, each transformation a kind of abstraction or compression. Most of what we encounter day-to-day lives somewhere on the right side of this diagram, multiple steps removed from whatever happened in the world.
@@ -107,22 +106,18 @@ This is where the sibling pipeline comes in.
 
 Parallel to the transport pipeline, there's a pipeline of *selection events*. At each stage of the transport pipeline, content faces a gate. Most content fails the gate. Some survives. The criteria at each gate are different, and they reflect what that stage cares about.
 
-```graphviz
-digraph {
-rankdir=LR;
-node [shape=box, style=rounded];
+```mermaid
+flowchart LR
+    m1(Funding /<br/>research agenda /<br/>instrumentation)
+    m2(Methodological fit /<br/>publishability /<br/>file-drawer pressure)
+    m3(Peer review /<br/>career incentives /<br/>institutional fit)
+    m4(Newsworthiness /<br/>narrative shape /<br/>audience interest)
+    m5(Memetic fitness /<br/>emotional valence /<br/>identity resonance)
 
-m1 [label="Funding /\nresearch agenda /\ninstrumentation"];
-m2 [label="Methodological fit /\npublishability /\nfile-drawer pressure"];
-m3 [label="Peer review /\ncareer incentives /\ninstitutional fit"];
-m4 [label="Newsworthiness /\nnarrative shape /\naudience interest"];
-m5 [label="Memetic fitness /\nemotional valence /\nidentity resonance"];
-
-m1 -> m2 [label="survives"];
-m2 -> m3 [label="survives"];
-m3 -> m4 [label="survives"];
-m4 -> m5 [label="survives"];
-}
+    m1 -->|survives| m2
+    m2 -->|survives| m3
+    m3 -->|survives| m4
+    m4 -->|survives| m5
 ```
 
 That's the rough shape. Walking through it stage by stage:
