@@ -23,7 +23,7 @@ Drafted: [[info-time-limit]] (Chapter 3, partial), [[optionality vs access]] (Ch
 
 These need to be resolved (or at least committed to provisionally) before more chapters get drafted, because the answers reshape multiple later chapters.
 
-- **Transport vs. selection.** Is compression at scale driven by lossy transport across hops, or by selection pressures favoring compressed-and-resonant content? Right now the book commits to transport. The selection view is probably more powerful and may be primary. Whichever way this goes, large parts of Chapter 5 and most of Part III need to reflect it.
+- **Transport vs. selection.** Is compression at scale driven by lossy transport across hops, or by selection pressures favoring compressed-and-resonant content? Worked through in [[transport-vs-selection]]. Current provisional answer: selection is primary, transport is real but increasingly downstream as digital media collapses transit costs. If that holds up, Chapter 5 needs rework, the manipulation surface argument gets sharper, political economy becomes load-bearing, and AI moves from optional to central. Still open to being talked out of the commitment.
 - **Where does truth value live?** Compression doesn't always degrade truth. Sometimes it preserves a good approximation. Sometimes it inverts. Sometimes it wanders into orthogonal territory. The book needs a story about when each happens. Currently there isn't one, which means the worry the book wants to express doesn't follow from the formal structure.
 - **Is "complexity" doing two jobs?** Chapter 5 defines complexity as "preconditions a receiver needs" and then slides into using it for nuance, depth, informational entropy. The real gating variable might be *handle-ability* (emotional/identity/action-affordance fit) rather than precondition count. If so, the frame needs renaming and parts of Chapter 5 reworking.
 - **Are receiver budgets fixed or trainable?** The current model treats budget as a constraint. Education, training, and shared vocabulary expand budget. "Institutional carriers" was hiding two distinct functions: preserving the complex form AND training receivers to handle it. These need separate chapters.
@@ -93,9 +93,9 @@ The previous "highest leverage" answer (finish Chapter 3, generalize Chapter 4) 
 
 Best next moves, ranked:
 
-1. **Pick a side on transport vs. selection.** Even a provisional commitment unblocks Chapter 5 rework and several Part III framings. Could start as a short standalone note in this directory.
-2. **Draft Chapter 5c (truth, compression, and when each wins).** This is the chapter that closes the moral-neutrality gap and gives the book its actual stakes. Probably the highest-impact new chapter.
-3. **Re-engage Chapter 5 with the gaps flagged.** Once 1 and 2 are settled, Chapter 5 can be rewritten to reflect the resolved foundations rather than papered-over uncertainty.
-4. **Sketch Chapter 9 (the integration problem).** It's the new prescriptive core of Part IV and currently has zero draft. Even a skeleton would unblock thinking about Chapters 8, 10, 11, and 12.
-5. **Finish Chapter 3 second half.** Receiver-budget stuff, with the new "budget is trainable" note added.
+1. ~~**Pick a side on transport vs. selection.**~~ Drafted as [[transport-vs-selection]]. Provisional commitment: selection-primary. Needs to be pressure-tested before being baked into other chapters.
+2. **Draft Chapter 5c (truth, compression, and when each wins).** Closes the moral-neutrality gap and gives the book its actual stakes. Probably the highest-impact new chapter.
+3. **Re-engage Chapter 5 with the gaps flagged AND the selection commitment.** Once 2 is settled and the selection commitment holds, Chapter 5 can be rewritten to reflect the resolved foundations rather than papered-over uncertainty.
+4. **Sketch Chapter 9 (the integration problem).** New prescriptive core of Part IV, currently zero draft. Even a skeleton would unblock thinking about Chapters 8, 10, 11, and 12.
+5. **Finish Chapter 3 second half.** Receiver-budget stuff, with the "budget is trainable" note added.
 6. **Generalize Chapter 4 beyond software.** Still right, still load-bearing.
