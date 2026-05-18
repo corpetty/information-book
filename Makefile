@@ -7,6 +7,7 @@
 #   make           rebuild graph
 #   make serve     build then serve viewer at localhost:$(PORT)
 #   make stats     print build counts
+#   make harvest   scan quartz notes for candidate claims
 #   make clean     remove generated artifacts
 #   make help      list targets
 
@@ -23,7 +24,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/traditions.json $(DATA)/sources.json $(DATA)/case-studies.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats clean help
+.PHONY: all build serve stats clean help harvest
 
 all: $(NODES_OUT)
 build: $(NODES_OUT)
@@ -37,6 +38,9 @@ serve: $(NODES_OUT)
 
 stats: $(STATS_OUT)
 	@cat $(STATS_OUT)
+
+harvest:
+	@node $(SCRIPTS)/harvest-claims.js
 
 clean:
 	@rm -f $(NODES_OUT) $(EDGES_OUT) $(STATS_OUT)

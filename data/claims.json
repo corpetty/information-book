@@ -1,0 +1,135 @@
+{
+  "_doc": "Canonical claims promoted from data/claim-candidates.jsonl. Each claim has a stable slug, a status (working / load-bearing / provisional / retired), a summary, and one or more anchors in `harvestedFrom` (used by the build's drift check to flag stale anchors when the underlying prose changes). `argues` lists notes that advance the claim; `arguedInChapters` lists chapters; `dependsOn` lists other claims (slug-only or `claim:slug`) or questions (`question:slug`); `supersedes` lists prior-version claims. Run `make harvest` to refresh the candidate inbox; promote new candidates by editing this file.",
+  "claims": [
+    {
+      "id": "two-pipelines-parallel",
+      "label": "Transport and selection are parallel mechanisms",
+      "summary": "Transport (lossy re-encoding) and selection (gates with local criteria) are parallel mechanisms operating in series at every stage of the abstraction pipeline. Neither is downstream of the other. Replaces the original 'which is primary' framing.",
+      "aliases": ["two pipelines", "parallel mechanisms", "transport and selection in parallel"],
+      "status": "load-bearing",
+      "argues": ["the-information-landscape", "transport-vs-selection", "outline"],
+      "arguedInChapters": ["information-landscape", "selection-as-other-engine", "complexity-virality-tradeoff"],
+      "dependsOn": [],
+      "supersedes": [],
+      "harvestedFrom": [
+        {
+          "note": "the-information-landscape",
+          "lineApprox": 139,
+          "text": "both are operating, and the output of each stage is a small fraction of the input, in heavily transformed form."
+        },
+        {
+          "note": "outline",
+          "lineApprox": 103,
+          "text": "both are real, parallel mechanisms operating in series at every stage. The \"is one primary?\" framing was wrong."
+        }
+      ]
+    },
+    {
+      "id": "selection-primary",
+      "label": "Selection is primary",
+      "summary": "Of the two parallel mechanisms, selection is the primary determinant of what propagates. Transport is real but increasingly downstream — a substrate, not the dynamic.",
+      "aliases": ["selection is primary", "selection dominates"],
+      "status": "load-bearing",
+      "argues": ["transport-vs-selection"],
+      "arguedInChapters": ["selection-as-other-engine", "complexity-virality-tradeoff"],
+      "dependsOn": ["claim:two-pipelines-parallel"],
+      "harvestedFrom": [
+        {
+          "note": "transport-vs-selection",
+          "lineApprox": 51,
+          "text": "Selection is primary. Transport is real but increasingly downstream."
+        }
+      ]
+    },
+    {
+      "id": "transport-collapse-shifts-constraint",
+      "label": "Transport-cost collapse shifts the binding constraint",
+      "summary": "In modern digital networks the cost of transport has collapsed to near zero, so selection becomes the dominant constraint on what spreads. In earlier eras with expensive transit, transport was a binding constraint and a transport-style argument had real force. The relevant constraint has shifted as the medium has changed.",
+      "aliases": ["transport collapse", "transport-to-selection historical shift"],
+      "status": "load-bearing",
+      "argues": ["transport-vs-selection"],
+      "arguedInChapters": ["selection-as-other-engine", "political-economy-of-attention"],
+      "dependsOn": ["claim:selection-primary"],
+      "harvestedFrom": [
+        {
+          "note": "transport-vs-selection",
+          "lineApprox": 53,
+          "text": "In modern digital networks, the cost of transport has collapsed to near zero, so selection becomes the dominant constraint on what spreads."
+        }
+      ]
+    },
+    {
+      "id": "medium-attached-to-every-gate",
+      "label": "Every gate has a medium that shapes its criteria",
+      "summary": "Every node and every arrow in the two-pipeline picture has a medium attached. The selection criteria at each gate are downstream of what that medium can hold and what it rewards. Changing the medium changes the criteria — the pipeline operates inside a specific media ecosystem.",
+      "aliases": ["medium attached to every gate", "medium shapes gate criteria"],
+      "status": "load-bearing",
+      "argues": ["the-information-landscape"],
+      "arguedInChapters": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention"],
+      "dependsOn": ["question:medium-and-manipulation"],
+      "harvestedFrom": [
+        {
+          "note": "the-information-landscape",
+          "lineApprox": 153,
+          "text": "every node and every arrow in this two-pipeline picture has a medium attached to it. The selection criteria at each gate are downstream of what that medium can hold and what it rewards."
+        }
+      ]
+    },
+    {
+      "id": "complexity-virality-inverse",
+      "label": "Spread is inverse to complexity",
+      "summary": "How easily a piece of information spreads across a social network is inversely related to how complex it is. The transport half of the two-mechanism structure; pressure-tested by the question of whether 'complexity' is doing two jobs (precondition count vs. handle-ability).",
+      "aliases": ["complexity virality inverse", "spread inverse complexity"],
+      "status": "working",
+      "argues": ["complexity-virality-tradeoff"],
+      "arguedInChapters": ["complexity-virality-tradeoff"],
+      "dependsOn": ["question:complexity-doing-two-jobs"],
+      "harvestedFrom": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "lineApprox": 9,
+          "text": "how easily a piece of information spreads across a social network is inversely related to how complex it is."
+        }
+      ]
+    },
+    {
+      "id": "complexity-ceiling-by-network-size",
+      "label": "Complexity ceiling bounded by network size",
+      "summary": "The maximum complexity an idea can carry is bounded by the size of the network it needs to traverse. Bigger network, lower ceiling. Refined in workshop to include a time-window factor.",
+      "aliases": ["complexity ceiling", "complexity bound", "N-hop bound"],
+      "status": "working",
+      "argues": ["complexity-virality-tradeoff"],
+      "arguedInChapters": ["complexity-virality-tradeoff", "selection-as-other-engine"],
+      "dependsOn": ["claim:complexity-virality-inverse"],
+      "harvestedFrom": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "lineApprox": 50,
+          "text": "the maximum complexity an idea can carry is bounded by the size of the network it needs to traverse."
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "lineApprox": 90,
+          "text": "the maximum complexity an idea can carry across a network in a given window of time is bounded by the size of"
+        }
+      ]
+    },
+    {
+      "id": "optionality-cost-of-generality",
+      "label": "Cost of generality is accessibility, and vice versa",
+      "summary": "Optionality and accessibility trade off: the more options a thing has, the harder it is to access. The cost of generality is accessibility; the cost of accessibility is generality. Same curve appears in software libraries, religions, political platforms, scientific popularization, legal codes.",
+      "aliases": ["optionality vs access", "cost of generality", "accessibility trade-off"],
+      "status": "working",
+      "argues": ["optionality-vs-access"],
+      "arguedInChapters": ["optionality-vs-access"],
+      "dependsOn": [],
+      "harvestedFrom": [
+        {
+          "note": "optionality-vs-access",
+          "lineApprox": 70,
+          "text": "They've constrained the user's options for the benefit of increasing overall accessibility."
+        }
+      ]
+    }
+  ]
+}

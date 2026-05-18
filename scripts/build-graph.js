@@ -18,7 +18,7 @@
 // parser with wiki-link extraction, claim harvester, and LLM
 // interpretive triples from sources/*.pdf.
 
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -394,6 +394,68 @@ function loadCaseStudies() {
   }
 }
 
+// ---------------------------------------------------------------- claims
+
+function loadClaims() {
+  const claimsPath = resolve(dataDir, 'claims.json');
+  if (!existsSync(claimsPath)) return; // claims populated over time; absent is fine
+  const { claims } = JSON.parse(readFileSync(claimsPath, 'utf8'));
+  if (!claims || !claims.length) return;
+  for (const c of claims) {
+    addNode({
+      id: `claim:${c.id}`,
+      type: 'Claim',
+      label: c.label,
+      props: {
+        summary: c.summary,
+        aliases: c.aliases || [],
+        status: c.status || 'working',
+        harvestedFrom: c.harvestedFrom || [],
+      },
+      provenance: [{ source: 'claims.json', kind: 'catalog' }],
+    });
+    for (const slug of c.argues || []) {
+      addEdge(`note:${slug}`, `claim:${c.id}`, 'argues');
+    }
+    for (const slug of c.arguedInChapters || []) {
+      addEdge(`chapter:${slug}`, `claim:${c.id}`, 'argues');
+    }
+    for (const dep of c.dependsOn || []) {
+      const target = dep.includes(':') ? dep : `claim:${dep}`;
+      addEdge(`claim:${c.id}`, target, 'dependsOn');
+    }
+    for (const slug of c.supersedes || []) {
+      addEdge(`claim:${c.id}`, `claim:${slug}`, 'supersedes');
+    }
+  }
+}
+
+function checkClaimDrift() {
+  // For each canonical Claim, verify its harvestedFrom anchors still appear
+  // in the latest candidate set. If not, the prose has moved and the claim
+  // may be stale — surface as a warning.
+  const candidatesPath = resolve(dataDir, 'claim-candidates.jsonl');
+  if (!existsSync(candidatesPath)) return;
+  const text = readFileSync(candidatesPath, 'utf8');
+  const candidates = text.split('\n').filter(l => l.trim()).map(l => JSON.parse(l));
+  const byNote = {};
+  for (const c of candidates) (byNote[c.note] ||= []).push(c);
+  for (const node of nodes.values()) {
+    if (node.type !== 'Claim') continue;
+    for (const anchor of node.props?.harvestedFrom || []) {
+      const pool = byNote[anchor.note] || [];
+      const prefix = (anchor.text || '').slice(0, 40);
+      if (!prefix) continue;
+      const match = pool.find(c =>
+        c.text.includes(prefix) || prefix.includes(c.text.slice(0, 40))
+      );
+      if (!match) {
+        warnings.push(`claim drift: ${node.id} anchor "${prefix}…" not found in ${anchor.note} candidates`);
+      }
+    }
+  }
+}
+
 // ---------------------------------------------------------------- emit
 
 function emit() {
@@ -412,7 +474,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 2,
+    phase: 3,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,
@@ -438,5 +500,7 @@ loadQuestions();
 loadTraditions();
 loadSources();
 loadCaseStudies();
+loadClaims();
+checkClaimDrift();
 validateEdges();
 emit();
