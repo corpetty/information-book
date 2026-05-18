@@ -88,6 +88,16 @@ A few things I haven't worked out, and that the next pass should pressure-test:
 - **Can the fitness landscape be characterized rigorously?** The book has a lot of leverage if we can enumerate or formalize the fitness criteria. O'Connor and Weatherall's models do some of this. Engage properly.
 - **What's the right name?** "Selection" is the right word for the mechanism but maybe a bad word for the book because of loaded connotations (natural selection, gatekeeping). Memetic fitness? Attention dynamics? The mechanism deserves a clear label.
 
-## Provisional commitment
+## Refinement after feedback
 
-Selection-primary, with transport as a historical and now-diminishing constraint. Open to being talked out of it. Most likely to be talked out of it by good prior art I haven't read yet.
+The transport/selection dichotomy is less clean than I drew it above. Pushback I got back: preconditions, capacity, and *want* aren't independent variables. They're entangled through a feedback loop.
+
+The loop: someone wants to engage with X → they engage → preconditions accumulate → they want to engage with deeper X → preconditions deepen → ... If the wanting stops, the loop dies and preconditions decay (or never form). If it keeps going, preconditions accumulate and the receiver's selection landscape for X-like material gets richer over time. **Want is the prime mover.** Both capacity (the transport piece) and selection criteria are downstream of it.
+
+This collapses some of the apparent separability between transport and selection. They're aspects of one feedback dynamic, not two competing mechanisms. The selection-primary commitment still holds — what survives in a network is determined by selection criteria — but the criteria themselves are shaped by the cumulative history of past wants, and *those* are themselves outcomes of past selections operating on past media.
+
+A new question opens at the medium level: what does the medium do to *want*? A medium that rewards shallow engagement cultivates want for shallow content, which trains preconditions for more shallow content. A medium that rewards sustained engagement cultivates want for complex content. The medium shapes the prime mover. That's a foundational question of its own, flagged in [[outline]] and probably deserving its own working note.
+
+## Provisional commitment (updated)
+
+Selection-primary, with *want* as the engine that drives the whole feedback loop and the *medium* as the thing that shapes want at the root. Transport, capacity, preconditions, and selection criteria are all entangled through accumulated history of engagement. Open to being talked out of it. Most likely to be talked out of it once the medium-and-manipulation question gets its own treatment.
