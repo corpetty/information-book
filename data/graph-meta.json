@@ -1,0 +1,81 @@
+{
+  "version": "0.1.0",
+  "description": "Schema for the information-book semantic-triple graph. Node types and predicates are the contract that the parser emits and the viewer consumes. Slugs are stable across outline renumbering; chapter ids look like 'chapter:transport-vs-selection'.",
+
+  "nodeTypes": {
+    "Part":          { "color": "#1e3a8a", "shape": "diamond",         "description": "One of the four Parts of the book" },
+    "Chapter":       { "color": "#4f8cff", "shape": "round-rectangle", "description": "A chapter in the outline (incl. 5b, 5c sub-chapters)" },
+    "Note":          { "color": "#94a3b8", "shape": "rectangle",       "description": "A markdown file in information-book/ (prose or conversation subtype)" },
+    "Mechanism":     { "color": "#0ea5a3", "shape": "hexagon",         "description": "A named structural mechanism the book argues for (Transport, Selection, Want-as-prime-mover, ...)" },
+    "PipelineStage": { "color": "#10b981", "shape": "round-octagon",   "description": "A node in the abstraction pipeline (Raw Data, Theory, News, Meme, ...)" },
+    "Gate":          { "color": "#f97316", "shape": "vee",             "description": "A selection-side gate paired with a PipelineStage" },
+    "Concept":       { "color": "#f59e0b", "shape": "round-tag",       "description": "Cross-cutting concept (receiver budget, complexity ceiling, manipulation surface, ...)" },
+    "Question":      { "color": "#b45309", "shape": "concave-hexagon", "description": "A foundational open question the book is working out" },
+    "Claim":         { "color": "#facc15", "shape": "round-tag",       "description": "A load-bearing claim the book argues — emerges from prose via harvesting + author promotion" },
+    "Source":        { "color": "#a855f7", "shape": "rectangle",       "description": "Book / paper / post / personal conversation the book engages with" },
+    "Author":        { "color": "#7c3aed", "shape": "ellipse",         "description": "Author of one or more Sources" },
+    "Tradition":     { "color": "#db2777", "shape": "round-pentagon",  "description": "Intellectual lineage (memetics, media ecology, network epistemology, ...)" },
+    "CaseStudy":     { "color": "#0891b2", "shape": "barrel",          "description": "Worked example the book uses (Hammer/Copernicus, telephone game, matplotlib/seaborn, astrology, ...)" },
+    "Tension":       { "color": "#7f1d1d", "shape": "concave-hexagon", "description": "An open contradiction or unresolved trade-off" },
+    "Status":        { "color": "#6b7280", "shape": "ellipse",         "description": "Drafting status (drafted / in-workshop / skeleton / not-yet-drafted / superseded)" }
+  },
+
+  "predicates": {
+    "partOf":            { "category": "structural",  "color": "#1e3a8a", "directed": true,  "description": "Chapter belongs to a Part" },
+    "covers":            { "category": "structural",  "color": "#0ea5a3", "directed": true,  "description": "Chapter discusses this Concept / Mechanism / Question / Claim / Tension" },
+    "definedIn":         { "category": "structural",  "color": "#475569", "directed": true,  "description": "Concept / Mechanism has its primary development in this Note" },
+    "succeedsStage":     { "category": "structural",  "color": "#10b981", "directed": true,  "description": "PipelineStage comes after the previous stage" },
+    "gateFor":           { "category": "structural",  "color": "#f97316", "directed": true,  "description": "Gate is the selection-side sibling of this PipelineStage" },
+    "hasStatus":         { "category": "structural",  "color": "#6b7280", "directed": true,  "description": "Chapter has this drafting status" },
+    "representedBy":     { "category": "structural",  "color": "#a855f7", "directed": true,  "description": "Source is materially represented as this Note (e.g. conversation transcript that doubles as a source)" },
+
+    "derivesFrom":       { "category": "causal",      "color": "#dc2626", "directed": true,  "description": "Mechanism / Concept derives from another" },
+    "enables":           { "category": "causal",      "color": "#f97316", "directed": true,  "description": "X enables Y (inverse-ish of derivesFrom)" },
+    "precondition":      { "category": "causal",      "color": "#b91c1c", "directed": true,  "description": "X is a precondition for Y" },
+    "compresses":        { "category": "causal",      "color": "#dc2626", "directed": true,  "description": "PipelineStage compresses into the next" },
+    "selectsFor":        { "category": "causal",      "color": "#ef4444", "directed": true,  "description": "Gate selects for this Concept (its filter criterion)" },
+
+    "cites":             { "category": "provenance",  "color": "#a855f7", "directed": true,  "description": "Note cites a Source" },
+    "authoredBy":        { "category": "provenance",  "color": "#7c3aed", "directed": true,  "description": "Source authored by Author" },
+    "partOfTradition":   { "category": "provenance",  "color": "#db2777", "directed": true,  "description": "Source belongs to a Tradition" },
+    "evidencedBy":       { "category": "provenance",  "color": "#94a3b8", "directed": true,  "description": "Claim / Concept / Mechanism evidenced by a Note or Source passage" },
+
+    "tensionWith":       { "category": "dialectical", "color": "#b45309", "directed": false, "description": "In tension with (both endpoints contested)" },
+    "contradicts":       { "category": "dialectical", "color": "#7f1d1d", "directed": false, "description": "Direct contradiction" },
+    "supersedes":        { "category": "dialectical", "color": "#475569", "directed": true,  "description": "Replaces a prior version (Claim → Claim, Chapter → Chapter)" },
+    "flagsOpenQuestion": { "category": "dialectical", "color": "#b45309", "directed": true,  "description": "Flags an open Question / unresolved issue" },
+
+    "argues":            { "category": "claim",       "color": "#facc15", "directed": true,  "description": "Chapter or Note argues this Claim" },
+    "supports":          { "category": "claim",       "color": "#22c55e", "directed": true,  "description": "Source supports this Claim (with quote + line + confidence + rationale)" },
+    "pressureTests":     { "category": "claim",       "color": "#ef4444", "directed": true,  "description": "Source pressure-tests / challenges this Claim" },
+    "dependsOn":         { "category": "claim",       "color": "#8b5cf6", "directed": true,  "description": "Claim depends on another Claim, or on a Question resolving a particular way" },
+
+    "mentions":          { "category": "weak",        "color": "#cbd5e1", "directed": true,  "description": "Free-text mention — useful for navigation, not for argument" },
+    "wikiLinks":         { "category": "weak",        "color": "#cbd5e1", "directed": true,  "description": "[[wikilink]] reference between Notes" }
+  },
+
+  "predicateCategories": {
+    "structural":  { "color": "#0ea5a3", "description": "Containment, grouping, placement" },
+    "causal":      { "color": "#dc2626", "description": "Derivation, dependency, selection" },
+    "provenance":  { "color": "#a855f7", "description": "Where a claim comes from" },
+    "dialectical": { "color": "#b45309", "description": "Tensions, contradictions, supersession" },
+    "claim":       { "color": "#facc15", "description": "Argument structure: arguing, supporting, pressure-testing, depending" },
+    "weak":        { "color": "#cbd5e1", "description": "Free-text mentions — provenance not yet validated" }
+  },
+
+  "statuses": ["drafted", "in-workshop", "skeleton", "not-yet-drafted", "superseded"],
+
+  "noteSubtypes": {
+    "prose":        "Standard chapter or thematic essay (H2-section structure)",
+    "conversation": "Transcribed conversation (turn-based structure with speaker tags)"
+  },
+
+  "sourceKinds": {
+    "book":                  "Published book",
+    "paper":                 "Academic paper",
+    "post":                  "Online post or essay",
+    "personal-conversation": "Transcribed personal conversation"
+  },
+
+  "claimStatuses": ["working", "load-bearing", "provisional", "retired"]
+}

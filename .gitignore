@@ -1,0 +1,6 @@
+data/nodes.jsonl
+data/edges.jsonl
+data/build-stats.json
+node_modules/
+*.log
+.DS_Store
