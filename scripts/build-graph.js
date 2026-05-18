@@ -456,6 +456,25 @@ function checkClaimDrift() {
   }
 }
 
+// ---------------------------------------------------------------- interpretive
+
+function loadInterpretive() {
+  const path = resolve(dataDir, 'interpretive-triples.jsonl');
+  if (!existsSync(path)) return;
+  const lines = readFileSync(path, 'utf8').split('\n').filter(l => l.trim());
+  for (const line of lines) {
+    const t = JSON.parse(line);
+    addEdge(t.subject, t.object, t.predicate, {
+      interpretive: true,
+      quote: t.quote,
+      pageApprox: t.pageApprox,
+      confidence: t.confidence,
+      rationale: t.rationale,
+      sourceFile: t.sourceFile,
+    });
+  }
+}
+
 // ---------------------------------------------------------------- emit
 
 function emit() {
@@ -474,7 +493,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 3,
+    phase: 4,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,
@@ -502,5 +521,6 @@ loadSources();
 loadCaseStudies();
 loadClaims();
 checkClaimDrift();
+loadInterpretive();
 validateEdges();
 emit();

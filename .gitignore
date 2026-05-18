@@ -2,6 +2,9 @@ data/nodes.jsonl
 data/edges.jsonl
 data/build-stats.json
 data/claim-candidates.jsonl
+data/extraction-catalog.json
+data/interpretive-triples.jsonl
+data/interpretive-notes.json
 node_modules/
 *.log
 .DS_Store

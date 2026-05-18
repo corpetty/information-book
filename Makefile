@@ -8,6 +8,9 @@
 #   make serve     build then serve viewer at localhost:$(PORT)
 #   make stats     print build counts
 #   make harvest   scan quartz notes for candidate claims
+#   make catalog   regenerate extraction-catalog.json from current graph
+#   make aggregate-interpretive   merge per-PDF extractions
+#   make extract-build   aggregate + rebuild (run after extraction agents)
 #   make clean     remove generated artifacts
 #   make help      list targets
 
@@ -24,7 +27,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/traditions.json $(DATA)/sources.json $(DATA)/case-studies.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats clean help harvest
+.PHONY: all build serve stats clean help harvest catalog aggregate-interpretive extract-build
 
 all: $(NODES_OUT)
 build: $(NODES_OUT)
@@ -41,6 +44,14 @@ stats: $(STATS_OUT)
 
 harvest:
 	@node $(SCRIPTS)/harvest-claims.js
+
+catalog:
+	@node $(SCRIPTS)/build-catalog.js
+
+aggregate-interpretive:
+	@node $(SCRIPTS)/aggregate-interpretive.js
+
+extract-build: aggregate-interpretive build
 
 clean:
 	@rm -f $(NODES_OUT) $(EDGES_OUT) $(STATS_OUT)
