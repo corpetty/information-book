@@ -11,6 +11,7 @@
 #   make catalog   regenerate extraction-catalog.json from current graph
 #   make aggregate-interpretive   merge per-PDF extractions
 #   make extract-build   aggregate + rebuild (run after extraction agents)
+#   make context CENTER=<id>   emit a markdown context bundle for a node
 #   make clean     remove generated artifacts
 #   make help      list targets
 
@@ -28,7 +29,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats clean help harvest catalog aggregate-interpretive extract-build
+.PHONY: all build serve stats clean help harvest catalog aggregate-interpretive extract-build context
 
 all: $(NODES_OUT)
 build: $(NODES_OUT)
@@ -53,6 +54,9 @@ aggregate-interpretive:
 	@node $(SCRIPTS)/aggregate-interpretive.js
 
 extract-build: aggregate-interpretive build
+
+context: $(NODES_OUT)
+	@node $(SCRIPTS)/context-bundle.js --center=$(CENTER) $(ARGS)
 
 clean:
 	@rm -f $(NODES_OUT) $(EDGES_OUT) $(STATS_OUT)
