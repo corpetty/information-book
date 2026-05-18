@@ -17,7 +17,7 @@ The prescriptive arc is also being rebuilt. The hard problem appears to be **int
 
 ## Status
 
-Drafted: [[info-time-limit]] (Chapter 3, partial), [[optionality vs access]] (Chapter 4, software-only), [[the-information-landscape]] (Chapter 1, skeleton + diagram), [[complexity-virality-tradeoff]] (Chapter 5, full draft in workshop, gaps now flagged inline at the end of that file). The conclusion lives raw in [[general-theme]] (a conversation transcript) and needs to be unpacked into Part IV. Most of Parts III and IV are unwritten and the structure of Part IV has been substantially revised.
+Drafted: [[info-time-limit]] (Chapter 3, partial), [[optionality vs access]] (Chapter 4, software-only), [[the-information-landscape]] (Chapter 1, now fleshed out with both transport and sibling selection pipelines), [[complexity-virality-tradeoff]] (Chapter 5, full draft in workshop, gaps now flagged inline at the end of that file). The conclusion lives raw in [[general-theme]] (a conversation transcript) and needs to be unpacked into Part IV. Most of Parts III and IV are unwritten and the structure of Part IV has been substantially revised.
 
 ## Foundational questions still being worked out
 
@@ -37,9 +37,9 @@ These need to be resolved (or at least committed to provisionally) before more c
 
 How information moves from reality to people.
 
-**Chapter 1: The Information Landscape.** The pipeline from The Out There → Raw Data → Insight → Theory → News → Meme. Each arrow is a transformation. Drafted as [[the-information-landscape]] with a graphviz diagram. Next pass: turn each arrow into its own section (Measurement, Analysis, Consensus, Curation, Emote). May need a sibling pipeline for the *selection* dynamics that operate alongside transport.
+**Chapter 1: The Information Landscape.** Fleshed out at [[the-information-landscape]]. Walks through the transport pipeline (The Out There → Raw Data → Insight → Theory → News → Meme) stage by stage, then introduces the sibling selection pipeline (each transport stage has a corresponding gate with local criteria: funding/agenda → publishability → peer review → newsworthiness → memetic fitness). Closes with how the two pipelines fit together, where the medium fits, and a note that the gates are tunable institutional choices, not laws of nature. Still pressure-testable, but the structural machinery is now in place.
 
-**Chapter 2: What Gets Lost (and What Gets Selected) At Each Step.** Skeleton. Originally just about lossy compression at each pipeline stage. Now also needs to characterize selection pressures at each stage: what determines which content moves to the next layer. Probably the right home for Harari's three-realities framework (objective / subjective / intersubjective) from [[nexus-book]].
+**Chapter 2: Case Studies and Three Realities.** Chapter 1 did the abstract structural work. Chapter 2 should bring it to ground with case studies of specific pipelines: a scientific finding that made it all the way to meme (with the distortions traced), a finding that died at consensus, a finding that died at curation, a meme that traveled with no underlying theory at all. Also the right home for Harari's three-realities framework (objective / subjective / intersubjective) from [[nexus-book]] — the pipeline operates differently on each kind of reality, and being explicit about that matters before the rest of the book.
 
 ### Part II. Why It Has To Be Lossy (And Selective)
 
