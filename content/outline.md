@@ -6,14 +6,18 @@ tags:
 
 Working table of contents. Living doc. Recently restructured in response to a first-principles critique of the original frame (see "Foundational questions still being worked out" below). Earlier version was more confident than the work currently justifies.
 
-## Thesis (provisional)
+## Thesis (working)
 
-Something has broken in how complex ideas move through our information environment, and it's worth a book. The original framing — virality is inversely related to complexity, with institutional carriers preserving the complex form — points at the right phenomenon but may be using the wrong primary mechanism. Two foundational questions need to be resolved before the thesis can be stated cleanly:
+Something has broken in how complex ideas move through our information environment, and it's worth a book. The breakage is structural, not cultural: the constraint that used to limit memetic chaos (slow, expensive transport) has effectively collapsed in the digital era, exposing the selection dynamics that were always there underneath.
 
-1. Is the right model **transport** (complexity dissipates in transit through lossy hops) or **selection** (what survives is whatever is compressible-and-resonant, and transport is downstream)? Could be both, in which case the book has to integrate them.
-2. Where does **truth value** enter the model? Compression sometimes preserves approximate truth, sometimes inverts it, sometimes is orthogonal to it. The original frame is silent on this and is therefore morally neutral when the book wants to be alarmed.
+The structural picture: information moves from reality to people through a pipeline of abstractions ([[the-information-landscape|Chapter 1]]). At every stage two mechanisms operate in parallel. *Transport* (lossy re-encoding) determines what shape content takes as it passes through. *Selection* (gates with local criteria) determines what passes through at all. Both do work. Neither is downstream of the other. A substantial portion of what we encounter never started in reality at all but was manufactured and injected at later stages, where the gates can't tell the difference between measured and invented content.
 
-The prescriptive arc is also being rebuilt. The hard problem appears to be **integration between networks that don't share preconditions**, not fragmentation into smaller ones.
+Two foundational questions still shape the final form of the thesis:
+
+1. **Where does truth value enter the model?** Compression sometimes preserves approximate truth, sometimes inverts it, sometimes wanders into orthogonal territory. The current frame doesn't say which happens when. The worry the book wants to express needs an answer here to land.
+2. **What does the medium do to the gates?** Different media expose different selection criteria, allow different manipulation surfaces, and cultivate different kinds of *want* in receivers. McLuhan's "the medium is the message" gets re-asked here as: which media let core truth survive which kinds of manipulation?
+
+The prescriptive arc is being rebuilt around **integration between networks that don't share preconditions**, not fragmentation into smaller ones.
 
 ## Status
 
@@ -49,7 +53,7 @@ The structural reasons compression and selection both operate.
 
 **Chapter 4: Optionality vs. Access.** The general-vs-usable trade-off. Drafted as [[optionality vs access]] using matplotlib/seaborn. Needs generalization beyond software: religions, political platforms, scientific popularization, legal codes. Same curve everywhere.
 
-**Chapter 5: The Complexity / Virality Trade-off.** Was billed as load-bearing. Now *provisionally* load-bearing pending resolution of foundational questions. Drafted as [[complexity-virality-tradeoff]] with Harari worked in. Gaps now flagged at the end of that file. Likely needs significant rework once transport-vs-selection and the complexity definition are resolved.
+**Chapter 5: The Complexity / Virality Trade-off.** Reworked at [[complexity-virality-tradeoff]] to position it as the transport half of the two-mechanism structure (selection lives in Chapter 5b). Body integrates the want-as-prime-mover refinement, flags the complexity-doing-two-jobs question inline, and frames the telephone-game intuition as pure transport (which makes the missing selection step visible). The Hammer/Copernicus example is now reframed: same press, same century, what differed was selection fitness. The chapter no longer claims to be load-bearing for the whole book — it's one of two halves.
 
 **Chapter 5b (now needed): Selection As The Other Engine.** Selection has been confirmed (in [[transport-vs-selection]] and in [[the-information-landscape|Chapter 1]]) as a real mechanism operating in parallel with transport at every stage. Needs its own chapter. Memetic fitness, status signaling, identity reinforcement, action affordance, novelty, confirmation. Engage with Cailin O'Connor and James Owen Weatherall's *The Misinformation Age* and Hugo Mercier's *Not Born Yesterday*. Likely framing: Chapter 5 stays as the transport-focused argument (within-stage compression dynamics, most visible at the meme stage), Chapter 5b runs alongside as the selection-focused argument (cross-stage gates with local criteria). The two together replace the original load-bearing claim about a single mechanism.
 
