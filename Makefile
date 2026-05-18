@@ -24,7 +24,8 @@ EDGES_OUT := $(DATA)/edges.jsonl
 STATS_OUT := $(DATA)/build-stats.json
 
 CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json \
-            $(DATA)/traditions.json $(DATA)/sources.json $(DATA)/case-studies.json
+            $(DATA)/traditions.json $(DATA)/sources.json $(DATA)/case-studies.json \
+            $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
 .PHONY: all build serve stats clean help harvest catalog aggregate-interpretive extract-build

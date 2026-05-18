@@ -1,0 +1,7 @@
+{
+  "_doc": "Manual overrides for wikilink slugs that don't directly match a graph id. The note parser tries direct match in priority order (note:, source:, chapter:, claim:, concept:, mechanism:, question:, case:, tradition:) before falling back here. Add entries when build emits 'unresolved wikilink' warnings — fix by either pointing the slug at an existing id, or by adding a Source/Note/Concept node for the referenced thing.",
+  "aliases": {
+    "nexus-book": "source:nexus",
+    "the-democratization-paradox": "source:democratization-paradox"
+  }
+}

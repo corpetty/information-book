@@ -26,6 +26,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 const dataDir = resolve(repoRoot, 'data');
 const META_PATH = resolve(dataDir, 'graph-meta.json');
+const NOTES_DIR = resolve(repoRoot, '..', 'quartz', 'content', 'notes', 'information-book');
 
 const meta = JSON.parse(readFileSync(META_PATH, 'utf8'));
 
@@ -456,6 +457,79 @@ function checkClaimDrift() {
   }
 }
 
+// ---------------------------------------------------------------- note parser
+
+function loadSlugAliases() {
+  const path = resolve(dataDir, 'slug-aliases.json');
+  if (!existsSync(path)) return {};
+  const data = JSON.parse(readFileSync(path, 'utf8'));
+  return data.aliases || {};
+}
+
+function resolveWikilink(slug, aliases) {
+  // Alias overrides take priority (lets the author redirect when default
+  // resolution is wrong — e.g. nexus-book → source:nexus).
+  if (aliases[slug]) return aliases[slug];
+  const priorityNamespaces = [
+    'note', 'source', 'chapter', 'claim', 'concept',
+    'mechanism', 'question', 'case', 'tradition',
+  ];
+  for (const ns of priorityNamespaces) {
+    if (nodes.has(`${ns}:${slug}`)) return `${ns}:${slug}`;
+  }
+  return null;
+}
+
+function parseNotes() {
+  const aliases = loadSlugAliases();
+  // Snapshot the Note nodes before iteration — addNode merges back in.
+  const noteNodes = Array.from(nodes.values()).filter(n => n.type === 'Note');
+  for (const node of noteNodes) {
+    const filename = node.props?.file;
+    if (!filename) continue;
+    const filePath = resolve(NOTES_DIR, filename);
+    if (!existsSync(filePath)) {
+      warnings.push(`note ${node.id} source file missing: ${filename}`);
+      continue;
+    }
+    const content = readFileSync(filePath, 'utf8');
+    // Strip YAML frontmatter so its tags don't bleed into wikilink scanning.
+    const body = content.replace(/^---\n[\s\S]*?\n---\n?/, '');
+
+    // Extract H2 section anchors → store on the note for navigation.
+    const sections = [];
+    const sectionRegex = /^##\s+(.+)$/gm;
+    let sm;
+    while ((sm = sectionRegex.exec(body)) !== null) {
+      sections.push(sm[1].trim());
+    }
+    addNode({ id: node.id, type: 'Note', props: { sections } });
+
+    // Extract wikilinks. [[target]] or [[target|display text]].
+    const wikilinkRegex = /\[\[([^\]\|]+)(?:\|[^\]]*)?\]\]/g;
+    const seen = new Set();
+    let m;
+    while ((m = wikilinkRegex.exec(body)) !== null) {
+      const target = m[1].trim();
+      // Skip attachment refs (images, pdfs, etc.)
+      if (/\.(png|jpg|jpeg|gif|pdf|svg|webp)$/i.test(target)) continue;
+      // Normalise: lowercase, spaces → hyphens, trim
+      const slug = target.toLowerCase().replace(/\s+/g, '-');
+      if (`note:${slug}` === node.id) continue;  // self-ref
+      if (seen.has(slug)) continue;
+      seen.add(slug);
+
+      const resolved = resolveWikilink(slug, aliases);
+      if (!resolved) {
+        warnings.push(`unresolved wikilink in ${node.id}: [[${target}]] (slug:${slug})`);
+        continue;
+      }
+      const predicate = resolved.startsWith('source:') ? 'cites' : 'wikiLinks';
+      addEdge(node.id, resolved, predicate);
+    }
+  }
+}
+
 // ---------------------------------------------------------------- interpretive
 
 function loadInterpretive() {
@@ -493,7 +567,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 4,
+    phase: 5,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,
@@ -521,6 +595,7 @@ loadSources();
 loadCaseStudies();
 loadClaims();
 checkClaimDrift();
+parseNotes();
 loadInterpretive();
 validateEdges();
 emit();
