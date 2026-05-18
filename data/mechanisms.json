@@ -1,0 +1,50 @@
+{
+  "_doc": "Named structural mechanisms the book argues for. Each mechanism has a clear definition site in the notes (`definedIn`) and is discussed in one or more chapters (`coveredBy`). `derivesFrom` captures derivation between mechanisms (e.g. medium-shapes-want derives from want-as-prime-mover). Aliases will drive an auto-alias matcher in a later phase.",
+  "mechanisms": [
+    {
+      "id": "transport",
+      "label": "Transport",
+      "summary": "Lossy re-encoding at each stage of an abstraction pipeline. Each hop is a sender re-encoding for a new receiver; cumulative compression bounds how much complexity can survive transit. The telephone-game intuition.",
+      "aliases": ["transport", "lossy re-encoding", "lossy hops", "telephone game"],
+      "definedIn": ["transport-vs-selection", "the-information-landscape", "complexity-virality-tradeoff"],
+      "coveredBy": ["complexity-virality-tradeoff", "information-landscape"],
+      "derivesFrom": []
+    },
+    {
+      "id": "selection",
+      "label": "Selection",
+      "summary": "Gates with local fitness criteria at each pipeline stage. What survives is whatever wins on emotional resonance, identity reinforcement, status, action affordance, novelty. Dominant constraint in modern digital networks where transport cost has collapsed.",
+      "aliases": ["selection", "memetic fitness", "selection criteria", "fitness landscape", "selection gates"],
+      "definedIn": ["transport-vs-selection", "the-information-landscape"],
+      "coveredBy": ["selection-as-other-engine", "information-landscape"],
+      "derivesFrom": []
+    },
+    {
+      "id": "want-as-prime-mover",
+      "label": "Want as the prime mover",
+      "summary": "Want drives a feedback loop where engagement accumulates preconditions that deepen further want. Both transport capacity and selection criteria are downstream of cumulative wanting. Reframes transport and selection as aspects of one dynamic, not two competing mechanisms.",
+      "aliases": ["want is the prime mover", "want as prime mover", "want-engagement loop"],
+      "definedIn": ["transport-vs-selection"],
+      "coveredBy": ["selection-as-other-engine", "complexity-virality-tradeoff"],
+      "derivesFrom": ["transport", "selection"]
+    },
+    {
+      "id": "medium-shapes-want",
+      "label": "Medium shapes want",
+      "summary": "Different media cultivate different kinds of want in receivers. A medium that rewards shallow engagement trains preconditions for shallow content; a medium that rewards sustained engagement does the opposite. McLuhan's 'the medium is the message' restated at the want-formation level.",
+      "aliases": ["medium shapes want", "medium-is-the-message"],
+      "definedIn": ["outline", "transport-vs-selection"],
+      "coveredBy": ["selection-as-other-engine", "political-economy-of-attention"],
+      "derivesFrom": ["want-as-prime-mover"]
+    },
+    {
+      "id": "manufactured-injection",
+      "label": "Manufactured injection",
+      "summary": "Content generated wholesale, never measured against reality, injected at later pipeline stages — astrology, conspiracy theories, propaganda, AI-generated text. Downstream selection criteria cannot easily distinguish measured from manufactured content.",
+      "aliases": ["manufactured injection", "manufactured content", "injected content"],
+      "definedIn": ["the-information-landscape"],
+      "coveredBy": ["information-landscape", "ai-as-new-node"],
+      "derivesFrom": []
+    }
+  ]
+}

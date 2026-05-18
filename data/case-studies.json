@@ -1,0 +1,53 @@
+{
+  "_doc": "Worked examples the book uses to ground abstract claims. Each case study illustrates one or more Mechanisms or Concepts and appears in specific Chapters.",
+  "caseStudies": [
+    {
+      "id": "telephone-game",
+      "label": "The telephone game",
+      "summary": "Ten kids pass a sentence around a circle; the output barely resembles the input. The canonical pure-transport intuition — but note that the game forces every player to pass, removing the selection step that real social networks have.",
+      "illustrates": ["transport"],
+      "illustratesConcepts": ["complexity-ceiling"],
+      "appearsIn": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+    },
+    {
+      "id": "hammer-vs-copernicus",
+      "label": "Hammer of the Witches vs. Copernicus",
+      "summary": "Same press, same century. Hammer sold out; Copernicus was 'an all-time worst seller.' Pure-transport reads it as compressed-vs-complex. Selection reads it as identical transport cost with massively different fitness against contemporary criteria — fear, urgency, action affordance.",
+      "illustrates": ["transport", "selection"],
+      "illustratesConcepts": ["memetic-fitness", "compressed-form"],
+      "appearsIn": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+    },
+    {
+      "id": "matplotlib-vs-seaborn",
+      "label": "matplotlib vs. seaborn",
+      "summary": "matplotlib: general, powerful, hard to use. seaborn: opinionated abstraction, lower ceiling, broader access. The 'software stratification' pattern — same trade-off shows up in religions, political platforms, scientific popularization.",
+      "illustrates": [],
+      "illustratesConcepts": ["compressed-form", "complex-form"],
+      "appearsIn": ["optionality-vs-access"]
+    },
+    {
+      "id": "astrology",
+      "label": "Astrology",
+      "summary": "Astronomical positions are real measurements; the interpretive framework is invented. Never survived consensus (never went through it), injected directly at curation and meme stages. Canonical example of manufactured content propagating through the same channels as measured content.",
+      "illustrates": ["manufactured-injection"],
+      "illustratesConcepts": [],
+      "appearsIn": ["information-landscape", "case-studies-and-three-realities"]
+    },
+    {
+      "id": "scientists-say-x",
+      "label": "'Scientists say X' headline",
+      "summary": "A 20-year paper compresses to a meme within a week. Pure-transport says lossy hops; selection says the headline writer chose the highest-fitness finding, not the most load-bearing one. Both pipelines are operating.",
+      "illustrates": ["transport", "selection"],
+      "illustratesConcepts": ["memetic-fitness", "compressed-form"],
+      "appearsIn": ["bridge-zone-distortion", "case-studies-and-three-realities"]
+    },
+    {
+      "id": "bitcoin-internet-money",
+      "label": "Bitcoin: 'internet money' vs. full technical description",
+      "summary": "'Bitcoin is internet money' requires almost no preconditions. The full settlement-layer description requires five or six. Same object, two forms — only the compressed form has a chance of reaching unprepared receivers.",
+      "illustrates": [],
+      "illustratesConcepts": ["compressed-form", "complex-form", "receiver-budget"],
+      "appearsIn": ["complexity-virality-tradeoff"]
+    }
+  ]
+}

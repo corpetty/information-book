@@ -1,0 +1,30 @@
+{
+  "_doc": "Intellectual lineages the book draws from. Each tradition is a cluster of sources operating with a shared methodological orientation.",
+  "traditions": [
+    {
+      "id": "memetics",
+      "label": "Memetics",
+      "summary": "Selection-side view of cultural transmission as analogous to genetic transmission. The original literature on what propagates in informational networks and why."
+    },
+    {
+      "id": "media-ecology",
+      "label": "Media ecology",
+      "summary": "Study of how media environments shape what can be said and thought. McLuhan's tradition: the medium isn't a neutral substrate, it's part of the selection mechanism."
+    },
+    {
+      "id": "network-epistemology",
+      "label": "Network epistemology",
+      "summary": "Formal and empirical study of belief propagation in networks. What kills truth in networks, epistemic vigilance, bubbles vs. chambers."
+    },
+    {
+      "id": "network-society",
+      "label": "Network society / civilizational",
+      "summary": "Macro-scale accounts of how information networks shape societies. Myths and bureaucracy, three realities, the political economy of large information systems."
+    },
+    {
+      "id": "internal-corpus",
+      "label": "Internal corpus",
+      "summary": "The author's own earlier writing the book draws from. Primary source material — the book is partly a synthesis of these threads."
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "_doc": "Cross-cutting concepts the book repeatedly invokes. `definedIn` points to the note where the concept gets its primary development. `coveredBy` lists chapters that discuss it. Aliases will drive an auto-alias matcher in a later phase.",
+  "concepts": [
+    {
+      "id": "receiver-budget",
+      "label": "Receiver budget",
+      "summary": "A human has finite time, effective mental hours, and capacity to absorb new information. The constraint is real but not fixed — education, vocabulary, and accumulated engagement expand it.",
+      "aliases": ["receiver budget", "human time budget", "tablespoon of weeks", "effective mental hours"],
+      "definedIn": ["info-time-limit"],
+      "coveredBy": ["human-time-budget", "complexity-virality-tradeoff", "preservation-vs-training"]
+    },
+    {
+      "id": "complexity-ceiling",
+      "label": "Complexity ceiling",
+      "summary": "The maximum complexity an idea can carry across a network is bounded by network size and accumulated selection/transport pressure. Bigger network, lower ceiling.",
+      "aliases": ["complexity ceiling", "N-hop probability", "complexity bound"],
+      "definedIn": ["complexity-virality-tradeoff"],
+      "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+    },
+    {
+      "id": "compressed-form",
+      "label": "Compressed form",
+      "summary": "Low-precondition version of an idea. Cheap for receivers to process, plugs into existing mental structures, easy to re-transmit. Free to share, easy to weaponize.",
+      "aliases": ["compressed form", "low-precondition form", "bumper sticker version", "the myth"],
+      "definedIn": ["complexity-virality-tradeoff"],
+      "coveredBy": ["complexity-virality-tradeoff", "emotional-memetics"]
+    },
+    {
+      "id": "complex-form",
+      "label": "Complex form",
+      "summary": "High-precondition version of an idea. Requires receivers to load preconditions, work through implications, decide whether the new structure fits. Expensive but lossless.",
+      "aliases": ["complex form", "high-precondition form", "load-bearing form", "the theology"],
+      "definedIn": ["complexity-virality-tradeoff"],
+      "coveredBy": ["complexity-virality-tradeoff", "preservation-vs-training"]
+    },
+    {
+      "id": "manipulation-surface",
+      "label": "Manipulation surface",
+      "summary": "What attackers can exploit. Grows with network size in the pure-transport view; with tunable selection-gate criteria in the full view. Recommendation algorithms are selection engines with adjustable weights — the more dangerous formulation.",
+      "aliases": ["manipulation surface", "weaponizable", "attack surface"],
+      "definedIn": ["complexity-virality-tradeoff", "transport-vs-selection"],
+      "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine", "political-economy-of-attention"]
+    },
+    {
+      "id": "three-realities",
+      "label": "Three realities (Harari)",
+      "summary": "Objective / subjective / intersubjective. The pipeline operates differently on each. Being explicit about which kind of reality is in transit matters for the rest of the book.",
+      "aliases": ["three realities", "objective subjective intersubjective", "intersubjective reality"],
+      "definedIn": ["outline"],
+      "coveredBy": ["case-studies-and-three-realities"]
+    },
+    {
+      "id": "bridge-zone",
+      "label": "Bridge zone",
+      "summary": "The space between deep specialists and mass audiences. Where journalism, popularizers, influencers, and AI summarizers live. Where selection pressures are most intense and active reshaping happens.",
+      "aliases": ["bridge zone", "specialist to mass audience", "popularization layer"],
+      "definedIn": ["general-theme"],
+      "coveredBy": ["bridge-zone-distortion", "emotional-memetics"]
+    },
+    {
+      "id": "echo-chambers-vs-bubbles",
+      "label": "Echo chambers vs. bubbles (Nguyen)",
+      "summary": "Epistemic bubbles are missing-info structures; echo chambers actively discredit outside info. Small networks tend toward chambers, which changes what 'infrastructure for integration' has to do.",
+      "aliases": ["echo chambers", "epistemic bubbles", "Nguyen distinction"],
+      "definedIn": ["outline"],
+      "coveredBy": ["integration-problem"]
+    },
+    {
+      "id": "curation-layer",
+      "label": "Curation layer",
+      "summary": "Infrastructure that decouples access from quality assurance — low barriers to enter, robust mechanisms to surface the best work. Wikipedia's editorial apparatus, Stack Overflow reputation. From the democratization-paradox post.",
+      "aliases": ["curation layer", "quality assurance layer", "editorial apparatus"],
+      "definedIn": ["outline"],
+      "coveredBy": ["infrastructure-for-integration", "political-economy-of-attention"]
+    },
+    {
+      "id": "cost-shifting",
+      "label": "Cost-shifting from producers to consumers",
+      "summary": "When barriers to creation fall, the cost of quality assessment doesn't disappear — it transfers from producers to consumers, reviewers, and maintainers who have no more time than before.",
+      "aliases": ["cost shifting", "producer to consumer cost transfer"],
+      "definedIn": ["outline"],
+      "coveredBy": ["political-economy-of-attention", "ai-as-new-node"]
+    },
+    {
+      "id": "inverted-u",
+      "label": "Inverted-U relationship",
+      "summary": "Refines the binary 'small vs. large networks' framing: there's an optimum. Small networks have their own internal compression dynamics; very large networks collapse under selection pressure.",
+      "aliases": ["inverted U", "network size optimum"],
+      "definedIn": ["outline"],
+      "coveredBy": ["integration-problem"]
+    },
+    {
+      "id": "creation-cheap-review-expensive",
+      "label": "Creation cheap / review expensive",
+      "summary": "When content generation scales faster than curation infrastructure, noise wins regardless of how many gems are in the flood. LLMs accelerate the asymmetry on both sides.",
+      "aliases": ["creation cheap review expensive", "creation/review asymmetry"],
+      "definedIn": ["outline"],
+      "coveredBy": ["ai-as-new-node", "political-economy-of-attention"]
+    },
+    {
+      "id": "preservation-vs-training-pair",
+      "label": "Preservation vs. training (paired institutional functions)",
+      "summary": "What 'bureaucracy' was bundling: preservation keeps the complex form alive somewhere; training expands receiver budgets so people can engage with it. Different infrastructure for each.",
+      "aliases": ["preservation vs training", "bureaucracy bundling", "institutional functions"],
+      "definedIn": ["outline"],
+      "coveredBy": ["preservation-vs-training", "infrastructure-for-integration"]
+    },
+    {
+      "id": "memetic-fitness",
+      "label": "Memetic fitness",
+      "summary": "The local fitness criteria at each selection gate: emotional valence, identity reinforcement, status, action affordance, novelty, controversy. None coordinated, none particularly interested in truth-preservation.",
+      "aliases": ["memetic fitness", "fitness landscape", "selection criteria"],
+      "definedIn": ["transport-vs-selection", "the-information-landscape"],
+      "coveredBy": ["selection-as-other-engine", "emotional-memetics"]
+    },
+    {
+      "id": "transferable-preconditions",
+      "label": "Transferable preconditions",
+      "summary": "Field-general capacities (statistical literacy, critical reading, the disposition to look for evidence) that help receivers engage with many domains. People carrying them are the natural bridge nodes between specialist communities.",
+      "aliases": ["transferable preconditions", "bridge nodes", "field-general capacity"],
+      "definedIn": ["outline"],
+      "coveredBy": ["preservation-vs-training", "integration-problem"]
+    },
+    {
+      "id": "handle-ability",
+      "label": "Handle-ability",
+      "summary": "Proposed alternative to 'complexity' as the real gating variable: how many existing mental models an idea plugs into, how much emotional or identity content it carries, whether it tells the receiver what to do. Selection-side property.",
+      "aliases": ["handle-ability", "handle ability", "graspability"],
+      "definedIn": ["complexity-virality-tradeoff"],
+      "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+    }
+  ]
+}

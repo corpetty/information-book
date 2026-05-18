@@ -1,0 +1,151 @@
+{
+  "_doc": "Sources the book engages with. Includes prior-art books, papers, posts, and the four academic PDFs in information-book/sources/. Each source has at most one primary author (use `coauthors` for additional). `engagement` describes the book's stance toward the source. `representedBy` (optional) links to a Note that materially holds the source (e.g. a conversation transcript that doubles as a Note).",
+  "authors": [
+    { "id": "corey-petty",        "label": "Corey Petty",        "summary": "The author of this book; some of his own earlier posts are treated as primary sources." },
+    { "id": "neil-postman",       "label": "Neil Postman",       "summary": "Media-ecology scholar. Amusing Ourselves to Death." },
+    { "id": "hugo-mercier",       "label": "Hugo Mercier",       "summary": "Cognitive scientist. Argues for robust epistemic vigilance." },
+    { "id": "cailin-oconnor",     "label": "Cailin O'Connor",    "summary": "Philosopher of science. Network models of belief propagation." },
+    { "id": "james-weatherall",   "label": "James Owen Weatherall", "summary": "Philosopher of science. Co-author with O'Connor." },
+    { "id": "c-thi-nguyen",       "label": "C. Thi Nguyen",      "summary": "Philosopher. Distinguished epistemic bubbles from echo chambers." },
+    { "id": "marshall-mcluhan",   "label": "Marshall McLuhan",   "summary": "Founding figure of media ecology." },
+    { "id": "richard-dawkins",    "label": "Richard Dawkins",    "summary": "Coined 'meme' in The Selfish Gene." },
+    { "id": "susan-blackmore",    "label": "Susan Blackmore",    "summary": "Developed memetics as a research program." },
+    { "id": "yuval-noah-harari",  "label": "Yuval Noah Harari",  "summary": "Author of Nexus; framing on myths/bureaucracy and three realities." },
+    { "id": "tim-urban",          "label": "Tim Urban",          "summary": "Wait But Why author. The tablespoon-of-weeks visualization." }
+  ],
+  "sources": [
+    {
+      "id": "democratization-paradox",
+      "label": "The Democratization Paradox",
+      "kind": "post",
+      "author": "corey-petty",
+      "tradition": "internal-corpus",
+      "summary": "Covers the barriers/volume angle: curation layer, cost-shifting, creation-cheap/review-expensive, inverted-U relationship.",
+      "engagement": "primary internal source the book draws from"
+    },
+    {
+      "id": "general-theme-conversation",
+      "label": "General Theme (conversation transcript)",
+      "kind": "personal-conversation",
+      "author": "corey-petty",
+      "tradition": "internal-corpus",
+      "summary": "Conversation transcript where the book concept got laid out coherently for the first time. The conclusion of Part IV lives raw here.",
+      "engagement": "primary internal source the book draws from",
+      "representedBy": "general-theme"
+    },
+    {
+      "id": "amusing-ourselves-to-death",
+      "label": "Amusing Ourselves to Death",
+      "kind": "book",
+      "author": "neil-postman",
+      "tradition": "media-ecology",
+      "summary": "Argues that television as a medium degraded public discourse. The 'medium shapes message' thesis applied to a specific case.",
+      "engagement": "the book needs to know what it's adding past Postman"
+    },
+    {
+      "id": "not-born-yesterday",
+      "label": "Not Born Yesterday",
+      "kind": "book",
+      "author": "hugo-mercier",
+      "tradition": "network-epistemology",
+      "summary": "Direct challenge to the 'people are easily manipulated by simple memes' thread. Humans have more robust epistemic vigilance than the easy-manipulation narrative implies.",
+      "engagement": "pressure-tests Chapter 7's emotional-memetics floor argument"
+    },
+    {
+      "id": "misinformation-age",
+      "label": "The Misinformation Age",
+      "kind": "book",
+      "author": "cailin-oconnor",
+      "coauthors": ["james-weatherall"],
+      "tradition": "network-epistemology",
+      "summary": "Formal network models of belief propagation. What kills truth in networks: selection on credibility plus social pressure, not lossy hops.",
+      "engagement": "directly relevant to transport-vs-selection"
+    },
+    {
+      "id": "nguyen-bubbles-vs-chambers",
+      "label": "Echo Chambers and Epistemic Bubbles",
+      "kind": "paper",
+      "author": "c-thi-nguyen",
+      "tradition": "network-epistemology",
+      "summary": "Distinguishes epistemic bubbles (missing info) from echo chambers (active discrediting of outside info). Small networks tend toward chambers.",
+      "engagement": "foundational for the rebuilt Part IV"
+    },
+    {
+      "id": "understanding-media",
+      "label": "Understanding Media",
+      "kind": "book",
+      "author": "marshall-mcluhan",
+      "tradition": "media-ecology",
+      "summary": "'The medium is the message.' The canonical reference for how media shape what can pass through them.",
+      "engagement": "worth engaging explicitly"
+    },
+    {
+      "id": "selfish-gene",
+      "label": "The Selfish Gene",
+      "kind": "book",
+      "author": "richard-dawkins",
+      "tradition": "memetics",
+      "summary": "Coined the term 'meme.' The selection-side view's foundational text.",
+      "engagement": "the selection-side view already has a literature; use it"
+    },
+    {
+      "id": "meme-machine",
+      "label": "The Meme Machine",
+      "kind": "book",
+      "author": "susan-blackmore",
+      "tradition": "memetics",
+      "summary": "Developed memetics into a sustained research program. Mechanisms of cultural selection.",
+      "engagement": "the selection-side view already has a literature; use it"
+    },
+    {
+      "id": "nexus",
+      "label": "Nexus",
+      "kind": "book",
+      "author": "yuval-noah-harari",
+      "tradition": "network-society",
+      "summary": "Information networks bound by myths and bureaucracy. Three realities (objective / subjective / intersubjective). Truth/order axis. Naive view of information.",
+      "engagement": "already in play; key framing reference"
+    },
+    {
+      "id": "life-in-weeks",
+      "label": "Your Life in Weeks",
+      "kind": "post",
+      "author": "tim-urban",
+      "tradition": "internal-corpus",
+      "summary": "Tablespoon-of-diamonds visualization of a human lifespan. The receiver-budget intuition.",
+      "engagement": "cited as the source of the tablespoon-of-weeks framing"
+    },
+    {
+      "id": "epidemiological-virality",
+      "label": "An epidemiological approach to model viral propagation of memes",
+      "kind": "paper",
+      "tradition": "network-epistemology",
+      "summary": "Models memetic propagation using epidemiological dynamics. Formal apparatus for the transport-stage math.",
+      "engagement": "candidate evidentiary source for Chapters 5 and 5b"
+    },
+    {
+      "id": "info-evolution-social-media",
+      "label": "Information Evolution in Social Media",
+      "kind": "paper",
+      "tradition": "network-epistemology",
+      "summary": "Empirical work on how information morphs as it traverses social-media networks.",
+      "engagement": "candidate evidentiary source for the bridge-zone distortion case studies"
+    },
+    {
+      "id": "memetics-critique",
+      "label": "Memetics — a critique",
+      "kind": "paper",
+      "tradition": "memetics",
+      "summary": "Critical assessment of memetics as a research program. Where the analogy with genetic transmission breaks down.",
+      "engagement": "candidate pressure-tester for the selection-side framing"
+    },
+    {
+      "id": "psychology-of-virality",
+      "label": "Psychology of Virality",
+      "kind": "paper",
+      "tradition": "network-epistemology",
+      "summary": "Empirical and theoretical work on what makes content go viral. Identity, emotion, in-group signaling.",
+      "engagement": "candidate evidentiary source for Chapters 5b and 7"
+    }
+  ]
+}

@@ -186,6 +186,214 @@ function seedPipeline() {
   }
 }
 
+// ---------------------------------------------------------------- chapter + note seeds
+
+function seedChapters() {
+  const chapters = [
+    { slug: 'information-landscape',                part: 'pipeline',    ordinal: 1,   number: '1',  title: 'The Information Landscape',              status: 'drafted',         draftNote: 'note:the-information-landscape',     summary: 'Walks through the transport pipeline (The Out There → Raw Data → Insight → Theory → News → Meme) stage by stage, then introduces the sibling selection pipeline. Closes with where the medium fits and a note that the gates are tunable institutional choices.' },
+    { slug: 'case-studies-and-three-realities',     part: 'pipeline',    ordinal: 2,   number: '2',  title: 'Case Studies and Three Realities',       status: 'skeleton',                                                                          summary: 'Brings the abstract structure to ground with case studies of specific pipelines. Also the right home for Harari\'s three-realities framework (objective / subjective / intersubjective).' },
+    { slug: 'human-time-budget',                    part: 'lossy',       ordinal: 3,   number: '3',  title: 'The Human Time Budget',                  status: 'in-workshop',     draftNote: 'note:info-time-limit',                summary: 'Tablespoon of weeks; effective mental hours less than nominal. Budget is not fixed — education, vocabulary, accumulated engagement expand it. Want is the prime mover.' },
+    { slug: 'optionality-vs-access',                part: 'lossy',       ordinal: 4,   number: '4',  title: 'Optionality vs. Access',                 status: 'in-workshop',     draftNote: 'note:optionality-vs-access',          summary: 'The general-vs-usable trade-off. Drafted using matplotlib vs. seaborn. Needs generalization beyond software: religions, political platforms, scientific popularization, legal codes.' },
+    { slug: 'complexity-virality-tradeoff',         part: 'lossy',       ordinal: 5,   number: '5',  title: 'The Complexity / Virality Trade-off',    status: 'in-workshop',     draftNote: 'note:complexity-virality-tradeoff',   summary: 'The transport half of the two-mechanism structure. Within-stage compression dynamics, most visible at the meme stage. Reframes Hammer/Copernicus as selection-fit rather than transport-cost.' },
+    { slug: 'selection-as-other-engine',            part: 'lossy',       ordinal: 5.1, number: '5b', title: 'Selection As The Other Engine',          status: 'not-yet-drafted',                                                                  summary: 'The selection-focused argument running parallel to Chapter 5. Memetic fitness, status signaling, identity reinforcement, action affordance. Engages O\'Connor & Weatherall and Mercier.' },
+    { slug: 'truth-compression-and-when-each-wins', part: 'lossy',       ordinal: 5.2, number: '5c', title: 'Truth, Compression, and When Each Wins', status: 'not-yet-drafted',                                                                  summary: 'When does compressed form preserve approximate truth, when invert, when orthogonal? Closes the moral-neutrality gap and gives the book its actual stakes.' },
+    { slug: 'bridge-zone-distortion',               part: 'bridge-zone', ordinal: 6,   number: '6',  title: 'Where It All Gets Fucked Up',            status: 'skeleton',                                                                          summary: 'The space between deep specialists and mass audiences. Journalism, popularizers, influencers, AI summarizers. Where selection pressures are most intense and active reshaping happens.' },
+    { slug: 'emotional-memetics',                   part: 'bridge-zone', ordinal: 7,   number: '7',  title: 'Emotional Memetics As The Floor',        status: 'skeleton',                                                                          summary: 'Once the network is big enough, what propagates is what evokes raw strong emotions. Must engage Mercier\'s challenge that humans have robust epistemic vigilance.' },
+    { slug: 'preservation-vs-training',             part: 'integration', ordinal: 8,   number: '8',  title: 'Preservation vs. Training',              status: 'not-yet-drafted',                                                                  summary: 'Splits what Harari\'s "bureaucracy" was bundling. Preservation keeps the complex form alive; training expands receiver budgets. Different infrastructure for each.' },
+    { slug: 'integration-problem',                  part: 'integration', ordinal: 9,   number: '9',  title: 'The Integration Problem',                status: 'not-yet-drafted',                                                                  summary: 'How does complex truth move between networks that don\'t share preconditions? Nguyen on epistemic bubbles vs. echo chambers. Bridge nodes carrying transferable preconditions stitch.' },
+    { slug: 'political-economy-of-attention',       part: 'integration', ordinal: 10,  number: '10', title: 'Political Economy of Attention',         status: 'not-yet-drafted',                                                                  summary: 'Who owns the infrastructure, what they optimize for, why engagement maximization exists, why institutional carriers are being defunded. Cost-shifting from producers to consumers.' },
+    { slug: 'ai-as-new-node',                       part: 'integration', ordinal: 11,  number: '11', title: 'AI as a New Kind of Node',               status: 'not-yet-drafted',                                                                  summary: 'LLMs violate the receiver-budget model. Decompress on demand, compress aggressively. Both new node and new selection engine. Salvation and worst-case depending on deployment.' },
+    { slug: 'infrastructure-for-integration',       part: 'integration', ordinal: 12,  number: '12', title: 'Infrastructure for Integration',         status: 'not-yet-drafted',                                                                  summary: 'Synthesis. What would tech look like if it preserved integrity across networks rather than flattening it? Curation layer, Wikipedia editorial, Stack Overflow reputation, preprint + peer review hybrids.' },
+  ];
+  for (const c of chapters) {
+    addNode({
+      id: `chapter:${c.slug}`,
+      type: 'Chapter',
+      label: `Ch ${c.number} — ${c.title}`,
+      props: {
+        ordinal: c.ordinal,
+        number: c.number,
+        title: c.title,
+        part: c.part,
+        status: c.status,
+        summary: c.summary,
+        ...(c.draftNote ? { draftNote: c.draftNote } : {}),
+      },
+      provenance: [{ source: 'outline.md', kind: 'seed' }],
+    });
+    addEdge(`chapter:${c.slug}`, `part:${c.part}`, 'partOf');
+    addEdge(`chapter:${c.slug}`, `status:${c.status}`, 'hasStatus');
+  }
+}
+
+function seedNotes() {
+  const notes = [
+    { slug: 'outline',                      file: 'outline.md',                      subtype: 'prose',        title: 'Information Book — Outline',                                role: 'outline',             summary: 'The book\'s working outline and table of contents. Living doc.' },
+    { slug: 'the-information-landscape',    file: 'the-information-landscape.md',    subtype: 'prose',        title: 'The Information Landscape',                                 role: 'chapter-draft',       summary: 'Chapter 1 draft. Walks through the transport and selection pipelines side by side.' },
+    { slug: 'transport-vs-selection',       file: 'transport-vs-selection.md',       subtype: 'prose',        title: 'Transport vs. Selection',                                   role: 'foundational-note',   summary: 'Foundational note working through the transport-vs-selection question. Provisional answer: both parallel mechanisms, with want as prime mover.' },
+    { slug: 'complexity-virality-tradeoff', file: 'complexity-virality-tradeoff.md', subtype: 'prose',        title: 'The Complexity / Virality Trade-off',                       role: 'chapter-draft',       summary: 'Chapter 5 draft. The transport half of the two-mechanism structure.' },
+    { slug: 'info-time-limit',              file: 'info-time-limit.md',              subtype: 'prose',        title: 'The limit on how much information a human can incorporate', role: 'chapter-draft',       summary: 'Chapter 3 draft (partial). Receiver budget: tablespoon of weeks.' },
+    { slug: 'optionality-vs-access',        file: 'optionality vs access.md',        subtype: 'prose',        title: 'Optionality vs. Access',                                    role: 'chapter-draft',       summary: 'Chapter 4 draft (software-only). The general-vs-usable trade-off through matplotlib vs. seaborn.' },
+    { slug: 'general-theme',                file: 'general-theme.md',                subtype: 'conversation', title: 'General Theme',                                             role: 'conversation-source', summary: 'Conversation transcript. The book concept explained to someone in real time. The conclusion of Part IV lives raw here.' },
+  ];
+  for (const n of notes) {
+    addNode({
+      id: `note:${n.slug}`,
+      type: 'Note',
+      label: n.slug,
+      props: {
+        file: n.file,
+        subtype: n.subtype,
+        title: n.title,
+        role: n.role,
+        summary: n.summary,
+      },
+      provenance: [{ source: n.file, kind: 'seed' }],
+    });
+  }
+}
+
+// ---------------------------------------------------------------- catalog loaders
+
+function loadJsonCatalog(filename) {
+  return JSON.parse(readFileSync(resolve(dataDir, filename), 'utf8'));
+}
+
+function loadMechanisms() {
+  const { mechanisms } = loadJsonCatalog('mechanisms.json');
+  for (const m of mechanisms) {
+    addNode({
+      id: `mechanism:${m.id}`,
+      type: 'Mechanism',
+      label: m.label,
+      props: { summary: m.summary, aliases: m.aliases || [] },
+      provenance: [{ source: 'mechanisms.json', kind: 'catalog' }],
+    });
+    for (const noteSlug of m.definedIn || []) {
+      addEdge(`mechanism:${m.id}`, `note:${noteSlug}`, 'definedIn');
+    }
+    for (const chSlug of m.coveredBy || []) {
+      addEdge(`chapter:${chSlug}`, `mechanism:${m.id}`, 'covers');
+    }
+    for (const otherSlug of m.derivesFrom || []) {
+      addEdge(`mechanism:${m.id}`, `mechanism:${otherSlug}`, 'derivesFrom');
+    }
+  }
+}
+
+function loadConcepts() {
+  const { concepts } = loadJsonCatalog('concepts.json');
+  for (const c of concepts) {
+    addNode({
+      id: `concept:${c.id}`,
+      type: 'Concept',
+      label: c.label,
+      props: { summary: c.summary, aliases: c.aliases || [] },
+      provenance: [{ source: 'concepts.json', kind: 'catalog' }],
+    });
+    for (const noteSlug of c.definedIn || []) {
+      addEdge(`concept:${c.id}`, `note:${noteSlug}`, 'definedIn');
+    }
+    for (const chSlug of c.coveredBy || []) {
+      addEdge(`chapter:${chSlug}`, `concept:${c.id}`, 'covers');
+    }
+  }
+}
+
+function loadQuestions() {
+  const { questions } = loadJsonCatalog('questions.json');
+  for (const q of questions) {
+    addNode({
+      id: `question:${q.id}`,
+      type: 'Question',
+      label: q.label,
+      props: {
+        summary: q.summary,
+        aliases: q.aliases || [],
+        status: q.status || 'open',
+        workingAnswer: q.workingAnswer || null,
+      },
+      provenance: [{ source: 'questions.json', kind: 'catalog' }],
+    });
+    for (const noteSlug of q.flaggedIn || []) {
+      addEdge(`note:${noteSlug}`, `question:${q.id}`, 'flagsOpenQuestion');
+    }
+    for (const chSlug of q.blocksChapters || []) {
+      addEdge(`chapter:${chSlug}`, `question:${q.id}`, 'flagsOpenQuestion');
+    }
+    for (const otherQ of q.dependsOn || []) {
+      addEdge(`question:${q.id}`, `question:${otherQ}`, 'dependsOn');
+    }
+  }
+}
+
+function loadTraditions() {
+  const { traditions } = loadJsonCatalog('traditions.json');
+  for (const t of traditions) {
+    addNode({
+      id: `tradition:${t.id}`,
+      type: 'Tradition',
+      label: t.label,
+      props: { summary: t.summary },
+      provenance: [{ source: 'traditions.json', kind: 'catalog' }],
+    });
+  }
+}
+
+function loadSources() {
+  const { sources, authors } = loadJsonCatalog('sources.json');
+  for (const a of authors || []) {
+    addNode({
+      id: `author:${a.id}`,
+      type: 'Author',
+      label: a.label,
+      props: { summary: a.summary || '' },
+      provenance: [{ source: 'sources.json', kind: 'catalog' }],
+    });
+  }
+  for (const s of sources) {
+    addNode({
+      id: `source:${s.id}`,
+      type: 'Source',
+      label: s.label,
+      props: {
+        kind: s.kind || 'book',
+        summary: s.summary || '',
+        engagement: s.engagement || '',
+      },
+      provenance: [{ source: 'sources.json', kind: 'catalog' }],
+    });
+    if (s.author) addEdge(`source:${s.id}`, `author:${s.author}`, 'authoredBy');
+    for (const a of s.coauthors || []) {
+      addEdge(`source:${s.id}`, `author:${a}`, 'authoredBy');
+    }
+    if (s.tradition) addEdge(`source:${s.id}`, `tradition:${s.tradition}`, 'partOfTradition');
+    if (s.representedBy) addEdge(`source:${s.id}`, `note:${s.representedBy}`, 'representedBy');
+  }
+}
+
+function loadCaseStudies() {
+  const { caseStudies } = loadJsonCatalog('case-studies.json');
+  for (const cs of caseStudies) {
+    addNode({
+      id: `case:${cs.id}`,
+      type: 'CaseStudy',
+      label: cs.label,
+      props: { summary: cs.summary || '' },
+      provenance: [{ source: 'case-studies.json', kind: 'catalog' }],
+    });
+    for (const m of cs.illustrates || []) {
+      addEdge(`case:${cs.id}`, `mechanism:${m}`, 'mentions');
+    }
+    for (const c of cs.illustratesConcepts || []) {
+      addEdge(`case:${cs.id}`, `concept:${c}`, 'mentions');
+    }
+    for (const ch of cs.appearsIn || []) {
+      addEdge(`chapter:${ch}`, `case:${cs.id}`, 'covers');
+    }
+  }
+}
+
 // ---------------------------------------------------------------- emit
 
 function emit() {
@@ -204,7 +412,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 0,
+    phase: 2,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,
@@ -222,5 +430,13 @@ function emit() {
 seedStatuses();
 seedParts();
 seedPipeline();
+seedChapters();
+seedNotes();
+loadMechanisms();
+loadConcepts();
+loadQuestions();
+loadTraditions();
+loadSources();
+loadCaseStudies();
 validateEdges();
 emit();
