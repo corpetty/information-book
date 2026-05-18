@@ -157,6 +157,14 @@ A medium that rewards engagement-bait produces engagement-bait. A medium that re
 
 This is a thread the book picks up later. For now, the point is: every node and every arrow in this two-pipeline picture has a medium attached to it. The selection criteria at each gate are downstream of what that medium can hold and what it rewards. Changing the medium changes the criteria. The pipeline operates inside a specific media ecosystem, and the ecosystem is doing most of the work.
 
+## A note on feedback loops
+
+The pipeline I just walked through is linear. The reality it represents is messier. Memes feed back into what research gets funded, since "interesting" topics follow cultural attention. News shapes what consensus forms around (climate science took the form it did partly because of how it was being reported on). Theories shape what we choose to measure (we measure GDP because economic theory said GDP matters, and we measure it differently in different decades because economic theory changed). Selection criteria at one stage propagate backward and affect what gets done at earlier stages.
+
+I left those out to keep the chapter tractable. The cost is that the picture looks more orderly than reality. The benefit is that the core structure (transport + selection at each stage) stays visible. A messier diagram with feedback arrows in every direction might be more accurate but would obscure the structure I'm trying to show.
+
+Some of these feedback loops will surface naturally in the case studies in Chapter 2. Others will show up in Part III when the bridge zone gets its own treatment. For now, just keep in mind that the diagram is a simplification of a tangled system, not a map of how reality actually moves.
+
 ## What this sets up
 
 The rest of Part I goes deeper into what gets lost (and what gets selected) at each stage. Part II asks why this arrangement is structurally unavoidable. Part III is about the bridge zone where most of the catastrophic distortion happens. Part IV is about what to do about it.
