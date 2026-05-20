@@ -33,6 +33,19 @@ for (const list of Object.values(catalog.byType)) {
 }
 const validPreds = new Set(Object.keys(catalog.predicates));
 
+// Direction conventions the extraction agents must respect. supports /
+// pressureTests assert a Source's stance on an argument-bearing element
+// (Claim / Mechanism / Concept) — the subject is ALWAYS a Source.
+// evidencedBy points a graph node at a Source (or Note). Triples that
+// violate these are dropped — the usual offender is a Concept emitted as
+// the subject of `supports`, which conflates "paper supports X" with
+// "paper engages concept". See scripts/EXTRACTION_PROMPT.md.
+const DIRECTION_RULES = {
+  supports:      { subject: ['source:'], object: ['claim:', 'mechanism:', 'concept:'] },
+  pressureTests: { subject: ['source:'], object: ['claim:', 'mechanism:', 'concept:'] },
+  evidencedBy:   { object: ['source:', 'note:'] },
+};
+
 if (!existsSync(INPUT_DIR)) {
   writeFileSync(OUT_PATH, '');
   writeFileSync(NOTES_PATH, JSON.stringify({
@@ -93,6 +106,19 @@ for (const filename of files) {
       warnings.push(`${filename}: unknown object "${object}"`);
       dropped++;
       continue;
+    }
+    const rule = DIRECTION_RULES[predicate];
+    if (rule) {
+      if (rule.subject && !rule.subject.some(p => subject.startsWith(p))) {
+        warnings.push(`${filename}: ${predicate} subject must be ${rule.subject.join(' / ')}* — got "${subject}"`);
+        dropped++;
+        continue;
+      }
+      if (rule.object && !rule.object.some(p => object.startsWith(p))) {
+        warnings.push(`${filename}: ${predicate} object must be ${rule.object.join(' / ')}* — got "${object}"`);
+        dropped++;
+        continue;
+      }
     }
     const key = `${subject}|${predicate}|${object}`;
     if (seen.has(key)) {

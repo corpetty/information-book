@@ -46,8 +46,8 @@
     "flagsOpenQuestion": { "category": "dialectical", "color": "#b45309", "directed": true,  "description": "Flags an open Question / unresolved issue" },
 
     "argues":            { "category": "claim",       "color": "#facc15", "directed": true,  "description": "Chapter or Note argues this Claim" },
-    "supports":          { "category": "claim",       "color": "#22c55e", "directed": true,  "description": "Source supports this Claim (with quote + line + confidence + rationale)" },
-    "pressureTests":     { "category": "claim",       "color": "#ef4444", "directed": true,  "description": "Source pressure-tests / challenges this Claim" },
+    "supports":          { "category": "claim",       "color": "#22c55e", "directed": true,  "description": "Source supports this Claim / Mechanism / Concept (with quote + confidence + rationale)" },
+    "pressureTests":     { "category": "claim",       "color": "#ef4444", "directed": true,  "description": "Source pressure-tests / challenges this Claim / Mechanism / Concept" },
     "dependsOn":         { "category": "claim",       "color": "#8b5cf6", "directed": true,  "description": "Claim depends on another Claim, or on a Question resolving a particular way" },
 
     "mentions":          { "category": "weak",        "color": "#cbd5e1", "directed": true,  "description": "Free-text mention — useful for navigation, not for argument" },

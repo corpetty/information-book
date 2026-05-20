@@ -50,8 +50,16 @@ These are the high-value extractions for a paper. Don't waste a
 
 ## Direction conventions — important
 
-- `supports` / `pressureTests`: **paper is subject**, claim is object.
-- `evidencedBy`: **graph node is subject**, paper is object.
+- `supports` / `pressureTests`: **paper is subject** (`source:<slug>`) —
+  always your source slug, never a Concept or Mechanism. The **object**
+  is the argument-bearing element the paper takes a stance on: a
+  `claim:`, `mechanism:`, or `concept:`. A paper may support or
+  pressure-test any of the three — but the subject is always the source.
+  A triple like `concept:foo supports claim:bar` (concept as subject) is
+  malformed and the aggregator will drop it; emit
+  `source:<slug> supports claim:bar` instead.
+- `evidencedBy`: **graph node is subject**, **paper is object**
+  (`source:<slug>`).
 - This asymmetry is intentional and matches the rest of the graph:
   Claims have things asserted *about* them by sources, while Concepts
   / Mechanisms accumulate evidentiary sources *about* themselves.
