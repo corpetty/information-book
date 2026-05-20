@@ -152,6 +152,40 @@
           "text": "Core truth survives a medium to the degree that two things hold: the medium's gate-criteria reward something correlated with truth, and the medium's want-loop doesn't erode the receiver's appetite for truth over time."
         }
       ]
+    },
+    {
+      "id": "outer-message-is-preconditions",
+      "label": "The outer message is what the book calls preconditions",
+      "summary": "A message's outer message — the decoding mechanism a receiver must already hold to extract the content — is exactly what this book calls preconditions. A complex idea has a large or rare outer message; a compressed idea has one common enough to assume in everyone. The outer message lives in the medium.",
+      "aliases": ["outer message is preconditions", "outer message", "decoding mechanism"],
+      "status": "working",
+      "argues": ["three-layer-message"],
+      "arguedInChapters": ["information-landscape", "complexity-virality-tradeoff"],
+      "dependsOn": ["claim:medium-attached-to-every-gate"],
+      "harvestedFrom": [
+        {
+          "note": "three-layer-message",
+          "lineApprox": 25,
+          "text": "the outer message is the decoding mechanism a receiver must already hold — and that is exactly what this book has been calling preconditions."
+        }
+      ]
+    },
+    {
+      "id": "transit-strips-the-outer-message",
+      "label": "Transit strips the outer message, not the inner one",
+      "summary": "What a lossy hop usually strips is the outer message (the decoding key — qualifications, scope conditions, methodology), not the inner message (the claim itself). A surviving inner message then gets decoded with the receiver's default key and yields a false belief. Most of what the book calls distortion is outer-message loss.",
+      "aliases": ["transit strips the outer message", "outer-message loss"],
+      "status": "working",
+      "argues": ["three-layer-message"],
+      "arguedInChapters": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine"],
+      "dependsOn": ["claim:outer-message-is-preconditions", "claim:complexity-virality-inverse"],
+      "harvestedFrom": [
+        {
+          "note": "three-layer-message",
+          "lineApprox": 33,
+          "text": "What a lossy hop usually strips is the outer message, not the inner one."
+        }
+      ]
     }
   ]
 }

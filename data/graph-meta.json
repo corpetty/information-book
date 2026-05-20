@@ -74,6 +74,7 @@
     "book":                  "Published book",
     "paper":                 "Academic paper",
     "post":                  "Online post or essay",
+    "talk":                  "Recorded talk or conference presentation",
     "personal-conversation": "Transcribed personal conversation"
   },
 

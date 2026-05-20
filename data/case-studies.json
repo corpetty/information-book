@@ -54,6 +54,15 @@
       "illustratesConcepts": ["compressed-form", "complex-form", "receiver-budget"],
       "illustratesClaims": ["complexity-virality-inverse"],
       "appearsIn": ["complexity-virality-tradeoff"]
+    },
+    {
+      "id": "voyager-golden-record",
+      "label": "The Voyager Golden Record",
+      "summary": "Hofstadter's canonical illustration of the three-layer message. A record launched into deep space with no shared context to assume: the recorded sounds and images are the inner message, the playback diagrams etched on the cover are the outer message, and the artifact's evident designed-ness is the frame message. The rare case where all three layers had to be shipped together.",
+      "illustrates": [],
+      "illustratesConcepts": ["three-layer-message"],
+      "illustratesClaims": [],
+      "appearsIn": ["information-landscape"]
     }
   ]
 }

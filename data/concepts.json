@@ -184,6 +184,15 @@
       "aliases": ["epistemic vigilance", "mental immune systems", "cognitive defenses", "not born yesterday"],
       "definedIn": [],
       "coveredBy": ["emotional-memetics", "selection-as-other-engine"]
+    },
+    {
+      "id": "three-layer-message",
+      "label": "The three-layer message (frame / outer / inner)",
+      "summary": "Hofstadter's anatomy of any message (Gödel, Escher, Bach, Ch VI): the frame message ('I am a message, decode me'), the outer message (the decoding mechanism the receiver must already hold — implicit, carried by the medium), and the inner message (the meaning the sender intended). The book adapts it: each pipeline re-encoding can strip a layer independently, and the outer message is what the book calls preconditions.",
+      "aliases": ["three layers of a message", "three-layer message", "frame message", "outer message", "inner message", "frame outer inner"],
+      "definedIn": ["three-layer-message"],
+      "coveredBy": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine"],
+      "evidencedBy": ["godel-escher-bach", "ethical-infrastructure-talk"]
     }
   ]
 }

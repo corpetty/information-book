@@ -11,7 +11,8 @@
     { "id": "richard-dawkins",    "label": "Richard Dawkins",    "summary": "Coined 'meme' in The Selfish Gene." },
     { "id": "susan-blackmore",    "label": "Susan Blackmore",    "summary": "Developed memetics as a research program." },
     { "id": "yuval-noah-harari",  "label": "Yuval Noah Harari",  "summary": "Author of Nexus; framing on myths/bureaucracy and three realities." },
-    { "id": "tim-urban",          "label": "Tim Urban",          "summary": "Wait But Why author. The tablespoon-of-weeks visualization." }
+    { "id": "tim-urban",          "label": "Tim Urban",          "summary": "Wait But Why author. The tablespoon-of-weeks visualization." },
+    { "id": "douglas-hofstadter",   "label": "Douglas Hofstadter",   "summary": "Cognitive scientist; author of Gödel, Escher, Bach. Originated the frame/outer/inner three-layer message model." }
   ],
   "sources": [
     {
@@ -146,6 +147,24 @@
       "tradition": "network-epistemology",
       "summary": "Empirical and theoretical work on what makes content go viral. Identity, emotion, in-group signaling.",
       "engagement": "candidate evidentiary source for Chapters 5b and 7"
+    },
+    {
+      "id": "godel-escher-bach",
+      "label": "Gödel, Escher, Bach: An Eternal Golden Braid",
+      "kind": "book",
+      "author": "douglas-hofstadter",
+      "tradition": "information-theory",
+      "summary": "Chapter VI, 'The Location of Meaning', develops the three-layer message model — frame (this is a message), outer (how to decode it), inner (what it means) — to ask whether meaning is intrinsic to a message or supplied by the decoder.",
+      "engagement": "source of the three-layer message model the book adapts"
+    },
+    {
+      "id": "ethical-infrastructure-talk",
+      "label": "How to Ethically Build Public Good Infrastructure",
+      "kind": "talk",
+      "author": "corey-petty",
+      "tradition": "internal-corpus",
+      "summary": "Devcon VI talk, October 2022. Applies Hofstadter's three-layer message model to infrastructure design — and makes the key move of identifying the outer message with the medium.",
+      "engagement": "primary internal source — first place the three-layer model was bound to the medium"
     }
   ]
 }

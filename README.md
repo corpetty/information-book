@@ -36,7 +36,7 @@ make context CENTER=claim:<slug> ARGS="-o foo.md" # write bundle to file
 make help                                         # list targets
 ```
 
-Current state: **122 nodes / 354 edges / 0 warnings**.
+Current state: **131 nodes / 380 edges / 0 warnings**.
 
 ## The drafting loop
 
@@ -126,7 +126,8 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 7 | `c240ddb` | Context-bundle drafting-loop improvements: embed draft-note section openings, surface resolved questions, thread case studies into the claims they illustrate |
 | 8 | `f4f8e2e` | Catalog gap-fill: 7 concepts the extraction agents flagged + a targeted re-extraction pass over the 4 PDFs for them |
 | 9 | `75a6dd7` | Aggregator enforces edge-direction conventions: `supports` / `pressureTests` subject must be a Source; malformed triples dropped with a warning |
-| 10 | `(this commit)` | Wire `medium-and-manipulation.md` into the graph: seedNotes entry, `question:medium-and-manipulation` flipped to provisionally-resolved, claim `truth-survival-two-conditions` promoted |
+| 10 | `61e696a` | Wire `medium-and-manipulation.md` into the graph: seedNotes entry, `question:medium-and-manipulation` flipped to provisionally-resolved, claim `truth-survival-two-conditions` promoted |
+| 11 | `(this commit)` | Integrate Hofstadter's three-layer message model (GEB): `source:godel-escher-bach` + `source:ethical-infrastructure-talk`, `tradition:information-theory`, `concept:three-layer-message`, `case:voyager-golden-record`, the `three-layer-message.md` note, two claims; concept loader gains a hand-authored `evidencedBy` field |
 
 ## Layout
 
@@ -137,11 +138,11 @@ info-book-ontology/
 ├── data/
 │   ├── graph-meta.json                schema contract — node types + predicates
 │   ├── mechanisms.json                5 named structural mechanisms
-│   ├── concepts.json                  23 cross-cutting concepts
+│   ├── concepts.json                  24 cross-cutting concepts
 │   ├── questions.json                 7 foundational questions (open / provisionally-resolved / resolved)
-│   ├── traditions.json                5 intellectual lineages
-│   ├── sources.json                   15 sources + 11 authors
-│   ├── case-studies.json              6 worked examples
+│   ├── traditions.json                6 intellectual lineages
+│   ├── sources.json                   17 sources + 12 authors
+│   ├── case-studies.json              7 worked examples
 │   ├── claims.json                    canonical claims (promoted from candidates)
 │   ├── slug-aliases.json              wikilink-resolution overrides
 │   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (8 files: 4 main + 4 gap, committed)

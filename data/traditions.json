@@ -25,6 +25,11 @@
       "id": "internal-corpus",
       "label": "Internal corpus",
       "summary": "The author's own earlier writing the book draws from. Primary source material — the book is partly a synthesis of these threads."
+    },
+    {
+      "id": "information-theory",
+      "label": "Information theory and the location of meaning",
+      "summary": "The formal study of encoding, transmission, and decoding — and the question of where meaning lives: in the message, or supplied by the decoder. Shannon's channel model and its philosophical extension in Hofstadter's work."
     }
   ]
 }
