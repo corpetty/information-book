@@ -16,6 +16,11 @@ import { dirname, resolve } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 const dataDir = resolve(repoRoot, 'data');
+const NOTES_DIR = resolve(repoRoot, '..', 'quartz', 'content', 'notes', 'information-book');
+
+// Tracks cases shown inline under claims so the standalone "Case studies"
+// section doesn't duplicate them.
+const inlineCaseIds = new Set();
 
 // ---------------------------------------------------------------- CLI
 
@@ -178,6 +183,69 @@ function labelOf(id) {
   return n ? (n.label || id) : id;
 }
 
+// Pull the first prose paragraph after an H2 heading. Skips images, code
+// fences, and leading blockquote markers. Used to embed a section opening
+// from a chapter's draft note into the bundle so the drafter sees the
+// actual voice the chapter is being written in.
+function firstParagraphOfSection(sectionBody) {
+  const lines = sectionBody.split('\n');
+  let started = false;
+  const result = [];
+  let inFence = false;
+  for (const line of lines) {
+    if (/^```/.test(line.trim())) { inFence = !inFence; if (started) break; continue; }
+    if (inFence) continue;
+    const trimmed = line.trim();
+    if (!trimmed) {
+      if (started) break;
+      continue;
+    }
+    if (/^!\[/.test(trimmed)) { if (started) break; continue; }   // image
+    if (/^>/.test(trimmed) && !started) continue;                  // skip leading blockquote
+    started = true;
+    result.push(trimmed);
+  }
+  return result.join(' ');
+}
+
+function loadNotePassages(note) {
+  if (!note?.props?.file) return null;
+  const filePath = resolve(NOTES_DIR, note.props.file);
+  if (!existsSync(filePath)) return null;
+  let content = readFileSync(filePath, 'utf8');
+  content = content.replace(/^---\n[\s\S]*?\n---\n?/, ''); // strip frontmatter
+  const sectionRegex = /^##\s+(.+?)\n+([\s\S]*?)(?=\n##\s+|$)/gm;
+  const passages = [];
+  let m;
+  while ((m = sectionRegex.exec(content)) !== null) {
+    const title = m[1].trim();
+    const firstPara = firstParagraphOfSection(m[2]);
+    if (firstPara) passages.push({ title, firstParagraph: firstPara });
+  }
+  return passages;
+}
+
+// Foundational questions in scope: combine BFS-reached questions with
+// the questions that each in-scope claim depends on or that its
+// harvestedFrom notes flag. This surfaces resolved questions even when
+// they're more than 2 hops from the chapter center — the chapter's
+// argument inherits the question's resolution via the claims it argues.
+function questionsInScopeFromClaims(claims) {
+  const ids = new Set();
+  for (const claim of claims) {
+    for (const e of outEdges(claim.id, 'dependsOn')) {
+      if (e.target.startsWith('question:')) ids.add(e.target);
+    }
+    for (const anchor of claim.props?.harvestedFrom || []) {
+      const noteId = `note:${anchor.note}`;
+      for (const e of outEdges(noteId, 'flagsOpenQuestion')) {
+        ids.add(e.target);
+      }
+    }
+  }
+  return Array.from(ids).map(id => nodeById.get(id)).filter(Boolean);
+}
+
 // ---------------------------------------------------------------- render
 
 function renderEvidenceQuote(lines, e, kind) {
@@ -198,6 +266,21 @@ function renderClaim(lines, claim) {
   const deps = outEdges(claim.id, 'dependsOn').map(e => e.target);
   if (deps.length) {
     lines.push(`*Depends on:* ${deps.map(d => `\`${d}\``).join(', ')}`);
+    lines.push('');
+  }
+  // Illustrating case studies — show inline, then mark so the
+  // standalone Case studies section knows to skip them.
+  const illustratingCases = inEdges(claim.id, 'mentions')
+    .filter(e => e.source.startsWith('case:'))
+    .map(e => nodeById.get(e.source))
+    .filter(Boolean);
+  if (illustratingCases.length) {
+    lines.push('**Illustrated by:**');
+    lines.push('');
+    for (const cs of illustratingCases) {
+      lines.push(`- **${cs.label}** — ${cs.props?.summary || ''}`);
+      inlineCaseIds.add(cs.id);
+    }
     lines.push('');
   }
   const sup = inEdges(claim.id, 'supports');
@@ -247,7 +330,19 @@ function renderMarkdown() {
     lines.push(`\`${dn.id}\` — ${dn.props?.title || dn.label}`);
     lines.push('');
     if (dn.props?.summary) { lines.push(dn.props.summary); lines.push(''); }
-    if (dn.props?.sections?.length) {
+    const passages = loadNotePassages(dn);
+    if (passages?.length) {
+      lines.push('**Section openings (first paragraph after each H2 in the draft):**');
+      lines.push('');
+      for (const p of passages) {
+        lines.push(`#### ${p.title}`);
+        lines.push('');
+        const quoted = p.firstParagraph.split('\n').map(l => `> ${l}`).join('\n');
+        lines.push(quoted);
+        lines.push('');
+      }
+    } else if (dn.props?.sections?.length) {
+      // Fallback if note's source file isn't accessible from where we run
       lines.push('**Section outline:**');
       for (const s of dn.props.sections) lines.push(`- ${s}`);
       lines.push('');
@@ -301,17 +396,45 @@ function renderMarkdown() {
     }
   }
 
-  // Open questions
-  if (buckets.Question?.length) {
+  // Questions in scope — combine BFS-reached with claim-scoped lookup
+  // so foundational resolved questions surface even when more than 2
+  // hops away from the center.
+  const claimsForScope = center.type === 'Claim' ? [center] : (buckets.Claim || []);
+  const scopedQs = questionsInScopeFromClaims(claimsForScope);
+  const allQsMap = new Map();
+  for (const q of (buckets.Question || [])) allQsMap.set(q.id, q);
+  for (const q of scopedQs) allQsMap.set(q.id, q);
+  const allQs = Array.from(allQsMap.values());
+  const openQs = allQs.filter(q => q.props?.status === 'open');
+  const resolvedQs = allQs.filter(q => q.props?.status && q.props.status !== 'open');
+
+  if (openQs.length) {
     lines.push('## Open questions in scope');
     lines.push('');
-    for (const q of buckets.Question) {
+    for (const q of openQs) {
       lines.push(`### ${q.label}`);
       lines.push('');
       lines.push(`\`${q.id}\` — *status: ${q.props?.status || 'open'}*`);
       lines.push('');
       if (q.props?.summary) { lines.push(q.props.summary); lines.push(''); }
       if (q.props?.workingAnswer) { lines.push(`**Working answer:** ${q.props.workingAnswer}`); lines.push(''); }
+    }
+  }
+  if (resolvedQs.length) {
+    lines.push('## Foundational questions resolved in scope');
+    lines.push('');
+    lines.push('*The chapter\'s argument rests on these provisional resolutions. Treat as committed unless explicitly reopened.*');
+    lines.push('');
+    for (const q of resolvedQs) {
+      lines.push(`### ${q.label}`);
+      lines.push('');
+      lines.push(`\`${q.id}\` — *status: ${q.props?.status}*`);
+      lines.push('');
+      if (q.props?.summary) { lines.push(q.props.summary); lines.push(''); }
+      if (q.props?.workingAnswer) {
+        lines.push(`**Working answer:** ${q.props.workingAnswer}`);
+        lines.push('');
+      }
     }
   }
 
@@ -335,11 +458,13 @@ function renderMarkdown() {
     lines.push('');
   }
 
-  // Case studies
-  if (buckets.CaseStudy?.length) {
-    lines.push('## Case studies');
+  // Case studies — only those not already shown inline under a claim,
+  // so the section isn't a duplicate of what's threaded above.
+  const standaloneCases = (buckets.CaseStudy || []).filter(cs => !inlineCaseIds.has(cs.id));
+  if (standaloneCases.length) {
+    lines.push('## Other case studies in neighbourhood');
     lines.push('');
-    for (const cs of buckets.CaseStudy) {
+    for (const cs of standaloneCases) {
       lines.push(`- **${cs.label}** (\`${cs.id}\`) — ${cs.props?.summary || ''}`);
     }
     lines.push('');

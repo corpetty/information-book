@@ -389,6 +389,9 @@ function loadCaseStudies() {
     for (const c of cs.illustratesConcepts || []) {
       addEdge(`case:${cs.id}`, `concept:${c}`, 'mentions');
     }
+    for (const cl of cs.illustratesClaims || []) {
+      addEdge(`case:${cs.id}`, `claim:${cl}`, 'mentions');
+    }
     for (const ch of cs.appearsIn || []) {
       addEdge(`chapter:${ch}`, `case:${cs.id}`, 'covers');
     }
@@ -567,7 +570,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 6,
+    phase: 7,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,
