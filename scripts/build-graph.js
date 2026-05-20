@@ -570,7 +570,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 7,
+    phase: 8,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,

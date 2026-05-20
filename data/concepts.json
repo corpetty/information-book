@@ -128,6 +128,62 @@
       "aliases": ["handle-ability", "handle ability", "graspability"],
       "definedIn": ["complexity-virality-tradeoff"],
       "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+    },
+    {
+      "id": "meme-ecosystem-competition",
+      "label": "Meme ecosystem competition",
+      "summary": "Memes don't propagate in isolation — a meme's infection and decay rates are functions of the other memes already competing for the same attention. Fitness is relative to the current population, not an intrinsic property. (Catalog gap flagged by the epidemiological-virality extraction.)",
+      "aliases": ["ecosystem competition", "meme competition", "attention ecosystem", "competing memes"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine", "complexity-virality-tradeoff"]
+    },
+    {
+      "id": "neutral-drift-baseline",
+      "label": "Neutral drift baseline (Yule process)",
+      "summary": "The null model for spread: what propagation looks like with no selection at all — random copying plus rich-get-richer accumulation. Most meme variants follow it. Selection is what you detect as departure from this baseline. (Catalog gap flagged by the info-evolution extraction.)",
+      "aliases": ["neutral drift", "Yule process", "rich-get-richer", "neutral model"],
+      "definedIn": [],
+      "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+    },
+    {
+      "id": "replicator-ontology",
+      "label": "Replicator ontology",
+      "summary": "The assumption that culture comes in discrete, copyable units (memes as replicators, analogous to genes). The load-bearing premise of memetics — and the one its critics attack hardest, arguing cultural transmission is reconstructive, not copy-based. (Catalog gap flagged by the memetics-critique extraction.)",
+      "aliases": ["replicator ontology", "discrete-unit assumption", "meme as replicator", "discrete cultural units"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine"]
+    },
+    {
+      "id": "paradox-of-virality",
+      "label": "Paradox of virality",
+      "summary": "What spreads is not what people endorse. Across the political spectrum, people report they do not want high-arousal negative content to go viral — yet it does. The gap implicates the selection gate (especially algorithmic amplification), not receiver preference. (Catalog gap flagged by the psychology-of-virality extraction.)",
+      "aliases": ["paradox of virality", "shared not liked", "virality paradox"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine", "emotional-memetics"]
+    },
+    {
+      "id": "superspreader-dynamics",
+      "label": "Superspreader dynamics",
+      "summary": "A small number of high-degree nodes drive a disproportionate share of total spread — a network-structure effect with no offline equivalent at the same scale. Distinct from manipulation surface: it's about who is positioned to amplify, not what can be exploited. (Catalog gap flagged by the psychology-of-virality extraction.)",
+      "aliases": ["superspreader", "superspreaders", "high-degree nodes", "amplification hubs"],
+      "definedIn": [],
+      "coveredBy": ["bridge-zone-distortion", "political-economy-of-attention"]
+    },
+    {
+      "id": "algorithm-as-selection-engine",
+      "label": "Algorithm as selection engine",
+      "summary": "Recommendation algorithms are not lossy transport — they are selection gates with adjustable weights. They make 'who tunes the gates' a literal, operational question, and turn the selection criteria of a few companies into the selection criteria of everyone. (Catalog gap flagged by the psychology-of-virality extraction.)",
+      "aliases": ["algorithm as selection engine", "recommendation algorithm", "algorithmic amplification", "algorithmic curation"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine", "political-economy-of-attention", "ai-as-new-node"]
+    },
+    {
+      "id": "epistemic-vigilance",
+      "label": "Epistemic vigilance (mental immune systems)",
+      "summary": "Humans have evolved cognitive defenses that screen incoming information for plausibility and source reliability — 'mental immune systems'. Mercier's challenge to the easy-manipulation narrative: receivers are far less gullible than the simple-meme-wins story implies. (Catalog gap flagged by the psychology-of-virality extraction.)",
+      "aliases": ["epistemic vigilance", "mental immune systems", "cognitive defenses", "not born yesterday"],
+      "definedIn": [],
+      "coveredBy": ["emotional-memetics", "selection-as-other-engine"]
     }
   ]
 }

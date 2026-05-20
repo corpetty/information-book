@@ -31,31 +31,38 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
 .DEFAULT_GOAL := all
 .PHONY: all build serve stats clean help harvest catalog aggregate-interpretive extract-build context
 
-all: $(NODES_OUT)
-build: $(NODES_OUT)
+all: build
 
-$(NODES_OUT) $(EDGES_OUT) $(STATS_OUT) &: $(SCRIPTS)/build-graph.js $(DATA)/graph-meta.json $(CATALOGS)
+# build-graph.js is fast (sub-second) — always run it rather than tracking
+# file staleness. Guarantees the graph reflects every input on every
+# invocation: catalogs, interpretive-triples.jsonl, and the quartz prose
+# the note parser reads. (Staleness tracking previously skipped rebuilds
+# after `make aggregate-interpretive` rewrote interpretive-triples.jsonl.)
+build:
 	@node $(SCRIPTS)/build-graph.js
 
-serve: $(NODES_OUT)
+serve: build
 	@echo "Serving at http://localhost:$(PORT)/src/"
 	@python3 -m http.server $(PORT)
 
-stats: $(STATS_OUT)
+stats: build
 	@cat $(STATS_OUT)
 
 harvest:
 	@node $(SCRIPTS)/harvest-claims.js
 
-catalog:
+catalog: build
 	@node $(SCRIPTS)/build-catalog.js
 
-aggregate-interpretive:
+aggregate-interpretive: catalog
 	@node $(SCRIPTS)/aggregate-interpretive.js
 
-extract-build: aggregate-interpretive build
+# Aggregate per-PDF extractions, then rebuild so the graph picks up the
+# fresh interpretive triples.
+extract-build: aggregate-interpretive
+	@node $(SCRIPTS)/build-graph.js
 
-context: $(NODES_OUT)
+context: build
 	@node $(SCRIPTS)/context-bundle.js --center=$(CENTER) $(ARGS)
 
 clean:
