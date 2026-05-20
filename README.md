@@ -36,7 +36,7 @@ make context CENTER=claim:<slug> ARGS="-o foo.md" # write bundle to file
 make help                                         # list targets
 ```
 
-Current state: **113 nodes / 309 edges / 0 warnings**.
+Current state: **122 nodes / 354 edges / 0 warnings**.
 
 ## The drafting loop
 
@@ -123,6 +123,10 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 4 | `fe7f6f6` | LLM interpretive extraction: per-PDF subagent over the 4 academic papers in `sources/`. 73 triples (39 evidencedBy, 17 pressureTests, 12 supports). All 7 canonical claims now have source backing — selection-primary is contested 2-4 across all four papers |
 | 5 | `e975f30` | Note parser: walks each markdown file, extracts `[[wikilinks]]` (→ `wikiLinks` / `cites` edges), H2 section anchors (as Note props for navigation), with `data/slug-aliases.json` for known mismatches |
 | 6 | `9af7525` | Context-bundle exporter: `make context CENTER=<id>` emits a markdown packet of the surrounding neighbourhood, type-aware rendering, full verbatim source quotes, editorial flags |
+| 7 | `c240ddb` | Context-bundle drafting-loop improvements: embed draft-note section openings, surface resolved questions, thread case studies into the claims they illustrate |
+| 8 | `f4f8e2e` | Catalog gap-fill: 7 concepts the extraction agents flagged + a targeted re-extraction pass over the 4 PDFs for them |
+| 9 | `75a6dd7` | Aggregator enforces edge-direction conventions: `supports` / `pressureTests` subject must be a Source; malformed triples dropped with a warning |
+| 10 | `(this commit)` | Wire `medium-and-manipulation.md` into the graph: seedNotes entry, `question:medium-and-manipulation` flipped to provisionally-resolved, claim `truth-survival-two-conditions` promoted |
 
 ## Layout
 
@@ -133,14 +137,14 @@ info-book-ontology/
 ├── data/
 │   ├── graph-meta.json                schema contract — node types + predicates
 │   ├── mechanisms.json                5 named structural mechanisms
-│   ├── concepts.json                  16 cross-cutting concepts
-│   ├── questions.json                 6 open foundational questions + 1 resolved
+│   ├── concepts.json                  23 cross-cutting concepts
+│   ├── questions.json                 7 foundational questions (open / provisionally-resolved / resolved)
 │   ├── traditions.json                5 intellectual lineages
 │   ├── sources.json                   15 sources + 11 authors
 │   ├── case-studies.json              6 worked examples
 │   ├── claims.json                    canonical claims (promoted from candidates)
 │   ├── slug-aliases.json              wikilink-resolution overrides
-│   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (4 files, committed)
+│   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (8 files: 4 main + 4 gap, committed)
 │   ├── claim-candidates.jsonl         harvester output (gitignored)
 │   ├── extraction-catalog.json        generated for agents (gitignored)
 │   ├── interpretive-triples.jsonl     aggregated extractions (gitignored)

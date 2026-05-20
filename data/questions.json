@@ -15,8 +15,9 @@
       "label": "What does the medium do to the gates?",
       "summary": "Different media expose different selection criteria, allow different manipulation surfaces, and cultivate different kinds of want in receivers. McLuhan's 'the medium is the message' re-asked as: which media let core truth survive which kinds of manipulation?",
       "aliases": ["medium and manipulation", "medium is the message"],
-      "status": "open",
-      "flaggedIn": ["outline", "transport-vs-selection"],
+      "status": "provisionally-resolved",
+      "workingAnswer": "The medium is the selection criteria: it sets each gate's capacity, what the gate rewards, and the want it cultivates in receivers over time. Core truth survives a medium jointly on two conditions — its gate-criteria must reward something truth-correlated, and its want-loop must not erode the appetite for truth. Most engagement-optimized media fail both. Drafted in medium-and-manipulation.md.",
+      "flaggedIn": ["outline", "transport-vs-selection", "medium-and-manipulation"],
       "blocksChapters": ["selection-as-other-engine", "emotional-memetics", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
     },
     {

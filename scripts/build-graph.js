@@ -236,6 +236,7 @@ function seedNotes() {
     { slug: 'info-time-limit',              file: 'info-time-limit.md',              subtype: 'prose',        title: 'The limit on how much information a human can incorporate', role: 'chapter-draft',       summary: 'Chapter 3 draft (partial). Receiver budget: tablespoon of weeks.' },
     { slug: 'optionality-vs-access',        file: 'optionality vs access.md',        subtype: 'prose',        title: 'Optionality vs. Access',                                    role: 'chapter-draft',       summary: 'Chapter 4 draft (software-only). The general-vs-usable trade-off through matplotlib vs. seaborn.' },
     { slug: 'general-theme',                file: 'general-theme.md',                subtype: 'conversation', title: 'General Theme',                                             role: 'conversation-source', summary: 'Conversation transcript. The book concept explained to someone in real time. The conclusion of Part IV lives raw here.' },
+    { slug: 'medium-and-manipulation', file: 'medium-and-manipulation.md', subtype: 'prose', title: 'Medium and Manipulation', role: 'foundational-note', summary: 'Foundational note on what the medium does to the selection gates. Provisional answer: the medium is the selection criteria — it sets the capacity, the criteria, and the want cultivated at every gate.' },
   ];
   for (const n of notes) {
     addNode({
@@ -570,7 +571,7 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 9,
+    phase: 10,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,

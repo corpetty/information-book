@@ -62,9 +62,9 @@
       "id": "medium-attached-to-every-gate",
       "label": "Every gate has a medium that shapes its criteria",
       "summary": "Every node and every arrow in the two-pipeline picture has a medium attached. The selection criteria at each gate are downstream of what that medium can hold and what it rewards. Changing the medium changes the criteria — the pipeline operates inside a specific media ecosystem.",
-      "aliases": ["medium attached to every gate", "medium shapes gate criteria"],
+      "aliases": ["medium attached to every gate", "medium shapes gate criteria", "the medium is the selection criteria"],
       "status": "load-bearing",
-      "argues": ["the-information-landscape"],
+      "argues": ["the-information-landscape", "medium-and-manipulation"],
       "arguedInChapters": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention"],
       "dependsOn": ["question:medium-and-manipulation"],
       "harvestedFrom": [
@@ -72,6 +72,11 @@
           "note": "the-information-landscape",
           "lineApprox": 153,
           "text": "every node and every arrow in this two-pipeline picture has a medium attached to it. The selection criteria at each gate are downstream of what that medium can hold and what it rewards."
+        },
+        {
+          "note": "medium-and-manipulation",
+          "lineApprox": 17,
+          "text": "every gate in the pipeline has a medium attached, and the gate's criteria are downstream of what that medium can hold and what it rewards."
         }
       ]
     },
@@ -128,6 +133,23 @@
           "note": "optionality-vs-access",
           "lineApprox": 70,
           "text": "They've constrained the user's options for the benefit of increasing overall accessibility."
+        }
+      ]
+    },
+    {
+      "id": "truth-survival-two-conditions",
+      "label": "Core truth survives a medium on two joint conditions",
+      "summary": "Core truth survives a medium to the degree that two things both hold: the medium's gate-criteria reward something correlated with truth, and the medium's want-loop doesn't erode the receiver's appetite for truth over time. Both conditions, not either.",
+      "aliases": ["truth survives the medium", "two conditions for truth survival"],
+      "status": "working",
+      "argues": ["medium-and-manipulation"],
+      "arguedInChapters": ["selection-as-other-engine", "infrastructure-for-integration"],
+      "dependsOn": ["claim:medium-attached-to-every-gate", "question:truth-value-placement"],
+      "harvestedFrom": [
+        {
+          "note": "medium-and-manipulation",
+          "lineApprox": 55,
+          "text": "Core truth survives a medium to the degree that two things hold: the medium's gate-criteria reward something correlated with truth, and the medium's want-loop doesn't erode the receiver's appetite for truth over time."
         }
       ]
     }
