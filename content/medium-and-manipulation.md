@@ -38,7 +38,7 @@ This is also where *manipulation* enters with a precise definition. Manipulation
 
 **Three: it shapes want — what receivers come to want.** This is the deepest of the three and the one McLuhan was really pointing at. [[transport-vs-selection]] established *want* as the prime mover: someone wants to engage with something, engages, accumulates preconditions, wants to engage more deeply, and so on. A medium feeds that loop. A medium that rewards shallow engagement trains receivers, over thousands of repetitions, to want shallow content — and a want for shallow content is a precondition-set that makes the next shallow thing land even more easily. A medium that rewards sustained engagement runs the loop the other way. The medium doesn't just gate this round of content; it edits the receiver who will face the next round.
 
-Note the order of operations. Capacity and criteria act on the *content*. Want acts on the *receiver*. The first two change what wins today; the third changes who's judging tomorrow. A medium that has been running its want-loop for a decade is not facing the same population it started with, which is why "just add better content" never works as a fix — the gate has already remade the people behind it.
+Note the order of operations. Capacity and criteria act on the *content*. Want acts on the *receiver*. The first two change what wins today; the third changes who's judging tomorrow. A medium that has been running its want-loop for a decade is not facing the same population it started with, which is why "just add better content" never works as a fix — the gate has already remade the people behind it. [NEED EVIDENCE HERE]
 
 ## The honest hedge: the medium selects wants, it doesn't author them
 
