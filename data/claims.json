@@ -142,8 +142,8 @@
       "summary": "Core truth survives a medium to the degree that two things both hold: the medium's gate-criteria reward something correlated with truth, and the medium's want-loop doesn't erode the receiver's appetite for truth over time. Both conditions, not either.",
       "aliases": ["truth survives the medium", "two conditions for truth survival"],
       "status": "working",
-      "argues": ["medium-and-manipulation"],
-      "arguedInChapters": ["selection-as-other-engine", "infrastructure-for-integration"],
+      "argues": ["medium-and-manipulation", "truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["selection-as-other-engine", "infrastructure-for-integration", "truth-compression-and-when-each-wins"],
       "dependsOn": ["claim:medium-attached-to-every-gate", "question:truth-value-placement"],
       "harvestedFrom": [
         {
@@ -176,14 +176,167 @@
       "summary": "What a lossy hop usually strips is the outer message (the decoding key — qualifications, scope conditions, methodology), not the inner message (the claim itself). A surviving inner message then gets decoded with the receiver's default key and yields a false belief. Most of what the book calls distortion is outer-message loss.",
       "aliases": ["transit strips the outer message", "outer-message loss"],
       "status": "working",
-      "argues": ["three-layer-message"],
-      "arguedInChapters": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine"],
+      "argues": ["three-layer-message", "truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine", "truth-compression-and-when-each-wins"],
       "dependsOn": ["claim:outer-message-is-preconditions", "claim:complexity-virality-inverse"],
       "harvestedFrom": [
         {
           "note": "three-layer-message",
           "lineApprox": 33,
           "text": "What a lossy hop usually strips is the outer message, not the inner one."
+        }
+      ]
+    },
+    {
+      "id": "compression-strips-the-key",
+      "label": "Compression strips the decoding key, not truth itself",
+      "summary": "Compression does not act on a claim's truth value directly. It strips the outer message — the decoding key — and leaves the bare claim intact, so whether truth survives depends entirely on which key the receiver decodes with instead.",
+      "aliases": ["compression strips the key", "compression doesn't degrade truth directly"],
+      "status": "working",
+      "argues": ["truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["truth-compression-and-when-each-wins"],
+      "dependsOn": ["claim:transit-strips-the-outer-message"],
+      "harvestedFrom": [
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "lineApprox": 13,
+          "text": "compression does not act on truth directly. It strips the decoding key, and whether truth survives depends entirely on which key the receiver reaches for instead."
+        }
+      ]
+    },
+    {
+      "id": "truth-value-is-key-fit",
+      "label": "Truth value lives in the key-fit, not the claim",
+      "summary": "Truth value is not a property of a claim in isolation; it is a property of the fit between the claim's decoding key and the key its receiver actually uses. This is where truth value enters the pipeline model — the provisional resolution of the truth-value-placement question.",
+      "aliases": ["truth value is key-fit", "truth value in the decoding-key fit", "where truth value enters the model"],
+      "status": "working",
+      "argues": ["truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["truth-compression-and-when-each-wins"],
+      "dependsOn": ["claim:compression-strips-the-key", "question:truth-value-placement"],
+      "harvestedFrom": [
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "lineApprox": 29,
+          "text": "truth value is not a property of a claim; it is a property of the fit between the claim's decoding key and the key its receiver actually uses."
+        }
+      ]
+    },
+    {
+      "id": "selection-picks-the-regime",
+      "label": "Selection picks the truth-compression regime",
+      "summary": "Transport alone only scrambles — it has no preferred outcome. Inversion and orthogonality are not failures of compression but compressed variants that a selection gate preferred. Which of the three regimes a claim lands in is set by what the gate rewards.",
+      "aliases": ["selection picks the regime", "selection determines the truth regime", "inversion and orthogonality are selected"],
+      "status": "working",
+      "argues": ["truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["truth-compression-and-when-each-wins", "selection-as-other-engine"],
+      "dependsOn": ["claim:truth-value-is-key-fit", "claim:two-pipelines-parallel"],
+      "harvestedFrom": [
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "lineApprox": 51,
+          "text": "Inversion and orthogonality are not failures of compression; they are compressed variants that a selection gate preferred."
+        }
+      ]
+    },
+    {
+      "id": "engagement-gates-reward-truth-loss",
+      "label": "Engagement-tuned gates systematically reward truth-losing compressions",
+      "summary": "The book's breakage claim, now following from the structure: the failure is not that information gets compressed but that the dominant medium's gates systematically reward the compressions in which truth inverts or stops mattering over the ones in which it survives — because alarm out-competes calibration and a flag out-competes a claim at an engagement-tuned gate. This closes the moral-neutrality gap.",
+      "aliases": ["engagement gates reward truth loss", "the breakage is selection for truth-losing compression", "moral-neutrality gap closed"],
+      "status": "working",
+      "argues": ["truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["truth-compression-and-when-each-wins", "political-economy-of-attention"],
+      "dependsOn": ["claim:selection-picks-the-regime", "claim:truth-survival-two-conditions"],
+      "harvestedFrom": [
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "lineApprox": 75,
+          "text": "the breakage this book is about is not that information gets compressed — it is that the dominant medium's gates systematically reward the compressions in which truth inverts or stops mattering over the ones in which it survives, because alarm out-competes calibration and a flag out-competes a claim at any gate tuned for engagement."
+        }
+      ]
+    },
+    {
+      "id": "compression-widens-latitude",
+      "label": "Compression widens interpretive latitude",
+      "summary": "Stripping a claim's outer message does not fix a single wrong decoding key — it unpins the key, leaving the claim underdetermined. The more compressed the claim, the wider the range of readings it supports across a population. Compression's second effect, alongside shifting the expected decode.",
+      "aliases": ["compression widens latitude", "interpretive latitude grows with compression", "compression unpins the key"],
+      "status": "working",
+      "argues": ["myths-scale-and-bureaucracy", "truth-compression-and-when-each-wins"],
+      "arguedInChapters": ["truth-compression-and-when-each-wins"],
+      "dependsOn": ["claim:compression-strips-the-key"],
+      "harvestedFrom": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "lineApprox": 15,
+          "text": "Stripping an idea's outer message does not pin a wrong decoding key; it unpins the key — and the more of the outer message you strip, the wider the range of readings the surviving claim will support."
+        }
+      ]
+    },
+    {
+      "id": "myth-reach-determinacy-tradeoff",
+      "label": "A myth's reach and its determinacy trade off",
+      "summary": "A myth simple enough to bind a whole network is necessarily one the network can read many different ways. Reach and determinacy trade off — the same curve as reach-vs-complexity and reach-vs-truth, here as reach-vs-shared-meaning.",
+      "aliases": ["myth reach-determinacy tradeoff", "reach vs shared meaning", "reach determinacy trade-off"],
+      "status": "working",
+      "argues": ["myths-scale-and-bureaucracy"],
+      "arguedInChapters": ["complexity-virality-tradeoff", "integration-problem"],
+      "dependsOn": ["claim:compression-widens-latitude", "claim:complexity-ceiling-by-network-size"],
+      "harvestedFrom": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "lineApprox": 23,
+          "text": "A myth's reach and its determinacy trade off: a myth simple enough for a whole network to hold is, necessarily, one the network can read many different ways."
+        }
+      ]
+    },
+    {
+      "id": "unify-and-fragment-same-fact",
+      "label": "A myth's unity and its fragmentation are one fact",
+      "summary": "A large network's unifying myth and its latent fragmentation are the same fact seen from two sides: the myth can be universally affirmed precisely because it is vague enough that each segment affirms a different myth. Network segmentation is interpretive latitude sorted into clusters.",
+      "aliases": ["unify and fragment same fact", "myth unity is fragmentation", "segmentation from latitude"],
+      "status": "working",
+      "argues": ["myths-scale-and-bureaucracy"],
+      "arguedInChapters": ["integration-problem"],
+      "dependsOn": ["claim:myth-reach-determinacy-tradeoff"],
+      "harvestedFrom": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "lineApprox": 33,
+          "text": "A large network's unifying myth and its latent fragmentation are the same fact seen from two sides — the myth can be universally affirmed precisely because it is vague enough that each segment is affirming a different myth."
+        }
+      ]
+    },
+    {
+      "id": "bureaucracy-downstream-of-myth",
+      "label": "Bureaucracy is downstream of the myth",
+      "summary": "Bureaucracy is not a co-equal pillar with myth but the institution a network grows to repair myth dilution — to re-supply the decoding key scaling forced the myth to drop. The larger the network, the more of its cohesion shifts from myth to bureaucracy.",
+      "aliases": ["bureaucracy downstream of myth", "bureaucracy repairs myth dilution"],
+      "status": "working",
+      "argues": ["myths-scale-and-bureaucracy"],
+      "arguedInChapters": ["preservation-vs-training"],
+      "dependsOn": ["claim:unify-and-fragment-same-fact"],
+      "harvestedFrom": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "lineApprox": 39,
+          "text": "Bureaucracy is downstream of the myth: it is the institution a network grows to cover the gap that scaling tore open in its myth, and the larger the network, the more of its cohesion has to shift from myth to bureaucracy."
+        }
+      ]
+    },
+    {
+      "id": "loop-outcome-set-by-capture-resistance",
+      "label": "The dilution loop's outcome is set by the bureaucracy's resistance to capture",
+      "summary": "The myth-dilution loop has no fixed destiny. Whether it compounds (safe scale), fragments (a too-weak bureaucracy), or inverts into scale-as-control (a captured-but-effective bureaucracy) is set by the repairing bureaucracy's own resistance to manipulation and capture. A good institution is not one that cannot be captured but one where capture cannot quietly hold.",
+      "aliases": ["loop outcome set by capture resistance", "what decides the dilution loop", "capture-resistance decides the loop"],
+      "status": "working",
+      "argues": ["myths-scale-and-bureaucracy"],
+      "arguedInChapters": ["preservation-vs-training", "political-economy-of-attention"],
+      "dependsOn": ["claim:bureaucracy-downstream-of-myth"],
+      "harvestedFrom": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "lineApprox": 61,
+          "text": "A good institution is not one that cannot be captured; it is one where capture cannot quietly hold."
         }
       ]
     }

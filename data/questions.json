@@ -6,8 +6,9 @@
       "label": "Where does truth value enter the model?",
       "summary": "Compression sometimes preserves approximate truth, sometimes inverts it, sometimes wanders into orthogonal territory. The current frame doesn't say which happens when. The worry the book wants to express needs an answer here to land.",
       "aliases": ["truth value", "moral neutrality gap", "truth-value question"],
-      "status": "open",
-      "flaggedIn": ["outline"],
+      "status": "provisionally-resolved",
+      "workingAnswer": "Truth value is not carried by the inner message (the claim) but by the fit between the idea's outer message — its decoding key — and the key the receiver decodes with. Compression strips the key, not the claim, so it can preserve approximate truth (keys close), invert truth (keys opposed), or render truth orthogonal (the claim is read as an identity flag, not decoded as a claim at all). Which regime occurs is decided by selection: the gate picks the compressed variant matching its criteria. Drafted in truth-compression-and-when-each-wins.md.",
+      "flaggedIn": ["outline", "truth-compression-and-when-each-wins"],
       "blocksChapters": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff", "emotional-memetics"]
     },
     {
@@ -55,7 +56,7 @@
       "aliases": ["integration vs fragmentation", "Part IV pivot"],
       "status": "provisionally-resolved",
       "workingAnswer": "Integration between networks that don't share preconditions, not fragmentation into smaller ones. Bridge nodes carrying transferable preconditions are the stitching infrastructure.",
-      "flaggedIn": ["outline", "general-theme"],
+      "flaggedIn": ["outline", "general-theme", "myths-scale-and-bureaucracy"],
       "blocksChapters": ["integration-problem", "infrastructure-for-integration"]
     },
     {

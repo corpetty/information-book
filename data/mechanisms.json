@@ -45,6 +45,24 @@
       "definedIn": ["the-information-landscape"],
       "coveredBy": ["information-landscape", "ai-as-new-node"],
       "derivesFrom": []
+    },
+    {
+      "id": "interpretive-latitude",
+      "label": "Interpretive latitude",
+      "summary": "Stripping an idea's outer message does not fix a single wrong decoding key — it unpins the key, leaving the surviving claim underdetermined. The more compressed the claim, the wider the range of readings it will support. Compression's second effect, alongside shifting the expected decode: it widens the variance of decodes across receivers.",
+      "aliases": ["interpretive latitude", "interpretation variance", "interpretive underdetermination", "underdetermined decode"],
+      "definedIn": ["myths-scale-and-bureaucracy", "truth-compression-and-when-each-wins"],
+      "coveredBy": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff"],
+      "derivesFrom": ["transport"]
+    },
+    {
+      "id": "myth-dilution",
+      "label": "Myth dilution at scale",
+      "summary": "The loop by which a network's binding myth loses determinacy as the network grows: scale forces the myth to compress (complexity ceiling), compression widens its interpretive latitude, latitude sorted by community and identity gates segments the network, and segmentation forces the bureaucracy that re-supplies the dropped decoding key. A myth's reach and its determinacy trade off; whether the loop then compounds safely, fragments, or inverts into scale-as-control is set by the repairing bureaucracy's own resistance to capture.",
+      "aliases": ["myth dilution", "myth dilution at scale", "scale dilutes the myth", "the dilution loop"],
+      "definedIn": ["myths-scale-and-bureaucracy"],
+      "coveredBy": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff", "integration-problem", "preservation-vs-training"],
+      "derivesFrom": ["interpretive-latitude", "selection"]
     }
   ]
 }

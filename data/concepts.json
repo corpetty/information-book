@@ -47,7 +47,7 @@
       "summary": "Objective / subjective / intersubjective. The pipeline operates differently on each. Being explicit about which kind of reality is in transit matters for the rest of the book.",
       "aliases": ["three realities", "objective subjective intersubjective", "intersubjective reality"],
       "definedIn": ["outline"],
-      "coveredBy": ["case-studies-and-three-realities"]
+      "coveredBy": ["case-studies-and-three-realities", "truth-compression-and-when-each-wins"]
     },
     {
       "id": "bridge-zone",
@@ -191,8 +191,24 @@
       "summary": "Hofstadter's anatomy of any message (Gödel, Escher, Bach, Ch VI): the frame message ('I am a message, decode me'), the outer message (the decoding mechanism the receiver must already hold — implicit, carried by the medium), and the inner message (the meaning the sender intended). The book adapts it: each pipeline re-encoding can strip a layer independently, and the outer message is what the book calls preconditions.",
       "aliases": ["three layers of a message", "three-layer message", "frame message", "outer message", "inner message", "frame outer inner"],
       "definedIn": ["three-layer-message"],
-      "coveredBy": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine"],
+      "coveredBy": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine", "truth-compression-and-when-each-wins"],
       "evidencedBy": ["godel-escher-bach", "ethical-infrastructure-talk"]
+    },
+    {
+      "id": "network-segmentation",
+      "label": "Network segmentation",
+      "summary": "The fracturing of a network into sub-groups along the seams of its binding myth's interpretive latitude. The segments affirm the same myth while decoding it differently, so the network is superficially unified and structurally fragmented at once. Distinct from echo chambers vs. bubbles: this is the process that produces those structures.",
+      "aliases": ["network segmentation", "segmentation", "interpretation seams", "interpretive fragmentation"],
+      "definedIn": ["myths-scale-and-bureaucracy"],
+      "coveredBy": ["integration-problem", "infrastructure-for-integration"]
+    },
+    {
+      "id": "truth-compression-regimes",
+      "label": "Truth-compression regimes (preservation / inversion / orthogonality)",
+      "summary": "The three things compression can do to a claim's truth value, set by the gap between the idea's decoding key and the key the receiver supplies: preservation (keys close — a low-resolution true image), inversion (keys opposed — a true claim decoded into a false belief), and orthogonality (the claim is read as an identity flag, its truth value intact but no longer the operative axis). The selection gate decides which regime a compressed variant lands in.",
+      "aliases": ["truth-compression regimes", "preservation inversion orthogonality", "three truth regimes", "compression truth regimes"],
+      "definedIn": ["truth-compression-and-when-each-wins"],
+      "coveredBy": ["truth-compression-and-when-each-wins"]
     }
   ]
 }
