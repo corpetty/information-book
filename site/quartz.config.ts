@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "information-book.local",
+    baseUrl: "corpetty.github.io/information-book",
     ignorePatterns: ["private", "templates", ".obsidian", "sources/*.pdf"],
     defaultDateType: "modified",
     theme: {
