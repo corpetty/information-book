@@ -9,6 +9,10 @@ node_modules/
 *.log
 .DS_Store
 
+# Quartz site build output and caches
+site/public/
+site/.quartz-cache/
+
 # Local-only staging for in-copyright source material (books, etc.) —
 # read at extraction time, never committed or published.
 sources-local/

@@ -13,6 +13,9 @@
 #   make aggregate-interpretive   merge per-PDF extractions
 #   make extract-build   aggregate + rebuild (run after extraction agents)
 #   make context CENTER=<id>   emit a markdown context bundle for a node
+#   make site-build  build the Quartz site from content/ into site/public/
+#   make site-serve  build and serve the Quartz site at localhost:8080
+#   make site-clean  remove the site build output and cache
 #   make clean     remove generated artifacts
 #   make help      list targets
 
@@ -30,7 +33,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context site-build site-serve site-clean
 
 all: build
 
@@ -68,6 +71,15 @@ extract-build: aggregate-interpretive
 
 context: build
 	@node $(SCRIPTS)/context-bundle.js --center=$(CENTER) $(ARGS)
+
+site-build:
+	@cd site && npx quartz build
+
+site-serve:
+	@cd site && npx quartz build --serve
+
+site-clean:
+	@rm -rf site/public site/.quartz-cache
 
 clean:
 	@rm -f $(NODES_OUT) $(EDGES_OUT) $(STATS_OUT)
