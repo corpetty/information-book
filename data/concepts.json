@@ -217,6 +217,33 @@
       "aliases": ["option space", "the selectable set", "what is selectable", "the menu"],
       "definedIn": ["transport-vs-selection", "medium-and-manipulation"],
       "coveredBy": ["selection-as-other-engine", "information-landscape"]
+    },
+    {
+      "id": "technology-vs-medium",
+      "label": "Technology vs. medium",
+      "summary": "Postman's distinction between a technology — the machine or tool itself — and a medium — the social and intellectual environment that grows up around how the technology is used. The book's 'medium' always means the latter: not the device but the environment of capacities, gate-criteria, and cultivated wants it produces. The same technology can host different media, which guards against blaming the hardware for what is really a pattern of use.",
+      "aliases": ["technology vs medium", "technology and medium", "medium vs technology", "machine vs environment"],
+      "definedIn": [],
+      "coveredBy": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention"],
+      "evidencedBy": ["amusing-ourselves-to-death"]
+    },
+    {
+      "id": "pseudo-context",
+      "label": "Pseudo-context",
+      "summary": "Postman's term for a structure invented to give decontextualized information the appearance of a use it does not really have. The information may be true and accurately measured, but it has been stripped of the context that connected it to action; pseudo-context — the news quiz, trivia, conversation-fodder — papers over the gap. Distinct from manufactured content, which never measured anything: pseudo-context is real information made idle.",
+      "aliases": ["pseudo-context", "pseudocontext", "pseudo context", "information made idle"],
+      "definedIn": [],
+      "coveredBy": ["bridge-zone-distortion", "truth-compression-and-when-each-wins"],
+      "evidencedBy": ["amusing-ourselves-to-death"]
+    },
+    {
+      "id": "orwell-huxley-axis",
+      "label": "The Orwell/Huxley axis",
+      "summary": "Postman's framing of two opposite failure modes for an information ecosystem. The Orwell mode: control by inflicted pain — censorship, surveillance, information withheld. The Huxley mode: control by inflicted pleasure — truth not concealed but drowned in a sea of engaging irrelevance. The book's diagnosis sits squarely in the Huxley mode: the modern failure is abundance optimized for engagement, not scarcity enforced by a censor.",
+      "aliases": ["Orwell/Huxley axis", "Orwell vs Huxley", "Orwell-Huxley", "drowned in irrelevance"],
+      "definedIn": [],
+      "coveredBy": ["emotional-memetics", "political-economy-of-attention"],
+      "evidencedBy": ["amusing-ourselves-to-death"]
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "_doc": "Sources the book engages with. Includes prior-art books, papers, posts, and the four academic PDFs in information-book/sources/. Each source has at most one primary author (use `coauthors` for additional). `engagement` describes the book's stance toward the source. `representedBy` (optional) links to a Note that materially holds the source (e.g. a conversation transcript that doubles as a Note).",
+  "_doc": "Sources the book engages with — prior-art books, papers, posts, talks, and the academic PDFs staged for extraction. Each source has at most one primary author (use `coauthors` for additional). `engagement` describes the book's stance toward the source. `representedBy` (optional) links to a Note that materially holds the source (e.g. a conversation transcript that doubles as a Note). `file` (optional) is the staged PDF filename. `availability` is one of: `open` (cleared to commit — file lives in quartz content/notes/information-book/sources/), `restricted` (in-copyright — file lives in the gitignored sources-local/, never committed or published), `unverified` (committed but licence not yet confirmed), `external` (no file held — cited by reference only). `tags` is a controlled vocabulary for navigation: `prior-art` (a work the book is in dialogue with), `adversary` (prior art that actively challenges the book's thesis), `evidence` (a source that backs or pressure-tests Claims), `internal` (the author's own corpus), `model-origin` (the source of a model or framing the book adapts).",
   "authors": [
     { "id": "corey-petty",        "label": "Corey Petty",        "summary": "The author of this book; some of his own earlier posts are treated as primary sources." },
     { "id": "neil-postman",       "label": "Neil Postman",       "summary": "Media-ecology scholar. Amusing Ourselves to Death." },
@@ -22,7 +22,9 @@
       "author": "corey-petty",
       "tradition": "internal-corpus",
       "summary": "Covers the barriers/volume angle: curation layer, cost-shifting, creation-cheap/review-expensive, inverted-U relationship.",
-      "engagement": "primary internal source the book draws from"
+      "engagement": "primary internal source the book draws from",
+      "availability": "external",
+      "tags": ["internal"]
     },
     {
       "id": "general-theme-conversation",
@@ -32,7 +34,9 @@
       "tradition": "internal-corpus",
       "summary": "Conversation transcript where the book concept got laid out coherently for the first time. The conclusion of Part IV lives raw here.",
       "engagement": "primary internal source the book draws from",
-      "representedBy": "general-theme"
+      "representedBy": "general-theme",
+      "availability": "external",
+      "tags": ["internal"]
     },
     {
       "id": "amusing-ourselves-to-death",
@@ -41,7 +45,10 @@
       "author": "neil-postman",
       "tradition": "media-ecology",
       "summary": "Argues that television as a medium degraded public discourse. The 'medium shapes message' thesis applied to a specific case.",
-      "engagement": "the book needs to know what it's adding past Postman"
+      "engagement": "the book needs to know what it's adding past Postman",
+      "availability": "restricted",
+      "file": "Amusing Ourselves to Death Public Discourse in the Age of Show Business.pdf",
+      "tags": ["prior-art"]
     },
     {
       "id": "not-born-yesterday",
@@ -50,7 +57,9 @@
       "author": "hugo-mercier",
       "tradition": "network-epistemology",
       "summary": "Direct challenge to the 'people are easily manipulated by simple memes' thread. Humans have more robust epistemic vigilance than the easy-manipulation narrative implies.",
-      "engagement": "pressure-tests Chapter 7's emotional-memetics floor argument"
+      "engagement": "pressure-tests Chapter 7's emotional-memetics floor argument",
+      "availability": "restricted",
+      "tags": ["prior-art", "adversary"]
     },
     {
       "id": "misinformation-age",
@@ -60,7 +69,9 @@
       "coauthors": ["james-weatherall"],
       "tradition": "network-epistemology",
       "summary": "Formal network models of belief propagation. What kills truth in networks: selection on credibility plus social pressure, not lossy hops.",
-      "engagement": "directly relevant to transport-vs-selection"
+      "engagement": "directly relevant to transport-vs-selection",
+      "availability": "restricted",
+      "tags": ["prior-art", "evidence"]
     },
     {
       "id": "nguyen-bubbles-vs-chambers",
@@ -69,7 +80,9 @@
       "author": "c-thi-nguyen",
       "tradition": "network-epistemology",
       "summary": "Distinguishes epistemic bubbles (missing info) from echo chambers (active discrediting of outside info). Small networks tend toward chambers.",
-      "engagement": "foundational for the rebuilt Part IV"
+      "engagement": "foundational for the rebuilt Part IV",
+      "availability": "external",
+      "tags": ["prior-art"]
     },
     {
       "id": "understanding-media",
@@ -78,7 +91,9 @@
       "author": "marshall-mcluhan",
       "tradition": "media-ecology",
       "summary": "'The medium is the message.' The canonical reference for how media shape what can pass through them.",
-      "engagement": "worth engaging explicitly"
+      "engagement": "worth engaging explicitly",
+      "availability": "external",
+      "tags": ["prior-art"]
     },
     {
       "id": "selfish-gene",
@@ -87,7 +102,9 @@
       "author": "richard-dawkins",
       "tradition": "memetics",
       "summary": "Coined the term 'meme.' The selection-side view's foundational text.",
-      "engagement": "the selection-side view already has a literature; use it"
+      "engagement": "the selection-side view already has a literature; use it",
+      "availability": "external",
+      "tags": ["prior-art"]
     },
     {
       "id": "meme-machine",
@@ -96,7 +113,9 @@
       "author": "susan-blackmore",
       "tradition": "memetics",
       "summary": "Developed memetics into a sustained research program. Mechanisms of cultural selection.",
-      "engagement": "the selection-side view already has a literature; use it"
+      "engagement": "the selection-side view already has a literature; use it",
+      "availability": "external",
+      "tags": ["prior-art"]
     },
     {
       "id": "nexus",
@@ -105,7 +124,9 @@
       "author": "yuval-noah-harari",
       "tradition": "network-society",
       "summary": "Information networks bound by myths and bureaucracy. Three realities (objective / subjective / intersubjective). Truth/order axis. Naive view of information.",
-      "engagement": "already in play; key framing reference"
+      "engagement": "already in play; key framing reference",
+      "availability": "external",
+      "tags": ["prior-art"]
     },
     {
       "id": "life-in-weeks",
@@ -114,7 +135,9 @@
       "author": "tim-urban",
       "tradition": "internal-corpus",
       "summary": "Tablespoon-of-diamonds visualization of a human lifespan. The receiver-budget intuition.",
-      "engagement": "cited as the source of the tablespoon-of-weeks framing"
+      "engagement": "cited as the source of the tablespoon-of-weeks framing",
+      "availability": "external",
+      "tags": ["model-origin"]
     },
     {
       "id": "epidemiological-virality",
@@ -122,7 +145,10 @@
       "kind": "paper",
       "tradition": "network-epistemology",
       "summary": "Models memetic propagation using epidemiological dynamics. Formal apparatus for the transport-stage math.",
-      "engagement": "candidate evidentiary source for Chapters 5 and 5b"
+      "engagement": "candidate evidentiary source for Chapters 5 and 5b",
+      "availability": "unverified",
+      "file": "epidemiological-approach-to-model-viral-propagation-of-memes.pdf",
+      "tags": ["evidence"]
     },
     {
       "id": "info-evolution-social-media",
@@ -130,7 +156,10 @@
       "kind": "paper",
       "tradition": "network-epistemology",
       "summary": "Empirical work on how information morphs as it traverses social-media networks.",
-      "engagement": "candidate evidentiary source for the bridge-zone distortion case studies"
+      "engagement": "candidate evidentiary source for the bridge-zone distortion case studies",
+      "availability": "unverified",
+      "file": "information-evolution-in-social-media.pdf",
+      "tags": ["evidence"]
     },
     {
       "id": "memetics-critique",
@@ -138,7 +167,10 @@
       "kind": "paper",
       "tradition": "memetics",
       "summary": "Critical assessment of memetics as a research program. Where the analogy with genetic transmission breaks down.",
-      "engagement": "candidate pressure-tester for the selection-side framing"
+      "engagement": "candidate pressure-tester for the selection-side framing",
+      "availability": "unverified",
+      "file": "Memetics_critique.pdf",
+      "tags": ["evidence", "adversary"]
     },
     {
       "id": "psychology-of-virality",
@@ -146,7 +178,10 @@
       "kind": "paper",
       "tradition": "network-epistemology",
       "summary": "Empirical and theoretical work on what makes content go viral. Identity, emotion, in-group signaling.",
-      "engagement": "candidate evidentiary source for Chapters 5b and 7"
+      "engagement": "candidate evidentiary source for Chapters 5b and 7",
+      "availability": "unverified",
+      "file": "psychology-of-virality.pdf",
+      "tags": ["evidence"]
     },
     {
       "id": "godel-escher-bach",
@@ -155,7 +190,9 @@
       "author": "douglas-hofstadter",
       "tradition": "information-theory",
       "summary": "Chapter VI, 'The Location of Meaning', develops the three-layer message model — frame (this is a message), outer (how to decode it), inner (what it means) — to ask whether meaning is intrinsic to a message or supplied by the decoder.",
-      "engagement": "source of the three-layer message model the book adapts"
+      "engagement": "source of the three-layer message model the book adapts",
+      "availability": "external",
+      "tags": ["model-origin", "prior-art"]
     },
     {
       "id": "ethical-infrastructure-talk",
@@ -164,7 +201,9 @@
       "author": "corey-petty",
       "tradition": "internal-corpus",
       "summary": "Devcon VI talk, October 2022. Applies Hofstadter's three-layer message model to infrastructure design — and makes the key move of identifying the outer message with the medium.",
-      "engagement": "primary internal source — first place the three-layer model was bound to the medium"
+      "engagement": "primary internal source — first place the three-layer model was bound to the medium",
+      "availability": "external",
+      "tags": ["internal"]
     }
   ]
 }

@@ -8,3 +8,7 @@ data/interpretive-notes.json
 node_modules/
 *.log
 .DS_Store
+
+# Local-only staging for in-copyright source material (books, etc.) —
+# read at extraction time, never committed or published.
+sources-local/

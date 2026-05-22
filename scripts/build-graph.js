@@ -18,7 +18,7 @@
 // parser with wiki-link extraction, claim harvester, and LLM
 // interpretive triples from sources/*.pdf.
 
-import { readFileSync, writeFileSync, existsSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -369,6 +369,9 @@ function loadSources() {
         kind: s.kind || 'book',
         summary: s.summary || '',
         engagement: s.engagement || '',
+        availability: s.availability || 'external',
+        tags: s.tags || [],
+        ...(s.file ? { file: s.file } : {}),
       },
       provenance: [{ source: 'sources.json', kind: 'catalog' }],
     });
@@ -465,6 +468,51 @@ function checkClaimDrift() {
         warnings.push(`claim drift: ${node.id} anchor "${prefix}…" not found in ${anchor.note} candidates`);
       }
     }
+  }
+}
+
+// ---------------------------------------------------------------- source folder checks
+
+function checkSources() {
+  // Guardrails for the two source folders. Every staged PDF must have a
+  // sources.json entry; every declared file must sit in the folder its
+  // `availability` implies; no in-copyright file may land in the
+  // committed (and Quartz-published) sources/ folder.
+  const committedDir = resolve(NOTES_DIR, 'sources');
+  const localDir = resolve(repoRoot, 'sources-local');
+  const pdfsIn = (dir) => existsSync(dir)
+    ? new Set(readdirSync(dir).filter(f => f.toLowerCase().endsWith('.pdf')))
+    : new Set();
+  const committed = pdfsIn(committedDir);
+  const local = pdfsIn(localDir);
+  const claimed = new Set();
+
+  for (const node of nodes.values()) {
+    if (node.type !== 'Source') continue;
+    const file = node.props?.file;
+    if (!file) continue;
+    claimed.add(file);
+    const availability = node.props?.availability || 'external';
+    if (availability === 'restricted') {
+      if (committed.has(file)) {
+        warnings.push(`source ${node.id}: in-copyright file "${file}" is in the committed sources/ folder — move it to sources-local/`);
+      }
+      if (!local.has(file)) {
+        warnings.push(`source ${node.id}: file "${file}" not found in sources-local/`);
+      }
+    } else if (availability === 'open' || availability === 'unverified') {
+      if (!committed.has(file)) {
+        warnings.push(`source ${node.id}: file "${file}" not found in sources/`);
+      }
+    } else {
+      warnings.push(`source ${node.id}: declares file "${file}" but availability is "${availability}"`);
+    }
+  }
+  for (const f of committed) {
+    if (!claimed.has(f)) warnings.push(`orphan PDF: sources/${f} has no sources.json entry`);
+  }
+  for (const f of local) {
+    if (!claimed.has(f)) warnings.push(`orphan PDF: sources-local/${f} has no sources.json entry`);
   }
 }
 
@@ -608,5 +656,6 @@ loadClaims();
 checkClaimDrift();
 parseNotes();
 loadInterpretive();
+checkSources();
 validateEdges();
 emit();

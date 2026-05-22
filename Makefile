@@ -7,6 +7,7 @@
 #   make           rebuild graph
 #   make serve     build then serve viewer at localhost:$(PORT)
 #   make stats     print build counts
+#   make sources   print the per-source catalog dashboard
 #   make harvest   scan quartz notes for candidate claims
 #   make catalog   regenerate extraction-catalog.json from current graph
 #   make aggregate-interpretive   merge per-PDF extractions
@@ -29,7 +30,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats clean help harvest catalog aggregate-interpretive extract-build context
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context
 
 all: build
 
@@ -47,6 +48,9 @@ serve: build
 
 stats: build
 	@cat $(STATS_OUT)
+
+sources: build
+	@node $(SCRIPTS)/sources-report.js
 
 harvest:
 	@node $(SCRIPTS)/harvest-claims.js
