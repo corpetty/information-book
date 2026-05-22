@@ -60,6 +60,14 @@ That's the diagnosis. It also tells you what the prescriptive chapters are for. 
 
 One more thing falls out of landing here. Manufactured content — the [[the-information-landscape|injected content]] that never passed through measurement — is not a separate problem from the medium problem. Manufactured content is what you get when manipulation (tuning the gate against truth) is cheap *and* the gate has no truth-correlated criterion to begin with. It's the same failure, seen from the content side. A medium that allows a lot of manipulation and a medium full of manufactured content are the same medium described twice.
 
+## Refinement: capacity is the deepest lever
+
+The section above ranked the three things a medium does — capacity, criteria, want — and called capacity "the most mechanical and the least interesting." I want to take that back. Capacity is not the shallow lever; it is the deepest one, and I had it upside down.
+
+Here is the correction. A selection gate picks from a *set* of variants; it never generates that set. Something upstream decides which variants are available to be picked at all — and that is what capacity really is. Not "what can physically pass" as a footnote to transport, but **the medium drawing the boundary of the option space: the set of forms an idea is even allowed to take before selection gets a vote.** The 280-character limit does not slow the long argument down. It removes it from the menu. Selection then runs, visibly and honestly, on a menu that was rigged before it sat down.
+
+That reframes the medium one more turn. If drawing the option space is itself a criterial act — keep these forms, forbid those — then **the medium is selection performed once, in advance, and then frozen into the substrate until it stops looking like a choice.** A runtime gate is contestable: you can see it and argue its weights. The medium is not, because it does not look like a gate at all — it looks like the shape of the world. That makes it the most powerful manipulation surface in the picture and the hardest to point at: you never have to suppress the disfavored idea if the option space was built so it can never form. The full version — transport generates the variants, the medium bounds them, selection picks — is worked out in [[transport-vs-selection]].
+
 ## What this changes for the book
 
 This note resolves an open question that several later chapters were waiting on, so the implications fan out.

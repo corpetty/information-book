@@ -98,6 +98,25 @@ This collapses some of the apparent separability between transport and selection
 
 A new question opens at the medium level: what does the medium do to *want*? A medium that rewards shallow engagement cultivates want for shallow content, which trains preconditions for more shallow content. A medium that rewards sustained engagement cultivates want for complex content. The medium shapes the prime mover. That's a foundational question of its own, flagged in [[outline]] and probably deserving its own working note.
 
-## Provisional commitment (updated)
+## Second refinement: modality, not primacy
 
-Selection-primary, with *want* as the engine that drives the whole feedback loop and the *medium* as the thing that shapes want at the root. Transport, capacity, preconditions, and selection criteria are all entangled through accumulated history of engagement. Open to being talked out of it. Most likely to be talked out of it once the medium-and-manipulation question gets its own treatment.
+One word in this note has been doing too much work: *primary*. "Selection is primary" was really four claims wearing one coat.
+
+1. Selection is causally upstream of transport — transport is a "substrate," a thing that happens *downstream* of selection. **This one is false.** It contradicts the parallel-mechanisms picture the rest of the note commits to: if neither mechanism is downstream of the other, transport is not downstream of selection either.
+2. Selection is the *currently binding* constraint. True — but that is the historical claim about transport-cost collapse, and it should stand on its own rather than hide inside "primary."
+3. Selection is where manipulation, and any repair, has to act. True, and not historical at all.
+4. Selection carries the explanation of the breakage — transport never broke, it only got cheaper. True.
+
+The tell is the word *increasingly*, back in "Where I land": "transport is real but increasingly downstream." The instinct was right — selection matters more and more — but it got encoded as causal order when what it was tracking was a constraint that had shifted. So I'm dropping *primary*. It was always a ranking word, and this note already gave up the ranking.
+
+What survives, said plain: **transport and selection are co-equal and parallel, but they differ in modality — transport is a directionless cost, selection is a criterial choice, and only a criterial choice can be aimed, captured, or repaired.** Transport scrambles; it has no preferred outcome. Selection has a *what-it-rewards*. That asymmetry — not causal order — is what the book actually runs on. The book centers selection because it is the only one of the two mechanisms with a steering wheel.
+
+This also closes a gap I had been stepping over. Selection picks from a *set* — but nothing in "transport scrambles" says where the set comes from. Selection never generates its own options; it only ranks them. Something has to write the menu. **At every stage an idea is generated as variants by transport, bounded into an option space by the medium, and then picked from by selection — generate, bound, pick.** Transport is the scatter, the medium is the aperture, selection is the choice.
+
+And that puts the medium in a harder light than [[medium-and-manipulation]] left it. The medium that writes the menu is doing a kind of selection too — it just did it once, in advance. **The medium is frozen selection: a criterial choice made once and baked into the substrate, until it stops looking like a choice and starts looking like a law of nature.** A 280-character limit was somebody's decision; to everyone living inside it, it is simply the shape of the world. That makes the medium the most powerful gate of all, and the least visible — it pre-empts selection. You never have to suppress the long, careful argument if the option space was built so the long, careful argument cannot form.
+
+## Provisional commitment (current)
+
+Transport and selection are co-equal, parallel, and entangled through the want-loop — but asymmetric in modality. Transport is a cost; selection is a choice. The medium and the runtime gate are one continuum of criterial constraint — frozen-and-slow at the medium end, live-and-fast at the gate end — with transport off that continuum entirely. The book is about the continuum, because the continuum is the part that can be tuned, and therefore captured, and therefore repaired.
+
+One thing I am holding loosely: calling the medium "frozen selection" folds it into selection rather than naming it a third mechanism of its own. That keeps the modal picture clean — costs versus choices, two kinds of thing — and it buys the sharp point about invisibility. If the boundary-versus-gradient difference later needs its own slot, this is the seam to reopen.
