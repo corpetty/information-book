@@ -1,42 +1,45 @@
-# Information book · semantic-triple ontology
+# The Information Book
 
-Authoring graph for the information book — chapters, mechanisms,
-concepts, open questions, claims, sources, and the edges between them.
-Modeled on the [Logos whitepaper graph](../../logos-co/logos-whitepaper/graph/)
-but reshaped around the book's argument structure.
+The book's repo. Three subsystems share one tree:
 
-The graph is the **authoring tool**, not the prose. The prose lives in
-quartz and gets edited there; the ontology surfaces what the prose
-implies — claims to make, sources backing them, questions still open,
-chapters with missing anchors — and bundles it into context packets
-ready to drop into a drafting prompt.
-
-## Where things live
-
-| Path | Role |
-|---|---|
-| `../quartz/content/notes/information-book/` | **Prose** — the book's outline, chapter drafts, foundational notes, conversation transcripts, and the `sources/` PDFs. Edited here. Reference-only from this repo. |
-| `../../logos-co/logos-whitepaper/graph/` | **Reference implementation** of the graph design. Read for patterns; don't modify. |
-| `data/` here | **Hand-authored catalogs** (mechanisms, concepts, questions, traditions, sources, case studies, claims, slug-aliases) plus build outputs. |
-| `scripts/` here | **Build, harvest, extract, aggregate, context-bundle** tooling. Plain Node 18+, no bundler. |
-| `src/` here | **Cytoscape viewer**. Plain ES modules, Cytoscape from CDN. |
+- **`content/`** — the prose. Outline, chapter drafts, foundational
+  notes, conversation transcripts, and the `sources/` PDFs. This is
+  what gets written.
+- **`data/` + `scripts/` + `src/`** — the **authoring ontology**: a
+  semantic-triple graph over the prose. Chapters, mechanisms, concepts,
+  open questions, claims, sources, and the edges between them.
+  Modeled on the [Logos whitepaper graph](../logos-co/logos-whitepaper/graph/)
+  and reshaped around this book's argument structure. The graph
+  surfaces what the prose implies — claims to make, sources backing
+  them, questions still open, chapters with missing anchors — and
+  bundles it into context packets ready to drop into a drafting
+  prompt.
+- **`site/`** — a Quartz 4 install whose `content/` symlinks to the
+  prose. Builds the book as a static site.
 
 ## Run it
 
 ```bash
+# Ontology
 make                                              # rebuild graph (default = make build)
 make serve                                        # serve viewer at localhost:8765/src/
 make stats                                        # counts + warnings from last build
-make harvest                                      # rescan quartz notes for candidate claims
+make harvest                                      # rescan content/ for candidate claims
 make catalog                                      # regenerate extraction-catalog.json for agents
 make aggregate-interpretive                       # merge per-PDF extractions into one JSONL
 make extract-build                                # aggregate + rebuild (after running extraction agents)
 make context CENTER=chapter:<slug>                # emit drafting bundle to stdout
 make context CENTER=claim:<slug> ARGS="-o foo.md" # write bundle to file
+
+# Site
+make site-build                                   # build Quartz output into site/public/
+make site-serve                                   # build and live-serve at localhost:8080
+make site-clean                                   # remove site/public + site/.quartz-cache
+
 make help                                         # list targets
 ```
 
-Current state: **131 nodes / 380 edges / 0 warnings**.
+Current state: **158 nodes / 553 edges / 0 warnings**.
 
 ## The drafting loop
 
@@ -57,7 +60,7 @@ This is what the tool is for. The graph exists to make this loop tight.
    The bundle is self-contained — every claim has its evidence inline.
 
 3. **As prose accumulates**, edit the chapter's backing note in
-   `quartz/content/notes/information-book/`.
+   `content/`.
 
 4. `make harvest` — scans the notes for new **bold sentences** and
    marker phrases ("the X claim, said plain", "where I land",
@@ -127,25 +130,39 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 8 | `f4f8e2e` | Catalog gap-fill: 7 concepts the extraction agents flagged + a targeted re-extraction pass over the 4 PDFs for them |
 | 9 | `75a6dd7` | Aggregator enforces edge-direction conventions: `supports` / `pressureTests` subject must be a Source; malformed triples dropped with a warning |
 | 10 | `61e696a` | Wire `medium-and-manipulation.md` into the graph: seedNotes entry, `question:medium-and-manipulation` flipped to provisionally-resolved, claim `truth-survival-two-conditions` promoted |
-| 11 | `(this commit)` | Integrate Hofstadter's three-layer message model (GEB): `source:godel-escher-bach` + `source:ethical-infrastructure-talk`, `tradition:information-theory`, `concept:three-layer-message`, `case:voyager-golden-record`, the `three-layer-message.md` note, two claims; concept loader gains a hand-authored `evidencedBy` field |
+| 11 | `6833ad1` | Integrate Hofstadter's three-layer message model (GEB): `source:godel-escher-bach` + `source:ethical-infrastructure-talk`, `tradition:information-theory`, `concept:three-layer-message`, `case:voyager-golden-record`, the `three-layer-message.md` note, two claims; concept loader gains a hand-authored `evidencedBy` field |
+| 12 | `3152484` | Wire Chapter 5c (`truth-compression-and-when-each-wins.md`) and the `myths-scale-and-bureaucracy.md` foundational note into the graph |
+| 13 | `6dbe9bd` | Reframe selection-primary as the tunable mechanism; draft Chapter 5b (`selection-as-other-engine.md`) |
+| 14 | `99e0f0a` | Source-management system: `availability` field on Source nodes splits committed from in-copyright; `sources-local/` gitignored. Postman extraction + three concepts |
+| 15 | `606f2f6` | Extract The Misinformation Age; gap-fill its five concepts |
+| 16 | `293abe7` | **Merge prose subtree from quartz with history.** Imports `content/` (12 chapter and foundation notes + experiments/ + sources/), three referenced images under `content/images/`, and two citation notes under `content/citations/`. Extracted with `git filter-repo` from a temp clone of the quartz repo, preserving 33 commits of authoring history |
+| 17 | `086e5da` | Rewire ontology scripts to read prose from local `content/` (NOTES_DIR change in `build-graph.js`, `harvest-claims.js`, `context-bundle.js`) |
+| 18 | `ecdcd8a` | Add Quartz site at `site/` for publishing. Fresh upstream Quartz 4.5.2, `site/content` symlinks to `../content`, `quartz.config.ts` set up for the book. Makefile gains `site-build` / `site-serve` / `site-clean` |
 
 ## Layout
 
 ```
-info-book-ontology/
+information-book/
 ├── README.md                          this file
 ├── Makefile                           dependency-driven build / serve / context targets
-├── data/
+├── content/                           PROSE — the book itself
+│   ├── outline.md                     working outline / TOC
+│   ├── *.md                           chapter drafts and foundational notes
+│   ├── experiments/                   experiment-tracker notes
+│   ├── sources/                       open-licence academic PDFs (cited by the graph)
+│   ├── images/                        figures referenced from prose
+│   └── citations/                     reference notes for cross-cited sources
+├── data/                              ONTOLOGY catalogs + outputs
 │   ├── graph-meta.json                schema contract — node types + predicates
 │   ├── mechanisms.json                5 named structural mechanisms
-│   ├── concepts.json                  24 cross-cutting concepts
+│   ├── concepts.json                  35 cross-cutting concepts
 │   ├── questions.json                 7 foundational questions (open / provisionally-resolved / resolved)
 │   ├── traditions.json                6 intellectual lineages
 │   ├── sources.json                   17 sources + 12 authors
 │   ├── case-studies.json              7 worked examples
 │   ├── claims.json                    canonical claims (promoted from candidates)
 │   ├── slug-aliases.json              wikilink-resolution overrides
-│   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (8 files: 4 main + 4 gap, committed)
+│   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (committed)
 │   ├── claim-candidates.jsonl         harvester output (gitignored)
 │   ├── extraction-catalog.json        generated for agents (gitignored)
 │   ├── interpretive-triples.jsonl     aggregated extractions (gitignored)
@@ -153,17 +170,27 @@ info-book-ontology/
 │   ├── nodes.jsonl                    generated (gitignored)
 │   ├── edges.jsonl                    generated (gitignored)
 │   └── build-stats.json               generated (gitignored)
-├── scripts/
+├── scripts/                           ONTOLOGY tooling
 │   ├── build-graph.js                 master build — markdown / JSON → triples
-│   ├── harvest-claims.js              scan notes for candidate claims
+│   ├── harvest-claims.js              scan content/ for candidate claims
 │   ├── build-catalog.js               emit extraction-catalog.json from nodes
 │   ├── aggregate-interpretive.js      merge + validate per-PDF JSONLs
 │   ├── context-bundle.js              graph → markdown drafting packet
+│   ├── sources-report.js              per-source dashboard
 │   └── EXTRACTION_PROMPT.md           agent prompt for per-PDF extraction
-└── src/
-    ├── index.html                     viewer shell
-    ├── app.js                         Cytoscape wiring + side panel
-    └── styles.css
+├── src/                               ONTOLOGY viewer (Cytoscape)
+│   ├── index.html                     viewer shell
+│   ├── app.js                         Cytoscape wiring + side panel
+│   └── styles.css
+├── site/                              QUARTZ publishing site
+│   ├── quartz.config.ts               book-specific config
+│   ├── quartz.layout.ts               layout
+│   ├── quartz/                        vendored Quartz 4 engine
+│   ├── content -> ../content          symlink — prose has one canonical home
+│   ├── package.json                   site deps
+│   ├── public/                        build output (gitignored)
+│   └── .quartz-cache/                 build cache (gitignored)
+└── sources-local/                     in-copyright source PDFs (gitignored)
 ```
 
 ## Extending
@@ -175,11 +202,11 @@ info-book-ontology/
   `data/claim-candidates.jsonl`, write its entry into `data/claims.json`
   (id, label, summary, aliases, status, `argues` / `arguedInChapters`,
   `dependsOn`, `harvestedFrom`), then `make build`.
-- **New source PDF** — drop it in
-  `quartz/content/notes/information-book/sources/`, add an entry to
-  `data/sources.json`, then `make catalog`. Run an extraction subagent
-  using `scripts/EXTRACTION_PROMPT.md`; it writes to
-  `data/interpretive/<slug>.jsonl`. Then `make extract-build`.
+- **New source PDF** — drop it in `content/sources/` (if open-licence)
+  or `sources-local/` (if in-copyright), add an entry to
+  `data/sources.json` with the right `availability`, then `make catalog`.
+  Run an extraction subagent using `scripts/EXTRACTION_PROMPT.md`; it
+  writes to `data/interpretive/<slug>.jsonl`. Then `make extract-build`.
 - **New wikilink slug that doesn't resolve** — `make build` will emit
   an "unresolved wikilink" warning; add the slug → graph-id mapping to
   `data/slug-aliases.json`.
