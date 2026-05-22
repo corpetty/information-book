@@ -25,19 +25,19 @@
       ]
     },
     {
-      "id": "selection-primary",
-      "label": "Selection is primary",
-      "summary": "Of the two parallel mechanisms, selection is the primary determinant of what propagates. Transport is real but increasingly downstream — a substrate, not the dynamic.",
-      "aliases": ["selection is primary", "selection dominates"],
+      "id": "selection-is-the-tunable-mechanism",
+      "label": "Selection is the tunable mechanism",
+      "summary": "Transport and selection are co-equal and parallel — neither downstream of the other — but they differ in modality. Transport is a directionless cost: it scrambles, with no preferred outcome. Selection is criterial: it has a what-it-rewards, so it can be aimed, set, captured, and contested. The book centers selection not because it is causally upstream but because it is the only one of the two mechanisms with a steering wheel — the locus of manipulation, of political economy, and of any repair. Supersedes the earlier 'selection is primary' framing, which mis-encoded a modality asymmetry as causal order.",
+      "aliases": ["selection is the tunable mechanism", "selection is criterial", "selection is the steering mechanism", "the tunable mechanism", "modality not primacy"],
       "status": "load-bearing",
-      "argues": ["transport-vs-selection"],
+      "argues": ["transport-vs-selection", "selection-as-other-engine"],
       "arguedInChapters": ["selection-as-other-engine", "complexity-virality-tradeoff"],
       "dependsOn": ["claim:two-pipelines-parallel"],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
-          "lineApprox": 51,
-          "text": "Selection is primary. Transport is real but increasingly downstream."
+          "lineApprox": 112,
+          "text": "transport and selection are co-equal and parallel, but they differ in modality — transport is a directionless cost, selection is a criterial choice, and only a criterial choice can be aimed, captured, or repaired."
         }
       ]
     },
@@ -49,12 +49,46 @@
       "status": "load-bearing",
       "argues": ["transport-vs-selection"],
       "arguedInChapters": ["selection-as-other-engine", "political-economy-of-attention"],
-      "dependsOn": ["claim:selection-primary"],
+      "dependsOn": ["claim:selection-is-the-tunable-mechanism"],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
           "lineApprox": 53,
           "text": "In modern digital networks, the cost of transport has collapsed to near zero, so selection becomes the dominant constraint on what spreads."
+        }
+      ]
+    },
+    {
+      "id": "three-operations-per-stage",
+      "label": "Every stage runs three operations: transport generates, the medium bounds, selection picks",
+      "summary": "At each stage of the pipeline an idea passes through three operations. Transport generates: lossy re-encoding scatters the idea into a cloud of variants. The medium bounds: it defines the option space, which of those variants are viable to express here. Selection picks: it ranks the viable set by criteria and one variant travels on. Generate, bound, pick. Selection never generates its own options — something has to write the menu, and that is the medium.",
+      "aliases": ["three operations per stage", "generate bound pick", "transport generates the medium bounds selection picks"],
+      "status": "working",
+      "argues": ["transport-vs-selection", "selection-as-other-engine"],
+      "arguedInChapters": ["selection-as-other-engine", "information-landscape"],
+      "dependsOn": ["claim:two-pipelines-parallel"],
+      "harvestedFrom": [
+        {
+          "note": "transport-vs-selection",
+          "lineApprox": 114,
+          "text": "At every stage an idea is generated as variants by transport, bounded into an option space by the medium, and then picked from by selection — generate, bound, pick."
+        }
+      ]
+    },
+    {
+      "id": "medium-is-frozen-selection",
+      "label": "The medium is frozen selection",
+      "summary": "The medium and a runtime selection gate are one continuum of criterial constraint, not two kinds of thing. The medium is the hard, slow, frozen end: a criterial choice made once, at design time, then baked into the substrate so it stops looking like a choice and starts looking like a law of nature. This makes the medium the most powerful and least visible manipulation surface — it pre-empts selection, because a variant the option space cannot hold never has to be suppressed.",
+      "aliases": ["medium is frozen selection", "the medium is frozen selection", "medium pre-empts selection", "the medium is the invisible gate"],
+      "status": "working",
+      "argues": ["transport-vs-selection", "medium-and-manipulation", "selection-as-other-engine"],
+      "arguedInChapters": ["selection-as-other-engine", "political-economy-of-attention"],
+      "dependsOn": ["claim:three-operations-per-stage", "claim:medium-attached-to-every-gate"],
+      "harvestedFrom": [
+        {
+          "note": "transport-vs-selection",
+          "lineApprox": 116,
+          "text": "The medium is frozen selection: a criterial choice made once and baked into the substrate, until it stops looking like a choice and starts looking like a law of nature."
         }
       ]
     },

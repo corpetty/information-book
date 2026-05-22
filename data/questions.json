@@ -17,7 +17,7 @@
       "summary": "Different media expose different selection criteria, allow different manipulation surfaces, and cultivate different kinds of want in receivers. McLuhan's 'the medium is the message' re-asked as: which media let core truth survive which kinds of manipulation?",
       "aliases": ["medium and manipulation", "medium is the message"],
       "status": "provisionally-resolved",
-      "workingAnswer": "The medium is the selection criteria: it sets each gate's capacity, what the gate rewards, and the want it cultivates in receivers over time. Core truth survives a medium jointly on two conditions — its gate-criteria must reward something truth-correlated, and its want-loop must not erode the appetite for truth. Most engagement-optimized media fail both. Drafted in medium-and-manipulation.md.",
+      "workingAnswer": "The medium is the selection criteria: it sets each gate's capacity, what it rewards, the want it cultivates over time, and — deepest of these — the option space itself, the set of variants available to be selected at all. The medium is selection frozen into the substrate: a criterial choice made once that then silently shapes every runtime choice, which makes it the most powerful and least visible manipulation surface. Core truth survives a medium jointly on two conditions — its gate-criteria must reward something truth-correlated, and its want-loop must not erode the appetite for truth. Most engagement-optimized media fail both. Drafted in medium-and-manipulation.md.",
       "flaggedIn": ["outline", "transport-vs-selection", "medium-and-manipulation"],
       "blocksChapters": ["selection-as-other-engine", "emotional-memetics", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
     },
@@ -65,7 +65,7 @@
       "summary": "Originally framed as 'which mechanism is primary?' The frame now says: both are real, parallel mechanisms operating in series at every stage. Neither is downstream of the other. Selection becomes dominant in modern digital networks where transport cost has collapsed.",
       "aliases": ["transport vs selection", "selection primary"],
       "status": "resolved",
-      "workingAnswer": "Both are real, parallel mechanisms operating in series at every stage. Selection dominates in modern digital networks. The original 'which is primary' framing was wrong.",
+      "workingAnswer": "Both are real, parallel mechanisms operating in series at every stage — neither downstream of the other. They differ in modality: transport is a directionless cost (it scrambles, with no preferred outcome), selection is a criterial choice (it has a what-it-rewards, so it can be aimed, captured, and repaired). Each stage runs three operations — transport generates variants, the medium bounds the option space, selection picks. The book centers selection because it is the tunable mechanism, not because it is causally primary; the medium is selection frozen into the substrate. The original 'which is primary' framing was wrong — the real asymmetry is tunability.",
       "flaggedIn": ["outline", "transport-vs-selection", "the-information-landscape"],
       "blocksChapters": []
     }

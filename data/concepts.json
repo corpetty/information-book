@@ -209,6 +209,14 @@
       "aliases": ["truth-compression regimes", "preservation inversion orthogonality", "three truth regimes", "compression truth regimes"],
       "definedIn": ["truth-compression-and-when-each-wins"],
       "coveredBy": ["truth-compression-and-when-each-wins"]
+    },
+    {
+      "id": "option-space",
+      "label": "Option space",
+      "summary": "The set of forms an idea can take at a given pipeline stage — the menu selection picks from. Transport generates candidate variants; the medium bounds which of them are viable; selection ranks what remains. Selection never enlarges the option space, it only chooses within it, which is why the medium that writes the menu is the higher-leverage and less visible surface.",
+      "aliases": ["option space", "the selectable set", "what is selectable", "the menu"],
+      "definedIn": ["transport-vs-selection", "medium-and-manipulation"],
+      "coveredBy": ["selection-as-other-engine", "information-landscape"]
     }
   ]
 }
