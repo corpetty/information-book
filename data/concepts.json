@@ -244,6 +244,51 @@
       "definedIn": [],
       "coveredBy": ["emotional-memetics", "political-economy-of-attention"],
       "evidencedBy": ["amusing-ourselves-to-death"]
+    },
+    {
+      "id": "false-consensus-rational-agents",
+      "label": "False consensus among rational agents",
+      "summary": "O'Connor & Weatherall's central result: a community of agents who each update on evidence correctly — perfect Bayesians, no irrationality, no gullibility — can still converge on a false belief. False consensus is a property of network structure and the way evidence propagates, not of individual error. It undercuts any diagnosis that locates the problem solely in receivers being careless or stupid.",
+      "aliases": ["false consensus among rational agents", "rational agents reach false consensus", "rationality is not enough"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine", "emotional-memetics"],
+      "evidencedBy": ["misinformation-age"]
+    },
+    {
+      "id": "credibility-weighting",
+      "label": "Credibility weighting",
+      "summary": "The practice — rational and unavoidable — of weighting a piece of evidence by how much the receiver trusts its source. In O'Connor & Weatherall's models this is the core mechanism of social belief: no one can verify everything first-hand, so trust in sources does the work. It is also the seam propaganda exploits — manufacture or buy credibility and the weighting carries false evidence as readily as true.",
+      "aliases": ["credibility weighting", "trust weighting", "source trust", "weighting evidence by source"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine", "bridge-zone-distortion", "political-economy-of-attention"],
+      "evidencedBy": ["misinformation-age"]
+    },
+    {
+      "id": "conformity",
+      "label": "Conformity",
+      "summary": "The adoption of a belief because one's peers hold it, rather than on the evidence for it. Distinct from the content-side criteria of memetic fitness: conformity weights the social fact of agreement itself. In O'Connor & Weatherall's models conformity pressure can lock a community onto a belief — true or false — and insulate it from correcting evidence.",
+      "aliases": ["conformity", "conformity bias", "social conformity", "belief by agreement"],
+      "definedIn": [],
+      "coveredBy": ["selection-as-other-engine", "emotional-memetics"],
+      "evidencedBy": ["misinformation-age"]
+    },
+    {
+      "id": "polarization-via-distrust",
+      "label": "Polarization via distrust",
+      "summary": "A self-reinforcing loop formalized by O'Connor & Weatherall: when agents discount evidence from sources they distrust, communities that begin with mild disagreement diverge — each side discounts the other's findings, beliefs pull apart, and the divergence deepens the distrust that drove it. Polarization here needs no irrationality and no misinformation; rational trust-weighting plus an initial difference is enough.",
+      "aliases": ["polarization via distrust", "evidential polarization", "distrust-driven polarization", "polarization loop"],
+      "definedIn": [],
+      "coveredBy": ["emotional-memetics", "integration-problem"],
+      "evidencedBy": ["misinformation-age"]
+    },
+    {
+      "id": "zollman-effect",
+      "label": "The Zollman effect",
+      "summary": "The counterintuitive result (Kevin Zollman, central to O'Connor & Weatherall's account) that increasing a community's connectivity can reduce the accuracy of its beliefs: densely connected agents see each other's preliminary, noisy results too quickly and converge prematurely on whichever answer took an early lead. More communication is not monotonically better — there is an optimum. Bears directly on the Part IV integration question.",
+      "aliases": ["Zollman effect", "transient diversity", "connectivity can hurt accuracy", "premature convergence"],
+      "definedIn": [],
+      "coveredBy": ["integration-problem", "infrastructure-for-integration"],
+      "evidencedBy": ["misinformation-age"]
     }
   ]
 }

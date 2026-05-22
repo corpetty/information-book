@@ -20,7 +20,7 @@
 
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
-import { dirname, resolve } from 'node:path';
+import { dirname, resolve, extname } from 'node:path';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
@@ -474,17 +474,26 @@ function checkClaimDrift() {
 // ---------------------------------------------------------------- source folder checks
 
 function checkSources() {
-  // Guardrails for the two source folders. Every staged PDF must have a
-  // sources.json entry; every declared file must sit in the folder its
-  // `availability` implies; no in-copyright file may land in the
-  // committed (and Quartz-published) sources/ folder.
+  // Guardrails for the two source folders. Every staged source file must
+  // have a sources.json entry; every declared file must sit in the folder
+  // its `availability` implies; no in-copyright file may land in the
+  // committed (and Quartz-published) sources/ folder. Only extraction-ready
+  // formats are tracked — raw archives (.epub) and partial downloads are
+  // staging detritus and intentionally ignored.
+  const SOURCE_EXTS = ['.pdf', '.md', '.txt'];
   const committedDir = resolve(NOTES_DIR, 'sources');
   const localDir = resolve(repoRoot, 'sources-local');
-  const pdfsIn = (dir) => existsSync(dir)
-    ? new Set(readdirSync(dir).filter(f => f.toLowerCase().endsWith('.pdf')))
-    : new Set();
-  const committed = pdfsIn(committedDir);
-  const local = pdfsIn(localDir);
+  const stagedFilesIn = (dir) => {
+    if (!existsSync(dir)) return new Set();
+    return new Set(
+      readdirSync(dir, { withFileTypes: true })
+        .filter(d => d.isFile() && !d.name.startsWith('.'))
+        .map(d => d.name)
+        .filter(f => SOURCE_EXTS.includes(extname(f).toLowerCase())),
+    );
+  };
+  const committed = stagedFilesIn(committedDir);
+  const local = stagedFilesIn(localDir);
   const claimed = new Set();
 
   for (const node of nodes.values()) {
@@ -509,10 +518,10 @@ function checkSources() {
     }
   }
   for (const f of committed) {
-    if (!claimed.has(f)) warnings.push(`orphan PDF: sources/${f} has no sources.json entry`);
+    if (!claimed.has(f)) warnings.push(`orphan source file: sources/${f} has no sources.json entry`);
   }
   for (const f of local) {
-    if (!claimed.has(f)) warnings.push(`orphan PDF: sources-local/${f} has no sources.json entry`);
+    if (!claimed.has(f)) warnings.push(`orphan source file: sources-local/${f} has no sources.json entry`);
   }
 }
 
