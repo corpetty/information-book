@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Harvest candidate claims from prose in the information-book notes.
 //
-// Scans every markdown file in the quartz notes directory for two signals:
+// Scans every markdown file in the content directory for two signals:
 //   - **bold sentence** — full sentences enclosed in **...**
 //   - marker phrases — "the X claim, said plain", "where I land",
 //     "working answer", "current answer", "said differently", etc.
@@ -22,7 +22,7 @@ import { dirname, resolve, basename, join } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 const dataDir = resolve(repoRoot, 'data');
-const NOTES_DIR = resolve(repoRoot, '..', 'quartz', 'content', 'notes', 'information-book');
+const NOTES_DIR = resolve(repoRoot, 'content');
 const OUT_PATH = resolve(dataDir, 'claim-candidates.jsonl');
 
 const MARKER_PATTERNS = [

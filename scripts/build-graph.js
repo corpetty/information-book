@@ -26,7 +26,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 const dataDir = resolve(repoRoot, 'data');
 const META_PATH = resolve(dataDir, 'graph-meta.json');
-const NOTES_DIR = resolve(repoRoot, '..', 'quartz', 'content', 'notes', 'information-book');
+const NOTES_DIR = resolve(repoRoot, 'content');
 
 const meta = JSON.parse(readFileSync(META_PATH, 'utf8'));
 

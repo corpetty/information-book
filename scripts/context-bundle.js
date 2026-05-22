@@ -16,7 +16,7 @@ import { dirname, resolve } from 'node:path';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const repoRoot = resolve(__dirname, '..');
 const dataDir = resolve(repoRoot, 'data');
-const NOTES_DIR = resolve(repoRoot, '..', 'quartz', 'content', 'notes', 'information-book');
+const NOTES_DIR = resolve(repoRoot, 'content');
 
 // Tracks cases shown inline under claims so the standalone "Case studies"
 // section doesn't duplicate them.
@@ -348,7 +348,7 @@ function renderMarkdown() {
       lines.push('');
     }
     if (dn.props?.file) {
-      lines.push(`*Source file: \`quartz/content/notes/information-book/${dn.props.file}\`*`);
+      lines.push(`*Source file: \`content/${dn.props.file}\`*`);
       lines.push('');
     }
   }

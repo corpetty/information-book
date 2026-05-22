@@ -8,7 +8,7 @@
 #   make serve     build then serve viewer at localhost:$(PORT)
 #   make stats     print build counts
 #   make sources   print the per-source catalog dashboard
-#   make harvest   scan quartz notes for candidate claims
+#   make harvest   scan content/ for candidate claims
 #   make catalog   regenerate extraction-catalog.json from current graph
 #   make aggregate-interpretive   merge per-PDF extractions
 #   make extract-build   aggregate + rebuild (run after extraction agents)
@@ -36,7 +36,7 @@ all: build
 
 # build-graph.js is fast (sub-second) — always run it rather than tracking
 # file staleness. Guarantees the graph reflects every input on every
-# invocation: catalogs, interpretive-triples.jsonl, and the quartz prose
+# invocation: catalogs, interpretive-triples.jsonl, and the prose
 # the note parser reads. (Staleness tracking previously skipped rebuilds
 # after `make aggregate-interpretive` rewrote interpretive-triples.jsonl.)
 build:
