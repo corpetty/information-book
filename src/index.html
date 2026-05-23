@@ -8,10 +8,10 @@
 </head>
 <body>
   <header>
-    <div class="brand">
+    <button class="brand" id="home-link" type="button" title="Back to start">
       <h1>Information Book — Ontology</h1>
       <div id="stats">loading…</div>
-    </div>
+    </button>
     <nav id="view-tabs" aria-label="View"></nav>
     <div class="search-wrap">
       <input id="search" type="search" placeholder="Search nodes…" autocomplete="off" />
@@ -19,6 +19,7 @@
     </div>
   </header>
   <div id="view-desc"></div>
+  <div id="landing" hidden></div>
   <main>
     <aside id="legend"></aside>
     <div id="graph"></div>

@@ -68,11 +68,19 @@ const state = {
   // typeOverrides: {[type]: boolean} — when present, overrides the view's
   // nodeTypes membership (true = force on, false = force off).
   typeOverrides: {},
+  // showLanding: true when the user hasn't picked a view yet. URL hash with
+  // any state hides it (so shared/bookmarked URLs deep-link); clicking the
+  // brand title brings it back.
+  showLanding: true,
 };
 
 function parseHash() {
   const h = (location.hash || '').replace(/^#/, '');
-  if (!h) return;
+  if (!h) {
+    state.showLanding = true;
+    return;
+  }
+  state.showLanding = false;
   const params = new URLSearchParams(h);
   if (params.has('view') && VIEWS[params.get('view')]) {
     state.view = params.get('view');
@@ -91,8 +99,12 @@ function parseHash() {
 }
 
 function serializeHash() {
+  if (state.showLanding) {
+    if (location.hash) history.replaceState(null, '', `${location.pathname}${location.search}`);
+    return;
+  }
   const params = new URLSearchParams();
-  if (state.view !== DEFAULT_VIEW) params.set('view', state.view);
+  params.set('view', state.view);
   if (state.search) params.set('q', state.search);
   const on = [];
   const off = [];
@@ -103,8 +115,7 @@ function serializeHash() {
   if (on.length) params.set('on', on.join(','));
   if (off.length) params.set('off', off.join(','));
   const str = params.toString();
-  // Avoid pushing the same hash twice (which would trigger our own listener).
-  const target = str ? `#${str}` : '';
+  const target = `#${str}`;
   if (location.hash !== target) {
     history.replaceState(null, '', `${location.pathname}${location.search}${target}`);
   }
@@ -508,13 +519,82 @@ function escapeHtml(s) {
   }[c]));
 }
 
+// ---------------------------------------------------------------- landing
+
+// Per-view summary counts. Reads from the loaded graph, not hard-coded.
+function tileSummary(viewKey) {
+  const v = VIEWS[viewKey];
+  const types = new Set(v.nodeTypes ?? Object.keys(GRAPH.meta.nodeTypes));
+  // Pick 2–3 "headline" types for each view to summarise its contents.
+  const headlineTypes = {
+    overview: ['Part', 'Chapter'],
+    argument: ['Chapter', 'Claim', 'Concept'],
+    sources: ['Source', 'Claim'],
+    questions: ['Question'],
+    drafting: ['Chapter', 'Status'],
+    full: ['Node', 'Edge'],
+  }[viewKey] || [];
+  if (viewKey === 'full') {
+    return `${GRAPH.nodes.length} nodes · ${GRAPH.edges.length} edges`;
+  }
+  if (viewKey === 'questions') {
+    const open = GRAPH.nodes.filter(n => n.type === 'Question' && n.props?.status === 'open').length;
+    const resolved = GRAPH.nodes.filter(n => n.type === 'Question' && n.props?.status === 'provisionally-resolved').length;
+    return `${GRAPH.statsByType.Question || 0} questions · ${open} still open · ${resolved} provisionally resolved`;
+  }
+  return headlineTypes
+    .filter(t => types.has(t))
+    .map(t => `${GRAPH.statsByType[t] || 0} ${t.toLowerCase()}${(GRAPH.statsByType[t] || 0) === 1 ? '' : 's'}`)
+    .join(' · ');
+}
+
+function renderLanding() {
+  const el = document.getElementById('landing');
+  const tiles = Object.entries(VIEWS).map(([key, v]) => `
+    <button class="landing-tile" data-view="${key}">
+      <span class="tile-title">${escapeHtml(v.label)}</span>
+      <span class="tile-desc">${escapeHtml(v.desc)}</span>
+      <span class="tile-counts">${escapeHtml(tileSummary(key))}</span>
+    </button>
+  `).join('');
+  el.innerHTML = `
+    <div class="landing-inner">
+      <h2>Where do you want to start?</h2>
+      <p class="landing-intro">The Information Book's ontology has ${GRAPH.nodes.length} nodes across ${Object.keys(GRAPH.meta.nodeTypes).length} categories — chapters, claims, sources, concepts, open questions, and the edges between them. Pick a view that matches what you want to look at.</p>
+      <div class="landing-tiles">${tiles}</div>
+      <p class="landing-foot">You can switch views any time from the tabs in the header. To come back here, click the title.</p>
+    </div>
+  `;
+}
+
+function showLanding() {
+  state.showLanding = true;
+  serializeHash();
+  document.getElementById('landing').hidden = false;
+  document.getElementById('view-desc').hidden = true;
+  document.querySelector('main').hidden = true;
+  document.querySelectorAll('#view-tabs .tab').forEach(b => b.classList.remove('active'));
+  document.getElementById('stats').textContent = `${GRAPH.nodes.length} nodes · ${GRAPH.edges.length} edges`;
+  renderLanding();
+}
+
+function hideLanding() {
+  state.showLanding = false;
+  document.getElementById('landing').hidden = true;
+  document.getElementById('view-desc').hidden = false;
+  document.querySelector('main').hidden = false;
+  // Cytoscape needs to know its container resized when revealed.
+  if (GRAPH.cy) GRAPH.cy.resize();
+}
+
 // ---------------------------------------------------------------- state ops
 
 function setView(view) {
   if (!VIEWS[view]) return;
+  const wasOnLanding = state.showLanding;
   state.view = view;
-  // Clear type overrides on view change — overrides are scoped to a view.
   state.typeOverrides = {};
+  if (wasOnLanding) hideLanding();
   applyState({ relayout: true });
 }
 
@@ -671,6 +751,13 @@ async function main() {
       applyState({ relayout: true });
     }
   });
+  document.getElementById('landing').addEventListener('click', e => {
+    const tile = e.target.closest('button.landing-tile');
+    if (tile) setView(tile.dataset.view);
+  });
+  document.getElementById('home-link').addEventListener('click', () => {
+    showLanding();
+  });
 
   // Search wiring
   const searchInput = document.getElementById('search');
@@ -705,7 +792,12 @@ async function main() {
     if (btn) focusNode(btn.dataset.id);
   });
 
-  applyState({ relayout: true });
+  if (state.showLanding) {
+    showLanding();
+  } else {
+    hideLanding();
+    applyState({ relayout: true });
+  }
 
   // Expose for browser-console debugging — read-only conventionally.
   window.__GRAPH = GRAPH;
@@ -715,9 +807,15 @@ async function main() {
     state.view = DEFAULT_VIEW;
     state.search = '';
     state.typeOverrides = {};
+    state.showLanding = true;
     parseHash();
     document.getElementById('search').value = state.search;
-    applyState({ relayout: true });
+    if (state.showLanding) {
+      showLanding();
+    } else {
+      hideLanding();
+      applyState({ relayout: true });
+    }
   });
 }
 
