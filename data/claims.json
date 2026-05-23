@@ -373,6 +373,62 @@
           "text": "A good institution is not one that cannot be captured; it is one where capture cannot quietly hold."
         }
       ]
+    },
+    {
+      "id": "bridge-node-is-versatile-specialist",
+      "label": "A bridge node is a deep specialist with metacognitive flexibility, not a generalist",
+      "summary": "Bridge nodes between specialist communities that don't share preconditions are not generalists carrying field-general capacities. They are deep specialists who have paired their depth with metacognitive flexibility — what the double-edged-sword post calls versatile expertise. Depth is what gets the bridge admitted as a peer on either side; flexibility (structural-analogy habits, paradigm suspension, intellectual humility) is what lets the bridge translate the cross. Refines the outline's 'transferable preconditions' answer into the paired-skill form.",
+      "aliases": ["bridge node is versatile specialist", "versatile expert is the bridge", "bridge node refined"],
+      "status": "working",
+      "argues": ["bridge-nodes-and-versatile-expertise"],
+      "arguedInChapters": ["integration-problem", "preservation-vs-training"],
+      "dependsOn": [],
+      "harvestedFrom": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "lineApprox": 39,
+          "text": "A bridge node between two specialist communities is not a generalist. It is a deep specialist who has paired their depth with metacognitive flexibility — what the post calls versatile expertise."
+        }
+      ]
+    },
+    {
+      "id": "curse-substrates-polarization",
+      "label": "The curse of expertise is the cognitive substrate of polarization-via-distrust",
+      "summary": "The four cognitive failure modes named by 'the curse of expertise' (paradigm lock-in, overconfidence in cross-application, perceptual filtering, conceptual rigidity) are not separate ways expertise fails — they are the inside-the-head description of what happens when a rational agent discounts evidence from outside their paradigm. O'Connor and Weatherall's polarization-via-distrust is the network-level shape of the same mechanism. The agent and the network are not two phenomena; they are the same loop described from two sides, which means the cognitive flexibility that defeats the curse is also what disarms the polarization trap.",
+      "aliases": ["curse substrates polarization", "expertise blindness equals polarization", "cognitive substrate of polarization"],
+      "status": "working",
+      "argues": ["bridge-nodes-and-versatile-expertise"],
+      "arguedInChapters": ["integration-problem", "emotional-memetics"],
+      "dependsOn": ["claim:bridge-node-is-versatile-specialist"],
+      "harvestedFrom": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "lineApprox": 61,
+          "text": "The curse of expertise is the cognitive substrate of polarization-via-distrust."
+        }
+      ]
+    },
+    {
+      "id": "integration-needs-agent-and-infrastructure",
+      "label": "Integration infrastructure has to do two things at once",
+      "summary": "Integration between networks that don't share preconditions requires both a cultivated agent (the versatile expert) and a holding infrastructure (the curation layer). Agents without infrastructure produce bridges that can't scale; infrastructure without agents produces hollow institutions the polarization will eat. The book's prescription is the design of environments that produce both — cultivating metacognitive flexibility inside specialist communities and building curation-layer institutions that survive polarized trust.",
+      "aliases": ["integration needs agent and infrastructure", "both agents and curation layer", "prescription pair"],
+      "status": "working",
+      "argues": ["bridge-nodes-and-versatile-expertise", "integration-problem"],
+      "arguedInChapters": ["integration-problem", "infrastructure-for-integration"],
+      "dependsOn": ["claim:bridge-node-is-versatile-specialist"],
+      "harvestedFrom": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "lineApprox": 71,
+          "text": "integration infrastructure has to do two things at once — cultivate versatile experts inside specialist communities, and build curation-layer institutions that survive polarized trust."
+        },
+        {
+          "note": "integration-problem",
+          "lineApprox": 51,
+          "text": "Integration infrastructure has to do two things at once: cultivate versatile experts inside specialist communities, and build curation-layer institutions that survive polarized trust."
+        }
+      ]
     }
   ]
 }

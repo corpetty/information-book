@@ -116,10 +116,28 @@
     {
       "id": "transferable-preconditions",
       "label": "Transferable preconditions",
-      "summary": "Field-general capacities (statistical literacy, critical reading, the disposition to look for evidence) that help receivers engage with many domains. People carrying them are the natural bridge nodes between specialist communities.",
-      "aliases": ["transferable preconditions", "bridge nodes", "field-general capacity"],
-      "definedIn": ["outline"],
+      "summary": "Field-general capacities (statistical literacy, critical reading, the disposition to look for evidence) that help receivers engage with many domains. The outline's first-pass answer for what makes a bridge node; refined in bridge-nodes-and-versatile-expertise into the paired skill alongside depth rather than the bridge itself.",
+      "aliases": ["transferable preconditions", "field-general capacity", "field-general preconditions"],
+      "definedIn": ["outline", "bridge-nodes-and-versatile-expertise"],
       "coveredBy": ["preservation-vs-training", "integration-problem"]
+    },
+    {
+      "id": "versatile-expertise",
+      "label": "Versatile expertise",
+      "summary": "Deep specialist expertise paired with metacognitive flexibility — the second-order capacity to recognize structural analogies across domains, suspend one's primary paradigm, and treat one's own frame as one option rather than the substrate of reality. The bridge-node mechanism: depth is what gets a bridge admitted as a peer on either side; flexibility is what lets it see and translate the structural analogy that crosses. Refines the outline's 'transferable preconditions' answer into the paired-skill form.",
+      "aliases": ["versatile expertise", "bridge node", "bridge nodes", "depth plus flexibility", "cross-domain intuition"],
+      "definedIn": ["bridge-nodes-and-versatile-expertise"],
+      "coveredBy": ["integration-problem", "preservation-vs-training"],
+      "evidencedBy": ["double-edged-sword-of-expertise"]
+    },
+    {
+      "id": "curse-of-expertise",
+      "label": "The curse of expertise",
+      "summary": "Four cognitive failure modes of deep specialization without paired metacognitive flexibility: paradigm lock-in (can't entertain other frames), overconfidence in cross-application (over-extends mastery), perceptual filtering (screens out information that doesn't fit), conceptual rigidity (can't reframe a problem). Together these are the cognitive substrate of polarization-via-distrust — same mechanism, vocabulary at the individual level instead of the network level.",
+      "aliases": ["curse of expertise", "expertise blindness", "paradigm lock-in", "perceptual filtering"],
+      "definedIn": ["bridge-nodes-and-versatile-expertise"],
+      "coveredBy": ["integration-problem", "bridge-zone-distortion"],
+      "evidencedBy": ["double-edged-sword-of-expertise"]
     },
     {
       "id": "handle-ability",

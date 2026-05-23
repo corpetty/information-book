@@ -27,6 +27,17 @@
       "tags": ["internal"]
     },
     {
+      "id": "double-edged-sword-of-expertise",
+      "label": "The Double-Edged Sword of Deep Expertise",
+      "kind": "post",
+      "author": "corey-petty",
+      "tradition": "internal-corpus",
+      "summary": "Working out cross-domain intuition: chunking and deep structural analogies as the cognitive substrate of expert transfer; the four 'curse of expertise' failure modes (paradigm lock-in, overconfidence in cross-application, perceptual filtering, conceptual rigidity); and the prescription for cultivating versatile expertise. Claude-assisted.",
+      "engagement": "primary internal source — supplies Chapter 9's bridge-node mechanism",
+      "availability": "external",
+      "tags": ["internal"]
+    },
+    {
       "id": "general-theme-conversation",
       "label": "General Theme (conversation transcript)",
       "kind": "personal-conversation",
