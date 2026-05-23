@@ -9,6 +9,12 @@ node_modules/
 *.log
 .DS_Store
 
+# Obsidian config (user-specific)
+.obsidian/
+
+# Claude Code per-user settings (launch.json is committed as a shared file)
+.claude/settings.local.json
+
 # Quartz site build output and caches
 site/public/
 site/.quartz-cache/
