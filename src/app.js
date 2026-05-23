@@ -326,20 +326,180 @@ function hasOverrides() {
   return Object.keys(state.typeOverrides).length > 0;
 }
 
+// Construct a Quartz-relative URL for a Note/Chapter's prose page.
+// Viewer is expected to live at <site>/graph/, prose pages at <site>/<slug>/.
+// In local dev (served by python http.server at /src/) the URL won't resolve;
+// Phase 28 puts the viewer on the actual Quartz site where it does.
+function proseUrlFor(node) {
+  if (node.type === 'Note') {
+    const file = node.props?.file;
+    if (!file) return null;
+    // file is like "outline.md" — strip the extension, prefix with ../
+    return `../${file.replace(/\.md$/, '')}/`;
+  }
+  if (node.type === 'Chapter') {
+    const draft = node.props?.draftNote;
+    if (!draft) return null;
+    const noteNode = GRAPH.nodeById.get(draft);
+    return noteNode ? proseUrlFor(noteNode) : null;
+  }
+  return null;
+}
+
+// Returns the Status node id linked from a Chapter (if any).
+function chapterStatusId(nodeId) {
+  for (const e of GRAPH.outByNode.get(nodeId) || []) {
+    if (e.predicate === 'hasStatus') return e.target;
+  }
+  return null;
+}
+
+const STATUS_PROP_BY_TYPE = {
+  Claim: 'status',
+  Question: 'status',
+  Source: 'availability',
+};
+
+function statusBadgeFor(node) {
+  // 1) From a directly-stored prop (Claim.status, Question.status, Source.availability)
+  const propKey = STATUS_PROP_BY_TYPE[node.type];
+  if (propKey && node.props?.[propKey]) {
+    return { label: node.props[propKey], kind: propKey };
+  }
+  // 2) From a hasStatus edge (Chapter → Status)
+  if (node.type === 'Chapter') {
+    const statusId = chapterStatusId(node.id);
+    if (statusId) {
+      const statusNode = GRAPH.nodeById.get(statusId);
+      const label = statusNode?.label || statusId.replace(/^status:/, '');
+      return { label, kind: 'status' };
+    }
+  }
+  return null;
+}
+
+// Render the neighbour list as predicate-grouped clickable items.
+// Direction = 'out' means edges starting at this node; 'in' means ending at it.
+function renderNeighbourGroup(nodeId, direction) {
+  const list = direction === 'out'
+    ? (GRAPH.outByNode.get(nodeId) || [])
+    : (GRAPH.inByNode.get(nodeId) || []);
+  if (!list.length) return '';
+  // Group by predicate
+  const byPred = {};
+  for (const e of list) (byPred[e.predicate] ||= []).push(e);
+  const groups = Object.entries(byPred).sort(([a], [b]) => a.localeCompare(b)).map(([pred, edges]) => {
+    const rows = edges.map(e => {
+      const otherId = direction === 'out' ? e.target : e.source;
+      const other = GRAPH.nodeById.get(otherId);
+      if (!other) return '';
+      return `<li>
+        <button class="node-link" data-id="${escapeHtml(otherId)}">
+          <span class="node-link-type type-badge tiny">${other.type}</span>
+          <span class="node-link-label">${escapeHtml(other.label || otherId)}</span>
+        </button>
+      </li>`;
+    }).join('');
+    return `<div class="predicate-group">
+      <h4>${escapeHtml(pred)} <span class="pred-count">${edges.length}</span></h4>
+      <ul>${rows}</ul>
+    </div>`;
+  }).join('');
+  return `<section class="neighbours-section">
+    <h3>${direction === 'out' ? 'Outgoing' : 'Incoming'} <span class="dir-count">${list.length}</span></h3>
+    ${groups}
+  </section>`;
+}
+
+// Pick which props to surface in the detail panel, and which to suppress
+// because we've already rendered them above (summary, file, draftNote, etc.).
+const HIDDEN_PROPS_BY_TYPE = {
+  '*': new Set(['summary']),
+  Note:    new Set(['summary', 'file', 'title', 'subtype', 'role']),
+  Chapter: new Set(['summary', 'title', 'draftNote', 'ordinal', 'number', 'part']),
+  Claim:   new Set(['summary', 'status', 'argues', 'arguedInChapters', 'dependsOn', 'harvestedFrom']),
+  Question:new Set(['summary', 'status', 'workingAnswer', 'flaggedIn', 'blocksChapters']),
+  Source:  new Set(['summary', 'availability', 'label']),
+};
+
+function renderProps(node) {
+  const props = node.props || {};
+  const hidden = HIDDEN_PROPS_BY_TYPE[node.type] || HIDDEN_PROPS_BY_TYPE['*'];
+  const rows = Object.entries(props)
+    .filter(([k]) => !hidden.has(k))
+    .map(([k, v]) => {
+      let displayed;
+      if (Array.isArray(v)) {
+        if (v.length === 0) return '';
+        displayed = v.map(x => `<code>${escapeHtml(String(x))}</code>`).join(' ');
+      } else if (typeof v === 'object' && v !== null) {
+        displayed = `<code>${escapeHtml(JSON.stringify(v))}</code>`;
+      } else {
+        displayed = escapeHtml(String(v));
+      }
+      return `<dt>${escapeHtml(k)}</dt><dd>${displayed}</dd>`;
+    })
+    .filter(Boolean)
+    .join('');
+  return rows ? `<dl class="props">${rows}</dl>` : '';
+}
+
 function renderDetail(node) {
   const panel = document.getElementById('detail');
   const props = node.props || {};
-  const propRows = Object.entries(props).map(([k, v]) => `
-    <tr><th>${k}</th><td>${typeof v === 'object' ? JSON.stringify(v) : escapeHtml(String(v))}</td></tr>
-  `).join('');
-  const provRows = (node.provenance || []).map(p =>
-    `<tr><th>provenance</th><td>${escapeHtml(JSON.stringify(p))}</td></tr>`
-  ).join('');
+  const summary = props.summary || props.workingAnswer || '';
+  const badge = statusBadgeFor(node);
+  const proseUrl = proseUrlFor(node);
+
+  const metaPieces = [`<span class="type-badge">${node.type}</span>`, `<code>${escapeHtml(node.id)}</code>`];
+  if (badge) metaPieces.push(`<span class="status-badge status-${escapeHtml(badge.kind)} status-val-${escapeHtml(badge.label.replace(/\s+/g, '-').toLowerCase())}">${escapeHtml(badge.label)}</span>`);
+
+  const proseLink = proseUrl
+    ? `<a class="prose-link" href="${escapeHtml(proseUrl)}" target="_blank" rel="noopener">Read the prose →</a>`
+    : '';
+
+  const subtitleBits = [];
+  if (props.title && props.title !== node.label) subtitleBits.push(escapeHtml(props.title));
+  if (props.role) subtitleBits.push(`<span class="role">${escapeHtml(props.role)}</span>`);
+  const subtitle = subtitleBits.length ? `<div class="subtitle">${subtitleBits.join(' · ')}</div>` : '';
+
+  // For Questions and resolved-question working answers
+  const workingAnswerBlock = (node.type === 'Question' && props.workingAnswer && props.status !== 'open')
+    ? `<div class="working-answer"><strong>Working answer:</strong> ${escapeHtml(props.workingAnswer)}</div>`
+    : '';
+
   panel.innerHTML = `
     <h2>${escapeHtml(node.label || node.id)}</h2>
-    <div class="meta"><span class="type-badge">${node.type}</span> <code>${escapeHtml(node.id)}</code></div>
-    ${propRows || provRows ? `<table>${propRows}${provRows}</table>` : '<div class="empty">(no props)</div>'}
+    ${subtitle}
+    <div class="meta">${metaPieces.join(' ')}</div>
+    ${summary ? `<p class="summary">${escapeHtml(summary)}</p>` : ''}
+    ${workingAnswerBlock}
+    ${proseLink}
+    ${renderProps(node)}
+    ${renderNeighbourGroup(node.id, 'out')}
+    ${renderNeighbourGroup(node.id, 'in')}
   `;
+}
+
+// Select and inspect a node by id — used by neighbour-link buttons.
+function focusNode(nodeId) {
+  const node = GRAPH.nodeById.get(nodeId);
+  if (!node) return;
+  // If the node isn't in the current view, switch to Full graph so it is.
+  const types = effectiveTypes(GRAPH.meta);
+  if (!types.has(node.type)) {
+    state.view = 'full';
+    state.typeOverrides = {};
+    applyState({ relayout: true });
+  }
+  // Select in cytoscape if present
+  const ele = GRAPH.cy.getElementById(nodeId);
+  if (ele && ele.length) {
+    GRAPH.cy.elements().unselect();
+    ele.select();
+    GRAPH.cy.animate({ center: { eles: ele }, zoom: Math.max(GRAPH.cy.zoom(), 0.7) }, { duration: 240 });
+  }
+  renderDetail(node);
 }
 
 function escapeHtml(s) {
@@ -383,7 +543,17 @@ function setSearch(q) {
 
 // ---------------------------------------------------------------- mounting
 
-const GRAPH = { meta: null, nodes: [], edges: [], nodeById: null, cy: null, statsByType: {}, statsByPredicate: {} };
+const GRAPH = {
+  meta: null,
+  nodes: [],
+  edges: [],
+  nodeById: null,
+  outByNode: null, // Map<nodeId, edge[]> — outgoing edges (this node is source)
+  inByNode: null,  // Map<nodeId, edge[]> — incoming edges (this node is target)
+  cy: null,
+  statsByType: {},
+  statsByPredicate: {},
+};
 
 function applyState({ relayout }) {
   serializeHash();
@@ -475,6 +645,12 @@ async function main() {
   GRAPH.nodes = await loadJsonl(`${DATA}/nodes.jsonl`).catch(() => []);
   GRAPH.edges = await loadJsonl(`${DATA}/edges.jsonl`).catch(() => []);
   GRAPH.nodeById = new Map(GRAPH.nodes.map(n => [n.id, n]));
+  GRAPH.outByNode = new Map();
+  GRAPH.inByNode = new Map();
+  for (const e of GRAPH.edges) {
+    (GRAPH.outByNode.get(e.source) || GRAPH.outByNode.set(e.source, []).get(e.source)).push(e);
+    (GRAPH.inByNode.get(e.target) || GRAPH.inByNode.set(e.target, []).get(e.target)).push(e);
+  }
 
   for (const n of GRAPH.nodes) GRAPH.statsByType[n.type] = (GRAPH.statsByType[n.type] || 0) + 1;
   for (const e of GRAPH.edges) GRAPH.statsByPredicate[e.predicate] = (GRAPH.statsByPredicate[e.predicate] || 0) + 1;
@@ -523,7 +699,16 @@ async function main() {
     if (orig) renderDetail(orig);
   });
 
+  // Neighbour-link buttons in the detail panel jump to that node.
+  document.getElementById('detail').addEventListener('click', e => {
+    const btn = e.target.closest('button.node-link');
+    if (btn) focusNode(btn.dataset.id);
+  });
+
   applyState({ relayout: true });
+
+  // Expose for browser-console debugging — read-only conventionally.
+  window.__GRAPH = GRAPH;
 
   window.addEventListener('hashchange', () => {
     // External hash change (back button, etc.) — re-parse and re-render.

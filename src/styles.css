@@ -289,14 +289,233 @@ aside#detail {
 
 #detail h2 {
   font-size: 14px;
-  margin: 0 0 4px 0;
+  margin: 0 0 2px 0;
   word-break: break-word;
+}
+
+#detail .subtitle {
+  font-size: 11px;
+  color: #64748b;
+  margin-bottom: 6px;
+  font-style: italic;
+}
+
+#detail .subtitle .role {
+  font-style: normal;
+  background: #f1f5f9;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 10px;
+  color: #475569;
 }
 
 #detail .meta {
   margin-bottom: 12px;
   font-size: 11px;
   color: #64748b;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+#detail .summary {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #1f2937;
+  margin: 8px 0;
+}
+
+#detail .working-answer {
+  font-size: 12px;
+  line-height: 1.5;
+  background: #f0fdf4;
+  border-left: 3px solid #16a34a;
+  padding: 8px 10px;
+  margin: 10px 0;
+  border-radius: 0 4px 4px 0;
+}
+
+#detail .working-answer strong {
+  color: #166534;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+#detail .prose-link {
+  display: inline-block;
+  margin: 6px 0 12px;
+  padding: 4px 10px;
+  background: #0f172a;
+  color: #f1f5f9;
+  font-size: 11px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+#detail .prose-link:hover {
+  background: #1e293b;
+}
+
+.status-badge {
+  display: inline-block;
+  background: #e2e8f0;
+  color: #334155;
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.status-badge.status-val-open,
+.status-badge.status-val-not-yet-drafted,
+.status-badge.status-val-skeleton {
+  background: #fef3c7;
+  color: #92400e;
+}
+.status-badge.status-val-in-workshop,
+.status-badge.status-val-working,
+.status-badge.status-val-provisionally-resolved {
+  background: #dbeafe;
+  color: #1e40af;
+}
+.status-badge.status-val-drafted,
+.status-badge.status-val-resolved,
+.status-badge.status-val-load-bearing {
+  background: #dcfce7;
+  color: #166534;
+}
+.status-badge.status-val-superseded,
+.status-badge.status-val-retired {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+.status-badge.status-val-restricted {
+  background: #fee2e2;
+  color: #991b1b;
+}
+.status-badge.status-val-external {
+  background: #ede9fe;
+  color: #5b21b6;
+}
+
+.type-badge.tiny {
+  font-size: 9px;
+  padding: 1px 4px;
+  margin-right: 0;
+}
+
+#detail dl.props {
+  margin: 8px 0;
+  padding: 8px 0;
+  border-top: 1px solid #f1f5f9;
+  border-bottom: 1px solid #f1f5f9;
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 4px 8px;
+  font-size: 11px;
+}
+
+#detail dl.props dt {
+  color: #64748b;
+  font-family: ui-monospace, "SF Mono", monospace;
+}
+
+#detail dl.props dd {
+  margin: 0;
+  word-break: break-word;
+}
+
+#detail dl.props dd code {
+  font-size: 10px;
+  margin-right: 4px;
+  display: inline-block;
+  margin-bottom: 2px;
+}
+
+#detail .neighbours-section {
+  margin-top: 14px;
+}
+
+#detail .neighbours-section h3 {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #475569;
+  margin: 0 0 6px 0;
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+#detail .neighbours-section .dir-count {
+  font-size: 9px;
+  color: #94a3b8;
+  font-variant-numeric: tabular-nums;
+  font-weight: 400;
+}
+
+#detail .predicate-group {
+  margin-bottom: 8px;
+}
+
+#detail .predicate-group h4 {
+  font-size: 10px;
+  margin: 4px 0;
+  color: #64748b;
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-weight: 600;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+#detail .predicate-group .pred-count {
+  font-size: 9px;
+  color: #cbd5e1;
+  font-weight: 400;
+}
+
+#detail .predicate-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0;
+}
+
+#detail .predicate-group li {
+  margin: 2px 0;
+}
+
+#detail .node-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: 100%;
+  background: transparent;
+  border: 1px solid transparent;
+  color: inherit;
+  padding: 3px 6px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 11px;
+  text-align: left;
+  line-height: 1.3;
+}
+
+#detail .node-link:hover {
+  background: #f1f5f9;
+  border-color: #e2e8f0;
+}
+
+#detail .node-link .node-link-label {
+  flex: 1;
+  word-break: break-word;
+  color: #1f2937;
 }
 
 .type-badge {
