@@ -141,6 +141,12 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 19 | `c719a3b` | Rewrite README for the one-repo layout. Three subsystems framing: prose, ontology, publishing site |
 | 21 | `8418628` | GitHub Pages deployment. `baseUrl` set to `corpetty.github.io/information-book`; `.github/workflows/deploy-site.yml` builds and deploys on push to `main` when `content/` or `site/` changes |
 | 22 | `e87c7b9` | Draft Ch9 foundation + skeleton. `content/bridge-nodes-and-versatile-expertise.md` resolves the transferable-vs-specialized question (bridge nodes = deep specialists + paired metacognitive flexibility; the curse of expertise is the cognitive substrate of polarization-via-distrust). `content/integration-problem.md` is the Ch9 skeleton built on it. `source:double-edged-sword-of-expertise`, `concept:versatile-expertise`, `concept:curse-of-expertise`, three claims, and `question:transferable-vs-specialized` flipped to provisionally-resolved |
+| 23 | `54485c7` | Sync README and outline with Phase 22 |
+| 24 | `6b3af0d` | Accessible landing page (`content/index.md` rewritten), glossary (`content/glossary.md` new with ~25 plain-language definitions), reader's note at the top of the outline |
+| 25 | `d5b4128` | Viewer overhaul I: header view tabs (Book overview / Argument map / Source map / Open questions / Drafting status / Full graph), search box, clickable type-filter legend. State serialises to URL hash |
+| 26 | `86d516b` | Viewer overhaul II: detail panel becomes readable — summary prose, status badges, working-answer block for resolved Questions, "Read the prose →" link for Note/Chapter, neighbours grouped by predicate with click-to-navigate |
+| 27 | `7622326` | Viewer overhaul III: first-load tiled landing with one button per view (each tile shows label + description + live counts). Home button in header returns to landing |
+| 28 | `(this commit)` | Viewer embedded in Quartz site. `make site-build` chains build-graph → quartz build → viewer-stage (copies `src/` + `data/*.json` into `site/public/{graph,data}/`). Deploy workflow switched from `npx quartz build` to `make site-build`. `content/index.md` and `content/glossary.md` link to the live viewer |
 
 ## Layout
 

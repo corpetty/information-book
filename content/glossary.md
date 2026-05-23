@@ -4,7 +4,7 @@ tags:
   - information
 ---
 
-Plain-language definitions of the load-bearing terms used across the book and its working notes. Each entry links to the chapter or foundational note that works the term through in depth. Grouped by where the term enters the argument rather than alphabetically; use your browser's find for direct lookup.
+Plain-language definitions of the load-bearing terms used across the book and its working notes. Each entry links to the chapter or foundational note that works the term through in depth. Grouped by where the term enters the argument rather than alphabetically; use your browser's find for direct lookup. To see how the terms connect — which chapters cover which concepts, where each claim gets its source backing, what's still open — try the [interactive ontology map](./graph/).
 
 ## The pipeline
 

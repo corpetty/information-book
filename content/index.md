@@ -36,6 +36,7 @@ Three working conclusions hold the structure together:
 
 This is a working draft. Chapters are in various states of completeness — the structural argument is settling, the prescriptive Part IV is in skeleton.
 
+- **[Explore the ontology →](./graph/)** — an interactive map of the book's argument: chapters, claims, sources, open questions, and how they connect. Pick a view (Book overview / Argument map / Source map / Open questions / Drafting status) to start.
 - **[[glossary|Glossary]]** — plain-language definitions of the load-bearing terms used across the book. Open this in a tab while reading.
 - **[[outline]]** — the working table of contents. Dense, written for the author; useful once you have the glossary.
 - **Most settled chapters**: [[the-information-landscape|Chapter 1 — The Information Landscape]] and [[truth-compression-and-when-each-wins|Chapter 5c — Truth, Compression, and When Each Wins]]. Start here if you want to read the book itself rather than the working notes.

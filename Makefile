@@ -13,9 +13,10 @@
 #   make aggregate-interpretive   merge per-PDF extractions
 #   make extract-build   aggregate + rebuild (run after extraction agents)
 #   make context CENTER=<id>   emit a markdown context bundle for a node
-#   make site-build  build the Quartz site from content/ into site/public/
+#   make site-build  rebuild graph + Quartz site + stage viewer at /graph/
 #   make site-serve  build and serve the Quartz site at localhost:8080
 #   make site-clean  remove the site build output and cache
+#   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
 #   make clean     remove generated artifacts
 #   make help      list targets
 
@@ -33,7 +34,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context site-build site-serve site-clean
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context site-build site-serve site-clean viewer-stage
 
 all: build
 
@@ -72,9 +73,25 @@ extract-build: aggregate-interpretive
 context: build
 	@node $(SCRIPTS)/context-bundle.js --center=$(CENTER) $(ARGS)
 
-site-build:
-	@cd site && npx quartz build
+# Copy the viewer files + the current graph data into the Quartz build
+# output. The viewer lives at site/public/graph/, the data at site/public/data/.
+# The viewer fetches via ../data, so the paths line up under the published
+# /graph/ subpath. Idempotent; depends on site/public/ existing.
+viewer-stage:
+	@mkdir -p site/public/graph site/public/data
+	@cp src/index.html src/app.js src/styles.css site/public/graph/
+	@cp data/graph-meta.json data/nodes.jsonl data/edges.jsonl site/public/data/
 
+# Full site build: rebuild the graph (so the data the viewer ships is fresh),
+# build the Quartz output, then stage the viewer on top. This is what CI runs.
+site-build: build
+	@cd site && npx quartz build
+	@$(MAKE) viewer-stage
+
+# Quartz dev server (hot-reloads prose). Note: subsequent rebuilds wipe
+# site/public, so the staged viewer won't survive here — use `make serve`
+# for viewer-only dev, or `make site-build` then a static server for the
+# integrated experience.
 site-serve:
 	@cd site && npx quartz build --serve
 

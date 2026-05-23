@@ -7,6 +7,10 @@ on:
     paths:
       - "content/**"
       - "site/**"
+      - "src/**"
+      - "data/**"
+      - "scripts/**"
+      - "Makefile"
       - ".github/workflows/deploy-site.yml"
   workflow_dispatch:
 
@@ -38,9 +42,11 @@ jobs:
         working-directory: site
         run: npm ci
 
-      - name: Build Quartz site
-        working-directory: site
-        run: npx quartz build
+      - name: Build graph + Quartz site + stage viewer
+        # `make site-build` runs build-graph.js, then npx quartz build, then
+        # copies src/ + data/*.json into site/public/{graph,data}/ so the
+        # ontology viewer publishes at /information-book/graph/.
+        run: make site-build
 
       - uses: actions/upload-pages-artifact@v3
         with:

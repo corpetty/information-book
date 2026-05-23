@@ -345,8 +345,9 @@ function proseUrlFor(node) {
   if (node.type === 'Note') {
     const file = node.props?.file;
     if (!file) return null;
-    // file is like "outline.md" — strip the extension, prefix with ../
-    return `../${file.replace(/\.md$/, '')}/`;
+    // Match Quartz's pretty-URL form: ../<slug> (no extension, no trailing
+    // slash). GitHub Pages resolves to the underlying .html.
+    return `../${file.replace(/\.md$/, '')}`;
   }
   if (node.type === 'Chapter') {
     const draft = node.props?.draftNote;
