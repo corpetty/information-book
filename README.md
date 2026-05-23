@@ -39,7 +39,7 @@ make site-clean                                   # remove site/public + site/.q
 make help                                         # list targets
 ```
 
-Current state: **158 nodes / 553 edges / 0 warnings**.
+Current state: **166 nodes / 594 edges / 0 warnings**.
 
 ## The drafting loop
 
@@ -138,6 +138,9 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 16 | `293abe7` | **Merge prose subtree from quartz with history.** Imports `content/` (12 chapter and foundation notes + experiments/ + sources/), three referenced images under `content/images/`, and two citation notes under `content/citations/`. Extracted with `git filter-repo` from a temp clone of the quartz repo, preserving 33 commits of authoring history |
 | 17 | `086e5da` | Rewire ontology scripts to read prose from local `content/` (NOTES_DIR change in `build-graph.js`, `harvest-claims.js`, `context-bundle.js`) |
 | 18 | `ecdcd8a` | Add Quartz site at `site/` for publishing. Fresh upstream Quartz 4.5.2, `site/content` symlinks to `../content`, `quartz.config.ts` set up for the book. Makefile gains `site-build` / `site-serve` / `site-clean` |
+| 19 | `c719a3b` | Rewrite README for the one-repo layout. Three subsystems framing: prose, ontology, publishing site |
+| 21 | `8418628` | GitHub Pages deployment. `baseUrl` set to `corpetty.github.io/information-book`; `.github/workflows/deploy-site.yml` builds and deploys on push to `main` when `content/` or `site/` changes |
+| 22 | `e87c7b9` | Draft Ch9 foundation + skeleton. `content/bridge-nodes-and-versatile-expertise.md` resolves the transferable-vs-specialized question (bridge nodes = deep specialists + paired metacognitive flexibility; the curse of expertise is the cognitive substrate of polarization-via-distrust). `content/integration-problem.md` is the Ch9 skeleton built on it. `source:double-edged-sword-of-expertise`, `concept:versatile-expertise`, `concept:curse-of-expertise`, three claims, and `question:transferable-vs-specialized` flipped to provisionally-resolved |
 
 ## Layout
 
@@ -155,12 +158,12 @@ information-book/
 ├── data/                              ONTOLOGY catalogs + outputs
 │   ├── graph-meta.json                schema contract — node types + predicates
 │   ├── mechanisms.json                5 named structural mechanisms
-│   ├── concepts.json                  35 cross-cutting concepts
+│   ├── concepts.json                  37 cross-cutting concepts
 │   ├── questions.json                 7 foundational questions (open / provisionally-resolved / resolved)
 │   ├── traditions.json                6 intellectual lineages
-│   ├── sources.json                   17 sources + 12 authors
+│   ├── sources.json                   18 sources + 12 authors
 │   ├── case-studies.json              7 worked examples
-│   ├── claims.json                    canonical claims (promoted from candidates)
+│   ├── claims.json                    24 canonical claims (promoted from candidates)
 │   ├── slug-aliases.json              wikilink-resolution overrides
 │   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (committed)
 │   ├── claim-candidates.jsonl         harvester output (gitignored)
