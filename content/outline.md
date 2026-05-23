@@ -4,6 +4,8 @@ tags:
   - information
 ---
 
+> *Working document for the author. If you've arrived here cold, start with the [[index|landing page]] and keep the [[glossary]] open in a tab — they give the plain-language onramp this outline assumes. Terms like "selection gate," "outer message," "interpretive latitude," "polarization via distrust," and "curse of expertise" are all defined there.*
+
 Working table of contents. Living doc. Recently restructured in response to a first-principles critique of the original frame (see "Foundational questions still being worked out" below). Earlier version was more confident than the work currently justifies.
 
 ## Thesis (working)

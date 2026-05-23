@@ -39,7 +39,7 @@ make site-clean                                   # remove site/public + site/.q
 make help                                         # list targets
 ```
 
-Current state: **166 nodes / 594 edges / 0 warnings**.
+Current state: **168 nodes / 617 edges / 0 warnings**.
 
 ## The drafting loop
 
@@ -149,7 +149,9 @@ information-book/
 ├── README.md                          this file
 ├── Makefile                           dependency-driven build / serve / context targets
 ├── content/                           PROSE — the book itself
-│   ├── outline.md                     working outline / TOC
+│   ├── index.md                       plain-language landing page (the public face)
+│   ├── glossary.md                    plain-language definitions of load-bearing terms
+│   ├── outline.md                     working outline / TOC (dense; read after the landing page)
 │   ├── *.md                           chapter drafts and foundational notes
 │   ├── experiments/                   experiment-tracker notes
 │   ├── sources/                       open-licence academic PDFs (cited by the graph)
