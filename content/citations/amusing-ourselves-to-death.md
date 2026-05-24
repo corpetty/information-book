@@ -15,3 +15,7 @@ Argues that television as a medium degraded public discourse. The 'medium shapes
 
 **Availability.** In-copyright — not redistributed. Engaged from a local working copy held outside the repo; cited by reference here.
 
+## Where this is cited in the book
+
+- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
+

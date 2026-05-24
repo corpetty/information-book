@@ -56,6 +56,15 @@
       "derivesFrom": ["transport"]
     },
     {
+      "id": "engagement-equilibrium",
+      "label": "Engagement-maximization as a captured equilibrium",
+      "summary": "Engagement maximization is not an attack on the platform from outside — it is the platform's own business model acting as the captured selection-tuner. The metric being optimized (time-in-medium → ad inventory → revenue) is a proxy for revenue dressed up as a proxy for user benefit; the gate-criteria tuned to it converge on identity, threat, and high-arousal content because that is what holds attention. The equilibrium is the institution's normal operation, which is what makes it more stable than any externally captured institution — there is no adversary to defeat, only an arrangement to dismantle.",
+      "aliases": ["engagement equilibrium", "engagement maximization", "captured engagement equilibrium", "engagement-optimization loop"],
+      "definedIn": ["political-economy-of-attention"],
+      "coveredBy": ["political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
+      "derivesFrom": ["selection", "medium-shapes-want"]
+    },
+    {
       "id": "myth-dilution",
       "label": "Myth dilution at scale",
       "summary": "The loop by which a network's binding myth loses determinacy as the network grows: scale forces the myth to compress (complexity ceiling), compression widens its interpretive latitude, latitude sorted by community and identity gates segments the network, and segmentation forces the bureaucracy that re-supplies the dropped decoding key. A myth's reach and its determinacy trade off; whether the loop then compounds safely, fragments, or inverts into scale-as-control is set by the repairing bureaucracy's own resistance to capture.",

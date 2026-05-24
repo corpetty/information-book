@@ -21,5 +21,6 @@ Formal network models of belief propagation. What kills truth in networks: selec
 - [[bridge-nodes-and-versatile-expertise|Bridge Nodes and Versatile Expertise]] *(foundational-note)*
 - [[integration-problem|Ch 9 — The Integration Problem]]
 - [[outline|Information Book — Outline]] *(outline)*
+- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 

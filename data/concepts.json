@@ -76,10 +76,26 @@
     {
       "id": "cost-shifting",
       "label": "Cost-shifting from producers to consumers",
-      "summary": "When barriers to creation fall, the cost of quality assessment doesn't disappear — it transfers from producers to consumers, reviewers, and maintainers who have no more time than before.",
-      "aliases": ["cost shifting", "producer to consumer cost transfer"],
-      "definedIn": ["outline"],
-      "coveredBy": ["political-economy-of-attention", "ai-as-new-node"]
+      "summary": "When barriers to creation fall, the cost of quality assessment doesn't disappear — it transfers from producers (who used to bear it as the price of being published at all) onto consumers, reviewers, and maintainers, who have no more time than before and no ledger entry for the cost. The structural move that lets the platform political economy stay invisible: the platform claims credit for democratizing access while the actual access-to-quality collapses, because the cost landed on someone with no balance sheet to absorb it.",
+      "aliases": ["cost shifting", "producer to consumer cost transfer", "externalized assessment cost"],
+      "definedIn": ["political-economy-of-attention"],
+      "coveredBy": ["political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
+      "id": "self-vs-external-capture",
+      "label": "Self-capture vs. external capture",
+      "summary": "Two flavors of institutional capture at the platform scale, structurally different. External capture: an adversarial selection-tuner (propaganda operation, state actor, ad-tech firm) learns the platform's gate criteria and crafts variants that win at them — the asymmetric arms race shape. Self-capture: the institution's own business model is the captured selection-tuner — engagement maximization is itself a tuning of the gates against truth, with no external adversary. Self-capture is more stable than external capture because there is no captor to defeat, only an equilibrium to dismantle; the captured state and the functional state are the same state. The two reinforce each other directionally: self-capture creates the gradient external actors then ride down.",
+      "aliases": ["self-capture", "self capture vs external capture", "two flavors of capture", "captured equilibrium"],
+      "definedIn": ["political-economy-of-attention"],
+      "coveredBy": ["political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
+      "id": "out-competition-of-carriers",
+      "label": "Out-competition of institutional carriers in attention markets",
+      "summary": "Platforms do not have to suppress institutional carriers (journals, universities, depth journalism) to hollow them. Free engagement-optimized content has approximately zero marginal cost of attention because users produce it; depth content has real cost-per-impression because the institutional apparatus is paid. The attention market clears at zero price for engagement-optimized noise and infinite price for depth, so receivers — with limited attention and no quality-assessment budget — predictably pick the free option. The mechanism that produces Ch 8's asymmetric institutional collapse without any direct attack on the institutions.",
+      "aliases": ["out-competition", "attention-market out-competition", "zero-marginal-cost attention", "depth priced out"],
+      "definedIn": ["political-economy-of-attention"],
+      "coveredBy": ["political-economy-of-attention", "preservation-vs-training", "infrastructure-for-integration"]
     },
     {
       "id": "inverted-u",

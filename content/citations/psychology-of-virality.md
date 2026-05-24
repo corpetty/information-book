@@ -15,3 +15,7 @@ Empirical and theoretical work on what makes content go viral. Identity, emotion
 
 **Local copy.** [`sources/psychology-of-virality.pdf`](../sources/psychology-of-virality.pdf) *(licence not yet confirmed)*
 
+## Where this is cited in the book
+
+- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
+
