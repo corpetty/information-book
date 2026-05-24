@@ -15,3 +15,7 @@ Empirical work on how information morphs as it traverses social-media networks.
 
 **Local copy.** [`sources/information-evolution-in-social-media.pdf`](../sources/information-evolution-in-social-media.pdf) *(licence not yet confirmed)*
 
+## Where this is cited in the book
+
+- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
+

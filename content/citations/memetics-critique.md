@@ -16,3 +16,7 @@ Critical assessment of memetics as a research program. Where the analogy with ge
 
 **Local copy.** [`sources/Memetics_critique.pdf`](../sources/Memetics_critique.pdf) *(licence not yet confirmed)*
 
+## Where this is cited in the book
+
+- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
+
