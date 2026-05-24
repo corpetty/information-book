@@ -13,7 +13,8 @@
 #   make aggregate-interpretive   merge per-PDF extractions
 #   make extract-build   aggregate + rebuild (run after extraction agents)
 #   make context CENTER=<id>   emit a markdown context bundle for a node
-#   make site-build  rebuild graph + Quartz site + stage viewer at /graph/
+#   make citation-pages  regenerate content/citations/*.md from data/sources.json
+#   make site-build  rebuild graph + citation pages + Quartz site + stage viewer at /graph/
 #   make site-serve  build and serve the Quartz site at localhost:8080
 #   make site-clean  remove the site build output and cache
 #   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
@@ -34,7 +35,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context site-build site-serve site-clean viewer-stage
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages site-build site-serve site-clean viewer-stage
 
 all: build
 
@@ -82,9 +83,17 @@ viewer-stage:
 	@cp src/index.html src/app.js src/styles.css site/public/graph/
 	@cp data/graph-meta.json data/nodes.jsonl data/edges.jsonl site/public/data/
 
+# Regenerate citation pages from data/sources.json. Idempotent — files
+# carrying the generator marker get overwritten, hand-written ones are
+# left alone. Depends on `build` so the back-pointer pass can read
+# fresh edges from data/edges.jsonl.
+citation-pages: build
+	@node $(SCRIPTS)/generate-citation-pages.js
+
 # Full site build: rebuild the graph (so the data the viewer ships is fresh),
-# build the Quartz output, then stage the viewer on top. This is what CI runs.
-site-build: build
+# regenerate citation pages from sources.json, build the Quartz output,
+# then stage the viewer on top. This is what CI runs.
+site-build: citation-pages
 	@cd site && npx quartz build
 	@$(MAKE) viewer-stage
 
