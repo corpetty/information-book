@@ -396,6 +396,31 @@ function renderMarkdown() {
     }
   }
 
+  // Contested claims — both supports AND pressureTests exist across the
+  // source corpus. These are live tensions, not settled positions, and
+  // the chapter should present them that way in prose.
+  const claimsForTension = center.type === 'Claim' ? [center] : (buckets.Claim || []);
+  const contestedClaims = claimsForTension
+    .map(c => ({
+      claim: c,
+      sup: inEdges(c.id, 'supports').length,
+      pt: inEdges(c.id, 'pressureTests').length,
+    }))
+    .filter(({ sup, pt }) => sup > 0 && pt > 0)
+    .sort((a, b) => (b.sup + b.pt) - (a.sup + a.pt));
+  if (contestedClaims.length) {
+    lines.push('## Contested claims in scope');
+    lines.push('');
+    lines.push('*Both supports and pressure-tests exist across the corpus. Worth presenting as live tensions in prose, not as settled — the source evidence above lists who lands where.*');
+    lines.push('');
+    for (const { claim, sup, pt } of contestedClaims) {
+      const supWord = sup === 1 ? 'support' : 'supports';
+      const ptWord = pt === 1 ? 'pressure-test' : 'pressure-tests';
+      lines.push(`- **${claim.label}** (\`${claim.id}\`) — ${sup} ${supWord} / ${pt} ${ptWord}`);
+    }
+    lines.push('');
+  }
+
   // Questions in scope — combine BFS-reached with claim-scoped lookup
   // so foundational resolved questions surface even when more than 2
   // hops away from the center.
@@ -536,6 +561,14 @@ function computeEditorialFlags() {
       const sup = inEdges(c.id, 'supports').length;
       const pt = inEdges(c.id, 'pressureTests').length;
       if (sup === 0 && pt === 0) flags.push(`Claim \`${c.id}\` has no source backing yet (0 supports, 0 pressure-tests).`);
+    }
+    const contested = (buckets.Claim || []).filter(c => {
+      const sup = inEdges(c.id, 'supports').length;
+      const pt = inEdges(c.id, 'pressureTests').length;
+      return sup > 0 && pt > 0;
+    });
+    if (contested.length) {
+      flags.push(`${contested.length} contested claim(s) in scope — present as live tensions, not settled: ${contested.map(c => `\`${c.id}\``).join(', ')}.`);
     }
   }
   if (center.type === 'Claim') {

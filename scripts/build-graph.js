@@ -529,6 +529,30 @@ function checkSources() {
   for (const f of local) {
     if (!claimed.has(f)) warnings.push(`orphan source file: sources-local/${f} has no sources.json entry`);
   }
+
+  // Extraction-completeness: any Source with a file declared should have
+  // at least one interpretive edge by now — supports / pressureTests /
+  // evidencedBy / interpretive-mentions. Zero means the extraction agent
+  // has not been run against this PDF yet, which is the easiest authoring
+  // task to forget. Warning, not error: a freshly added source legitimately
+  // has zero edges between sources.json edit and the first extraction.
+  const interpretiveBySource = new Map();
+  for (const e of edges) {
+    if (!e.interpretive) continue;
+    if (e.source?.startsWith('source:')) {
+      interpretiveBySource.set(e.source, (interpretiveBySource.get(e.source) || 0) + 1);
+    }
+    if (e.target?.startsWith('source:')) {
+      interpretiveBySource.set(e.target, (interpretiveBySource.get(e.target) || 0) + 1);
+    }
+  }
+  for (const node of nodes.values()) {
+    if (node.type !== 'Source') continue;
+    if (!node.props?.file) continue;
+    if ((interpretiveBySource.get(node.id) || 0) === 0) {
+      warnings.push(`source unread: ${node.id} declares file "${node.props.file}" but has 0 interpretive edges — extraction agent has not been run`);
+    }
+  }
 }
 
 // ---------------------------------------------------------------- note parser
