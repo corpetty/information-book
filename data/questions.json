@@ -36,9 +36,9 @@
       "summary": "Current model treats budget as a constraint. Education, training, and shared vocabulary expand it. 'Institutional carriers' was hiding two distinct functions (preserving the complex form AND training receivers).",
       "aliases": ["budget fixed or trainable", "trainable budget"],
       "status": "provisionally-resolved",
-      "workingAnswer": "Trainable. Education, vocabulary, and accumulated engagement expand the budget. Want is the prime mover of the feedback loop.",
-      "flaggedIn": ["outline"],
-      "blocksChapters": ["human-time-budget", "preservation-vs-training"]
+      "workingAnswer": "Trainable. Education, vocabulary, and accumulated engagement expand the budget. Want is the prime mover of the feedback loop. Operationalized in preservation-vs-training.md as the training function — re-installing the decoding key in receivers — which together with preservation forms the institutional pump the integration project needs.",
+      "flaggedIn": ["outline", "preservation-vs-training"],
+      "blocksChapters": ["human-time-budget"]
     },
     {
       "id": "transferable-vs-specialized",

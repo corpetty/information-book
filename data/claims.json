@@ -363,7 +363,7 @@
       "summary": "The myth-dilution loop has no fixed destiny. Whether it compounds (safe scale), fragments (a too-weak bureaucracy), or inverts into scale-as-control (a captured-but-effective bureaucracy) is set by the repairing bureaucracy's own resistance to manipulation and capture. A good institution is not one that cannot be captured but one where capture cannot quietly hold.",
       "aliases": ["loop outcome set by capture resistance", "what decides the dilution loop", "capture-resistance decides the loop"],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy"],
+      "argues": ["myths-scale-and-bureaucracy", "preservation-vs-training"],
       "arguedInChapters": ["preservation-vs-training", "political-economy-of-attention"],
       "dependsOn": ["claim:bureaucracy-downstream-of-myth"],
       "harvestedFrom": [
@@ -371,6 +371,11 @@
           "note": "myths-scale-and-bureaucracy",
           "lineApprox": 61,
           "text": "A good institution is not one that cannot be captured; it is one where capture cannot quietly hold."
+        },
+        {
+          "note": "preservation-vs-training",
+          "lineApprox": 63,
+          "text": "The two halves of the pair are asymmetric under capture: captured training does more damage than captured preservation"
         }
       ]
     },

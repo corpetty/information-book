@@ -100,10 +100,26 @@
     {
       "id": "preservation-vs-training-pair",
       "label": "Preservation vs. training (paired institutional functions)",
-      "summary": "What 'bureaucracy' was bundling: preservation keeps the complex form alive somewhere; training expands receiver budgets so people can engage with it. Different infrastructure for each.",
-      "aliases": ["preservation vs training", "bureaucracy bundling", "institutional functions"],
-      "definedIn": ["outline"],
-      "coveredBy": ["preservation-vs-training", "infrastructure-for-integration"]
+      "summary": "What 'bureaucracy' was bundling: preservation keeps the un-compressed form alive somewhere; training re-installs the capacity to decode at that resolution in receivers. Each can be done by many institutional forms (monasteries, journals, universities, common-law courts, version-controlled specs) and each fails differently when starved, captured, or displaced. The pair acts as a pump — preservation holds pressure, training releases it into the network — so either alone fails the integration project.",
+      "aliases": ["preservation vs training", "bureaucracy bundling", "institutional functions", "preservation and training", "preservation-training pump"],
+      "definedIn": ["preservation-vs-training"],
+      "coveredBy": ["preservation-vs-training", "infrastructure-for-integration", "political-economy-of-attention"]
+    },
+    {
+      "id": "capture-asymmetry",
+      "label": "Capture asymmetry (training vs. preservation)",
+      "summary": "Under institutional capture, the training half does more damage and recovers more slowly than the preservation half. A captured preservation institution holds a tuned version of the complex form — in principle re-discoverable from external evidence and alternative archives. A captured training institution tunes the receivers themselves, and trained perceptual machinery cannot be easily un-trained: subsequent un-captured preservation has to work against a re-tuned readership that decodes incoming evidence through the installed key. The asymmetry decides which half a network has to defend first when the institution is under pressure.",
+      "aliases": ["capture asymmetry", "training capture vs preservation capture", "asymmetric recovery from capture"],
+      "definedIn": ["preservation-vs-training"],
+      "coveredBy": ["preservation-vs-training", "political-economy-of-attention", "ai-as-new-node"]
+    },
+    {
+      "id": "institutional-decay-rates",
+      "label": "Differential decay rates (preservation vs. training)",
+      "summary": "Preservation institutions degrade slowly — archives and journals can run on inertia for decades with the loss mostly invisible until someone tries to use the form. Training institutions degrade within a generation — every cohort needs to be carried fresh, and once the producers of versatile experts stop producing, supply runs out within twenty or thirty years. Together with the capture asymmetry, this makes training the more time-sensitive function to defend even though preservation is what the institution rhetorically advertises.",
+      "aliases": ["decay rates", "differential decay", "preservation vs training timescale", "cohort decay"],
+      "definedIn": ["preservation-vs-training"],
+      "coveredBy": ["preservation-vs-training", "political-economy-of-attention"]
     },
     {
       "id": "memetic-fitness",
