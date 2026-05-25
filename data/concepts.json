@@ -44,10 +44,10 @@
     {
       "id": "three-realities",
       "label": "Three realities (Harari)",
-      "summary": "Objective / subjective / intersubjective. The pipeline operates differently on each. Being explicit about which kind of reality is in transit matters for the rest of the book.",
-      "aliases": ["three realities", "objective subjective intersubjective", "intersubjective reality"],
-      "definedIn": ["outline"],
-      "coveredBy": ["case-studies-and-three-realities", "truth-compression-and-when-each-wins"]
+      "summary": "Objective (independent of observer — atoms, planets, dogs), subjective (in one mind — pains, dreams, qualia), intersubjective (real because enough people agree — currencies, nations, brands, laws, religions). The pipeline operates differently on each: objective claims have a fact-of-the-matter the pipeline either transmits faithfully or distorts (the book's diagnostic vocabulary applies cleanly); subjective claims mostly don't traverse the pipeline; intersubjective realities are partly constituted by the pipeline rather than transmitted through it (so the relevant failure mode is capture of the constitutive process, not truth-loss in transit). Ch 2 makes the distinction explicit to flag where the book's diagnostic vocabulary needs translation between reality types.",
+      "aliases": ["three realities", "objective subjective intersubjective", "intersubjective reality", "Harari three realities"],
+      "definedIn": ["case-studies-and-three-realities"],
+      "coveredBy": ["case-studies-and-three-realities", "truth-compression-and-when-each-wins", "political-economy-of-attention"]
     },
     {
       "id": "bridge-zone",
