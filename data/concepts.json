@@ -4,10 +4,10 @@
     {
       "id": "receiver-budget",
       "label": "Receiver budget",
-      "summary": "A human has finite time, effective mental hours, and capacity to absorb new information. The constraint is real but not fixed — education, vocabulary, and accumulated engagement expand it.",
+      "summary": "A human has finite time, effective mental hours, and capacity to absorb new information. The constraint is real but not fixed — education, vocabulary, and accumulated structure expand the *capacity* of each hour, even if the hours themselves are fixed. Want is the gate that decides what the budget gets spent on, which is what makes the medium-shapes-want loop a receiver-budget mechanism rather than just a content one. Ch 11's decompression-on-demand is the first structural softening of the per-claim cost the book has been able to name, conditional on faithful LLM substrate custody.",
       "aliases": ["receiver budget", "human time budget", "tablespoon of weeks", "effective mental hours"],
       "definedIn": ["info-time-limit"],
-      "coveredBy": ["human-time-budget", "complexity-virality-tradeoff", "preservation-vs-training"]
+      "coveredBy": ["human-time-budget", "complexity-virality-tradeoff", "preservation-vs-training", "ai-as-new-node", "infrastructure-for-integration"]
     },
     {
       "id": "complexity-ceiling",

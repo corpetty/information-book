@@ -60,27 +60,27 @@
       "label": "Power posing — the meme that survived its own corrective",
       "summary": "Carney/Cuddy/Yap 2010 reported that 'high-power' poses raised testosterone, lowered cortisol, and improved risk-task performance. Published in Psychological Science, popularized via Cuddy's 70M-view TED talk and the book Presence. Ranehill et al. 2015 failed to replicate; Carney publicly disavowed the work in 2016. Within the field the original is treated as a canonical replication-crisis case; in popular culture the meme keeps spreading, because the corrective signal has worse curation fitness than the original. Made-to-meme + meme-survived-the-correction is the chapter's prototype case.",
       "illustrates": ["selection"],
-      "illustratesConcepts": ["memetic-fitness", "out-competition-of-carriers"],
-      "illustratesClaims": ["engagement-gates-reward-truth-loss", "selection-is-the-tunable-mechanism"],
-      "appearsIn": ["case-studies-and-three-realities", "bridge-zone-distortion"]
+      "illustratesConcepts": ["memetic-fitness", "out-competition-of-carriers", "receiver-budget"],
+      "illustratesClaims": ["engagement-gates-reward-truth-loss", "selection-is-the-tunable-mechanism", "complexity-virality-inverse"],
+      "appearsIn": ["case-studies-and-three-realities", "bridge-zone-distortion", "complexity-virality-tradeoff", "selection-as-other-engine", "truth-compression-and-when-each-wins", "human-time-budget"]
     },
     {
       "id": "arsenic-life",
       "label": "Arsenic-life (Wolfe-Simon et al. 2010) — died at consensus",
-      "summary": "December 2010 Science paper claiming GFAJ-1 bacteria could substitute arsenic for phosphorus in DNA. NASA press conference; initial curation began. Within hours independent biochemists pointed out methodological problems; within 18 months Science published technical comments and refutation showing the original measurement had been contaminated. Scientific consensus rejected the claim. The meme never propagated past the initial press cycle because the consensus gate caught the variant before curation could compound it. The chapter's worked example of the consensus stage working as designed.",
-      "illustrates": [],
+      "summary": "December 2010 Science paper claiming GFAJ-1 bacteria could substitute arsenic for phosphorus in DNA. NASA press conference; initial curation began. Within hours independent biochemists pointed out methodological problems; within 18 months Science published technical comments and refutation showing the original measurement had been contaminated. Scientific consensus rejected the claim. The meme never propagated past the initial press cycle because the consensus gate caught the variant before curation could compound it. The book's worked example of the consensus stage working as designed.",
+      "illustrates": ["selection"],
       "illustratesConcepts": [],
-      "illustratesClaims": [],
-      "appearsIn": ["case-studies-and-three-realities"]
+      "illustratesClaims": ["two-pipelines-parallel"],
+      "appearsIn": ["case-studies-and-three-realities", "selection-as-other-engine"]
     },
     {
       "id": "stanford-prison-experiment-corrective",
       "label": "Stanford Prison Experiment correctives — died at curation",
-      "summary": "Zimbardo's 1971 SPE ran the pipeline cleanly to meme — textbooks, films, public-intellectual platform. 2018 Ben Blum reporting and Le Texier's 2018/2019 archival work showed Zimbardo coached guards and the famous prisoner breakdown was performed; consensus within social psychology accepted the methodological critique. The corrective passed measurement, analysis, and consensus — and died at curation. Textbooks still teach SPE; pop psychology still cites it; films are not being re-cut. The chapter's worked example of corrective signal failing at curation even when consensus has ratified it.",
+      "summary": "Zimbardo's 1971 SPE ran the pipeline cleanly to meme — textbooks, films, public-intellectual platform. 2018 Ben Blum reporting and Le Texier's 2018/2019 archival work showed Zimbardo coached guards and the famous prisoner breakdown was performed; consensus within social psychology accepted the methodological critique. The corrective passed measurement, analysis, and consensus — and died at curation. Textbooks still teach SPE; pop psychology still cites it; films are not being re-cut. The book's worked example of corrective signal failing at curation even when consensus has ratified it.",
       "illustrates": ["selection"],
-      "illustratesConcepts": ["out-competition-of-carriers", "preservation-vs-training-pair"],
+      "illustratesConcepts": ["out-competition-of-carriers", "preservation-vs-training-pair", "capture-asymmetry"],
       "illustratesClaims": ["engagement-gates-reward-truth-loss"],
-      "appearsIn": ["case-studies-and-three-realities", "preservation-vs-training", "political-economy-of-attention"]
+      "appearsIn": ["case-studies-and-three-realities", "preservation-vs-training", "political-economy-of-attention", "complexity-virality-tradeoff", "selection-as-other-engine"]
     },
     {
       "id": "voyager-golden-record",
