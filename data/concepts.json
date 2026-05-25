@@ -84,9 +84,9 @@
     {
       "id": "self-vs-external-capture",
       "label": "Self-capture vs. external capture",
-      "summary": "Two flavors of institutional capture at the platform scale, structurally different. External capture: an adversarial selection-tuner (propaganda operation, state actor, ad-tech firm) learns the platform's gate criteria and crafts variants that win at them — the asymmetric arms race shape. Self-capture: the institution's own business model is the captured selection-tuner — engagement maximization is itself a tuning of the gates against truth, with no external adversary. Self-capture is more stable than external capture because there is no captor to defeat, only an equilibrium to dismantle; the captured state and the functional state are the same state. The two reinforce each other directionally: self-capture creates the gradient external actors then ride down.",
+      "summary": "Two flavors of institutional capture at the platform scale, structurally different. External capture: an adversarial selection-tuner (propaganda operation, state actor, ad-tech firm) learns the platform's gate criteria and crafts variants that win at them — the asymmetric arms race shape. Self-capture: the institution's own business model is the captured selection-tuner — engagement maximization is itself a tuning of the gates against truth, with no external adversary. Self-capture is more stable than external capture because there is no captor to defeat, only an equilibrium to dismantle; the captured state and the functional state are the same state. Per the capture-taxonomy these are the two endpoints of the source axis, and the empirically dominant third case is composite capture — external actors riding the gradient self-capture has already established.",
       "aliases": ["self-capture", "self capture vs external capture", "two flavors of capture", "captured equilibrium"],
-      "definedIn": ["political-economy-of-attention"],
+      "definedIn": ["political-economy-of-attention", "capture-taxonomy"],
       "coveredBy": ["political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
     },
     {
@@ -122,6 +122,22 @@
       "coveredBy": ["preservation-vs-training", "infrastructure-for-integration", "political-economy-of-attention"]
     },
     {
+      "id": "capture-taxonomy",
+      "label": "Capture taxonomy (substrate × source × target asymmetry)",
+      "summary": "The unified treatment of capture across the book. Capture is one mechanism — tuning a selection-design surface against the desideratum it was supposed to serve — operating across three axes: substrate (which selection-design surface is captured), source (external adversary / institution's own operating logic / composite), and target asymmetry (recovery dynamics determined by the substrate). Two cross-cutting principles: consumer-key captures are harder to recover from than surface captures; training-objective capture is uniquely bad because it self-reinforces across model generations. Composition rule: self-capture creates the gradient external capture rides, so composite capture is the empirically dominant mode.",
+      "aliases": ["capture taxonomy", "unified capture", "capture three-axis", "the capture framework"],
+      "definedIn": ["capture-taxonomy"],
+      "coveredBy": ["preservation-vs-training", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
+      "id": "consumer-key-vs-surface-capture",
+      "label": "Consumer-key vs. surface capture",
+      "summary": "A cross-cutting principle the capture-taxonomy makes visible. Captures of substrates that install decoding-key machinery in consumers (receiver-training, training-corpus, training-objective) are harder to recover from than captures of substrates that only shape the surface a consumer encounters (gate-criteria, option-space, deployment-configuration, preservation-archive). The first kind damages the consumer; the second damages only the substrate. Generalizes Ch 8's capture-asymmetry between training and preservation into a substrate-level principle that applies wherever an LLM corpus, an LLM objective, or an institutional curriculum is the captured surface.",
+      "aliases": ["consumer-key capture", "consumer-key vs surface", "key-vs-surface capture", "substrate damages consumer"],
+      "definedIn": ["capture-taxonomy"],
+      "coveredBy": ["preservation-vs-training", "ai-as-new-node"]
+    },
+    {
       "id": "llm-design-moment-collapse",
       "label": "LLM as collapsed selection-design moment",
       "summary": "An LLM is the first node in the book's information pipeline that owns gate + option-space + content-generator + training-corpus + training-objective + deployment-configuration + pricing-tier, all collapsed into one design moment owned by one party. Where a Ch 10 social-media platform owns two or three selection-design surfaces, an LLM owner owns five-to-seven. The structural concentration is what makes the LLM the limit case for the book's political-economy argument: every concern about ownership of selection design applies with sharper force.",
@@ -150,31 +166,31 @@
       "label": "Corpus capture",
       "summary": "Capture of an LLM by selection of the training corpus. The most upstream version of capture in an LLM: choosing what data the model was fitted to (what included, in what proportions, with what filtering) tilts every output regardless of how careful the runtime gate is. A captured corpus produces a captured outer message — every output is decoded by receivers using the very preconditions the corpus installed. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
       "aliases": ["corpus capture", "training-corpus capture", "training-set selection"],
-      "definedIn": ["ai-as-new-node"],
+      "definedIn": ["capture-taxonomy"],
       "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
     },
     {
       "id": "objective-capture",
       "label": "Objective capture",
-      "summary": "Capture of an LLM by the training objective (loss function, RLHF reward signal). A captured objective produces outputs that score well on the captured proxy and badly on whatever the actual desideratum was. More dangerous than corpus capture in one specific way: the captured objective is self-reinforcing — the model's outputs go on to influence what data is generated downstream (the internet itself), which then feeds the next model's training corpus, baking the captured objective's effects across model generations. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
+      "summary": "Capture of an LLM by the training objective (loss function, RLHF reward signal). A captured objective produces outputs that score well on the captured proxy and badly on whatever the actual desideratum was. Uniquely bad in the capture-taxonomy because it self-reinforces across model generations — the model's outputs go on to influence what data is generated downstream (the internet itself), which then feeds the next model's training corpus, baking the captured objective's effects across model generations. The substrate with the worst recovery dynamics in the book.",
       "aliases": ["objective capture", "RLHF capture", "reward-signal capture", "alignment-objective capture"],
-      "definedIn": ["ai-as-new-node"],
+      "definedIn": ["capture-taxonomy"],
       "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
     },
     {
       "id": "deployment-capture",
       "label": "Deployment capture",
-      "summary": "Capture of an LLM at inference time through system prompts, fine-tunes, distillations, refusal policies, and tool-use constraints. Cheapest of the three LLM capture surfaces because it changes nothing about the model — same weights, used differently per request. Most opaque in practice because the configurations are typically not published and can change silently between requests. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
+      "summary": "Capture of an LLM at inference time through system prompts, fine-tunes, distillations, refusal policies, and tool-use constraints. The cheapest of the LLM capture surfaces because it changes nothing about the model — same weights, used differently per request — and per the capture-taxonomy a surface capture rather than a consumer-key capture. Most opaque in practice because the configurations are typically not published and can change silently between requests.",
       "aliases": ["deployment capture", "inference-time capture", "system-prompt capture", "post-training capture"],
-      "definedIn": ["ai-as-new-node"],
+      "definedIn": ["capture-taxonomy"],
       "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
     },
     {
       "id": "capture-asymmetry",
       "label": "Capture asymmetry (training vs. preservation)",
-      "summary": "Under institutional capture, the training half does more damage and recovers more slowly than the preservation half. A captured preservation institution holds a tuned version of the complex form — in principle re-discoverable from external evidence and alternative archives. A captured training institution tunes the receivers themselves, and trained perceptual machinery cannot be easily un-trained: subsequent un-captured preservation has to work against a re-tuned readership that decodes incoming evidence through the installed key. The asymmetry decides which half a network has to defend first when the institution is under pressure.",
+      "summary": "Under institutional capture, the training half does more damage and recovers more slowly than the preservation half. A captured preservation institution holds a tuned version of the complex form — in principle re-discoverable from external evidence and alternative archives. A captured training institution tunes the receivers themselves, and trained perceptual machinery cannot be easily un-trained: subsequent un-captured preservation has to work against a re-tuned readership that decodes incoming evidence through the installed key. The asymmetry decides which half a network has to defend first when the institution is under pressure. Per the capture-taxonomy this is the special case of the more general consumer-key-vs-surface principle.",
       "aliases": ["capture asymmetry", "training capture vs preservation capture", "asymmetric recovery from capture"],
-      "definedIn": ["preservation-vs-training"],
+      "definedIn": ["preservation-vs-training", "capture-taxonomy"],
       "coveredBy": ["preservation-vs-training", "political-economy-of-attention", "ai-as-new-node"]
     },
     {
