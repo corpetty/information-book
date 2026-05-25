@@ -44,6 +44,8 @@ Plain-language definitions of the load-bearing terms used across the book and it
 
 **Myth dilution.** The loop by which a network's binding myth loses determinacy as the network grows: scale forces the myth to compress, compression widens its interpretive latitude, latitude sorts the network into segments that affirm the same myth while decoding it differently. See [[myths-scale-and-bureaucracy]].
 
+**Bureaucracy (in this book's sense).** Used narrowly throughout the book — by stipulation, not by argument — to mean the institutional repair a scaled network grows to re-supply the decoding key the myth dropped: the *preservation* function (keeping the un-compressed form alive somewhere) plus the *training* function (re-installing the decoding key in receivers). Real-world bureaucracies do more (coerce, tax, allocate, record); the book holds those out of scope to keep the preserve-and-retrain mechanism in focus. The honest alternative would be to call the narrow function *institutional carriers* throughout, but the book inherited the term from Harari's [[nexus-book|Nexus]] and has kept it for continuity. See [[myths-scale-and-bureaucracy]] for the mechanism and [[preservation-vs-training|Chapter 8]] for the two-function split.
+
 **Network segmentation.** The fracturing of a network into sub-groups along the seams of its myth's interpretive latitude. The result of myth dilution: the network is superficially unified and structurally fragmented at once.
 
 **Echo chambers vs. bubbles** (C. Thi Nguyen). Bubbles are missing-information structures; echo chambers actively discredit outside information. Small networks tend toward chambers, not bubbles, which changes what "infrastructure for integration" has to do.
