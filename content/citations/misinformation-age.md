@@ -18,6 +18,7 @@ Formal network models of belief propagation. What kills truth in networks: selec
 
 ## Where this is cited in the book
 
+- [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]]
 - [[bridge-nodes-and-versatile-expertise|Bridge Nodes and Versatile Expertise]] *(foundational-note)*
 - [[integration-problem|Ch 9 — The Integration Problem]]
 - [[outline|Information Book — Outline]] *(outline)*

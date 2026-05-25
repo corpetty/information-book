@@ -122,6 +122,54 @@
       "coveredBy": ["preservation-vs-training", "infrastructure-for-integration", "political-economy-of-attention"]
     },
     {
+      "id": "llm-design-moment-collapse",
+      "label": "LLM as collapsed selection-design moment",
+      "summary": "An LLM is the first node in the book's information pipeline that owns gate + option-space + content-generator + training-corpus + training-objective + deployment-configuration + pricing-tier, all collapsed into one design moment owned by one party. Where a Ch 10 social-media platform owns two or three selection-design surfaces, an LLM owner owns five-to-seven. The structural concentration is what makes the LLM the limit case for the book's political-economy argument: every concern about ownership of selection design applies with sharper force.",
+      "aliases": ["LLM collapsed design moment", "concentrated selection-design surface", "LLM as new kind of node", "five-surface concentration"],
+      "definedIn": ["ai-as-new-node"],
+      "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
+      "id": "decompression-on-demand",
+      "label": "Decompression on demand",
+      "summary": "An LLM, used as a faithful expansion service, can take a compressed claim or a complex source and re-expand it into a form pre-loaded with the preconditions a receiver needs to decode it. This is the first structural way out of the fixed receiver-budget constraint the book has named: the receiver's budget has not changed, but the amount of complex form they can engage per unit of budget has gone up, because the LLM is paying the decompression cost. Conditional on faithfulness — a hallucinating LLM supplies plausible-but-wrong outer messages, which is worse than no outer message at all.",
+      "aliases": ["decompression on demand", "LLM as decompression service", "receiver-budget shortcut"],
+      "definedIn": ["ai-as-new-node"],
+      "coveredBy": ["ai-as-new-node", "preservation-vs-training", "infrastructure-for-integration"]
+    },
+    {
+      "id": "compressed-form-as-authority",
+      "label": "Compressed form becoming authoritative",
+      "summary": "The inverse failure mode of decompression-on-demand: at scale, the LLM-compressed summary of a source substitutes for the source itself in the network's working memory, with the LLM's authority backing the compressed version. The original is technically still there; nobody reads it. The summary is technically not the original; everybody reads it. Compression becomes substitution rather than abstraction — the receiver does not in practice go back and check, because the compressed form arrived with epistemic credentials no prior compression had.",
+      "aliases": ["compressed-form-as-authority", "LLM compression as substitution", "authoritative compression"],
+      "definedIn": ["ai-as-new-node"],
+      "coveredBy": ["ai-as-new-node", "truth-compression-and-when-each-wins"]
+    },
+    {
+      "id": "corpus-capture",
+      "label": "Corpus capture",
+      "summary": "Capture of an LLM by selection of the training corpus. The most upstream version of capture in an LLM: choosing what data the model was fitted to (what included, in what proportions, with what filtering) tilts every output regardless of how careful the runtime gate is. A captured corpus produces a captured outer message — every output is decoded by receivers using the very preconditions the corpus installed. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
+      "aliases": ["corpus capture", "training-corpus capture", "training-set selection"],
+      "definedIn": ["ai-as-new-node"],
+      "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
+      "id": "objective-capture",
+      "label": "Objective capture",
+      "summary": "Capture of an LLM by the training objective (loss function, RLHF reward signal). A captured objective produces outputs that score well on the captured proxy and badly on whatever the actual desideratum was. More dangerous than corpus capture in one specific way: the captured objective is self-reinforcing — the model's outputs go on to influence what data is generated downstream (the internet itself), which then feeds the next model's training corpus, baking the captured objective's effects across model generations. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
+      "aliases": ["objective capture", "RLHF capture", "reward-signal capture", "alignment-objective capture"],
+      "definedIn": ["ai-as-new-node"],
+      "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
+      "id": "deployment-capture",
+      "label": "Deployment capture",
+      "summary": "Capture of an LLM at inference time through system prompts, fine-tunes, distillations, refusal policies, and tool-use constraints. Cheapest of the three LLM capture surfaces because it changes nothing about the model — same weights, used differently per request. Most opaque in practice because the configurations are typically not published and can change silently between requests. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
+      "aliases": ["deployment capture", "inference-time capture", "system-prompt capture", "post-training capture"],
+      "definedIn": ["ai-as-new-node"],
+      "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
+    },
+    {
       "id": "capture-asymmetry",
       "label": "Capture asymmetry (training vs. preservation)",
       "summary": "Under institutional capture, the training half does more damage and recovers more slowly than the preservation half. A captured preservation institution holds a tuned version of the complex form — in principle re-discoverable from external evidence and alternative archives. A captured training institution tunes the receivers themselves, and trained perceptual machinery cannot be easily un-trained: subsequent un-captured preservation has to work against a re-tuned readership that decodes incoming evidence through the installed key. The asymmetry decides which half a network has to defend first when the institution is under pressure.",

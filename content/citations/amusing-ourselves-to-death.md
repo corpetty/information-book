@@ -17,5 +17,6 @@ Argues that television as a medium degraded public discourse. The 'medium shapes
 
 ## Where this is cited in the book
 
+- [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]]
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 

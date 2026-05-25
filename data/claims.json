@@ -98,8 +98,8 @@
       "summary": "Every node and every arrow in the two-pipeline picture has a medium attached. The selection criteria at each gate are downstream of what that medium can hold and what it rewards. Changing the medium changes the criteria — the pipeline operates inside a specific media ecosystem.",
       "aliases": ["medium attached to every gate", "medium shapes gate criteria", "the medium is the selection criteria"],
       "status": "load-bearing",
-      "argues": ["the-information-landscape", "medium-and-manipulation", "political-economy-of-attention"],
-      "arguedInChapters": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention"],
+      "argues": ["the-information-landscape", "medium-and-manipulation", "political-economy-of-attention", "ai-as-new-node"],
+      "arguedInChapters": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention", "ai-as-new-node"],
       "dependsOn": ["question:medium-and-manipulation"],
       "harvestedFrom": [
         {
@@ -278,8 +278,8 @@
       "summary": "The book's breakage claim, now following from the structure: the failure is not that information gets compressed but that the dominant medium's gates systematically reward the compressions in which truth inverts or stops mattering over the ones in which it survives — because alarm out-competes calibration and a flag out-competes a claim at an engagement-tuned gate. This closes the moral-neutrality gap.",
       "aliases": ["engagement gates reward truth loss", "the breakage is selection for truth-losing compression", "moral-neutrality gap closed"],
       "status": "working",
-      "argues": ["truth-compression-and-when-each-wins", "political-economy-of-attention"],
-      "arguedInChapters": ["truth-compression-and-when-each-wins", "political-economy-of-attention"],
+      "argues": ["truth-compression-and-when-each-wins", "political-economy-of-attention", "ai-as-new-node"],
+      "arguedInChapters": ["truth-compression-and-when-each-wins", "political-economy-of-attention", "ai-as-new-node"],
       "dependsOn": ["claim:selection-picks-the-regime", "claim:truth-survival-two-conditions"],
       "harvestedFrom": [
         {
@@ -363,8 +363,8 @@
       "summary": "The myth-dilution loop has no fixed destiny. Whether it compounds (safe scale), fragments (a too-weak bureaucracy), or inverts into scale-as-control (a captured-but-effective bureaucracy) is set by the repairing bureaucracy's own resistance to manipulation and capture. A good institution is not one that cannot be captured but one where capture cannot quietly hold.",
       "aliases": ["loop outcome set by capture resistance", "what decides the dilution loop", "capture-resistance decides the loop"],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy", "preservation-vs-training", "political-economy-of-attention"],
-      "arguedInChapters": ["preservation-vs-training", "political-economy-of-attention"],
+      "argues": ["myths-scale-and-bureaucracy", "preservation-vs-training", "political-economy-of-attention", "ai-as-new-node"],
+      "arguedInChapters": ["preservation-vs-training", "political-economy-of-attention", "ai-as-new-node"],
       "dependsOn": ["claim:bureaucracy-downstream-of-myth"],
       "harvestedFrom": [
         {
