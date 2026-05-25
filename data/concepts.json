@@ -122,6 +122,46 @@
       "coveredBy": ["preservation-vs-training", "infrastructure-for-integration", "political-economy-of-attention"]
     },
     {
+      "id": "survival-not-victory",
+      "label": "Survival, not victory (integration institutions)",
+      "summary": "The prescriptive reframe at the heart of Ch 12. Institutions that succeed at the integration project are institutions that survive being out-competed for attention and still deliver preserve-and-retrain — they do not need to displace the captured equilibrium, they need to operate alongside it without being eroded by it. Survival-design and victory-design produce different institutions: victory-design tries to clear the attention market by being more engaging (and gets captured by the market's selection pressure); survival-design refuses to compete in the attention market and finds funding outside it. The framing matters because almost every modern attempt at integration infrastructure has been victory-designed and has drifted toward engagement-optimization or starved.",
+      "aliases": ["survival not victory", "survival design", "victory design", "integration as survival problem"],
+      "definedIn": ["infrastructure-for-integration"],
+      "coveredBy": ["infrastructure-for-integration"]
+    },
+    {
+      "id": "funding-decoupling",
+      "label": "Funding decoupling from attention markets",
+      "summary": "The structural counter to Ch 10's out-competition mechanism. Institutional carriers cannot survive if they have to clear a free-engagement market — they have to compete with platforms' zero-marginal-cost attention and lose. The only survivable funding shapes are those whose revenue is not a function of how well the institution clears the attention market: endowments and patient capital, public funding through credibly neutral allocation, member dues and mission-driven subscriptions, public-goods funding mechanisms (retroactive funding, quadratic funding, crypto-economic public-goods primitives). Revenue contracted in a different market than the engagement-optimization noise lets the institution lose the engagement-market clearing entirely without losing capacity to operate. The first of Ch 12's three load-bearing design principles.",
+      "aliases": ["funding decoupling", "decouple from attention markets", "non-attention funding", "patient-capital funding"],
+      "definedIn": ["infrastructure-for-integration"],
+      "coveredBy": ["infrastructure-for-integration", "political-economy-of-attention"]
+    },
+    {
+      "id": "survivable-polarization",
+      "label": "Survivable polarization (design for partial trust)",
+      "summary": "Design principle for integration institutions: build for institutions that work even when trust is partially eroded, not for institutions that require trust to be complete. The polarization-via-distrust trap from Ch 9 means evidence channels get filtered out by communities that distrust the source — so the integration infrastructure has to do its work across trust boundaries that will not be repaired in advance. Properties: decision provenance auditable by skeptics; reputation systems whose underlying signal survives partial distrust in the aggregator; versatile experts inhabiting the institution rather than presiding over it; multiple independent decision pathways for the same question (route around capture, get Zollman-effect accuracy benefits as a bonus). Wikipedia's edit history, common-law jurisdictional variation, replicated lab results are existing partial implementations.",
+      "aliases": ["survivable polarization", "design for partial trust", "trust-resilient design", "skeptic-auditable governance"],
+      "definedIn": ["infrastructure-for-integration"],
+      "coveredBy": ["infrastructure-for-integration", "integration-problem"]
+    },
+    {
+      "id": "llm-as-capability-extender",
+      "label": "LLM as capability extender (inside substrate custody)",
+      "summary": "The Ch 11 salvation case, structurally specified by Ch 12. Faithful LLMs running with institution-owned substrates — corpus, objective, deployment all governed by the institution rather than by a commercial vendor — function as a capability extender for preserve-and-retrain: decompression-on-demand against the institution's preservation archive for trainees, Socratic instruction at scale, drafting and synthesis that versatile experts then verify. Not a replacement for institutional experts but a tool that makes their work go faster and reach more receivers. Requires open weights, transparent corpus custody, credibly neutral objective specification, and institution-controlled deployment — none of which is the default in the commercial LLM landscape. The integration-friendly LLM configuration is technically realizable, economically marginal, and politically blocked by the same forces that captured the social-media equilibrium.",
+      "aliases": ["LLM as capability extender", "institution-owned LLM", "LLM inside substrate custody", "open-corpus LLM"],
+      "definedIn": ["infrastructure-for-integration"],
+      "coveredBy": ["infrastructure-for-integration", "ai-as-new-node"]
+    },
+    {
+      "id": "work-of-generations",
+      "label": "Work of generations (institutional timescale)",
+      "summary": "The closing reframe of Ch 12. Institutions of integration are civilization-scale investments on the timescale of universities, journals, common-law systems, and open-source ecosystems — built and drifted on generational timescales, not platform-launch timescales. The captured equilibrium of the platform business model built itself in two decades; the integration institutions that hold against it will need at least that long to be built, and will need to be funded and staffed and politically protected through the building. The prescription is not a recipe for next quarter — it is a brief for the civilization-scale investment that built the institutions the modern environment has been disinvesting from. Makes the timescale of the prescriptive arc explicit so that institution-builders entering the work know what shape it has to take.",
+      "aliases": ["work of generations", "generational timescale", "civilization-scale investment", "the long building"],
+      "definedIn": ["infrastructure-for-integration"],
+      "coveredBy": ["infrastructure-for-integration"]
+    },
+    {
       "id": "capture-taxonomy",
       "label": "Capture taxonomy (substrate × source × target asymmetry)",
       "summary": "The unified treatment of capture across the book. Capture is one mechanism — tuning a selection-design surface against the desideratum it was supposed to serve — operating across three axes: substrate (which selection-design surface is captured), source (external adversary / institution's own operating logic / composite), and target asymmetry (recovery dynamics determined by the substrate). Two cross-cutting principles: consumer-key captures are harder to recover from than surface captures; training-objective capture is uniquely bad because it self-reinforces across model generations. Composition rule: self-capture creates the gradient external capture rides, so composite capture is the empirically dominant mode.",
