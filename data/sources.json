@@ -12,7 +12,8 @@
     { "id": "susan-blackmore",    "label": "Susan Blackmore",    "summary": "Developed memetics as a research program." },
     { "id": "yuval-noah-harari",  "label": "Yuval Noah Harari",  "summary": "Author of Nexus; framing on myths/bureaucracy and three realities." },
     { "id": "tim-urban",          "label": "Tim Urban",          "summary": "Wait But Why author. The tablespoon-of-weeks visualization." },
-    { "id": "douglas-hofstadter",   "label": "Douglas Hofstadter",   "summary": "Cognitive scientist; author of Gödel, Escher, Bach. Originated the frame/outer/inner three-layer message model." }
+    { "id": "douglas-hofstadter",   "label": "Douglas Hofstadter",   "summary": "Cognitive scientist; author of Gödel, Escher, Bach. Originated the frame/outer/inner three-layer message model." },
+    { "id": "leo-xiv",             "label": "Pope Leo XIV",         "summary": "Roman Catholic Pope (elected 2025); author of the 2026 encyclical Magnifica Humanitas on AI, technology, and the common good." }
   ],
   "sources": [
     {
@@ -206,6 +207,17 @@
       "engagement": "source of the three-layer message model the book adapts",
       "availability": "external",
       "tags": ["model-origin", "prior-art"]
+    },
+    {
+      "id": "magnifica-humanitas",
+      "label": "Magnifica Humanitas (Encyclical of Pope Leo XIV)",
+      "kind": "encyclical",
+      "author": "leo-xiv",
+      "tradition": "catholic-social-teaching",
+      "summary": "May 2026 papal encyclical on artificial intelligence, technology, and the common good. Frames the choice as Babel (centralized, efficient, fragmenting) vs. Jerusalem (plural voices coordinated through shared responsibility). Distinguishes formal institutional power (state) from de facto power (tech/finance actors whose authority now exceeds many governments). Names the 'tecnocratic paradigm' as the ideology treating nature and humans as objects to dominate, and 'structures of sin' as institutionally-embedded systematic injustice. Calls for synodality (deliberative process across expertise domains) and an educational alliance for the digital age as counterforces.",
+      "engagement": "contemporary intervention on the book's themes; structurally aligned diagnosis with morally-philosophically grounded prescription; pressure-tests the book's prescriptive side on the polarization-via-distrust trap",
+      "availability": "external",
+      "tags": ["prior-art"]
     },
     {
       "id": "ethical-infrastructure-talk",

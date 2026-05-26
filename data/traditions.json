@@ -30,6 +30,11 @@
       "id": "information-theory",
       "label": "Information theory and the location of meaning",
       "summary": "The formal study of encoding, transmission, and decoding — and the question of where meaning lives: in the message, or supplied by the decoder. Shannon's channel model and its philosophical extension in Hofstadter's work."
+    },
+    {
+      "id": "catholic-social-teaching",
+      "label": "Catholic social teaching",
+      "summary": "The Catholic Church's body of teaching on social, economic, and political questions — institutional ethics applied to contemporary structural problems. Recent documents (Laudato Si', Fratelli Tutti, Magnifica Humanitas) engage technology, ecology, and the political economy of digital systems from a moral-realist framework that the book engages as contemporary intervention rather than settled prior art."
     }
   ]
 }

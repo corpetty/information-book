@@ -166,6 +166,7 @@ Not just citations. These authors have already worked through specific gaps in t
 - **Marshall McLuhan, *Understanding Media*.** The medium-as-message claim is in the bloodstream of any book on this topic. Worth engaging explicitly.
 - **Richard Dawkins / Susan Blackmore on memetics.** The selection-side view already has a literature. Use it.
 - **Yuval Noah Harari, *Nexus*.** Already in play via [[nexus-book]]. Myths/bureaucracy framing, truth/order axis, naive view of information.
+- **Pope Leo XIV, *[[magnifica-humanitas|Magnifica Humanitas]]* (May 2026).** Contemporary intervention rather than settled prior art. Frames the AI/technology question as Babel (centralized/fragmenting) vs. Jerusalem (plural voices coordinated through shared responsibility); names *de facto* power (tech firms' authority displacing formal-state authority), the *tecnocratic paradigm* (ideology treating nature and humans as objects), and *structures of sin* (institutionally-embedded systematic injustice). Calls for educational alliance and synodality (deliberative methodology across expertise domains) as counterforces. Engaged at length in [[ai-as-new-node|Ch 11]] with cross-references in Ch 8 (educational alliance), Ch 9 (synodality + trust-bootstrap pressure-test), Ch 10 (de facto power vocabulary).
 
 ## What to write next
 
