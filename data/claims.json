@@ -156,6 +156,7 @@
     },
     {
       "id": "optionality-cost-of-generality",
+      "evidencedBy": ["democratization-paradox"],
       "label": "Cost of generality is accessibility, and vice versa",
       "summary": "Optionality and accessibility trade off: the more options a thing has, the harder it is to access. The cost of generality is accessibility; the cost of accessibility is generality. Same curve appears in software libraries, religions, political platforms, scientific popularization, legal codes.",
       "aliases": ["optionality vs access", "cost of generality", "accessibility trade-off"],
@@ -224,6 +225,7 @@
     },
     {
       "id": "compression-strips-the-key",
+      "evidencedBy": ["godel-escher-bach"],
       "label": "Compression strips the decoding key, not truth itself",
       "summary": "Compression does not act on a claim's truth value directly. It strips the outer message — the decoding key — and leaves the bare claim intact, so whether truth survives depends entirely on which key the receiver decodes with instead.",
       "aliases": ["compression strips the key", "compression doesn't degrade truth directly"],
@@ -309,6 +311,7 @@
     },
     {
       "id": "myth-reach-determinacy-tradeoff",
+      "evidencedBy": ["nexus"],
       "label": "A myth's reach and its determinacy trade off",
       "summary": "A myth simple enough to bind a whole network is necessarily one the network can read many different ways. Reach and determinacy trade off — the same curve as reach-vs-complexity and reach-vs-truth, here as reach-vs-shared-meaning.",
       "aliases": ["myth reach-determinacy tradeoff", "reach vs shared meaning", "reach determinacy trade-off"],
@@ -326,6 +329,7 @@
     },
     {
       "id": "unify-and-fragment-same-fact",
+      "evidencedBy": ["nexus"],
       "label": "A myth's unity and its fragmentation are one fact",
       "summary": "A large network's unifying myth and its latent fragmentation are the same fact seen from two sides: the myth can be universally affirmed precisely because it is vague enough that each segment affirms a different myth. Network segmentation is interpretive latitude sorted into clusters.",
       "aliases": ["unify and fragment same fact", "myth unity is fragmentation", "segmentation from latitude"],
@@ -387,6 +391,7 @@
     },
     {
       "id": "bridge-node-is-versatile-specialist",
+      "evidencedBy": ["double-edged-sword-of-expertise"],
       "label": "A bridge node is a deep specialist with metacognitive flexibility, not a generalist",
       "summary": "Bridge nodes between specialist communities that don't share preconditions are not generalists carrying field-general capacities. They are deep specialists who have paired their depth with metacognitive flexibility — what the double-edged-sword post calls versatile expertise. Depth is what gets the bridge admitted as a peer on either side; flexibility (structural-analogy habits, paradigm suspension, intellectual humility) is what lets the bridge translate the cross. Refines the outline's 'transferable preconditions' answer into the paired-skill form.",
       "aliases": ["bridge node is versatile specialist", "versatile expert is the bridge", "bridge node refined"],
@@ -405,6 +410,7 @@
     },
     {
       "id": "curse-substrates-polarization",
+      "evidencedBy": ["double-edged-sword-of-expertise", "misinformation-age"],
       "label": "The curse of expertise is the cognitive substrate of polarization-via-distrust",
       "summary": "The four cognitive failure modes named by 'the curse of expertise' (paradigm lock-in, overconfidence in cross-application, perceptual filtering, conceptual rigidity) are not separate ways expertise fails — they are the inside-the-head description of what happens when a rational agent discounts evidence from outside their paradigm. O'Connor and Weatherall's polarization-via-distrust is the network-level shape of the same mechanism. The agent and the network are not two phenomena; they are the same loop described from two sides, which means the cognitive flexibility that defeats the curse is also what disarms the polarization trap.",
       "aliases": ["curse substrates polarization", "expertise blindness equals polarization", "cognitive substrate of polarization"],

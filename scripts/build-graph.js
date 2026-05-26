@@ -489,6 +489,10 @@ function loadClaims() {
     for (const slug of c.supersedes || []) {
       addEdge(`claim:${c.id}`, `claim:${slug}`, 'supersedes');
     }
+    for (const slug of c.evidencedBy || []) {
+      const target = slug.includes(':') ? slug : `source:${slug}`;
+      addEdge(`claim:${c.id}`, target, 'evidencedBy');
+    }
   }
 }
 
