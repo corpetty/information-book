@@ -20,11 +20,11 @@ Tim Urban wrote a great [article](https://waitbutwhy.com/2014/05/life-weeks.html
 
 That's it, you get a tablespoon of diamonds to spend for your whole life, and a good portion of those you are not in a physical condition to coherently spend them, so it's actually less.
 
-The purpose of the above mentioned article is to elucidate how precious each week of your life is in order to motivate you to use them more wisely. While this is a wonderful goal and always something someone should consider, it is not he purpose of this writing.
+The purpose of the above mentioned article is to elucidate how precious each week of your life is in order to motivate you to use them more wisely. While this is a wonderful goal and always something someone should consider, it is not the purpose of this writing.
 
 The main point here (for this section at least) is to show that there is a small window of time that a human even has the capability of taking in information from the world around them, analyzing it, and then forming and altering a worldview from it. If we are to then think about the amount of time one has to broadcast that worldview in a way that alter's another (writing, speech, mentoring, art, etc), then that timeline is even more reduced.
 
-This analysis can continue to go even further to discuss the available waking hours in a given day, and then further to discuss the available "effective mental hours" a human has to process complex information and incorporate it, and then even further to discuss the amount of repetition that is needed in order for a given amount of information to be retained in memory. There is certainly a evidence based, scientific argument for all of this, but it suffices to say that we all have experienced it in our lives personally. That's good enough. 
+This analysis can continue to go even further to discuss the available waking hours in a given day, and then further to discuss the available "effective mental hours" a human has to process complex information and incorporate it, and then even further to discuss the amount of repetition that is needed in order for a given amount of information to be retained in memory. There is certainly an evidence based, scientific argument for all of this, but it suffices to say that we all have experienced it in our lives personally. That's good enough. 
 
 ## How much information can we take in?
 
@@ -52,7 +52,7 @@ This is the place [[transport-vs-selection|the want-as-prime-mover]] claim lands
 
 ## A structural shortcut: decompression on demand
 
-The receiver-budget constraint has, until very recently, been a hard one. Every approach to the integration problem has had to operate inside it: training expands the budget's *capacity* but not its hours; popularization reduces the *cost* of an idea by stripping its complex form but at the price of losing fidelity; institutional carriers do both at a cost that scales linearly with the number of trainees.
+The receiver-budget constraint has, until very recently, been a hard one. Every approach to the integration problem has had to operate inside it: training expands the budget's *capacity* but not its hours; popularization reduces the *cost* of an idea by stripping its complex form but at the price of losing fidelity (_e.g._ Gladwell's 10,000 hours for an expert concept); institutional carriers do both at a cost that scales linearly with the number of trainees.
 
 [[ai-as-new-node|Chapter 11]] introduces the first structural way around this. A faithful LLM, used as a decompression service, can re-expand a compressed claim into a form pre-loaded with the preconditions a receiver needs to decode it. The receiver's budget has not changed — they still have the same five hours of focused absorption per day — but the *amount of complex form they can engage per unit of budget* has gone up, because the LLM is paying the decompression cost the receiver could not pay themselves. The same paper that would have required the receiver to build new structure first is now arriving with that structure already loaded into the explanation.
 

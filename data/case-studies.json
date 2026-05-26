@@ -83,6 +83,33 @@
       "appearsIn": ["case-studies-and-three-realities", "preservation-vs-training", "political-economy-of-attention", "complexity-virality-tradeoff", "selection-as-other-engine"]
     },
     {
+      "id": "latin-mass-vs-vernacular",
+      "label": "Latin Mass vs. vernacular liturgy",
+      "summary": "Pre-Vatican-II Catholicism: the Latin Mass is high optionality, low access — ritual carries enormous doctrinal precision encoded across centuries; full participation requires a trained reader of the apparatus. The vernacular reform shifted to high access, lower precision — local-language liturgy that the broader laity can participate in, with many of the Latin form's specific theological commitments either flattened or absent. Optionality-vs-access trade-off in religion; canonical example of religions scaling past their original community by institutionalizing the split between a preservation-side (specialist apparatus) and an access-side (lay participation form).",
+      "illustrates": [],
+      "illustratesConcepts": ["compressed-form", "complex-form", "preservation-vs-training-pair"],
+      "illustratesClaims": ["optionality-cost-of-generality"],
+      "appearsIn": ["optionality-vs-access", "preservation-vs-training"]
+    },
+    {
+      "id": "brief-history-of-time",
+      "label": "A Brief History of Time",
+      "summary": "Hawking's 1988 popularization of general relativity, quantum mechanics, and cosmology — written for readers with no physics background. By acknowledged design every equation past E=mc² was removed; technical apparatus was substituted with analogies; qualifications were compressed into single sentences. Sold over 25 million copies. The original papers Hawking popularized have probably been read in full by under ten thousand people. Optionality-vs-access trade in scientific popularization, with the same shape as software stratification: the popular form gains reach by trading the precision the technical form preserves.",
+      "illustrates": [],
+      "illustratesConcepts": ["compressed-form", "complex-form", "receiver-budget"],
+      "illustratesClaims": ["complexity-virality-inverse", "optionality-cost-of-generality"],
+      "appearsIn": ["optionality-vs-access", "complexity-virality-tradeoff", "bridge-zone-distortion"]
+    },
+    {
+      "id": "plain-language-law",
+      "label": "Statutes vs. plain-language legal summaries",
+      "summary": "A statute drafted by professional legislative counsel encodes precision through scope-defined clauses, defined-term interactions, and 'shall/may/subject to' constructions whose load-bearing work is invisible to non-lawyers. A plain-language summary of the same statute is accessible but wrong about the edge cases the original carefully handled. The legal apparatus is structurally committed to both ends of the curve simultaneously — the statute is preservation, the summary is access — with a professional class (lawyers) doing the per-case translation between them. The cleanest institutional bridge in the book's optionality-vs-access examples, and the one whose access is most explicitly wealth-gated.",
+      "illustrates": [],
+      "illustratesConcepts": ["compressed-form", "complex-form", "preservation-vs-training-pair", "cost-shifting"],
+      "illustratesClaims": ["optionality-cost-of-generality"],
+      "appearsIn": ["optionality-vs-access", "bridge-zone-distortion", "political-economy-of-attention"]
+    },
+    {
       "id": "voyager-golden-record",
       "label": "The Voyager Golden Record",
       "summary": "Hofstadter's canonical illustration of the three-layer message. A record launched into deep space with no shared context to assume: the recorded sounds and images are the inner message, the playback diagrams etched on the cover are the outer message, and the artifact's evident designed-ness is the frame message. The rare case where all three layers had to be shipped together.",
