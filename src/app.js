@@ -42,6 +42,14 @@ const VIEWS = {
     predicates: ['flagsOpenQuestion', 'hasStatus'],
     layout: 'cose',
   },
+  contested: {
+    label: 'What\'s contested',
+    desc: 'Open questions, tensions the book holds with sources, and the frames it has revised. The dialectical layer.',
+    nodeTypes: ['Question', 'Tension', 'Claim', 'Source', 'Concept', 'Mechanism', 'Chapter', 'Note'],
+    predicates: ['flagsOpenQuestion', 'tensionWith', 'contradicts', 'supersedes', 'mentions'],
+    layout: 'cose',
+    connectedOnly: true,
+  },
   drafting: {
     label: 'Drafting status',
     desc: 'Where each chapter sits in the workflow — drafted, in-workshop, skeleton, not yet drafted.',
@@ -187,6 +195,15 @@ function computeVisible(meta, nodes, edges) {
     visibleIds.has(e.source) &&
     visibleIds.has(e.target),
   );
+
+  // Stage 3b (opt-in): some views (e.g. contested) are noisy unless we hide
+  // nodes with no visible edges — keeps the rendering focused on the part of
+  // the graph the predicates filter is actually exposing.
+  if (VIEWS[state.view].connectedOnly) {
+    const connected = new Set();
+    for (const e of visibleEdges) { connected.add(e.source); connected.add(e.target); }
+    visibleNodes = visibleNodes.filter(n => connected.has(n.id));
+  }
 
   // Stage 4: mark search-matched nodes for highlight (vs neighbour-context).
   const matched = q ? new Set(visibleNodes.filter(n => matchesSearch(n, q)).map(n => n.id)) : null;
@@ -532,6 +549,7 @@ function tileSummary(viewKey) {
     argument: ['Chapter', 'Claim', 'Concept'],
     sources: ['Source', 'Claim'],
     questions: ['Question'],
+    contested: ['Tension', 'Question', 'Claim'],
     drafting: ['Chapter', 'Status'],
     full: ['Node', 'Edge'],
   }[viewKey] || [];
@@ -542,6 +560,12 @@ function tileSummary(viewKey) {
     const open = GRAPH.nodes.filter(n => n.type === 'Question' && n.props?.status === 'open').length;
     const resolved = GRAPH.nodes.filter(n => n.type === 'Question' && n.props?.status === 'provisionally-resolved').length;
     return `${GRAPH.statsByType.Question || 0} questions · ${open} still open · ${resolved} provisionally resolved`;
+  }
+  if (viewKey === 'contested') {
+    const tensions = GRAPH.statsByType.Tension || 0;
+    const supersedes = GRAPH.edges.filter(e => e.predicate === 'supersedes').length;
+    const openQ = GRAPH.nodes.filter(n => n.type === 'Question' && n.props?.status === 'open').length;
+    return `${tensions} tensions · ${supersedes} supersessions · ${openQ} still-open question${openQ === 1 ? '' : 's'}`;
   }
   return headlineTypes
     .filter(t => types.has(t))
