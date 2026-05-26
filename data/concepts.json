@@ -62,7 +62,7 @@
       "label": "Echo chambers vs. bubbles (Nguyen)",
       "summary": "Epistemic bubbles are missing-info structures; echo chambers actively discredit outside info. Small networks tend toward chambers, which changes what 'infrastructure for integration' has to do.",
       "aliases": ["echo chambers", "epistemic bubbles", "Nguyen distinction"],
-      "definedIn": ["outline"],
+      "definedIn": ["integration-problem"],
       "coveredBy": ["integration-problem"]
     },
     {
@@ -70,7 +70,7 @@
       "label": "Curation layer",
       "summary": "Infrastructure that decouples access from quality assurance — low barriers to enter, robust mechanisms to surface the best work. Wikipedia's editorial apparatus, Stack Overflow reputation. From the democratization-paradox post.",
       "aliases": ["curation layer", "quality assurance layer", "editorial apparatus"],
-      "definedIn": ["outline"],
+      "definedIn": ["integration-problem", "infrastructure-for-integration"],
       "coveredBy": ["infrastructure-for-integration", "political-economy-of-attention"]
     },
     {
@@ -103,7 +103,7 @@
       "label": "Inverted-U relationship",
       "summary": "Refines the binary 'small vs. large networks' framing: there's an optimum. Small networks have their own internal compression dynamics; very large networks collapse under selection pressure.",
       "aliases": ["inverted U", "network size optimum"],
-      "definedIn": ["outline"],
+      "definedIn": ["integration-problem"],
       "coveredBy": ["integration-problem"]
     },
     {
@@ -111,7 +111,7 @@
       "label": "Creation cheap / review expensive",
       "summary": "When content generation scales faster than curation infrastructure, noise wins regardless of how many gems are in the flood. LLMs accelerate the asymmetry on both sides.",
       "aliases": ["creation cheap review expensive", "creation/review asymmetry"],
-      "definedIn": ["outline"],
+      "definedIn": ["political-economy-of-attention"],
       "coveredBy": ["ai-as-new-node", "political-economy-of-attention"]
     },
     {
@@ -291,7 +291,7 @@
       "label": "Meme ecosystem competition",
       "summary": "Memes don't propagate in isolation — a meme's infection and decay rates are functions of the other memes already competing for the same attention. Fitness is relative to the current population, not an intrinsic property. (Catalog gap flagged by the epidemiological-virality extraction.)",
       "aliases": ["ecosystem competition", "meme competition", "attention ecosystem", "competing memes"],
-      "definedIn": [],
+      "definedIn": ["selection-as-other-engine"],
       "coveredBy": ["selection-as-other-engine", "complexity-virality-tradeoff"]
     },
     {
@@ -299,7 +299,7 @@
       "label": "Neutral drift baseline (Yule process)",
       "summary": "The null model for spread: what propagation looks like with no selection at all — random copying plus rich-get-richer accumulation. Most meme variants follow it. Selection is what you detect as departure from this baseline. (Catalog gap flagged by the info-evolution extraction.)",
       "aliases": ["neutral drift", "Yule process", "rich-get-richer", "neutral model"],
-      "definedIn": [],
+      "definedIn": ["selection-as-other-engine"],
       "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"]
     },
     {
@@ -307,7 +307,7 @@
       "label": "Replicator ontology",
       "summary": "The assumption that culture comes in discrete, copyable units (memes as replicators, analogous to genes). The load-bearing premise of memetics — and the one its critics attack hardest, arguing cultural transmission is reconstructive, not copy-based. (Catalog gap flagged by the memetics-critique extraction.)",
       "aliases": ["replicator ontology", "discrete-unit assumption", "meme as replicator", "discrete cultural units"],
-      "definedIn": [],
+      "definedIn": ["selection-as-other-engine"],
       "coveredBy": ["selection-as-other-engine"]
     },
     {
@@ -315,7 +315,7 @@
       "label": "Paradox of virality",
       "summary": "What spreads is not what people endorse. Across the political spectrum, people report they do not want high-arousal negative content to go viral — yet it does. The gap implicates the selection gate (especially algorithmic amplification), not receiver preference. (Catalog gap flagged by the psychology-of-virality extraction.)",
       "aliases": ["paradox of virality", "shared not liked", "virality paradox"],
-      "definedIn": [],
+      "definedIn": ["emotional-memetics"],
       "coveredBy": ["selection-as-other-engine", "emotional-memetics"]
     },
     {
@@ -323,7 +323,7 @@
       "label": "Superspreader dynamics",
       "summary": "A small number of high-degree nodes drive a disproportionate share of total spread — a network-structure effect with no offline equivalent at the same scale. Distinct from manipulation surface: it's about who is positioned to amplify, not what can be exploited. (Catalog gap flagged by the psychology-of-virality extraction.)",
       "aliases": ["superspreader", "superspreaders", "high-degree nodes", "amplification hubs"],
-      "definedIn": [],
+      "definedIn": ["political-economy-of-attention"],
       "coveredBy": ["bridge-zone-distortion", "political-economy-of-attention"]
     },
     {
@@ -331,7 +331,7 @@
       "label": "Algorithm as selection engine",
       "summary": "Recommendation algorithms are not lossy transport — they are selection gates with adjustable weights. They make 'who tunes the gates' a literal, operational question, and turn the selection criteria of a few companies into the selection criteria of everyone. (Catalog gap flagged by the psychology-of-virality extraction.)",
       "aliases": ["algorithm as selection engine", "recommendation algorithm", "algorithmic amplification", "algorithmic curation"],
-      "definedIn": [],
+      "definedIn": ["selection-as-other-engine"],
       "coveredBy": ["selection-as-other-engine", "political-economy-of-attention", "ai-as-new-node"]
     },
     {
@@ -339,7 +339,7 @@
       "label": "Epistemic vigilance (mental immune systems)",
       "summary": "The Sperberian-tradition construct for the cognitive defenses humans have evolved to screen incoming information for plausibility and source reliability — 'mental immune systems' in the popular framing. Mercier extends and refines the term as *open vigilance* (see open-vigilance concept) to mark that the system is paired with openness rather than being a one-sided defense layer over a credulous default. The catalog keeps both entries because earlier book chapters used 'epistemic vigilance' before the Mercier extraction sharpened it.",
       "aliases": ["epistemic vigilance", "mental immune systems", "cognitive defenses"],
-      "definedIn": [],
+      "definedIn": ["emotional-memetics"],
       "coveredBy": ["emotional-memetics", "selection-as-other-engine"],
       "evidencedBy": ["not-born-yesterday"]
     },
@@ -408,7 +408,7 @@
       "label": "Technology vs. medium",
       "summary": "Postman's distinction between a technology — the machine or tool itself — and a medium — the social and intellectual environment that grows up around how the technology is used. The book's 'medium' always means the latter: not the device but the environment of capacities, gate-criteria, and cultivated wants it produces. The same technology can host different media, which guards against blaming the hardware for what is really a pattern of use.",
       "aliases": ["technology vs medium", "technology and medium", "medium vs technology", "machine vs environment"],
-      "definedIn": [],
+      "definedIn": ["bridge-zone-distortion"],
       "coveredBy": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention"],
       "evidencedBy": ["amusing-ourselves-to-death"]
     },
@@ -417,7 +417,7 @@
       "label": "Pseudo-context",
       "summary": "Postman's term for a structure invented to give decontextualized information the appearance of a use it does not really have. The information may be true and accurately measured, but it has been stripped of the context that connected it to action; pseudo-context — the news quiz, trivia, conversation-fodder — papers over the gap. Distinct from manufactured content, which never measured anything: pseudo-context is real information made idle.",
       "aliases": ["pseudo-context", "pseudocontext", "pseudo context", "information made idle"],
-      "definedIn": [],
+      "definedIn": ["bridge-zone-distortion"],
       "coveredBy": ["bridge-zone-distortion", "truth-compression-and-when-each-wins"],
       "evidencedBy": ["amusing-ourselves-to-death"]
     },
@@ -426,7 +426,7 @@
       "label": "The Orwell/Huxley axis",
       "summary": "Postman's framing of two opposite failure modes for an information ecosystem. The Orwell mode: control by inflicted pain — censorship, surveillance, information withheld. The Huxley mode: control by inflicted pleasure — truth not concealed but drowned in a sea of engaging irrelevance. The book's diagnosis sits squarely in the Huxley mode: the modern failure is abundance optimized for engagement, not scarcity enforced by a censor.",
       "aliases": ["Orwell/Huxley axis", "Orwell vs Huxley", "Orwell-Huxley", "drowned in irrelevance"],
-      "definedIn": [],
+      "definedIn": ["political-economy-of-attention"],
       "coveredBy": ["emotional-memetics", "political-economy-of-attention"],
       "evidencedBy": ["amusing-ourselves-to-death"]
     },
@@ -435,7 +435,7 @@
       "label": "False consensus among rational agents",
       "summary": "O'Connor & Weatherall's central result: a community of agents who each update on evidence correctly — perfect Bayesians, no irrationality, no gullibility — can still converge on a false belief. False consensus is a property of network structure and the way evidence propagates, not of individual error. It undercuts any diagnosis that locates the problem solely in receivers being careless or stupid.",
       "aliases": ["false consensus among rational agents", "rational agents reach false consensus", "rationality is not enough"],
-      "definedIn": [],
+      "definedIn": ["selection-as-other-engine"],
       "coveredBy": ["selection-as-other-engine", "emotional-memetics"],
       "evidencedBy": ["misinformation-age"]
     },
@@ -444,7 +444,7 @@
       "label": "Credibility weighting",
       "summary": "The practice — rational and unavoidable — of weighting a piece of evidence by how much the receiver trusts its source. In O'Connor & Weatherall's models this is the core mechanism of social belief: no one can verify everything first-hand, so trust in sources does the work. It is also the seam propaganda exploits — manufacture or buy credibility and the weighting carries false evidence as readily as true.",
       "aliases": ["credibility weighting", "trust weighting", "source trust", "weighting evidence by source"],
-      "definedIn": [],
+      "definedIn": ["political-economy-of-attention"],
       "coveredBy": ["selection-as-other-engine", "bridge-zone-distortion", "political-economy-of-attention"],
       "evidencedBy": ["misinformation-age"]
     },
@@ -453,7 +453,7 @@
       "label": "Conformity",
       "summary": "The adoption of a belief because one's peers hold it, rather than on the evidence for it. Distinct from the content-side criteria of memetic fitness: conformity weights the social fact of agreement itself. In O'Connor & Weatherall's models conformity pressure can lock a community onto a belief — true or false — and insulate it from correcting evidence.",
       "aliases": ["conformity", "conformity bias", "social conformity", "belief by agreement"],
-      "definedIn": [],
+      "definedIn": ["selection-as-other-engine"],
       "coveredBy": ["selection-as-other-engine", "emotional-memetics"],
       "evidencedBy": ["misinformation-age"]
     },
@@ -462,7 +462,7 @@
       "label": "Polarization via distrust",
       "summary": "A self-reinforcing loop formalized by O'Connor & Weatherall: when agents discount evidence from sources they distrust, communities that begin with mild disagreement diverge — each side discounts the other's findings, beliefs pull apart, and the divergence deepens the distrust that drove it. Polarization here needs no irrationality and no misinformation; rational trust-weighting plus an initial difference is enough.",
       "aliases": ["polarization via distrust", "evidential polarization", "distrust-driven polarization", "polarization loop"],
-      "definedIn": [],
+      "definedIn": ["bridge-nodes-and-versatile-expertise"],
       "coveredBy": ["emotional-memetics", "integration-problem"],
       "evidencedBy": ["misinformation-age"]
     },
@@ -471,7 +471,7 @@
       "label": "The Zollman effect",
       "summary": "The counterintuitive result (Kevin Zollman, central to O'Connor & Weatherall's account) that increasing a community's connectivity can reduce the accuracy of its beliefs: densely connected agents see each other's preliminary, noisy results too quickly and converge prematurely on whichever answer took an early lead. More communication is not monotonically better — there is an optimum. Bears directly on the Part IV integration question.",
       "aliases": ["Zollman effect", "transient diversity", "connectivity can hurt accuracy", "premature convergence"],
-      "definedIn": [],
+      "definedIn": ["integration-problem"],
       "coveredBy": ["integration-problem", "infrastructure-for-integration"],
       "evidencedBy": ["misinformation-age"]
     }
