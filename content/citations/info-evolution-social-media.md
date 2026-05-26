@@ -17,5 +17,6 @@ Empirical work on how information morphs as it traverses social-media networks.
 
 ## Where this is cited in the book
 
+- [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 

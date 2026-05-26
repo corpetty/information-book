@@ -17,5 +17,6 @@ Empirical and theoretical work on what makes content go viral. Identity, emotion
 
 ## Where this is cited in the book
 
+- [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 

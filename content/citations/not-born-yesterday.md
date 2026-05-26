@@ -16,3 +16,8 @@ Direct challenge to the 'people are easily manipulated by simple memes' thread. 
 
 **Availability.** In-copyright — not redistributed. Engaged from a local working copy held outside the repo; cited by reference here.
 
+## Where this is cited in the book
+
+- [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
+- [[outline|Information Book — Outline]] *(outline)*
+
