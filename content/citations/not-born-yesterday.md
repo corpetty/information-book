@@ -19,5 +19,5 @@ Direct challenge to the 'people are easily manipulated by simple memes' thread. 
 ## Where this is cited in the book
 
 - [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
-- [[outline|Information Book — Outline]] *(outline)*
+- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 

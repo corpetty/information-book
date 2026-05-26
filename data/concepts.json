@@ -334,10 +334,38 @@
     {
       "id": "epistemic-vigilance",
       "label": "Epistemic vigilance (mental immune systems)",
-      "summary": "Humans have evolved cognitive defenses that screen incoming information for plausibility and source reliability — 'mental immune systems'. Mercier's challenge to the easy-manipulation narrative: receivers are far less gullible than the simple-meme-wins story implies. (Catalog gap flagged by the psychology-of-virality extraction.)",
-      "aliases": ["epistemic vigilance", "mental immune systems", "cognitive defenses", "not born yesterday"],
+      "summary": "The Sperberian-tradition construct for the cognitive defenses humans have evolved to screen incoming information for plausibility and source reliability — 'mental immune systems' in the popular framing. Mercier extends and refines the term as *open vigilance* (see open-vigilance concept) to mark that the system is paired with openness rather than being a one-sided defense layer over a credulous default. The catalog keeps both entries because earlier book chapters used 'epistemic vigilance' before the Mercier extraction sharpened it.",
+      "aliases": ["epistemic vigilance", "mental immune systems", "cognitive defenses"],
       "definedIn": [],
-      "coveredBy": ["emotional-memetics", "selection-as-other-engine"]
+      "coveredBy": ["emotional-memetics", "selection-as-other-engine"],
+      "evidencedBy": ["not-born-yesterday"]
+    },
+    {
+      "id": "open-vigilance",
+      "label": "Open vigilance (Mercier's paired construct)",
+      "summary": "Mercier's refinement of Sperber's epistemic-vigilance term. The system is paired: humans are simultaneously *open to* useful information and *vigilant against* unreliable sources, with the two faces evolving hand-in-hand as communication became broader and more powerful. The earlier 'epistemic vigilance' label flattens this into a one-sided defense construct, which is what the catalog had until the Mercier extraction surfaced the paired reading. Two named sub-mechanisms: *plausibility checking* (does the message fit pre-existing beliefs?) and *reasoning* (do supporting arguments resonate?). Calibration is asymmetric: more errors of omission (not trusting when we should) than of commission (trusting when we shouldn't) — vigilance is conservative-leaning, not credulous-leaning.",
+      "aliases": ["open vigilance", "paired vigilance", "openness and vigilance"],
+      "definedIn": ["emotional-memetics"],
+      "coveredBy": ["emotional-memetics", "selection-as-other-engine"],
+      "evidencedBy": ["not-born-yesterday"]
+    },
+    {
+      "id": "reflective-vs-intuitive-belief",
+      "label": "Reflective vs. intuitive belief (Sperber's split)",
+      "summary": "Dan Sperber's distinction between two ways a person can hold a belief. *Intuitive beliefs* are integrated with one's other beliefs and freely drive inferences and action — they are load-bearing. *Reflective beliefs* are held propositionally without integration — verbal, contextual, often shared as identity-signals or coalition-markers, but inert with respect to action. The split underwrites Mercier's reading of the paradox-of-virality: 'most false rumors are held reflectively, for they would have much more serious consequences if they were held intuitively.' Conspiracy theories, witches' confessions, absurd flattery, and political-affiliation claims are typically reflective. Explains the share/endorse gap without needing a strong gate-amplification story — the gap is by design at the cognitive layer.",
+      "aliases": ["reflective belief", "intuitive belief", "Sperber belief split", "two kinds of belief"],
+      "definedIn": ["emotional-memetics"],
+      "coveredBy": ["emotional-memetics", "truth-compression-and-when-each-wins"],
+      "evidencedBy": ["not-born-yesterday"]
+    },
+    {
+      "id": "justification-market",
+      "label": "Justification market (behavior→belief arrow)",
+      "summary": "Mercier's reframe of the causal arrow between content consumption and behavior. The naive story (and the book's implicit Part-IV-supply-side framing): content shapes belief, belief drives behavior. Mercier's reversal: behavior is determined upstream (by group identity, in-group commitments, status concerns, material interest); receivers then demand-side select for content that *justifies* the already-decided behavior. The market for false beliefs is therefore downstream of action-already-chosen, and what looks like 'mass persuasion installing beliefs' is more often suppliers of justifications meeting receivers' pre-existing demand. The Trump-supporter finding (corrections accepted, behavior unchanged) is the diagnostic anchor: when corrections land and behavior doesn't move, the belief was never load-bearing for the behavior.",
+      "aliases": ["justification market", "post-hoc rationalization", "behavior-belief reversal", "demand-side belief selection"],
+      "definedIn": ["emotional-memetics"],
+      "coveredBy": ["emotional-memetics", "political-economy-of-attention", "preservation-vs-training"],
+      "evidencedBy": ["not-born-yesterday"]
     },
     {
       "id": "three-layer-message",
