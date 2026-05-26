@@ -62,7 +62,8 @@
       "aliases": ["engagement equilibrium", "engagement maximization", "captured engagement equilibrium", "engagement-optimization loop"],
       "definedIn": ["political-economy-of-attention"],
       "coveredBy": ["political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
-      "derivesFrom": ["selection", "medium-shapes-want"]
+      "derivesFrom": ["selection", "medium-shapes-want"],
+      "enables": ["concept:out-competition-of-carriers"]
     },
     {
       "id": "myth-dilution",
@@ -71,7 +72,8 @@
       "aliases": ["myth dilution", "myth dilution at scale", "scale dilutes the myth", "the dilution loop"],
       "definedIn": ["myths-scale-and-bureaucracy"],
       "coveredBy": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff", "integration-problem", "preservation-vs-training"],
-      "derivesFrom": ["interpretive-latitude", "selection"]
+      "derivesFrom": ["interpretive-latitude", "selection"],
+      "enables": ["concept:network-segmentation"]
     }
   ]
 }

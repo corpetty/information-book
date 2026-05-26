@@ -170,7 +170,7 @@ Not just citations. These authors have already worked through specific gaps in t
 
 ## What to write next
 
-The foundational-question phase is essentially done. Transport vs. selection, the medium, the three-layer message, truth value, myth dilution, and the transferable-vs-specialized question are all worked through. One question still remains genuinely open: *complexity-doing-two-jobs*. The work now shifts almost entirely to drafting the chapters those resolutions unblock — Chapter 5b is drafted, Chapter 9 has a skeleton, and Chapters 8 / 10 / 11 / 12 in Part IV can finally be approached on stable foundations.
+The foundational-question phase is done. Transport vs. selection, the medium, the three-layer message, truth value, myth dilution, the transferable-vs-specialized question, and the complexity-doing-two-jobs ambiguity are all worked through (the last via Ch 5b's transport-complexity vs. selection-complexity split, in-chapter, after Phase 42). The work now shifts almost entirely to drafting the chapters those resolutions unblock — Chapter 5b is drafted, Chapter 9 has a skeleton, and Chapters 8 / 10 / 11 / 12 in Part IV can finally be approached on stable foundations.
 
 Best next moves, ranked:
 

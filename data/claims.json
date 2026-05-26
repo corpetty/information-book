@@ -10,7 +10,7 @@
       "argues": ["the-information-landscape", "transport-vs-selection", "outline"],
       "arguedInChapters": ["information-landscape", "selection-as-other-engine", "complexity-virality-tradeoff"],
       "dependsOn": [],
-      "supersedes": [],
+      "supersedes": ["selection-is-primary"],
       "harvestedFrom": [
         {
           "note": "the-information-landscape",
@@ -33,6 +33,7 @@
       "argues": ["transport-vs-selection", "selection-as-other-engine"],
       "arguedInChapters": ["selection-as-other-engine", "complexity-virality-tradeoff"],
       "dependsOn": ["claim:two-pipelines-parallel"],
+      "supersedes": ["selection-is-primary"],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
@@ -393,6 +394,7 @@
       "argues": ["bridge-nodes-and-versatile-expertise"],
       "arguedInChapters": ["integration-problem", "preservation-vs-training"],
       "dependsOn": [],
+      "supersedes": ["bridge-via-transferable-preconditions"],
       "harvestedFrom": [
         {
           "note": "bridge-nodes-and-versatile-expertise",
@@ -427,6 +429,7 @@
       "argues": ["bridge-nodes-and-versatile-expertise", "integration-problem", "infrastructure-for-integration"],
       "arguedInChapters": ["integration-problem", "infrastructure-for-integration"],
       "dependsOn": ["claim:bridge-node-is-versatile-specialist"],
+      "supersedes": ["fragmentation-into-smaller-networks"],
       "harvestedFrom": [
         {
           "note": "bridge-nodes-and-versatile-expertise",
@@ -439,6 +442,48 @@
           "text": "Integration infrastructure has to do two things at once: cultivate versatile experts inside specialist communities, and build curation-layer institutions that survive polarized trust."
         }
       ]
+    },
+    {
+      "id": "selection-is-primary",
+      "label": "Selection is causally primary; transport is downstream",
+      "summary": "The book's earlier commitment in transport-vs-selection: selection is the primary mechanism, and transport (cumulative lossy re-encoding across hops) is real but increasingly downstream of it. Retired by the modality-not-primacy refinement in the same note's second pass: the 'primary' framing bundled four distinct claims (causal order; currently-binding constraint; locus of repair; locus of breakage), and treating them as one mis-encoded a modality asymmetry as causal order. Superseded by `claim:two-pipelines-parallel` (both are real, neither downstream) and `claim:selection-is-the-tunable-mechanism` (the criterial-vs-cost distinction the original frame was reaching for). The unbundled historical claim 'selection is the currently-binding constraint in modern digital networks' survives independently as `claim:transport-collapse-shifts-constraint`.",
+      "aliases": ["selection is primary", "selection-primary", "transport is downstream", "selection primary frame"],
+      "status": "retired",
+      "argues": [],
+      "arguedInChapters": [],
+      "dependsOn": [],
+      "supersedes": [],
+      "harvestedFrom": [
+        {
+          "note": "transport-vs-selection",
+          "lineApprox": 53,
+          "text": "Selection is primary. Transport is real but increasingly downstream."
+        }
+      ]
+    },
+    {
+      "id": "fragmentation-into-smaller-networks",
+      "label": "Part IV prescription: fragment into smaller networks",
+      "summary": "The book's original Part IV commitment: the answer to mass-network compression dynamics is to fragment into multiple smaller networks, each with its own selection criteria and tighter feedback loops. Retired after the critique pointed out small networks have their own internal compression dynamics, tend toward echo chambers rather than bubbles (Nguyen's distinction), and that the actually-hard problem is moving complex truth *between* networks that don't share preconditions — which fragmentation makes harder, not easier. Superseded by the integration prescription whose two-part shape (cultivated bridge agents + curation-layer infrastructure) is captured in `claim:integration-needs-agent-and-infrastructure`. The full prescriptive arc lives in [[integration-problem|Ch 9]] and [[infrastructure-for-integration|Ch 12]].",
+      "aliases": ["fragmentation prescription", "fragment into smaller networks", "multiple smaller networks", "small-network prescription"],
+      "status": "retired",
+      "argues": [],
+      "arguedInChapters": [],
+      "dependsOn": [],
+      "supersedes": [],
+      "harvestedFrom": []
+    },
+    {
+      "id": "bridge-via-transferable-preconditions",
+      "label": "Bridge nodes are agents with field-general transferable preconditions",
+      "summary": "The book's first-pass answer to the bridge-node question, before bridge-nodes-and-versatile-expertise was drafted: bridges between specialist communities are agents who carry field-general capacities (statistical literacy, critical reading, the disposition to look for evidence) — i.e. generalists with transferable preconditions. Retired after the question turned out to have been mis-framed as a generalist-vs-specialist binary. A field-general generalist is not admitted as a peer on either side and so cannot carry the bridge; a pure specialist lacks the metacognitive flexibility to see the structural analogy that crosses. Superseded by `claim:bridge-node-is-versatile-specialist` — the bridge is a deep specialist who has paired their depth with metacognitive flexibility. The `concept:transferable-preconditions` entry survives as the original-frame term; its definedIn now points to bridge-nodes-and-versatile-expertise where it gets refined into the paired-skill form.",
+      "aliases": ["transferable preconditions bridge", "field-general bridge node", "generalist bridge frame", "bridge is generalist"],
+      "status": "retired",
+      "argues": [],
+      "arguedInChapters": [],
+      "dependsOn": [],
+      "supersedes": [],
+      "harvestedFrom": []
     }
   ]
 }

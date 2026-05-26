@@ -296,6 +296,9 @@ function loadMechanisms() {
     for (const otherSlug of m.derivesFrom || []) {
       addEdge(`mechanism:${m.id}`, `mechanism:${otherSlug}`, 'derivesFrom');
     }
+    for (const target of m.enables || []) {
+      addEdge(`mechanism:${m.id}`, target, 'enables');
+    }
   }
 }
 
@@ -317,6 +320,9 @@ function loadConcepts() {
     }
     for (const srcSlug of c.evidencedBy || []) {
       addEdge(`concept:${c.id}`, `source:${srcSlug}`, 'evidencedBy');
+    }
+    for (const target of c.enables || []) {
+      addEdge(`concept:${c.id}`, target, 'enables');
     }
   }
 }
@@ -422,6 +428,35 @@ function loadCaseStudies() {
 }
 
 // ---------------------------------------------------------------- claims
+
+function loadTensions() {
+  const path = resolve(dataDir, 'tensions.json');
+  if (!existsSync(path)) return; // catalog is optional
+  const { tensions } = JSON.parse(readFileSync(path, 'utf8'));
+  if (!tensions || !tensions.length) return;
+  for (const t of tensions) {
+    addNode({
+      id: `tension:${t.id}`,
+      type: 'Tension',
+      label: t.label,
+      props: {
+        summary: t.summary,
+        kind: t.kind || 'tensionWith',
+        resolution: t.resolution || null,
+      },
+      provenance: [{ source: 'tensions.json', kind: 'catalog' }],
+    });
+    if (Array.isArray(t.endpoints) && t.endpoints.length === 2) {
+      addEdge(t.endpoints[0], t.endpoints[1], t.kind || 'tensionWith');
+    }
+    for (const chSlug of t.acknowledgedInChapters || []) {
+      addEdge(`chapter:${chSlug}`, `tension:${t.id}`, 'mentions');
+    }
+    for (const noteSlug of t.acknowledgedInNotes || []) {
+      addEdge(`note:${noteSlug}`, `tension:${t.id}`, 'mentions');
+    }
+  }
+}
 
 function loadClaims() {
   const claimsPath = resolve(dataDir, 'claims.json');
@@ -698,6 +733,7 @@ loadTraditions();
 loadSources();
 loadCaseStudies();
 loadClaims();
+loadTensions();
 checkClaimDrift();
 parseNotes();
 loadInterpretive();

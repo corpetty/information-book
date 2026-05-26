@@ -1,0 +1,35 @@
+{
+  "_doc": "Explicit tensions and contradictions the book holds with sources, or that arise between positions inside the book. Each entry has two endpoints (full node ids like 'source:slug' or 'concept:slug' or 'mechanism:slug' or 'claim:slug'), a `kind` (tensionWith / contradicts), the chapters or notes where the book makes the tension explicit (`acknowledgedInChapters` / `acknowledgedInNotes`), and an optional `resolution` describing how the book holds the tension (often a distinction the book adopts rather than a victory for one side). The Tension node carries the explanatory metadata; the direct tensionWith/contradicts edge between endpoints makes the tension visible to graph views that filter on the dialectical layer.",
+  "tensions": [
+    {
+      "id": "encyclical-vs-survivable-polarization",
+      "label": "Magnifica Humanitas vs. survivable-polarization",
+      "summary": "The encyclical's prescription rests on shared discernment through the methodology of synodality — plural voices reaching deliberative agreement when given the right process. The book commits to survivable-polarization design — institutions built to do their work across trust boundaries that will not be repaired in advance. Both prescribe how integration infrastructure should be built; they disagree on how robust the prerequisite trust is in the current environment. Worth being explicit about the disagreement rather than waving past it.",
+      "kind": "tensionWith",
+      "endpoints": ["source:magnifica-humanitas", "concept:survivable-polarization"],
+      "acknowledgedInChapters": ["ai-as-new-node"],
+      "acknowledgedInNotes": [],
+      "resolution": "The book and the encyclical agree on what good integration looks like; they disagree on how robust the prerequisite trust is. The book commits to the partial-trust-and-survivable-polarization design; the encyclical commits to the shared-discernment-from-restored-trust design. Held as an explicit disagreement (Ch 11 Phase 49), not as a refutation in either direction."
+    },
+    {
+      "id": "mercier-vigilance-vs-medium-shapes-want",
+      "label": "Mercier (open vigilance) vs. medium-shapes-want",
+      "summary": "Mercier's *Not Born Yesterday* argues humans are paired with open vigilance — conservative-leaning, calibrated to make more errors of omission than of commission, not the credulous-by-default receivers earlier mass-media theory assumed. The book's medium-shapes-want mechanism argues that long exposure to a medium with engagement-tuned gates trains the *want* loop and the receiver's vigilance criteria downward over lifetime and generational scales. Both are right at their own scales: Mercier's empirical evidence is within-campaign and within-experiment; the book's worry is the decades-long generational shaping the within-campaign experiments cannot see.",
+      "kind": "tensionWith",
+      "endpoints": ["source:not-born-yesterday", "mechanism:medium-shapes-want"],
+      "acknowledgedInChapters": ["emotional-memetics"],
+      "acknowledgedInNotes": [],
+      "resolution": "Timescale-distinction. Mercier is right at within-campaign and within-experiment timescales; the book's medium-shapes-want is right at lifetime and generational timescales. Adopted in Ch 7 Phase 47 as the load-bearing synthesis move that lets the book engage Mercier substantively without abandoning the engagement-equilibrium worry."
+    },
+    {
+      "id": "replicator-vs-reconstructive",
+      "label": "Replicator ontology vs. memetics-critique reconstructive view",
+      "summary": "The replicator ontology — culture as discrete, copyable units (memes-as-replicators, analogous to genes) — is the load-bearing premise of memetics that the book inherits when it talks about selection on cultural units. The memetics critique attacks this premise directly: cultural transmission is reconstructive, not copy-based — what propagates is the listener's reconstruction from cues, not a unit transferred whole. The two views cannot both be load-bearing for an account of cultural spread; choosing one forecloses the other.",
+      "kind": "contradicts",
+      "endpoints": ["source:memetics-critique", "concept:replicator-ontology"],
+      "acknowledgedInChapters": ["selection-as-other-engine"],
+      "acknowledgedInNotes": [],
+      "resolution": "Unresolved. The book uses replicator-ontology vocabulary instrumentally when it makes selection-on-cultural-units arguments, while keeping the critique's reconstructive reading in view as a pressure-test. A full pass that re-runs the selection arguments under the reconstructive ontology would be the honest follow-up; the book does not commit to which is right and flags the ontology as a candidate seam to reopen."
+    }
+  ]
+}

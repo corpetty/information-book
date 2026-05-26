@@ -95,7 +95,8 @@
       "summary": "Platforms do not have to suppress institutional carriers (journals, universities, depth journalism) to hollow them. Free engagement-optimized content has approximately zero marginal cost of attention because users produce it; depth content has real cost-per-impression because the institutional apparatus is paid. The attention market clears at zero price for engagement-optimized noise and infinite price for depth, so receivers — with limited attention and no quality-assessment budget — predictably pick the free option. The mechanism that produces Ch 8's asymmetric institutional collapse without any direct attack on the institutions.",
       "aliases": ["out-competition", "attention-market out-competition", "zero-marginal-cost attention", "depth priced out"],
       "definedIn": ["political-economy-of-attention"],
-      "coveredBy": ["political-economy-of-attention", "preservation-vs-training", "infrastructure-for-integration"]
+      "coveredBy": ["political-economy-of-attention", "preservation-vs-training", "infrastructure-for-integration"],
+      "enables": ["concept:capture-asymmetry"]
     },
     {
       "id": "inverted-u",
@@ -183,7 +184,8 @@
       "summary": "An LLM is the first node in the book's information pipeline that owns gate + option-space + content-generator + training-corpus + training-objective + deployment-configuration + pricing-tier, all collapsed into one design moment owned by one party. Where a Ch 10 social-media platform owns two or three selection-design surfaces, an LLM owner owns five-to-seven. The structural concentration is what makes the LLM the limit case for the book's political-economy argument: every concern about ownership of selection design applies with sharper force.",
       "aliases": ["LLM collapsed design moment", "concentrated selection-design surface", "LLM as new kind of node", "five-surface concentration"],
       "definedIn": ["ai-as-new-node"],
-      "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"]
+      "coveredBy": ["ai-as-new-node", "infrastructure-for-integration"],
+      "enables": ["concept:decompression-on-demand", "concept:compressed-form-as-authority"]
     },
     {
       "id": "decompression-on-demand",
@@ -191,7 +193,8 @@
       "summary": "An LLM, used as a faithful expansion service, can take a compressed claim or a complex source and re-expand it into a form pre-loaded with the preconditions a receiver needs to decode it. This is the first structural way out of the fixed receiver-budget constraint the book has named: the receiver's budget has not changed, but the amount of complex form they can engage per unit of budget has gone up, because the LLM is paying the decompression cost. Conditional on faithfulness — a hallucinating LLM supplies plausible-but-wrong outer messages, which is worse than no outer message at all.",
       "aliases": ["decompression on demand", "LLM as decompression service", "receiver-budget shortcut"],
       "definedIn": ["ai-as-new-node"],
-      "coveredBy": ["ai-as-new-node", "preservation-vs-training", "infrastructure-for-integration"]
+      "coveredBy": ["ai-as-new-node", "preservation-vs-training", "infrastructure-for-integration"],
+      "enables": ["concept:llm-as-capability-extender"]
     },
     {
       "id": "compressed-form-as-authority",
