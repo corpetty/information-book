@@ -450,6 +450,113 @@
       ]
     },
     {
+      "id": "engagement-floor-of-raw-emotion",
+      "evidencedBy": ["psychology-of-virality", "amusing-ourselves-to-death", "info-evolution-social-media"],
+      "label": "Mass-network propagation equilibrium converges on raw strong emotion as the floor",
+      "summary": "Once an information network is big enough and the dominant medium's gates have been tuned for engagement long enough, the propagation equilibrium of what reliably spreads converges on raw strong emotion. The floor is medium-conditional (different gate criteria yield different floors), substrate-anchored in the receiver's evolutionary attentional inheritance, capture-tuned within the emotional-payload set, and operates partly through reflective belief uptake at population scale with a smaller subset crossing into intuitive belief that drives action. The chapter's central claim — said whole at the close.",
+      "aliases": ["engagement floor", "emotion is the floor", "floor of what reliably spreads", "engagement equilibrium converges on emotion"],
+      "status": "load-bearing",
+      "argues": ["emotional-memetics"],
+      "arguedInChapters": ["emotional-memetics"],
+      "dependsOn": ["claim:transport-collapse-shifts-constraint"],
+      "harvestedFrom": [
+        {
+          "note": "emotional-memetics",
+          "lineApprox": 132,
+          "text": "the propagation equilibrium of mass networks with engagement-tuned gates converges, at decades-scale, on raw strong emotion as the floor of what reliably spreads"
+        }
+      ]
+    },
+    {
+      "id": "floor-is-aggregation-property",
+      "evidencedBy": ["psychology-of-virality"],
+      "label": "The engagement floor is a property of the aggregation, not of the receivers",
+      "summary": "The floor is not a description of individual receiver preference. It is what wins at the gates the receivers' content has to pass, aggregated across enough receivers and enough time. A given receiver may prefer nuanced content, calibrated content, slow content; their preference does not change what crosses the gate. The aggregation reliably converges on emotional payload because emotional payload is what most consistently produces engagement across heterogeneous receivers. The aggregation-property reading is what defends the floor argument against the receivers-are-fine critique: no individual receiver has to want it for it to win.",
+      "aliases": ["floor is aggregation property", "floor not in receivers", "aggregation not preference"],
+      "status": "working",
+      "argues": ["emotional-memetics"],
+      "arguedInChapters": ["emotional-memetics"],
+      "dependsOn": ["claim:engagement-floor-of-raw-emotion"],
+      "harvestedFrom": [
+        {
+          "note": "emotional-memetics",
+          "lineApprox": 15,
+          "text": "The floor is a property of the aggregation, not of the receivers individually."
+        }
+      ]
+    },
+    {
+      "id": "timescale-distinction-mercier-book",
+      "evidencedBy": ["not-born-yesterday"],
+      "label": "Mercier and the book operate at different empirical timescales",
+      "summary": "Mercier's empirical evidence on open vigilance is within-campaign and within-experiment — Cambridge Analytica's measured effects, individual mass-persuasion attempts, single-cycle propaganda evaluations, Trump-supporter belief-corrections that landed without behavior shift. At that timescale mass persuasion routinely fails, and Mercier's data is binding. The book's engagement-equilibrium worry is at a different timescale: decades of engagement-tuned medium shaping receivers' demand-side selection over generational time, eroding vigilance in the cohorts that grew up entirely inside the captured equilibrium. The two arguments answer different questions; the disagreement is empirical-scale, not first-principles. The book commits to the generational framing and owes evidence at that scale. The synthesis move from Phase 47 that lets the book engage Mercier substantively without abandoning the floor argument.",
+      "aliases": ["timescale distinction", "Mercier vs book timescale", "within-campaign vs generational", "generational-timescale framing"],
+      "status": "load-bearing",
+      "argues": ["emotional-memetics"],
+      "arguedInChapters": ["emotional-memetics", "political-economy-of-attention"],
+      "dependsOn": ["claim:engagement-floor-of-raw-emotion"],
+      "harvestedFrom": [
+        {
+          "note": "emotional-memetics",
+          "lineApprox": 51,
+          "text": "Mercier and the book are operating at different timescales."
+        }
+      ]
+    },
+    {
+      "id": "adding-channel-can-accelerate-divergence",
+      "evidencedBy": ["misinformation-age"],
+      "label": "Adding a channel between distrustful communities can accelerate divergence",
+      "summary": "Naive integration assumes channels carry evidence and evidence reconciles beliefs. O'Connor and Weatherall formalize why this fails. When agents weight evidence by source credibility — rationally and unavoidably — and two communities have any initial difference, the trust-weighting discounts the other community's evidence. Each side ratifies its starting position; the gap widens; the divergence deepens the distrust that drove it. The mechanism requires no irrationality and no misinformation: Bayesian agents with mild initial differences and credibility-weighted updating are sufficient. The trap any integration prescription has to clear.",
+      "aliases": ["channel accelerates divergence", "naive integration backfires", "polarization-via-distrust trap"],
+      "status": "load-bearing",
+      "argues": ["integration-problem"],
+      "arguedInChapters": ["integration-problem"],
+      "dependsOn": [],
+      "harvestedFrom": [
+        {
+          "note": "integration-problem",
+          "lineApprox": 25,
+          "text": "Adding a channel between distrustful communities can accelerate divergence, not reconcile it."
+        }
+      ]
+    },
+    {
+      "id": "demand-side-filter-on-integration",
+      "evidencedBy": ["not-born-yesterday", "misinformation-age"],
+      "label": "Integration is blocked at both the distrust gate AND the justification-market gate",
+      "summary": "Integration is not only blocked by polarization-via-distrust on the supply side; it is also blocked by the justification-market's demand-side filtering. The justification-market dynamic Mercier names — receivers demand-side select for content justifying already-decided behavior — means integration channels carrying evidence-against-position arrive at receivers whose behavior is already determined by group-identity, status, and material-interest forces upstream of the evidence. The two filters reinforce each other: distrust filters supply at the trust gate; justification-demand filters supply at the receiver's selection gate. Any integration prescription has to clear both. The chapter's biggest new contribution since the skeleton — the third pillar that surfaced from the Ch 7 Mercier engagement.",
+      "aliases": ["demand-side filter", "two filters on integration", "justification-market blocks integration"],
+      "status": "load-bearing",
+      "argues": ["integration-problem"],
+      "arguedInChapters": ["integration-problem"],
+      "dependsOn": ["claim:adding-channel-can-accelerate-divergence"],
+      "harvestedFrom": [
+        {
+          "note": "integration-problem",
+          "lineApprox": 29,
+          "text": "Integration is not just blocked by polarization-via-distrust; it is also blocked by the justification-market's demand-side filtering."
+        }
+      ]
+    },
+    {
+      "id": "multi-generational-integration",
+      "label": "Integration at full scale is a multi-generational investment",
+      "summary": "Bridge-node populations sufficient for population-scale integration cannot be assembled in years; they require institutional investment that compounds over decades. Versatile-expert cultivation is a generational training problem. Curation-layer institutions take generations to build trust networks and accumulate the reputation the polarization-via-distrust trap requires them to survive. The work-of-generations framing from Ch 12 lands hardest here: the integration project's timescale is civilization-scale, not platform-scale or election-cycle. Any prescription that promises a fix within a single political cycle is mis-describing the time-cost. Sets the prescriptive arc's scope at the start of the operational-problem analysis.",
+      "aliases": ["multi-generational integration", "work-of-generations integration", "integration takes decades"],
+      "status": "working",
+      "argues": ["integration-problem"],
+      "arguedInChapters": ["integration-problem", "infrastructure-for-integration"],
+      "dependsOn": ["claim:integration-needs-agent-and-infrastructure"],
+      "harvestedFrom": [
+        {
+          "note": "integration-problem",
+          "lineApprox": 81,
+          "text": "The integration project at full scale is a multi-generational investment."
+        }
+      ]
+    },
+    {
       "id": "selection-is-primary",
       "label": "Selection is causally primary; transport is downstream",
       "summary": "The book's earlier commitment in transport-vs-selection: selection is the primary mechanism, and transport (cumulative lossy re-encoding across hops) is real but increasingly downstream of it. Retired by the modality-not-primacy refinement in the same note's second pass: the 'primary' framing bundled four distinct claims (causal order; currently-binding constraint; locus of repair; locus of breakage), and treating them as one mis-encoded a modality asymmetry as causal order. Superseded by `claim:two-pipelines-parallel` (both are real, neither downstream) and `claim:selection-is-the-tunable-mechanism` (the criterial-vs-cost distinction the original frame was reaching for). The unbundled historical claim 'selection is the currently-binding constraint in modern digital networks' survives independently as `claim:transport-collapse-shifts-constraint`.",
