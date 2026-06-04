@@ -6,6 +6,8 @@ tags:
 
 So there's this general trade-off that I continue to think about because I see it show up in all sorts of things, and that's this seemingly fundamental situation where the more options a given thing has, the harder it is to be understood. The words I've just used in that last sentence don't do justice to the concept, so let's look at a few examples to elucidate the idea.
 
+Here's the everyday version first. A professional camera with full manual controls can take almost any photograph you can imagine — but hand it to someone who has never used one and they'll come back with a blurry mess. A phone camera in "auto" mode gets a good-enough shot for almost anybody, instantly — but try to do something unusual with it and you can't, because the choices were already made for you. More control, harder to use. Easier to use, less control. That is the whole trade-off, and once you notice it you start seeing it everywhere: in software, in churches, in political parties, in science books, in the law. The rest of this chapter is five walks through that one shape.
+
 ## Software Stratification
 One of the article topics I've wanted to work on is the idea of "software stratification". I don't know if that's the right term for it, but it's what I'm calling it. It's when someone releases a VERY general library that allows its users to basically do anything they want within that domain, but because it's so general, it's very hard to use. The list of options within the API is so vast that most users get stuck inside the learning curve. So you end up with very few incredible power users that do awesome things with it, and a lot of people trying to use it and quitting before they get anything useful done at all. 
 
@@ -75,7 +77,7 @@ There's much to be said about how to make a "good abstraction" for users, but th
 
 **They've constrained the user's options for the benefit of increasing overall accessibility.** 
 
-NOTE: Often called "opinionated"
+NOTE: in software this is often called being *opinionated* — the tool has opinions about the right way to do the common thing, and quietly makes those choices for you.
 
 ## The same curve in religion
 
