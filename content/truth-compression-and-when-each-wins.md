@@ -4,6 +4,8 @@ tags:
   - information
 ---
 
+*If you've landed here first, a plain-terms orientation before this one goes deep.* The book's picture so far: ideas get simpler and simpler as they travel from reality out to the rest of us — a study becomes a headline becomes a meme. The obvious objection is that *simpler* isn't the same as *wrong*; a short true thing is still true. This chapter takes that objection seriously and answers it. The one idea it leans on: every claim travels with a hidden set of instructions for how to read it — the conditions, the caveats, the "we're not sure yet." Compression keeps the claim and throws the instructions away. What happens to the truth after that — whether it survives, flips into something false, or stops being about truth at all — is the whole subject here.
+
 This chapter exists to close a hole I have been able to feel since Chapter 1. I would rather name it than paper over it.
 
 The book so far describes a machine. Information moves from reality to people through a [[the-information-landscape|pipeline of abstractions]], and at every stage two mechanisms, [[transport-vs-selection|transport and selection]], act on what passes — transport re-encodes it lossily, selection decides whether it passes at all. [[complexity-virality-tradeoff|Chapter 5]] is the transport half; Chapter 5b is the selection half. The machine is real and, I think, correctly described. It is also completely morally neutral.

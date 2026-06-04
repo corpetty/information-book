@@ -6,6 +6,8 @@ tags:
 
 This is the diagram I keep coming back to. I drew it years ago, on a whim, to try to capture how information moves from reality to people. It's been sitting in my notes for a while, and I think it's still mostly right. But it was missing a piece, and the back half of this chapter is about that missing piece.
 
+If you've ever watched a careful finding get flattened into a headline, and then into a meme that means almost the opposite — this chapter is the map of how that happens. It starts gentle: for the first half, all I'm doing is tracing the path an idea takes from the world to you, one step at a time. The complication that makes the rest of the book necessary arrives in the back half. No special background needed; I'll build each piece as we go.
+
 ## The diagram
 
 ![[Pasted image 20240922201821.png]]
