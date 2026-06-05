@@ -146,3 +146,8 @@ The deeper claim, more provisional: the pipeline failure surface has a specific 
 - **The astrology case may be too easy.** Astrology has been in cultural circulation for two thousand years; almost no one defends it as a measurement-based account of personality anymore. The harder case for the no-theory exit is *current* manufactured content whose meme-stage occupancy is recent and whose corrective signal has not yet had time to fail — early-2020s wellness content, AI-generated text passed off as expert commentary, political-influence operations. The chapter cites these in passing but does not work through any of them in case-study detail, partly because the corrective signal for them is genuinely incomplete in real time. A future pass could pick up one or two.
 
 - **The corrective-signal-has-worse-gate-fitness claim is asserted, not measured.** I have committed to it because the case studies illustrate it and the structural argument is consistent with it. The systematic empirical claim would be: corrective findings on average have lower engagement / curation / meme-stage propagation than the originals they correct. There is some empirical literature on this (work on the spread of misinformation versus corrections, work on retraction visibility versus original-paper citation rates), and the book should engage that literature properly rather than leaning on the four case studies alone.
+
+
+---
+
+[[the-information-landscape|← Chapter 1: The Information Landscape]] · [[info-time-limit|Chapter 3: The Human Time Budget →]]

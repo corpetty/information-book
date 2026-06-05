@@ -156,3 +156,8 @@ The chapter's contribution to the rest of the book, after the Mercier engagement
 - **Mercier's interpretive framework has critics the chapter has only briefly engaged.** The "What Mercier's argument doesn't establish" section above flags that his readings of Asch, Milgram, and the Nazi propaganda record are his interpretations rather than consensus readings, and that the Argumentative Theory of Reason has its own critics in the cognitive-science literature. The chapter's softening of the book's stronger claims is grounded in the timescale-distinction, not in wholesale adoption of Mercier's framework — but a more careful pass would survey the critical literature on Mercier and Sperber properly rather than relying on the brief gestures the chapter has made. This is research work the next pass owes.
 
 - **The "raw strong emotion" category may flatten distinctions that matter.** Anger and awe are both "raw strong emotion" and both reach floor-class virality, but they have different downstream consequences for the network's epistemic state — anger drives polarization, awe sometimes drives synthesis. The chapter has bundled them under one floor label, and the bundling may be hiding important differences. A more careful version would distinguish floor-class emotions by their downstream effect on the network's belief structure, not just by their virality.
+
+
+---
+
+[[bridge-zone-distortion|← Chapter 6: Where It All Gets Fucked Up]] · [[preservation-vs-training|Chapter 8: Preservation vs. Training →]]

@@ -121,3 +121,8 @@ The questions this chapter once deferred have all been worked through in subsequ
 The manufactured-content thread is also no longer floating. [[the-information-landscape|Chapter 1]] established the category; [[case-studies-and-three-realities|Ch 2]] worked the astrology case and brought in [[ai-as-new-node|Ch 11's]] industrial-scale LLM extension; [[capture-taxonomy|the capture taxonomy]] gave it a substrate (corpus capture is the LLM-scale version) and the recovery dynamics. Transport and selection operate on manufactured content the same as on measured, which is what makes the manufactured case worth keeping in view as you read the rest — and which is what makes the political-economy and capture-resistance prescriptions Ch 10 / Ch 12 commit to load-bearing.
 
 If you've read this far and you think I've got the relationship wrong, I'd really like to hear it. Hit me up. I'd rather find out now than ten chapters from now — even though, at this point, ten chapters from now happens to be where the book actually ends, and most of what was uncertain in the original draft has been pressure-tested through the work between then and here.
+
+
+---
+
+[[optionality vs access|← Chapter 4: Optionality vs. Access]] · [[selection-as-other-engine|Chapter 5b: Selection As The Other Engine →]]

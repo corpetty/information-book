@@ -121,3 +121,8 @@ The integration project of Part IV rests on both halves of the pump being intact
 - **The decay-rate asymmetry might not be as strong as I have written it.** Preservation can in fact decay fast (format obsolescence, lost languages, the bit-rot of a discipline's working assumptions) and training can in fact be more durable than one generation (apprenticeship traditions that span centuries by training trainers). The "preservation slow / training fast" carving is approximately right and probably the right strategic emphasis, but it is closer to a rule of thumb than to a structural law.
 
 - **The "bureaucracy" stipulation is provisional.** The chapter (with [[myths-scale-and-bureaucracy]] and the [[glossary|glossary entry]]) uses "bureaucracy" narrowly by definition to mean the preserve-and-retrain function. That works for the argument but doesn't settle whether the narrow function is genuinely the *core* of bureaucracy or just the slice the book happens to need. The cleaner alternative — call the narrow function *institutional carriers* throughout and reserve "bureaucracy" for Harari's broader sense — is something a polish pass should reconsider when the book's full Part IV is in hand and the consequences of either choice are visible.
+
+
+---
+
+[[emotional-memetics|← Chapter 7: Emotional Memetics As The Floor]] · [[integration-problem|Chapter 9: The Integration Problem →]]

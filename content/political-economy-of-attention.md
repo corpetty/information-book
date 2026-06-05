@@ -141,3 +141,8 @@ The pressure-tests above force one explicit softening of the headline claim. The
 - **The composition of training-side capture (Ch 8) and platform-side capture (Ch 10) is not worked out.** They are not the same mechanism — Ch 8's capture is of the *training institution* itself; Ch 10's capture is of the *attention market in which training institutions compete*. They reinforce each other, but how exactly is something I have asserted rather than shown. The next pass on this material owes a worked account of how a captured training apparatus and a captured attention market compose into the joint failure mode the modern environment presents.
 
 - **The "preservation mostly held" claim from Ch 8 needs softening.** Ch 10's competition-in-attention-markets argument applies to all preservation institutions, not just training. Elite preservation institutions (major research universities, prestige journals) survive on endowment and prestige; broader preservation institutions (local journalism, regional universities, adult education) have collapsed alongside the training side. Ch 8 may need to be refined to "elite preservation mostly held, broad preservation also in collapse," and the joint diagnosis with Ch 10 is darker than either chapter on its own.
+
+
+---
+
+[[integration-problem|← Chapter 9: The Integration Problem]] · [[ai-as-new-node|Chapter 11: AI as a New Kind of Node →]]

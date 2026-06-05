@@ -149,3 +149,8 @@ The deeper claim, more provisional but the one the chapter rests on: **the integ
 - **The principles are derived from a specific set of existing examples and may not generalize.** The worked examples that informed the design principles are concentrated in Western, English-speaking, academic-adjacent institutions. Other institutional traditions (East Asian academic systems, decentralized Islamic scholarship, indigenous knowledge governance) have their own integration mechanisms with different properties, and the chapter has not engaged them. A more cosmopolitan version of the prescription would draw from a wider example set and might surface design properties this chapter has missed.
 
 - **The chapter does not engage the question of who decides what counts as "integration."** I have written as if there is a single integration project — moving complex truth between networks that don't share preconditions — without engaging the question of *whose* complex truth, *which* networks, and *whose* judgment about what counts as integration succeeding. Those are political questions that the book has held out of scope, and the prescription's silence on them is a real limit. A revised version would need to engage at least the meta-question of what makes a credible integration-judgment process, because the institutions of integration cannot be designed without committing to one.
+
+
+---
+
+[[ai-as-new-node|← Chapter 11: AI as a New Kind of Node]] · [[index|Home →]]

@@ -170,3 +170,8 @@ The chapter's contribution to the book: it sits between [[preservation-vs-traini
 - **The case studies are concentrated in Western/English-language/technical-community contexts.** Wikipedia, Stack Overflow, open-source governance, peer-reviewed science, common-law courts — all heavily Anglosphere, all technical-or-academic-adjacent. Other institutional traditions (East Asian academic systems, decentralized Islamic scholarship, indigenous knowledge governance) have their own integration mechanisms with different properties, and the chapter has not engaged them. A more cosmopolitan version of the prescription would draw from a wider example set and might surface design properties this chapter has missed.
 
 - **The chapter has under-engaged the intersubjective-reality case.** The scope flag at the opening said intersubjective integration is genuinely different work the book has not fully engaged. That admission is honest but it leaves a substantial part of the integration project off the chapter's stated scope. Currencies, brands, religions, nations, laws — these are partly constituted by the network's agreement, and integration across networks-with-different-constitutions is a different kind of problem than integration across networks-with-different-decoding-keys for objective content. The chapter would need a sibling treatment for the intersubjective case to be complete, and the book has not produced one.
+
+
+---
+
+[[preservation-vs-training|← Chapter 8: Preservation vs. Training]] · [[political-economy-of-attention|Chapter 10: Political Economy of Attention →]]

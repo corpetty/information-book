@@ -87,3 +87,8 @@ That is also the brief this chapter hands forward to Part IV. The prescriptive c
 - **This chapter is mostly about objective claims.** The whole preserved / inverted / orthogonal scheme assumes the inner message had a correspondence-style truth value to begin with. For genuinely intersubjective claims — and for subjective ones — "truth value" means something else, or nothing, and the scheme either dissolves or needs its own treatment. I have leaned on Harari's three realities to wave at this; I have not done it properly.
 - **Inversion with a manipulator versus without one.** I claimed inversion needs no liar — an engagement-tuned gate produces it from honest findings by itself. I believe that. But the line between an emergent inversion and a deliberately engineered one is blurry, and "someone tuned this gate to invert on purpose" is a different and worse thing than "this gate inverts as a side effect." Telling them apart is Chapter 5b and Chapter 10 work, and until it is done the word *systematically* in my landing claim is carrying more weight than it has strictly earned.
 - **It leans on a question that is still open.** If [[three-layer-message|complexity is the size of an idea's outer message]], then inversion risk should scale with how much *load-bearing* key there is to strip — a clean, testable prediction. But whether complexity is precondition-count or handle-ability is unresolved, and if it is handle-ability the prediction needs restating. The chapter is consistent with that question staying open. It would be sharper if it were closed.
+
+
+---
+
+[[selection-as-other-engine|← Chapter 5b: Selection As The Other Engine]] · [[bridge-zone-distortion|Chapter 6: Where It All Gets Fucked Up →]]

@@ -146,3 +146,7 @@ The chapter's contribution to the book is small but load-bearing: it puts the re
 - **The legal case's wealth-gated access is a darker pattern than the other domains.** Software, religion, politics, and scientific popularization all have versions of the curve where the access end is broadly available even if the optionality end is professionally gated. The legal case has the wealth-gated bridge between them as a structural feature, and that is a different and more troubling pattern than the others share. Whether the wealth-gating is unique to law or whether the other domains have analogous patterns the chapter has missed is something I have not engaged.
 
 - **The chapter's voice is the looser register from earlier in the book and does not match the Part IV voice.** That asymmetry is shared with Ch 3 and was flagged there. Whether to harmonize across a polish pass is open.
+
+---
+
+[[info-time-limit|← Chapter 3: The Human Time Budget]] · [[complexity-virality-tradeoff|Chapter 5: The Complexity / Virality Trade-off →]]

@@ -81,3 +81,7 @@ The chapter's job in the book's argument is narrow: name the constraint, name wh
 - **Decompression-on-demand's effective leverage depends on receiver behavior at the boundary.** The story I have told assumes the receiver uses the LLM as a careful decompression tool. In practice many receivers will use it as a *substitute* — read the LLM summary, skip the source. That's the Ch 11 worst-case applied at the individual-receiver scale. How much of the in-principle leverage shows up in practice is an empirical question I have not engaged.
 
 - **The chapter's voice is looser than the more recent chapters.** I have written this in the more conversational register the original Ch 3 first half established, partly to keep the book accessible at this early stage and partly because the receiver-budget topic doesn't carry the same structural-argument density as the Part IV chapters. Whether that voice-asymmetry across the book is a feature or something to harmonize in a polish pass is open.
+
+---
+
+[[case-studies-and-three-realities|← Chapter 2: Case Studies and Three Realities]] · [[optionality vs access|Chapter 4: Optionality vs. Access →]]

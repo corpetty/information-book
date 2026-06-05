@@ -115,3 +115,8 @@ The book's later chapters give the chapter its prescription: cultivate versatile
 - **The "real human costs" framing of the COVID / nutrition / monetary-policy cases is doing rhetorical work I haven't fully earned.** I have invoked the costs to motivate the chapter's frustration without quantifying them, and the cases are picked for narrative force as well as analytical fit. A more careful version would either work the costs through with citations to specific public-health, public-trust, or economic-outcome literatures, or soften the framing to match what the chapter can actually defend. Currently the chapter is leveraging the rhetorical force of "these failures have real costs" without doing the quantifying work that would back it up.
 
 - **The bridge zone as a named stage may collapse on inspection into the curation gate from Ch 1 plus the meme gate from Ch 1.** I have written it as if "bridge zone" is its own distinct thing; structurally, it is the population of operators staffing two existing pipeline stages (News and Meme). Whether the chapter is naming a distinctive phenomenon or just labeling a population already present in the Ch 1 picture is something the next pass should clarify — either commit to the population framing as additive to the gate framing, or fold the bridge zone back into the curation/meme stages it occupies.
+
+
+---
+
+[[truth-compression-and-when-each-wins|← Chapter 5c: Truth, Compression, and When Each Wins]] · [[emotional-memetics|Chapter 7: Emotional Memetics As The Floor →]]

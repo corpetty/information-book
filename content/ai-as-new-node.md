@@ -131,3 +131,8 @@ The chapter's posture, restated: I am not arguing that LLMs are dangerous in the
 - **The "first kind of node" framing risks overstating what is structurally new.** Earlier compound media — the encyclopedia, the textbook, the lecture course — also owned a corpus (the entries written), an objective (the editorial line), and a deployment (the publishing schedule and distribution network). LLMs are not the first object to concentrate selection-design surfaces; they are the first object to concentrate them *at internet scale and with personalized output*. The right framing may be that LLMs are a continuation of an older pattern at a new scale rather than a categorically new pattern, and the chapter has perhaps overstated the structural break for emphasis. A polish pass should soften the "first kind of node" claim or argue the scale-change is itself a categorical change.
 
 - **The salvation/worst-case binary is too clean.** Most actual LLM deployments are neither salvation nor worst-case but somewhere in between: somewhat faithful, somewhat tilted, useful for some queries and misleading for others. The book's binary framing is a presentational convenience and the real political economy will sort LLMs into a continuum that the chapter has not characterized. Ch 12's prescription should probably engage the continuum directly rather than the binary.
+
+
+---
+
+[[political-economy-of-attention|← Chapter 10: Political Economy of Attention]] · [[infrastructure-for-integration|Chapter 12: Infrastructure for Integration →]]

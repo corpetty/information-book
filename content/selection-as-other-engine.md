@@ -111,3 +111,8 @@ The diagnosis, stated as a selection claim: **the breakage this book keeps circl
 - ~~**Mercier and O'Connor & Weatherall are argued, not sourced.**~~ Closed in subsequent extraction phases — *The Misinformation Age* and *Not Born Yesterday* are both now in the graph with substantial interpretive backing. The deeper engagement with Mercier's specific arguments lives in [[emotional-memetics|Ch 7]] and is downstream of the timescale-distinction the book commits to there.
 - **Emergent versus engineered tuning.** I have said gates "are tuned" and let the passive voice carry it. A gate that drifts toward engagement under an ad-revenue incentive and a gate someone deliberately set to invert a specific finding are different things, and "tuned" hides the difference. Telling them apart is Chapter 10's job; until it is done, the chapter's villain is a little blurry.
 - **The receiver-gate deserves its own treatment.** I introduced epistemic vigilance as "the receiver is a gate too" and used it to absorb Mercier in a paragraph. That is a lot of weight on one move. Within-receiver selection — what a single mind attends to, retains, re-transmits — may need its own section, or its own note.
+
+
+---
+
+[[complexity-virality-tradeoff|← Chapter 5: The Complexity / Virality Trade-off]] · [[truth-compression-and-when-each-wins|Chapter 5c: Truth, Compression, and When Each Wins →]]

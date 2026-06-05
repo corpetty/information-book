@@ -181,3 +181,8 @@ Some of these feedback loops will surface naturally in the case studies in Chapt
 The rest of Part I goes deeper into what gets lost (and what gets selected) at each stage. Part II asks why this arrangement is structurally unavoidable. Part III is about the bridge zone where most of the catastrophic distortion happens. Part IV is about what to do about it.
 
 But the core picture is here. Reality on one side, memes on the other, five stages of transformation in between, each stage doing both compression and selection. We never see The Out There directly. We see whatever survives the gates and arrives in whatever shape the medium of that arrival allows. The book is partly about how to be more honest about that, and partly about how to build infrastructure that does better than what we have now.
+
+
+---
+
+[[index|← Home]] · [[case-studies-and-three-realities|Chapter 2: Case Studies and Three Realities →]]
