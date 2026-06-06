@@ -585,7 +585,7 @@ function renderLanding() {
   el.innerHTML = `
     <div class="landing-inner">
       <h2>Where do you want to start?</h2>
-      <p class="landing-intro">The Information Book's ontology has ${GRAPH.nodes.length} nodes across ${Object.keys(GRAPH.meta.nodeTypes).length} categories — chapters, claims, sources, concepts, open questions, and the edges between them. Pick a view that matches what you want to look at.</p>
+      <p class="landing-intro">The ontology for <em>Lossy</em> has ${GRAPH.nodes.length} nodes across ${Object.keys(GRAPH.meta.nodeTypes).length} categories — chapters, claims, sources, concepts, open questions, and the edges between them. Pick a view that matches what you want to look at.</p>
       <div class="landing-tiles">${tiles}</div>
       <p class="landing-foot">You can switch views any time from the tabs in the header. To come back here, click the title.</p>
     </div>

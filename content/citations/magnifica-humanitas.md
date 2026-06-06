@@ -19,7 +19,7 @@ May 2026 papal encyclical on artificial intelligence, technology, and the common
 
 - [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]]
 - [[integration-problem|Ch 9 — The Integration Problem]]
-- [[outline|Information Book — Outline]] *(outline)*
+- [[outline|Lossy — Outline]] *(outline)*
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 

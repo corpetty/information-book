@@ -1,4 +1,6 @@
-# The Information Book
+# Lossy
+
+*How Ideas Get Compressed, Filtered, and Twisted on the Way to You*
 
 The book's repo. Three subsystems share one tree:
 

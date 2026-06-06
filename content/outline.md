@@ -1,5 +1,5 @@
 ---
-title: Information Book — Outline
+title: Lossy — Outline
 tags:
   - information
 ---

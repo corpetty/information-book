@@ -1,8 +1,10 @@
 ---
-title: The Information Book
+title: Lossy
 tags:
   - information
 ---
+
+*How Ideas Get Compressed, Filtered, and Twisted on the Way to You*
 
 A working draft of a book about why complex ideas have such a hard time traveling through modern media — and what can be done about it.
 
