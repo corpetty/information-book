@@ -1,5 +1,5 @@
 ---
-title: Preservation vs. Training
+title: "Chapter 8: Preservation vs. Training"
 tags:
   - information
 ---

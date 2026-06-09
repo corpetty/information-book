@@ -1,5 +1,5 @@
 ---
-title: Case Studies and Three Realities
+title: "Chapter 2: Case Studies and Three Realities"
 tags:
   - information
 ---

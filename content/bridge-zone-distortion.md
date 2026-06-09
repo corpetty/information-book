@@ -1,5 +1,5 @@
 ---
-title: Where It All Gets Fucked Up
+title: "Chapter 6: Where It All Gets Fucked Up"
 tags:
   - information
 ---

@@ -1,5 +1,5 @@
 ---
-title: The Integration Problem
+title: "Chapter 9: The Integration Problem"
 tags:
   - information
 ---

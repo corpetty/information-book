@@ -1,5 +1,5 @@
 ---
-title: Political Economy of Attention
+title: "Chapter 10: Political Economy of Attention"
 tags:
   - information
 ---

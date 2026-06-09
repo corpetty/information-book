@@ -1,5 +1,5 @@
 ---
-title: The limit on how much information a human can incorporate to create a world view
+title: "Chapter 3: The Human Time Budget"
 tags:
   - information
 ---

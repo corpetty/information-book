@@ -1,5 +1,5 @@
 ---
-title: Optionality vs. Access
+title: "Chapter 4: Optionality vs. Access"
 tags:
   - information
 ---

@@ -1,5 +1,5 @@
 ---
-title: The Complexity / Virality Trade-off
+title: "Chapter 5: The Complexity / Virality Trade-off"
 tags:
   - information
 ---

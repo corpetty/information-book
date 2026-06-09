@@ -1,5 +1,5 @@
 ---
-title: Infrastructure for Integration
+title: "Chapter 12: Infrastructure for Integration"
 tags:
   - information
 ---

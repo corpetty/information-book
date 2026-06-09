@@ -1,5 +1,5 @@
 ---
-title: Emotional Memetics As The Floor
+title: "Chapter 7: Emotional Memetics As The Floor"
 tags:
   - information
 ---

@@ -1,5 +1,5 @@
 ---
-title: Truth, Compression, and When Each Wins
+title: "Chapter 5c: Truth, Compression, and When Each Wins"
 tags:
   - information
 ---

@@ -1,5 +1,5 @@
 ---
-title: AI as a New Kind of Node
+title: "Chapter 11: AI as a New Kind of Node"
 tags:
   - information
 ---

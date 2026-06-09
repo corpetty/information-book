@@ -1,5 +1,5 @@
 ---
-title: The Information Landscape
+title: "Chapter 1: The Information Landscape"
 tags:
   - information
 ---
