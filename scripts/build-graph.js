@@ -548,18 +548,32 @@ function checkSources() {
   const local = stagedFilesIn(localDir);
   const claimed = new Set();
 
+  // Interpretive-edge count per source (computed once, reused below). A
+  // source with at least one interpretive edge has already been extracted.
+  const interpretiveBySource = new Map();
+  for (const e of edges) {
+    if (!e.interpretive) continue;
+    if (e.source?.startsWith('source:')) interpretiveBySource.set(e.source, (interpretiveBySource.get(e.source) || 0) + 1);
+    if (e.target?.startsWith('source:')) interpretiveBySource.set(e.target, (interpretiveBySource.get(e.target) || 0) + 1);
+  }
+
   for (const node of nodes.values()) {
     if (node.type !== 'Source') continue;
     const file = node.props?.file;
     if (!file) continue;
     claimed.add(file);
+    const extracted = (interpretiveBySource.get(node.id) || 0) > 0;
     const availability = node.props?.availability || 'external';
     if (availability === 'restricted') {
       if (committed.has(file)) {
         warnings.push(`source ${node.id}: in-copyright file "${file}" is in the committed sources/ folder — move it to sources-local/`);
       }
-      if (!local.has(file)) {
-        warnings.push(`source ${node.id}: file "${file}" not found in sources-local/`);
+      // Only nag about a missing in-copyright file if it hasn't been
+      // extracted yet. Once interpretive edges exist the PDF no longer needs
+      // to be staged — its absence on a fresh clone / CI is expected, not a
+      // problem (sources-local/ is gitignored).
+      if (!local.has(file) && !extracted) {
+        warnings.push(`source ${node.id}: in-copyright file "${file}" not staged in sources-local/ and not yet extracted`);
       }
     } else if (availability === 'open' || availability === 'unverified') {
       if (!committed.has(file)) {
@@ -582,16 +596,7 @@ function checkSources() {
   // has not been run against this PDF yet, which is the easiest authoring
   // task to forget. Warning, not error: a freshly added source legitimately
   // has zero edges between sources.json edit and the first extraction.
-  const interpretiveBySource = new Map();
-  for (const e of edges) {
-    if (!e.interpretive) continue;
-    if (e.source?.startsWith('source:')) {
-      interpretiveBySource.set(e.source, (interpretiveBySource.get(e.source) || 0) + 1);
-    }
-    if (e.target?.startsWith('source:')) {
-      interpretiveBySource.set(e.target, (interpretiveBySource.get(e.target) || 0) + 1);
-    }
-  }
+  // (interpretiveBySource was computed at the top of this function.)
   for (const node of nodes.values()) {
     if (node.type !== 'Source') continue;
     if (!node.props?.file) continue;
@@ -676,20 +681,60 @@ function parseNotes() {
 
 // ---------------------------------------------------------------- interpretive
 
+// Direction conventions for interpretive predicates, mirrored from
+// scripts/aggregate-interpretive.js (the canonical validator). Used only by
+// the per-PDF fallback below so a bare `make build` can't admit malformed
+// triples (e.g. a Concept as the subject of `supports`).
+const INTERPRETIVE_DIRECTION_RULES = {
+  supports:      { subject: ['source:'], object: ['claim:', 'mechanism:', 'concept:'] },
+  pressureTests: { subject: ['source:'], object: ['claim:', 'mechanism:', 'concept:'] },
+  evidencedBy:   { object: ['source:', 'note:'] },
+};
+
+function addInterpretiveEdge(t) {
+  if (!meta.predicates[t.predicate]) return;
+  addEdge(t.subject, t.object, t.predicate, {
+    interpretive: true,
+    quote: t.quote,
+    pageApprox: t.pageApprox,
+    confidence: t.confidence,
+    rationale: t.rationale,
+    sourceFile: t.sourceFile,
+  });
+}
+
 function loadInterpretive() {
-  const path = resolve(dataDir, 'interpretive-triples.jsonl');
-  if (!existsSync(path)) return;
-  const lines = readFileSync(path, 'utf8').split('\n').filter(l => l.trim());
-  for (const line of lines) {
-    const t = JSON.parse(line);
-    addEdge(t.subject, t.object, t.predicate, {
-      interpretive: true,
-      quote: t.quote,
-      pageApprox: t.pageApprox,
-      confidence: t.confidence,
-      rationale: t.rationale,
-      sourceFile: t.sourceFile,
-    });
+  // Fast path: the aggregated, validated, de-duped file produced by
+  // `make aggregate-interpretive` / `make extract-build`.
+  const aggregate = resolve(dataDir, 'interpretive-triples.jsonl');
+  if (existsSync(aggregate)) {
+    const lines = readFileSync(aggregate, 'utf8').split('\n').filter(l => l.trim());
+    for (const line of lines) addInterpretiveEdge(JSON.parse(line));
+    return;
+  }
+
+  // Fallback: no aggregate present (it is gitignored, so absent on a fresh
+  // clone). Read the committed per-PDF extractions directly so the
+  // source-evidence layer (supports / pressureTests / evidencedBy) still
+  // ships from a bare `make build`. Apply the same direction checks the
+  // aggregator enforces; node-existence and de-dup are handled downstream
+  // (validateEdges drops dangling endpoints, addEdge de-dups by s|p|o).
+  const dir = resolve(dataDir, 'interpretive');
+  if (!existsSync(dir)) return;
+  for (const f of readdirSync(dir).filter(f => f.endsWith('.jsonl')).sort()) {
+    const slug = f.replace(/\.jsonl$/, '');
+    for (const line of readFileSync(resolve(dir, f), 'utf8').split('\n')) {
+      if (!line.trim()) continue;
+      let t;
+      try { t = JSON.parse(line); } catch { continue; }
+      if (t._note || !t.subject || !t.predicate || !t.object) continue;
+      const rule = INTERPRETIVE_DIRECTION_RULES[t.predicate];
+      if (rule) {
+        if (rule.subject && !rule.subject.some(p => t.subject.startsWith(p))) continue;
+        if (rule.object && !rule.object.some(p => t.object.startsWith(p))) continue;
+      }
+      addInterpretiveEdge({ ...t, sourceFile: t.sourceFile || slug });
+    }
   }
 }
 
@@ -711,7 +756,6 @@ function emit() {
   for (const e of edges) byPredicate[e.predicate] = (byPredicate[e.predicate] || 0) + 1;
 
   const stats = {
-    phase: 11,
     builtAt: new Date().toISOString(),
     counts: { nodes: nodes.size, edges: edges.length, warnings: warnings.length },
     byNodeType: byType,
