@@ -34,6 +34,8 @@ make context CENTER=chapter:<slug>                # emit drafting bundle to stdo
 make context CENTER=claim:<slug> ARGS="-o foo.md" # write bundle to file
 
 # Site
+make citation-pages                               # regenerate content/citations/*.md from sources.json
+make concept-pages                                # regenerate content/{concepts,cases,mechanisms,questions}/*.md from the graph
 make site-build                                   # build Quartz output into site/public/
 make site-serve                                   # build and live-serve at localhost:8080
 make site-clean                                   # remove site/public + site/.quartz-cache
@@ -41,7 +43,15 @@ make site-clean                                   # remove site/public + site/.q
 make help                                         # list targets
 ```
 
-Current state: **168 nodes / 617 edges / 0 warnings**.
+Current state: **221 nodes / 1051 edges / 0 warnings**.
+
+A bare `make build` is now self-contained: it folds in the committed
+per-PDF source extractions (`data/interpretive/*.jsonl`) directly, so the
+`supports` / `pressureTests` / `evidencedBy` evidence layer ships on a fresh
+clone without a separate aggregation step. `make extract-build` is still the
+canonical path when you re-run extraction agents (it re-validates and
+de-dupes into `data/interpretive-triples.jsonl`), but the two produce the
+same graph.
 
 ## The drafting loop
 
@@ -49,8 +59,10 @@ This is what the tool is for. The graph exists to make this loop tight.
 
 1. **Generate a context bundle** for the chapter you want to draft:
    ```bash
-   make context CENTER=chapter:selection-as-other-engine -o /tmp/c5b.md
+   make context CENTER=chapter:selection-as-other-engine ARGS="-o /tmp/c5b.md"
    ```
+   (Pass script flags through `ARGS=`; a bare `-o` after the make goal is
+   swallowed by make and never reaches the script.)
    Output (~20-25 KB / ~5,000-6,000 tokens) contains the chapter's
    summary, every claim it argues with full verbatim source quotes
    (supports + pressure-tests with page numbers, confidence, rationale),
@@ -86,15 +98,15 @@ This is what the tool is for. The graph exists to make this loop tight.
 
 Schema is the contract in [`data/graph-meta.json`](data/graph-meta.json).
 
-**15 node types**, grouped by role:
+**15 node types**, grouped by role (current counts in parentheses):
 
-- **Outline scaffolding**: `Part`, `Chapter`, `Note`, `Status`
-- **Pipeline model**: `PipelineStage`, `Gate` (from
+- **Outline scaffolding**: `Part` (4), `Chapter` (14), `Note` (25), `Status` (5)
+- **Pipeline model**: `PipelineStage` (6), `Gate` (5) (from
   `the-information-landscape.md`)
-- **Argument layer**: `Mechanism`, `Concept`, `Question`, `Claim`,
-  `Tension`
-- **Source layer**: `Source`, `Author`, `Tradition`
-- **Illustration**: `CaseStudy`
+- **Argument layer**: `Mechanism` (8), `Concept` (58), `Question` (7),
+  `Claim` (33), `Tension` (3)
+- **Source layer**: `Source` (20), `Author` (13), `Tradition` (7)
+- **Illustration**: `CaseStudy` (13)
 
 **26 predicates** in 6 categories:
 
@@ -148,7 +160,50 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 25 | `d5b4128` | Viewer overhaul I: header view tabs (Book overview / Argument map / Source map / Open questions / Drafting status / Full graph), search box, clickable type-filter legend. State serialises to URL hash |
 | 26 | `86d516b` | Viewer overhaul II: detail panel becomes readable — summary prose, status badges, working-answer block for resolved Questions, "Read the prose →" link for Note/Chapter, neighbours grouped by predicate with click-to-navigate |
 | 27 | `7622326` | Viewer overhaul III: first-load tiled landing with one button per view (each tile shows label + description + live counts). Home button in header returns to landing |
-| 28 | `(this commit)` | Viewer embedded in Quartz site. `make site-build` chains build-graph → quartz build → viewer-stage (copies `src/` + `data/*.json` into `site/public/{graph,data}/`). Deploy workflow switched from `npx quartz build` to `make site-build`. `content/index.md` and `content/glossary.md` link to the live viewer |
+| 28 | `69ed391` | Viewer embedded in Quartz site. `make site-build` chains build-graph → quartz build → viewer-stage (copies `src/` + `data/*.json` into `site/public/{graph,data}/`). Deploy workflow switched from `npx quartz build` to `make site-build`. `content/index.md` and `content/glossary.md` link to the live viewer |
+
+### Phases 29–61 (condensed)
+
+The per-phase table above is no longer maintained line-by-line; `git log
+--oneline` is the authority. The major capabilities added since Phase 28:
+
+- **Book drafted out.** Chapters 2, 6, 7, 8, 9, 10, 11, 12 went from skeleton
+  to full draft; the book was **retitled "Lossy"** (Phase 58) and gained the
+  *The Abyss* companion essay (Phase 59).
+- **Dialectical + causal layer.** `data/tensions.json` and the `supersedes` /
+  `evidencedBy` / `tensionWith` / `contradicts` edges (Phases 50–53), plus a
+  "What's contested" viewer preset. 19 orphan concepts got a `definedIn` home.
+- **Citation page generation.** `scripts/generate-citation-pages.js` emits
+  `content/citations/*.md` from `sources.json` with computed back-pointers
+  (`make citation-pages`).
+- **Reader experience.** Sequential prev/next chapter nav (Phase 57), an
+  accessible landing page + glossary, reader-inclusion passes across the
+  chapters, and Explorer ordering by reading order (Phases 60–61).
+- **Source set grew** to 20 sources (Mercier's *Not Born Yesterday*, the
+  *Magnifica Humanitas* encyclical, and others) with per-PDF extractions in
+  `data/interpretive/` (12 files).
+
+### Audit pass (June 2026)
+
+A repo-wide audit landed several cross-cutting fixes:
+
+- **`make build` made self-contained** — folds in `data/interpretive/*.jsonl`
+  directly, so the source-evidence layer (`supports` / `pressureTests` /
+  `evidencedBy`) ships on a fresh clone. Bare build went from a partial
+  897-edge / 10-warning graph to the full **1051 edges / 0 warnings**; the
+  "source unread" false-negative warnings are gone, and in-copyright sources
+  no longer warn once extracted.
+- **Concept landing pages** — `scripts/generate-concept-pages.js` gives every
+  Concept / CaseStudy / Mechanism / Question node a Quartz page (summary +
+  graph connections + backlinks), fixing wiki-mode dead links to nodes like
+  `justification-market` and `power-posing`.
+- **Viewer fixes** — the Chapter-4 "Read the prose →" 404 (filename with
+  spaces) and the SPA-router-eats-the-viewer-link bug are fixed.
+- **Three reading modes tuned** — reading-order Explorer, an interactive graph
+  that no longer collapses into one `information`-tag hub, and a "three ways
+  in" entry on the landing page.
+- Authorial / prose decisions surfaced by the audit are collected in
+  [`PROSE-DECISIONS.md`](PROSE-DECISIONS.md) (flagged, not changed).
 
 ## Layout
 
@@ -161,19 +216,22 @@ information-book/
 │   ├── glossary.md                    plain-language definitions of load-bearing terms
 │   ├── outline.md                     working outline / TOC (dense; read after the landing page)
 │   ├── *.md                           chapter drafts and foundational notes
+│   ├── concepts/ cases/               GENERATED landing pages for graph nodes
+│   │   mechanisms/ questions/         with no prose home (one folder per type)
 │   ├── experiments/                   experiment-tracker notes
 │   ├── sources/                       open-licence academic PDFs (cited by the graph)
 │   ├── images/                        figures referenced from prose
-│   └── citations/                     reference notes for cross-cited sources
+│   └── citations/                     reference notes for cross-cited sources (part generated)
 ├── data/                              ONTOLOGY catalogs + outputs
 │   ├── graph-meta.json                schema contract — node types + predicates
-│   ├── mechanisms.json                5 named structural mechanisms
-│   ├── concepts.json                  37 cross-cutting concepts
-│   ├── questions.json                 7 foundational questions (open / provisionally-resolved / resolved)
-│   ├── traditions.json                6 intellectual lineages
-│   ├── sources.json                   18 sources + 12 authors
-│   ├── case-studies.json              7 worked examples
-│   ├── claims.json                    24 canonical claims (promoted from candidates)
+│   ├── mechanisms.json                8 named structural mechanisms
+│   ├── concepts.json                  58 cross-cutting concepts
+│   ├── questions.json                 7 foundational questions (provisionally-resolved / resolved)
+│   ├── traditions.json                7 intellectual lineages
+│   ├── sources.json                   20 sources + 13 authors
+│   ├── case-studies.json              13 worked examples
+│   ├── claims.json                    33 canonical claims (promoted from candidates)
+│   ├── tensions.json                  3 dialectical tensions (tensionWith / contradicts edges)
 │   ├── slug-aliases.json              wikilink-resolution overrides
 │   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (committed)
 │   ├── claim-candidates.jsonl         harvester output (gitignored)
@@ -190,6 +248,8 @@ information-book/
 │   ├── aggregate-interpretive.js      merge + validate per-PDF JSONLs
 │   ├── context-bundle.js              graph → markdown drafting packet
 │   ├── sources-report.js              per-source dashboard
+│   ├── generate-citation-pages.js     sources.json → content/citations/*.md
+│   ├── generate-concept-pages.js      graph → content/{concepts,cases,mechanisms,questions}/*.md
 │   └── EXTRACTION_PROMPT.md           agent prompt for per-PDF extraction
 ├── src/                               ONTOLOGY viewer (Cytoscape)
 │   ├── index.html                     viewer shell
