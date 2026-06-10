@@ -14,6 +14,7 @@
 #   make extract-build   aggregate + rebuild (run after extraction agents)
 #   make context CENTER=<id>   emit a markdown context bundle for a node
 #   make citation-pages  regenerate content/citations/*.md from data/sources.json
+#   make concept-pages   regenerate content/{concepts,cases,mechanisms,questions}/*.md from the graph
 #   make site-build  rebuild graph + citation pages + Quartz site + stage viewer at /graph/
 #   make site-serve  build and serve the Quartz site at localhost:8080
 #   make site-clean  remove the site build output and cache
@@ -35,7 +36,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages site-build site-serve site-clean viewer-stage
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean viewer-stage
 
 all: build
 
@@ -90,10 +91,17 @@ viewer-stage:
 citation-pages: build
 	@node $(SCRIPTS)/generate-citation-pages.js
 
+# Regenerate landing pages for concept / case / mechanism / question nodes
+# that have no prose page of their own. Idempotent (generator marker), and
+# hand-written overrides are left alone. Depends on `build` so it reads fresh
+# nodes/edges. These pages are committed (part of content/).
+concept-pages: build
+	@node $(SCRIPTS)/generate-concept-pages.js
+
 # Full site build: rebuild the graph (so the data the viewer ships is fresh),
-# regenerate citation pages from sources.json, build the Quartz output,
+# regenerate citation + concept landing pages, build the Quartz output,
 # then stage the viewer on top. This is what CI runs.
-site-build: citation-pages
+site-build: citation-pages concept-pages
 	@cd site && npx quartz build
 	@$(MAKE) viewer-stage
 
@@ -108,7 +116,9 @@ site-clean:
 	@rm -rf site/public site/.quartz-cache
 
 clean:
-	@rm -f $(NODES_OUT) $(EDGES_OUT) $(STATS_OUT)
+	@rm -f $(NODES_OUT) $(EDGES_OUT) $(STATS_OUT) \
+	       $(DATA)/extraction-catalog.json $(DATA)/interpretive-triples.jsonl \
+	       $(DATA)/interpretive-notes.json $(DATA)/claim-candidates.jsonl
 
 help:
 	@awk '/^# / { sub(/^# ?/, ""); print } /^[a-zA-Z_-]+:/ && !/^\..*$$/ { sub(/:.*$$/, ""); print "  → " $$0 }' Makefile
