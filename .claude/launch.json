@@ -12,6 +12,13 @@
       "runtimeExecutable": "python3",
       "runtimeArgs": ["-m", "http.server", "8766", "-d", "site/public"],
       "port": 8766
+    },
+    {
+      "name": "quartz-dev",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["quartz", "build", "--serve", "--port", "8080"],
+      "cwd": "site",
+      "port": 8080
     }
   ]
 }

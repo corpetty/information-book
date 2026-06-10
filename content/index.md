@@ -48,7 +48,13 @@ A few working conclusions hold the structure together. They're still being press
 
 This is a working draft — but a complete one in draft: all four parts and all fourteen chapters now have full drafts. The diagnostic spine (Parts I–III) has settled enough to read straight through; the prescriptive Part IV — what to actually *do* about it — is fully drafted but still being pressure-tested and polished.
 
-- **[Explore the ontology →](./graph/)** — an interactive map of the book's argument: chapters, claims, sources, open questions, and how they all connect. Pick a starting view (Book overview / Argument map / Source map / Open questions / What's contested / Drafting status).
+There are three ways in, and you can switch between them at any time:
+
+1. **Read it like a book.** **[Start at Chapter 1 → The Information Landscape](the-information-landscape)**, then follow the *next →* link at the foot of each chapter straight through to the end.
+2. **Explore the knowledge graph.** Every term is a page; follow the in-text links, the **backlinks** panel, and the **local graph** (right side of every page) to wander the connections in whatever order you like.
+3. **See the whole argument at once.** The interactive ontology map below lays out chapters, claims, sources, and open questions as one navigable graph.
+
+- **<a href="./graph/" data-routerIgnore="true">Explore the ontology →</a>** — an interactive map of the book's argument: chapters, claims, sources, open questions, and how they all connect. Pick a starting view (Book overview / Argument map / Source map / Open questions / What's contested / Drafting status).
 - **[[glossary|Glossary]]** — plain-language definitions of every load-bearing term used across the book. Worth opening in a second tab while you read.
 - **[[outline]]** — the working table of contents. Dense, and written for the author; most useful once you've skimmed the glossary.
 - **Most settled chapters**: [[the-information-landscape|Chapter 1 — The Information Landscape]] and [[truth-compression-and-when-each-wins|Chapter 5c — Truth, Compression, and When Each Wins]]. Start here if you'd rather read the book itself than the working notes.

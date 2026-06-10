@@ -1,6 +1,48 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
+// The Explorer sortFn lifts the chapter spine to the top in reading order so
+// the sidebar reads like a table of contents; everything else (foundational
+// notes, glossary, outline) follows alphabetically, and the generated
+// graph-node folders (concepts, cases, mechanisms, questions, citations, …)
+// collapse at the bottom.
+//
+// Self-contained: this is serialized with .toString() and run in the browser,
+// so the reading-order list is inlined rather than closed over.
+const readingOrderSortFn = (a: any, b: any): number => {
+  const ORDER = [
+    "index",
+    "the-information-landscape",
+    "case-studies-and-three-realities",
+    "info-time-limit",
+    "optionality-vs-access",
+    "complexity-virality-tradeoff",
+    "selection-as-other-engine",
+    "truth-compression-and-when-each-wins",
+    "bridge-zone-distortion",
+    "emotional-memetics",
+    "preservation-vs-training",
+    "integration-problem",
+    "political-economy-of-attention",
+    "ai-as-new-node",
+    "infrastructure-for-integration",
+  ]
+  // rank: chapters in reading order (0..N), then other root files (1e6),
+  // then folders (2e6). Lower sorts first.
+  const rank = (n: any): number => {
+    if (n.isFolder) return 2_000_000
+    const i = ORDER.indexOf(n.slug ?? "")
+    return i === -1 ? 1_000_000 : i
+  }
+  const ra = rank(a)
+  const rb = rank(b)
+  if (ra !== rb) return ra - rb
+  return a.displayName.localeCompare(b.displayName, undefined, {
+    numeric: true,
+    sensitivity: "base",
+  })
+}
+
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -8,8 +50,7 @@ export const sharedPageComponents: SharedLayout = {
   afterBody: [],
   footer: Component.Footer({
     links: {
-      GitHub: "https://github.com/jackyzha0/quartz",
-      "Discord Community": "https://discord.gg/cRFFHYye7t",
+      "The book on GitHub": "https://github.com/corpetty/information-book",
     },
   }),
 }
@@ -38,10 +79,30 @@ export const defaultContentPageLayout: PageLayout = {
         { Component: Component.ReaderMode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "Contents",
+      sortFn: readingOrderSortFn,
+    }),
   ],
   right: [
-    Component.Graph(),
+    Component.Graph({
+      // Local graph: the page's immediate neighbourhood. Drop the ubiquitous
+      // tags so it shows real argument links, not tag co-membership.
+      localGraph: {
+        depth: 1,
+        scale: 1.1,
+        removeTags: ["information", "graph-node", "citation"],
+      },
+      // Global graph: the whole book. Tags off entirely — with `information`
+      // on nearly every page, tag nodes collapse the structure into one hub;
+      // the wikilink/citation structure is what's worth seeing.
+      globalGraph: {
+        depth: -1,
+        showTags: false,
+        focusOnHover: true,
+        enableRadial: true,
+      },
+    }),
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
@@ -62,7 +123,10 @@ export const defaultListPageLayout: PageLayout = {
         { Component: Component.Darkmode() },
       ],
     }),
-    Component.Explorer(),
+    Component.Explorer({
+      title: "Contents",
+      sortFn: readingOrderSortFn,
+    }),
   ],
   right: [],
 }

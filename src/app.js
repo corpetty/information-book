@@ -363,8 +363,10 @@ function proseUrlFor(node) {
     const file = node.props?.file;
     if (!file) return null;
     // Match Quartz's pretty-URL form: ../<slug> (no extension, no trailing
-    // slash). GitHub Pages resolves to the underlying .html.
-    return `../${file.replace(/\.md$/, '')}`;
+    // slash). Quartz slugifies spaces to hyphens, so a filename like
+    // "optionality vs access.md" publishes at ".../optionality-vs-access";
+    // mirror that here or the link 404s. GitHub Pages resolves to the .html.
+    return `../${file.replace(/\.md$/, '').replace(/\s+/g, '-')}`;
   }
   if (node.type === 'Chapter') {
     const draft = node.props?.draftNote;

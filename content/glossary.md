@@ -6,7 +6,7 @@ tags:
 
 The book makes one big claim — that ideas get distorted as they travel from reality out to a general audience — and to explain *how*, it builds up a handful of specific terms. This page is where those terms live, in plain language, so you never have to take one on faith. If a chapter loses you on a word, come here, then go back. That's what it's for.
 
-Entries are grouped by where each term enters the argument rather than alphabetically, so reading top to bottom roughly follows the book's own path; use your browser's find for a direct lookup. Each entry links to the chapter or note that works the term through in depth. To see how the terms connect — which chapters cover which, where each claim gets its source backing, what's still open — try the [interactive ontology map](./graph/).
+Entries are grouped by where each term enters the argument rather than alphabetically, so reading top to bottom roughly follows the book's own path; use your browser's find for a direct lookup. Each entry links to the chapter or note that works the term through in depth. To see how the terms connect — which chapters cover which, where each claim gets its source backing, what's still open — try the <a href="./graph/" data-routerIgnore="true">interactive ontology map</a>.
 
 ## The pipeline
 
