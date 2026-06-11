@@ -310,7 +310,8 @@
       "summary": "The null model for spread: what propagation looks like with no selection at all — random copying plus rich-get-richer accumulation. Most meme variants follow it. Selection is what you detect as departure from this baseline. (Catalog gap flagged by the info-evolution extraction.)",
       "aliases": ["neutral drift", "Yule process", "rich-get-richer", "neutral model"],
       "definedIn": ["selection-as-other-engine"],
-      "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+      "coveredBy": ["complexity-virality-tradeoff", "selection-as-other-engine"],
+      "evidencedBy": ["luria-delbruck"]
     },
     {
       "id": "replicator-ontology",

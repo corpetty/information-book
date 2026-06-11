@@ -35,6 +35,11 @@
       "id": "catholic-social-teaching",
       "label": "Catholic social teaching",
       "summary": "The Catholic Church's body of teaching on social, economic, and political questions — institutional ethics applied to contemporary structural problems. Recent documents (Laudato Si', Fratelli Tutti, Magnifica Humanitas) engage technology, ecology, and the political economy of digital systems from a moral-realist framework that the book engages as contemporary intervention rather than settled prior art."
+    },
+    {
+      "id": "evolutionary-dynamics",
+      "label": "Evolutionary dynamics",
+      "summary": "The formal core of selection theory: how variation arises and how differential reproduction reshapes a population over time. Price's covariance decomposition (change splits into a selection term and a transmission term) and the Luria–Delbrück fluctuation test (variation arises before selection, not in response to it) are the mathematics the book's transport-vs-selection split rests on."
     }
   ]
 }

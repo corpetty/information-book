@@ -13,7 +13,12 @@
     { "id": "yuval-noah-harari",  "label": "Yuval Noah Harari",  "summary": "Author of Nexus; framing on myths/bureaucracy and three realities." },
     { "id": "tim-urban",          "label": "Tim Urban",          "summary": "Wait But Why author. The tablespoon-of-weeks visualization." },
     { "id": "douglas-hofstadter",   "label": "Douglas Hofstadter",   "summary": "Cognitive scientist; author of Gödel, Escher, Bach. Originated the frame/outer/inner three-layer message model." },
-    { "id": "leo-xiv",             "label": "Pope Leo XIV",         "summary": "Roman Catholic Pope (elected 2025); author of the 2026 encyclical Magnifica Humanitas on AI, technology, and the common good." }
+    { "id": "leo-xiv",             "label": "Pope Leo XIV",         "summary": "Roman Catholic Pope (elected 2025); author of the 2026 encyclical Magnifica Humanitas on AI, technology, and the common good." },
+    { "id": "rolf-landauer",       "label": "Rolf Landauer",        "summary": "IBM physicist. Landauer's principle (1961): erasing one bit of information dissipates at least kT ln 2 of energy." },
+    { "id": "charles-bennett",     "label": "Charles Bennett",      "summary": "IBM physicist. Resolved Maxwell's demon (1982) by showing the demon must pay Landauer's erasure cost when it clears its memory." },
+    { "id": "george-price",        "label": "George Price",         "summary": "Population geneticist. The Price equation (1970) splits evolutionary change into a selection term (covariance with fitness) and a transmission term." },
+    { "id": "salvador-luria",      "label": "Salvador Luria",       "summary": "Microbiologist. With Delbrück, the 1943 fluctuation test showing bacterial mutations arise before selection, not in response to it." },
+    { "id": "max-delbruck",        "label": "Max Delbrück",         "summary": "Biophysicist. Co-author of the 1943 Luria–Delbrück fluctuation test." }
   ],
   "sources": [
     {
@@ -240,6 +245,41 @@
       "engagement": "primary internal source — first place the three-layer model was bound to the medium",
       "availability": "external",
       "tags": ["internal"]
+    },
+    {
+      "id": "landauers-principle",
+      "label": "Irreversibility and Heat Generation in the Computing Process",
+      "kind": "paper",
+      "author": "rolf-landauer",
+      "coauthors": ["charles-bennett"],
+      "tradition": "information-theory",
+      "summary": "Landauer (1961) established that erasing one bit of information carries an unavoidable thermodynamic cost of at least kT ln 2; Bennett (1982) used this to dissolve Maxwell's demon, showing the demon's apparent free order is paid back when it erases its memory. Grounds the book's 'a choice is a cost too' correction: aiming is never free, and the real split is blind cost vs. criterial cost.",
+      "engagement": "evidentiary grounding for the cost/choice asymmetry in Chapter 5b",
+      "availability": "external",
+      "tags": ["evidence"]
+    },
+    {
+      "id": "price-equation",
+      "label": "Selection and Covariance (the Price equation)",
+      "kind": "paper",
+      "author": "george-price",
+      "tradition": "evolutionary-dynamics",
+      "summary": "Price (1970) decomposes the change in any trait across a generation into two terms: a selection term equal to the covariance between the trait and fitness, and a transmission term capturing everything imperfect transmission does. The aim lives entirely in the covariance; the transmission term is the blind cost, and biased (anisotropic) transmission sits there too — still un-steerable. Formal backing for the transport-as-cost / selection-as-choice split.",
+      "engagement": "evidentiary grounding for the two-term decomposition in Chapter 5b",
+      "availability": "external",
+      "tags": ["evidence"]
+    },
+    {
+      "id": "luria-delbruck",
+      "label": "Mutations of Bacteria from Virus Sensitivity to Virus Resistance",
+      "kind": "paper",
+      "author": "salvador-luria",
+      "coauthors": ["max-delbruck"],
+      "tradition": "evolutionary-dynamics",
+      "summary": "Luria & Delbrück (1943), the fluctuation test: the wide variance in resistant-bacteria counts across parallel cultures showed mutations arise spontaneously before the selective pressure (the virus), not in adaptive response to it. Variation proposes blind, and only afterward does selection choose — grounding the book's claim that the generate step runs blind.",
+      "engagement": "evidentiary grounding for blind variation preceding selection in Chapter 5b",
+      "availability": "external",
+      "tags": ["evidence"]
     }
   ]
 }
