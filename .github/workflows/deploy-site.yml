@@ -53,6 +53,15 @@ jobs:
         # ontology viewer publishes at /information-book/graph/.
         run: make site-build
 
+      - name: Check committed generated pages are fresh
+        # site-build regenerates citation + concept pages. If the committed
+        # copies differ, GitHub-web / Obsidian readers see stale pages — fail
+        # so they get re-committed.
+        run: git diff --exit-code content/
+
+      - name: Check published internal links resolve
+        run: node scripts/check-site-links.js
+
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site/public

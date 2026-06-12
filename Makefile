@@ -17,6 +17,7 @@
 #   make concept-pages   regenerate content/{concepts,cases,mechanisms,questions}/*.md from the graph
 #   make site-build  rebuild graph + citation pages + Quartz site + stage viewer at /graph/
 #   make site-serve  build and serve the Quartz site at localhost:8080
+#   make site-check  verify committed pages are fresh + internal links resolve
 #   make site-clean  remove the site build output and cache
 #   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
 #   make test      run the graph regression tests (snapshot + invariants)
@@ -39,7 +40,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean viewer-stage test check accept-stats
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean site-check viewer-stage test check accept-stats
 
 all: build
 
@@ -131,6 +132,13 @@ site-build: citation-pages concept-pages
 # integrated experience.
 site-serve:
 	@cd site && npx quartz build --serve
+
+# Post-build publish-path checks (also run in CI): committed generated
+# pages must match a fresh regeneration, and every internal link in the
+# built site must resolve. Run after `make site-build`.
+site-check:
+	@git diff --exit-code content/ || (echo "committed generated pages are stale — re-run make site-build and commit content/" && exit 1)
+	@node $(SCRIPTS)/check-site-links.js
 
 site-clean:
 	@rm -rf site/public site/.quartz-cache
