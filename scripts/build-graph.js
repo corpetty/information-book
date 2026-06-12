@@ -18,7 +18,7 @@
 // parser with wiki-link extraction, claim harvester, and LLM
 // interpretive triples from sources/*.pdf.
 
-import { readFileSync, writeFileSync, existsSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, readdirSync, statSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, extname } from 'node:path';
 
@@ -679,6 +679,27 @@ function parseNotes() {
   }
 }
 
+// ---------------------------------------------------------------- orphan notes
+
+function checkOrphanNotes() {
+  // Every top-level content/*.md should be seeded as a Note — the parser
+  // only walks seeded notes, so an unseeded file is silently invisible to
+  // the graph (no wikilinks, no claims scope, no context bundles).
+  // Subdirectories (citations/, concepts/, experiments/, …) are
+  // deliberately out of scope: generated pages and trackers live there,
+  // not argument-bearing prose.
+  const seeded = new Set();
+  for (const n of nodes.values()) {
+    if (n.type === 'Note' && n.props?.file) seeded.add(n.props.file);
+  }
+  for (const f of readdirSync(NOTES_DIR, { withFileTypes: true })) {
+    if (!f.isFile() || !f.name.endsWith('.md')) continue;
+    if (!seeded.has(f.name)) {
+      warnings.push(`orphan note: content/${f.name} is not seeded as a Note — invisible to the graph`);
+    }
+  }
+}
+
 // ---------------------------------------------------------------- interpretive
 
 // Direction conventions for interpretive predicates, mirrored from
@@ -707,7 +728,19 @@ function loadInterpretive() {
   // Fast path: the aggregated, validated, de-duped file produced by
   // `make aggregate-interpretive` / `make extract-build`.
   const aggregate = resolve(dataDir, 'interpretive-triples.jsonl');
+  const perPdfDir = resolve(dataDir, 'interpretive');
   if (existsSync(aggregate)) {
+    // Guard: the aggregate is gitignored and easy to forget. If any
+    // committed per-PDF extraction is newer, the fast path would silently
+    // build from stale data — warn and name the canonical refresh.
+    if (existsSync(perPdfDir)) {
+      const aggMtime = statSync(aggregate).mtimeMs;
+      for (const f of readdirSync(perPdfDir).filter(f => f.endsWith('.jsonl')).sort()) {
+        if (statSync(resolve(perPdfDir, f)).mtimeMs > aggMtime) {
+          warnings.push(`stale aggregate: data/interpretive/${f} is newer than interpretive-triples.jsonl — run \`make extract-build\``);
+        }
+      }
+    }
     const lines = readFileSync(aggregate, 'utf8').split('\n').filter(l => l.trim());
     for (const line of lines) addInterpretiveEdge(JSON.parse(line));
     return;
@@ -717,21 +750,35 @@ function loadInterpretive() {
   // clone). Read the committed per-PDF extractions directly so the
   // source-evidence layer (supports / pressureTests / evidencedBy) still
   // ships from a bare `make build`. Apply the same direction checks the
-  // aggregator enforces; node-existence and de-dup are handled downstream
-  // (validateEdges drops dangling endpoints, addEdge de-dups by s|p|o).
-  const dir = resolve(dataDir, 'interpretive');
-  if (!existsSync(dir)) return;
-  for (const f of readdirSync(dir).filter(f => f.endsWith('.jsonl')).sort()) {
+  // aggregator enforces — and surface the same conditions as warnings, so
+  // the bare path is never quieter than `make extract-build` about bad
+  // data. Node-existence and de-dup are handled downstream (validateEdges
+  // drops dangling endpoints with a warning, addEdge de-dups by s|p|o).
+  if (!existsSync(perPdfDir)) return;
+  for (const f of readdirSync(perPdfDir).filter(f => f.endsWith('.jsonl')).sort()) {
     const slug = f.replace(/\.jsonl$/, '');
-    for (const line of readFileSync(resolve(dir, f), 'utf8').split('\n')) {
+    for (const line of readFileSync(resolve(perPdfDir, f), 'utf8').split('\n')) {
       if (!line.trim()) continue;
       let t;
-      try { t = JSON.parse(line); } catch { continue; }
-      if (t._note || !t.subject || !t.predicate || !t.object) continue;
+      try { t = JSON.parse(line); } catch {
+        warnings.push(`interpretive ${f}: malformed JSON: ${line.slice(0, 80)}…`);
+        continue;
+      }
+      if (t._note) continue; // trailing agent notes are expected, not data
+      if (!t.subject || !t.predicate || !t.object) {
+        warnings.push(`interpretive ${f}: missing s/p/o: ${line.slice(0, 120)}`);
+        continue;
+      }
       const rule = INTERPRETIVE_DIRECTION_RULES[t.predicate];
       if (rule) {
-        if (rule.subject && !rule.subject.some(p => t.subject.startsWith(p))) continue;
-        if (rule.object && !rule.object.some(p => t.object.startsWith(p))) continue;
+        if (rule.subject && !rule.subject.some(p => t.subject.startsWith(p))) {
+          warnings.push(`interpretive ${f}: ${t.predicate} subject must be ${rule.subject.join(' / ')}* — got "${t.subject}"`);
+          continue;
+        }
+        if (rule.object && !rule.object.some(p => t.object.startsWith(p))) {
+          warnings.push(`interpretive ${f}: ${t.predicate} object must be ${rule.object.join(' / ')}* — got "${t.object}"`);
+          continue;
+        }
       }
       addInterpretiveEdge({ ...t, sourceFile: t.sourceFile || slug });
     }
@@ -785,6 +832,7 @@ loadClaims();
 loadTensions();
 checkClaimDrift();
 parseNotes();
+checkOrphanNotes();
 loadInterpretive();
 checkSources();
 validateEdges();
