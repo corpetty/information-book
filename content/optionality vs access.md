@@ -52,7 +52,7 @@ plt.show()
 
 which will yield the following image:
 
-![[matplotplib.png]]
+![[matplotlib.png]]
 
 and now for `seaborn`:
 
@@ -97,7 +97,7 @@ A narrow specialist party in a proportional-representation system has the opposi
 
 The trade is structural and visible in real time. When a broad-tent party tries to take a specific position on a divisive issue, parts of the coalition peel off and the party loses access; when a narrow party tries to broaden its appeal, it loses the precision that defined it and its core supporters defect. **No major-coalition party in a winner-take-all system has solved this trade — they all spend their effort managing it.** The curve runs the same in every electoral system; what differs is whether the system's incentive structure rewards staying on the high-access or the high-optionality end.
 
-This connects directly to a question Part IV will return to: the integration project the book is arguing for runs against the high-access end of this curve, because integration requires the precision that broad-coalition platforms structurally strip out. The book's prescriptions for institutional infrastructure that holds precision have an electoral analogue, and the same trade is operating in both.
+This connects directly to a question Part IV will return to: the *integration project* — the book's eventual prescription (Ch 9) for moving complex truth between groups that don't share starting points — runs against the high-access end of this curve, because integration requires the precision that broad-coalition platforms structurally strip out. The book's prescriptions for institutional infrastructure that holds precision have an electoral analogue, and the same trade is operating in both.
 
 ## The same curve in scientific popularization
 
@@ -119,7 +119,7 @@ It is also one of the cleanest cases of the bridge being captured by the politic
 
 ## What the curve actually is
 
-Stand back from the four domains and the shape is the same: more optionality means more precision but narrower access; more access means broader reach but lower precision. The curve is real, it is structural, and it is the same curve in software, religion, politics, scientific popularization, and law. I think it is the same curve everywhere, though the chapter is making a strong claim there and I want to flag it as a claim rather than a survey.
+Stand back from the five domains and the shape is the same: more optionality means more precision but narrower access; more access means broader reach but lower precision. The curve is real, it is structural, and it is the same curve in software, religion, politics, scientific popularization, and law. I think it is the same curve everywhere, though the chapter is making a strong claim there and I want to flag it as a claim rather than a survey.
 
 The reason the curve recurs across such different domains is that it is reflecting something about *the receiver*, not about the domain. Every reader / believer / voter / lay scientist / non-lawyer has a finite [[info-time-limit|receiver budget]] (Ch 3) and a finite stock of pre-existing structure they can hook new content onto. The optionality end of the curve is precise because it encodes distinctions that require pre-existing structure to decode; the access end is broad because it has been compressed to fit inside the structure most receivers already have. **The optionality-vs-access trade isn't a property of any particular medium or domain — it is the receiver-budget constraint reflected in the artifact's design.** Whatever form an idea takes has to be designed against the receiver budget it is trying to reach, and the trade between precision and reach is the visible consequence of that constraint.
 

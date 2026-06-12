@@ -56,7 +56,7 @@ This is also, incidentally, the structural reason this book's prescription has t
 
 ## Two kinds of capture
 
-[[myths-scale-and-bureaucracy]] left the dilution loop with three outcomes for the repairing institution, and [[preservation-vs-training|Chapter 8]] unpacked the captured cell as the stable bad case where an effective institution distributes a *tuned* key. The platform-as-institution is the obvious place to apply this, and applying it surfaces a distinction Ch 8 did not need to make but Ch 10 cannot avoid. Capture has two flavors at the platform scale, and they are not the same kind of object.
+[[myths-scale-and-bureaucracy]] left the *dilution loop* (scale compresses a network's binding myth; the compressed myth reads many ways; the readings segment the network) with three outcomes for the repairing institution, and [[preservation-vs-training|Chapter 8]] unpacked the captured cell as the stable bad case where an effective institution distributes a *tuned* key. The platform-as-institution is the obvious place to apply this, and applying it surfaces a distinction Ch 8 did not need to make but Ch 10 cannot avoid. Capture has two flavors at the platform scale, and they are not the same kind of object.
 
 (The book's unified treatment of capture — *which* surface gets captured, *by whom*, and *how hard the recovery is* — is the [[capture-taxonomy|capture taxonomy]]; the two-flavor distinction in this section is its by-whom axis, with composite capture as the empirically dominant third case the chapter names below.)
 

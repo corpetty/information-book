@@ -9,7 +9,7 @@ tags:
 
 > **encyclical** · Pope Leo XIV · tradition: `catholic-social-teaching`
 
-May 2026 papal encyclical on artificial intelligence, technology, and the common good. Frames the choice as Babel (centralized, efficient, fragmenting) vs. Jerusalem (plural voices coordinated through shared responsibility). Distinguishes formal institutional power (state) from de facto power (tech/finance actors whose authority now exceeds many governments). Names the 'tecnocratic paradigm' as the ideology treating nature and humans as objects to dominate, and 'structures of sin' as institutionally-embedded systematic injustice. Calls for synodality (deliberative process across expertise domains) and an educational alliance for the digital age as counterforces.
+May 2026 papal encyclical on artificial intelligence, technology, and the common good. Frames the choice as Babel (centralized, efficient, fragmenting) vs. Jerusalem (plural voices coordinated through shared responsibility). Distinguishes formal institutional power (state) from de facto power (tech/finance actors whose authority now exceeds many governments). Names the 'technocratic paradigm' as the ideology treating nature and humans as objects to dominate, and 'structures of sin' as institutionally-embedded systematic injustice. Calls for synodality (deliberative process across expertise domains) and an educational alliance for the digital age as counterforces.
 
 **The book's stance.** contemporary intervention on the book's themes; structurally aligned diagnosis with morally-philosophically grounded prescription; pressure-tests the book's prescriptive side on the polarization-via-distrust trap.
 

@@ -118,6 +118,8 @@ Entries are grouped by where each term enters the argument rather than alphabeti
 
 ## Political economy of attention
 
+**The modality argument.** Why selection has an owner and transport doesn't. Transport loss is a *cost* — nobody chooses it, so there is nobody to blame and nothing to tune. Selection runs on *criteria*, and criteria have setters. That asymmetry is what makes the political economy of attention structural rather than accidental: wherever there is a gate, someone owns its dial. See [[political-economy-of-attention|Chapter 10]].
+
 **Engagement as a captured equilibrium.** Engagement-maximization isn't an outside attack on a platform — it *is* the platform's business model doing its normal job. Time-in-app sells ads, so the gates get tuned toward whatever holds attention (identity, threat, outrage). That's what makes it so stable: there's no villain to defeat, only an arrangement to dismantle. See [[political-economy-of-attention|Chapter 10]].
 
 **Out-competition of institutional carriers.** Platforms don't have to censor journals, universities, or depth journalism to hollow them out — they just out-compete them. Engagement-bait costs roughly nothing per view (users make it); depth costs real money per view (someone is paid to make it). Given limited attention, audiences predictably take the free option. This produces a slow institutional collapse with no direct attack. See [[political-economy-of-attention|Chapter 10]].
@@ -138,6 +140,8 @@ Entries are grouped by where each term enters the argument rather than alphabeti
 
 ## AI as a new kind of node
 
+**Selection-design surface.** Any place where a design choice shapes what content can exist or travel: a gate's criteria, the menu of possible forms, the training data, the training objective, the deployment settings. Historically these were spread across separate institutions — a newspaper held one, a school another. The point of the term is to make concentration countable. See [[ai-as-new-node|Chapter 11]].
+
 **LLM as a collapsed design moment.** A language model is the first node in the pipeline to own almost everything at once — the gate, the menu of options, the content generator, the training data, the training objective, the deployment settings, even the price tier — all in one place, owned by one party. A social-media platform owns two or three of those; an LLM owner owns five to seven. That concentration is why the book treats it as the limit case of its political-economy worry. See [[ai-as-new-node|Chapter 11]].
 
 **Decompression on demand.** Used faithfully, an LLM can take a compressed claim or a dense source and *re-expand* it — supplying the preconditions a particular reader is missing. This is the first real way out of the fixed receiver-budget: the reader's hours haven't grown, but the model pays the decompression cost. Strictly conditional on faithfulness — a hallucinating model supplies confident-but-wrong instructions, which is worse than none. See [[ai-as-new-node|Chapter 11]].
@@ -145,6 +149,8 @@ Entries are grouped by where each term enters the argument rather than alphabeti
 **Compressed form becoming authoritative.** The inverse failure: at scale, the AI's summary of a source quietly *replaces* the source in everyone's working memory — now carrying the AI's authority. The original still exists; nobody reads it. Compression turns into substitution rather than abstraction. See [[ai-as-new-node|Chapter 11]].
 
 **Three ways to capture an LLM.** *Corpus capture* — rigging what data it learned from. *Objective capture* — rigging what it was trained to optimize; the worst kind, because its outputs feed the next model's training data, baking the bias across generations. *Deployment capture* — changing its behavior at use-time via system prompts and policies; the cheapest and most opaque. See [[capture-taxonomy]].
+
+**Substrate custody.** Who holds an AI's formative surfaces — its training data (corpus), what it was optimized for (objective), and how it is configured in use (deployment). An institution that needs a *faithful* model has to hold all three itself; renting them from a commercial vendor means trusting the vendor's tuning. Every hopeful LLM scenario in the book is conditional on this. See [[ai-as-new-node|Chapter 11]] and [[infrastructure-for-integration|Chapter 12]].
 
 **LLM as capability extender.** The hopeful case from Chapter 11, made concrete in Chapter 12: an institution that *owns* its model's data, objective, and deployment can use it to extend preserve-and-retrain — decompression on demand against its own archive, tutoring at scale, drafts that real experts then verify. Technically doable, economically marginal, and politically blocked by the same forces that captured social media. See [[infrastructure-for-integration|Chapter 12]].
 
