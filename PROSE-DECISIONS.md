@@ -236,6 +236,210 @@ silently changed.
 
 ---
 
+## G. Editorial content audit — June 2026 (consistency + timeline)
+
+Full-manuscript editorial pass (all 14 spine chapters read). Method: every
+explicit cross-chapter reference classified for a *linear* reader; every
+load-bearing claim checked against the chapter that owns it. 182 forward
+references exist against 165 backward — forward referencing is part of the
+book's working-draft style and mostly fine; the items below are the cases
+that break the linear reader or contradict the book's own canon.
+
+### G1. Hard contradictions (fix before anything else)
+
+- [ ] **Ch 8's capture asymmetry stated backwards once.**
+  `preservation-vs-training.md:79` ends: training is "the more recoverable
+  half on the capture axis (because cohorts come and go)". The chapter's own
+  thesis (L69, L109), the glossary, and Ch 12 all say the opposite — captured
+  training *recovers more slowly* ("you cannot replace a corrupted
+  generation", L71). Likely a crossed clause: decay axis (training more
+  fragile) vs capture axis (training *less* recoverable). One-line fix, but
+  it's the book's single most load-bearing asymmetry.
+- [ ] **Ch 11's surface count is unstable.** The chapter's claim is "five
+  selection-design surfaces", but `ai-as-new-node.md:119` ("The chapter,
+  whole") lists **seven** (gate, option-space, content-generator, corpus,
+  objective, deployment, pricing-tier) with no "plus increasingly" hedge;
+  the outline's canonical form is 5 core + 2 "increasingly".
+  `bridge-zone-distortion.md:87` enumerates six then says "All five".
+  Decide the canonical enumeration once and conform all three sites.
+- [ ] **Ch 9 says "two things at once", then closes with three.**
+  `integration-problem.md:63` (bold, load-bearing): "has to do **two** things
+  at once"; L65 bolts on the third pillar in revision voice ("adds a third
+  element the chapter should name explicitly"); L156 closes "does **three**
+  things at once". Rewrite L63–65 to commit to three from the start.
+- [ ] **Ch 10's pressure-test count doesn't reconcile.**
+  `political-economy-of-attention.md:85` announces "Five claims … are
+  contested"; six bolded pressure-tests follow, and the tally at L107
+  (2+1+1+2) omits the Mercier item. Recount.
+- [ ] **Ch 10 misattributes the Orwell/Huxley frame.**
+  `political-economy-of-attention.md:37`: "Huxley's foreword to *Brave New
+  World Revisited*" — *BNWR* (1958) is Huxley's own essay collection, not a
+  foreword. Either "Huxley's *Brave New World Revisited*" or (more standard)
+  Postman's foreword to *Amusing Ourselves to Death*. Verify and fix.
+- [ ] **Ch 12 contradicts Ch 8's diagnosis in passing.**
+  `infrastructure-for-integration.md:43`: "broader preservation has collapsed
+  without it" vs Ch 8's "preservation mostly held". This is the A3 decision
+  (elite-preservation-held) surfacing again — whichever way A3 lands, make
+  Ch 8 and Ch 12 agree.
+- [ ] **Ch 7 puts awe inside the floor, then below it.**
+  `emotional-memetics.md:15/21` include awe in the floor bundle; L97 tunes
+  "threat over awe" *below* the floor. The tension is admitted at L158 but
+  the body should pick one placement.
+
+### G2. Timeline: past-tense references to unread chapters (the big sweep)
+
+The book's chapters were drafted in a different order than they are read,
+and ~30 references betray it: a *later* chapter is cited in completed tense
+as if the reader has been there ("Ch 10 worked out…", "the story Ch 8
+told…", "Ch 9's argument was…"). A linear reader repeatedly arrives at
+"as Chapter 12 worked out" eight chapters early. **Recommended policy:**
+signpost forward, never perfect-tense forward — "Chapter 10 will work out"
+/ "Chapter 10 works out (we'll get there)" / restructure the sentence to
+own the claim locally. Worst clusters (line numbers from current drafts):
+
+- [ ] `bridge-zone-distortion.md` (Ch 6) — 6 sites: L9 ("Part IV gave"),
+  L43, L69 ("Ch 10 worked out"), L73 ("story Ch 8 told"), L77 ("Ch 9's
+  bridge-node argument was"), L83 ("what Ch 12 was implicitly describing").
+  Also L77 conflates the foundational note with "Ch 9" by name.
+- [ ] `integration-problem.md` (Ch 9) — L57 ("Ch 12 worked out the design
+  principles"), L87, L148 ("the conditions Ch 10 diagnosed" — Ch 10 is the
+  *next* chapter).
+- [ ] `info-time-limit.md` (Ch 3) — L53, L63, L65, L69 (Ch 8/11/12 treated
+  as finished work; "the most leveraged intervention the book has been able
+  to point at" reads as completed-book retrospective).
+- [ ] `complexity-virality-tradeoff.md` (Ch 5) — L68 ("Ch 8 worked out"),
+  L117 ("Ch 5b made that… the load-bearing claim"), L119.
+- [ ] `case-studies-and-three-realities.md` (Ch 2) — L70 ("Chapter 5b worked
+  out the mechanism in detail").
+- [ ] `preservation-vs-training.md` (Ch 8) — L9 ("the answer turned on
+  bridge nodes" — Ch 9 unread), L47.
+- [ ] `emotional-memetics.md` (Ch 7) — L127 ("Ch 10 said this").
+- [ ] `optionality vs access.md` (Ch 4) — L118 ("Chapter 10's cost-shifting"
+  possessive-cite, concept undefined for the reader).
+
+### G3. Workshop voice leaking into reader prose
+
+Revision notes, drafting history, and authoring-pipeline vocabulary sit in
+chapter bodies (outside the sanctioned "Where I'm still uncertain"
+sections). The deliberate working-in-public register can carry *some* of
+this, but the current density punctures otherwise strong chapters —
+worst is Ch 10, where eight separate asides ("I have not done that work
+here. Flag for later", "Reading my draft back, I had not", "that is the
+extraction agent's call to make on the next pass") interrupt the book's
+strongest argumentative surface. Decide a line: epistemic honesty stays,
+*production* metadata moves to the uncertainty sections or out of the prose.
+
+- [ ] `political-economy-of-attention.md` L43, L47, L61, L93, L97, L99,
+  L101, L105 — revision diary + extraction-pipeline meta.
+- [ ] `selection-as-other-engine.md` L97 — interpretive-triple counts
+  ("contributes 19 triples (11 supports / 4 pressureTests…)") in body prose;
+  graph tooling is meaningless to a book reader.
+- [ ] `emotional-memetics.md` L41 ("27 interpretive triples"), L11, L55,
+  L57, L75 — extraction/drafting meta.
+- [ ] `complexity-virality-tradeoff.md` L9, L30, L50, L123 — "earlier
+  drafts of this chapter" ×4.
+- [ ] `integration-problem.md` L9, L15, L45, L47, L77 — chapter narrates
+  itself as an artifact under revision.
+- [ ] Outline cited as authority in body prose:
+  `truth-compression-and-when-each-wins.md` L13, L61 ("The outline calls
+  this…", "The outline wants this chapter to be…"),
+  `preservation-vs-training.md` L37. The outline is scaffolding, not a
+  citable source for the reader.
+- [ ] Blog-residue artifacts: `optionality vs access.md` L12 ("article
+  topics I've wanted to work on"), L76 ("the point of another article in
+  the future" — it's a book chapter now), ALL-CAPS "VERY" (L12), bare
+  "NOTE:" aside (L80); `preservation-vs-training.md` L29 +
+  `integration-problem.md` L51/L67 cite "the democratization-paradox
+  *post*" / "double-edged-sword *post*" — for a book reader these need to
+  be essays/appendices with a referent, not posts.
+
+### G4. Concepts used before they exist (gloss-on-first-use gaps)
+
+Recurring pattern: a later chapter's (or depth note's) term arrives cold,
+ungloossed, chapters before its home. Recommended policy: **every
+load-bearing term gets a one-clause plain gloss at its first appearance in
+each chapter** (the term's home chapter still owns the full treatment).
+Worst offenders, by term:
+
+- [ ] *captured equilibrium* — first cold use `bridge-zone-distortion.md:55`
+  (home: Ch 10).
+- [ ] *consumer-key substrate / consumer-key-vs-surface* —
+  `case-studies-and-three-realities.md:106`,
+  `complexity-virality-tradeoff.md:92`, `bridge-zone-distortion.md:71`,
+  `preservation-vs-training.md:69` (home: capture-taxonomy note, which is
+  not in the reading order at all).
+- [ ] *substrate custody* — `info-time-limit.md:65`,
+  `bridge-zone-distortion.md:87/103`, `integration-problem.md:89/150`
+  (home: Ch 11/12). Not in the glossary either.
+- [ ] *integration problem / integration project* — `info-time-limit.md:59`,
+  `optionality vs access.md:100` (home: Ch 9).
+- [ ] *cost-shifting* — `optionality vs access.md:118` (home: Ch 10).
+- [ ] *the dilution loop* — `preservation-vs-training.md:63`,
+  `political-economy-of-attention.md:59` lean on the
+  myths-scale-and-bureaucracy note's three-outcome cells with a
+  parenthetical gloss carrying the whole load.
+- [ ] **Structural decision implied:** the capture-taxonomy note is
+  load-bearing for Chs 6, 8, 9, 10, 11, 12 but lives outside the reading
+  order. Either promote its two principles (consumer-key-vs-surface;
+  objective-capture-self-reinforces) into Ch 8/Ch 10 prose proper, or give
+  the note a numbered interlude slot (e.g. "Interlude: Capture" after
+  Ch 8). Same question, smaller, for myths-scale-and-bureaucracy before
+  Ch 8. The current half-in-half-out status is the root cause of most G4
+  items.
+- [ ] Glossary gaps: *substrate custody*, *modality argument*,
+  *selection-design surface* have no entries; "Zollman effect" is used in
+  Ch 12 (L81) with a one-clause gloss but gets its full gloss only in the
+  glossary.
+
+### G5. Stale facts (drafting state that moved on)
+
+- [ ] `ai-as-new-node.md:115` and `:131` — "A forthcoming foundational note
+  will work the unification" / "the work the next foundational note will
+  do; until it is done". The note exists (`capture-taxonomy.md`) and is
+  cited at L71 *of the same chapter*. Also `:71` "now lives in
+  capture-taxonomy" vs `:115` "forthcoming" — same chapter, both states.
+- [ ] `optionality vs access.md:122` — "Stand back from the four domains";
+  the chapter has five (its own L9 and L148 say five).
+- [ ] `case-studies-and-three-realities.md:128` — "A revised Ch 5c (when
+  the re-engagement pass comes)" — 5c is drafted and objective-scoped.
+- [ ] `truth-compression-and-when-each-wins.md:89` — treats
+  precondition-count-vs-handle-ability as unresolved; Ch 5 (L30) closes it
+  via the 5b split. (Inside an uncertainty section, but factually stale.)
+- [ ] `integration-problem.md:130` — "The book has been citing four
+  candidates" vs L142 "the pattern across the five" (common-law courts
+  added without updating the count). L11 also points at "the open-threads
+  section", which doesn't exist under that name.
+
+### G6. Small mechanical
+
+- [ ] "tecnocratic" ×2 (`ai-as-new-node.md:37`; also outline) — if this
+  mirrors the encyclical's Italian *tecnocratico*, mark it [sic] once;
+  otherwise spell "technocratic".
+- [ ] `content/images` figure filename "matplotplib.png" (typo is canonical
+  in repo; renders, but will trip any future asset audit).
+- [ ] Ch 2 coins "publication gate" (L22, L34) — blurs Ch 1's
+  analysis/publishability vs consensus/peer-review gate split; align names.
+- [ ] Ch 3 never states "time budget" = "receiver budget"
+  (`info-time-limit.md:33→39`) — one equivalence sentence fixes the
+  glossary↔chapter mismatch.
+- [ ] Want-loop naming drift: "medium-shapes-want" (Ch 7 L53) vs
+  "want-loop" (Ch 7 L117/L140) vs "medium-and-want" (Ch 8 L91). Pick one.
+- [ ] Ch 7's closing nav renders the Ch 6 title's profanity
+  (`emotional-memetics.md:163`) — fine if B1 keeps the title; noted so the
+  choice is conscious in nav surfaces too.
+
+### What the audit did NOT flag
+
+Signposted forward handoffs ("Chapter 11 introduces…", "slated for
+Chapter 5c") are working as designed — they're promises, not debts, and
+they're one of the book's best structural habits. Ch 1 and Ch 12 are clean
+end-to-end (Ch 1 glosses everything it uses; Ch 12 is the least
+workshop-contaminated chapter in the book). The "Where I'm still
+uncertain" sections are an asset throughout — nothing in them needs to
+move; the G3 items are about *production* metadata, not epistemic honesty.
+
+---
+
 ## Already handled by the audit (no action needed — listed for awareness)
 
 - **Wiki dead-links fixed.** Heavily-referenced `[[wikilinks]]` to graph nodes
