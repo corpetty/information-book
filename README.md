@@ -50,7 +50,7 @@ make help                                         # list targets
 ```
 
 <!-- graph-stats: kept in sync with data/expected-stats.json by a test in scripts/graph.test.js -->
-Current state: **230 nodes / 1065 edges / 0 warnings**.
+Current state: **231 nodes / 1069 edges / 0 warnings**.
 
 A bare `make build` is now self-contained: it folds in the committed
 per-PDF source extractions (`data/interpretive/*.jsonl`) directly, so the
@@ -107,7 +107,7 @@ Schema is the contract in [`data/graph-meta.json`](data/graph-meta.json).
 
 **15 node types**, grouped by role (current counts in parentheses):
 
-- **Outline scaffolding**: `Part` (4), `Chapter` (14), `Note` (25), `Status` (5)
+- **Outline scaffolding**: `Part` (4), `Chapter` (14), `Note` (26), `Status` (5)
 - **Pipeline model**: `PipelineStage` (6), `Gate` (5) (from
   `the-information-landscape.md`)
 - **Argument layer**: `Mechanism` (8), `Concept` (58), `Question` (7),

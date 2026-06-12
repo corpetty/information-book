@@ -200,6 +200,14 @@
       "title": "The Abyss",
       "role": "companion-essay",
       "summary": "Companion essay, published independently and drawn from as internal-corpus prior art. In any sufficiently complex field the possibility-space is too vast to navigate or even perceive without deep competence — you become an expert before you can see how unnavigable your own field is (The Most Unknown; Wheeler's lengthening shoreline; Shannon and Go game trees; Borges; Simon; Kauffman; Wolfram; du Sautoy). Two load-bearing moves for the book: expertise is a compression of the abyss (ties compression to the receiver-budget constraint), and the abyss is the experiential complement of the curse of expertise. Bounds optionality-vs-access — the artifact is a map, the abyss is the territory the map is of."
+    },
+    {
+      "slug": "the-short-version",
+      "file": "the-short-version.md",
+      "subtype": "prose",
+      "title": "Lossy — The Short Version",
+      "role": "distillation",
+      "summary": "The whole argument at three sizes — a sentence, a paragraph, a page — for a reader arriving cold. Built from the chapters' own load-bearing lines; the chapters are the proof, this is the package. Editor-drafted, provisional."
     }
   ]
 }

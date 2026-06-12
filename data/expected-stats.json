@@ -1,7 +1,7 @@
 {
   "counts": {
-    "nodes": 230,
-    "edges": 1065,
+    "nodes": 231,
+    "edges": 1069,
     "warnings": 0
   },
   "byNodeType": {
@@ -10,7 +10,7 @@
     "PipelineStage": 6,
     "Gate": 5,
     "Chapter": 14,
-    "Note": 25,
+    "Note": 26,
     "Mechanism": 8,
     "Concept": 58,
     "Question": 7,
@@ -41,7 +41,7 @@
     "dependsOn": 33,
     "tensionWith": 2,
     "contradicts": 1,
-    "wikiLinks": 229,
+    "wikiLinks": 233,
     "cites": 46,
     "supports": 40,
     "pressureTests": 36
