@@ -431,7 +431,7 @@
     },
     {
       "id": "integration-needs-agent-and-infrastructure",
-      "label": "Integration infrastructure has to do two things at once",
+      "label": "Integration needs both agent and infrastructure",
       "summary": "Integration between networks that don't share preconditions requires both a cultivated agent (the versatile expert) and a holding infrastructure (the curation layer). Agents without infrastructure produce bridges that can't scale; infrastructure without agents produces hollow institutions the polarization will eat. The book's prescription is the design of environments that produce both — cultivating metacognitive flexibility inside specialist communities and building curation-layer institutions that survive polarized trust.",
       "aliases": ["integration needs agent and infrastructure", "both agents and curation layer", "prescription pair"],
       "status": "working",
@@ -447,8 +447,8 @@
         },
         {
           "note": "integration-problem",
-          "lineApprox": 51,
-          "text": "Integration infrastructure has to do two things at once: cultivate versatile experts inside specialist communities, and build curation-layer institutions that survive polarized trust."
+          "lineApprox": 63,
+          "text": "Integration infrastructure has to do three things at once: cultivate versatile experts inside specialist communities, build curation-layer institutions that survive polarized trust, and reform the demand side that filters even good supply."
         }
       ]
     },
