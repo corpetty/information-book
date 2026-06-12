@@ -162,6 +162,14 @@
       "summary": "Unifies capture across Ch 8, Ch 10, Ch 11. Three-axis taxonomy: substrate (gate-criteria / option-space / training-corpus / training-objective / deployment-configuration / receiver-training / preservation-archive), source (external / self / composite), target asymmetry (recovery dynamics determined by substrate). Names two cross-cutting principles: consumer-key captures are harder to recover from than surface captures (generalizing Ch 8's asymmetry); training-objective capture is uniquely bad because it self-reinforces across model generations. Composition rule: self-capture creates the gradient external capture rides; composite capture is the empirically dominant mode."
     },
     {
+      "slug": "intersubjective-truth",
+      "file": "intersubjective-truth.md",
+      "subtype": "prose",
+      "title": "Intersubjective Truth",
+      "role": "foundational-note",
+      "summary": "Pays the debt Ch 2 / 5c / Ch 9 flagged: works out what the pipeline does to intersubjective truths — truths kept as truths (Harari's terms) whose generator is the network's agreement rather than reality. Core move: the pipeline is wired into the generator, so transmission is participation in constitution and reach changes the truth itself. Translates 5c's regimes into convergent / divergent / hollow constitution (failure axis rotated from error to spread-and-substance), restates capture as steering the generator — re-weighting whose decodes count — with reification (agreement wearing the costume of nature) as its camouflage, replaces the corrective with the fork (schism, secession, dollarization, chain split: the consensus gate's sibling, determining how many truths there are now), and names constitutive volatility as the transport collapse's second blade: agreement states now move at meme speed against maintenance institutions built for committee speed."
+    },
+    {
       "slug": "infrastructure-for-integration",
       "file": "infrastructure-for-integration.md",
       "subtype": "prose",

@@ -59,7 +59,7 @@ There are three ways in, and you can switch between them at any time:
 - **[[glossary|Glossary]]** — plain-language definitions of every load-bearing term used across the book. Worth opening in a second tab while you read.
 - **[[outline]]** — the working table of contents. Dense, and written for the author; most useful once you've skimmed the glossary.
 - **Most settled chapters**: [[the-information-landscape|Chapter 1 — The Information Landscape]] and [[truth-compression-and-when-each-wins|Chapter 5c — Truth, Compression, and When Each Wins]]. Start here if you'd rather read the book itself than the working notes.
-- **Foundational notes** work through the structural questions the chapters lean on: [[transport-vs-selection]], [[medium-and-manipulation]], [[three-layer-message]], [[myths-scale-and-bureaucracy]], [[bridge-nodes-and-versatile-expertise]], [[capture-taxonomy]].
+- **Foundational notes** work through the structural questions the chapters lean on: [[transport-vs-selection]], [[medium-and-manipulation]], [[three-layer-message]], [[myths-scale-and-bureaucracy]], [[bridge-nodes-and-versatile-expertise]], [[capture-taxonomy]], [[intersubjective-truth]].
 - **Earlier essays** the book draws on directly: [[double-edged-sword-of-expertise|The Double-Edged Sword of Expertise]] and [[the-democratization-paradox|The Democratization Paradox]].
 
 The whole structure is being worked through in public. Pressure-tests welcome.
