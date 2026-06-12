@@ -1,0 +1,50 @@
+{
+  "counts": {
+    "nodes": 230,
+    "edges": 1065,
+    "warnings": 0
+  },
+  "byNodeType": {
+    "Status": 5,
+    "Part": 4,
+    "PipelineStage": 6,
+    "Gate": 5,
+    "Chapter": 14,
+    "Note": 25,
+    "Mechanism": 8,
+    "Concept": 58,
+    "Question": 7,
+    "Tradition": 8,
+    "Author": 18,
+    "Source": 23,
+    "CaseStudy": 13,
+    "Claim": 33,
+    "Tension": 3
+  },
+  "byPredicate": {
+    "succeedsStage": 5,
+    "gateFor": 5,
+    "partOf": 14,
+    "hasStatus": 14,
+    "definedIn": 78,
+    "covers": 181,
+    "derivesFrom": 8,
+    "enables": 7,
+    "evidencedBy": 110,
+    "flagsOpenQuestion": 32,
+    "authoredBy": 22,
+    "partOfTradition": 24,
+    "representedBy": 1,
+    "mentions": 61,
+    "argues": 112,
+    "supersedes": 4,
+    "dependsOn": 33,
+    "tensionWith": 2,
+    "contradicts": 1,
+    "wikiLinks": 229,
+    "cites": 46,
+    "supports": 40,
+    "pressureTests": 36
+  },
+  "warnings": []
+}

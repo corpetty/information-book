@@ -19,6 +19,8 @@
 #   make site-serve  build and serve the Quartz site at localhost:8080
 #   make site-clean  remove the site build output and cache
 #   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
+#   make test      run the graph regression tests (snapshot + invariants)
+#   make accept-stats  refresh data/expected-stats.json after an intentional graph change
 #   make clean     remove generated artifacts
 #   make help      list targets
 
@@ -36,7 +38,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean viewer-stage
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean viewer-stage test accept-stats
 
 all: build
 
@@ -54,6 +56,16 @@ serve: build
 
 stats: build
 	@cat $(STATS_OUT)
+
+# Regression tests: golden snapshot (counts vs data/expected-stats.json)
+# plus structural invariants. The test file runs the build itself.
+test:
+	@node --test $(SCRIPTS)/*.test.js
+
+# After an INTENTIONAL graph change (new claim, concept, edge, …), refresh
+# the committed snapshot the tests compare against. Commit it with the change.
+accept-stats: build
+	@node -e "const fs=require('node:fs');const s=JSON.parse(fs.readFileSync('$(STATS_OUT)','utf8'));delete s.builtAt;fs.writeFileSync('$(DATA)/expected-stats.json',JSON.stringify(s,null,2)+'\n');console.log('expected-stats.json accepted:',JSON.stringify(s.counts))"
 
 sources: build
 	@node $(SCRIPTS)/sources-report.js

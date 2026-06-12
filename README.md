@@ -28,6 +28,8 @@ site additionally needs npm (`cd site && npm ci` once).
 ```bash
 # Ontology
 make                                              # rebuild graph (default = make build)
+make test                                         # regression tests: snapshot + invariants
+make accept-stats                                 # bless a new snapshot after an intentional graph change
 make serve                                        # serve viewer at localhost:8765/src/
 make stats                                        # counts + warnings from last build
 make harvest                                      # rescan content/ for candidate claims
