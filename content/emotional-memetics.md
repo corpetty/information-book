@@ -124,7 +124,7 @@ There is a version of the floor argument that lands as "everything is bad, we al
 
 Three things the structural floor argument gives the book:
 
-**It locates the breakage at the equilibrium, not at any individual operator.** The floor is not produced by malicious actors or stupid receivers or careless journalists. It is produced by the equilibrium of a specific arrangement of media, gates, audiences, and training over time. Locating the breakage at the equilibrium tells the prescription what it has to design against — not the operators, but the arrangement that produces the floor regardless of who is operating it. [[political-economy-of-attention|Ch 10]] said this for the platform case; this chapter says it for the propagation-content case.
+**It locates the breakage at the equilibrium, not at any individual operator.** The floor is not produced by malicious actors or stupid receivers or careless journalists. It is produced by the equilibrium of a specific arrangement of media, gates, audiences, and training over time. Locating the breakage at the equilibrium tells the prescription what it has to design against — not the operators, but the arrangement that produces the floor regardless of who is operating it. [[political-economy-of-attention|Ch 10]] says this for the platform case in full; this chapter says it for the propagation-content case.
 
 **It makes precise what "raw strong emotion" means.** Earlier book-wide gestures at "emotional content wins" or "outrage spreads" were impressionistic; the floor argument refines them to a specific equilibrium claim with named mechanisms (attentional substrate, gate exploitation, want-loop training, capture state). The specificity is what lets the prescription engage rather than wave.
 
