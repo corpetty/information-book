@@ -110,16 +110,17 @@ For each chapter below, the entries are *editorial intent for the next pass* —
 - The complexity-doing-two-jobs question is now closed in-chapter via Ch 5b's transport-complexity vs. selection-complexity split.
 - Capture-taxonomy, Ch 8 preserve-and-retrain, Ch 10 political economy, and Ch 11 decompression-on-demand all cross-referenced at the points where they sharpen the chapter's argument.
 - The chapter no longer carries deferrals waiting on later work.
+- (Phase 88) The three-realities scope flag now carries its answer instead of an IOU — for constitutive cargo, reach is part of the generator — and points at [[intersubjective-truth]].
 
 **[[selection-as-other-engine|Chapter 5b (Selection as the Other Engine)]] — when re-engaged:**
 - Pull in **arsenic-life** as the worked counterexample of the consensus gate working as designed.
 - Pull in **Power Posing** as a case of selection-at-every-stage favoring engagement-tuned form over the corrective.
 - Pull in **SPE-corrective** as a case of curation rejecting a consensus-passed corrective on engagement-fitness grounds.
 - Pull in **Ch 2's "corrective signal has systematically worse gate-fitness" framing** as the cross-cutting claim Ch 5b's selection mechanism produces at scale.
-- Pull in **Ch 2's three-realities frame** — selection's effect on truth requires saying which reality is in transit.
+- ~~Pull in **Ch 2's three-realities frame** — selection's effect on truth requires saying which reality is in transit.~~ Done (Phase 88): the seam section now says it — for intersubjective cargo the gates weight votes in what becomes the fact rather than filtering reports about one, per [[intersubjective-truth]], with the *Hammer*'s witch-category named as the book's oldest unmarked instance.
 
 **[[truth-compression-and-when-each-wins|Chapter 5c (Truth, Compression, and When Each Wins)]] — when re-engaged:**
-- *This is the chapter most-changed by Ch 2.* The chapter's own "Where I'm still uncertain" already flagged "this chapter is mostly about objective claims"; Ch 2 now operationalizes that scope question with the three-realities frame, and Ch 5c should explicitly bound its three regimes (preserve/invert/orthogonal) to objective content or extend them to constitutive-failure regimes for intersubjective content.
+- ~~*This is the chapter most-changed by Ch 2.* The chapter's own "Where I'm still uncertain" already flagged "this chapter is mostly about objective claims"; Ch 2 now operationalizes that scope question with the three-realities frame, and Ch 5c should explicitly bound its three regimes (preserve/invert/orthogonal) to objective content or extend them to constitutive-failure regimes for intersubjective content.~~ Done (Phase 88): the book did both — 5c is bounded to objective content by decision, the constitutive extension (convergent / divergent / hollow) lives in [[intersubjective-truth]], and 5c gained reification as orthogonality's mirror migration.
 - Pull in **Power Posing** as a worked inversion-regime case (the corrective is true; the meme is decoded with the original's key, inverting the truth-value for downstream receivers).
 - The two-plus-one restructuring still open in 5c's uncertainties is independent of this Ch 2 inheritance.
 
