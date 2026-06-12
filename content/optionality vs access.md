@@ -9,7 +9,7 @@ So there's this general trade-off that I continue to think about because I see i
 Here's the everyday version first. A professional camera with full manual controls can take almost any photograph you can imagine — but hand it to someone who has never used one and they'll come back with a blurry mess. A phone camera in "auto" mode gets a good-enough shot for almost anybody, instantly — but try to do something unusual with it and you can't, because the choices were already made for you. More control, harder to use. Easier to use, less control. That is the whole trade-off, and once you notice it you start seeing it everywhere: in software, in churches, in political parties, in science books, in the law. The rest of this chapter is five walks through that one shape.
 
 ## Software Stratification
-One of the article topics I've wanted to work on is the idea of "software stratification". I don't know if that's the right term for it, but it's what I'm calling it. It's when someone releases a VERY general library that allows its users to basically do anything they want within that domain, but because it's so general, it's very hard to use. The list of options within the API is so vast that most users get stuck inside the learning curve. So you end up with very few incredible power users that do awesome things with it, and a lot of people trying to use it and quitting before they get anything useful done at all. 
+Start with an idea I've carried around for years: "software stratification". I don't know if that's the right term for it, but it's what I'm calling it. It's when someone releases a *very* general library that allows its users to basically do anything they want within that domain, but because it's so general, it's very hard to use. The list of options within the API is so vast that most users get stuck inside the learning curve. So you end up with very few incredible power users that do awesome things with it, and a lot of people trying to use it and quitting before they get anything useful done at all. 
 
 What happens from here is some of those power users will create "abstractions" of the general library on top in order to "simplify" common uses. In the process of doing such a thing, one is forced to choose defaults on behalf of the user. In order for them to make thing simpler, they have to reduce the number of options that are available. For every option that they end up taking away in the layer above, they have to "fill in" the required option below with some choice. Their ability to do this, choosing what options to present to the user and what options to choose for them, ends up reflecting the quality of the abstraction. 
 
@@ -73,11 +73,11 @@ which yields the following image:
 
 The first thing you should notice is that the amount of code you need to write to produce what is effectively the same plot is drastically different. That's because `seaborn` makes many of the choices for you, thus obviating the associated code. In fact, they even added in some things that they felt were useful, like what appears to be standard deviation from the regression (look closely for the blue shading around the trend line). 
 
-There's much to be said about how to make a "good abstraction" for users, but that is the point of another article in the future. The point here is that `seaborn` was created to lower the barrier of entry for users so that they can plot things without having to go through the more complicated process of learning how to use `matplotlib`, but by doing so, it as removed the user's ability to fully explore what can be done with plotting in python. 
+There's much to be said about how to make a "good abstraction" for users — a thread for another day. The point here is that `seaborn` was created to lower the barrier of entry for users so that they can plot things without having to go through the more complicated process of learning how to use `matplotlib`, but by doing so, it as removed the user's ability to fully explore what can be done with plotting in python. 
 
 **They've constrained the user's options for the benefit of increasing overall accessibility.** 
 
-NOTE: in software this is often called being *opinionated* — the tool has opinions about the right way to do the common thing, and quietly makes those choices for you.
+(In software this is often called being *opinionated* — the tool has opinions about the right way to do the common thing, and quietly makes those choices for you.)
 
 ## The same curve in religion
 
