@@ -1,0 +1,9 @@
+{
+  "name": "information-book",
+  "private": true,
+  "type": "module",
+  "description": "Lossy — book prose, authoring ontology, and publishing site. The ontology scripts are zero-dependency Node ESM; the site under site/ has its own package.json.",
+  "engines": {
+    "node": ">=22"
+  }
+}

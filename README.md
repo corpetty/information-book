@@ -21,6 +21,10 @@ The book's repo. Three subsystems share one tree:
 
 ## Run it
 
+Prerequisites: **Node ≥ 22** (declared in `package.json`; the scripts are
+ESM), GNU Make, and Python 3 (only for `make serve`'s static server). The
+site additionally needs npm (`cd site && npm ci` once).
+
 ```bash
 # Ontology
 make                                              # rebuild graph (default = make build)
