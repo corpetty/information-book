@@ -176,7 +176,7 @@
       "tradition": "network-epistemology",
       "summary": "Models memetic propagation using epidemiological dynamics. Formal apparatus for the transport-stage math.",
       "engagement": "candidate evidentiary source for Chapters 5 and 5b",
-      "availability": "unverified",
+      "availability": "open",
       "file": "epidemiological-approach-to-model-viral-propagation-of-memes.pdf",
       "tags": ["evidence"]
     },
@@ -187,7 +187,7 @@
       "tradition": "network-epistemology",
       "summary": "Empirical work on how information morphs as it traverses social-media networks.",
       "engagement": "candidate evidentiary source for the bridge-zone distortion case studies",
-      "availability": "unverified",
+      "availability": "open",
       "file": "information-evolution-in-social-media.pdf",
       "tags": ["evidence"]
     },
@@ -198,7 +198,7 @@
       "tradition": "memetics",
       "summary": "Critical assessment of memetics as a research program. Where the analogy with genetic transmission breaks down.",
       "engagement": "candidate pressure-tester for the selection-side framing",
-      "availability": "unverified",
+      "availability": "open",
       "file": "Memetics_critique.pdf",
       "tags": ["evidence", "adversary"]
     },
@@ -209,7 +209,7 @@
       "tradition": "network-epistemology",
       "summary": "Empirical and theoretical work on what makes content go viral. Identity, emotion, in-group signaling.",
       "engagement": "candidate evidentiary source for Chapters 5b and 7",
-      "availability": "unverified",
+      "availability": "open",
       "file": "psychology-of-virality.pdf",
       "tags": ["evidence"]
     },

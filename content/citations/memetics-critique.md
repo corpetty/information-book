@@ -14,7 +14,7 @@ Critical assessment of memetics as a research program. Where the analogy with ge
 
 **The book's stance.** candidate pressure-tester for the selection-side framing.
 
-**Local copy.** [`sources/Memetics_critique.pdf`](../sources/Memetics_critique.pdf) *(licence not yet confirmed)*
+**Local copy.** [`sources/Memetics_critique.pdf`](../sources/Memetics_critique.pdf)
 
 ## Where this is cited in the book
 

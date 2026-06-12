@@ -13,7 +13,7 @@ Empirical and theoretical work on what makes content go viral. Identity, emotion
 
 **The book's stance.** candidate evidentiary source for Chapters 5b and 7.
 
-**Local copy.** [`sources/psychology-of-virality.pdf`](../sources/psychology-of-virality.pdf) *(licence not yet confirmed)*
+**Local copy.** [`sources/psychology-of-virality.pdf`](../sources/psychology-of-virality.pdf)
 
 ## Where this is cited in the book
 

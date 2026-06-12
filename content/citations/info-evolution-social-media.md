@@ -13,7 +13,7 @@ Empirical work on how information morphs as it traverses social-media networks.
 
 **The book's stance.** candidate evidentiary source for the bridge-zone distortion case studies.
 
-**Local copy.** [`sources/information-evolution-in-social-media.pdf`](../sources/information-evolution-in-social-media.pdf) *(licence not yet confirmed)*
+**Local copy.** [`sources/information-evolution-in-social-media.pdf`](../sources/information-evolution-in-social-media.pdf)
 
 ## Where this is cited in the book
 
