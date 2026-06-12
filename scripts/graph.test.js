@@ -61,6 +61,17 @@ test('build emits zero warnings', () => {
   assert.deepEqual(stats.warnings, [], `build warnings:\n  ${stats.warnings.join('\n  ')}`);
 });
 
+test('README headline stats match the built graph', () => {
+  const readme = readFileSync(resolve(repoRoot, 'README.md'), 'utf8');
+  const m = readme.match(/\*\*(\d+) nodes \/ (\d+) edges \/ (\d+) warnings\*\*/);
+  assert.ok(m, 'could not find the "**N nodes / N edges / N warnings**" line in README.md');
+  assert.deepEqual(
+    { nodes: +m[1], edges: +m[2], warnings: +m[3] },
+    { nodes: stats.counts.nodes, edges: stats.counts.edges, warnings: stats.counts.warnings },
+    'README headline stats are stale — update the line in README.md to match the build',
+  );
+});
+
 // ---------------------------------------------------------------- edge invariants
 
 test('edge direction conventions hold', () => {

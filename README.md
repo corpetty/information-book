@@ -10,7 +10,7 @@ The book's repo. Three subsystems share one tree:
 - **`data/` + `scripts/` + `src/`** — the **authoring ontology**: a
   semantic-triple graph over the prose. Chapters, mechanisms, concepts,
   open questions, claims, sources, and the edges between them.
-  Modeled on the [Logos whitepaper graph](../logos-co/logos-whitepaper/graph/)
+  Modeled on the [Logos whitepaper graph](https://github.com/0xc1c4da/logos-whitepaper)
   and reshaped around this book's argument structure. The graph
   surfaces what the prose implies — claims to make, sources backing
   them, questions still open, chapters with missing anchors — and
@@ -49,7 +49,8 @@ make site-clean                                   # remove site/public + site/.q
 make help                                         # list targets
 ```
 
-Current state: **221 nodes / 1051 edges / 0 warnings**.
+<!-- graph-stats: kept in sync with data/expected-stats.json by a test in scripts/graph.test.js -->
+Current state: **230 nodes / 1065 edges / 0 warnings**.
 
 A bare `make build` is now self-contained: it folds in the committed
 per-PDF source extractions (`data/interpretive/*.jsonl`) directly, so the
@@ -111,7 +112,7 @@ Schema is the contract in [`data/graph-meta.json`](data/graph-meta.json).
   `the-information-landscape.md`)
 - **Argument layer**: `Mechanism` (8), `Concept` (58), `Question` (7),
   `Claim` (33), `Tension` (3)
-- **Source layer**: `Source` (20), `Author` (13), `Tradition` (7)
+- **Source layer**: `Source` (23), `Author` (18), `Tradition` (8)
 - **Illustration**: `CaseStudy` (13)
 
 **26 predicates** in 6 categories:
@@ -315,3 +316,33 @@ anchor text no longer appears in the candidates, the build emits a
 after the prose change so a new candidate exists with matching text, or
 (b) updating the claim's `harvestedFrom` to point at the new anchor
 location.
+
+`claim-candidates.jsonl` is gitignored, so drift detection is a
+**local-only** check: it runs against whatever your last `make harvest`
+produced and silently no-ops on a fresh clone / in CI (where the file is
+absent). After a prose-editing session, run `make harvest` before
+trusting a clean build — a stale candidates file checks claims against
+stale prose. CI's `make check` enforces the *structural* invariants
+(counts, edge directions, orphans, links); claim-drift stays the
+author's local responsibility by design.
+
+## CI & tests
+
+`make test` runs the graph regression suite (golden snapshot in
+`data/expected-stats.json` + structural invariants); `make check` adds a
+**strict** build where warnings are fatal. After any intentional graph
+change, run `make accept-stats` to bless the new snapshot and commit it
+alongside. The deploy workflow runs `make check`, then `make site-build`,
+then verifies committed generated pages are fresh (`git diff --exit-code
+content/`) and every published internal link resolves
+(`scripts/check-site-links.js`) — `make site-check` runs those last two
+locally.
+
+## Licence
+
+The tooling — everything under `scripts/`, `src/`, `Makefile`,
+`data/*.json` — is MIT (see [`LICENSE`](LICENSE)). The book prose under
+`content/` is © Corey Petty, all rights reserved: readable here and on
+the published site, but not licensed for reuse or redistribution. Source
+PDFs under `content/sources/` are redistributed under their own
+open licences and remain the work of their respective authors.

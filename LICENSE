@@ -1,0 +1,53 @@
+This repository contains two kinds of work under two different terms.
+
+================================================================================
+1. THE TOOLING — MIT License
+================================================================================
+
+Applies to the ontology/authoring tooling and configuration:
+scripts/, src/, Makefile, package.json, data/*.json, and the GitHub
+Actions workflow. (It does NOT apply to the book prose under content/,
+nor to the vendored Quartz engine under site/quartz/, which carries its
+own MIT license in site/LICENSE.txt.)
+
+Copyright (c) 2026 Corey Petty
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+2. THE BOOK PROSE — All Rights Reserved
+================================================================================
+
+Applies to everything under content/ EXCEPT content/sources/: the book
+"Lossy" and all its chapter drafts, foundational notes, outline,
+glossary, generated landing pages, and companion essays.
+
+Copyright (c) 2026 Corey Petty. All rights reserved.
+
+This text is published here and at corpetty.github.io/information-book for
+reading. It is not licensed for reuse, redistribution, modification, or
+republication in whole or in part without the author's written permission.
+
+================================================================================
+3. SOURCE MATERIAL — third-party, own licences
+================================================================================
+
+The PDFs under content/sources/ are works by their respective authors,
+redistributed here under the open licences they were released with. They are
+not covered by either licence above and remain the property of their authors.
