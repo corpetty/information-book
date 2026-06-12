@@ -18,7 +18,8 @@
 // contain the marker as the first body line, so re-running this script is
 // idempotent and only touches files it previously wrote.
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
+import { basename } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve } from 'node:path';
 
@@ -211,9 +212,29 @@ for (const source of sources) {
   writtenFor.push(source.id);
 }
 
-console.log(`generate-citation-pages: ${written} written, ${skipped} hand-written skipped`);
+// Prune: a marker-bearing citation page whose slug is no longer a source id
+// is an orphan (the source was renamed or removed in data/sources.json).
+// Hand-written pages (no marker, possibly at an alias slug) are never touched.
+const validSourceIds = new Set(sources.map(s => s.id));
+let pruned = 0;
+const prunedFiles = [];
+for (const name of readdirSync(citationsDir)) {
+  if (!name.endsWith('.md')) continue;
+  if (validSourceIds.has(basename(name, '.md'))) continue;
+  const path = resolve(citationsDir, name);
+  if (!isGenerated(path)) continue; // hand-written
+  unlinkSync(path);
+  pruned++;
+  prunedFiles.push(`citations/${name}`);
+}
+
+console.log(`generate-citation-pages: ${written} written, ${skipped} hand-written skipped, ${pruned} orphan-pruned`);
 if (writtenFor.length) {
   console.log(`  written: ${writtenFor.join(', ')}`);
+}
+if (prunedFiles.length) {
+  console.log(`  pruned (source renamed/removed):`);
+  for (const p of prunedFiles) console.log(`    ${p}`);
 }
 if (skippedFor.length) {
   console.log(`  skipped:`);

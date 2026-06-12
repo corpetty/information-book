@@ -30,7 +30,7 @@
 //     hand-written and left alone (idempotent override, like the citation
 //     generator).
 
-import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync } from 'node:fs';
+import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, unlinkSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, resolve, basename, extname } from 'node:path';
 
@@ -287,7 +287,38 @@ for (const node of nodes) {
   wrote.push(`${cfg.dir}/${slug}`);
 }
 
-console.log(`generate-concept-pages: ${written} written, ${skippedCollision} collision-skipped, ${skippedHand} hand-written skipped`);
+// Prune: a marker-bearing page whose slug no longer matches any current node
+// of that folder's type is an orphan (the node was renamed or removed). Delete
+// it so a rename doesn't leave a stale, published, dead-link-bearing page.
+// Hand-written files (no marker) are never touched.
+const validSlugsByDir = {};
+for (const [type, cfg] of Object.entries(TYPE_CONFIG)) (validSlugsByDir[cfg.dir] ||= new Set());
+for (const node of nodes) {
+  const cfg = TYPE_CONFIG[node.type];
+  if (cfg) validSlugsByDir[cfg.dir].add(slugOf(node.id));
+}
+let pruned = 0;
+const prunedFiles = [];
+for (const cfg of Object.values(TYPE_CONFIG)) {
+  const outDir = resolve(contentDir, cfg.dir);
+  if (!existsSync(outDir)) continue;
+  for (const name of readdirSync(outDir)) {
+    if (!name.endsWith('.md')) continue;
+    const slug = basename(name, '.md');
+    if (validSlugsByDir[cfg.dir].has(slug)) continue;
+    const path = resolve(outDir, name);
+    if (!readFileSync(path, 'utf8').includes(GENERATOR_MARKER)) continue; // hand-written
+    unlinkSync(path);
+    pruned++;
+    prunedFiles.push(`${cfg.dir}/${name}`);
+  }
+}
+
+console.log(`generate-concept-pages: ${written} written, ${skippedCollision} collision-skipped, ${skippedHand} hand-written skipped, ${pruned} orphan-pruned`);
+if (prunedFiles.length) {
+  console.log('  pruned (node renamed/removed):');
+  for (const p of prunedFiles) console.log(`    ${p}`);
+}
 if (collisions.length) {
   console.log('  collisions (left to existing pages):');
   for (const c of collisions) console.log(`    ${c}`);
