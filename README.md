@@ -230,15 +230,18 @@ information-book/
 │   └── citations/                     reference notes for cross-cited sources (part generated)
 ├── data/                              ONTOLOGY catalogs + outputs
 │   ├── graph-meta.json                schema contract — node types + predicates
+│   ├── chapters.json                  14 chapters (outline spine; ordinal = reading order)
+│   ├── notes.json                     25 tracked markdown notes
 │   ├── mechanisms.json                8 named structural mechanisms
 │   ├── concepts.json                  58 cross-cutting concepts
 │   ├── questions.json                 7 foundational questions (provisionally-resolved / resolved)
 │   ├── traditions.json                7 intellectual lineages
-│   ├── sources.json                   20 sources + 13 authors
+│   ├── sources.json                   23 sources + 18 authors
 │   ├── case-studies.json              13 worked examples
 │   ├── claims.json                    33 canonical claims (promoted from candidates)
 │   ├── tensions.json                  3 dialectical tensions (tensionWith / contradicts edges)
 │   ├── slug-aliases.json              wikilink-resolution overrides
+│   ├── expected-stats.json            committed snapshot the tests compare against
 │   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (committed)
 │   ├── claim-candidates.jsonl         harvester output (gitignored)
 │   ├── extraction-catalog.json        generated for agents (gitignored)
@@ -274,6 +277,16 @@ information-book/
 
 ## Extending
 
+- **New chapter** — add an entry to `data/chapters.json` (slug, part,
+  ordinal, number, title, status, optional `draftNote`, summary), then
+  `make build`. If it has a draft note, also add it to `data/notes.json`
+  and list its slug in `site/quartz.layout.ts`'s reading-order `ORDER`
+  (a test enforces that the two stay in sync). Run `make accept-stats`
+  to bless the new counts.
+- **New note** — add an entry to `data/notes.json` (slug, file, subtype,
+  title, role, summary). The file must exist under `content/`; a
+  top-level `content/*.md` with no entry triggers an "orphan note"
+  warning.
 - **New concept / mechanism / question / source / case study** — edit
   the relevant `data/*.json`, then `make build`. Aliases drive future
   alias-matching (planned).

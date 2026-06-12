@@ -1,0 +1,145 @@
+{
+  "_doc": "Chapters in the book outline (incl. 5b/5c sub-chapters). ordinal sets reading order; number is the display label; part is the Part slug; status is a drafting Status; draftNote (optional) links the Note holding the draft. Loaded by seedChapters in build-graph.js.",
+  "chapters": [
+    {
+      "slug": "information-landscape",
+      "part": "pipeline",
+      "ordinal": 1,
+      "number": "1",
+      "title": "The Information Landscape",
+      "status": "drafted",
+      "draftNote": "note:the-information-landscape",
+      "summary": "Walks through the transport pipeline (The Out There → Raw Data → Insight → Theory → News → Meme) stage by stage, then introduces the sibling selection pipeline. Closes with where the medium fits and a note that the gates are tunable institutional choices."
+    },
+    {
+      "slug": "case-studies-and-three-realities",
+      "part": "pipeline",
+      "ordinal": 2,
+      "number": "2",
+      "title": "Case Studies and Three Realities",
+      "status": "in-workshop",
+      "draftNote": "note:case-studies-and-three-realities",
+      "summary": "Brings Ch 1's abstract pipeline structure to ground through four case studies illustrating four pipeline exits — Power Posing (made it to meme, survived the corrective), arsenic-life (died at consensus), Stanford Prison Experiment correctives (died at curation despite passing consensus), astrology (no theory at all — manufactured content occupying late stages without entering early ones). Reads the four cases as samples drawn from one continuous failure surface whose gradient runs systematically against corrective signal. Second half introduces Harari's three-realities frame (objective / subjective / intersubjective) and pulls out what changes for the book's diagnostic vocabulary across reality types — particularly that intersubjective realities are partly constituted by the pipeline rather than transmitted through it, which means the truth-loss-in-transit analysis works differently for them. The four cases become a recurring touchstone subsequent chapters can reference by name."
+    },
+    {
+      "slug": "human-time-budget",
+      "part": "lossy",
+      "ordinal": 3,
+      "number": "3",
+      "title": "The Human Time Budget",
+      "status": "in-workshop",
+      "draftNote": "note:info-time-limit",
+      "summary": "Tablespoon of weeks; effective mental hours less than nominal. Budget is not fixed — education, vocabulary, accumulated engagement expand it. Want is the prime mover."
+    },
+    {
+      "slug": "optionality-vs-access",
+      "part": "lossy",
+      "ordinal": 4,
+      "number": "4",
+      "title": "Optionality vs. Access",
+      "status": "in-workshop",
+      "draftNote": "note:optionality-vs-access",
+      "summary": "The general-vs-usable trade-off. Drafted using matplotlib vs. seaborn. Needs generalization beyond software: religions, political platforms, scientific popularization, legal codes."
+    },
+    {
+      "slug": "complexity-virality-tradeoff",
+      "part": "lossy",
+      "ordinal": 5,
+      "number": "5",
+      "title": "The Complexity / Virality Trade-off",
+      "status": "in-workshop",
+      "draftNote": "note:complexity-virality-tradeoff",
+      "summary": "The transport half of the two-mechanism structure. Within-stage compression dynamics, most visible at the meme stage. Reframes Hammer/Copernicus as selection-fit rather than transport-cost."
+    },
+    {
+      "slug": "selection-as-other-engine",
+      "part": "lossy",
+      "ordinal": 5.1,
+      "number": "5b",
+      "title": "Selection As The Other Engine",
+      "status": "in-workshop",
+      "draftNote": "note:selection-as-other-engine",
+      "summary": "The selection half of the two-mechanism structure: the three-operation stage model (transport generates, the medium bounds, selection picks), selection as the tunable mechanism, and the medium as frozen selection. Engages Mercier and O'Connor & Weatherall."
+    },
+    {
+      "slug": "truth-compression-and-when-each-wins",
+      "part": "lossy",
+      "ordinal": 5.2,
+      "number": "5c",
+      "title": "Truth, Compression, and When Each Wins",
+      "status": "in-workshop",
+      "draftNote": "note:truth-compression-and-when-each-wins",
+      "summary": "When does compressed form preserve approximate truth, when invert, when orthogonal? Closes the moral-neutrality gap and gives the book its actual stakes."
+    },
+    {
+      "slug": "bridge-zone-distortion",
+      "part": "bridge-zone",
+      "ordinal": 6,
+      "number": "6",
+      "title": "Where It All Gets Fucked Up",
+      "status": "in-workshop",
+      "draftNote": "note:bridge-zone-distortion",
+      "summary": "Chapter 6 draft. The bridge zone — News and Meme stages where specialist content reaches mass audiences via journalists, popularizers, influencers, educators, and AI summarizers. Active reshaping for audience effect, not passive transport compression; accountability runs through audience-or-employer relationships rather than through the specialist community whose findings get translated. Three worked cases of catastrophic distortion (COVID epi, nutrition science, monetary policy) plus the four Ch 2 cases relocated to their bridge-zone stage. Names pseudo-context (per Postman) as a distinctive bridge-zone failure mode. Connects to capture-taxonomy substrates (gate-criteria + receiver-training as the captured pair) and to Ch 9 bridge-node + Ch 11 LLM + Ch 12 infrastructure as the prescriptive landing zone. The angriest chapter in the book by design."
+    },
+    {
+      "slug": "emotional-memetics",
+      "part": "bridge-zone",
+      "ordinal": 7,
+      "number": "7",
+      "title": "Emotional Memetics As The Floor",
+      "status": "in-workshop",
+      "draftNote": "note:emotional-memetics",
+      "summary": "Chapter 7 draft. The floor argument: once a mass network with engagement-tuned gates has run long enough, the propagation equilibrium converges on raw strong emotion as the floor of what reliably spreads. Three lines of evidence (Psychology of Virality on attentional substrate + Ukraine before/after invasion shift; paradox of virality as diagnostic anchor; Postman on television-medium form). Engages Mercier's epistemic-vigilance challenge head-on — argues that vigilance protects against believing not attending, is one criterion among many, and has been trained down by long medium exposure. Floor is medium-conditional, substrate-anchored, capture-tuned within the emotional-payload set. Names three structural design moves Part IV engages — sub-networks with different gates, gate-tuning of mass network, decompression-on-demand softening the per-claim cost."
+    },
+    {
+      "slug": "preservation-vs-training",
+      "part": "integration",
+      "ordinal": 8,
+      "number": "8",
+      "title": "Preservation vs. Training",
+      "status": "in-workshop",
+      "draftNote": "note:preservation-vs-training",
+      "summary": "Splits what Harari's \"bureaucracy\" was bundling. Preservation keeps the un-compressed form alive; training re-installs the decoding key in receivers. Either alone fails — preservation without training is an inaccessible archive, training without preservation is competence pointed at the wrong target. The two halves are asymmetric under capture: captured training does more damage and recovers more slowly than captured preservation. Working diagnosis of the modern collapse: training has hollowed under the cover of a still-mostly-functional preservation half."
+    },
+    {
+      "slug": "integration-problem",
+      "part": "integration",
+      "ordinal": 9,
+      "number": "9",
+      "title": "The Integration Problem",
+      "status": "in-workshop",
+      "draftNote": "note:integration-problem",
+      "summary": "Chapter 9 draft, promoted from skeleton to workshop. The integration problem: how complex truth moves between networks that don't share preconditions. Prescription has three pillars (cultivate versatile experts inside specialist communities; build curation-layer institutions that survive polarized trust; engage demand-side reform of justification-market dynamics). Engages the five operational problems substantively — bridge-node throughput (likely hard-bounded; AI capability-extender is the short-timescale relaxant); selective isolation (some disciplines need protection from integration pressure; dual structure with the bridging artifact thinner than the preserved one); bridge-node capture (consumer-key substrate, hardest to recover from; defensive design via institutional homes + auditable provenance + multiple pathways); trust-bootstrap (sub-network-first + transparent provenance + survivable-polarization design; the hardest of the five and unsolved); case studies (Wikipedia, peer-reviewed science, Stack Overflow, open-source, common-law courts — institutions decoupled-funded with consumer-key-substrate defense and survivable-polarization design demonstrate the principles work)."
+    },
+    {
+      "slug": "political-economy-of-attention",
+      "part": "integration",
+      "ordinal": 10,
+      "number": "10",
+      "title": "Political Economy of Attention",
+      "status": "in-workshop",
+      "draftNote": "note:political-economy-of-attention",
+      "summary": "Selection has an owner because it is criterial; the medium's owner is the most powerful selection-setter in the system. Engagement is a proxy for revenue dressed up as a proxy for user benefit. Postman's Orwell/Huxley axis gives the modern failure mode as Huxley — drowning in irrelevance, harder to fight than censorship because there is nothing to oppose. Cost-shifting from producers to consumers is the structural move that keeps the political economy invisible. Names two flavors of capture: external (an adversarial selection-tuner) and self (the institution's own business model as the captured tuner) — and argues self-capture is more stable because there is no adversary to fight, only an equilibrium to dismantle. Out-competition rather than suppression is how platforms hollow institutional carriers."
+    },
+    {
+      "slug": "ai-as-new-node",
+      "part": "integration",
+      "ordinal": 11,
+      "number": "11",
+      "title": "AI as a New Kind of Node",
+      "status": "in-workshop",
+      "draftNote": "note:ai-as-new-node",
+      "summary": "An LLM is the first node to collapse gate + option-space + content-generator + training-corpus + training-objective + deployment-configuration + pricing-tier into one design moment owned by one party — the most concentrated selection-design surface any medium has had. Decompression-on-demand is the first structural way out of the receiver-budget constraint; aggressive-compression-becoming-authoritative is its inverse failure mode. Names three new flavors of capture (corpus, objective, deployment) that compose with Ch 8 and Ch 10 capture and need unification in a forthcoming taxonomy note. Salvation case is technically realizable and economically marginal; worst case is the revenue-maximizing default. The political economy Ch 10 diagnosed determines which lands."
+    },
+    {
+      "slug": "infrastructure-for-integration",
+      "part": "integration",
+      "ordinal": 12,
+      "number": "12",
+      "title": "Infrastructure for Integration",
+      "status": "in-workshop",
+      "draftNote": "note:infrastructure-for-integration",
+      "summary": "Synthesis chapter for Part IV. Reframes the prescriptive target as survival rather than victory — institutions that hold against the political-economic gradient by routing around the attention market rather than trying to clear it. Commits to three design principles: decouple funding from attention markets (counters Ch 10 out-competition); defend consumer-key substrates first per the capture taxonomy; build for survivable polarization rather than restored trust. Conditional fourth principle: LLMs as capability extenders inside the institution's own substrate custody (corpus, objective, deployment), salvation case technically realizable but economically marginal and politically blocked. Closes with the work-of-generations reframe: integration institutions are civilization-scale investments on the timescale of universities and journals, not platform launches."
+    }
+  ]
+}

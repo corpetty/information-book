@@ -1,0 +1,205 @@
+{
+  "_doc": "Notes — the markdown files in content/ the graph tracks. file is the filename under content/; subtype is prose|conversation|reference; role is the editorial role; summary is the node summary. Loaded by seedNotes in build-graph.js; the note parser then reads each file for wikilinks + H2 sections.",
+  "notes": [
+    {
+      "slug": "outline",
+      "file": "outline.md",
+      "subtype": "prose",
+      "title": "Lossy — Outline",
+      "role": "outline",
+      "summary": "The book's working outline and table of contents. Living doc."
+    },
+    {
+      "slug": "index",
+      "file": "index.md",
+      "subtype": "prose",
+      "title": "Lossy (landing page)",
+      "role": "landing-page",
+      "summary": "Plain-language landing page for the published site. Frames the problem the book takes on, the transport+selection diagnosis, the three working conclusions, and a reading map. Written for someone arriving cold; the outline and foundational notes are the next layer of depth."
+    },
+    {
+      "slug": "glossary",
+      "file": "glossary.md",
+      "subtype": "reference",
+      "title": "Glossary",
+      "role": "glossary",
+      "summary": "Plain-language definitions of the load-bearing terms across the book, grouped by where each term enters the argument. The accessibility companion to the dense working outline."
+    },
+    {
+      "slug": "the-information-landscape",
+      "file": "the-information-landscape.md",
+      "subtype": "prose",
+      "title": "The Information Landscape",
+      "role": "chapter-draft",
+      "summary": "Chapter 1 draft. Walks through the transport and selection pipelines side by side."
+    },
+    {
+      "slug": "transport-vs-selection",
+      "file": "transport-vs-selection.md",
+      "subtype": "prose",
+      "title": "Transport vs. Selection",
+      "role": "foundational-note",
+      "summary": "Foundational note working through the transport-vs-selection question. Provisional answer: both parallel mechanisms, with want as prime mover."
+    },
+    {
+      "slug": "complexity-virality-tradeoff",
+      "file": "complexity-virality-tradeoff.md",
+      "subtype": "prose",
+      "title": "The Complexity / Virality Trade-off",
+      "role": "chapter-draft",
+      "summary": "Chapter 5 draft, re-engaged with all dependent work resolved. The transport half of the two-mechanism structure, scoped to objective claims (Ch 2's three-realities frame). Complexity-doing-two-jobs question now settled per Ch 5b (transport-complexity = precondition count; selection-complexity = handle-ability; this chapter is about the first). Receiver-budget capacity is trainable per Ch 3; same constraint refracted into artifact design per Ch 4 (optionality-vs-access curve, same in five domains). Power Posing and SPE-corrective now serve as worked modern cases of the same Hammer-of-the-Witches dynamic, with the corrective always losing on transport-complexity grounds even when consensus has ratified it. Manipulation surface connects to capture-taxonomy substrates; institutional-carrier framing connects to Ch 8's preservation-and-training pair; decompression-on-demand (Ch 11) is named as the first structural softening of the per-claim cost conditional on Ch 11/12 substrate custody."
+    },
+    {
+      "slug": "info-time-limit",
+      "file": "info-time-limit.md",
+      "subtype": "prose",
+      "title": "The limit on how much information a human can incorporate",
+      "role": "chapter-draft",
+      "summary": "Chapter 3 draft. First half: tablespoon-of-weeks framing of finite lifetime as the absorption-time constraint. Second half: receiver-budget capacity is partly trainable (pre-existing structure makes new absorption cheaper), want is the gate on what the budget gets spent on (the medium-shapes-want loop runs through the budget at receiver-lifetime and population scales), and decompression-on-demand from Ch 11 is the first structural softening of the per-claim cost the book has been able to point at. Hands forward to Ch 4/5 for the resulting trade-offs and Ch 11/12 for the political-economic conditions the softening depends on."
+    },
+    {
+      "slug": "optionality-vs-access",
+      "file": "optionality vs access.md",
+      "subtype": "prose",
+      "title": "Optionality vs. Access",
+      "role": "chapter-draft",
+      "summary": "Chapter 4 draft. The general-vs-usable trade-off generalized across five domains — software (matplotlib vs. seaborn), religion (Latin Mass vs. vernacular liturgy), political platforms (broad-tent coalitions vs. narrow specialist parties), scientific popularization (Hawking's A Brief History of Time vs. the actual GR papers), and legal codes (statutes vs. plain-language summaries). The reframe: the curve is the receiver-budget constraint reflected in artifact design — high optionality buys precision at the cost of access, high access buys reach at the cost of precision, you cannot have both at once for a given artifact. Ties the chapter into Ch 5 (the receiver-side mechanism behind complexity-virality), Ch 8 (preservation holds high-optionality, training expands receiver-budgets so more can access it), and Ch 11 (decompression-on-demand is in principle the first technology that could let a single artifact serve both ends of the curve)."
+    },
+    {
+      "slug": "general-theme",
+      "file": "general-theme.md",
+      "subtype": "conversation",
+      "title": "General Theme",
+      "role": "conversation-source",
+      "summary": "Conversation transcript. The book concept explained to someone in real time. The conclusion of Part IV lives raw here."
+    },
+    {
+      "slug": "medium-and-manipulation",
+      "file": "medium-and-manipulation.md",
+      "subtype": "prose",
+      "title": "Medium and Manipulation",
+      "role": "foundational-note",
+      "summary": "Foundational note on what the medium does to the selection gates. Provisional answer: the medium is the selection criteria — it sets the capacity, the criteria, and the want cultivated at every gate."
+    },
+    {
+      "slug": "three-layer-message",
+      "file": "three-layer-message.md",
+      "subtype": "prose",
+      "title": "The Three Layers of a Message",
+      "role": "foundational-note",
+      "summary": "Foundational note adapting the frame/outer/inner message model from Hofstadter. The outer message — the decoding mechanism — is what the book calls preconditions, and it lives in the medium."
+    },
+    {
+      "slug": "truth-compression-and-when-each-wins",
+      "file": "truth-compression-and-when-each-wins.md",
+      "subtype": "prose",
+      "title": "Truth, Compression, and When Each Wins",
+      "role": "chapter-draft",
+      "summary": "Chapter 5c draft. Resolves the truth-value-placement question — compression strips the decoding key, and truth is preserved, inverted, or rendered orthogonal depending on the key-gap and which compressed variant the selection gate picks."
+    },
+    {
+      "slug": "myths-scale-and-bureaucracy",
+      "file": "myths-scale-and-bureaucracy.md",
+      "subtype": "prose",
+      "title": "Myths, Scale, and Bureaucracy",
+      "role": "foundational-note",
+      "summary": "Foundational note. Works out the loop: network scale forces myth compression, compression widens interpretive latitude, latitude segments the network, and segmentation forces the bureaucracy that re-supplies the dropped decoding key."
+    },
+    {
+      "slug": "selection-as-other-engine",
+      "file": "selection-as-other-engine.md",
+      "subtype": "prose",
+      "title": "Selection As The Other Engine",
+      "role": "chapter-draft",
+      "summary": "Chapter 5b draft. The selection half of the two-mechanism structure: the three-operation stage model (transport generates, the medium bounds, selection picks), selection as the tunable mechanism, and the medium as frozen selection."
+    },
+    {
+      "slug": "bridge-nodes-and-versatile-expertise",
+      "file": "bridge-nodes-and-versatile-expertise.md",
+      "subtype": "prose",
+      "title": "Bridge Nodes and Versatile Expertise",
+      "role": "foundational-note",
+      "summary": "Foundational note resolving the transferable-vs-specialized question. A bridge node is not a generalist with field-general skills but a deep specialist who has paired their depth with metacognitive flexibility (versatile expertise). The curse of expertise is the cognitive substrate of polarization-via-distrust, so the same agent resolves both open questions for Chapter 9."
+    },
+    {
+      "slug": "integration-problem",
+      "file": "integration-problem.md",
+      "subtype": "prose",
+      "title": "The Integration Problem",
+      "role": "chapter-draft",
+      "summary": "Chapter 9 draft, promoted from skeleton to workshop. Three-pillar prescription (versatile experts + curation-layer institutions + demand-side reform), substantive engagement with five operational problems (throughput, selective isolation, capture, trust-bootstrap, case studies), worked examples assessed honestly."
+    },
+    {
+      "slug": "preservation-vs-training",
+      "file": "preservation-vs-training.md",
+      "subtype": "prose",
+      "title": "Preservation vs. Training",
+      "role": "chapter-draft",
+      "summary": "Chapter 8 draft. Splits Harari's \"bureaucracy\" into preservation (keep the un-compressed form alive) and training (re-install the decoding key in receivers). Names the capture and decay-rate asymmetries between the two halves and reads the modern collapse as preservation-mostly-held, training-hollowed."
+    },
+    {
+      "slug": "political-economy-of-attention",
+      "file": "political-economy-of-attention.md",
+      "subtype": "prose",
+      "title": "Political Economy of Attention",
+      "role": "chapter-draft",
+      "summary": "Chapter 10 draft. Names ownership of selection as structurally unavoidable once selection is centered: criteria have setters. Engagement-maximization is the captured equilibrium of the platform business model; cost-shifting plus zero-marginal-cost attention is how the political economy stays invisible. Introduces the self-capture vs. external-capture distinction (self-capture is more stable — no adversary, only an arrangement) and names out-competition as the mechanism that produces Ch 8's asymmetric institutional collapse."
+    },
+    {
+      "slug": "ai-as-new-node",
+      "file": "ai-as-new-node.md",
+      "subtype": "prose",
+      "title": "AI as a New Kind of Node",
+      "role": "chapter-draft",
+      "summary": "Chapter 11 draft. Structural characterization of LLMs as the first node collapsing five selection-design surfaces (corpus, objective, deployment, runtime gate, option space) into one design moment owned by one party. Names decompression-on-demand as the first structural way out of the receiver-budget constraint, and aggressive-compression-becoming-authoritative as its inverse failure mode. Introduces three new flavors of capture (corpus, objective, deployment) that compose with Ch 8 capture-asymmetry and Ch 10 self-vs-external capture and need unification in a forthcoming foundational note."
+    },
+    {
+      "slug": "capture-taxonomy",
+      "file": "capture-taxonomy.md",
+      "subtype": "prose",
+      "title": "Capture Taxonomy",
+      "role": "foundational-note",
+      "summary": "Unifies capture across Ch 8, Ch 10, Ch 11. Three-axis taxonomy: substrate (gate-criteria / option-space / training-corpus / training-objective / deployment-configuration / receiver-training / preservation-archive), source (external / self / composite), target asymmetry (recovery dynamics determined by substrate). Names two cross-cutting principles: consumer-key captures are harder to recover from than surface captures (generalizing Ch 8's asymmetry); training-objective capture is uniquely bad because it self-reinforces across model generations. Composition rule: self-capture creates the gradient external capture rides; composite capture is the empirically dominant mode."
+    },
+    {
+      "slug": "infrastructure-for-integration",
+      "file": "infrastructure-for-integration.md",
+      "subtype": "prose",
+      "title": "Infrastructure for Integration",
+      "role": "chapter-draft",
+      "summary": "Chapter 12 draft. Synthesis chapter for Part IV. Reframes the integration project as survival-not-victory and commits to three design principles: decouple funding from attention markets; defend consumer-key substrates first per the capture taxonomy; build for survivable polarization. Conditional fourth: LLMs as capability extenders inside the institution's substrate custody. Closes with the work-of-generations reframe — integration institutions are civilization-scale investments on the timescale of universities and journals, not platform launches."
+    },
+    {
+      "slug": "case-studies-and-three-realities",
+      "file": "case-studies-and-three-realities.md",
+      "subtype": "prose",
+      "title": "Case Studies and Three Realities",
+      "role": "chapter-draft",
+      "summary": "Chapter 2 draft. Grounds Ch 1's pipeline structure in four case studies illustrating four pipeline exits (made-to-meme + corrective-survival, died-at-consensus, died-at-curation, no-theory injection), then introduces Harari's three-realities frame and works out which parts of the book's diagnostic vocabulary apply to objective vs. intersubjective content."
+    },
+    {
+      "slug": "bridge-zone-distortion",
+      "file": "bridge-zone-distortion.md",
+      "subtype": "prose",
+      "title": "Where It All Gets Fucked Up",
+      "role": "chapter-draft",
+      "summary": "Chapter 6 draft. The bridge-zone stage where specialist findings get reshaped for mass audiences. Five operator populations (journalists, popularizers, influencers, educators, AI summarizers); three worked catastrophic-distortion cases (COVID, nutrition, monetary policy); pseudo-context as a distinctive bridge-zone failure mode; the bridge node and curation layer prescriptions from Part IV landing here."
+    },
+    {
+      "slug": "emotional-memetics",
+      "file": "emotional-memetics.md",
+      "subtype": "prose",
+      "title": "Emotional Memetics As The Floor",
+      "role": "chapter-draft",
+      "summary": "Chapter 7 draft. The structural floor argument — mass-network propagation equilibrium converges on raw strong emotion under engagement-tuned gates. Three lines of evidence (attentional-substrate exploitation, paradox of virality, Postman entertainment-form selection). Direct engagement with Mercier's epistemic-vigilance challenge — vigilance is real but protects against believing, not attending; is one criterion among many at the action moment; has been trained down by long medium exposure. Floor is medium-conditional, substrate-anchored, capture-tuned within the emotional-payload set."
+    },
+    {
+      "slug": "the-abyss",
+      "file": "the-abyss.md",
+      "subtype": "prose",
+      "title": "The Abyss",
+      "role": "companion-essay",
+      "summary": "Companion essay, published independently and drawn from as internal-corpus prior art. In any sufficiently complex field the possibility-space is too vast to navigate or even perceive without deep competence — you become an expert before you can see how unnavigable your own field is (The Most Unknown; Wheeler's lengthening shoreline; Shannon and Go game trees; Borges; Simon; Kauffman; Wolfram; du Sautoy). Two load-bearing moves for the book: expertise is a compression of the abyss (ties compression to the receiver-budget constraint), and the abyss is the experiential complement of the curse of expertise. Bounds optionality-vs-access — the artifact is a map, the abyss is the territory the map is of."
+    }
+  ]
+}
