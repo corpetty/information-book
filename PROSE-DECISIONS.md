@@ -198,20 +198,41 @@ silently changed.
     graph. I can draft the edges for your review.
   - [ ] Remove them from the schema to keep `graph-meta.json` honest.
 
-### F2. Malformed triples in the committed per-PDF extractions
+### F2. Malformed triples in the committed per-PDF extractions — RESOLVED (deleted)
 - **Where:** `data/interpretive/psychology-of-virality-gap.jsonl` (6 triples
   with a **Concept as the subject of `supports`/`pressureTests`** — direction
   violation) and `data/interpretive/misinformation-age.jsonl` (4 triples whose
   object is a `question`/`case`/`chapter` instead of a claim/mechanism/concept).
-- **What's there:** `make aggregate-interpretive` already drops these (logged
-  to `data/interpretive-notes.json`), so the graph stays clean — but they keep
-  getting re-dropped on every aggregate, and they represent extraction work
-  that isn't landing.
+- **Resolution (Phase 69, June 2026):** deleted the 10 lines. The aggregator
+  had rejected all of them on every run since extraction, so none was ever in
+  the graph; git history keeps them recoverable if a future re-extraction wants
+  to fix the direction and land the evidence properly. The same phase made the
+  bare-build fallback warn on these conditions (it used to drop them silently),
+  so a regression would now surface.
+
+### F3. Chapter and note summaries overlap but are independently framed
+- **Where:** `data/chapters.json` (chapter `summary`) and `data/notes.json`
+  (the draft note's `summary`) for each chapter-draft pair.
+- **What's there:** The audit's first pass flagged these as duplicated text to
+  de-dupe. On close reading they are **not** mechanical copies: 13 of 14 pairs
+  are independently-written paraphrases with different emphasis and detail (the
+  `ai-as-new-node` note says "five selection-design surfaces" where the chapter
+  lists seven; `emotional-memetics` drops a whole sentence and rephrases the
+  evidence lines). Only `selection-as-other-engine` is near-verbatim (the note
+  is the chapter summary minus its last sentence), and even that follows the
+  consistent "Chapter Nx draft. …" note pattern.
+- **Why it matters:** the maintenance concern (two strings to keep in sync) is
+  largely resolved now that both live in `data/*.json` (Phase 74) rather than
+  one being buried in code. What remains is an authorial question, not a
+  mechanical one: do you *want* the note summary to be the chapter summary's
+  short form, or to describe the note as a standalone artifact? No rewrite was
+  done — changing 13 author-written framings on a subjective basis is out of
+  the audit's no-touch-prose scope.
 - **Options:**
-  - [ ] **(rec) Fix the direction** in those `*-gap.jsonl` lines (make the
-    Source the subject) so the evidence actually lands in the graph.
-  - [ ] Delete the malformed lines if the claims are redundant.
-  - [ ] Leave (harmless; just lost evidence).
+  - [ ] **(rec) Leave as-is** — the framings are intentional and serve two
+    surfaces (note-as-artifact vs chapter-as-argument).
+  - [ ] Consciously make each note summary note-specific (describe the draft's
+    state/scope, not restate the chapter's argument).
 
 ---
 
