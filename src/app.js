@@ -748,9 +748,13 @@ async function loadJsonl(path) {
 async function main() {
   parseHash();
 
+  // All three are required. A failed fetch must surface as an error (caught
+  // by main().catch below), not silently degrade to an empty graph that
+  // looks like a legitimately-empty view — a staging mistake should look
+  // broken, not blank.
   GRAPH.meta = await loadJson(`${DATA}/graph-meta.json`);
-  GRAPH.nodes = await loadJsonl(`${DATA}/nodes.jsonl`).catch(() => []);
-  GRAPH.edges = await loadJsonl(`${DATA}/edges.jsonl`).catch(() => []);
+  GRAPH.nodes = await loadJsonl(`${DATA}/nodes.jsonl`);
+  GRAPH.edges = await loadJsonl(`${DATA}/edges.jsonl`);
   GRAPH.nodeById = new Map(GRAPH.nodes.map(n => [n.id, n]));
   GRAPH.outByNode = new Map();
   GRAPH.inByNode = new Map();

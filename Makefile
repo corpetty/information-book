@@ -99,8 +99,9 @@ context: build
 # The viewer fetches via ../data, so the paths line up under the published
 # /graph/ subpath. Idempotent; depends on site/public/ existing.
 viewer-stage:
-	@mkdir -p site/public/graph site/public/data
+	@mkdir -p site/public/graph/vendor site/public/data
 	@cp src/index.html src/app.js src/styles.css site/public/graph/
+	@cp src/vendor/cytoscape.min.js site/public/graph/vendor/
 	@cp data/graph-meta.json data/nodes.jsonl data/edges.jsonl site/public/data/
 
 # Regenerate citation pages from data/sources.json. Idempotent — files

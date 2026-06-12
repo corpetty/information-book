@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <title>Lossy — Ontology</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="https://unpkg.com/cytoscape@3.30.4/dist/cytoscape.min.js"></script>
+  <!-- Vendored (src/vendor/cytoscape.min.js, v3.30.4) rather than CDN-loaded:
+       the published book site shouldn't put a third-party CDN in its trust
+       boundary, and the viewer should work offline / on CDN outage. -->
+  <script src="vendor/cytoscape.min.js"></script>
 </head>
 <body>
   <header>
