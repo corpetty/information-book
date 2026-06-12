@@ -21,7 +21,7 @@ Lossy re-encoding at each stage of an abstraction pipeline. Each hop is a sender
 - **Discussed in:** [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[the-information-landscape|Ch 1 — The Information Landscape]]
 - **Pressure-tested by:** [[misinformation-age|The Misinformation Age]]
 - **Evidenced by:** [[amusing-ourselves-to-death|Amusing Ourselves to Death]], [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]], [[info-evolution-social-media|Information Evolution in Social Media]]
-- **Derived from by:** [[interpretive-latitude|Interpretive latitude]], [[want-as-prime-mover|Want as the prime mover]]
+- **Derived from by:** [[constitutive-transmission|Constitutive transmission]], [[interpretive-latitude|Interpretive latitude]], [[want-as-prime-mover|Want as the prime mover]]
 
 <em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
 

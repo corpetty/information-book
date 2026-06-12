@@ -1,24 +1,131 @@
 {
   "_doc": "Sources the book engages with — prior-art books, papers, posts, talks, and the academic PDFs staged for extraction. Each source has at most one primary author (use `coauthors` for additional). `engagement` describes the book's stance toward the source. `representedBy` (optional) links to a Note that materially holds the source (e.g. a conversation transcript that doubles as a Note). `file` (optional) is the staged PDF filename. `availability` is one of: `open` (cleared to commit — file lives in content/sources/), `restricted` (in-copyright — file lives in the gitignored sources-local/, never committed or published), `unverified` (committed but licence not yet confirmed), `external` (no file held — cited by reference only). `tags` is a controlled vocabulary for navigation: `prior-art` (a work the book is in dialogue with), `adversary` (prior art that actively challenges the book's thesis), `evidence` (a source that backs or pressure-tests Claims), `internal` (the author's own corpus), `model-origin` (the source of a model or framing the book adapts).",
   "authors": [
-    { "id": "corey-petty",        "label": "Corey Petty",        "summary": "The author of this book; some of his own earlier posts are treated as primary sources." },
-    { "id": "neil-postman",       "label": "Neil Postman",       "summary": "Media-ecology scholar. Amusing Ourselves to Death." },
-    { "id": "hugo-mercier",       "label": "Hugo Mercier",       "summary": "Cognitive scientist. Argues for robust epistemic vigilance." },
-    { "id": "cailin-oconnor",     "label": "Cailin O'Connor",    "summary": "Philosopher of science. Network models of belief propagation." },
-    { "id": "james-weatherall",   "label": "James Owen Weatherall", "summary": "Philosopher of science. Co-author with O'Connor." },
-    { "id": "c-thi-nguyen",       "label": "C. Thi Nguyen",      "summary": "Philosopher. Distinguished epistemic bubbles from echo chambers." },
-    { "id": "marshall-mcluhan",   "label": "Marshall McLuhan",   "summary": "Founding figure of media ecology." },
-    { "id": "richard-dawkins",    "label": "Richard Dawkins",    "summary": "Coined 'meme' in The Selfish Gene." },
-    { "id": "susan-blackmore",    "label": "Susan Blackmore",    "summary": "Developed memetics as a research program." },
-    { "id": "yuval-noah-harari",  "label": "Yuval Noah Harari",  "summary": "Author of Nexus; framing on myths/bureaucracy and three realities." },
-    { "id": "tim-urban",          "label": "Tim Urban",          "summary": "Wait But Why author. The tablespoon-of-weeks visualization." },
-    { "id": "douglas-hofstadter",   "label": "Douglas Hofstadter",   "summary": "Cognitive scientist; author of Gödel, Escher, Bach. Originated the frame/outer/inner three-layer message model." },
-    { "id": "leo-xiv",             "label": "Pope Leo XIV",         "summary": "Roman Catholic Pope (elected 2025); author of the 2026 encyclical Magnifica Humanitas on AI, technology, and the common good." },
-    { "id": "rolf-landauer",       "label": "Rolf Landauer",        "summary": "IBM physicist. Landauer's principle (1961): erasing one bit of information dissipates at least kT ln 2 of energy." },
-    { "id": "charles-bennett",     "label": "Charles Bennett",      "summary": "IBM physicist. Resolved Maxwell's demon (1982) by showing the demon must pay Landauer's erasure cost when it clears its memory." },
-    { "id": "george-price",        "label": "George Price",         "summary": "Population geneticist. The Price equation (1970) splits evolutionary change into a selection term (covariance with fitness) and a transmission term." },
-    { "id": "salvador-luria",      "label": "Salvador Luria",       "summary": "Microbiologist. With Delbrück, the 1943 fluctuation test showing bacterial mutations arise before selection, not in response to it." },
-    { "id": "max-delbruck",        "label": "Max Delbrück",         "summary": "Biophysicist. Co-author of the 1943 Luria–Delbrück fluctuation test." }
+    {
+      "id": "corey-petty",
+      "label": "Corey Petty",
+      "summary": "The author of this book; some of his own earlier posts are treated as primary sources."
+    },
+    {
+      "id": "neil-postman",
+      "label": "Neil Postman",
+      "summary": "Media-ecology scholar. Amusing Ourselves to Death."
+    },
+    {
+      "id": "hugo-mercier",
+      "label": "Hugo Mercier",
+      "summary": "Cognitive scientist. Argues for robust epistemic vigilance."
+    },
+    {
+      "id": "cailin-oconnor",
+      "label": "Cailin O'Connor",
+      "summary": "Philosopher of science. Network models of belief propagation."
+    },
+    {
+      "id": "james-weatherall",
+      "label": "James Owen Weatherall",
+      "summary": "Philosopher of science. Co-author with O'Connor."
+    },
+    {
+      "id": "c-thi-nguyen",
+      "label": "C. Thi Nguyen",
+      "summary": "Philosopher. Distinguished epistemic bubbles from echo chambers."
+    },
+    {
+      "id": "marshall-mcluhan",
+      "label": "Marshall McLuhan",
+      "summary": "Founding figure of media ecology."
+    },
+    {
+      "id": "richard-dawkins",
+      "label": "Richard Dawkins",
+      "summary": "Coined 'meme' in The Selfish Gene."
+    },
+    {
+      "id": "susan-blackmore",
+      "label": "Susan Blackmore",
+      "summary": "Developed memetics as a research program."
+    },
+    {
+      "id": "yuval-noah-harari",
+      "label": "Yuval Noah Harari",
+      "summary": "Author of Nexus; framing on myths/bureaucracy and three realities."
+    },
+    {
+      "id": "tim-urban",
+      "label": "Tim Urban",
+      "summary": "Wait But Why author. The tablespoon-of-weeks visualization."
+    },
+    {
+      "id": "douglas-hofstadter",
+      "label": "Douglas Hofstadter",
+      "summary": "Cognitive scientist; author of Gödel, Escher, Bach. Originated the frame/outer/inner three-layer message model."
+    },
+    {
+      "id": "leo-xiv",
+      "label": "Pope Leo XIV",
+      "summary": "Roman Catholic Pope (elected 2025); author of the 2026 encyclical Magnifica Humanitas on AI, technology, and the common good."
+    },
+    {
+      "id": "rolf-landauer",
+      "label": "Rolf Landauer",
+      "summary": "IBM physicist. Landauer's principle (1961): erasing one bit of information dissipates at least kT ln 2 of energy."
+    },
+    {
+      "id": "charles-bennett",
+      "label": "Charles Bennett",
+      "summary": "IBM physicist. Resolved Maxwell's demon (1982) by showing the demon must pay Landauer's erasure cost when it clears its memory."
+    },
+    {
+      "id": "george-price",
+      "label": "George Price",
+      "summary": "Population geneticist. The Price equation (1970) splits evolutionary change into a selection term (covariance with fitness) and a transmission term."
+    },
+    {
+      "id": "salvador-luria",
+      "label": "Salvador Luria",
+      "summary": "Microbiologist. With Delbrück, the 1943 fluctuation test showing bacterial mutations arise before selection, not in response to it."
+    },
+    {
+      "id": "max-delbruck",
+      "label": "Max Delbrück",
+      "summary": "Biophysicist. Co-author of the 1943 Luria–Delbrück fluctuation test."
+    },
+    {
+      "id": "john-searle",
+      "label": "John Searle",
+      "summary": "Philosopher of language and mind. Institutional facts, status functions, collective intentionality."
+    },
+    {
+      "id": "benedict-anderson",
+      "label": "Benedict Anderson",
+      "summary": "Political scientist and historian. Nations as imagined communities constituted through print."
+    },
+    {
+      "id": "peter-berger",
+      "label": "Peter Berger",
+      "summary": "Sociologist. Co-author of the social-construction tradition's founding text."
+    },
+    {
+      "id": "thomas-luckmann",
+      "label": "Thomas Luckmann",
+      "summary": "Sociologist. Co-author of The Social Construction of Reality."
+    },
+    {
+      "id": "ian-hacking",
+      "label": "Ian Hacking",
+      "summary": "Philosopher of science. Looping effects of human kinds; the dynamics of classification."
+    },
+    {
+      "id": "george-soros",
+      "label": "George Soros",
+      "summary": "Investor and theorist of reflexivity in markets."
+    },
+    {
+      "id": "albert-hirschman",
+      "label": "Albert Hirschman",
+      "summary": "Economist. Exit, voice, and loyalty as responses to institutional decline."
+    }
   ],
   "sources": [
     {
@@ -30,7 +137,9 @@
       "summary": "Covers the barriers/volume angle: curation layer, cost-shifting, creation-cheap/review-expensive, inverted-U relationship.",
       "engagement": "primary internal source the book draws from",
       "availability": "external",
-      "tags": ["internal"]
+      "tags": [
+        "internal"
+      ]
     },
     {
       "id": "double-edged-sword-of-expertise",
@@ -41,7 +150,9 @@
       "summary": "Working out cross-domain intuition: chunking and deep structural analogies as the cognitive substrate of expert transfer; the four 'curse of expertise' failure modes (paradigm lock-in, overconfidence in cross-application, perceptual filtering, conceptual rigidity); and the prescription for cultivating versatile expertise. Claude-assisted.",
       "engagement": "primary internal source — supplies Chapter 9's bridge-node mechanism",
       "availability": "external",
-      "tags": ["internal"]
+      "tags": [
+        "internal"
+      ]
     },
     {
       "id": "the-abyss",
@@ -52,7 +163,9 @@
       "summary": "The possibility-space of a sufficiently complex field is too vast to navigate or even perceive without deep competence — you have to become an expert before you can see how unnavigable your own field is (The Most Unknown; Wheeler's lengthening shoreline; Dunning's 'to know that you don't know something, you need to know something'; Shannon and Go game-tree sizes; Borges' Library of Babel; Simon's bounded rationality; Kauffman's adjacent possible; Wolfram's computational irreducibility; du Sautoy's known unknowables). Two load-bearing moves for the book: 'expertise is a compression of the abyss' ties the compression machinery to the receiver-budget constraint; and the abyss is the experiential complement of the curse of expertise (the curse is depth that hasn't seen the abyss). Closes by bounding optionality-vs-access — a finite, masterable artifact is a map, the abyss is the territory the map is of. Claude-assisted.",
       "engagement": "primary internal source — supplies the abyss concept (compression-of-the-abyss; experiential complement of the curse of expertise)",
       "availability": "external",
-      "tags": ["internal"]
+      "tags": [
+        "internal"
+      ]
     },
     {
       "id": "general-theme-conversation",
@@ -64,7 +177,9 @@
       "engagement": "primary internal source the book draws from",
       "representedBy": "general-theme",
       "availability": "external",
-      "tags": ["internal"]
+      "tags": [
+        "internal"
+      ]
     },
     {
       "id": "amusing-ourselves-to-death",
@@ -76,7 +191,9 @@
       "engagement": "the book needs to know what it's adding past Postman",
       "availability": "restricted",
       "file": "Amusing Ourselves to Death Public Discourse in the Age of Show Business.pdf",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "not-born-yesterday",
@@ -88,20 +205,28 @@
       "engagement": "pressure-tests Chapter 7's emotional-memetics floor argument",
       "availability": "restricted",
       "file": "not-born-yesterday.pdf",
-      "tags": ["prior-art", "adversary"]
+      "tags": [
+        "prior-art",
+        "adversary"
+      ]
     },
     {
       "id": "misinformation-age",
       "label": "The Misinformation Age",
       "kind": "book",
       "author": "cailin-oconnor",
-      "coauthors": ["james-weatherall"],
+      "coauthors": [
+        "james-weatherall"
+      ],
       "tradition": "network-epistemology",
       "summary": "Formal network models of belief propagation. What kills truth in networks: selection on credibility plus social pressure, not lossy hops.",
       "engagement": "directly relevant to transport-vs-selection",
       "availability": "restricted",
       "file": "misinformation-age.md",
-      "tags": ["prior-art", "evidence"]
+      "tags": [
+        "prior-art",
+        "evidence"
+      ]
     },
     {
       "id": "nguyen-bubbles-vs-chambers",
@@ -112,7 +237,9 @@
       "summary": "Distinguishes epistemic bubbles (missing info) from echo chambers (active discrediting of outside info). Small networks tend toward chambers.",
       "engagement": "foundational for the rebuilt Part IV",
       "availability": "external",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "understanding-media",
@@ -123,7 +250,9 @@
       "summary": "'The medium is the message.' The canonical reference for how media shape what can pass through them.",
       "engagement": "worth engaging explicitly",
       "availability": "external",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "selfish-gene",
@@ -134,7 +263,9 @@
       "summary": "Coined the term 'meme.' The selection-side view's foundational text.",
       "engagement": "the selection-side view already has a literature; use it",
       "availability": "external",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "meme-machine",
@@ -145,7 +276,9 @@
       "summary": "Developed memetics into a sustained research program. Mechanisms of cultural selection.",
       "engagement": "the selection-side view already has a literature; use it",
       "availability": "external",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "nexus",
@@ -156,7 +289,9 @@
       "summary": "Information networks bound by myths and bureaucracy. Three realities (objective / subjective / intersubjective). Truth/order axis. Naive view of information.",
       "engagement": "already in play; key framing reference",
       "availability": "external",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "life-in-weeks",
@@ -167,7 +302,9 @@
       "summary": "Tablespoon-of-diamonds visualization of a human lifespan. The receiver-budget intuition.",
       "engagement": "cited as the source of the tablespoon-of-weeks framing",
       "availability": "external",
-      "tags": ["model-origin"]
+      "tags": [
+        "model-origin"
+      ]
     },
     {
       "id": "epidemiological-virality",
@@ -178,7 +315,9 @@
       "engagement": "candidate evidentiary source for Chapters 5 and 5b",
       "availability": "open",
       "file": "epidemiological-approach-to-model-viral-propagation-of-memes.pdf",
-      "tags": ["evidence"]
+      "tags": [
+        "evidence"
+      ]
     },
     {
       "id": "info-evolution-social-media",
@@ -189,7 +328,9 @@
       "engagement": "candidate evidentiary source for the bridge-zone distortion case studies",
       "availability": "open",
       "file": "information-evolution-in-social-media.pdf",
-      "tags": ["evidence"]
+      "tags": [
+        "evidence"
+      ]
     },
     {
       "id": "memetics-critique",
@@ -200,7 +341,10 @@
       "engagement": "candidate pressure-tester for the selection-side framing",
       "availability": "open",
       "file": "Memetics_critique.pdf",
-      "tags": ["evidence", "adversary"]
+      "tags": [
+        "evidence",
+        "adversary"
+      ]
     },
     {
       "id": "psychology-of-virality",
@@ -211,7 +355,9 @@
       "engagement": "candidate evidentiary source for Chapters 5b and 7",
       "availability": "open",
       "file": "psychology-of-virality.pdf",
-      "tags": ["evidence"]
+      "tags": [
+        "evidence"
+      ]
     },
     {
       "id": "godel-escher-bach",
@@ -222,7 +368,10 @@
       "summary": "Chapter VI, 'The Location of Meaning', develops the three-layer message model — frame (this is a message), outer (how to decode it), inner (what it means) — to ask whether meaning is intrinsic to a message or supplied by the decoder.",
       "engagement": "source of the three-layer message model the book adapts",
       "availability": "external",
-      "tags": ["model-origin", "prior-art"]
+      "tags": [
+        "model-origin",
+        "prior-art"
+      ]
     },
     {
       "id": "magnifica-humanitas",
@@ -233,7 +382,9 @@
       "summary": "May 2026 papal encyclical on artificial intelligence, technology, and the common good. Frames the choice as Babel (centralized, efficient, fragmenting) vs. Jerusalem (plural voices coordinated through shared responsibility). Distinguishes formal institutional power (state) from de facto power (tech/finance actors whose authority now exceeds many governments). Names the 'technocratic paradigm' as the ideology treating nature and humans as objects to dominate, and 'structures of sin' as institutionally-embedded systematic injustice. Calls for synodality (deliberative process across expertise domains) and an educational alliance for the digital age as counterforces.",
       "engagement": "contemporary intervention on the book's themes; structurally aligned diagnosis with morally-philosophically grounded prescription; pressure-tests the book's prescriptive side on the polarization-via-distrust trap",
       "availability": "external",
-      "tags": ["prior-art"]
+      "tags": [
+        "prior-art"
+      ]
     },
     {
       "id": "ethical-infrastructure-talk",
@@ -244,19 +395,25 @@
       "summary": "Devcon VI talk, October 2022. Applies Hofstadter's three-layer message model to infrastructure design — and makes the key move of identifying the outer message with the medium.",
       "engagement": "primary internal source — first place the three-layer model was bound to the medium",
       "availability": "external",
-      "tags": ["internal"]
+      "tags": [
+        "internal"
+      ]
     },
     {
       "id": "landauers-principle",
       "label": "Irreversibility and Heat Generation in the Computing Process",
       "kind": "paper",
       "author": "rolf-landauer",
-      "coauthors": ["charles-bennett"],
+      "coauthors": [
+        "charles-bennett"
+      ],
       "tradition": "information-theory",
       "summary": "Landauer (1961) established that erasing one bit of information carries an unavoidable thermodynamic cost of at least kT ln 2; Bennett (1982) used this to dissolve Maxwell's demon, showing the demon's apparent free order is paid back when it erases its memory. Grounds the book's 'a choice is a cost too' correction: aiming is never free, and the real split is blind cost vs. criterial cost.",
       "engagement": "evidentiary grounding for the cost/choice asymmetry in Chapter 5b",
       "availability": "external",
-      "tags": ["evidence"]
+      "tags": [
+        "evidence"
+      ]
     },
     {
       "id": "price-equation",
@@ -267,19 +424,106 @@
       "summary": "Price (1970) decomposes the change in any trait across a generation into two terms: a selection term equal to the covariance between the trait and fitness, and a transmission term capturing everything imperfect transmission does. The aim lives entirely in the covariance; the transmission term is the blind cost, and biased (anisotropic) transmission sits there too — still un-steerable. Formal backing for the transport-as-cost / selection-as-choice split.",
       "engagement": "evidentiary grounding for the two-term decomposition in Chapter 5b",
       "availability": "external",
-      "tags": ["evidence"]
+      "tags": [
+        "evidence"
+      ]
     },
     {
       "id": "luria-delbruck",
       "label": "Mutations of Bacteria from Virus Sensitivity to Virus Resistance",
       "kind": "paper",
       "author": "salvador-luria",
-      "coauthors": ["max-delbruck"],
+      "coauthors": [
+        "max-delbruck"
+      ],
       "tradition": "evolutionary-dynamics",
       "summary": "Luria & Delbrück (1943), the fluctuation test: the wide variance in resistant-bacteria counts across parallel cultures showed mutations arise spontaneously before the selective pressure (the virus), not in adaptive response to it. Variation proposes blind, and only afterward does selection choose — grounding the book's claim that the generate step runs blind.",
       "engagement": "evidentiary grounding for blind variation preceding selection in Chapter 5b",
       "availability": "external",
-      "tags": ["evidence"]
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "construction-of-social-reality",
+      "label": "The Construction of Social Reality",
+      "kind": "book",
+      "author": "john-searle",
+      "tradition": "social-ontology",
+      "summary": "Institutional facts and status functions: X counts as Y in context C, sustained by collective intentionality. The canonical philosophical machinery for agreement-generated reality — would give the intersubjective-truth note's generator criterion its formal joints.",
+      "engagement": "not yet engaged; first-priority candidate for the intersubjective-truth thread",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "imagined-communities",
+      "label": "Imagined Communities",
+      "kind": "book",
+      "author": "benedict-anderson",
+      "tradition": "network-society",
+      "summary": "Nations as communities constituted through print capitalism — intersubjective constitution riding the same printing-press transition the book reads through the Hammer and Copernicus. Uncomfortably close to the intersubjective-truth note's instincts; engagement would sharpen or correct them.",
+      "engagement": "not yet engaged; candidate for the intersubjective-truth thread and the fork/secession material",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "social-construction-of-reality",
+      "label": "The Social Construction of Reality",
+      "kind": "book",
+      "author": "peter-berger",
+      "coauthors": [
+        "thomas-luckmann"
+      ],
+      "tradition": "social-ontology",
+      "summary": "The founding text of the social-construction tradition: externalization, objectivation, internalization — a three-step account of how agreement hardens into experienced objectivity. Its 'objectivation' is the book's reification with sixty years of priority.",
+      "engagement": "not yet engaged; candidate — the objectivation/internalization ladder maps onto reification and trained-keys-are-shares",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "social-construction-of-what",
+      "label": "The Social Construction of What?",
+      "kind": "book",
+      "author": "ian-hacking",
+      "tradition": "social-ontology",
+      "summary": "Looping effects of human kinds: classifications change the people classified, who change the classification. The formal version of the self-fulfilling dynamics the intersubjective-truth note works through with bank runs.",
+      "engagement": "not yet engaged; candidate for the constitutive-volatility and self-fulfilling-loop material",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "alchemy-of-finance",
+      "label": "The Alchemy of Finance",
+      "kind": "book",
+      "author": "george-soros",
+      "tradition": "social-ontology",
+      "summary": "Reflexivity: market participants' beliefs alter the fundamentals the beliefs are about. A practitioner's account of constitutive transmission in the one domain where it is priced daily.",
+      "engagement": "not yet engaged; candidate for the constitutive-volatility material",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "exit-voice-loyalty",
+      "label": "Exit, Voice, and Loyalty",
+      "kind": "book",
+      "author": "albert-hirschman",
+      "tradition": "network-society",
+      "summary": "The classic taxonomy of responses to institutional decline. Exit is the fork's economic theory; voice is renegotiation; loyalty is what delays both. Would give the fork-as-corrective argument its prior literature.",
+      "engagement": "not yet engaged; candidate for the fork-as-corrective and keep-the-fork-affordable material",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
     }
   ]
 }

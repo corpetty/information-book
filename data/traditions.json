@@ -40,6 +40,11 @@
       "id": "evolutionary-dynamics",
       "label": "Evolutionary dynamics",
       "summary": "The formal core of selection theory: how variation arises and how differential reproduction reshapes a population over time. Price's covariance decomposition (change splits into a selection term and a transmission term) and the Luria–Delbrück fluctuation test (variation arises before selection, not in response to it) are the mathematics the book's transport-vs-selection split rests on."
+    },
+    {
+      "id": "social-ontology",
+      "label": "Social ontology / construction",
+      "summary": "The philosophical and sociological literature on agreement-generated reality: institutional facts, collective intentionality, social construction, looping effects, reflexivity. The prior art under the book's intersubjective-truth thread."
     }
   ]
 }

@@ -467,3 +467,71 @@ move; the G3 items are about *production* metadata, not epistemic honesty.
   collapses into one `information`-tag hub.
 - **README** brought current; `.trash/astrology.md` removed; `make clean`
   completed; `build-stats` phase un-hardcoded.
+
+---
+
+## H. The intersubjective thread — June 2026 (Phases 85–90)
+
+The three-realities frame had its working-through deferred since Ch 2
+("a sketch rather than a full treatment"), with explicit scope debts in
+5c and Ch 9 and four undone outline pull-ins (5b / 8 / 10 / 11). Phases
+85–90 paid the debt. Author rulings made at the start, recorded so later
+passes don't relitigate them:
+
+- **"Truth" stays, in Harari's terms.** Intersubjective truths are
+  *truths* — what differs is the generator (network agreement vs.
+  reality), not the truth-ness. No retreat to "determinacy,"
+  "bindingness," or "useful fiction" as replacement vocabulary; those
+  words can describe properties of the truth, never substitutes for
+  calling it one.
+- **The carving is per-claim, by generator — not per-artifact, by
+  genre.** A myth can be based in reality too; founding stories and
+  astrology are mixed bundles that split along the generator line.
+- **The line itself is held provisionally.** The author is explicitly
+  not sure about the line; the note commits to the generator criterion
+  and carries the hard cases (brands' quasi-objective promises,
+  consensus-tracks-vs-agreement-generates) as open uncertainties rather
+  than settled doctrine. Do not harden this in polish passes.
+
+What landed where:
+
+- **Phase 85** — question:intersubjective-pipeline tracked formally.
+- **Phase 86** — [[intersubjective-truth]] drafted (seventh foundational
+  note): generator criterion, constitutive transmission, convergent /
+  divergent / hollow constitution, capture as steering the generator,
+  reification, fork-as-corrective, constitutive volatility.
+- **Phase 87** — Ch 2 "A fifth story: money" (hyperinflation, the
+  meme-speed bank run, Bitcoin + the fork); promissory passages cashed.
+- **Phase 88** — Part II threads: Ch 5 scope flag carries its answer;
+  Ch 5b seam says which reality is in transit (+ the Hammer's witch
+  category as the unmarked instance); Ch 5c gains reification and is
+  bounded by decision.
+- **Phase 89** — Part IV threads: Ch 8 trained-keys-are-shares
+  multiplier; Ch 9 "The intersubjective sibling" (interop between
+  generators; trust-bootstrap = constitution-bootstrap); Ch 10 shapes-
+  which-we-exists + de-reification; Ch 11 LLM as key-re-supply at
+  population scale; Ch 12 institutions-are-intersubjective + keep-the-
+  fork-affordable; myth note re-read one level up.
+- **Phase 90** — graph wiring (3 concepts, 1 mechanism, 5 claims,
+  question provisionally resolved), 6 glossary entries, social-ontology
+  tradition + 6 candidate sources, this ledger.
+
+Terminology decisions:
+
+- Regime names: **convergent / divergent / hollow constitution** (not
+  "preserved/inverted/orthogonal constitution" — the failure axis
+  rotated, so reusing 5c's names would imply a cleaner one-to-one than
+  the note defends).
+- 5b's "hollowed into a tribal flag" reworded to "emptied" to keep
+  *hollow* unambiguous for hollow constitution.
+- **Reification** kept as the term of art, always glossed at first use
+  ("agreement wearing the costume of nature" / "a made thing read as a
+  found thing").
+
+Open edges (tracked in the note's uncertainties + outline item 14): the
+consensus-tracks-vs-is line; regime two-plus-one suspicion; decode-as-
+vote possibly overstating the receiver outside crisis moments; the
+volatility ratio claim (unmeasured — experiments/ candidate); the
+social-ontology cluster unengaged (Searle, Berger & Luckmann, Anderson,
+Hacking, Soros, Hirschman — note written deliberately before them); the
+sibling treatment's worked cases.

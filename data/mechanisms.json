@@ -5,75 +5,204 @@
       "id": "transport",
       "label": "Transport",
       "summary": "Lossy re-encoding at each stage of an abstraction pipeline. Each hop is a sender re-encoding for a new receiver; cumulative compression bounds how much complexity can survive transit. The telephone-game intuition.",
-      "aliases": ["transport", "lossy re-encoding", "lossy hops", "telephone game"],
-      "definedIn": ["transport-vs-selection", "the-information-landscape", "complexity-virality-tradeoff"],
-      "coveredBy": ["complexity-virality-tradeoff", "information-landscape"],
+      "aliases": [
+        "transport",
+        "lossy re-encoding",
+        "lossy hops",
+        "telephone game"
+      ],
+      "definedIn": [
+        "transport-vs-selection",
+        "the-information-landscape",
+        "complexity-virality-tradeoff"
+      ],
+      "coveredBy": [
+        "complexity-virality-tradeoff",
+        "information-landscape"
+      ],
       "derivesFrom": []
     },
     {
       "id": "selection",
       "label": "Selection",
       "summary": "Gates with local fitness criteria at each pipeline stage. What survives is whatever wins on emotional resonance, identity reinforcement, status, action affordance, novelty. Dominant constraint in modern digital networks where transport cost has collapsed.",
-      "aliases": ["selection", "memetic fitness", "selection criteria", "fitness landscape", "selection gates"],
-      "definedIn": ["transport-vs-selection", "the-information-landscape"],
-      "coveredBy": ["selection-as-other-engine", "information-landscape"],
+      "aliases": [
+        "selection",
+        "memetic fitness",
+        "selection criteria",
+        "fitness landscape",
+        "selection gates"
+      ],
+      "definedIn": [
+        "transport-vs-selection",
+        "the-information-landscape"
+      ],
+      "coveredBy": [
+        "selection-as-other-engine",
+        "information-landscape"
+      ],
       "derivesFrom": []
     },
     {
       "id": "want-as-prime-mover",
       "label": "Want as the prime mover",
       "summary": "Want drives a feedback loop where engagement accumulates preconditions that deepen further want. Both transport capacity and selection criteria are downstream of cumulative wanting. Reframes transport and selection as aspects of one dynamic, not two competing mechanisms.",
-      "aliases": ["want is the prime mover", "want as prime mover", "want-engagement loop"],
-      "definedIn": ["transport-vs-selection"],
-      "coveredBy": ["selection-as-other-engine", "complexity-virality-tradeoff"],
-      "derivesFrom": ["transport", "selection"]
+      "aliases": [
+        "want is the prime mover",
+        "want as prime mover",
+        "want-engagement loop"
+      ],
+      "definedIn": [
+        "transport-vs-selection"
+      ],
+      "coveredBy": [
+        "selection-as-other-engine",
+        "complexity-virality-tradeoff"
+      ],
+      "derivesFrom": [
+        "transport",
+        "selection"
+      ]
     },
     {
       "id": "medium-shapes-want",
       "label": "Medium shapes want",
       "summary": "Different media cultivate different kinds of want in receivers. A medium that rewards shallow engagement trains preconditions for shallow content; a medium that rewards sustained engagement does the opposite. McLuhan's 'the medium is the message' restated at the want-formation level.",
-      "aliases": ["medium shapes want", "medium-is-the-message"],
-      "definedIn": ["outline", "transport-vs-selection"],
-      "coveredBy": ["selection-as-other-engine", "political-economy-of-attention"],
-      "derivesFrom": ["want-as-prime-mover"]
+      "aliases": [
+        "medium shapes want",
+        "medium-is-the-message"
+      ],
+      "definedIn": [
+        "outline",
+        "transport-vs-selection"
+      ],
+      "coveredBy": [
+        "selection-as-other-engine",
+        "political-economy-of-attention"
+      ],
+      "derivesFrom": [
+        "want-as-prime-mover"
+      ]
     },
     {
       "id": "manufactured-injection",
       "label": "Manufactured injection",
       "summary": "Content generated wholesale, never measured against reality, injected at later pipeline stages — astrology, conspiracy theories, propaganda, AI-generated text. Downstream selection criteria cannot easily distinguish measured from manufactured content.",
-      "aliases": ["manufactured injection", "manufactured content", "injected content"],
-      "definedIn": ["the-information-landscape"],
-      "coveredBy": ["information-landscape", "ai-as-new-node"],
+      "aliases": [
+        "manufactured injection",
+        "manufactured content",
+        "injected content"
+      ],
+      "definedIn": [
+        "the-information-landscape"
+      ],
+      "coveredBy": [
+        "information-landscape",
+        "ai-as-new-node"
+      ],
       "derivesFrom": []
     },
     {
       "id": "interpretive-latitude",
       "label": "Interpretive latitude",
       "summary": "Stripping an idea's outer message does not fix a single wrong decoding key — it unpins the key, leaving the surviving claim underdetermined. The more compressed the claim, the wider the range of readings it will support. Compression's second effect, alongside shifting the expected decode: it widens the variance of decodes across receivers.",
-      "aliases": ["interpretive latitude", "interpretation variance", "interpretive underdetermination", "underdetermined decode"],
-      "definedIn": ["myths-scale-and-bureaucracy", "truth-compression-and-when-each-wins"],
-      "coveredBy": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff"],
-      "derivesFrom": ["transport"]
+      "aliases": [
+        "interpretive latitude",
+        "interpretation variance",
+        "interpretive underdetermination",
+        "underdetermined decode"
+      ],
+      "definedIn": [
+        "myths-scale-and-bureaucracy",
+        "truth-compression-and-when-each-wins"
+      ],
+      "coveredBy": [
+        "truth-compression-and-when-each-wins",
+        "complexity-virality-tradeoff"
+      ],
+      "derivesFrom": [
+        "transport"
+      ]
     },
     {
       "id": "engagement-equilibrium",
       "label": "Engagement-maximization as a captured equilibrium",
       "summary": "Engagement maximization is not an attack on the platform from outside — it is the platform's own business model acting as the captured selection-tuner. The metric being optimized (time-in-medium → ad inventory → revenue) is a proxy for revenue dressed up as a proxy for user benefit; the gate-criteria tuned to it converge on identity, threat, and high-arousal content because that is what holds attention. The equilibrium is the institution's normal operation, which is what makes it more stable than any externally captured institution — there is no adversary to defeat, only an arrangement to dismantle.",
-      "aliases": ["engagement equilibrium", "engagement maximization", "captured engagement equilibrium", "engagement-optimization loop"],
-      "definedIn": ["political-economy-of-attention"],
-      "coveredBy": ["political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
-      "derivesFrom": ["selection", "medium-shapes-want"],
-      "enables": ["concept:out-competition-of-carriers"]
+      "aliases": [
+        "engagement equilibrium",
+        "engagement maximization",
+        "captured engagement equilibrium",
+        "engagement-optimization loop"
+      ],
+      "definedIn": [
+        "political-economy-of-attention"
+      ],
+      "coveredBy": [
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ],
+      "derivesFrom": [
+        "selection",
+        "medium-shapes-want"
+      ],
+      "enables": [
+        "concept:out-competition-of-carriers"
+      ]
     },
     {
       "id": "myth-dilution",
       "label": "Myth dilution at scale",
       "summary": "The loop by which a network's binding myth loses determinacy as the network grows: scale forces the myth to compress (complexity ceiling), compression widens its interpretive latitude, latitude sorted by community and identity gates segments the network, and segmentation forces the bureaucracy that re-supplies the dropped decoding key. A myth's reach and its determinacy trade off; whether the loop then compounds safely, fragments, or inverts into scale-as-control is set by the repairing bureaucracy's own resistance to capture.",
-      "aliases": ["myth dilution", "myth dilution at scale", "scale dilutes the myth", "the dilution loop"],
-      "definedIn": ["myths-scale-and-bureaucracy"],
-      "coveredBy": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff", "integration-problem", "preservation-vs-training"],
-      "derivesFrom": ["interpretive-latitude", "selection"],
-      "enables": ["concept:network-segmentation"]
+      "aliases": [
+        "myth dilution",
+        "myth dilution at scale",
+        "scale dilutes the myth",
+        "the dilution loop"
+      ],
+      "definedIn": [
+        "myths-scale-and-bureaucracy"
+      ],
+      "coveredBy": [
+        "truth-compression-and-when-each-wins",
+        "complexity-virality-tradeoff",
+        "integration-problem",
+        "preservation-vs-training"
+      ],
+      "derivesFrom": [
+        "interpretive-latitude",
+        "selection"
+      ],
+      "enables": [
+        "concept:network-segmentation"
+      ]
+    },
+    {
+      "id": "constitutive-transmission",
+      "label": "Constitutive transmission",
+      "summary": "How the pipeline operates on intersubjective cargo: each receiver's decode is a unit of the agreement whose being-held is the truth, so transmission participates in the generator rather than reporting on it. Reach changes the truth itself (the billionth holder of a currency adds to its value rather than learning about it); coverage feeds what it covers (the bank-run loop, where propagating 'the bank is failing' performs the failure); and the pipeline's clock rate becomes the constitution's volatility. The intersubjective sibling of transport: not moving a fact but compounding a generator.",
+      "aliases": [
+        "constitutive transmission",
+        "transmission as participation",
+        "decoding as voting",
+        "the pipeline wired into the generator"
+      ],
+      "definedIn": [
+        "intersubjective-truth"
+      ],
+      "coveredBy": [
+        "case-studies-and-three-realities",
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine",
+        "political-economy-of-attention",
+        "ai-as-new-node"
+      ],
+      "derivesFrom": [
+        "transport"
+      ],
+      "enables": [
+        "concept:constitutive-regimes"
+      ]
     }
   ]
 }

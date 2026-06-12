@@ -3,15 +3,31 @@
   "claims": [
     {
       "id": "two-pipelines-parallel",
-      "evidencedBy": ["price-equation"],
+      "evidencedBy": [
+        "price-equation"
+      ],
       "label": "Transport and selection are parallel mechanisms",
       "summary": "Transport (lossy re-encoding) and selection (gates with local criteria) are parallel mechanisms operating in series at every stage of the abstraction pipeline. Neither is downstream of the other. Replaces the original 'which is primary' framing.",
-      "aliases": ["two pipelines", "parallel mechanisms", "transport and selection in parallel"],
+      "aliases": [
+        "two pipelines",
+        "parallel mechanisms",
+        "transport and selection in parallel"
+      ],
       "status": "load-bearing",
-      "argues": ["the-information-landscape", "transport-vs-selection", "outline"],
-      "arguedInChapters": ["information-landscape", "selection-as-other-engine", "complexity-virality-tradeoff"],
+      "argues": [
+        "the-information-landscape",
+        "transport-vs-selection",
+        "outline"
+      ],
+      "arguedInChapters": [
+        "information-landscape",
+        "selection-as-other-engine",
+        "complexity-virality-tradeoff"
+      ],
       "dependsOn": [],
-      "supersedes": ["selection-is-primary"],
+      "supersedes": [
+        "selection-is-primary"
+      ],
       "harvestedFrom": [
         {
           "note": "the-information-landscape",
@@ -27,15 +43,34 @@
     },
     {
       "id": "selection-is-the-tunable-mechanism",
-      "evidencedBy": ["price-equation", "landauers-principle"],
+      "evidencedBy": [
+        "price-equation",
+        "landauers-principle"
+      ],
       "label": "Selection is the tunable mechanism",
       "summary": "Transport and selection are co-equal and parallel — neither downstream of the other — but they differ in modality. Transport is an un-steerable cost: it scrambles, blind to content. Selection is criterial: it has a what-it-rewards, so it can be aimed, set, captured, and contested. The book centers selection not because it is causally upstream but because it is the only one of the two mechanisms with a steering wheel — the locus of manipulation, of political economy, and of any repair. Supersedes the earlier 'selection is primary' framing, which mis-encoded a modality asymmetry as causal order.",
-      "aliases": ["selection is the tunable mechanism", "selection is criterial", "selection is the steering mechanism", "the tunable mechanism", "modality not primacy"],
+      "aliases": [
+        "selection is the tunable mechanism",
+        "selection is criterial",
+        "selection is the steering mechanism",
+        "the tunable mechanism",
+        "modality not primacy"
+      ],
       "status": "load-bearing",
-      "argues": ["transport-vs-selection", "selection-as-other-engine"],
-      "arguedInChapters": ["selection-as-other-engine", "complexity-virality-tradeoff"],
-      "dependsOn": ["claim:two-pipelines-parallel"],
-      "supersedes": ["selection-is-primary"],
+      "argues": [
+        "transport-vs-selection",
+        "selection-as-other-engine"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine",
+        "complexity-virality-tradeoff"
+      ],
+      "dependsOn": [
+        "claim:two-pipelines-parallel"
+      ],
+      "supersedes": [
+        "selection-is-primary"
+      ],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
@@ -48,11 +83,22 @@
       "id": "transport-collapse-shifts-constraint",
       "label": "Transport-cost collapse shifts the binding constraint",
       "summary": "In modern digital networks the cost of transport has collapsed to near zero, so selection becomes the dominant constraint on what spreads. In earlier eras with expensive transit, transport was a binding constraint and a transport-style argument had real force. The relevant constraint has shifted as the medium has changed.",
-      "aliases": ["transport collapse", "transport-to-selection historical shift"],
+      "aliases": [
+        "transport collapse",
+        "transport-to-selection historical shift"
+      ],
       "status": "load-bearing",
-      "argues": ["transport-vs-selection", "political-economy-of-attention"],
-      "arguedInChapters": ["selection-as-other-engine", "political-economy-of-attention"],
-      "dependsOn": ["claim:selection-is-the-tunable-mechanism"],
+      "argues": [
+        "transport-vs-selection",
+        "political-economy-of-attention"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine",
+        "political-economy-of-attention"
+      ],
+      "dependsOn": [
+        "claim:selection-is-the-tunable-mechanism"
+      ],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
@@ -63,14 +109,29 @@
     },
     {
       "id": "three-operations-per-stage",
-      "evidencedBy": ["luria-delbruck", "price-equation"],
+      "evidencedBy": [
+        "luria-delbruck",
+        "price-equation"
+      ],
       "label": "Every stage runs three operations: transport generates, the medium bounds, selection picks",
       "summary": "At each stage of the pipeline an idea passes through three operations. Transport generates: lossy re-encoding scatters the idea into a cloud of variants. The medium bounds: it defines the option space, which of those variants are viable to express here. Selection picks: it ranks the viable set by criteria and one variant travels on. Generate, bound, pick. Selection never generates its own options — something has to write the menu, and that is the medium.",
-      "aliases": ["three operations per stage", "generate bound pick", "transport generates the medium bounds selection picks"],
+      "aliases": [
+        "three operations per stage",
+        "generate bound pick",
+        "transport generates the medium bounds selection picks"
+      ],
       "status": "working",
-      "argues": ["transport-vs-selection", "selection-as-other-engine"],
-      "arguedInChapters": ["selection-as-other-engine", "information-landscape"],
-      "dependsOn": ["claim:two-pipelines-parallel"],
+      "argues": [
+        "transport-vs-selection",
+        "selection-as-other-engine"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine",
+        "information-landscape"
+      ],
+      "dependsOn": [
+        "claim:two-pipelines-parallel"
+      ],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
@@ -83,11 +144,27 @@
       "id": "medium-is-frozen-selection",
       "label": "The medium is frozen selection",
       "summary": "The medium and a runtime selection gate are one continuum of criterial constraint, not two kinds of thing. The medium is the hard, slow, frozen end: a criterial choice made once, at design time, then baked into the substrate so it stops looking like a choice and starts looking like a law of nature. This makes the medium the most powerful and least visible manipulation surface — it pre-empts selection, because a variant the option space cannot hold never has to be suppressed.",
-      "aliases": ["medium is frozen selection", "the medium is frozen selection", "medium pre-empts selection", "the medium is the invisible gate"],
+      "aliases": [
+        "medium is frozen selection",
+        "the medium is frozen selection",
+        "medium pre-empts selection",
+        "the medium is the invisible gate"
+      ],
       "status": "working",
-      "argues": ["transport-vs-selection", "medium-and-manipulation", "selection-as-other-engine", "political-economy-of-attention"],
-      "arguedInChapters": ["selection-as-other-engine", "political-economy-of-attention"],
-      "dependsOn": ["claim:three-operations-per-stage", "claim:medium-attached-to-every-gate"],
+      "argues": [
+        "transport-vs-selection",
+        "medium-and-manipulation",
+        "selection-as-other-engine",
+        "political-economy-of-attention"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine",
+        "political-economy-of-attention"
+      ],
+      "dependsOn": [
+        "claim:three-operations-per-stage",
+        "claim:medium-attached-to-every-gate"
+      ],
       "harvestedFrom": [
         {
           "note": "transport-vs-selection",
@@ -100,11 +177,27 @@
       "id": "medium-attached-to-every-gate",
       "label": "Every gate has a medium that shapes its criteria",
       "summary": "Every node and every arrow in the two-pipeline picture has a medium attached. The selection criteria at each gate are downstream of what that medium can hold and what it rewards. Changing the medium changes the criteria — the pipeline operates inside a specific media ecosystem.",
-      "aliases": ["medium attached to every gate", "medium shapes gate criteria", "the medium is the selection criteria"],
+      "aliases": [
+        "medium attached to every gate",
+        "medium shapes gate criteria",
+        "the medium is the selection criteria"
+      ],
       "status": "load-bearing",
-      "argues": ["the-information-landscape", "medium-and-manipulation", "political-economy-of-attention", "ai-as-new-node"],
-      "arguedInChapters": ["information-landscape", "selection-as-other-engine", "political-economy-of-attention", "ai-as-new-node"],
-      "dependsOn": ["question:medium-and-manipulation"],
+      "argues": [
+        "the-information-landscape",
+        "medium-and-manipulation",
+        "political-economy-of-attention",
+        "ai-as-new-node"
+      ],
+      "arguedInChapters": [
+        "information-landscape",
+        "selection-as-other-engine",
+        "political-economy-of-attention",
+        "ai-as-new-node"
+      ],
+      "dependsOn": [
+        "question:medium-and-manipulation"
+      ],
       "harvestedFrom": [
         {
           "note": "the-information-landscape",
@@ -122,11 +215,20 @@
       "id": "complexity-virality-inverse",
       "label": "Spread is inverse to complexity",
       "summary": "How easily a piece of information spreads across a social network is inversely related to how complex it is. The transport half of the two-mechanism structure; pressure-tested by the question of whether 'complexity' is doing two jobs (precondition count vs. handle-ability).",
-      "aliases": ["complexity virality inverse", "spread inverse complexity"],
+      "aliases": [
+        "complexity virality inverse",
+        "spread inverse complexity"
+      ],
       "status": "working",
-      "argues": ["complexity-virality-tradeoff"],
-      "arguedInChapters": ["complexity-virality-tradeoff"],
-      "dependsOn": ["question:complexity-doing-two-jobs"],
+      "argues": [
+        "complexity-virality-tradeoff"
+      ],
+      "arguedInChapters": [
+        "complexity-virality-tradeoff"
+      ],
+      "dependsOn": [
+        "question:complexity-doing-two-jobs"
+      ],
       "harvestedFrom": [
         {
           "note": "complexity-virality-tradeoff",
@@ -139,11 +241,22 @@
       "id": "complexity-ceiling-by-network-size",
       "label": "Complexity ceiling bounded by network size",
       "summary": "The maximum complexity an idea can carry is bounded by the size of the network it needs to traverse. Bigger network, lower ceiling. Refined in workshop to include a time-window factor.",
-      "aliases": ["complexity ceiling", "complexity bound", "N-hop bound"],
+      "aliases": [
+        "complexity ceiling",
+        "complexity bound",
+        "N-hop bound"
+      ],
       "status": "working",
-      "argues": ["complexity-virality-tradeoff"],
-      "arguedInChapters": ["complexity-virality-tradeoff", "selection-as-other-engine"],
-      "dependsOn": ["claim:complexity-virality-inverse"],
+      "argues": [
+        "complexity-virality-tradeoff"
+      ],
+      "arguedInChapters": [
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine"
+      ],
+      "dependsOn": [
+        "claim:complexity-virality-inverse"
+      ],
       "harvestedFrom": [
         {
           "note": "complexity-virality-tradeoff",
@@ -159,13 +272,23 @@
     },
     {
       "id": "optionality-cost-of-generality",
-      "evidencedBy": ["democratization-paradox"],
+      "evidencedBy": [
+        "democratization-paradox"
+      ],
       "label": "Cost of generality is accessibility, and vice versa",
       "summary": "Optionality and accessibility trade off: the more options a thing has, the harder it is to access. The cost of generality is accessibility; the cost of accessibility is generality. Same curve appears in software libraries, religions, political platforms, scientific popularization, legal codes.",
-      "aliases": ["optionality vs access", "cost of generality", "accessibility trade-off"],
+      "aliases": [
+        "optionality vs access",
+        "cost of generality",
+        "accessibility trade-off"
+      ],
       "status": "working",
-      "argues": ["optionality-vs-access"],
-      "arguedInChapters": ["optionality-vs-access"],
+      "argues": [
+        "optionality-vs-access"
+      ],
+      "arguedInChapters": [
+        "optionality-vs-access"
+      ],
       "dependsOn": [],
       "harvestedFrom": [
         {
@@ -179,11 +302,24 @@
       "id": "truth-survival-two-conditions",
       "label": "Core truth survives a medium on two joint conditions",
       "summary": "Core truth survives a medium to the degree that two things both hold: the medium's gate-criteria reward something correlated with truth, and the medium's want-loop doesn't erode the receiver's appetite for truth over time. Both conditions, not either.",
-      "aliases": ["truth survives the medium", "two conditions for truth survival"],
+      "aliases": [
+        "truth survives the medium",
+        "two conditions for truth survival"
+      ],
       "status": "working",
-      "argues": ["medium-and-manipulation", "truth-compression-and-when-each-wins"],
-      "arguedInChapters": ["selection-as-other-engine", "infrastructure-for-integration", "truth-compression-and-when-each-wins"],
-      "dependsOn": ["claim:medium-attached-to-every-gate", "question:truth-value-placement"],
+      "argues": [
+        "medium-and-manipulation",
+        "truth-compression-and-when-each-wins"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine",
+        "infrastructure-for-integration",
+        "truth-compression-and-when-each-wins"
+      ],
+      "dependsOn": [
+        "claim:medium-attached-to-every-gate",
+        "question:truth-value-placement"
+      ],
       "harvestedFrom": [
         {
           "note": "medium-and-manipulation",
@@ -196,11 +332,22 @@
       "id": "outer-message-is-preconditions",
       "label": "The outer message is what the book calls preconditions",
       "summary": "A message's outer message — the decoding mechanism a receiver must already hold to extract the content — is exactly what this book calls preconditions. A complex idea has a large or rare outer message; a compressed idea has one common enough to assume in everyone. The outer message lives in the medium.",
-      "aliases": ["outer message is preconditions", "outer message", "decoding mechanism"],
+      "aliases": [
+        "outer message is preconditions",
+        "outer message",
+        "decoding mechanism"
+      ],
       "status": "working",
-      "argues": ["three-layer-message"],
-      "arguedInChapters": ["information-landscape", "complexity-virality-tradeoff"],
-      "dependsOn": ["claim:medium-attached-to-every-gate"],
+      "argues": [
+        "three-layer-message"
+      ],
+      "arguedInChapters": [
+        "information-landscape",
+        "complexity-virality-tradeoff"
+      ],
+      "dependsOn": [
+        "claim:medium-attached-to-every-gate"
+      ],
       "harvestedFrom": [
         {
           "note": "three-layer-message",
@@ -213,11 +360,25 @@
       "id": "transit-strips-the-outer-message",
       "label": "Transit strips the outer message, not the inner one",
       "summary": "What a lossy hop usually strips is the outer message (the decoding key — qualifications, scope conditions, methodology), not the inner message (the claim itself). A surviving inner message then gets decoded with the receiver's default key and yields a false belief. Most of what the book calls distortion is outer-message loss.",
-      "aliases": ["transit strips the outer message", "outer-message loss"],
+      "aliases": [
+        "transit strips the outer message",
+        "outer-message loss"
+      ],
       "status": "working",
-      "argues": ["three-layer-message", "truth-compression-and-when-each-wins"],
-      "arguedInChapters": ["information-landscape", "complexity-virality-tradeoff", "selection-as-other-engine", "truth-compression-and-when-each-wins"],
-      "dependsOn": ["claim:outer-message-is-preconditions", "claim:complexity-virality-inverse"],
+      "argues": [
+        "three-layer-message",
+        "truth-compression-and-when-each-wins"
+      ],
+      "arguedInChapters": [
+        "information-landscape",
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine",
+        "truth-compression-and-when-each-wins"
+      ],
+      "dependsOn": [
+        "claim:outer-message-is-preconditions",
+        "claim:complexity-virality-inverse"
+      ],
       "harvestedFrom": [
         {
           "note": "three-layer-message",
@@ -228,14 +389,25 @@
     },
     {
       "id": "compression-strips-the-key",
-      "evidencedBy": ["godel-escher-bach"],
+      "evidencedBy": [
+        "godel-escher-bach"
+      ],
       "label": "Compression strips the decoding key, not truth itself",
       "summary": "Compression does not act on a claim's truth value directly. It strips the outer message — the decoding key — and leaves the bare claim intact, so whether truth survives depends entirely on which key the receiver decodes with instead.",
-      "aliases": ["compression strips the key", "compression doesn't degrade truth directly"],
+      "aliases": [
+        "compression strips the key",
+        "compression doesn't degrade truth directly"
+      ],
       "status": "working",
-      "argues": ["truth-compression-and-when-each-wins"],
-      "arguedInChapters": ["truth-compression-and-when-each-wins"],
-      "dependsOn": ["claim:transit-strips-the-outer-message"],
+      "argues": [
+        "truth-compression-and-when-each-wins"
+      ],
+      "arguedInChapters": [
+        "truth-compression-and-when-each-wins"
+      ],
+      "dependsOn": [
+        "claim:transit-strips-the-outer-message"
+      ],
       "harvestedFrom": [
         {
           "note": "truth-compression-and-when-each-wins",
@@ -248,11 +420,22 @@
       "id": "truth-value-is-key-fit",
       "label": "Truth value lives in the key-fit, not the claim",
       "summary": "Truth value is not a property of a claim in isolation; it is a property of the fit between the claim's decoding key and the key its receiver actually uses. This is where truth value enters the pipeline model — the provisional resolution of the truth-value-placement question.",
-      "aliases": ["truth value is key-fit", "truth value in the decoding-key fit", "where truth value enters the model"],
+      "aliases": [
+        "truth value is key-fit",
+        "truth value in the decoding-key fit",
+        "where truth value enters the model"
+      ],
       "status": "working",
-      "argues": ["truth-compression-and-when-each-wins"],
-      "arguedInChapters": ["truth-compression-and-when-each-wins"],
-      "dependsOn": ["claim:compression-strips-the-key", "question:truth-value-placement"],
+      "argues": [
+        "truth-compression-and-when-each-wins"
+      ],
+      "arguedInChapters": [
+        "truth-compression-and-when-each-wins"
+      ],
+      "dependsOn": [
+        "claim:compression-strips-the-key",
+        "question:truth-value-placement"
+      ],
       "harvestedFrom": [
         {
           "note": "truth-compression-and-when-each-wins",
@@ -265,11 +448,23 @@
       "id": "selection-picks-the-regime",
       "label": "Selection picks the truth-compression regime",
       "summary": "Transport alone only scrambles — it has no preferred outcome. Inversion and orthogonality are not failures of compression but compressed variants that a selection gate preferred. Which of the three regimes a claim lands in is set by what the gate rewards.",
-      "aliases": ["selection picks the regime", "selection determines the truth regime", "inversion and orthogonality are selected"],
+      "aliases": [
+        "selection picks the regime",
+        "selection determines the truth regime",
+        "inversion and orthogonality are selected"
+      ],
       "status": "working",
-      "argues": ["truth-compression-and-when-each-wins"],
-      "arguedInChapters": ["truth-compression-and-when-each-wins", "selection-as-other-engine"],
-      "dependsOn": ["claim:truth-value-is-key-fit", "claim:two-pipelines-parallel"],
+      "argues": [
+        "truth-compression-and-when-each-wins"
+      ],
+      "arguedInChapters": [
+        "truth-compression-and-when-each-wins",
+        "selection-as-other-engine"
+      ],
+      "dependsOn": [
+        "claim:truth-value-is-key-fit",
+        "claim:two-pipelines-parallel"
+      ],
       "harvestedFrom": [
         {
           "note": "truth-compression-and-when-each-wins",
@@ -282,11 +477,28 @@
       "id": "engagement-gates-reward-truth-loss",
       "label": "Engagement-tuned gates systematically reward truth-losing compressions",
       "summary": "The book's breakage claim, now following from the structure: the failure is not that information gets compressed but that the dominant medium's gates systematically reward the compressions in which truth inverts or stops mattering over the ones in which it survives — because alarm out-competes calibration and a flag out-competes a claim at an engagement-tuned gate. This closes the moral-neutrality gap.",
-      "aliases": ["engagement gates reward truth loss", "the breakage is selection for truth-losing compression", "moral-neutrality gap closed"],
+      "aliases": [
+        "engagement gates reward truth loss",
+        "the breakage is selection for truth-losing compression",
+        "moral-neutrality gap closed"
+      ],
       "status": "working",
-      "argues": ["truth-compression-and-when-each-wins", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
-      "arguedInChapters": ["truth-compression-and-when-each-wins", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
-      "dependsOn": ["claim:selection-picks-the-regime", "claim:truth-survival-two-conditions"],
+      "argues": [
+        "truth-compression-and-when-each-wins",
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ],
+      "arguedInChapters": [
+        "truth-compression-and-when-each-wins",
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ],
+      "dependsOn": [
+        "claim:selection-picks-the-regime",
+        "claim:truth-survival-two-conditions"
+      ],
       "harvestedFrom": [
         {
           "note": "truth-compression-and-when-each-wins",
@@ -299,11 +511,22 @@
       "id": "compression-widens-latitude",
       "label": "Compression widens interpretive latitude",
       "summary": "Stripping a claim's outer message does not fix a single wrong decoding key — it unpins the key, leaving the claim underdetermined. The more compressed the claim, the wider the range of readings it supports across a population. Compression's second effect, alongside shifting the expected decode.",
-      "aliases": ["compression widens latitude", "interpretive latitude grows with compression", "compression unpins the key"],
+      "aliases": [
+        "compression widens latitude",
+        "interpretive latitude grows with compression",
+        "compression unpins the key"
+      ],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy", "truth-compression-and-when-each-wins"],
-      "arguedInChapters": ["truth-compression-and-when-each-wins"],
-      "dependsOn": ["claim:compression-strips-the-key"],
+      "argues": [
+        "myths-scale-and-bureaucracy",
+        "truth-compression-and-when-each-wins"
+      ],
+      "arguedInChapters": [
+        "truth-compression-and-when-each-wins"
+      ],
+      "dependsOn": [
+        "claim:compression-strips-the-key"
+      ],
       "harvestedFrom": [
         {
           "note": "myths-scale-and-bureaucracy",
@@ -314,14 +537,28 @@
     },
     {
       "id": "myth-reach-determinacy-tradeoff",
-      "evidencedBy": ["nexus"],
+      "evidencedBy": [
+        "nexus"
+      ],
       "label": "A myth's reach and its determinacy trade off",
       "summary": "A myth simple enough to bind a whole network is necessarily one the network can read many different ways. Reach and determinacy trade off — the same curve as reach-vs-complexity and reach-vs-truth, here as reach-vs-shared-meaning.",
-      "aliases": ["myth reach-determinacy tradeoff", "reach vs shared meaning", "reach determinacy trade-off"],
+      "aliases": [
+        "myth reach-determinacy tradeoff",
+        "reach vs shared meaning",
+        "reach determinacy trade-off"
+      ],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy"],
-      "arguedInChapters": ["complexity-virality-tradeoff", "integration-problem"],
-      "dependsOn": ["claim:compression-widens-latitude", "claim:complexity-ceiling-by-network-size"],
+      "argues": [
+        "myths-scale-and-bureaucracy"
+      ],
+      "arguedInChapters": [
+        "complexity-virality-tradeoff",
+        "integration-problem"
+      ],
+      "dependsOn": [
+        "claim:compression-widens-latitude",
+        "claim:complexity-ceiling-by-network-size"
+      ],
       "harvestedFrom": [
         {
           "note": "myths-scale-and-bureaucracy",
@@ -332,14 +569,26 @@
     },
     {
       "id": "unify-and-fragment-same-fact",
-      "evidencedBy": ["nexus"],
+      "evidencedBy": [
+        "nexus"
+      ],
       "label": "A myth's unity and its fragmentation are one fact",
       "summary": "A large network's unifying myth and its latent fragmentation are the same fact seen from two sides: the myth can be universally affirmed precisely because it is vague enough that each segment affirms a different myth. Network segmentation is interpretive latitude sorted into clusters.",
-      "aliases": ["unify and fragment same fact", "myth unity is fragmentation", "segmentation from latitude"],
+      "aliases": [
+        "unify and fragment same fact",
+        "myth unity is fragmentation",
+        "segmentation from latitude"
+      ],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy"],
-      "arguedInChapters": ["integration-problem"],
-      "dependsOn": ["claim:myth-reach-determinacy-tradeoff"],
+      "argues": [
+        "myths-scale-and-bureaucracy"
+      ],
+      "arguedInChapters": [
+        "integration-problem"
+      ],
+      "dependsOn": [
+        "claim:myth-reach-determinacy-tradeoff"
+      ],
       "harvestedFrom": [
         {
           "note": "myths-scale-and-bureaucracy",
@@ -352,11 +601,20 @@
       "id": "bureaucracy-downstream-of-myth",
       "label": "Bureaucracy is downstream of the myth",
       "summary": "Bureaucracy is not a co-equal pillar with myth but the institution a network grows to repair myth dilution — to re-supply the decoding key scaling forced the myth to drop. The larger the network, the more of its cohesion shifts from myth to bureaucracy.",
-      "aliases": ["bureaucracy downstream of myth", "bureaucracy repairs myth dilution"],
+      "aliases": [
+        "bureaucracy downstream of myth",
+        "bureaucracy repairs myth dilution"
+      ],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy"],
-      "arguedInChapters": ["preservation-vs-training"],
-      "dependsOn": ["claim:unify-and-fragment-same-fact"],
+      "argues": [
+        "myths-scale-and-bureaucracy"
+      ],
+      "arguedInChapters": [
+        "preservation-vs-training"
+      ],
+      "dependsOn": [
+        "claim:unify-and-fragment-same-fact"
+      ],
       "harvestedFrom": [
         {
           "note": "myths-scale-and-bureaucracy",
@@ -369,11 +627,28 @@
       "id": "loop-outcome-set-by-capture-resistance",
       "label": "The dilution loop's outcome is set by the bureaucracy's resistance to capture",
       "summary": "The myth-dilution loop has no fixed destiny. Whether it compounds (safe scale), fragments (a too-weak bureaucracy), or inverts into scale-as-control (a captured-but-effective bureaucracy) is set by the repairing bureaucracy's own resistance to manipulation and capture. A good institution is not one that cannot be captured but one where capture cannot quietly hold.",
-      "aliases": ["loop outcome set by capture resistance", "what decides the dilution loop", "capture-resistance decides the loop"],
+      "aliases": [
+        "loop outcome set by capture resistance",
+        "what decides the dilution loop",
+        "capture-resistance decides the loop"
+      ],
       "status": "working",
-      "argues": ["myths-scale-and-bureaucracy", "preservation-vs-training", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
-      "arguedInChapters": ["preservation-vs-training", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"],
-      "dependsOn": ["claim:bureaucracy-downstream-of-myth"],
+      "argues": [
+        "myths-scale-and-bureaucracy",
+        "preservation-vs-training",
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ],
+      "arguedInChapters": [
+        "preservation-vs-training",
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ],
+      "dependsOn": [
+        "claim:bureaucracy-downstream-of-myth"
+      ],
       "harvestedFrom": [
         {
           "note": "myths-scale-and-bureaucracy",
@@ -394,15 +669,28 @@
     },
     {
       "id": "bridge-node-is-versatile-specialist",
-      "evidencedBy": ["double-edged-sword-of-expertise"],
+      "evidencedBy": [
+        "double-edged-sword-of-expertise"
+      ],
       "label": "A bridge node is a deep specialist with metacognitive flexibility, not a generalist",
       "summary": "Bridge nodes between specialist communities that don't share preconditions are not generalists carrying field-general capacities. They are deep specialists who have paired their depth with metacognitive flexibility — what the double-edged-sword post calls versatile expertise. Depth is what gets the bridge admitted as a peer on either side; flexibility (structural-analogy habits, paradigm suspension, intellectual humility) is what lets the bridge translate the cross. Refines the outline's 'transferable preconditions' answer into the paired-skill form.",
-      "aliases": ["bridge node is versatile specialist", "versatile expert is the bridge", "bridge node refined"],
+      "aliases": [
+        "bridge node is versatile specialist",
+        "versatile expert is the bridge",
+        "bridge node refined"
+      ],
       "status": "working",
-      "argues": ["bridge-nodes-and-versatile-expertise"],
-      "arguedInChapters": ["integration-problem", "preservation-vs-training"],
+      "argues": [
+        "bridge-nodes-and-versatile-expertise"
+      ],
+      "arguedInChapters": [
+        "integration-problem",
+        "preservation-vs-training"
+      ],
       "dependsOn": [],
-      "supersedes": ["bridge-via-transferable-preconditions"],
+      "supersedes": [
+        "bridge-via-transferable-preconditions"
+      ],
       "harvestedFrom": [
         {
           "note": "bridge-nodes-and-versatile-expertise",
@@ -413,14 +701,28 @@
     },
     {
       "id": "curse-substrates-polarization",
-      "evidencedBy": ["double-edged-sword-of-expertise", "misinformation-age"],
+      "evidencedBy": [
+        "double-edged-sword-of-expertise",
+        "misinformation-age"
+      ],
       "label": "The curse of expertise is the cognitive substrate of polarization-via-distrust",
       "summary": "The four cognitive failure modes named by 'the curse of expertise' (paradigm lock-in, overconfidence in cross-application, perceptual filtering, conceptual rigidity) are not separate ways expertise fails — they are the inside-the-head description of what happens when a rational agent discounts evidence from outside their paradigm. O'Connor and Weatherall's polarization-via-distrust is the network-level shape of the same mechanism. The agent and the network are not two phenomena; they are the same loop described from two sides, which means the cognitive flexibility that defeats the curse is also what disarms the polarization trap.",
-      "aliases": ["curse substrates polarization", "expertise blindness equals polarization", "cognitive substrate of polarization"],
+      "aliases": [
+        "curse substrates polarization",
+        "expertise blindness equals polarization",
+        "cognitive substrate of polarization"
+      ],
       "status": "working",
-      "argues": ["bridge-nodes-and-versatile-expertise"],
-      "arguedInChapters": ["integration-problem", "emotional-memetics"],
-      "dependsOn": ["claim:bridge-node-is-versatile-specialist"],
+      "argues": [
+        "bridge-nodes-and-versatile-expertise"
+      ],
+      "arguedInChapters": [
+        "integration-problem",
+        "emotional-memetics"
+      ],
+      "dependsOn": [
+        "claim:bridge-node-is-versatile-specialist"
+      ],
       "harvestedFrom": [
         {
           "note": "bridge-nodes-and-versatile-expertise",
@@ -433,12 +735,27 @@
       "id": "integration-needs-agent-and-infrastructure",
       "label": "Integration needs both agent and infrastructure",
       "summary": "Integration between networks that don't share preconditions requires both a cultivated agent (the versatile expert) and a holding infrastructure (the curation layer). Agents without infrastructure produce bridges that can't scale; infrastructure without agents produces hollow institutions the polarization will eat. The book's prescription is the design of environments that produce both — cultivating metacognitive flexibility inside specialist communities and building curation-layer institutions that survive polarized trust.",
-      "aliases": ["integration needs agent and infrastructure", "both agents and curation layer", "prescription pair"],
+      "aliases": [
+        "integration needs agent and infrastructure",
+        "both agents and curation layer",
+        "prescription pair"
+      ],
       "status": "working",
-      "argues": ["bridge-nodes-and-versatile-expertise", "integration-problem", "infrastructure-for-integration"],
-      "arguedInChapters": ["integration-problem", "infrastructure-for-integration"],
-      "dependsOn": ["claim:bridge-node-is-versatile-specialist"],
-      "supersedes": ["fragmentation-into-smaller-networks"],
+      "argues": [
+        "bridge-nodes-and-versatile-expertise",
+        "integration-problem",
+        "infrastructure-for-integration"
+      ],
+      "arguedInChapters": [
+        "integration-problem",
+        "infrastructure-for-integration"
+      ],
+      "dependsOn": [
+        "claim:bridge-node-is-versatile-specialist"
+      ],
+      "supersedes": [
+        "fragmentation-into-smaller-networks"
+      ],
       "harvestedFrom": [
         {
           "note": "bridge-nodes-and-versatile-expertise",
@@ -454,14 +771,29 @@
     },
     {
       "id": "engagement-floor-of-raw-emotion",
-      "evidencedBy": ["psychology-of-virality", "amusing-ourselves-to-death", "info-evolution-social-media"],
+      "evidencedBy": [
+        "psychology-of-virality",
+        "amusing-ourselves-to-death",
+        "info-evolution-social-media"
+      ],
       "label": "Mass-network propagation equilibrium converges on raw strong emotion as the floor",
       "summary": "Once an information network is big enough and the dominant medium's gates have been tuned for engagement long enough, the propagation equilibrium of what reliably spreads converges on raw strong emotion. The floor is medium-conditional (different gate criteria yield different floors), substrate-anchored in the receiver's evolutionary attentional inheritance, capture-tuned within the emotional-payload set, and operates partly through reflective belief uptake at population scale with a smaller subset crossing into intuitive belief that drives action. The chapter's central claim — said whole at the close.",
-      "aliases": ["engagement floor", "emotion is the floor", "floor of what reliably spreads", "engagement equilibrium converges on emotion"],
+      "aliases": [
+        "engagement floor",
+        "emotion is the floor",
+        "floor of what reliably spreads",
+        "engagement equilibrium converges on emotion"
+      ],
       "status": "load-bearing",
-      "argues": ["emotional-memetics"],
-      "arguedInChapters": ["emotional-memetics"],
-      "dependsOn": ["claim:transport-collapse-shifts-constraint"],
+      "argues": [
+        "emotional-memetics"
+      ],
+      "arguedInChapters": [
+        "emotional-memetics"
+      ],
+      "dependsOn": [
+        "claim:transport-collapse-shifts-constraint"
+      ],
       "harvestedFrom": [
         {
           "note": "emotional-memetics",
@@ -472,14 +804,26 @@
     },
     {
       "id": "floor-is-aggregation-property",
-      "evidencedBy": ["psychology-of-virality"],
+      "evidencedBy": [
+        "psychology-of-virality"
+      ],
       "label": "The engagement floor is a property of the aggregation, not of the receivers",
       "summary": "The floor is not a description of individual receiver preference. It is what wins at the gates the receivers' content has to pass, aggregated across enough receivers and enough time. A given receiver may prefer nuanced content, calibrated content, slow content; their preference does not change what crosses the gate. The aggregation reliably converges on emotional payload because emotional payload is what most consistently produces engagement across heterogeneous receivers. The aggregation-property reading is what defends the floor argument against the receivers-are-fine critique: no individual receiver has to want it for it to win.",
-      "aliases": ["floor is aggregation property", "floor not in receivers", "aggregation not preference"],
+      "aliases": [
+        "floor is aggregation property",
+        "floor not in receivers",
+        "aggregation not preference"
+      ],
       "status": "working",
-      "argues": ["emotional-memetics"],
-      "arguedInChapters": ["emotional-memetics"],
-      "dependsOn": ["claim:engagement-floor-of-raw-emotion"],
+      "argues": [
+        "emotional-memetics"
+      ],
+      "arguedInChapters": [
+        "emotional-memetics"
+      ],
+      "dependsOn": [
+        "claim:engagement-floor-of-raw-emotion"
+      ],
       "harvestedFrom": [
         {
           "note": "emotional-memetics",
@@ -490,14 +834,28 @@
     },
     {
       "id": "timescale-distinction-mercier-book",
-      "evidencedBy": ["not-born-yesterday"],
+      "evidencedBy": [
+        "not-born-yesterday"
+      ],
       "label": "Mercier and the book operate at different empirical timescales",
       "summary": "Mercier's empirical evidence on open vigilance is within-campaign and within-experiment — Cambridge Analytica's measured effects, individual mass-persuasion attempts, single-cycle propaganda evaluations, Trump-supporter belief-corrections that landed without behavior shift. At that timescale mass persuasion routinely fails, and Mercier's data is binding. The book's engagement-equilibrium worry is at a different timescale: decades of engagement-tuned medium shaping receivers' demand-side selection over generational time, eroding vigilance in the cohorts that grew up entirely inside the captured equilibrium. The two arguments answer different questions; the disagreement is empirical-scale, not first-principles. The book commits to the generational framing and owes evidence at that scale. The synthesis move from Phase 47 that lets the book engage Mercier substantively without abandoning the floor argument.",
-      "aliases": ["timescale distinction", "Mercier vs book timescale", "within-campaign vs generational", "generational-timescale framing"],
+      "aliases": [
+        "timescale distinction",
+        "Mercier vs book timescale",
+        "within-campaign vs generational",
+        "generational-timescale framing"
+      ],
       "status": "load-bearing",
-      "argues": ["emotional-memetics"],
-      "arguedInChapters": ["emotional-memetics", "political-economy-of-attention"],
-      "dependsOn": ["claim:engagement-floor-of-raw-emotion"],
+      "argues": [
+        "emotional-memetics"
+      ],
+      "arguedInChapters": [
+        "emotional-memetics",
+        "political-economy-of-attention"
+      ],
+      "dependsOn": [
+        "claim:engagement-floor-of-raw-emotion"
+      ],
       "harvestedFrom": [
         {
           "note": "emotional-memetics",
@@ -508,13 +866,23 @@
     },
     {
       "id": "adding-channel-can-accelerate-divergence",
-      "evidencedBy": ["misinformation-age"],
+      "evidencedBy": [
+        "misinformation-age"
+      ],
       "label": "Adding a channel between distrustful communities can accelerate divergence",
       "summary": "Naive integration assumes channels carry evidence and evidence reconciles beliefs. O'Connor and Weatherall formalize why this fails. When agents weight evidence by source credibility — rationally and unavoidably — and two communities have any initial difference, the trust-weighting discounts the other community's evidence. Each side ratifies its starting position; the gap widens; the divergence deepens the distrust that drove it. The mechanism requires no irrationality and no misinformation: Bayesian agents with mild initial differences and credibility-weighted updating are sufficient. The trap any integration prescription has to clear.",
-      "aliases": ["channel accelerates divergence", "naive integration backfires", "polarization-via-distrust trap"],
+      "aliases": [
+        "channel accelerates divergence",
+        "naive integration backfires",
+        "polarization-via-distrust trap"
+      ],
       "status": "load-bearing",
-      "argues": ["integration-problem"],
-      "arguedInChapters": ["integration-problem"],
+      "argues": [
+        "integration-problem"
+      ],
+      "arguedInChapters": [
+        "integration-problem"
+      ],
       "dependsOn": [],
       "harvestedFrom": [
         {
@@ -526,14 +894,27 @@
     },
     {
       "id": "demand-side-filter-on-integration",
-      "evidencedBy": ["not-born-yesterday", "misinformation-age"],
+      "evidencedBy": [
+        "not-born-yesterday",
+        "misinformation-age"
+      ],
       "label": "Integration is blocked at both the distrust gate AND the justification-market gate",
       "summary": "Integration is not only blocked by polarization-via-distrust on the supply side; it is also blocked by the justification-market's demand-side filtering. The justification-market dynamic Mercier names — receivers demand-side select for content justifying already-decided behavior — means integration channels carrying evidence-against-position arrive at receivers whose behavior is already determined by group-identity, status, and material-interest forces upstream of the evidence. The two filters reinforce each other: distrust filters supply at the trust gate; justification-demand filters supply at the receiver's selection gate. Any integration prescription has to clear both. The chapter's biggest new contribution since the skeleton — the third pillar that surfaced from the Ch 7 Mercier engagement.",
-      "aliases": ["demand-side filter", "two filters on integration", "justification-market blocks integration"],
+      "aliases": [
+        "demand-side filter",
+        "two filters on integration",
+        "justification-market blocks integration"
+      ],
       "status": "load-bearing",
-      "argues": ["integration-problem"],
-      "arguedInChapters": ["integration-problem"],
-      "dependsOn": ["claim:adding-channel-can-accelerate-divergence"],
+      "argues": [
+        "integration-problem"
+      ],
+      "arguedInChapters": [
+        "integration-problem"
+      ],
+      "dependsOn": [
+        "claim:adding-channel-can-accelerate-divergence"
+      ],
       "harvestedFrom": [
         {
           "note": "integration-problem",
@@ -546,11 +927,22 @@
       "id": "multi-generational-integration",
       "label": "Integration at full scale is a multi-generational investment",
       "summary": "Bridge-node populations sufficient for population-scale integration cannot be assembled in years; they require institutional investment that compounds over decades. Versatile-expert cultivation is a generational training problem. Curation-layer institutions take generations to build trust networks and accumulate the reputation the polarization-via-distrust trap requires them to survive. The work-of-generations framing from Ch 12 lands hardest here: the integration project's timescale is civilization-scale, not platform-scale or election-cycle. Any prescription that promises a fix within a single political cycle is mis-describing the time-cost. Sets the prescriptive arc's scope at the start of the operational-problem analysis.",
-      "aliases": ["multi-generational integration", "work-of-generations integration", "integration takes decades"],
+      "aliases": [
+        "multi-generational integration",
+        "work-of-generations integration",
+        "integration takes decades"
+      ],
       "status": "working",
-      "argues": ["integration-problem"],
-      "arguedInChapters": ["integration-problem", "infrastructure-for-integration"],
-      "dependsOn": ["claim:integration-needs-agent-and-infrastructure"],
+      "argues": [
+        "integration-problem"
+      ],
+      "arguedInChapters": [
+        "integration-problem",
+        "infrastructure-for-integration"
+      ],
+      "dependsOn": [
+        "claim:integration-needs-agent-and-infrastructure"
+      ],
       "harvestedFrom": [
         {
           "note": "integration-problem",
@@ -563,7 +955,12 @@
       "id": "selection-is-primary",
       "label": "Selection is causally primary; transport is downstream",
       "summary": "The book's earlier commitment in transport-vs-selection: selection is the primary mechanism, and transport (cumulative lossy re-encoding across hops) is real but increasingly downstream of it. Retired by the modality-not-primacy refinement in the same note's second pass: the 'primary' framing bundled four distinct claims (causal order; currently-binding constraint; locus of repair; locus of breakage), and treating them as one mis-encoded a modality asymmetry as causal order. Superseded by `claim:two-pipelines-parallel` (both are real, neither downstream) and `claim:selection-is-the-tunable-mechanism` (the criterial-vs-cost distinction the original frame was reaching for). The unbundled historical claim 'selection is the currently-binding constraint in modern digital networks' survives independently as `claim:transport-collapse-shifts-constraint`.",
-      "aliases": ["selection is primary", "selection-primary", "transport is downstream", "selection primary frame"],
+      "aliases": [
+        "selection is primary",
+        "selection-primary",
+        "transport is downstream",
+        "selection primary frame"
+      ],
       "status": "retired",
       "argues": [],
       "arguedInChapters": [],
@@ -581,7 +978,12 @@
       "id": "fragmentation-into-smaller-networks",
       "label": "Part IV prescription: fragment into smaller networks",
       "summary": "The book's original Part IV commitment: the answer to mass-network compression dynamics is to fragment into multiple smaller networks, each with its own selection criteria and tighter feedback loops. Retired after the critique pointed out small networks have their own internal compression dynamics, tend toward echo chambers rather than bubbles (Nguyen's distinction), and that the actually-hard problem is moving complex truth *between* networks that don't share preconditions — which fragmentation makes harder, not easier. Superseded by the integration prescription whose two-part shape (cultivated bridge agents + curation-layer infrastructure) is captured in `claim:integration-needs-agent-and-infrastructure`. The full prescriptive arc lives in [[integration-problem|Ch 9]] and [[infrastructure-for-integration|Ch 12]].",
-      "aliases": ["fragmentation prescription", "fragment into smaller networks", "multiple smaller networks", "small-network prescription"],
+      "aliases": [
+        "fragmentation prescription",
+        "fragment into smaller networks",
+        "multiple smaller networks",
+        "small-network prescription"
+      ],
       "status": "retired",
       "argues": [],
       "arguedInChapters": [],
@@ -593,13 +995,161 @@
       "id": "bridge-via-transferable-preconditions",
       "label": "Bridge nodes are agents with field-general transferable preconditions",
       "summary": "The book's first-pass answer to the bridge-node question, before bridge-nodes-and-versatile-expertise was drafted: bridges between specialist communities are agents who carry field-general capacities (statistical literacy, critical reading, the disposition to look for evidence) — i.e. generalists with transferable preconditions. Retired after the question turned out to have been mis-framed as a generalist-vs-specialist binary. A field-general generalist is not admitted as a peer on either side and so cannot carry the bridge; a pure specialist lacks the metacognitive flexibility to see the structural analogy that crosses. Superseded by `claim:bridge-node-is-versatile-specialist` — the bridge is a deep specialist who has paired their depth with metacognitive flexibility. The `concept:transferable-preconditions` entry survives as the original-frame term; its definedIn now points to bridge-nodes-and-versatile-expertise where it gets refined into the paired-skill form.",
-      "aliases": ["transferable preconditions bridge", "field-general bridge node", "generalist bridge frame", "bridge is generalist"],
+      "aliases": [
+        "transferable preconditions bridge",
+        "field-general bridge node",
+        "generalist bridge frame",
+        "bridge is generalist"
+      ],
       "status": "retired",
       "argues": [],
       "arguedInChapters": [],
       "dependsOn": [],
       "supersedes": [],
       "harvestedFrom": []
+    },
+    {
+      "id": "transmission-is-participation",
+      "evidencedBy": [
+        "nexus"
+      ],
+      "label": "For intersubjective truth, transmission is participation in constitution",
+      "summary": "The pipeline does not report the agreement state; it is one of the places the agreement happens. Each receiver's decode is a unit of the agreement whose being-held is the truth — so reach changes the truth itself, and no unharmed fact waits outside a bad transit.",
+      "aliases": [
+        "transmission is participation",
+        "pipeline wired into the generator",
+        "reach changes the truth"
+      ],
+      "status": "working",
+      "argues": [
+        "intersubjective-truth"
+      ],
+      "arguedInChapters": [
+        "case-studies-and-three-realities",
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine"
+      ],
+      "dependsOn": [],
+      "harvestedFrom": [
+        {
+          "note": "intersubjective-truth",
+          "lineApprox": 37,
+          "text": "The pipeline does not report the agreement; it is one of the places the agreement happens. For intersubjective truth, transmission is participation in constitution."
+        }
+      ]
+    },
+    {
+      "id": "trained-keys-are-shares",
+      "label": "For intersubjective content, trained keys are shares of the reality",
+      "summary": "Training installs decoding keys; for intersubjective content the installed keys are not reading equipment pointed at the reality but units of the agreement that generates it. A captured curriculum therefore produces participants in the captor's preferred reality rather than misreaders of an existing one, and re-training becomes re-constitution. Ch 8's capture asymmetry, with a multiplier.",
+      "aliases": [
+        "trained keys are shares",
+        "curriculum capture constitutes",
+        "re-training is re-constitution"
+      ],
+      "status": "working",
+      "argues": [
+        "intersubjective-truth"
+      ],
+      "arguedInChapters": [
+        "preservation-vs-training",
+        "integration-problem"
+      ],
+      "dependsOn": [
+        "claim:transmission-is-participation"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "intersubjective-truth",
+          "lineApprox": 65,
+          "text": "The trained key is a share of the reality."
+        }
+      ]
+    },
+    {
+      "id": "no-referee-only-forks",
+      "label": "A constitution cannot be falsified — only renegotiated, abandoned, or forked",
+      "summary": "Intersubjective truth has no external referee, so the corrective's role passes to the fork: schism, secession, dollarization, chain split. A fork does not determine which side was right; it determines how many truths there are now. Design corollary: institutions where exit is cheap and visible are institutions where capture cannot quietly hold.",
+      "aliases": [
+        "no referee only forks",
+        "fork as corrective",
+        "the fork determines how many truths",
+        "keep the fork affordable"
+      ],
+      "status": "working",
+      "argues": [
+        "intersubjective-truth"
+      ],
+      "arguedInChapters": [
+        "case-studies-and-three-realities",
+        "integration-problem",
+        "infrastructure-for-integration"
+      ],
+      "dependsOn": [
+        "claim:transmission-is-participation"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "intersubjective-truth",
+          "lineApprox": 73,
+          "text": "A constitution cannot be falsified. It can only be renegotiated, abandoned, or forked."
+        }
+      ]
+    },
+    {
+      "id": "captured-generator-decides-truth",
+      "label": "A captured pipeline distorts objective truth and decides intersubjective truth",
+      "summary": "For objective content the captured equilibrium produces truth-loss in transit; for intersubjective content it steers the generator — re-weighting whose decodes count — so whatever wins the gates does not approximate the truth better or worse, it becomes the truth. The captured platform shapes which 'we' exists, and reification is its camouflage.",
+      "aliases": [
+        "captured generator decides truth",
+        "distorts vs decides",
+        "shapes which we exists"
+      ],
+      "status": "working",
+      "argues": [
+        "intersubjective-truth"
+      ],
+      "arguedInChapters": [
+        "political-economy-of-attention",
+        "ai-as-new-node"
+      ],
+      "dependsOn": [
+        "claim:transmission-is-participation"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "intersubjective-truth",
+          "lineApprox": 61,
+          "text": "capture of the constitutive process is steering the generator — re-weighting whose decodes count in the agreement, toward an interest that is not the network's."
+        }
+      ]
+    },
+    {
+      "id": "constitutive-volatility",
+      "label": "The transport collapse stripped the inertia stabilizing intersubjective truths",
+      "summary": "Slow, expensive transport gave large agreement states inertia — an unpaid-for stabilizer the maintenance institutions were engineered against. With transport cost collapsed, constitution moves at meme speed (the group-chat bank run) while bureaucracies still move at committee speed; a stabilizer slower than what it stabilizes is a spectator. The book's central historical claim, cutting a second time.",
+      "aliases": [
+        "constitutive volatility",
+        "meme-speed constitution",
+        "second blade of the transport collapse"
+      ],
+      "status": "working",
+      "argues": [
+        "intersubjective-truth"
+      ],
+      "arguedInChapters": [
+        "case-studies-and-three-realities"
+      ],
+      "dependsOn": [
+        "claim:transmission-is-participation"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "intersubjective-truth",
+          "lineApprox": 89,
+          "text": "it removed the inertia that used to be a load-bearing, unpaid-for component of every large intersubjective truth"
+        }
+      ]
     }
   ]
 }

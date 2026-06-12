@@ -5,79 +5,165 @@
       "id": "truth-value-placement",
       "label": "Where does truth value enter the model?",
       "summary": "Compression sometimes preserves approximate truth, sometimes inverts it, sometimes wanders into orthogonal territory. The current frame doesn't say which happens when. The worry the book wants to express needs an answer here to land.",
-      "aliases": ["truth value", "moral neutrality gap", "truth-value question"],
+      "aliases": [
+        "truth value",
+        "moral neutrality gap",
+        "truth-value question"
+      ],
       "status": "provisionally-resolved",
       "workingAnswer": "Truth value is not carried by the inner message (the claim) but by the fit between the idea's outer message — its decoding key — and the key the receiver decodes with. Compression strips the key, not the claim, so it can preserve approximate truth (keys close), invert truth (keys opposed), or render truth orthogonal (the claim is read as an identity flag, not decoded as a claim at all). Which regime occurs is decided by selection: the gate picks the compressed variant matching its criteria. Drafted in truth-compression-and-when-each-wins.md.",
-      "flaggedIn": ["outline", "truth-compression-and-when-each-wins"],
-      "blocksChapters": ["truth-compression-and-when-each-wins", "complexity-virality-tradeoff", "emotional-memetics"]
+      "flaggedIn": [
+        "outline",
+        "truth-compression-and-when-each-wins"
+      ],
+      "blocksChapters": [
+        "truth-compression-and-when-each-wins",
+        "complexity-virality-tradeoff",
+        "emotional-memetics"
+      ]
     },
     {
       "id": "medium-and-manipulation",
       "label": "What does the medium do to the gates?",
       "summary": "Different media expose different selection criteria, allow different manipulation surfaces, and cultivate different kinds of want in receivers. McLuhan's 'the medium is the message' re-asked as: which media let core truth survive which kinds of manipulation?",
-      "aliases": ["medium and manipulation", "medium is the message"],
+      "aliases": [
+        "medium and manipulation",
+        "medium is the message"
+      ],
       "status": "provisionally-resolved",
       "workingAnswer": "The medium is the selection criteria: it sets each gate's capacity, what it rewards, the want it cultivates over time, and — deepest of these — the option space itself, the set of variants available to be selected at all. The medium is selection frozen into the substrate: a criterial choice made once that then silently shapes every runtime choice, which makes it the most powerful and least visible manipulation surface. Core truth survives a medium jointly on two conditions — its gate-criteria must reward something truth-correlated, and its want-loop must not erode the appetite for truth. Most engagement-optimized media fail both. Drafted in medium-and-manipulation.md.",
-      "flaggedIn": ["outline", "transport-vs-selection", "medium-and-manipulation"],
-      "blocksChapters": ["selection-as-other-engine", "emotional-memetics", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
+      "flaggedIn": [
+        "outline",
+        "transport-vs-selection",
+        "medium-and-manipulation"
+      ],
+      "blocksChapters": [
+        "selection-as-other-engine",
+        "emotional-memetics",
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ]
     },
     {
       "id": "complexity-doing-two-jobs",
       "label": "Is 'complexity' doing two jobs?",
       "summary": "Chapter 5 defines complexity as 'preconditions a receiver needs' then slides into nuance, depth, informational entropy. The real gating variable might be handle-ability (emotional/identity/action fit) rather than precondition count.",
-      "aliases": ["complexity doing two jobs", "complexity ambiguity"],
+      "aliases": [
+        "complexity doing two jobs",
+        "complexity ambiguity"
+      ],
       "status": "provisionally-resolved",
       "workingAnswer": "Yes — and the resolution is to split the term along the transport/selection seam. *Transport-complexity* is precondition count: how much outer message (decoding key) must survive a hop for the idea to land intact. A property of the idea-in-transit; this is what Chapter 5 is about. *Selection-complexity* is handle-ability: how the idea scores at a gate — emotional load, identity fit, action affordance. A property of the idea-at-a-gate; this is what Chapter 5b is about. The two come apart in the wild — an idea can be low transport-complexity (cheap to carry) and still die if it scores at no gate, or high transport-complexity but spread anyway if its compressed form is high handle-ability. Splitting the term along the transport/selection seam fixed the slide. Chapter 5 uses *complexity* to mean transport-complexity throughout; Chapter 5b uses *handle-ability* for the selection-side axis. Pressure-tests still open: whether the two axes really come apart cleanly in cases where both are doing real work (entertainment with rich worldbuilding; ritual with elaborated symbol systems).",
-      "flaggedIn": ["outline", "complexity-virality-tradeoff"],
-      "blocksChapters": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+      "flaggedIn": [
+        "outline",
+        "complexity-virality-tradeoff"
+      ],
+      "blocksChapters": [
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine"
+      ]
     },
     {
       "id": "budget-fixed-or-trainable",
       "label": "Are receiver budgets fixed or trainable?",
       "summary": "Current model treats budget as a constraint. Education, training, and shared vocabulary expand it. 'Institutional carriers' was hiding two distinct functions (preserving the complex form AND training receivers).",
-      "aliases": ["budget fixed or trainable", "trainable budget"],
+      "aliases": [
+        "budget fixed or trainable",
+        "trainable budget"
+      ],
       "status": "provisionally-resolved",
       "workingAnswer": "Trainable. Education, vocabulary, and accumulated engagement expand the budget. Want is the prime mover of the feedback loop. Operationalized in preservation-vs-training.md as the training function — re-installing the decoding key in receivers — which together with preservation forms the institutional pump the integration project needs.",
-      "flaggedIn": ["outline", "preservation-vs-training"],
-      "blocksChapters": ["human-time-budget"]
+      "flaggedIn": [
+        "outline",
+        "preservation-vs-training"
+      ],
+      "blocksChapters": [
+        "human-time-budget"
+      ]
     },
     {
       "id": "transferable-vs-specialized",
       "label": "Transferable vs. specialized preconditions",
       "summary": "Some preconditions are field-general (statistical literacy, critical reading); others field-specific. Field-general ones make natural bridge nodes between specialist communities. Should the book's prescription tilt toward transferable training?",
-      "aliases": ["transferable vs specialized", "preconditions transferability"],
+      "aliases": [
+        "transferable vs specialized",
+        "preconditions transferability"
+      ],
       "status": "provisionally-resolved",
       "workingAnswer": "The dichotomy was wrong. A bridge node between specialist communities is neither a generalist with field-general preconditions nor a pure specialist, but a deep specialist who has paired their depth with metacognitive flexibility — what double-edged-sword-of-expertise calls versatile expertise. Depth is what gets the bridge admitted as a peer on either side; metacognitive flexibility (structural-analogy habits, paradigm suspension, intellectual humility) is what lets the bridge translate across, and is also what disarms the curse-of-expertise failure modes that are the cognitive substrate of polarization-via-distrust. The book's prescription tilts toward cultivating that paired skill inside specialist communities, not toward generalist training. Drafted in bridge-nodes-and-versatile-expertise.md.",
-      "flaggedIn": ["outline", "bridge-nodes-and-versatile-expertise"],
-      "blocksChapters": ["preservation-vs-training", "integration-problem"]
+      "flaggedIn": [
+        "outline",
+        "bridge-nodes-and-versatile-expertise"
+      ],
+      "blocksChapters": [
+        "preservation-vs-training",
+        "integration-problem"
+      ]
     },
     {
       "id": "integration-vs-fragmentation",
       "label": "Part IV: integration or fragmentation?",
       "summary": "Original prescription was 'multiple smaller networks.' Critique notes small networks have their own compression dynamics and tend toward echo chambers. The hard problem is moving complex truth between networks that don't share preconditions.",
-      "aliases": ["integration vs fragmentation", "Part IV pivot"],
+      "aliases": [
+        "integration vs fragmentation",
+        "Part IV pivot"
+      ],
       "status": "provisionally-resolved",
       "workingAnswer": "Integration between networks that don't share preconditions, not fragmentation into smaller ones. Bridge nodes carrying transferable preconditions are the stitching infrastructure.",
-      "flaggedIn": ["outline", "general-theme", "myths-scale-and-bureaucracy"],
-      "blocksChapters": ["integration-problem", "infrastructure-for-integration"]
+      "flaggedIn": [
+        "outline",
+        "general-theme",
+        "myths-scale-and-bureaucracy"
+      ],
+      "blocksChapters": [
+        "integration-problem",
+        "infrastructure-for-integration"
+      ]
     },
     {
       "id": "intersubjective-pipeline",
       "label": "What does the pipeline do to intersubjective truths?",
       "summary": "The book's diagnostic vocabulary (true / false / corrective / manufactured) was built for objective claims, where the pipeline transmits-or-distorts a fact it cannot touch. Intersubjective truths (currencies, nations, laws, brands) are generated by network agreement, not by reality — the pipeline partly constitutes them. Ch 2 names the distinction and promises a fuller working-through; 5c and Ch 9 carry explicit scope debts against it; the outline lists pull-ins for 5b/8/10/11. But the book has no worked machinery for constitution: no regime model, no account of constitutive capture, no corrective analog for content with no external check.",
-      "aliases": ["intersubjective question", "intersubjective truth and the pipeline", "constitutive process question"],
-      "status": "open",
-      "flaggedIn": ["outline", "case-studies-and-three-realities", "truth-compression-and-when-each-wins", "integration-problem"],
-      "blocksChapters": ["selection-as-other-engine", "truth-compression-and-when-each-wins", "preservation-vs-training", "integration-problem", "political-economy-of-attention", "ai-as-new-node", "infrastructure-for-integration"]
+      "aliases": [
+        "intersubjective question",
+        "intersubjective truth and the pipeline",
+        "constitutive process question"
+      ],
+      "status": "provisionally-resolved",
+      "flaggedIn": [
+        "outline",
+        "case-studies-and-three-realities",
+        "truth-compression-and-when-each-wins",
+        "integration-problem",
+        "intersubjective-truth"
+      ],
+      "blocksChapters": [
+        "selection-as-other-engine",
+        "truth-compression-and-when-each-wins",
+        "preservation-vs-training",
+        "integration-problem",
+        "political-economy-of-attention",
+        "ai-as-new-node",
+        "infrastructure-for-integration"
+      ],
+      "workingAnswer": "Worked out in intersubjective-truth.md. Intersubjective truths are truths (Harari's terms kept) whose generator is the network's agreement rather than reality, carved per-claim, not per-artifact — a myth can be based in reality too. The pipeline is wired into the generator: transmission is participation in constitution, reach changes the truth itself, and no unharmed fact waits outside a bad transit. The transmission regimes translate to convergent / divergent / hollow constitution (failure axis: spread-and-substance, not error); capture becomes steering the generator — re-weighting whose decodes count — camouflaged by reification; the corrective's role passes to the fork (schism, secession, dollarization, chain split), which determines how many truths there are rather than who was right; and the transport collapse cuts twice — its second blade is constitutive volatility, agreement states moving at meme speed against maintenance institutions built for committee speed. Threaded through Chs 2, 5, 5b, 5c, 8, 9, 10, 11, 12. Still open: the line between generators (consensus-tracks vs. agreement-generates), the regime translation's two-plus-one suspicion, the volatility ratio claim, the sibling treatment's worked cases, and engagement with the social-ontology prior art (Searle, Berger & Luckmann, Anderson, Hacking, Soros, Hirschman)."
     },
     {
       "id": "transport-vs-selection",
       "label": "Transport vs. selection: which is primary?",
       "summary": "Originally framed as 'which mechanism is primary?' The frame now says: both are real, parallel mechanisms operating in series at every stage. Neither is downstream of the other. Selection becomes dominant in modern digital networks where transport cost has collapsed.",
-      "aliases": ["transport vs selection", "selection primary"],
+      "aliases": [
+        "transport vs selection",
+        "selection primary"
+      ],
       "status": "resolved",
       "workingAnswer": "Both are real, parallel mechanisms operating in series at every stage — neither downstream of the other. They differ in modality: transport is a directionless cost (it scrambles, with no preferred outcome), selection is a criterial choice (it has a what-it-rewards, so it can be aimed, captured, and repaired). Each stage runs three operations — transport generates variants, the medium bounds the option space, selection picks. The book centers selection because it is the tunable mechanism, not because it is causally primary; the medium is selection frozen into the substrate. The original 'which is primary' framing was wrong — the real asymmetry is tunability.",
-      "flaggedIn": ["outline", "transport-vs-selection", "the-information-landscape"],
+      "flaggedIn": [
+        "outline",
+        "transport-vs-selection",
+        "the-information-landscape"
+      ],
       "blocksChapters": []
     }
   ]
