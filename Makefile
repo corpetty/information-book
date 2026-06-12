@@ -20,6 +20,7 @@
 #   make site-clean  remove the site build output and cache
 #   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
 #   make test      run the graph regression tests (snapshot + invariants)
+#   make check     strict build (warnings fatal) + tests — what CI gates on
 #   make accept-stats  refresh data/expected-stats.json after an intentional graph change
 #   make clean     remove generated artifacts
 #   make help      list targets
@@ -38,7 +39,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean viewer-stage test accept-stats
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean viewer-stage test check accept-stats
 
 all: build
 
@@ -60,6 +61,12 @@ stats: build
 # Regression tests: golden snapshot (counts vs data/expected-stats.json)
 # plus structural invariants. The test file runs the build itself.
 test:
+	@node --test $(SCRIPTS)/*.test.js
+
+# What CI runs before building the site: a strict build (warnings are
+# fatal) plus the regression tests. Local `make build` stays lenient.
+check:
+	@STRICT=1 node $(SCRIPTS)/build-graph.js
 	@node --test $(SCRIPTS)/*.test.js
 
 # After an INTENTIONAL graph change (new claim, concept, edge, …), refresh

@@ -813,6 +813,13 @@ function emit() {
 
   console.log(`build-graph: ${nodes.size} nodes, ${edges.length} edges, ${warnings.length} warnings`);
   for (const w of warnings) console.error('  ' + w);
+
+  // STRICT=1 (CI, make check) turns warnings into a failed build. Local
+  // authoring stays lenient — warnings are the worklist, not a wall.
+  if (process.env.STRICT && warnings.length) {
+    console.error(`build-graph: STRICT — failing on ${warnings.length} warning(s)`);
+    process.exitCode = 1;
+  }
 }
 
 // ---------------------------------------------------------------- main
