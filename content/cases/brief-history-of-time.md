@@ -15,5 +15,5 @@ Hawking's 1988 popularization of general relativity, quantum mechanics, and cosm
 
 - **Discussed in:** [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]], [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[optionality-vs-access|Ch 4 — Optionality vs. Access]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

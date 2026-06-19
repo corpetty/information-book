@@ -22,5 +22,5 @@ Chapter 5 defines complexity as 'preconditions a receiver needs' then slides int
 - **Raised in:** [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[complexity-virality-tradeoff|The Complexity / Virality Trade-off]], [[outline|Lossy — Outline]], [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 - **Built on by:** **Spread is inverse to complexity**
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

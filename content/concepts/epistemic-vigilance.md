@@ -20,5 +20,5 @@ The Sperberian-tradition construct for the cognitive defenses humans have evolve
 - **Discussed in:** [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]], [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 - **Evidenced by:** [[memetics-critique|Memetics — a critique]], [[misinformation-age|The Misinformation Age]], [[not-born-yesterday|Not Born Yesterday]], [[psychology-of-virality|Psychology of Virality]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

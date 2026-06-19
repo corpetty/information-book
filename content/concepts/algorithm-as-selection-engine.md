@@ -21,5 +21,5 @@ Recommendation algorithms are not lossy transport — they are selection gates w
 - **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[political-economy-of-attention|Ch 10 — Political Economy of Attention]], [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 - **Evidenced by:** [[misinformation-age|The Misinformation Age]], [[psychology-of-virality|Psychology of Virality]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

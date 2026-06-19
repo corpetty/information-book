@@ -15,5 +15,5 @@ Hofstadter's canonical illustration of the three-layer message. A record launche
 
 - **Discussed in:** [[the-information-landscape|Ch 1 — The Information Landscape]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

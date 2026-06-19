@@ -20,5 +20,5 @@ The maximum complexity an idea can carry across a network is bounded by network 
 - **Discussed in:** [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 - **Evidenced by:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

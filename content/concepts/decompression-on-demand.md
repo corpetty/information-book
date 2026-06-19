@@ -21,5 +21,5 @@ An LLM, used as a faithful expansion service, can take a compressed claim or a c
 - **Enables:** [[llm-as-capability-extender|LLM as capability extender (inside substrate custody)]]
 - **Enabled by:** [[llm-design-moment-collapse|LLM as collapsed selection-design moment]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

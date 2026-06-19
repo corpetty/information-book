@@ -21,5 +21,5 @@ Some preconditions are field-general (statistical literacy, critical reading); o
 
 - **Raised in:** [[bridge-nodes-and-versatile-expertise|Bridge Nodes and Versatile Expertise]], [[integration-problem|Ch 9 — The Integration Problem]], [[outline|Lossy — Outline]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

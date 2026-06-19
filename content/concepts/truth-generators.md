@@ -21,5 +21,5 @@ The carving that disciplines the three-realities frame: objective truths are gen
 - **Defined in:** [[intersubjective-truth|Intersubjective Truth]]
 - **Discussed in:** [[case-studies-and-three-realities|Ch 2 — Case Studies and Three Realities]], [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

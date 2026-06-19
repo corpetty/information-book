@@ -55,7 +55,7 @@ There are three ways in, and you can switch between them at any time:
 3. **See the whole argument at once.** The interactive ontology map below lays out chapters, claims, sources, and open questions as one navigable graph.
 
 - **[[the-short-version|The short version]]** — the whole argument at three sizes: a sentence, a paragraph, a page. If you read nothing else, read this.
-- **<a href="./graph/" data-routerIgnore="true">Explore the ontology →</a>** — an interactive map of the book's argument: chapters, claims, sources, open questions, and how they all connect. Pick a starting view (Book overview / Argument map / Source map / Open questions / What's contested / Drafting status).
+- **<a href="./graph/" data-router-ignore="true">Explore the ontology →</a>** — an interactive map of the book's argument: chapters, claims, sources, open questions, and how they all connect. Pick a starting view (Book overview / Argument map / Source map / Open questions / What's contested / Drafting status).
 - **[[glossary|Glossary]]** — plain-language definitions of every load-bearing term used across the book. Worth opening in a second tab while you read.
 - **[[outline]]** — the working table of contents. Dense, and written for the author; most useful once you've skimmed the glossary.
 - **Most settled chapters**: [[the-information-landscape|Chapter 1 — The Information Landscape]] and [[truth-compression-and-when-each-wins|Chapter 5c — Truth, Compression, and When Each Wins]]. Start here if you'd rather read the book itself than the working notes.

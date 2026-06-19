@@ -20,5 +20,5 @@ The closing reframe of Ch 12. Institutions of integration are civilization-scale
 - **Defined in:** [[infrastructure-for-integration|Infrastructure for Integration]]
 - **Discussed in:** [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

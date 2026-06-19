@@ -22,5 +22,5 @@ The practice — rational and unavoidable — of weighting a piece of evidence b
 - **Supported by:** [[not-born-yesterday|Not Born Yesterday]]
 - **Evidenced by:** [[misinformation-age|The Misinformation Age]], [[not-born-yesterday|Not Born Yesterday]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

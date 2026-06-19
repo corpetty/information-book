@@ -20,5 +20,5 @@ The structural counter to Ch 10's out-competition mechanism. Institutional carri
 - **Defined in:** [[infrastructure-for-integration|Infrastructure for Integration]]
 - **Discussed in:** [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]], [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

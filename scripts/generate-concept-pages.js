@@ -242,9 +242,12 @@ function renderBody(node, cfg) {
 
   // Footer. The viewer link is a raw anchor: relative `../graph/` (every
   // output folder is one level deep) so it survives the project base path,
-  // and data-routerIgnore so Quartz's SPA router does a full load — the
-  // Cytoscape app won't boot under SPA body-injection.
-  lines.push('<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>');
+  // and data-router-ignore so Quartz's SPA router does a full load — the
+  // Cytoscape app won't boot under SPA body-injection. The attribute MUST be
+  // kebab-case: Quartz checks `"routerIgnore" in a.dataset`, which the HTML
+  // parser only populates from `data-router-ignore` (camelCased), not from
+  // `data-routerIgnore` (lowercased to `data-routerignore` → never matches).
+  lines.push('<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>');
   lines.push('');
   return lines.join('\n');
 }

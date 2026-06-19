@@ -15,5 +15,5 @@ Carney/Cuddy/Yap 2010 reported that 'high-power' poses raised testosterone, lowe
 
 - **Discussed in:** [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]], [[case-studies-and-three-realities|Ch 2 — Case Studies and Three Realities]], [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[info-time-limit|Ch 3 — The Human Time Budget]], [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]], [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

@@ -20,5 +20,5 @@ Postman's term for a structure invented to give decontextualized information the
 - **Discussed in:** [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]], [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
 - **Evidenced by:** [[amusing-ourselves-to-death|Amusing Ourselves to Death]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

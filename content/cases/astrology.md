@@ -15,5 +15,5 @@ Astronomical positions are real measurements; the interpretive framework is inve
 
 - **Discussed in:** [[case-studies-and-three-realities|Ch 2 — Case Studies and Three Realities]], [[the-information-landscape|Ch 1 — The Information Landscape]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

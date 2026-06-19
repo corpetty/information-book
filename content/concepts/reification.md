@@ -19,5 +19,5 @@ Treating a made thing as a found thing: an intersubjective truth processed as if
 - **Defined in:** [[intersubjective-truth|Intersubjective Truth]]
 - **Discussed in:** [[political-economy-of-attention|Ch 10 — Political Economy of Attention]], [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

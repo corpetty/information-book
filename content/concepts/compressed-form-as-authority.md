@@ -20,5 +20,5 @@ The inverse failure mode of decompression-on-demand: at scale, the LLM-compresse
 - **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
 - **Enabled by:** [[llm-design-moment-collapse|LLM as collapsed selection-design moment]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

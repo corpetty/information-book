@@ -16,5 +16,5 @@ A 20-year paper compresses to a meme within a week. Pure-transport says lossy ho
 - **Discussed in:** [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]], [[case-studies-and-three-realities|Ch 2 — Case Studies and Three Realities]]
 - **Evidenced by:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

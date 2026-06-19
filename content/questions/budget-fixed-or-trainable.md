@@ -21,5 +21,5 @@ Current model treats budget as a constraint. Education, training, and shared voc
 
 - **Raised in:** [[info-time-limit|Ch 3 — The Human Time Budget]], [[outline|Lossy — Outline]], [[preservation-vs-training|Preservation vs. Training]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

@@ -21,5 +21,5 @@ The counterintuitive result (Kevin Zollman, central to O'Connor & Weatherall's a
 - **Discussed in:** [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]], [[integration-problem|Ch 9 — The Integration Problem]]
 - **Evidenced by:** [[misinformation-age|The Misinformation Age]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

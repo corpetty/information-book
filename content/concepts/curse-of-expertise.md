@@ -21,5 +21,5 @@ Four cognitive failure modes of deep specialization without paired metacognitive
 - **Discussed in:** [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]], [[integration-problem|Ch 9 — The Integration Problem]]
 - **Evidenced by:** [[double-edged-sword-of-expertise|The Double-Edged Sword of Deep Expertise]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

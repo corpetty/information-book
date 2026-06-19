@@ -21,5 +21,5 @@ A cross-cutting principle the capture-taxonomy makes visible. Captures of substr
 - **Defined in:** [[capture-taxonomy|Capture Taxonomy]]
 - **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

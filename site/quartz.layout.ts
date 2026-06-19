@@ -9,6 +9,13 @@ import * as Component from "./quartz/components"
 //
 // Self-contained: this is serialized with .toString() and run in the browser,
 // so the reading-order list is inlined rather than closed over.
+//
+// CRITICAL: no nested *named* function (not even `const rank = (n) => …`).
+// esbuild's keepNames wraps named functions as `__name(fn, "rank")`, and that
+// wrapper survives .toString() into the Explorer's `data-data-fns` attribute,
+// where the client runs it via `new Function` — a scope with no `__name`
+// helper. The result is `ReferenceError: __name is not defined`, which kills
+// the Explorer on every page. So the rank is inlined per-operand instead.
 const readingOrderSortFn = (a: any, b: any): number => {
   const ORDER = [
     "index",
@@ -28,14 +35,9 @@ const readingOrderSortFn = (a: any, b: any): number => {
     "infrastructure-for-integration",
   ]
   // rank: chapters in reading order (0..N), then other root files (1e6),
-  // then folders (2e6). Lower sorts first.
-  const rank = (n: any): number => {
-    if (n.isFolder) return 2_000_000
-    const i = ORDER.indexOf(n.slug ?? "")
-    return i === -1 ? 1_000_000 : i
-  }
-  const ra = rank(a)
-  const rb = rank(b)
+  // then folders (2e6). Lower sorts first. Inlined per-operand (see above).
+  const ra = a.isFolder ? 2_000_000 : ORDER.indexOf(a.slug ?? "") === -1 ? 1_000_000 : ORDER.indexOf(a.slug ?? "")
+  const rb = b.isFolder ? 2_000_000 : ORDER.indexOf(b.slug ?? "") === -1 ? 1_000_000 : ORDER.indexOf(b.slug ?? "")
   if (ra !== rb) return ra - rb
   return a.displayName.localeCompare(b.displayName, undefined, {
     numeric: true,

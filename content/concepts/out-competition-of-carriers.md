@@ -23,5 +23,5 @@ Platforms do not have to suppress institutional carriers (journals, universities
 - **Enables:** [[capture-asymmetry|Capture asymmetry (training vs. preservation)]]
 - **Enabled by:** [[engagement-equilibrium|Engagement-maximization as a captured equilibrium]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

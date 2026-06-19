@@ -15,5 +15,5 @@ Pre-Vatican-II Catholicism: the Latin Mass is high optionality, low access — r
 
 - **Discussed in:** [[optionality-vs-access|Ch 4 — Optionality vs. Access]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

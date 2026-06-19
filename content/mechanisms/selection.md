@@ -25,5 +25,5 @@ Gates with local fitness criteria at each pipeline stage. What survives is whate
 - **Evidenced by:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]], [[info-evolution-social-media|Information Evolution in Social Media]], [[memetics-critique|Memetics — a critique]], [[not-born-yesterday|Not Born Yesterday]], [[psychology-of-virality|Psychology of Virality]]
 - **Derived from by:** [[engagement-equilibrium|Engagement-maximization as a captured equilibrium]], [[myth-dilution|Myth dilution at scale]], [[want-as-prime-mover|Want as the prime mover]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

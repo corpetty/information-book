@@ -21,5 +21,5 @@ Mercier's reframe of the causal arrow between content consumption and behavior. 
 - **Discussed in:** [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]], [[political-economy-of-attention|Ch 10 — Political Economy of Attention]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 - **Evidenced by:** [[not-born-yesterday|Not Born Yesterday]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

@@ -21,5 +21,5 @@ What 5c's truth-regimes become when the cargo's generator is the agreement itsel
 - **Discussed in:** [[case-studies-and-three-realities|Ch 2 — Case Studies and Three Realities]], [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]], [[integration-problem|Ch 9 — The Integration Problem]]
 - **Enabled by:** [[constitutive-transmission|Constitutive transmission]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

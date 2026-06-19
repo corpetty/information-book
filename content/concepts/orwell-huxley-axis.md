@@ -22,5 +22,5 @@ Postman's framing of two opposite failure modes for an information ecosystem. Th
 - **Discussed in:** [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]], [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - **Evidenced by:** [[amusing-ourselves-to-death|Amusing Ourselves to Death]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

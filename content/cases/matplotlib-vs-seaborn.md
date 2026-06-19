@@ -15,5 +15,5 @@ matplotlib: general, powerful, hard to use. seaborn: opinionated abstraction, lo
 
 - **Discussed in:** [[optionality-vs-access|Ch 4 — Optionality vs. Access]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

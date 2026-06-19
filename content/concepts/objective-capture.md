@@ -20,5 +20,5 @@ Capture of an LLM by the training objective (loss function, RLHF reward signal).
 - **Defined in:** [[capture-taxonomy|Capture Taxonomy]]
 - **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

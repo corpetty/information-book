@@ -24,5 +24,5 @@ The possibility-space of a sufficiently complex field — every move, question, 
 - **Evidenced by:** [[the-abyss|The Abyss]]
 - **Enables:** [[compressed-form|Compressed form]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

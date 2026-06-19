@@ -21,5 +21,5 @@ Want drives a feedback loop where engagement accumulates preconditions that deep
 - **Derives from:** [[selection|Selection]], [[transport|Transport]]
 - **Derived from by:** [[medium-shapes-want|Medium shapes want]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

@@ -21,5 +21,5 @@ Content generated wholesale, never measured against reality, injected at later p
 - **Supported by:** [[misinformation-age|The Misinformation Age]]
 - **Evidenced by:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]], [[info-evolution-social-media|Information Evolution in Social Media]], [[memetics-critique|Memetics — a critique]], [[psychology-of-virality|Psychology of Virality]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

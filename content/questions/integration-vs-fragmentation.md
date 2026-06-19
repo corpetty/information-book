@@ -22,5 +22,5 @@ Original prescription was 'multiple smaller networks.' Critique notes small netw
 - **Raised in:** [[general-theme|General Theme]], [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]], [[integration-problem|Ch 9 — The Integration Problem]], [[myths-scale-and-bureaucracy|Myths, Scale, and Bureaucracy]], [[outline|Lossy — Outline]]
 - **Evidenced by:** [[psychology-of-virality|Psychology of Virality]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

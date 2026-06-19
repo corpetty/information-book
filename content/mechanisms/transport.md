@@ -23,5 +23,5 @@ Lossy re-encoding at each stage of an abstraction pipeline. Each hop is a sender
 - **Evidenced by:** [[amusing-ourselves-to-death|Amusing Ourselves to Death]], [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]], [[info-evolution-social-media|Information Evolution in Social Media]]
 - **Derived from by:** [[constitutive-transmission|Constitutive transmission]], [[interpretive-latitude|Interpretive latitude]], [[want-as-prime-mover|Want as the prime mover]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

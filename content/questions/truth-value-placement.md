@@ -25,5 +25,5 @@ Compression sometimes preserves approximate truth, sometimes inverts it, sometim
 - **Evidenced by:** [[amusing-ourselves-to-death|Amusing Ourselves to Death]], [[memetics-critique|Memetics — a critique]]
 - **Built on by:** **Core truth survives a medium on two joint conditions**, **Truth value lives in the key-fit, not the claim**
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

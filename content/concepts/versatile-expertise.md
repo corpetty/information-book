@@ -22,5 +22,5 @@ Deep specialist expertise paired with metacognitive flexibility — the second-o
 - **Discussed in:** [[integration-problem|Ch 9 — The Integration Problem]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 - **Evidenced by:** [[double-edged-sword-of-expertise|The Double-Edged Sword of Deep Expertise]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

@@ -21,5 +21,5 @@ A human has finite time, effective mental hours, and capacity to absorb new info
 - **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[info-time-limit|Ch 3 — The Human Time Budget]], [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]], [[optionality-vs-access|Ch 4 — Optionality vs. Access]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
 - **Evidenced by:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-routerIgnore="true">interactive ontology</a>.</em>
+<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 
