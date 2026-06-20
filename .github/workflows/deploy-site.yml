@@ -50,7 +50,8 @@ jobs:
       - name: Build graph + Quartz site + stage viewer
         # `make site-build` runs build-graph.js, then npx quartz build, then
         # copies src/ + data/*.json into site/public/{graph,data}/ so the
-        # ontology viewer publishes at /information-book/graph/.
+        # ontology viewer publishes at /graph/, and drops site/public/CNAME
+        # so GitHub Pages serves the artifact from the lossybook.com domain.
         run: make site-build
 
       - name: Check committed generated pages are fresh

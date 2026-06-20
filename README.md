@@ -160,7 +160,7 @@ Each commit is one logical phase, so reverts have fine resolution.
 | 17 | `086e5da` | Rewire ontology scripts to read prose from local `content/` (NOTES_DIR change in `build-graph.js`, `harvest-claims.js`, `context-bundle.js`) |
 | 18 | `ecdcd8a` | Add Quartz site at `site/` for publishing. Fresh upstream Quartz 4.5.2, `site/content` symlinks to `../content`, `quartz.config.ts` set up for the book. Makefile gains `site-build` / `site-serve` / `site-clean` |
 | 19 | `c719a3b` | Rewrite README for the one-repo layout. Three subsystems framing: prose, ontology, publishing site |
-| 21 | `8418628` | GitHub Pages deployment. `baseUrl` set to `corpetty.github.io/information-book`; `.github/workflows/deploy-site.yml` builds and deploys on push to `main` when `content/` or `site/` changes |
+| 21 | `8418628` | GitHub Pages deployment. `baseUrl` set to `corpetty.github.io/information-book`; `.github/workflows/deploy-site.yml` builds and deploys on push to `main` when `content/` or `site/` changes _(superseded June 2026 — site moved to the `lossybook.com` custom domain; see **CI & tests** below)_ |
 | 22 | `e87c7b9` | Draft Ch9 foundation + skeleton. `content/bridge-nodes-and-versatile-expertise.md` resolves the transferable-vs-specialized question (bridge nodes = deep specialists + paired metacognitive flexibility; the curse of expertise is the cognitive substrate of polarization-via-distrust). `content/integration-problem.md` is the Ch9 skeleton built on it. `source:double-edged-sword-of-expertise`, `concept:versatile-expertise`, `concept:curse-of-expertise`, three claims, and `question:transferable-vs-specialized` flipped to provisionally-resolved |
 | 23 | `54485c7` | Sync README and outline with Phase 22 |
 | 24 | `6b3af0d` | Accessible landing page (`content/index.md` rewritten), glossary (`content/glossary.md` new with ~25 plain-language definitions), reader's note at the top of the outline |
@@ -337,6 +337,13 @@ then verifies committed generated pages are fresh (`git diff --exit-code
 content/`) and every published internal link resolves
 (`scripts/check-site-links.js`) — `make site-check` runs those last two
 locally.
+
+The site is served from the custom domain **lossybook.com** (apex);
+`www.lossybook.com` redirects to it. The domain lives in two places that
+must stay in sync: `baseUrl` in `site/quartz.config.ts` (drives canonical
+URLs, the sitemap, RSS, and OG images) and `site/CNAME`, which
+`make site-build` copies to `site/public/CNAME` so the deployed artifact
+claims the domain on GitHub Pages.
 
 ## Licence
 

@@ -14,7 +14,7 @@ const config: QuartzConfig = {
     enablePopovers: true,
     analytics: null,
     locale: "en-US",
-    baseUrl: "corpetty.github.io/information-book",
+    baseUrl: "lossybook.com",
     // sources/*.pdf are published deliberately: every committed PDF is
     // availability:open (verified redistributable) per data/sources.json,
     // and the generated citation pages link to them as local copies.

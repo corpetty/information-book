@@ -121,10 +121,15 @@ concept-pages: build
 
 # Full site build: rebuild the graph (so the data the viewer ships is fresh),
 # regenerate citation + concept landing pages, build the Quartz output,
-# then stage the viewer on top. This is what CI runs.
+# stage the viewer on top, then drop the custom-domain CNAME into the
+# artifact root so GitHub Pages serves the site from lossybook.com. This
+# is what CI runs. (quartz build wipes site/public, so the CNAME copy must
+# come after it; site/CNAME is the source of truth, kept in sync with the
+# baseUrl in site/quartz.config.ts.)
 site-build: citation-pages concept-pages
 	@cd site && npx quartz build
 	@$(MAKE) viewer-stage
+	@cp site/CNAME site/public/CNAME
 
 # Quartz dev server (hot-reloads prose). Note: subsequent rebuilds wipe
 # site/public, so the staged viewer won't survive here — use `make serve`
