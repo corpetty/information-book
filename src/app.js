@@ -74,6 +74,7 @@ const VIEWS = {
     // Left-to-right layered: chapters flow rightward to the Status they carry.
     layout: 'dagre',
     rankDir: 'LR',
+    authorOnly: true, // workflow/meta view — not for readers
   },
   full: {
     label: 'Full graph',
@@ -81,14 +82,41 @@ const VIEWS = {
     nodeTypes: null,
     predicates: null,
     layout: 'fcose',
+    authorOnly: true, // the raw everything-at-once dump
   },
 };
 
 const DEFAULT_VIEW = 'overview';
 
+// Reader-facing names for the node types — the schema's type keys (Mechanism,
+// CaseStudy, …) are authoring jargon. Tooltips fall back to graph-meta's
+// per-type description. Sensible defaults; tune to taste.
+const PLAIN_TYPES = {
+  Part: 'Part of the book',
+  Chapter: 'Chapter',
+  Note: 'Note / essay',
+  Mechanism: 'Mechanism',
+  PipelineStage: 'Pipeline stage',
+  Gate: 'Selection gate',
+  Concept: 'Concept',
+  Question: 'Open question',
+  Claim: 'Claim',
+  Source: 'Source',
+  Author: 'Author',
+  Tradition: 'Tradition',
+  CaseStudy: 'Example',
+  Tension: 'Tension',
+  Status: 'Drafting status',
+};
+function plainType(type) { return PLAIN_TYPES[type] || type; }
+function typeDesc(type) { return GRAPH.meta?.nodeTypes?.[type]?.description || ''; }
+
 // ---------------------------------------------------------------- state
 
 const state = {
+  // mode: 'reader' (default — curated views, plain-language key, no jargon) or
+  // 'author' (the full audit tools: every view, type/predicate toggles).
+  mode: 'reader',
   view: DEFAULT_VIEW,
   search: '',
   // typeOverrides: {[type]: boolean} — when present, overrides the view's
@@ -130,6 +158,7 @@ function parseHash() {
     }
   }
   if (params.get('weak') === '1') state.showWeak = true;
+  if (params.get('mode') === 'author') state.mode = 'author';
 }
 
 function serializeHash() {
@@ -149,6 +178,7 @@ function serializeHash() {
   if (on.length) params.set('on', on.join(','));
   if (off.length) params.set('off', off.join(','));
   if (state.showWeak) params.set('weak', '1');
+  if (state.mode === 'author') params.set('mode', 'author');
   const str = params.toString();
   const target = `#${str}`;
   if (location.hash !== target) {
@@ -329,16 +359,25 @@ function buildStyle(meta) {
 
 function renderTabs() {
   const nav = document.getElementById('view-tabs');
-  nav.innerHTML = Object.entries(VIEWS).map(([key, v]) =>
-    `<button class="tab${key === state.view ? ' active' : ''}" data-view="${key}" title="${v.desc}">${v.label}</button>`
-  ).join('');
+  nav.innerHTML = Object.entries(VIEWS)
+    .filter(([, v]) => state.mode === 'author' || !v.authorOnly)
+    .map(([key, v]) =>
+      `<button class="tab${key === state.view ? ' active' : ''}" data-view="${key}" title="${escapeHtml(v.desc)}">${escapeHtml(v.label)}</button>`
+    ).join('');
 }
 
 function renderViewDesc() {
-  document.getElementById('view-desc').textContent = VIEWS[state.view].desc;
+  const el = document.getElementById('view-desc');
+  const base = VIEWS[state.view].desc;
+  if (state.mode === 'reader') {
+    el.innerHTML = `${escapeHtml(base)} <span class="reader-tip">Each dot is an idea; each line a relationship. Click any dot to focus it and read more.</span>`;
+  } else {
+    el.textContent = base;
+  }
 }
 
 function renderLegend(meta, statsByType, statsByPredicate) {
+  if (state.mode === 'reader') { renderReaderKey(meta); return; }
   const el = document.getElementById('legend');
   const baseline = new Set(VIEWS[state.view].nodeTypes ?? Object.keys(meta.nodeTypes));
   const effective = effectiveTypes(meta);
@@ -397,6 +436,26 @@ function renderLegend(meta, statsByType, statsByPredicate) {
 
 function hasOverrides() {
   return Object.keys(state.typeOverrides).length > 0;
+}
+
+// Reader-mode legend: a plain-language key of the kinds of things on screen.
+// Non-interactive — orientation, not controls.
+function renderReaderKey(meta) {
+  const el = document.getElementById('legend');
+  const effective = effectiveTypes(meta);
+  const rows = Object.entries(meta.nodeTypes)
+    .filter(([type]) => effective.has(type) && (GRAPH.statsByType[type] || 0) > 0)
+    .map(([type, t]) => `
+      <div class="reader-key-row" title="${escapeHtml(t.description || '')}">
+        <span class="swatch" style="background:${t.color}"></span>
+        <span class="reader-key-label">${escapeHtml(plainType(type))}</span>
+      </div>`).join('');
+  el.innerHTML = `
+    <section class="reader-key">
+      <h2>What you're looking at</h2>
+      <p class="reader-key-intro">A map of the book's ideas and how they connect. Each dot is one idea; lines join ideas that relate. Click a dot to focus it and read more.</p>
+      <div class="reader-key-rows">${rows}</div>
+    </section>`;
 }
 
 // Construct a Quartz-relative URL for a Note/Chapter's prose page.
@@ -471,7 +530,7 @@ function renderNeighbourGroup(nodeId, direction) {
       if (!other) return '';
       return `<li>
         <button class="node-link" data-id="${escapeHtml(otherId)}">
-          <span class="node-link-type type-badge tiny">${other.type}</span>
+          <span class="node-link-type type-badge tiny" title="${escapeHtml(typeDesc(other.type))}">${escapeHtml(other.type)}</span>
           <span class="node-link-label">${escapeHtml(other.label || otherId)}</span>
         </button>
       </li>`;
@@ -527,7 +586,8 @@ function renderDetail(node) {
   const badge = statusBadgeFor(node);
   const proseUrl = proseUrlFor(node);
 
-  const metaPieces = [`<span class="type-badge">${node.type}</span>`, `<code>${escapeHtml(node.id)}</code>`];
+  const metaPieces = [`<span class="type-badge" title="${escapeHtml(typeDesc(node.type))}">${escapeHtml(plainType(node.type))}</span>`];
+  if (state.mode === 'author') metaPieces.push(`<code>${escapeHtml(node.id)}</code>`);
   if (badge) metaPieces.push(`<span class="status-badge status-${escapeHtml(badge.kind)} status-val-${escapeHtml(badge.label.replace(/\s+/g, '-').toLowerCase())}">${escapeHtml(badge.label)}</span>`);
 
   const proseLink = proseUrl
@@ -551,7 +611,7 @@ function renderDetail(node) {
     ${summary ? `<p class="summary">${escapeHtml(summary)}</p>` : ''}
     ${workingAnswerBlock}
     ${proseLink}
-    ${renderProps(node)}
+    ${state.mode === 'author' ? renderProps(node) : ''}
     ${renderNeighbourGroup(node.id, 'out')}
     ${renderNeighbourGroup(node.id, 'in')}
   `;
@@ -617,7 +677,9 @@ function tileSummary(viewKey) {
 
 function renderLanding() {
   const el = document.getElementById('landing');
-  const tiles = Object.entries(VIEWS).map(([key, v]) => `
+  const tiles = Object.entries(VIEWS)
+    .filter(([, v]) => state.mode === 'author' || !v.authorOnly)
+    .map(([key, v]) => `
     <button class="landing-tile" data-view="${key}">
       <span class="tile-title">${escapeHtml(v.label)}</span>
       <span class="tile-desc">${escapeHtml(v.desc)}</span>
@@ -642,6 +704,7 @@ function showLanding() {
   document.querySelector('main').hidden = true;
   document.querySelectorAll('#view-tabs .tab').forEach(b => b.classList.remove('active'));
   document.getElementById('stats').textContent = `${GRAPH.nodes.length} nodes · ${GRAPH.edges.length} edges`;
+  applyModeChrome();
   renderLanding();
 }
 
@@ -699,6 +762,43 @@ function toggleWeak() {
   applyState({ relayout: false });
 }
 
+function setMode(mode) {
+  if ((mode !== 'reader' && mode !== 'author') || mode === state.mode) return;
+  state.mode = mode;
+  state.typeOverrides = {}; // author-only filters shouldn't linger into reader
+  // Reader mode hides author-only views — fall back if we're sitting on one.
+  if (state.mode === 'reader' && VIEWS[state.view]?.authorOnly) {
+    state.view = DEFAULT_VIEW;
+    state.focusId = null;
+  }
+  renderTabs(); // the available tab set changes with the mode
+  if (state.showLanding) {
+    serializeHash();
+    showLanding();
+  } else {
+    applyState({ relayout: true });
+  }
+}
+
+// Sync the mode-dependent chrome (title, toggle button, body hook, which
+// toolbar controls are reader-appropriate). Cheap; safe to call on any render.
+function applyModeChrome() {
+  document.body.dataset.mode = state.mode;
+  const h1 = document.querySelector('header .brand h1');
+  if (h1) h1.textContent = state.mode === 'reader' ? 'Lossy — map of the book' : 'Lossy — Ontology';
+  const btn = document.getElementById('mode-toggle');
+  if (btn) {
+    btn.textContent = state.mode === 'reader' ? 'Author tools' : '← Reader view';
+    btn.setAttribute('aria-pressed', state.mode === 'author' ? 'true' : 'false');
+    btn.title = state.mode === 'reader'
+      ? 'Switch to the full author tools — every view, type and predicate filters'
+      : 'Back to the simplified reader view';
+  }
+  // "weak links" is author jargon; readers get a cleaner toolbar.
+  const weak = document.getElementById('btn-weak');
+  if (weak) weak.hidden = state.mode === 'reader';
+}
+
 // ---------------------------------------------------------------- mounting
 
 const GRAPH = {
@@ -716,6 +816,7 @@ const GRAPH = {
 // Refresh the chrome around the graph (tabs, view description, legend,
 // toolbar) — cheap, pure-DOM, no cytoscape work.
 function refreshChrome() {
+  applyModeChrome();
   document.querySelectorAll('#view-tabs .tab').forEach(b => {
     b.classList.toggle('active', b.dataset.view === state.view);
   });
@@ -1042,6 +1143,9 @@ async function main() {
   document.getElementById('focus-hint').addEventListener('click', e => {
     if (e.target.id === 'clear-focus') clearFocus();
   });
+  document.getElementById('mode-toggle').addEventListener('click', () => {
+    setMode(state.mode === 'reader' ? 'author' : 'reader');
+  });
 
   if (state.showLanding) {
     showLanding();
@@ -1055,6 +1159,7 @@ async function main() {
 
   window.addEventListener('hashchange', () => {
     // External hash change (back button, etc.) — re-parse and re-render.
+    state.mode = 'reader';
     state.view = DEFAULT_VIEW;
     state.search = '';
     state.typeOverrides = {};
@@ -1062,6 +1167,7 @@ async function main() {
     state.showWeak = false;
     state.showLanding = true;
     parseHash();
+    renderTabs(); // available tabs depend on mode, which may have changed
     document.getElementById('search').value = state.search;
     if (state.showLanding) {
       showLanding();
