@@ -43,11 +43,18 @@
     <aside id="legend"></aside>
     <div id="graph">
       <div id="graph-toolbar">
+        <button id="btn-tour" type="button" class="tour-cta" title="Walk through the book's argument one chapter at a time">▶ Take the tour</button>
         <button id="btn-relayout" type="button" title="Re-arrange the nodes">Re-layout</button>
         <button id="btn-fit" type="button" title="Fit the whole view on screen">Fit</button>
         <button id="btn-weak" type="button" title="Show weak links (wiki-links and passing mentions)" aria-pressed="false">+ weak links</button>
       </div>
       <div id="focus-hint" hidden></div>
+      <div id="tour-bar" hidden>
+        <button id="tour-close" type="button" title="End the tour" aria-label="End the tour">✕</button>
+        <button id="tour-prev" type="button">◀</button>
+        <span id="tour-status"></span>
+        <button id="tour-next" type="button">▶</button>
+      </div>
     </div>
     <aside id="detail"><div class="empty">Click a node to inspect.</div></aside>
   </main>

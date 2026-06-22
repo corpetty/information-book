@@ -27,6 +27,13 @@ const HUB_LABELS = 14;
 // null` means all predicates. `layout` is the cytoscape layout name to use
 // when this view is active.
 const VIEWS = {
+  spine: {
+    label: 'Reading path',
+    desc: 'The chapters in reading order — the spine of the book. Walk it left to right, or take the guided tour.',
+    nodeTypes: ['Part', 'Chapter'],
+    predicates: ['partOf'],
+    layout: 'spine',
+  },
   overview: {
     label: 'Book overview',
     desc: 'Parts and chapters as a structural map of the book.',
@@ -86,7 +93,7 @@ const VIEWS = {
   },
 };
 
-const DEFAULT_VIEW = 'overview';
+const DEFAULT_VIEW = 'spine';
 
 // Reader-facing names for the node types — the schema's type keys (Mechanism,
 // CaseStudy, …) are authoring jargon. Tooltips fall back to graph-meta's
@@ -647,6 +654,7 @@ function tileSummary(viewKey) {
   const types = new Set(v.nodeTypes ?? Object.keys(GRAPH.meta.nodeTypes));
   // Pick 2–3 "headline" types for each view to summarise its contents.
   const headlineTypes = {
+    spine: ['Part', 'Chapter'],
     overview: ['Part', 'Chapter'],
     argument: ['Chapter', 'Claim', 'Concept'],
     sources: ['Source', 'Claim'],
@@ -721,6 +729,7 @@ function hideLanding() {
 
 function setView(view) {
   if (!VIEWS[view]) return;
+  if (tour.active) { tour.active = false; renderTourBar(); } // manual view change ends the tour
   const wasOnLanding = state.showLanding;
   state.view = view;
   state.typeOverrides = {};
@@ -764,6 +773,7 @@ function toggleWeak() {
 
 function setMode(mode) {
   if ((mode !== 'reader' && mode !== 'author') || mode === state.mode) return;
+  if (tour.active) { tour.active = false; renderTourBar(); }
   state.mode = mode;
   state.typeOverrides = {}; // author-only filters shouldn't linger into reader
   // Reader mode hides author-only views — fall back if we're sitting on one.
@@ -993,6 +1003,66 @@ function updateFocusHint() {
   }
 }
 
+// ---------------------------------------------------------------- guided tour
+
+// A node-by-node walk along the book's spine (chapters in reading order). Each
+// step reuses the focus spotlight + detail panel. Ephemeral (not in the hash).
+const tour = { active: false, i: 0, path: [] };
+
+function buildTourPath() {
+  return GRAPH.nodes
+    .filter(n => n.type === 'Chapter')
+    .sort((a, b) => (a.props?.ordinal ?? 999) - (b.props?.ordinal ?? 999))
+    .map(n => n.id);
+}
+
+function startTour() {
+  tour.path = buildTourPath();
+  if (!tour.path.length) return;
+  // Make sure we're in a chapter-bearing view first. Done while the tour is
+  // still inactive, so setView's "end tour on view change" guard is a no-op.
+  if (state.showLanding || !effectiveTypes(GRAPH.meta).has('Chapter')) {
+    setView('spine');
+  }
+  tour.active = true;
+  tourGoto(0);
+}
+
+function tourGoto(i) {
+  if (!tour.active) return;
+  tour.i = Math.max(0, Math.min(i, tour.path.length - 1));
+  const id = tour.path[tour.i];
+  const node = GRAPH.nodeById.get(id);
+  if (node) renderDetail(node);
+  setFocus(id);
+  renderTourBar();
+}
+
+function tourNext() { tourGoto(tour.i + 1); }
+function tourPrev() { tourGoto(tour.i - 1); }
+
+function endTour() {
+  if (!tour.active) return;
+  tour.active = false;
+  renderTourBar();
+  clearFocus();
+}
+
+function renderTourBar() {
+  const bar = document.getElementById('tour-bar');
+  const cta = document.getElementById('btn-tour');
+  if (!bar) return;
+  bar.hidden = !tour.active;
+  if (cta) cta.hidden = tour.active;
+  if (tour.active) {
+    const node = GRAPH.nodeById.get(tour.path[tour.i]);
+    document.getElementById('tour-status').textContent =
+      `${tour.i + 1} / ${tour.path.length} · ${node?.label || tour.path[tour.i]}`;
+    document.getElementById('tour-prev').disabled = tour.i === 0;
+    document.getElementById('tour-next').disabled = tour.i === tour.path.length - 1;
+  }
+}
+
 function layoutFor(view) {
   const spec = VIEWS[view];
   // animate:false — layouts snap into place. Animated layout (esp. dagre) could
@@ -1001,6 +1071,21 @@ function layoutFor(view) {
   // The short focus/fit pans (cy.animate elsewhere) are finite and stay.
   const common = { animate: false, padding: 40, fit: true };
   switch (spec.layout) {
+    case 'spine': {
+      // Custom timeline: chapters left-to-right in reading order (by ordinal),
+      // each Part centred above the chapters that belong to it.
+      const chapters = GRAPH.nodes.filter(n => n.type === 'Chapter')
+        .sort((a, b) => (a.props?.ordinal ?? 999) - (b.props?.ordinal ?? 999));
+      const pos = {};
+      const GAP = 185;
+      chapters.forEach((c, i) => { pos[c.id] = { x: i * GAP, y: 0 }; });
+      for (const p of GRAPH.nodes.filter(n => n.type === 'Part')) {
+        const slug = p.id.replace(/^part:/, '');
+        const xs = chapters.filter(c => c.props?.part === slug).map(c => pos[c.id].x);
+        pos[p.id] = { x: xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 0, y: -170 };
+      }
+      return { name: 'preset', positions: pos, fit: true, padding: 60, animate: false };
+    }
     case 'dagre':
       // Layered/hierarchical — reads as flow/containment, not a hairball.
       return { name: 'dagre', rankDir: spec.rankDir || 'TB', nodeSep: 24, edgeSep: 12, rankSep: 72, ...common };
@@ -1110,7 +1195,6 @@ async function main() {
     layout: { name: 'preset' },
     minZoom: 0.08,
     maxZoom: 2.2,
-    wheelSensitivity: 0.2,
   });
 
   // Tap a node → inspect it and spotlight its neighbourhood.
@@ -1145,6 +1229,18 @@ async function main() {
   });
   document.getElementById('mode-toggle').addEventListener('click', () => {
     setMode(state.mode === 'reader' ? 'author' : 'reader');
+  });
+
+  // Guided tour controls.
+  document.getElementById('btn-tour').addEventListener('click', startTour);
+  document.getElementById('tour-next').addEventListener('click', tourNext);
+  document.getElementById('tour-prev').addEventListener('click', tourPrev);
+  document.getElementById('tour-close').addEventListener('click', endTour);
+  document.addEventListener('keydown', e => {
+    if (!tour.active || (document.activeElement && document.activeElement.id === 'search')) return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); tourNext(); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); tourPrev(); }
+    else if (e.key === 'Escape') endTour();
   });
 
   if (state.showLanding) {
