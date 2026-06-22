@@ -102,7 +102,7 @@ context: build
 viewer-stage:
 	@mkdir -p site/public/graph/vendor site/public/data
 	@cp src/index.html src/app.js src/styles.css site/public/graph/
-	@cp src/vendor/cytoscape.min.js site/public/graph/vendor/
+	@cp src/vendor/*.js site/public/graph/vendor/
 	@cp data/graph-meta.json data/nodes.jsonl data/edges.jsonl site/public/data/
 
 # Regenerate citation pages from data/sources.json. Idempotent — files
