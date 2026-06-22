@@ -8,6 +8,19 @@
 
 const DATA = '../data';
 
+// Register vendored layout extensions (loaded as UMD globals in index.html,
+// before this module). Guarded so a missing/forgotten vendor file degrades to
+// cytoscape's built-in layouts rather than throwing before the app mounts.
+for (const ext of ['cytoscapeDagre', 'cytoscapeFcose']) {
+  try { if (window[ext]) cytoscape.use(window[ext]); }
+  catch (e) { console.warn(`layout extension ${ext} failed to register`, e); }
+}
+
+// How many of the highest-degree nodes always carry a label (on top of the
+// structural anchors — Parts and Chapters — which are always labelled). Keeps
+// the skeleton readable without painting every concept/claim label into mud.
+const HUB_LABELS = 14;
+
 // ---------------------------------------------------------------- views
 
 // Each view is a filter spec. `nodeTypes: null` means all types. `predicates:
@@ -19,35 +32,38 @@ const VIEWS = {
     desc: 'Parts and chapters as a structural map of the book.',
     nodeTypes: ['Part', 'Chapter'],
     predicates: ['partOf', 'supersedes'],
-    layout: 'breadthfirst',
+    // Layered tree: edges run Chapter→Part (partOf), so rankDir 'BT' lifts the
+    // four Parts to the top with their chapters ranked beneath them.
+    layout: 'dagre',
+    rankDir: 'BT',
   },
   argument: {
     label: 'Argument map',
     desc: 'Chapters, claims, concepts/mechanisms, and how the argument depends on itself.',
     nodeTypes: ['Chapter', 'Claim', 'Concept', 'Mechanism', 'Note', 'CaseStudy'],
     predicates: ['argues', 'covers', 'dependsOn', 'definedIn', 'derivesFrom', 'supersedes', 'representedBy'],
-    layout: 'cose',
+    layout: 'fcose',
   },
   sources: {
     label: 'Source map',
     desc: 'Where claims and concepts get their evidence; which sources support and pressure-test what.',
     nodeTypes: ['Source', 'Claim', 'Concept', 'Mechanism', 'Author', 'Tradition'],
     predicates: ['supports', 'pressureTests', 'evidencedBy', 'cites', 'authoredBy', 'partOfTradition'],
-    layout: 'cose',
+    layout: 'fcose',
   },
   questions: {
     label: 'Open questions',
     desc: 'Foundational questions and the chapters whose final shape depends on them.',
     nodeTypes: ['Question', 'Chapter', 'Note', 'Status'],
     predicates: ['flagsOpenQuestion', 'hasStatus'],
-    layout: 'cose',
+    layout: 'fcose',
   },
   contested: {
     label: 'What\'s contested',
     desc: 'Open questions, tensions the book holds with sources, and the frames it has revised. The dialectical layer.',
     nodeTypes: ['Question', 'Tension', 'Claim', 'Source', 'Concept', 'Mechanism', 'Chapter', 'Note'],
     predicates: ['flagsOpenQuestion', 'tensionWith', 'contradicts', 'supersedes', 'mentions'],
-    layout: 'cose',
+    layout: 'fcose',
     connectedOnly: true,
   },
   drafting: {
@@ -55,14 +71,16 @@ const VIEWS = {
     desc: 'Where each chapter sits in the workflow — drafted, in-workshop, skeleton, not yet drafted.',
     nodeTypes: ['Chapter', 'Part', 'Status', 'Note'],
     predicates: ['partOf', 'hasStatus', 'representedBy'],
-    layout: 'breadthfirst',
+    // Left-to-right layered: chapters flow rightward to the Status they carry.
+    layout: 'dagre',
+    rankDir: 'LR',
   },
   full: {
     label: 'Full graph',
     desc: 'Everything — every node, every edge. Use this when you know what you are looking for.',
     nodeTypes: null,
     predicates: null,
-    layout: 'cose',
+    layout: 'fcose',
   },
 };
 
@@ -76,6 +94,13 @@ const state = {
   // typeOverrides: {[type]: boolean} — when present, overrides the view's
   // nodeTypes membership (true = force on, false = force off).
   typeOverrides: {},
+  // showWeak: weak edges (wiki-links, passing mentions) are navigational noise
+  // in an overview, so they're hidden until the reader opts in via the toolbar.
+  showWeak: false,
+  // focusId: the node the reader has spotlighted. When set, its closed
+  // neighbourhood is highlighted and everything else dims — the core
+  // "look at one thing at a time" move that tames a dense view.
+  focusId: null,
   // showLanding: true when the user hasn't picked a view yet. URL hash with
   // any state hides it (so shared/bookmarked URLs deep-link); clicking the
   // brand title brings it back.
@@ -104,6 +129,7 @@ function parseHash() {
       state.typeOverrides[t] = false;
     }
   }
+  if (params.get('weak') === '1') state.showWeak = true;
 }
 
 function serializeHash() {
@@ -122,6 +148,7 @@ function serializeHash() {
   }
   if (on.length) params.set('on', on.join(','));
   if (off.length) params.set('off', off.join(','));
+  if (state.showWeak) params.set('weak', '1');
   const str = params.toString();
   const target = `#${str}`;
   if (location.hash !== target) {
@@ -160,55 +187,55 @@ function matchesSearch(node, q) {
   return false;
 }
 
+function isWeakPred(meta, pred) {
+  return meta.predicates[pred]?.category === 'weak';
+}
+
+// Node diameter from its visible degree. sqrt scale + a cap so a degree-40 hub
+// reads as a hub without dwarfing everything; structural anchors (Part,
+// Chapter) override this with a fixed size in buildStyle.
+function nodeSize(deg) {
+  const d = Math.max(0, Math.min(deg, 16));
+  return Math.round(22 + 34 * Math.sqrt(d / 16));
+}
+
+// Which nodes/edges exist in the current view. Search no longer filters here —
+// it highlights in context (see refreshEmphasis), so typing never collapses
+// the graph or forces a re-layout.
 function computeVisible(meta, nodes, edges) {
   const types = effectiveTypes(meta);
-  const preds = effectivePredicates(meta);
-  const q = state.search.trim();
+  const preds = effectivePredicates(meta); // null = all predicates
 
   // Stage 1: type filter
   let visibleNodes = nodes.filter(n => types.has(n.type));
-
-  // Stage 2: search filter — keep matches AND their direct neighbours (so a
-  // match isn't a floating dot with no context).
-  if (q) {
-    const direct = new Set(visibleNodes.filter(n => matchesSearch(n, q)).map(n => n.id));
-    if (direct.size === 0) {
-      visibleNodes = [];
-    } else {
-      const keep = new Set(direct);
-      for (const e of edges) {
-        if (preds && !preds.has(e.predicate)) continue;
-        if (direct.has(e.source) || direct.has(e.target)) {
-          keep.add(e.source);
-          keep.add(e.target);
-        }
-      }
-      visibleNodes = visibleNodes.filter(n => keep.has(n.id));
-    }
-  }
-
   const visibleIds = new Set(visibleNodes.map(n => n.id));
 
-  // Stage 3: edge filter — predicate must be allowed, both endpoints visible.
+  // Stage 2: edge filter — predicate allowed by the view, both endpoints
+  // visible, and (unless the reader opted in) not a weak navigational edge.
   const visibleEdges = edges.filter(e =>
     (!preds || preds.has(e.predicate)) &&
+    (state.showWeak || !isWeakPred(meta, e.predicate)) &&
     visibleIds.has(e.source) &&
     visibleIds.has(e.target),
   );
 
-  // Stage 3b (opt-in): some views (e.g. contested) are noisy unless we hide
-  // nodes with no visible edges — keeps the rendering focused on the part of
-  // the graph the predicates filter is actually exposing.
+  // Stage 3 (opt-in): some views (e.g. contested) are noisy unless we drop
+  // nodes with no visible edges, so the rendering shows only the part of the
+  // graph the predicate filter is actually exposing.
   if (VIEWS[state.view].connectedOnly) {
     const connected = new Set();
     for (const e of visibleEdges) { connected.add(e.source); connected.add(e.target); }
     visibleNodes = visibleNodes.filter(n => connected.has(n.id));
   }
 
-  // Stage 4: mark search-matched nodes for highlight (vs neighbour-context).
-  const matched = q ? new Set(visibleNodes.filter(n => matchesSearch(n, q)).map(n => n.id)) : null;
+  // Degree over the *visible* edge set — drives node size and label survival.
+  const degree = new Map(visibleNodes.map(n => [n.id, 0]));
+  for (const e of visibleEdges) {
+    if (degree.has(e.source)) degree.set(e.source, degree.get(e.source) + 1);
+    if (degree.has(e.target)) degree.set(e.target, degree.get(e.target) + 1);
+  }
 
-  return { visibleNodes, visibleEdges, matched };
+  return { visibleNodes, visibleEdges, degree };
 }
 
 // ---------------------------------------------------------------- rendering
@@ -222,40 +249,53 @@ function buildStyle(meta) {
         'font-size': 9,
         'text-valign': 'bottom',
         'text-margin-y': 4,
-        'color': '#1f2937',
-        'width': 32,
-        'height': 32,
+        'color': '#0f172a',
+        'width': 'data(size)',
+        'height': 'data(size)',
         'border-width': 1,
         'border-color': '#0f172a',
         'border-opacity': 0.35,
+        // Labels are hidden by default; the level-of-detail pass (.lbl) reveals
+        // anchors, hubs, and whatever the reader is focused on. A white text
+        // halo keeps the revealed labels readable over a busy edge field.
+        'text-opacity': 0,
+        'text-outline-color': '#f8fafc',
+        'text-outline-width': 2.4,
+        'text-outline-opacity': 0.9,
+        'min-zoomed-font-size': 7,
       },
     },
     {
       selector: 'edge',
       style: {
         'curve-style': 'bezier',
-        'width': 1.4,
-        'opacity': 0.75,
+        'width': 1.3,
+        'opacity': 0.6,
         'target-arrow-shape': 'triangle',
-        'arrow-scale': 0.8,
+        'arrow-scale': 0.75,
       },
     },
-    {
-      selector: ':selected',
-      style: {
-        'border-width': 3,
-        'border-color': '#0f172a',
-        'border-opacity': 1,
-      },
-    },
-    {
-      selector: 'node[?matched]',
-      style: {
-        'border-width': 3,
-        'border-color': '#facc15',
-        'border-opacity': 1,
-      },
-    },
+
+    // --- label level-of-detail: anything carrying .lbl shows its label -----
+    { selector: 'node.lbl', style: { 'text-opacity': 1 } },
+
+    // --- emphasis (search match / focus neighbourhood) --------------------
+    { selector: 'node.matched', style: { 'border-width': 3, 'border-color': '#facc15', 'border-opacity': 1, 'text-opacity': 1 } },
+    { selector: 'node.nbr', style: { 'text-opacity': 1 } },
+    { selector: 'node:selected', style: { 'border-width': 3, 'border-color': '#0f172a', 'border-opacity': 1, 'text-opacity': 1 } },
+    { selector: 'node.focused', style: { 'border-width': 4, 'border-color': '#0f172a', 'border-opacity': 1, 'text-opacity': 1, 'z-index': 9999 } },
+    { selector: 'edge.focus-edge', style: { 'opacity': 0.95, 'width': 2.2 } },
+
+    // --- weak navigational edges (wiki-links, mentions), opt-in ----------
+    { selector: 'edge.weak', style: { 'line-style': 'dashed', 'opacity': 0.3, 'width': 1, 'arrow-scale': 0.6 } },
+
+    // --- dimmed (out of focus / non-match): defined late so it wins -------
+    { selector: '.dim', style: { 'opacity': 0.12 } },
+    { selector: 'node.dim', style: { 'text-opacity': 0, 'border-opacity': 0.15 } },
+    { selector: 'edge.dim', style: { 'opacity': 0.04 } },
+
+    // --- hover always reveals a label, even on a dimmed node (last wins) --
+    { selector: 'node.hover-lbl', style: { 'text-opacity': 1, 'opacity': 0.97, 'z-index': 9998 } },
   ];
 
   for (const [type, t] of Object.entries(meta.nodeTypes)) {
@@ -267,6 +307,11 @@ function buildStyle(meta) {
       },
     });
   }
+
+  // Structural anchors get a stable, prominent size regardless of degree so
+  // the book's skeleton stays legible as the reader moves between views.
+  sheet.push({ selector: 'node[type = "Part"]', style: { 'width': 54, 'height': 54, 'font-size': 11 } });
+  sheet.push({ selector: 'node[type = "Chapter"]', style: { 'width': 40, 'height': 40, 'font-size': 10 } });
 
   for (const [pred, p] of Object.entries(meta.predicates)) {
     sheet.push({
@@ -521,16 +566,11 @@ function focusNode(nodeId) {
   if (!types.has(node.type)) {
     state.view = 'full';
     state.typeOverrides = {};
+    state.focusId = null;
     applyState({ relayout: true });
   }
-  // Select in cytoscape if present
-  const ele = GRAPH.cy.getElementById(nodeId);
-  if (ele && ele.length) {
-    GRAPH.cy.elements().unselect();
-    ele.select();
-    GRAPH.cy.animate({ center: { eles: ele }, zoom: Math.max(GRAPH.cy.zoom(), 0.7) }, { duration: 240 });
-  }
   renderDetail(node);
+  setFocus(nodeId);
 }
 
 function escapeHtml(s) {
@@ -621,6 +661,7 @@ function setView(view) {
   const wasOnLanding = state.showLanding;
   state.view = view;
   state.typeOverrides = {};
+  state.focusId = null; // the focused node may not exist in the new view
   if (wasOnLanding) hideLanding();
   applyState({ relayout: true });
 }
@@ -640,12 +681,22 @@ function toggleType(type) {
     if (baseline.has(type)) delete state.typeOverrides[type];
     else state.typeOverrides[type] = true;
   }
+  state.focusId = null; // node set changed; a stale focus would be misleading
   applyState({ relayout: true });
 }
 
 function setSearch(q) {
   state.search = q;
-  applyState({ relayout: true });
+  // A search while focused clears the focus, so matches outside the focused
+  // neighbourhood aren't hidden. Emphasis-only: no re-filter, no re-layout.
+  if (q && state.focusId) { state.focusId = null; updateFocusHint(); }
+  applyEmphasisOnly();
+}
+
+function toggleWeak() {
+  state.showWeak = !state.showWeak;
+  // Edge set changes but the node set doesn't — keep positions, don't relayout.
+  applyState({ relayout: false });
 }
 
 // ---------------------------------------------------------------- mounting
@@ -662,74 +713,219 @@ const GRAPH = {
   statsByPredicate: {},
 };
 
-function applyState({ relayout }) {
-  serializeHash();
-
-  // Refresh tabs (active class), view desc, legend
+// Refresh the chrome around the graph (tabs, view description, legend,
+// toolbar) — cheap, pure-DOM, no cytoscape work.
+function refreshChrome() {
   document.querySelectorAll('#view-tabs .tab').forEach(b => {
     b.classList.toggle('active', b.dataset.view === state.view);
   });
   renderViewDesc();
   renderLegend(GRAPH.meta, GRAPH.statsByType, GRAPH.statsByPredicate);
+  syncToolbar();
+  updateFocusHint();
+}
 
-  const { visibleNodes, visibleEdges, matched } = computeVisible(GRAPH.meta, GRAPH.nodes, GRAPH.edges);
+function syncToolbar() {
+  const w = document.getElementById('btn-weak');
+  if (w) {
+    w.setAttribute('aria-pressed', state.showWeak ? 'true' : 'false');
+    w.textContent = state.showWeak ? '− weak links' : '+ weak links';
+  }
+}
+
+// Structural change (view / type / weak toggle): rebuild the element set and,
+// when relayout is true, run the view's layout. Search and focus do NOT come
+// through here — see applyEmphasisOnly.
+function applyState({ relayout = true } = {}) {
+  serializeHash();
+  refreshChrome();
+  rebuildElements({ relayout });
+}
+
+// Search / focus changed: re-weight emphasis only. The node set and their
+// positions (including anything the reader dragged) are untouched, so there is
+// no layout thrash.
+function applyEmphasisOnly() {
+  serializeHash();
+  refreshEmphasis();
+  fitToEmphasis();
+}
+
+function rebuildElements({ relayout }) {
+  const { visibleNodes, visibleEdges, degree } = computeVisible(GRAPH.meta, GRAPH.nodes, GRAPH.edges);
   document.getElementById('stats').textContent =
     `${visibleNodes.length} / ${GRAPH.nodes.length} nodes · ${visibleEdges.length} / ${GRAPH.edges.length} edges`;
 
+  const meta = GRAPH.meta;
   const elements = [
     ...visibleNodes.map(n => ({
       data: {
         id: n.id,
         label: n.label || n.id,
         type: n.type,
-        matched: matched && matched.has(n.id) ? 1 : 0,
+        deg: degree.get(n.id) || 0,
+        size: nodeSize(degree.get(n.id) || 0),
       },
     })),
     ...visibleEdges.map(e => ({
       data: { id: e.id, source: e.source, target: e.target, predicate: e.predicate },
+      classes: isWeakPred(meta, e.predicate) ? 'weak' : undefined,
     })),
   ];
+
+  // Snapshot positions so a non-relayout rebuild (e.g. toggling weak edges)
+  // keeps the existing arrangement instead of collapsing to the origin.
+  const prevPos = {};
+  GRAPH.cy.nodes().forEach(n => { prevPos[n.id()] = { ...n.position() }; });
 
   if (!elements.length) {
     GRAPH.cy.elements().remove();
     document.querySelector('#graph .placeholder')?.remove();
     const ph = document.createElement('div');
     ph.className = 'placeholder empty-graph';
-    ph.textContent = state.search
-      ? `No nodes match "${state.search}" in this view. Try a different view or clear the search.`
-      : `No nodes in this view. Try "Full graph" or toggle types in the legend.`;
+    ph.textContent = `No nodes in this view. Try "Full graph" or toggle types in the legend.`;
     document.getElementById('graph').appendChild(ph);
     return;
   }
   document.querySelector('#graph .placeholder')?.remove();
 
+  GRAPH.cy.stop(); // cancel any in-flight pan/zoom animation before re-laying out
   GRAPH.cy.elements().remove();
   GRAPH.cy.add(elements);
+
   if (relayout) {
     GRAPH.cy.layout(layoutFor(state.view)).run();
+  } else {
+    GRAPH.cy.nodes().forEach(n => { if (prevPos[n.id()]) n.position(prevPos[n.id()]); });
+  }
+  refreshEmphasis();
+}
+
+// The single source of truth for which nodes/edges are highlighted vs dimmed.
+// Priority: an explicit focus wins; otherwise an active search; otherwise the
+// resting state (anchors + hubs labelled, nothing dimmed).
+function refreshEmphasis() {
+  const cy = GRAPH.cy;
+  if (!cy) return;
+  cy.batch(() => {
+    cy.elements().removeClass('dim nbr focused matched lbl focus-edge');
+    markBaseLabels();
+
+    if (state.focusId && cy.getElementById(state.focusId).nonempty()) {
+      const node = cy.getElementById(state.focusId);
+      const hood = node.closedNeighborhood();
+      cy.elements().not(hood).addClass('dim');
+      node.addClass('focused lbl');
+      hood.nodes().addClass('nbr lbl');
+      hood.edges().addClass('focus-edge');
+      return;
+    }
+
+    const q = state.search.trim();
+    if (q) {
+      const matched = cy.nodes().filter(n => {
+        const o = GRAPH.nodeById.get(n.id());
+        return o && matchesSearch(o, q);
+      });
+      if (matched.nonempty()) {
+        const hood = matched.closedNeighborhood();
+        cy.elements().not(hood).addClass('dim');
+        matched.addClass('matched lbl');
+        hood.nodes().addClass('lbl');
+      }
+    }
+  });
+}
+
+// Always-on labels: the structural skeleton (Parts, Chapters) plus the
+// highest-degree hubs. Everything else stays unlabelled until focused/hovered.
+function markBaseLabels() {
+  const cy = GRAPH.cy;
+  cy.nodes().forEach(n => {
+    const o = GRAPH.nodeById.get(n.id());
+    if (o && (o.type === 'Part' || o.type === 'Chapter')) n.addClass('lbl');
+  });
+  cy.nodes().sort((a, b) => (b.data('deg') || 0) - (a.data('deg') || 0))
+    .slice(0, HUB_LABELS).forEach(n => n.addClass('lbl'));
+}
+
+// When a search is active, pan/zoom to frame the matches in context.
+function fitToEmphasis() {
+  const cy = GRAPH.cy;
+  if (!cy || !state.search.trim()) return;
+  const matched = cy.nodes('.matched');
+  if (matched.nonempty()) {
+    cy.animate({ fit: { eles: matched.closedNeighborhood(), padding: 60 } }, { duration: 320 });
+  }
+}
+
+// Spotlight a node: highlight its neighbourhood, dim the rest, and frame the
+// local subgraph (node + neighbours) so the reader sees the whole little story.
+function setFocus(nodeId) {
+  state.focusId = nodeId;
+  refreshEmphasis();
+  const ele = GRAPH.cy.getElementById(nodeId);
+  if (ele && ele.nonempty()) {
+    // Frame node + neighbours; cy.maxZoom (set at init) caps how far a small
+    // neighbourhood can zoom in, so nodes never balloon.
+    GRAPH.cy.animate({ fit: { eles: ele.closedNeighborhood(), padding: 80 } }, { duration: 300 });
+  }
+  updateFocusHint();
+}
+
+function clearFocus() {
+  if (!state.focusId) return;
+  state.focusId = null;
+  refreshEmphasis();
+  updateFocusHint();
+}
+
+function updateFocusHint() {
+  const hint = document.getElementById('focus-hint');
+  if (!hint) return;
+  if (state.focusId) {
+    const o = GRAPH.nodeById.get(state.focusId);
+    hint.innerHTML = `Focused on <strong>${escapeHtml(o?.label || state.focusId)}</strong> · <button id="clear-focus" type="button">show all</button>`;
+    hint.hidden = false;
+  } else {
+    hint.hidden = true;
   }
 }
 
 function layoutFor(view) {
-  const name = VIEWS[view].layout;
-  if (name === 'breadthfirst') {
-    return {
-      name: 'breadthfirst',
-      directed: true,
-      padding: 30,
-      spacingFactor: 1.4,
-      animate: true,
-      animationDuration: 320,
-    };
+  const spec = VIEWS[view];
+  // animate:false — layouts snap into place. Animated layout (esp. dagre) could
+  // leave cytoscape pinned in a never-ending render loop, which burns CPU on the
+  // published site and prevents the canvas from ever reaching a stable frame.
+  // The short focus/fit pans (cy.animate elsewhere) are finite and stay.
+  const common = { animate: false, padding: 40, fit: true };
+  switch (spec.layout) {
+    case 'dagre':
+      // Layered/hierarchical — reads as flow/containment, not a hairball.
+      return { name: 'dagre', rankDir: spec.rankDir || 'TB', nodeSep: 24, edgeSep: 12, rankSep: 72, ...common };
+    case 'fcose':
+      // Fast compound spring embedder: well-separated organic clusters, far
+      // cleaner than plain cose on dense graphs. randomize:true seeds a random
+      // start and runs the full force phase — without it the spectral-only seed
+      // collapses a dense graph into a diagonal line.
+      return {
+        name: 'fcose',
+        quality: 'proof',
+        randomize: true,
+        nodeRepulsion: 9000,
+        idealEdgeLength: 70,
+        nodeSeparation: 110,
+        gravity: 0.3,
+        gravityRange: 3.2,
+        numIter: 3000,
+        packComponents: true,
+        ...common,
+      };
+    case 'breadthfirst':
+      return { name: 'breadthfirst', directed: true, spacingFactor: 1.3, ...common };
+    default:
+      return { name: 'cose', idealEdgeLength: 90, nodeOverlap: 18, ...common };
   }
-  return {
-    name: 'cose',
-    animate: true,
-    animationDuration: 320,
-    idealEdgeLength: 90,
-    nodeOverlap: 18,
-    padding: 30,
-  };
 }
 
 async function loadJson(path) {
@@ -779,6 +975,7 @@ async function main() {
     if (btn) { toggleType(btn.dataset.type); return; }
     if (e.target.id === 'reset-overrides') {
       state.typeOverrides = {};
+      state.focusId = null;
       applyState({ relayout: true });
     }
   });
@@ -810,17 +1007,40 @@ async function main() {
     elements: [],
     style: buildStyle(GRAPH.meta),
     layout: { name: 'preset' },
+    minZoom: 0.08,
+    maxZoom: 2.2,
+    wheelSensitivity: 0.2,
   });
 
+  // Tap a node → inspect it and spotlight its neighbourhood.
   GRAPH.cy.on('tap', 'node', evt => {
-    const orig = GRAPH.nodeById.get(evt.target.id());
+    const id = evt.target.id();
+    const orig = GRAPH.nodeById.get(id);
     if (orig) renderDetail(orig);
+    setFocus(id);
   });
+  // Tap empty canvas → drop the spotlight (show everything again).
+  GRAPH.cy.on('tap', evt => { if (evt.target === GRAPH.cy) clearFocus(); });
+  // Hover reveals a single label on demand, even for a dimmed node.
+  GRAPH.cy.on('mouseover', 'node', evt => evt.target.addClass('hover-lbl'));
+  GRAPH.cy.on('mouseout', 'node', evt => evt.target.removeClass('hover-lbl'));
 
   // Neighbour-link buttons in the detail panel jump to that node.
   document.getElementById('detail').addEventListener('click', e => {
     const btn = e.target.closest('button.node-link');
     if (btn) focusNode(btn.dataset.id);
+  });
+
+  // Graph toolbar: re-arrange, fit-to-screen, toggle weak links.
+  document.getElementById('btn-relayout').addEventListener('click', () => {
+    GRAPH.cy.layout(layoutFor(state.view)).run();
+  });
+  document.getElementById('btn-fit').addEventListener('click', () => {
+    GRAPH.cy.animate({ fit: { padding: 40 } }, { duration: 320 });
+  });
+  document.getElementById('btn-weak').addEventListener('click', toggleWeak);
+  document.getElementById('focus-hint').addEventListener('click', e => {
+    if (e.target.id === 'clear-focus') clearFocus();
   });
 
   if (state.showLanding) {
@@ -838,6 +1058,8 @@ async function main() {
     state.view = DEFAULT_VIEW;
     state.search = '';
     state.typeOverrides = {};
+    state.focusId = null;
+    state.showWeak = false;
     state.showLanding = true;
     parseHash();
     document.getElementById('search').value = state.search;

@@ -4,10 +4,25 @@
   <meta charset="UTF-8">
   <title>Lossy — Ontology</title>
   <link rel="stylesheet" href="styles.css">
-  <!-- Vendored (src/vendor/cytoscape.min.js, v3.30.4) rather than CDN-loaded:
-       the published book site shouldn't put a third-party CDN in its trust
-       boundary, and the viewer should work offline / on CDN outage. -->
+  <!-- Vendored (src/vendor/*.js) rather than CDN-loaded: the published book
+       site shouldn't put a third-party CDN in its trust boundary, and the
+       viewer should work offline / on CDN outage.
+
+       Load order matters — these are plain UMD globals with a dependency
+       chain, and classic <script> tags run synchronously in order:
+         cytoscape            → window.cytoscape  (v3.30.4)
+         dagre                → window.dagre      (layered/hierarchical algo)
+         cytoscape-dagre      → window.cytoscapeDagre   (needs window.dagre)
+         layout-base          → window.layoutBase
+         cose-base            → window.coseBase   (needs window.layoutBase)
+         cytoscape-fcose      → window.cytoscapeFcose   (needs window.coseBase)
+       app.js (a module, so deferred) calls cytoscape.use(...) for each. -->
   <script src="vendor/cytoscape.min.js"></script>
+  <script src="vendor/dagre.min.js"></script>
+  <script src="vendor/cytoscape-dagre.js"></script>
+  <script src="vendor/layout-base.js"></script>
+  <script src="vendor/cose-base.js"></script>
+  <script src="vendor/cytoscape-fcose.js"></script>
 </head>
 <body>
   <header>
@@ -25,7 +40,14 @@
   <div id="landing" hidden></div>
   <main>
     <aside id="legend"></aside>
-    <div id="graph"></div>
+    <div id="graph">
+      <div id="graph-toolbar">
+        <button id="btn-relayout" type="button" title="Re-arrange the nodes">Re-layout</button>
+        <button id="btn-fit" type="button" title="Fit the whole view on screen">Fit</button>
+        <button id="btn-weak" type="button" title="Show weak links (wiki-links and passing mentions)" aria-pressed="false">+ weak links</button>
+      </div>
+      <div id="focus-hint" hidden></div>
+    </div>
     <aside id="detail"><div class="empty">Click a node to inspect.</div></aside>
   </main>
   <script type="module" src="app.js"></script>
