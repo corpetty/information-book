@@ -142,6 +142,20 @@
       ]
     },
     {
+      "id": "anatomy-of-exposure",
+      "label": "The Anatomy of Exposure: How Blockchain Transactions Leak Information at Every Layer",
+      "kind": "post",
+      "author": "corey-petty",
+      "tradition": "internal-corpus",
+      "summary": "Walks a blockchain transaction's full lifecycle — coordination, construction, signing, submission, propagation, inclusion, post-inclusion surveillance, downstream data economy — cataloguing what leaks at each stage and to whom. Supplies Ch 10's transparent-money evidence: IP-to-address correlation as the foundational leak, mempool archives, builder concentration, censorship-by-identifiable-operator, and the analytics industry that monetizes the permanent record.",
+      "engagement": "primary internal source; the empirical backbone of Ch 10's transparent-money section",
+      "availability": "external",
+      "tags": [
+        "internal",
+        "evidence"
+      ]
+    },
+    {
       "id": "double-edged-sword-of-expertise",
       "label": "The Double-Edged Sword of Deep Expertise",
       "kind": "post",
