@@ -493,7 +493,7 @@ html.static *, html.static *::before, html.static *::after { animation: none !im
   data-notes="Watch what actually falls off in transit. It is never the headline claim — the claim is indestructible; look at it glow. What dies is the manual for reading it. Keep your eye on that tray of chips — they’re coming back twice tonight.">
   <div class="kicker">Interactive · watch a claim lose its manual</div>
   <div class="fig"></div>
-  <p class="hint"><kbd>→</kbd> next hop · <kbd>←</kbd> back · <kbd>a</kbd> autoplay · <kbd>r</kbd> reset · <kbd>p</kbd> end state</p>
+  <p class="hint"><kbd>→</kbd> next hop (one more for the quote) · <kbd>←</kbd> back · <kbd>a</kbd> autoplay · <kbd>r</kbd> reset · <kbd>p</kbd> end state</p>
 </section>
 
 <!-- 8 · Every Message Is Secretly Two Things -->
@@ -1328,7 +1328,7 @@ registerFig('stripper', (() => {
   ];
   const CHIPS = ['in mice', '~1000× real doses', 'one study', 'not yet replicated', 'association ≠ causation'];
   const STAGES = ['RAW DATA', 'INSIGHT', 'THEORY', 'NEWS', 'MEME'];
-  let host, hop = 0, chipEls = [], autoT = null;
+  let host, hop = 0, chipEls = [], autoT = null, quoteOn = false;
 
   function wordCount(html) { return html.replace(/<[^>]+>/g, '').trim().split(/\s+/).length; }
 
@@ -1352,7 +1352,9 @@ registerFig('stripper', (() => {
       if (isLost && c.parentElement !== host.querySelector('.tray .chips')) { c.classList.add('lost'); flyTo(c, host.querySelector('.tray .chips')); }
       if (!isLost && c.parentElement !== host.querySelector('.cardchips')) { c.classList.remove('lost'); flyTo(c, host.querySelector('.cardchips')); }
     });
-    host.querySelector('.overlayquote').classList.toggle('on', hop === 4);
+    /* the quote is its own beat — never cover the meme reveal itself */
+    if (hop < 4) quoteOn = false;
+    host.querySelector('.overlayquote').classList.toggle('on', quoteOn);
   }
   function stopAuto() { if (autoT) { clearInterval(autoT); autoT = null; } }
 
@@ -1374,12 +1376,22 @@ registerFig('stripper', (() => {
       el.querySelector('.overlayquote').addEventListener('click', function () { this.classList.remove('on'); });
       render();
     },
-    step() { stopAuto(); if (hop < 4) { hop++; render(); return true; } return false; },
-    back() { stopAuto(); if (hop > 0) { hop--; render(); return true; } return false; },
+    step() {
+      stopAuto();
+      if (hop < 4) { hop++; render(); return true; }
+      if (!quoteOn) { quoteOn = true; render(); return true; }
+      return false;
+    },
+    back() {
+      stopAuto();
+      if (quoteOn) { quoteOn = false; render(); return true; }
+      if (hop > 0) { hop--; render(); return true; }
+      return false;
+    },
     keys(e) {
-      if (e.key === 'r') { stopAuto(); hop = 0; render(); return true; }
-      if (e.key === 'p') { stopAuto(); hop = 4; render(); return true; }
-      if (e.key === 'a') { stopAuto(); hop = 0; render(); autoT = setInterval(() => { if (hop < 4) { hop++; render(); } else stopAuto(); }, 1500); return true; }
+      if (e.key === 'r') { stopAuto(); hop = 0; quoteOn = false; render(); return true; }
+      if (e.key === 'p') { stopAuto(); hop = 4; quoteOn = true; render(); return true; }
+      if (e.key === 'a') { stopAuto(); hop = 0; quoteOn = false; render(); autoT = setInterval(() => { if (hop < 4) { hop++; render(); } else if (!quoteOn) { quoteOn = true; render(); stopAuto(); } else stopAuto(); }, 1500); return true; }
       return false;
     },
     onHide() { stopAuto(); },
