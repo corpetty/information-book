@@ -1125,6 +1125,36 @@
       ]
     },
     {
+      "id": "observation-cheap-defaults-breed-surveillance",
+      "label": "Media whose frozen defaults make observation cheap grow surveillance as their native economics",
+      "summary": "The self-capture equilibrium is not a fact about attention: wherever a medium's frozen defaults make observing participants the cheapest available input — engagement feeds, transparent ledgers — an industry condenses to monetize the watching, and that industry is the medium's native economics rather than an abuse of it. Patching individual leaks fails because the incentive is untouched; the fix with structural teeth is changing the default, which removes the subsidized input the industry formed around.",
+      "aliases": [
+        "surveillance is the medium's native economics",
+        "transparent-rails equilibrium",
+        "the same equilibrium run on money"
+      ],
+      "status": "provisional",
+      "argues": [
+        "political-economy-of-attention"
+      ],
+      "arguedInChapters": [
+        "political-economy-of-attention"
+      ],
+      "dependsOn": [
+        "claim:medium-is-frozen-selection"
+      ],
+      "evidencedBy": [
+        "anatomy-of-exposure"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "political-economy-of-attention",
+          "lineApprox": 87,
+          "text": "It is a fact about media whose frozen defaults make observation the cheapest input."
+        }
+      ]
+    },
+    {
       "id": "constitutive-volatility",
       "label": "The transport collapse stripped the inertia stabilizing intersubjective truths",
       "summary": "Slow, expensive transport gave large agreement states inertia — an unpaid-for stabilizer the maintenance institutions were engineered against. With transport cost collapsed, constitution moves at meme speed (the group-chat bank run) while bureaucracies still move at committee speed; a stabilizer slower than what it stabilizes is a spectator. The book's central historical claim, cutting a second time.",

@@ -140,6 +140,8 @@ Entries are grouped by where each term enters the argument rather than alphabeti
 
 **The Orwell/Huxley axis** (Postman). Two opposite ways an information environment fails. *Orwell*: control by inflicted pain (censorship, surveillance, information withheld). *Huxley*: control by inflicted pleasure; the truth isn't hidden, it's drowned in a sea of engaging irrelevance. The book's diagnosis is squarely Huxley, which is harder to fight because there is nothing to push against. See [[political-economy-of-attention|Chapter 10]].
 
+**Engineered loss.** Privacy, run through the book's machinery: the deliberate re-introduction of decay into a record that would otherwise persist forever. The transparent-ledger case forces the observation that lossiness can be *protective* — every pre-digital medium got forgetting for free (cash left no ledger; conversation left no transcript), and a medium that never forgets hands whoever watches it a permanent, retroactively searchable record of everyone. So loss carries a sign that depends on what it strips: strip an idea's decoding instructions and you get the book's usual pathology; strip the trail its participants leave and you get protection. See [[political-economy-of-attention|Chapter 10]].
+
 ## Capture, unified
 
 **Capture.** The mechanism behind much of the book's alarm: tuning a selection surface *against* the very thing it was supposed to serve. The taxonomy sorts every case along three axes: *which* surface is captured, *by whom* (an outside adversary, the institution's own business logic, or both), and *how hard it is to recover* (set by which surface). See [[capture-taxonomy]].
