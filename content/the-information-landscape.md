@@ -6,7 +6,7 @@ tags:
 
 This is the diagram I keep coming back to. I drew it years ago, on a whim, to try to capture how information moves from reality to people. It's been sitting in my notes for a while, and I think it's still mostly right. But it was missing a piece, and the back half of this chapter is about that missing piece.
 
-If you've ever watched a careful finding get flattened into a headline, and then into a meme that means almost the opposite — this chapter is the map of how that happens. It starts gentle: for the first half, all I'm doing is tracing the path an idea takes from the world to you, one step at a time. The complication that makes the rest of the book necessary arrives in the back half. No special background needed; I'll build each piece as we go.
+If you've ever watched a careful finding get flattened into a headline, and then into a meme that means almost the opposite, this chapter is the map of how that happens. It starts gentle: for the first half, all I'm doing is tracing the path an idea takes from the world to you, one step at a time. The complication that makes the rest of the book necessary arrives in the back half. No special background needed; I'll build each piece as we go.
 
 ## The diagram
 
@@ -86,7 +86,7 @@ What's lost: technical precision, qualifications, uncertainty quantification, th
 
 The final compression. News becomes a shareable, emotionally-charged unit that can travel through informal networks. A meme. A slogan. A cultural reference. A vibe.
 
-The version that survives at this stage is the one with the highest fitness against the attention economy. Whatever it has to do — anger you, validate you, make you laugh, make you feel like part of an in-group — is the work it has to do to keep moving.
+The version that survives at this stage is the one with the highest fitness against the attention economy. Whatever it has to do (anger you, validate you, make you laugh, make you feel like part of an in-group) is the work it has to do to keep moving.
 
 By the time something has become a meme, it's usually about something other than the original theory. It's about identity. It's about tribe. It's about what kind of person you are if you believe it or share it. The original theory might still be in there somewhere, but it's no longer the load-bearing part. The load-bearing part is what the meme does for the receiver.
 
