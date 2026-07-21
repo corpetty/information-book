@@ -352,7 +352,7 @@
         {
           "note": "three-layer-message",
           "lineApprox": 25,
-          "text": "the outer message is the decoding mechanism a receiver must already hold — and that is exactly what this book has been calling preconditions."
+          "text": "The outer message is the decoding mechanism a receiver must already hold, and that is exactly what this book has been calling preconditions."
         }
       ]
     },

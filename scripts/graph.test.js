@@ -132,26 +132,8 @@ test('every Chapter has partOf and hasStatus edges and a resolvable draftNote', 
   assert.deepEqual(problems, []);
 });
 
-// ---------------------------------------------------------------- layout sync
-
-test('Quartz Explorer reading order matches chapter ordinals', () => {
-  const layout = readFileSync(resolve(repoRoot, 'site', 'quartz.layout.ts'), 'utf8');
-  const m = layout.match(/const ORDER = \[([\s\S]*?)\]/);
-  assert.ok(m, 'could not find ORDER array in site/quartz.layout.ts');
-  const order = [...m[1].matchAll(/"([^"]+)"/g)].map(x => x[1]);
-
-  const chapterSlugs = nodes
-    .filter(n => n.type === 'Chapter')
-    .sort((a, b) => a.props.ordinal - b.props.ordinal)
-    .map(n => {
-      const note = nodeById.get(n.props?.draftNote);
-      return note?.props?.file?.replace(/\.md$/, '').toLowerCase().replace(/\s+/g, '-');
-    })
-    .filter(Boolean);
-
-  assert.deepEqual(
-    order,
-    ['index', ...chapterSlugs],
-    'site/quartz.layout.ts ORDER is out of sync with chapter ordinals in the graph',
-  );
-});
+// NOTE: the "Quartz Explorer reading order matches chapter ordinals" test was
+// removed in the Quartz v5 migration. It guarded the custom reading-order
+// Explorer sortFn (a hardcoded ORDER array in site/quartz.layout.ts), which v5
+// dropped — YAML config can't hold a JS sort function, so the sidebar now uses
+// v5's default sort. See project_quartz_v5_migration for context.
