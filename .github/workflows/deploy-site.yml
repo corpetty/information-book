@@ -42,6 +42,19 @@ jobs:
         working-directory: site
         run: npm ci
 
+      # Quartz 5 fetches its community plugins from Git into site/.quartz/,
+      # pinned by site/quartz.lock.json. Cache them so every build doesn't
+      # re-clone ~40 plugin repos; the lockfile hash is the cache key.
+      - name: Cache Quartz plugins
+        uses: actions/cache@v4
+        with:
+          path: site/.quartz
+          key: quartz-plugins-${{ hashFiles('site/quartz.lock.json') }}
+
+      - name: Install Quartz plugins
+        working-directory: site
+        run: npx quartz plugin install
+
       - name: Validate graph (strict build + regression tests)
         # Warnings are fatal here: a degraded graph (dropped edges, orphan
         # notes, unresolved wikilinks, stale snapshot) must not deploy.

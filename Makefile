@@ -125,8 +125,13 @@ concept-pages: build
 # artifact root so GitHub Pages serves the site from lossybook.com. This
 # is what CI runs. (quartz build wipes site/public, so the CNAME copy must
 # come after it; site/CNAME is the source of truth, kept in sync with the
-# baseUrl in site/quartz.config.ts.)
+# baseUrl in site/quartz.config.yaml.)
+#
+# Quartz 5 keeps its community plugins out of the tree (installed under
+# site/.quartz/, pinned by site/quartz.lock.json), so `plugin install` must run
+# before `build`. It's idempotent — a no-op once the pinned commits are present.
 site-build: citation-pages concept-pages
+	@cd site && npx quartz plugin install
 	@cd site && npx quartz build
 	@$(MAKE) viewer-stage
 	@cp site/CNAME site/public/CNAME
@@ -136,6 +141,7 @@ site-build: citation-pages concept-pages
 # for viewer-only dev, or `make site-build` then a static server for the
 # integrated experience.
 site-serve:
+	@cd site && npx quartz plugin install
 	@cd site && npx quartz build --serve
 
 # Post-build publish-path checks (also run in CI): committed generated

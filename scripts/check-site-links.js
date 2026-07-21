@@ -31,13 +31,15 @@ if (!existsSync(publicDir)) {
 // Root-absolute links (notably in 404.html, which can't use relative paths)
 // carry the deploy baseUrl path prefix, e.g. /information-book/static/….
 // On GitHub Pages that prefix IS the site root; locally there's no such
-// directory. Read it from quartz.config.ts and strip it so absolute links
+// directory. Read it from quartz.config.yaml and strip it so absolute links
 // resolve against publicDir the way they do on the deployment.
 function basePathPrefix() {
-  const cfg = readFileSync(resolve(repoRoot, 'site', 'quartz.config.ts'), 'utf8');
-  const m = cfg.match(/baseUrl:\s*["']([^"']+)["']/);
+  const cfg = readFileSync(resolve(repoRoot, 'site', 'quartz.config.yaml'), 'utf8');
+  // YAML: `baseUrl: lossybook.com` (quotes optional; ignore trailing comments).
+  const m = cfg.match(/^\s*baseUrl:\s*["']?([^"'\n#]+?)["']?\s*(?:#.*)?$/m);
   if (!m) return '';
-  const path = m[1].includes('/') ? m[1].slice(m[1].indexOf('/')) : '';
+  const url = m[1].trim();
+  const path = url.includes('/') ? url.slice(url.indexOf('/')) : '';
   return path.replace(/\/$/, ''); // '/information-book'
 }
 const BASE_PREFIX = basePathPrefix();
