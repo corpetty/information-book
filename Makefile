@@ -40,7 +40,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean site-check viewer-stage test check accept-stats
+.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean site-check viewer-stage talk-stage test check accept-stats
 
 all: build
 
@@ -105,6 +105,18 @@ viewer-stage:
 	@cp src/vendor/*.js site/public/graph/vendor/
 	@cp data/graph-meta.json data/nodes.jsonl data/edges.jsonl site/public/data/
 
+# Stage the one-hour talk (presentation/lossy-talk.html) at /talk/ in the
+# built site. Staged AFTER `quartz build` (which wipes site/public) and kept
+# OUT of content/ on purpose: Quartz's asset slugifier strips `.html`
+# extensions (slugifyFilePath treats .html like .md), so a content-routed
+# copy would publish extensionless and download instead of render. A
+# post-build copy is served untouched as talk/index.html — same pattern as
+# the /graph/ viewer. Links to it from prose need data-router-ignore so the
+# SPA router doesn't intercept.
+talk-stage:
+	@mkdir -p site/public/talk
+	@cp presentation/lossy-talk.html site/public/talk/index.html
+
 # Regenerate citation pages from data/sources.json. Idempotent — files
 # carrying the generator marker get overwritten, hand-written ones are
 # left alone. Depends on `build` so the back-pointer pass can read
@@ -134,6 +146,7 @@ site-build: citation-pages concept-pages
 	@cd site && npx quartz plugin install
 	@cd site && npx quartz build
 	@$(MAKE) viewer-stage
+	@$(MAKE) talk-stage
 	@cp site/CNAME site/public/CNAME
 
 # Quartz dev server (hot-reloads prose). Note: subsequent rebuilds wipe

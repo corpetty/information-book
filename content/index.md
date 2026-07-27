@@ -56,6 +56,7 @@ There are three ways in, and you can switch between them at any time:
 
 - **[[the-short-version|The short version]]**: the whole argument at three sizes (a sentence, a paragraph, a page). If you read nothing else, read this.
 - **<a href="./graph/" data-router-ignore="true">Explore the ontology →</a>**: an interactive map of the book's argument (chapters, claims, sources, open questions, and how they all connect). Pick a starting view (Book overview / Argument map / Source map / Open questions / What's contested / Drafting status).
+- **<a href="./talk/" data-router-ignore="true">The one-hour talk →</a>**: the whole book as an interactive presentation — six acts, seven demos, every quote verbatim from the chapters. Arrow keys to advance; press <kbd>?</kbd> inside for the rest.
 - **[[glossary|Glossary]]**: plain-language definitions of every load-bearing term used across the book. Worth opening in a second tab while you read.
 - **[[outline]]**: the working table of contents. Dense, and written for the author; most useful once you've skimmed the glossary.
 - **Most settled chapters**: [[the-information-landscape|Chapter 1 — The Information Landscape]] and [[truth-compression-and-when-each-wins|Chapter 5c — Truth, Compression, and When Each Wins]]. Start here if you'd rather read the book itself than the working notes.

@@ -4,6 +4,13 @@
 34 slides / ~58 scripted minutes / 7 interactive demos. No dependencies, no network,
 no build step — open the file in any modern browser and present.
 
+**Published at [lossybook.com/talk/](https://lossybook.com/talk/)** — `make site-build`
+stages it as `site/public/talk/index.html` (the `talk-stage` target), the same
+post-build pattern as the `/graph/` viewer. It is deliberately NOT in `content/`:
+Quartz's asset slugifier strips `.html` extensions, so a content-routed copy would
+publish extensionless and download instead of render. Links to it from prose need
+`data-router-ignore="true"` so the SPA router doesn't intercept.
+
 ## Structure
 
 | Act | Slides | Carries |
