@@ -18,4 +18,5 @@ Model collapse: models trained on data produced by earlier models degrade across
 ## Where this is cited in the book
 
 - [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]]
+- [[capture-taxonomy|Capture Taxonomy]] *(foundational-note)*
 

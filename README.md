@@ -51,7 +51,7 @@ make help                                         # list targets
 ```
 
 <!-- graph-stats: kept in sync with data/expected-stats.json by a test in scripts/graph.test.js -->
-Current state: **270 nodes / 1294 edges / 0 warnings**.
+Current state: **270 nodes / 1300 edges / 0 warnings**.
 
 A bare `make build` is now self-contained: it folds in the committed
 per-PDF source extractions (`data/interpretive/*.jsonl`) directly, so the
