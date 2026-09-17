@@ -15,3 +15,7 @@ Landauer (1961) established that erasing one bit of information carries an unavo
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
+

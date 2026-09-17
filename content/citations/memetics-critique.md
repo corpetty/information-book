@@ -16,3 +16,7 @@ Critical assessment of memetics as a research program. Where the analogy with ge
 
 **Local copy.** [`sources/Memetics_critique.pdf`](../sources/Memetics_critique.pdf)
 
+## Where this is cited in the book
+
+- [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
+

@@ -15,3 +15,7 @@ Luria & Delbrück (1943), the fluctuation test: the wide variance in resistant-b
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
+

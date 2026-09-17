@@ -15,3 +15,7 @@ Price (1970) decomposes the change in any trait across a generation into two ter
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
+

@@ -20,4 +20,5 @@ Direct challenge to the 'people are easily manipulated by simple memes' thread. 
 
 - [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
+- [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 

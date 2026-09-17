@@ -1,7 +1,7 @@
 {
   "counts": {
     "nodes": 270,
-    "edges": 1244,
+    "edges": 1264,
     "warnings": 0
   },
   "byNodeType": {
@@ -41,8 +41,8 @@
     "dependsOn": 38,
     "tensionWith": 2,
     "contradicts": 1,
-    "wikiLinks": 317,
-    "cites": 53,
+    "wikiLinks": 329,
+    "cites": 61,
     "supports": 40,
     "pressureTests": 36
   },

@@ -24,4 +24,5 @@ Formal network models of belief propagation. What kills truth in networks: selec
 - [[integration-problem|Ch 9 — The Integration Problem]]
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
+- [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 
