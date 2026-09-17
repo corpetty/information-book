@@ -76,4 +76,4 @@ Selection is the other engine, and the one the book is really about. Transport e
 
 ---
 
-[[complexity-virality-tradeoff|← Chapter 5: The Complexity / Virality Trade-off]] · [[truth-compression-and-when-each-wins|Chapter 5c: Truth, Compression, and When Each Wins →]]
+[[complexity-virality-tradeoff|← Chapter 5: The Complexity / Virality Trade-off]] · [[medium-and-manipulation|Interlude: The Medium →]]

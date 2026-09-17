@@ -50,3 +50,7 @@ The loop whole: a network grows, its binding myth compresses to keep crossing it
 - **Does segmentation need the identity gate, or is community-of-origin enough?** If inherited keys alone segment a network, segmentation occurs even in a medium with no identity-tuned gate, and the mechanism is both more fundamental and more pessimistic than the note lets on.
 - **Superficial unification might still be worth something.** I've written latitude as pure loss, but a shared flag read a dozen ways may still coordinate action at a coarse grain: everyone shows up, even for different reasons. If thin agreement does real work, latitude is a trade rather than a defect and this note is too gloomy.
 - **Is this about myths, or any compressed claim?** Latitude is a property of any heavily compressed claim; I framed the loop around network-binding myths because that is where bureaucracy enters. This may be the special case of something more general, and I haven't checked what the general version looks like. (The [[interpretive-latitude|interpretive-latitude]] construct is the one an experiment would try to measure, and the book tracks a design for that in its experiments folder.)
+
+---
+
+[[emotional-memetics|← Chapter 7: Emotional Memetics As The Floor]] · [[preservation-vs-training|Chapter 8: Preservation vs. Training →]]

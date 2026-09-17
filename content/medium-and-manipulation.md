@@ -45,3 +45,7 @@ Which media let core truth survive which kinds of manipulation? **Core truth sur
 - **"Correlated with truth" is doing heavy lifting and isn't defined.** It leans on the [[truth-value-placement|truth-value question]], which [[truth-compression-and-when-each-wins|Chapter 5c]] takes up; until then it's a promissory note this note can't fully discharge.
 - **Is the reach/truth trade-off fundamental, or historically contingent?** I asserted it as hard, but that's exactly the kind of claim that turns out to be an artifact of the media we happen to have had. If it's contingent, Part IV is far more hopeful than this note implies, and I don't know which.
 - **The co-writer claim across generations is unearned.** The note rests on the casting-director (one-year) reading because that's what the evidence supports; comparative generational studies of want formation under different media regimes would be the evidence for the stronger claim, and a Part IV prescription running across cohorts will have to commit on which scale matters.
+
+---
+
+[[selection-as-other-engine|← Chapter 5b: Selection As The Other Engine]] · [[truth-compression-and-when-each-wins|Chapter 5c: Truth, Compression, and When Each Wins →]]

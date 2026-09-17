@@ -1,7 +1,7 @@
 {
   "counts": {
-    "nodes": 270,
-    "edges": 1390,
+    "nodes": 271,
+    "edges": 1393,
     "warnings": 0
   },
   "byNodeType": {
@@ -9,7 +9,7 @@
     "Part": 4,
     "PipelineStage": 6,
     "Gate": 5,
-    "Chapter": 14,
+    "Chapter": 15,
     "Note": 26,
     "Mechanism": 9,
     "Concept": 61,
@@ -24,8 +24,8 @@
   "byPredicate": {
     "succeedsStage": 5,
     "gateFor": 5,
-    "partOf": 14,
-    "hasStatus": 14,
+    "partOf": 15,
+    "hasStatus": 15,
     "definedIn": 81,
     "covers": 199,
     "derivesFrom": 9,
@@ -41,7 +41,7 @@
     "dependsOn": 38,
     "tensionWith": 2,
     "contradicts": 1,
-    "wikiLinks": 430,
+    "wikiLinks": 431,
     "cites": 78,
     "supports": 48,
     "pressureTests": 36

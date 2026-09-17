@@ -33,14 +33,14 @@ Two different things happen to it at *every* step, and most explanations of our 
 
 ## Ways in
 
-This is a working draft, but a complete one: all four parts and fourteen chapters are fully drafted, with the diagnostic Parts I–III settled enough to read straight through and the prescriptive Part IV still being polished. You can start anywhere and switch at any time:
+This is a working draft, but a complete one: all four parts are fully drafted (fourteen numbered chapters, a promoted Chapter 8b, and three interludes), with the diagnostic Parts I–III settled enough to read straight through and the prescriptive Part IV still being polished. You can start anywhere and switch at any time:
 
 - **Read it like a book.** [Start at Chapter 1 → The Information Landscape](the-information-landscape), then follow the *next →* link at the foot of each chapter to the end. [[truth-compression-and-when-each-wins|Chapter 5c]] is the other natural entry point if you'd rather begin at the book's stakes.
 - **[[the-short-version|The short version]]**: the whole argument at three sizes.
 - **[[glossary|Glossary]]**: plain-language definitions of every load-bearing term, worth keeping open in a second tab.
 - **<a href="./graph/" data-router-ignore="true">Explore the ontology →</a>**: an interactive map of chapters, claims, sources, and open questions, and how they connect. Pick a view (Book overview / Argument map / Source map / Open questions / What's contested / Drafting status). Or wander the prose itself: every term is a page, with a backlinks panel and a local graph on the right of each one.
 - **<a href="./talk/" data-router-ignore="true">The one-hour talk →</a>**: the whole book as an interactive presentation, six acts and seven demos, every quote verbatim from the chapters. Arrow keys to advance; press <kbd>?</kbd> inside for the rest.
-- **Foundational notes** work through the structural questions the chapters lean on: [[transport-vs-selection]], [[medium-and-manipulation]], [[three-layer-message]], [[myths-scale-and-bureaucracy]], [[bridge-nodes-and-versatile-expertise]], [[capture-taxonomy]], [[intersubjective-truth]]. The [[outline]] is the working table of contents, dense and written for the author.
+- **Interludes and depth notes** thread the structural machinery into the read. The reading order now includes three interludes ([[medium-and-manipulation|The Medium]], [[myths-scale-and-bureaucracy|Myths at Scale]], [[capture-taxonomy|Capture]]) and a numbered [[intersubjective-truth|Chapter 8b]]; three further depth notes sit alongside for readers who want the full working-through: [[transport-vs-selection]], [[three-layer-message]], [[bridge-nodes-and-versatile-expertise]]. The [[outline]] is the working table of contents, dense and written for the author.
 - **Earlier and companion essays** the book draws on directly: [[double-edged-sword-of-expertise|The Double-Edged Sword of Expertise]], [[the-democratization-paradox|The Democratization Paradox]], and [The Abyss](https://bayesianpersuasion.com/posts/the-abyss) (the companion piece, published separately).
 
 The whole structure is being worked through in public. Pressure-tests welcome.

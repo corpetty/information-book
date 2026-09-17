@@ -17,5 +17,5 @@ The classic taxonomy of responses to institutional decline. Exit is the fork's e
 
 ## Where this is cited in the book
 
-- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+- [[intersubjective-truth|Ch 8b — Intersubjective Truth]]
 

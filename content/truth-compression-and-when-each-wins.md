@@ -67,4 +67,4 @@ That is the brief this chapter hands to Part IV. The prescriptive chapters are n
 
 ---
 
-[[selection-as-other-engine|← Chapter 5b: Selection As The Other Engine]] · [[bridge-zone-distortion|Chapter 6: Where It All Gets Fucked Up →]]
+[[medium-and-manipulation|← Interlude: The Medium]] · [[bridge-zone-distortion|Chapter 6: Where It All Gets Fucked Up →]]

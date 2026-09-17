@@ -91,4 +91,4 @@ An LLM is the first node in the book's pipeline to own the gate, the option spac
 
 ---
 
-[[political-economy-of-attention|← Chapter 10: Political Economy of Attention]] · [[infrastructure-for-integration|Chapter 12: Infrastructure for Integration →]]
+[[political-economy-of-attention|← Chapter 10: Political Economy of Attention]] · [[capture-taxonomy|Interlude: Capture →]]

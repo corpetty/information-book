@@ -17,5 +17,5 @@ tags:
 
 ## Where this is cited in the book
 
-- [[medium-and-manipulation|Medium and Manipulation]] *(foundational-note)*
+- [[medium-and-manipulation|Medium and Manipulation]] *(interlude)*
 

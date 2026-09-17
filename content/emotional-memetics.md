@@ -68,4 +68,4 @@ The value of the structural version is that it locates the breakage at the equil
 
 ---
 
-[[bridge-zone-distortion|← Chapter 6: Where It All Gets Fucked Up]] · [[preservation-vs-training|Chapter 8: Preservation vs. Training →]]
+[[bridge-zone-distortion|← Chapter 6: Where It All Gets Fucked Up]] · [[myths-scale-and-bureaucracy|Interlude: Myths at Scale →]]

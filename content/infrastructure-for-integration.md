@@ -64,4 +64,4 @@ None of this is the work of a platform launch or a regulatory season. Universiti
 
 ---
 
-[[ai-as-new-node|← Chapter 11: AI as a New Kind of Node]] · [[index|Home →]]
+[[capture-taxonomy|← Interlude: Capture]] · [[index|Home →]]

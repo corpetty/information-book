@@ -67,4 +67,4 @@ This is where the [[medium-shapes-want|medium-shapes-want]] loop turns up. Train
 
 ---
 
-[[emotional-memetics|← Chapter 7: Emotional Memetics As The Floor]] · [[integration-problem|Chapter 9: The Integration Problem →]]
+[[myths-scale-and-bureaucracy|← Interlude: Myths at Scale]] · [[intersubjective-truth|Chapter 8b: Intersubjective Truth →]]

@@ -17,5 +17,5 @@ Institutional facts and status functions: X counts as Y in context C, sustained 
 
 ## Where this is cited in the book
 
-- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+- [[intersubjective-truth|Ch 8b — Intersubjective Truth]]
 

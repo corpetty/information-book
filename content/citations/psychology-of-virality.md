@@ -18,7 +18,7 @@ Empirical and theoretical work on what makes content go viral. Identity, emotion
 ## Where this is cited in the book
 
 - [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
-- [[medium-and-manipulation|Medium and Manipulation]] *(foundational-note)*
+- [[medium-and-manipulation|Medium and Manipulation]] *(interlude)*
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 

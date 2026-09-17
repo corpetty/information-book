@@ -100,4 +100,4 @@ The bridge node has a sibling here, the same shape with higher stakes. The diplo
 
 ---
 
-[[preservation-vs-training|← Chapter 8: Preservation vs. Training]] · [[political-economy-of-attention|Chapter 10: Political Economy of Attention →]]
+[[intersubjective-truth|← Chapter 8b: Intersubjective Truth]] · [[political-economy-of-attention|Chapter 10: Political Economy of Attention →]]
