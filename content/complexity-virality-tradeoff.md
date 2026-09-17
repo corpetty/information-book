@@ -1,5 +1,9 @@
 ---
 title: "Chapter 5: The Complexity / Virality Trade-off"
+description: "Why the easy-to-share version of an idea always wins over the accurate one: every retelling costs the listener effort and loses a little, and across a big enough network the losses compound until only the slogan is left."
+aliases:
+  - precondition count
+  - viral vs accurate
 tags:
   - information
 ---

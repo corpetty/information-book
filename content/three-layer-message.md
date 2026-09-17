@@ -1,5 +1,12 @@
 ---
 title: The Three Layers of a Message
+description: "Every message has three parts: the signal that says 'this is a message', the key for reading it, and the content. What gets lost in transit is almost always the key, which is why true claims so often arrive and get read wrong."
+aliases:
+  - three layers of a message
+  - frame outer inner message
+  - outer message
+  - Hofstadter location of meaning
+  - GEB three-layer
 tags:
   - information
 ---

@@ -1,5 +1,12 @@
 ---
 title: Lossy
+description: "Lossy is a working draft of a book about why complex ideas get compressed, filtered, and twisted on the way to a general audience, who tunes the filters, and what institutions can survive it. Start here."
+aliases:
+  - home
+  - landing page
+  - information pipeline book
+  - transport and selection
+  - Corey Petty book
 tags:
   - information
 ---
@@ -30,7 +37,7 @@ The book's claim is that two different things happen to an idea at *every* step 
 
 **The first is transport: how the idea gets repackaged for the next stage.** A dense finding gets compressed into a news story; a news story gets compressed into a meme. This is the *telephone game*, and like the telephone game it's lossy: every repackaging drops something. The part that matters is *what* gets dropped. It's usually not the headline claim; that survives the trip just fine. What gets dropped is the *instructions for how to read the claim*: the methodology, the "only under these conditions," the "we're not sure yet." The claim arrives; the manual for understanding it correctly does not. So the receiver reads it with whatever manual they already had, which is often the wrong one.
 
-**The second is selection: the gate at each step that decides which ideas get to move at all.** At every stage, far more is left behind than passes through. Most measurements are never taken, most findings never make the news, most news never becomes a meme. Something has to *survive the gate*, and each gate has its own test: what's publishable, what's newsworthy, what's shareable, what gets clicked. In today's digital media those tests reward emotional charge and group-identity signals, not whether something is true. The most shareable idea wins, not the truest one. Selection, not transport, is the stronger force.
+**The second is selection: the gate at each step that decides which ideas get to move at all.** At every stage, far more is left behind than passes through. Most measurements are never taken, most findings never make the news, most news never becomes a meme. Something has to *survive the gate*, and each gate has its own test: what's publishable, what's newsworthy, what's shareable, what gets clicked. In today's digital media those tests reward emotional charge and group-identity signals, not whether something is true. The most shareable idea wins, not the truest one. Transport is a cost nobody chooses; selection is a choice somebody makes, which is why it's the half of the machine that can be steered.
 
 So an idea both gets *reshaped* (transport) and gets *filtered* (selection) at each step, and the filter is tuned to something other than truth.
 
@@ -61,6 +68,6 @@ There are three ways in, and you can switch between them at any time:
 - **[[outline]]**: the working table of contents. Dense, and written for the author; most useful once you've skimmed the glossary.
 - **Most settled chapters**: [[the-information-landscape|Chapter 1 — The Information Landscape]] and [[truth-compression-and-when-each-wins|Chapter 5c — Truth, Compression, and When Each Wins]]. Start here if you'd rather read the book itself than the working notes.
 - **Foundational notes** work through the structural questions the chapters lean on: [[transport-vs-selection]], [[medium-and-manipulation]], [[three-layer-message]], [[myths-scale-and-bureaucracy]], [[bridge-nodes-and-versatile-expertise]], [[capture-taxonomy]], [[intersubjective-truth]].
-- **Earlier and companion essays** the book draws on directly: [[double-edged-sword-of-expertise|The Double-Edged Sword of Expertise]], [[the-democratization-paradox|The Democratization Paradox]], and [[the-abyss|The Abyss]] (the companion piece, written alongside the book).
+- **Earlier and companion essays** the book draws on directly: [[double-edged-sword-of-expertise|The Double-Edged Sword of Expertise]], [[the-democratization-paradox|The Democratization Paradox]], and [The Abyss](https://bayesianpersuasion.com/posts/the-abyss) (the companion piece, written alongside the book and published separately).
 
 The whole structure is being worked through in public. Pressure-tests welcome.

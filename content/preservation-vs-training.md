@@ -1,5 +1,13 @@
 ---
 title: "Chapter 8: Preservation vs. Training"
+description: "Why keeping knowledge alive takes two separate institutions, one to preserve the full form and one to train people who can read it, and why losing the training side is the more dangerous and less reversible failure."
+aliases:
+  - institutional memory
+  - who keeps the archive readable
+  - training capture
+  - credentialism vs depth
+  - bureaucracy two functions
+  - the pump metaphor
 tags:
   - information
 ---

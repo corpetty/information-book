@@ -1,5 +1,13 @@
 ---
 title: "Chapter 5c: Truth, Compression, and When Each Wins"
+description: "Simplifying a claim doesn't make it false. It strips the instructions for reading it, and what happens next depends on which instructions the reader substitutes: the truth survives, flips, or stops mattering. Which of the three wins is chosen by the gate, not the compression."
+aliases:
+  - truth under compression
+  - inversion
+  - orthogonal truth
+  - preservation regime
+  - lossy but true
+  - key-fit
 tags:
   - information
 ---

@@ -1,5 +1,5 @@
 ---
-title: Information Evolution in Social Media
+title: Information Evolution in Social Networks
 tags:
   - citation
   - evidence

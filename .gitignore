@@ -25,3 +25,7 @@ sources-local/
 
 # Quartz build cache (any location)
 **/.quartz-cache/
+
+# Quartz 5 community plugins: installed by `npx quartz plugin install`,
+# pinned by site/quartz.lock.json. Not source.
+site/.quartz/

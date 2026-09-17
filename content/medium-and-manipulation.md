@@ -1,5 +1,12 @@
 ---
 title: Medium and Manipulation
+description: "A medium is not the wire; it is the set of rules for what wins. This note works out the three things a medium does to every gate, defines manipulation as tuning a gate against truth, and asks which media let truth survive."
+aliases:
+  - medium is the message
+  - gate criteria
+  - casting director
+  - manipulation definition
+  - McLuhan restated
 tags:
   - information
 ---

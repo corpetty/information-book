@@ -9,6 +9,7 @@
 #   make stats     print build counts
 #   make sources   print the per-source catalog dashboard
 #   make harvest   scan content/ for candidate claims
+#   make lint-prose [FILE=<name>] [VERBOSE=1]   report voice/linking/metadata tics per content file
 #   make catalog   regenerate extraction-catalog.json from current graph
 #   make aggregate-interpretive   merge per-PDF extractions
 #   make extract-build   aggregate + rebuild (run after extraction agents)
@@ -40,7 +41,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean site-check viewer-stage talk-stage test check accept-stats
+.PHONY: all build serve stats sources clean help lint-prose harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean site-check viewer-stage talk-stage test check accept-stats
 
 all: build
 
@@ -80,6 +81,14 @@ sources: build
 
 harvest:
 	@node $(SCRIPTS)/harvest-claims.js
+
+# Report-only prose lint: self-narration, reversal constructions, tic words,
+# perfect-tense forward references, bold/paren/colon density, uncertainty-tail
+# share, unlinked graph-node terms, and missing description/aliases
+# frontmatter, per content file. Never fails the build; it is a dashboard for
+# voice passes. FILE= narrows to one file, VERBOSE=1 lists every hit by line.
+lint-prose:
+	@node $(SCRIPTS)/lint-prose.js $(if $(FILE),--file=$(FILE)) $(if $(VERBOSE),--verbose)
 
 catalog: build
 	@node $(SCRIPTS)/build-catalog.js

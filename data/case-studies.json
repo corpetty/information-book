@@ -5,118 +5,246 @@
       "id": "telephone-game",
       "label": "The telephone game",
       "summary": "Ten kids pass a sentence around a circle; the output barely resembles the input. The canonical pure-transport intuition — but note that the game forces every player to pass, removing the selection step that real social networks have.",
-      "illustrates": ["transport"],
-      "illustratesConcepts": ["complexity-ceiling"],
-      "illustratesClaims": ["complexity-ceiling-by-network-size", "two-pipelines-parallel"],
-      "appearsIn": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+      "illustrates": [
+        "transport"
+      ],
+      "illustratesConcepts": [
+        "complexity-ceiling"
+      ],
+      "illustratesClaims": [
+        "complexity-ceiling-by-network-size",
+        "two-pipelines-parallel"
+      ],
+      "appearsIn": [
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine"
+      ]
     },
     {
       "id": "hammer-vs-copernicus",
       "label": "Hammer of the Witches vs. Copernicus",
-      "summary": "Same press, same century. Hammer sold out; Copernicus was 'an all-time worst seller.' Pure-transport reads it as compressed-vs-complex. Selection reads it as identical transport cost with massively different fitness against contemporary criteria — fear, urgency, action affordance.",
-      "illustrates": ["transport", "selection"],
-      "illustratesConcepts": ["memetic-fitness", "compressed-form"],
-      "illustratesClaims": ["selection-is-the-tunable-mechanism", "complexity-virality-inverse"],
-      "appearsIn": ["complexity-virality-tradeoff", "selection-as-other-engine"]
+      "summary": "Same press technology, two generations apart (1486 and 1543). The Hammer ran through edition after edition; De revolutionibus was famously slow to sell (Koestler called it 'the book that nobody read'; Gingerich later showed specialists read it closely, which sharpens rather than weakens the contrast in reach). Pure-transport reads it as compressed-vs-complex. Selection reads it as identical transport cost with massively different fitness against contemporary criteria — fear, urgency, action affordance.",
+      "illustrates": [
+        "transport",
+        "selection"
+      ],
+      "illustratesConcepts": [
+        "memetic-fitness",
+        "compressed-form"
+      ],
+      "illustratesClaims": [
+        "selection-is-the-tunable-mechanism",
+        "complexity-virality-inverse"
+      ],
+      "appearsIn": [
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine"
+      ]
     },
     {
       "id": "matplotlib-vs-seaborn",
       "label": "matplotlib vs. seaborn",
       "summary": "matplotlib: general, powerful, hard to use. seaborn: opinionated abstraction, lower ceiling, broader access. The 'software stratification' pattern — same trade-off shows up in religions, political platforms, scientific popularization.",
       "illustrates": [],
-      "illustratesConcepts": ["compressed-form", "complex-form"],
-      "illustratesClaims": ["optionality-cost-of-generality"],
-      "appearsIn": ["optionality-vs-access"]
+      "illustratesConcepts": [
+        "compressed-form",
+        "complex-form"
+      ],
+      "illustratesClaims": [
+        "optionality-cost-of-generality"
+      ],
+      "appearsIn": [
+        "optionality-vs-access"
+      ]
     },
     {
       "id": "astrology",
       "label": "Astrology",
       "summary": "Astronomical positions are real measurements; the interpretive framework is invented. Never survived consensus (never went through it), injected directly at curation and meme stages. Canonical example of manufactured content propagating through the same channels as measured content.",
-      "illustrates": ["manufactured-injection"],
+      "illustrates": [
+        "manufactured-injection"
+      ],
       "illustratesConcepts": [],
       "illustratesClaims": [],
-      "appearsIn": ["information-landscape", "case-studies-and-three-realities"]
+      "appearsIn": [
+        "information-landscape",
+        "case-studies-and-three-realities"
+      ]
     },
     {
       "id": "scientists-say-x",
       "label": "'Scientists say X' headline",
       "summary": "A 20-year paper compresses to a meme within a week. Pure-transport says lossy hops; selection says the headline writer chose the highest-fitness finding, not the most load-bearing one. Both pipelines are operating.",
-      "illustrates": ["transport", "selection"],
-      "illustratesConcepts": ["memetic-fitness", "compressed-form"],
-      "illustratesClaims": ["selection-is-the-tunable-mechanism", "complexity-virality-inverse", "two-pipelines-parallel"],
-      "appearsIn": ["bridge-zone-distortion", "case-studies-and-three-realities"]
+      "illustrates": [
+        "transport",
+        "selection"
+      ],
+      "illustratesConcepts": [
+        "memetic-fitness",
+        "compressed-form"
+      ],
+      "illustratesClaims": [
+        "selection-is-the-tunable-mechanism",
+        "complexity-virality-inverse",
+        "two-pipelines-parallel"
+      ],
+      "appearsIn": [
+        "bridge-zone-distortion",
+        "case-studies-and-three-realities"
+      ]
     },
     {
       "id": "bitcoin-internet-money",
       "label": "Bitcoin: 'internet money' vs. full technical description",
       "summary": "'Bitcoin is internet money' requires almost no preconditions. The full settlement-layer description requires five or six. Same object, two forms — only the compressed form has a chance of reaching unprepared receivers.",
       "illustrates": [],
-      "illustratesConcepts": ["compressed-form", "complex-form", "receiver-budget"],
-      "illustratesClaims": ["complexity-virality-inverse"],
-      "appearsIn": ["complexity-virality-tradeoff"]
+      "illustratesConcepts": [
+        "compressed-form",
+        "complex-form",
+        "receiver-budget"
+      ],
+      "illustratesClaims": [
+        "complexity-virality-inverse"
+      ],
+      "appearsIn": [
+        "complexity-virality-tradeoff"
+      ]
     },
     {
       "id": "power-posing",
       "label": "Power posing — the meme that survived its own corrective",
       "summary": "Carney/Cuddy/Yap 2010 reported that 'high-power' poses raised testosterone, lowered cortisol, and improved risk-task performance. Published in Psychological Science, popularized via Cuddy's 70M-view TED talk and the book Presence. Ranehill et al. 2015 failed to replicate; Carney publicly disavowed the work in 2016. Within the field the original is treated as a canonical replication-crisis case; in popular culture the meme keeps spreading, because the corrective signal has worse curation fitness than the original. Made-to-meme + meme-survived-the-correction is the chapter's prototype case.",
-      "illustrates": ["selection"],
-      "illustratesConcepts": ["memetic-fitness", "out-competition-of-carriers", "receiver-budget"],
-      "illustratesClaims": ["engagement-gates-reward-truth-loss", "selection-is-the-tunable-mechanism", "complexity-virality-inverse"],
-      "appearsIn": ["case-studies-and-three-realities", "bridge-zone-distortion", "complexity-virality-tradeoff", "selection-as-other-engine", "truth-compression-and-when-each-wins", "human-time-budget"]
+      "illustrates": [
+        "selection"
+      ],
+      "illustratesConcepts": [
+        "memetic-fitness",
+        "out-competition-of-carriers",
+        "receiver-budget"
+      ],
+      "illustratesClaims": [
+        "engagement-gates-reward-truth-loss",
+        "selection-is-the-tunable-mechanism",
+        "complexity-virality-inverse"
+      ],
+      "appearsIn": [
+        "case-studies-and-three-realities",
+        "bridge-zone-distortion",
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine",
+        "truth-compression-and-when-each-wins",
+        "human-time-budget"
+      ]
     },
     {
       "id": "arsenic-life",
       "label": "Arsenic-life (Wolfe-Simon et al. 2010) — died at consensus",
       "summary": "December 2010 Science paper claiming GFAJ-1 bacteria could substitute arsenic for phosphorus in DNA. NASA press conference; initial curation began. Within hours independent biochemists pointed out methodological problems; within 18 months Science published technical comments and refutation showing the original measurement had been contaminated. Scientific consensus rejected the claim. The meme never propagated past the initial press cycle because the consensus gate caught the variant before curation could compound it. The book's worked example of the consensus stage working as designed.",
-      "illustrates": ["selection"],
+      "illustrates": [
+        "selection"
+      ],
       "illustratesConcepts": [],
-      "illustratesClaims": ["two-pipelines-parallel"],
-      "appearsIn": ["case-studies-and-three-realities", "selection-as-other-engine"]
+      "illustratesClaims": [
+        "two-pipelines-parallel"
+      ],
+      "appearsIn": [
+        "case-studies-and-three-realities",
+        "selection-as-other-engine"
+      ]
     },
     {
       "id": "stanford-prison-experiment-corrective",
       "label": "Stanford Prison Experiment correctives — died at curation",
       "summary": "Zimbardo's 1971 SPE ran the pipeline cleanly to meme — textbooks, films, public-intellectual platform. 2018 Ben Blum reporting and Le Texier's 2018/2019 archival work showed Zimbardo coached guards and the famous prisoner breakdown was performed; consensus within social psychology accepted the methodological critique. The corrective passed measurement, analysis, and consensus — and died at curation. Textbooks still teach SPE; pop psychology still cites it; films are not being re-cut. The book's worked example of corrective signal failing at curation even when consensus has ratified it.",
-      "illustrates": ["selection"],
-      "illustratesConcepts": ["out-competition-of-carriers", "preservation-vs-training-pair", "capture-asymmetry"],
-      "illustratesClaims": ["engagement-gates-reward-truth-loss"],
-      "appearsIn": ["case-studies-and-three-realities", "preservation-vs-training", "political-economy-of-attention", "complexity-virality-tradeoff", "selection-as-other-engine"]
+      "illustrates": [
+        "selection"
+      ],
+      "illustratesConcepts": [
+        "out-competition-of-carriers",
+        "preservation-vs-training-pair",
+        "capture-asymmetry"
+      ],
+      "illustratesClaims": [
+        "engagement-gates-reward-truth-loss"
+      ],
+      "appearsIn": [
+        "case-studies-and-three-realities",
+        "preservation-vs-training",
+        "political-economy-of-attention",
+        "complexity-virality-tradeoff",
+        "selection-as-other-engine"
+      ]
     },
     {
       "id": "latin-mass-vs-vernacular",
       "label": "Latin Mass vs. vernacular liturgy",
       "summary": "Pre-Vatican-II Catholicism: the Latin Mass is high optionality, low access — ritual carries enormous doctrinal precision encoded across centuries; full participation requires a trained reader of the apparatus. The vernacular reform shifted to high access, lower precision — local-language liturgy that the broader laity can participate in, with many of the Latin form's specific theological commitments either flattened or absent. Optionality-vs-access trade-off in religion; canonical example of religions scaling past their original community by institutionalizing the split between a preservation-side (specialist apparatus) and an access-side (lay participation form).",
       "illustrates": [],
-      "illustratesConcepts": ["compressed-form", "complex-form", "preservation-vs-training-pair"],
-      "illustratesClaims": ["optionality-cost-of-generality"],
-      "appearsIn": ["optionality-vs-access", "preservation-vs-training"]
+      "illustratesConcepts": [
+        "compressed-form",
+        "complex-form",
+        "preservation-vs-training-pair"
+      ],
+      "illustratesClaims": [
+        "optionality-cost-of-generality"
+      ],
+      "appearsIn": [
+        "optionality-vs-access",
+        "preservation-vs-training"
+      ]
     },
     {
       "id": "brief-history-of-time",
       "label": "A Brief History of Time",
       "summary": "Hawking's 1988 popularization of general relativity, quantum mechanics, and cosmology — written for readers with no physics background. By acknowledged design every equation past E=mc² was removed; technical apparatus was substituted with analogies; qualifications were compressed into single sentences. Sold over 25 million copies. The original papers Hawking popularized have probably been read in full by under ten thousand people. Optionality-vs-access trade in scientific popularization, with the same shape as software stratification: the popular form gains reach by trading the precision the technical form preserves.",
       "illustrates": [],
-      "illustratesConcepts": ["compressed-form", "complex-form", "receiver-budget"],
-      "illustratesClaims": ["complexity-virality-inverse", "optionality-cost-of-generality"],
-      "appearsIn": ["optionality-vs-access", "complexity-virality-tradeoff", "bridge-zone-distortion"]
+      "illustratesConcepts": [
+        "compressed-form",
+        "complex-form",
+        "receiver-budget"
+      ],
+      "illustratesClaims": [
+        "complexity-virality-inverse",
+        "optionality-cost-of-generality"
+      ],
+      "appearsIn": [
+        "optionality-vs-access",
+        "complexity-virality-tradeoff",
+        "bridge-zone-distortion"
+      ]
     },
     {
       "id": "plain-language-law",
       "label": "Statutes vs. plain-language legal summaries",
       "summary": "A statute drafted by professional legislative counsel encodes precision through scope-defined clauses, defined-term interactions, and 'shall/may/subject to' constructions whose load-bearing work is invisible to non-lawyers. A plain-language summary of the same statute is accessible but wrong about the edge cases the original carefully handled. The legal apparatus is structurally committed to both ends of the curve simultaneously — the statute is preservation, the summary is access — with a professional class (lawyers) doing the per-case translation between them. The cleanest institutional bridge in the book's optionality-vs-access examples, and the one whose access is most explicitly wealth-gated.",
       "illustrates": [],
-      "illustratesConcepts": ["compressed-form", "complex-form", "preservation-vs-training-pair", "cost-shifting"],
-      "illustratesClaims": ["optionality-cost-of-generality"],
-      "appearsIn": ["optionality-vs-access", "bridge-zone-distortion", "political-economy-of-attention"]
+      "illustratesConcepts": [
+        "compressed-form",
+        "complex-form",
+        "preservation-vs-training-pair",
+        "cost-shifting"
+      ],
+      "illustratesClaims": [
+        "optionality-cost-of-generality"
+      ],
+      "appearsIn": [
+        "optionality-vs-access",
+        "bridge-zone-distortion",
+        "political-economy-of-attention"
+      ]
     },
     {
       "id": "voyager-golden-record",
       "label": "The Voyager Golden Record",
       "summary": "Hofstadter's canonical illustration of the three-layer message. A record launched into deep space with no shared context to assume: the recorded sounds and images are the inner message, the playback diagrams etched on the cover are the outer message, and the artifact's evident designed-ness is the frame message. The rare case where all three layers had to be shipped together.",
       "illustrates": [],
-      "illustratesConcepts": ["three-layer-message"],
+      "illustratesConcepts": [
+        "three-layer-message"
+      ],
       "illustratesClaims": [],
-      "appearsIn": ["information-landscape"]
+      "appearsIn": [
+        "information-landscape"
+      ]
     }
   ]
 }

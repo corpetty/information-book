@@ -1,5 +1,9 @@
 ---
 title: "Chapter 12: Infrastructure for Integration"
+description: "Design rules for institutions that keep hard-won knowledge alive in an attention economy they cannot beat: fund them outside the engagement market, protect what gets installed in people and models first, build them to work under distrust, and own any AI they use."
+aliases:
+  - curriculum custody
+  - corpus custody
 tags:
   - information
 ---
@@ -112,7 +116,7 @@ A few existing institutions illustrate one or more of the design principles, wit
 
 **Wikipedia.** Endowment-and-donor funded, decoupled from attention markets (design principle 1). Edit history and talk pages provide decision provenance auditable by skeptics (design principle 3). Reputation among editors functions as a non-collapsing aggregation. Bridge-node experts inhabit the institution (some editors are domain experts contributing across boundaries). The gaps: curriculum custody is informal (Wikipedia trains its own editors implicitly through community participation, not through deliberate pedagogy); LLM capability extension is not yet integrated and the political-economy questions for doing so are unresolved; survival depends on continued donor base and continued editor recruitment, both of which are stressed.
 
-**Stack Overflow.** Reputation-weighted curation with auditable provenance (design principle 3, partial). Bridge-node-style senior contributors. Decoupled from attention markets early in its history (design principle 1) but increasingly under ad-revenue pressure as it has aged, which is degrading exactly the way the principles predict. The gap: the institution has not held the funding-decoupling principle, and its capture-resistance has weakened as the funding pressure has increased.
+**Stack Overflow.** Reputation-weighted curation with auditable provenance (design principle 3, partial). Bridge-node-style senior contributors. Never decoupled from attention markets (design principle 1 fails): ad-supported and venture-backed from launch, so when LLMs began answering the questions its community used to curate, traffic and contributions fell and there was no reserve to ride it out. The gap the case shows is that curation quality and provenance are not enough on their own; without the funding principle, the institution's capture-resistance was only as durable as its ad revenue.
 
 **Academic preprint + peer review hybrid.** Preservation through journals and archives; peer review as quality assessment; decoupled from attention markets through institutional and grant funding (design principle 1). The gap: curriculum custody at the graduate-program level is increasingly captured by funding pressure and metric-driven evaluation; consumer-key substrates are exactly where the academic apparatus is most vulnerable. Plus, no LLM integration story yet that meets the substrate-custody spec.
 

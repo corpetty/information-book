@@ -1,5 +1,11 @@
 ---
 title: Myths, Scale, and Bureaucracy
+description: "Why a story big enough for a billion people to share is too vague to mean one thing, why that splits the group, and why every large network grows institutions to hold the full version and re-teach it."
+aliases:
+  - bureaucracy in this book's sense
+  - Harari myth and bureaucracy
+  - captured institutions
+  - credible neutrality
 tags:
   - information
 ---

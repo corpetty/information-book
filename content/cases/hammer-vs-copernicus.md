@@ -9,7 +9,7 @@ tags:
 
 > **Case study**
 
-Same press, same century. Hammer sold out; Copernicus was 'an all-time worst seller.' Pure-transport reads it as compressed-vs-complex. Selection reads it as identical transport cost with massively different fitness against contemporary criteria — fear, urgency, action affordance.
+Same press technology, two generations apart (1486 and 1543). The Hammer ran through edition after edition; De revolutionibus was famously slow to sell (Koestler called it 'the book that nobody read'; Gingerich later showed specialists read it closely, which sharpens rather than weakens the contrast in reach). Pure-transport reads it as compressed-vs-complex. Selection reads it as identical transport cost with massively different fitness against contemporary criteria — fear, urgency, action affordance.
 
 ## Connections
 

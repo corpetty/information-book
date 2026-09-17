@@ -1,5 +1,10 @@
 ---
 title: "Chapter 9: The Integration Problem"
+description: "How real knowledge crosses between groups that don't share training or trust: the people who can translate, the institutions that protect them, why more connection can make things worse, and five practical limits on the whole project."
+aliases:
+  - bridging polarized communities
+  - trust bootstrap
+  - bridge node capture
 tags:
   - information
 ---
@@ -133,7 +138,7 @@ What worked examples of cross-network integration does the chapter rest on? The 
 
 **Peer-reviewed science (pre-internet).** The canonical model for several of the chapter's principles in pre-modern operation. Versatile experts (mid-career scientists doing review and cross-field synthesis); institutional infrastructure (journals, scholarly societies, university apparatuses); reasonable trust-bootstrap because the lay audience extended specialists the benefit of the doubt by default. The model worked at the scale of the twentieth century's slower information environment; it is visibly degraded in the modern environment by exactly the [[political-economy-of-attention|attention-market]] pressures and trust-erosion the chapter has been diagnosing. The case study is valuable not because peer-reviewed science is currently doing the integration work but because it shows the prescription has historically been implementable when the political-economic conditions allowed.
 
-**Stack Overflow.** Partial case. Strong reputation-weighted curation; decoupled-ish funding (originally subscription-style, increasingly ad-supported with corresponding degradation); transparent provenance; bridge-node population (senior contributors who cross sub-fields within software). The integration in question is narrower (technical communities sharing precision-content with other technical communities) but the design properties largely match. The case study's recent decline is informative: as the institution's funding model has shifted toward attention-market dependence, the quality of curation has visibly degraded, confirming the [[infrastructure-for-integration|funding-decoupling principle]] from Ch 12.
+**Stack Overflow.** Partial case. Strong reputation-weighted curation; funding that was never decoupled from attention (ad-supported and venture-backed from its 2008 launch, with paid enterprise products layered on later); transparent provenance; bridge-node population (senior contributors who cross sub-fields within software). The integration in question is narrower (technical communities sharing precision-content with other technical communities) but the design properties largely match. Its steep decline in traffic and new questions after 2022 is informative in a different way than I first read it: the immediate cause was LLM substitution, receivers taking the compressed answer from a model instead of the curated one from the community, which is [[ai-as-new-node|Chapter 11]]'s worst case landing on a real curation layer. The [[infrastructure-for-integration|funding-decoupling principle]] from Chapter 12 says why it had no reserve to absorb the shock.
 
 **Open-source software governance** (mature projects). Code-as-spec is the preserved form; commit history is decision provenance; reputation among maintainers is the editorial signal; foundation-funded mature projects are decoupled from attention markets. The bridge-node analog is mature contributors who work across multiple projects and translate community norms. The gaps: the model has not been shown to scale beyond technical communities; the social-trust dynamics that allow open-source governance to function rest on infrastructure (issue trackers, code review tools, established norms) that doesn't trivially port to non-technical integration domains.
 

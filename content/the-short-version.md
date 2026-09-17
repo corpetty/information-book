@@ -1,5 +1,13 @@
 ---
 title: Lossy — The Short Version
+description: "The whole argument of Lossy in a sentence, a paragraph, and a page: how ideas get compressed and filtered on the way to you, who tunes the filters, and what kind of institutions survive that."
+aliases:
+  - short version
+  - summary
+  - tl;dr
+  - Lossy in one page
+  - book summary
+  - one-paragraph summary
 tags:
   - information
 ---

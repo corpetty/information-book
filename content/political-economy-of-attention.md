@@ -1,5 +1,13 @@
 ---
 title: "Chapter 10: Political Economy of Attention"
+description: "Why the feeds that decide what you see are tuned to hold your attention rather than inform you, why there's no villain to blame for it, and why the same trap shows up on public blockchains."
+aliases:
+  - attention economy
+  - engagement optimization
+  - Huxley vs Orwell
+  - who owns the algorithm
+  - MEV and surveillance
+  - political economy of media
 tags:
   - information
 ---
@@ -34,7 +42,7 @@ The chapter, said plain: **the dominant medium's gates are tuned to maximize a m
 
 ## The Orwell mode and the Huxley mode
 
-Postman, in the foreword to *Amusing Ourselves to Death* (drawing on Aldous Huxley's own *Brave New World Revisited*), frames the political economy of an information system with a sharper distinction than the book has had until now. There are two opposite failure modes for a society's relation to information. The *Orwell mode* is control by inflicted pain: censorship, surveillance, information withheld, dissidents suppressed. The *Huxley mode* is control by inflicted pleasure: truth not concealed but drowned in a sea of irrelevance optimized for entertainment value, dissidents irrelevant rather than silenced. Postman's argument is that the West has spent the twentieth century braced for Orwell and walked into Huxley while no one was looking.
+Postman, in the foreword to *Amusing Ourselves to Death* (setting Orwell's *1984* against Huxley's *Brave New World*), frames the political economy of an information system with a sharper distinction than the book has had until now. There are two opposite failure modes for a society's relation to information. The *Orwell mode* is control by inflicted pain: censorship, surveillance, information withheld, dissidents suppressed. The *Huxley mode* is control by inflicted pleasure: truth not concealed but drowned in a sea of irrelevance optimized for entertainment value, dissidents irrelevant rather than silenced. Postman's argument is that the West has spent the twentieth century braced for Orwell and walked into Huxley while no one was looking.
 
 The book sits squarely on Postman's side of this. **The modern failure mode is Huxley, not Orwell**, and that is the diagnosis the political-economy chapter is going to ride on. The medium is not censoring the well-sourced, nuanced, calibrated account of any topic that matters. The well-sourced account is still out there. It is *technically available*: search returns it, the journals publish it, the academic apparatus has not yet collapsed enough to lose it. What the medium does instead is select against it: at every gate, the well-sourced account loses to the engagement-tuned alternative, and the receivers' attention is spent before the well-sourced account is ever found.
 
@@ -106,7 +114,7 @@ The modality argument (selection has an owner because it is criterial, transport
 
 I think Postman is right at the layer he is describing and the chapter's argument lives one layer upstream of him. Postman is describing the runtime layer: once the medium's form is in place, the runtime gates of "good television" follow from the form. No one is consciously tuning weights at runtime. The chapter's claim is that the *medium's form itself* is selection performed once and frozen, which means there was a layer where it *was* tuned, at design time, by the entities that built the medium. Postman's "no conspiracy" reading dissolves once you ask who set the form he is treating as fixed; he doesn't ask the question because his frame treats the medium as irreducible fate. The chapter, via [[selection-as-other-engine|the medium-is-frozen-selection]] claim, treats it as a deliberate but frozen choice. The two readings are not in conflict; they apply at different layers, and the upstream layer is where the political economy lives. **The chapter survives the pressure-test, but only because the medium-is-frozen-selection move is doing the work; without it, Postman wins.**
 
-**The neutral-drift objection.** [[info-evolution-social-media|Information Evolution in Social Media]] (p.10) shows that most meme variants follow a Yule process: neutral drift, random copying plus rich-get-richer accumulation. Strong selection emerges only over particular subsequences. Read at face value this complicates "selection picks what spreads," since most of what spreads spreads neutrally, and the chapter has implicitly assumed selection is doing most of the work.
+**The neutral-drift objection.** [[info-evolution-social-media|Information Evolution in Social Networks]] (p.10) shows that most meme variants follow a Yule process: neutral drift, random copying plus rich-get-richer accumulation. Strong selection emerges only over particular subsequences. Read at face value this complicates "selection picks what spreads," since most of what spreads spreads neutrally, and the chapter has implicitly assumed selection is doing most of the work.
 
 This one genuinely softens the chapter. **The corpus says selection acts on the meaningful subset of variants, not on every variant.** That refines the modality argument: the political economy of selection is real and structural, but it shapes the *significant* slice of what spreads, not the long tail of neutral copies. Most of what travels through any platform is in fact neutral drift; the platform's tuning gets its leverage at the points where selection departs from neutrality. For the chapter this means the modality argument's strength is bounded by *how large a share of meaningful content* the engagement-tuned criteria touch, and that share is empirically substantial (the high-arousal, identity-flagged content the engagement gates favor is exactly the meaningful slice, not the neutral tail) but is not "all of it." The chapter takes the refinement on board: structural, yes; total, no.
 

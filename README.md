@@ -33,6 +33,7 @@ make accept-stats                                 # bless a new snapshot after a
 make serve                                        # serve viewer at localhost:8765/src/
 make stats                                        # counts + warnings from last build
 make harvest                                      # rescan content/ for candidate claims
+make lint-prose [FILE=<slug>] [VERBOSE=1]          # voice / linking / metadata dashboard per content file
 make catalog                                      # regenerate extraction-catalog.json for agents
 make aggregate-interpretive                       # merge per-PDF extractions into one JSONL
 make extract-build                                # aggregate + rebuild (after running extraction agents)
@@ -50,7 +51,7 @@ make help                                         # list targets
 ```
 
 <!-- graph-stats: kept in sync with data/expected-stats.json by a test in scripts/graph.test.js -->
-Current state: **258 nodes / 1186 edges / 0 warnings**.
+Current state: **263 nodes / 1187 edges / 0 warnings**.
 
 A bare `make build` is now self-contained: it folds in the committed
 per-PDF source extractions (`data/interpretive/*.jsonl`) directly, so the
@@ -254,6 +255,7 @@ information-book/
 ├── scripts/                           ONTOLOGY tooling
 │   ├── build-graph.js                 master build — markdown / JSON → triples
 │   ├── harvest-claims.js              scan content/ for candidate claims
+│   ├── lint-prose.js                  report-only voice / interlink / frontmatter lint
 │   ├── build-catalog.js               emit extraction-catalog.json from nodes
 │   ├── aggregate-interpretive.js      merge + validate per-PDF JSONLs
 │   ├── context-bundle.js              graph → markdown drafting packet

@@ -19,7 +19,7 @@ Low-precondition version of an idea. Cheap for receivers to process, plugs into 
 
 - **Defined in:** [[complexity-virality-tradeoff|The Complexity / Virality Trade-off]]
 - **Discussed in:** [[complexity-virality-tradeoff|Ch 5 — The Complexity / Virality Trade-off]], [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
-- **Evidenced by:** [[info-evolution-social-media|Information Evolution in Social Media]]
+- **Evidenced by:** [[info-evolution-social-media|Information Evolution in Social Networks]]
 - **Enabled by:** [[abyss|The abyss]]
 
 <em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>

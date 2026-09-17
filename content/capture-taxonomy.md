@@ -1,5 +1,12 @@
 ---
 title: Capture Taxonomy
+description: "One definition of capture and three questions to ask of any case: which part of the system was rigged, who rigged it (an outsider, the institution itself, or both), and how hard it is to undo. Rigging what people read with is worse than rigging what they see."
+aliases:
+  - capture
+  - external capture
+  - regulatory capture of media
+  - surface capture
+  - who rigs the algorithm
 tags:
   - information
 ---

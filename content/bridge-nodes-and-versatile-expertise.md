@@ -1,5 +1,10 @@
 ---
 title: Bridge Nodes and Versatile Expertise
+description: "Who can carry a hard idea from one field into another? Not a generalist. A deep specialist who has also learned to suspend their own frame, because the four ways expertise fails are the same thing that polarizes a network."
+aliases:
+  - generalist vs specialist
+  - chunking
+  - who translates between fields
 tags:
   - information
 ---
@@ -60,7 +65,7 @@ The book has been describing this same loop on the social side under a different
 
 That collapses the integration problem and the bridge-node problem into a single question. **The bridge node that resolves the transferable-vs-specialized question is the same bridge node that disarms the polarization-via-distrust trap.** The cognitive flexibility that makes a versatile expert is exactly what defeats the curse-of-expertise mechanism on the inside, which means it is what lets the bridge survive being discounted by either side.
 
-There is an experiential version of where that flexibility comes from, which I work through separately in [[the-abyss|the abyss]]. The overconfidence the curse runs on is only available to a specialist who has not yet seen how unnavigably vast their own field actually is. The four failure modes are what depth looks like *before* it has looked over that edge. Depth that has seen the abyss corrects itself: paradigm lock-in loosens once you know your paradigm is one island in a dark sea; cross-application overconfidence cools once you have felt how little you command even at home. The curse is depth without the abyss; the bridge node is depth that has seen it.
+There is an experiential version of where that flexibility comes from, which I work through separately in [the abyss](https://bayesianpersuasion.com/posts/the-abyss). The overconfidence the curse runs on is only available to a specialist who has not yet seen how unnavigably vast their own field actually is. The four failure modes are what depth looks like *before* it has looked over that edge. Depth that has seen the abyss corrects itself: paradigm lock-in loosens once you know your paradigm is one island in a dark sea; cross-application overconfidence cools once you have felt how little you command even at home. The curse is depth without the abyss; the bridge node is depth that has seen it.
 
 ## The prescription
 

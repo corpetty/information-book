@@ -1,5 +1,11 @@
 ---
 title: "Chapter 5b: Selection As The Other Engine"
+description: "Ideas don't just get garbled as they spread; most never spread at all. Every reader, editor, and algorithm is a gate with criteria, and because criteria can be set, this is the half of the machine someone can steer."
+aliases:
+  - selection as the other engine
+  - medium is frozen selection
+  - Hammer of the Witches vs Copernicus
+  - who tunes the gates
 tags:
   - information
 ---
@@ -18,7 +24,7 @@ The selection claim, said plain: **what crosses a network is not what transport 
 
 Start with a gap the two-mechanism picture skips. Selection picks from a *set*. It ranks candidates and promotes a winner, but ranking is not generating. Selection never invents the options it chooses among. So where does the set come from? "Transport re-encodes" does not answer it. Transport takes one message and scrambles it; run enough hands across enough copies and what you get is not one output but a *cloud* of variants drifting every way at once. *Information Evolution in Social Media*, tracing over 460 million instances of Facebook memes, found exactly this: variants accumulate by a neutral Yule process, "most meme variants are neutral with respect to the parent's meme," edit distance compounding as copy is made from copy is made from copy. That directionless cloud is the raw material.
 
-The blindness is not a quirk of memes. Luria and Delbrück pinned it down for biology in 1943: their fluctuation test showed bacterial mutations arise *before* the selective pressure that later rewards them, thrown off with no foreknowledge of what will prove adaptive. Variation proposes in the dark, and only afterward does anything choose. The generate step had run blind for eighty years before anyone watched memes do it.
+The blindness is not a quirk of memes. Luria and Delbrück pinned it down for biology in 1943: their fluctuation test showed bacterial mutations arise *before* the selective pressure that later rewards them, thrown off with no foreknowledge of what will prove adaptive. Variation proposes in the dark, and only afterward does anything choose. The generate step had been running blind in bacteria for seventy years before anyone watched memes do it.
 
 But not every variant in the cloud can even be expressed at the next stage. A medium with a 280-character limit cannot carry the long, qualified variant. An image medium cannot carry the variant whose entire content is a subordinate clause. Something stands between the cloud transport throws off and the winner selection promotes, something that fixes which variants are *available* to be chosen at all. That something is the medium.
 

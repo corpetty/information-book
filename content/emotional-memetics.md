@@ -1,5 +1,9 @@
 ---
 title: "Chapter 7: Emotional Memetics As The Floor"
+description: "Why the furious post spreads and the careful one doesn't, even though most people say they'd prefer the reverse. Once a network is large and its gates reward engagement, what reliably travels settles at raw emotion. Includes a head-on answer to Mercier's claim that people aren't that easy to manipulate."
+aliases:
+  - the floor
+  - Mercier Not Born Yesterday
 tags:
   - information
 ---

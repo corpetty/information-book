@@ -1,5 +1,11 @@
 ---
 title: Intersubjective Truth
+description: "Money, law, and nations are true because enough people agree. This note works out what happens to that kind of truth in a pipeline that reaches into everyone's heads: spreading it is part of making it, it can't be corrected only forked, and it now moves faster than the institutions that steady it."
+aliases:
+  - constitutive truth
+  - the fork
+  - bank run self-fulfilling
+  - meme speed vs committee speed
 tags:
   - information
 ---

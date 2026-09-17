@@ -1,5 +1,13 @@
 ---
 title: "Chapter 6: Where It All Gets Fucked Up"
+description: "Between the scientists and you sits a crowd paid to make findings land: journalists, popularizers, influencers, AI summarizers. They answer to audiences, not to the field, so they reshape on purpose. This is where the eggs-are-killing-you whiplash comes from."
+aliases:
+  - science journalism
+  - popularizers
+  - nutrition whiplash
+  - masks don't work
+  - influencers and expertise
+  - AI summaries
 tags:
   - information
 ---

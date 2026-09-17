@@ -1,5 +1,12 @@
 ---
 title: "Chapter 4: Optionality vs. Access"
+description: "Why the most powerful version of anything (a code library, the Latin Mass, a statute, a physics paper) is the hardest to use, and why the easy version always loses something. One trade-off, five domains."
+aliases:
+  - opinionated software
+  - software stratification
+  - plain-language law
+  - popular science trade-off
+  - precision vs reach
 tags:
   - information
 ---
@@ -71,7 +78,7 @@ which yields the following image:
 
 ![[seaborn.png]]
 
-The first thing you should notice is that the amount of code you need to write to produce what is effectively the same plot is drastically different. That's because `seaborn` makes many of the choices for you, thus obviating the associated code. In fact, they even added in some things that they felt were useful, like what appears to be standard deviation from the regression (look closely for the blue shading around the trend line). 
+The first thing you should notice is that the amount of code you need to write to produce what is effectively the same plot is drastically different. That's because `seaborn` makes many of the choices for you, thus obviating the associated code. In fact, they even added in some things that they felt were useful, like a confidence band around the regression line (look closely for the blue shading around the trend line). 
 
 There's much to be said about how to make a "good abstraction" for users, but that's a thread for another day. The point here is that `seaborn` was created to lower the barrier of entry for users so that they can plot things without having to go through the more complicated process of learning how to use `matplotlib`, but by doing so, it as removed the user's ability to fully explore what can be done with plotting in python. 
 
@@ -111,7 +118,7 @@ Two things to mark about the scientific popularization case specifically. First,
 
 The clearest version of the trade might be in legal codes. A statute drafted by professional legislative counsel is the high-optionality end: every clause has a specific scope, every defined term has been chosen to interact correctly with hundreds of other defined terms across the entire body of statutory and case law, every "shall" and "may" and "subject to" is doing precise work that a generalist reader cannot see. Read a section of the U.S. Internal Revenue Code or the European Union's GDPR or any modern environmental statute and the optionality is overwhelming. The precision is real and substantial and the access is, for any non-lawyer, near zero.
 
-A plain-language summary of the same statute is the other end. "GDPR means companies have to tell you what data they collect and let you delete it" is the seaborn version of seventeen articles, ninety-nine recitals, and several thousand pages of case-law interpretation. The summary is accessible; the precision has been almost entirely stripped. A reader who relies on the summary will be wrong about edge cases the original carefully handled: when the data must be deleted, what counts as a "controller" versus a "processor," when consent is sufficient versus when explicit consent is required. The precision lost was load-bearing in many situations; the summary handles the central case at the cost of being wrong about the periphery.
+A plain-language summary of the same statute is the other end. "GDPR means companies have to tell you what data they collect and let you delete it" is the seaborn version of ninety-nine articles, a hundred and seventy-three recitals, and several thousand pages of case-law interpretation. The summary is accessible; the precision has been almost entirely stripped. A reader who relies on the summary will be wrong about edge cases the original carefully handled: when the data must be deleted, what counts as a "controller" versus a "processor," when consent is sufficient versus when explicit consent is required. The precision lost was load-bearing in many situations; the summary handles the central case at the cost of being wrong about the periphery.
 
 What's distinctive about the legal case is that the institutional setup *expects* both forms to coexist. The statute is the canonical form; the summary is the access form; specialists (lawyers) bridge between them on a case-by-case basis, charging for the bridging work. This is preservation-and-training-in-one-profession, more cleanly than most other domains the book engages: the legal apparatus is structurally committed to both ends of the curve simultaneously, with a professional class whose job is the per-case translation.
 
@@ -133,7 +140,7 @@ That reframe ties the chapter into the rest of the book's argument:
 
 A caution, because the phrase "lots of options" has been quietly doing two different jobs in this chapter, and they need pulling apart. The curve above is a claim about *artifacts*: tools, libraries, liturgies, statutes, popular books. It is the approachability trade-off of a designed thing: how much of a domain's precision the artifact preserves, set against how easily a given receiver can pick it up. That is all it is. It is *not* a claim about the domains those artifacts point into, and the two are different animals.
 
-An artifact has a top. matplotlib is enormous and brutal to learn, but it is finite and masterable. The software-stratification section turned on exactly that, on the fact that power users *exist*, people who have reached the top of that learning curve and command the whole library. The domain matplotlib points into (everything you could ever express by turning data into a picture) has no top, and nobody commands it. That bottomless thing is what I work through in a separate piece, [[the-abyss|the abyss]]: the possibility space of a sufficiently complex field, so vast it cannot be navigated by anyone, and which takes real competence even to perceive is there. **A software library is not an abyss.** The library is a finite map; the abyss is the territory the map is of.
+An artifact has a top. matplotlib is enormous and brutal to learn, but it is finite and masterable. The software-stratification section turned on exactly that, on the fact that power users *exist*, people who have reached the top of that learning curve and command the whole library. The domain matplotlib points into (everything you could ever express by turning data into a picture) has no top, and nobody commands it. That bottomless thing is what I work through in a separate piece, [the abyss](https://bayesianpersuasion.com/posts/the-abyss): the possibility space of a sufficiently complex field, so vast it cannot be navigated by anyone, and which takes real competence even to perceive is there. **A software library is not an abyss.** The library is a finite map; the abyss is the territory the map is of.
 
 "Lots of options" describes both, and that is exactly the trap. A tool's optionality is a learning curve with a summit; a domain's abyss is a horizon with none. Optionality-vs-access is the trade-off you make when you *draw a map* (compress an unnavigable domain into a finite artifact a budget-limited receiver can actually use), and the abyss is why you are forced to draw one at all. So this curve sits *downstream* of the abyss: it is one face, the artifact-design face, of the compression that a finite [[info-time-limit|receiver budget]] meeting an un-navigable domain makes unavoidable. This chapter names the curve. It was never meant to name the whole landscape.
 

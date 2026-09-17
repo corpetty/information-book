@@ -15,3 +15,7 @@ Tablespoon-of-diamonds visualization of a human lifespan. The receiver-budget in
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[info-time-limit|Ch 3 — The Human Time Budget]]
+

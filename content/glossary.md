@@ -1,5 +1,13 @@
 ---
 title: Glossary
+description: "Plain-language definitions of every term Lossy coins or borrows: transport, selection, the receiver budget, outer message, capture, bridge nodes, survivable polarization, and the rest, each pointing at the chapter that works it through."
+aliases:
+  - definitions
+  - terms
+  - vocabulary
+  - key terms
+  - jargon
+  - decoding key
 tags:
   - information
 ---
@@ -42,7 +50,7 @@ Entries are grouped by where each term enters the argument rather than alphabeti
 
 **Outer message.** The decoding instructions that come (or fail to come) with a message: what tells you *how* to read the inner message. Most pipeline distortion is loss of the outer message, not the inner one. The claim survives transit; the key it needed doesn't.
 
-**Receiver budget.** The fixed cognitive bandwidth any reader has for incorporating new material: a tablespoon of attention-weeks. Trainable through shared vocabulary, education, and accumulated engagement, but always finite. See [[info-time-limit|Chapter 3]].
+**Receiver budget.** The hours a reader has for taking in new material, and what those hours can carry: a tablespoon of weeks, a few focused hours in each. The hours are fixed; what each hour carries grows with the structure the reader has already built, through education, shared vocabulary, and practice. Finite, but trainable. See [[info-time-limit|Chapter 3]].
 
 **Want.** The receiver's standing appetite for engaging with material. The book argues *want* is the prime mover behind both transport and selection: receivers engage with what they want, and the gates reward what enough receivers want. See [[transport-vs-selection]].
 
@@ -174,7 +182,7 @@ Entries are grouped by where each term enters the argument rather than alphabeti
 
 **The curse of expertise.** The four cognitive failure modes of deep specialization without paired flexibility: paradigm lock-in, overconfidence in cross-application, perceptual filtering, conceptual rigidity. Together they are the cognitive substrate of polarization-via-distrust: the same mechanism described from the inside of one head rather than across a network.
 
-**The abyss.** The possibility space of a sufficiently complex field (every move, question, or direction it could go) when that space is so vast no one, expert or machine, can navigate or even fully perceive it. It takes real competence in a field just to *see* that its abyss is there; novices mistake the field for something finite. The experiential complement of the curse of expertise: the curse is depth that hasn't yet seen the abyss, the bridge node is depth that has. Distinct from [[optionality vs access|optionality]], which is the approachability of a finite, masterable *artifact*: a software library is not an abyss, it is a map of one. The abyss is why compression exists at all. See [[the-abyss]].
+**The abyss.** The possibility space of a sufficiently complex field (every move, question, or direction it could go) when that space is so vast no one, expert or machine, can navigate or even fully perceive it. It takes real competence in a field just to *see* that its abyss is there; novices mistake the field for something finite. The experiential complement of the curse of expertise: the curse is depth that hasn't yet seen the abyss, the bridge node is depth that has. Distinct from [[optionality vs access|optionality]], which is the approachability of a finite, masterable *artifact*: a software library is not an abyss, it is a map of one. The abyss is why compression exists at all. See [The Abyss](https://bayesianpersuasion.com/posts/the-abyss).
 
 **Preservation vs. training.** What the book's narrow "bureaucracy" splits into. *Preservation* keeps the full, un-compressed form alive somewhere (archives, journals, specs). *Training* re-installs in people the ability to decode at that resolution (teaching, mentorship). They work as a pump (preservation holds the pressure, training releases it into the network), so either one alone fails. See [[preservation-vs-training|Chapter 8]].
 

@@ -1,5 +1,12 @@
 ---
 title: "Chapter 11: AI as a New Kind of Node"
+description: "What changes when one company controls what an AI learned from, what it was rewarded for, how it's configured, who can afford it, and the writing itself; and why that makes it either the best study aid ever built or the tightest grip on what people know."
+aliases:
+  - LLM as a medium
+  - AI and information
+  - RLHF and selection
+  - AI summaries replacing sources
+  - who owns the model
 tags:
   - information
 ---
@@ -58,7 +65,7 @@ The same affordance that lets an LLM decompress on demand lets it compress aggre
 
 The book has named compression's hazards in earlier chapters: the [[truth-compression-and-when-each-wins|three-regime model]] said compression can preserve, invert, or render orthogonal depending on the key-gap; [[selection-as-other-engine|Chapter 5b]] said selection picks which compressed variant travels. The new thing at LLM scale is that **the compressed form becomes authoritative in a way no prior compression was, because the LLM is treated as a knowledge authority by downstream receivers and gates.** A bullet-pointed summary by an LLM presents itself not as "one popularization among many" but as *the* answer to the question, with the LLM's authority backing it. The receiver who reads the summary has not just compressed the paper; they have replaced it with an authoritative compressed version that they will not in practice go back and check.
 
-There is a reason the LLM-compressed form reads as authoritative rather than tentative, which I work through in [[the-abyss]]. A human expert's compression of a field is built from having walked enough of it to feel where the map runs out, and that felt edge shows up as hedging, as *that smells wrong*, as knowing which questions are still open. The LLM has the compression without the walked ground underneath it: it emits the fluent summary with no sense of the shore and no register of what it dropped. It is the *confident middle* (fluent enough to convince, not deep enough to have seen any edge) built at planetary scale, and that missing humility is exactly what lets the compressed form present itself as *the* answer rather than as one lossy map among many.
+There is a reason the LLM-compressed form reads as authoritative rather than tentative, which I work through in [the abyss](https://bayesianpersuasion.com/posts/the-abyss). A human expert's compression of a field is built from having walked enough of it to feel where the map runs out, and that felt edge shows up as hedging, as *that smells wrong*, as knowing which questions are still open. The LLM has the compression without the walked ground underneath it: it emits the fluent summary with no sense of the shore and no register of what it dropped. It is the *confident middle* (fluent enough to convince, not deep enough to have seen any edge) built at planetary scale, and that missing humility is exactly what lets the compressed form present itself as *the* answer rather than as one lossy map among many.
 
 At scale, this means the LLM-compressed version *substitutes* for the original in the network's working memory. The paper is technically still there; nobody reads it. The summary is technically not the paper; everybody reads it. This is the [[political-economy-of-attention|out-competition mechanism]] from Ch 10 applied to compression rather than to content: the LLM-compressed form has zero marginal cost of attention while the paper has real cost-per-impression, so the LLM-compressed form clears the market. [[amusing-ourselves-to-death|*Amusing Ourselves to Death*]] (p.119) saw the pattern at television's scale: "how television stages the world becomes the model for how the world is properly to be staged… off the screen the same metaphor prevails." The LLM-compressed account is becoming the model for how the un-compressed form will be staged when anyone bothers to engage it.
 

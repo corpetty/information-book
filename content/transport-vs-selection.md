@@ -1,5 +1,11 @@
 ---
 title: Transport vs. Selection
+description: "Why ideas get simpler as they spread: not because each retelling loses a little, but because at every step something chooses which version travels. Transport is a cost; selection is a choice; only a choice can be steered."
+aliases:
+  - selection vs transport
+  - lossy transport
+  - frozen selection
+  - generate bound pick
 tags:
   - information
 ---

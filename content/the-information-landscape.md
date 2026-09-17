@@ -1,5 +1,11 @@
 ---
 title: "Chapter 1: The Information Landscape"
+description: "How an idea gets from the world to you: five lossy hops (measurement, analysis, consensus, news, meme) and, at each one, a gate that throws most of it away on criteria that have nothing to do with truth."
+aliases:
+  - the pipeline
+  - the two pipelines
+  - from data to meme
+  - The Out There
 tags:
   - information
 ---
