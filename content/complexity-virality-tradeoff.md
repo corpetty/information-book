@@ -4,6 +4,10 @@ description: "Why the easy-to-share version of an idea always wins over the accu
 aliases:
   - precondition count
   - viral vs accurate
+  - three-layer-message
+  - three layers of a message
+  - frame outer inner message
+  - GEB three-layer
 tags:
   - information
 ---
@@ -24,6 +28,12 @@ Complexity here isn't "fancy" or "uses big words." It is the number of precondit
 Both point at the same thing. The first is missing almost everything that matters, and it is also the only one with any chance of reaching someone who hasn't done the homework. The same gap is everywhere: "climate change is real" versus an IPCC working-group report, "inflation is bad" versus the mechanics of monetary aggregates. I'll call the high-precondition version the [[complex-form|complex form]] and the low-precondition version the [[compressed-form|compressed form]]. Compression is lossy; information is lost in it.
 
 One warning about the word. "Complex" here means *precondition count* and nothing else: how much you must already know for the idea to land. Whether an idea is emotionally grabby, or tells you what to do, is a different property, [[handle-ability|handle-ability]], and [[selection-as-other-engine|the next chapter]] handles it.
+
+## What a message is made of
+
+Borrow a model from Douglas Hofstadter's [[godel-escher-bach|*Gödel, Escher, Bach*]]: any message has three layers. The *frame* says "this is a message, decode me"; the *outer message* is the key, the knowledge you need to decode it; the *inner message* is the content. The [[voyager-golden-record|Voyager Golden Record]] is the rare artifact that had to carry all three physically, its cover etched with instructions for building a player, because nothing about the receiver could be assumed. Most messages don't: they assume the outer message is already installed in the receiver. **The outer message is the decoding mechanism a receiver must already hold, and that is exactly what this book has been calling preconditions.** A complex idea has a large or rare outer message; a compressed one decodes with the receiver's default equipment.
+
+That sharpens what transport does. The standard worry is that the inner message degrades. **What a lossy hop usually strips is the outer message, not the inner one.** The claim is small and survives; the decoding key falls away, so a twenty-year program arrives as "scientists say X" with the claim intact and the instructions for reading it gone. The receiver decodes anyway, with whatever key they hold, and a true claim read with the wrong key produces a false belief as reliably as a corrupted one would. [[truth-compression-and-when-each-wins|Chapter 5c]] follows what that does to truth; manipulation that corrupts the outer message, and manufactured content that forges the frame, are the [[medium-and-manipulation|medium note]]'s and [[the-information-landscape|Chapter 1]]'s business.
 
 ## The receiver has a budget
 

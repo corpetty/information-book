@@ -334,7 +334,7 @@
       ],
       "status": "working",
       "argues": [
-        "three-layer-message"
+        "complexity-virality-tradeoff"
       ],
       "arguedInChapters": [
         "information-landscape",
@@ -345,7 +345,7 @@
       ],
       "harvestedFrom": [
         {
-          "note": "three-layer-message",
+          "note": "complexity-virality-tradeoff",
           "lineApprox": 25,
           "text": "The outer message is the decoding mechanism a receiver must already hold, and that is exactly what this book has been calling preconditions."
         }
@@ -361,7 +361,7 @@
       ],
       "status": "working",
       "argues": [
-        "three-layer-message",
+        "complexity-virality-tradeoff",
         "truth-compression-and-when-each-wins"
       ],
       "arguedInChapters": [
@@ -376,7 +376,7 @@
       ],
       "harvestedFrom": [
         {
-          "note": "three-layer-message",
+          "note": "complexity-virality-tradeoff",
           "lineApprox": 33,
           "text": "What a lossy hop usually strips is the outer message, not the inner one."
         }

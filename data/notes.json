@@ -82,14 +82,6 @@
       "summary": "Foundational note on what the medium does to the selection gates. Provisional answer: the medium is the selection criteria — it sets the capacity, the criteria, and the want cultivated at every gate."
     },
     {
-      "slug": "three-layer-message",
-      "file": "three-layer-message.md",
-      "subtype": "prose",
-      "title": "The Three Layers of a Message",
-      "role": "foundational-note",
-      "summary": "Foundational note adapting the frame/outer/inner message model from Hofstadter. The outer message — the decoding mechanism — is what the book calls preconditions, and it lives in the medium."
-    },
-    {
       "slug": "truth-compression-and-when-each-wins",
       "file": "truth-compression-and-when-each-wins.md",
       "subtype": "prose",

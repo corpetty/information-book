@@ -18,5 +18,5 @@ Chapter VI, 'The Location of Meaning', develops the three-layer message model â€
 
 ## Where this is cited in the book
 
-- [[three-layer-message|The Three Layers of a Message]] *(foundational-note)*
+- [[complexity-virality-tradeoff|Ch 5 â€” The Complexity / Virality Trade-off]]
 

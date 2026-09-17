@@ -45,7 +45,7 @@ These need to be resolved (or at least committed to provisionally) before more c
 
 ## Structure (working revision)
 
-> **Reading order (A1 restructure).** The nav chain now threads the depended-on foundational notes into the linear read as interludes, and promotes the intersubjective note to a numbered chapter: 1 · 2 · 3 · 4 · 5 · 5b · *Interlude: The Medium* · 5c · 6 · 7 · *Interlude: Myths at Scale* · 8 · **8b (Intersubjective Truth)** · 9 · 10 · 11 · *Interlude: Capture* · 12. The three most-restated notes ([[transport-vs-selection]], [[three-layer-message]], [[bridge-nodes-and-versatile-expertise]]) stay as depth notes outside the chain, linked from the chapters that already carry their cores; folding those into their chapters (5b, 5, 9) is the remaining structural step.
+> **Reading order (A1 restructure).** The nav chain now threads the depended-on foundational notes into the linear read as interludes, and promotes the intersubjective note to a numbered chapter: 1 · 2 · 3 · 4 · 5 · 5b · *Interlude: The Medium* · 5c · 6 · 7 · *Interlude: Myths at Scale* · 8 · **8b (Intersubjective Truth)** · 9 · 10 · 11 · *Interlude: Capture* · 12. [[three-layer-message]] is now folded into [[complexity-virality-tradeoff|Chapter 5]] (its model lives in a "What a message is made of" section; the slug redirects). [[transport-vs-selection]] and [[bridge-nodes-and-versatile-expertise]] stay as depth notes outside the chain: Chapters 5b and 9 already carry their cores and have diverged past them, so folding those would lose the working-through and orphan claim anchors.
 
 ### Part I. The Pipeline
 

@@ -52,10 +52,10 @@ Different media cultivate different appetites over time: one that rewards shallo
 The mental equipment a receiver must already hold to decode an idea correctly: vocabulary, frameworks, contextual knowledge. An idea is "complex," in the book's sense, when its preconditions are large or rare. Also called the *outer message* (below). See [[complexity-virality-tradeoff|Chapter 5]].
 
 ### The three layers of a message
-Hofstadter's model, adapted: every message has a *frame* layer (this-is-a-message), an *outer* layer (how to decode), and an *inner* layer (the content). The load-bearing move: the outer message is what the book otherwise calls *preconditions*, and it comes mostly from the medium. See [[three-layer-message|the three-layer note]].
+Hofstadter's model, adapted: every message has a *frame* layer (this-is-a-message), an *outer* layer (how to decode), and an *inner* layer (the content). The load-bearing move: the outer message is what the book otherwise calls *preconditions*, and it comes mostly from the medium. See [[complexity-virality-tradeoff|Chapter 5]].
 
 ### Outer message / decoding key
-The decoding instructions that come, or fail to come, with a message: what tells you *how* to read the inner message. "Decoding key" is the book's most frequent name for it. Most pipeline distortion is loss of the outer message, not the inner one: the claim survives transit; the key it needed doesn't. See [[three-layer-message|the three-layer note]].
+The decoding instructions that come, or fail to come, with a message: what tells you *how* to read the inner message. "Decoding key" is the book's most frequent name for it. Most pipeline distortion is loss of the outer message, not the inner one: the claim survives transit; the key it needed doesn't. See [[complexity-virality-tradeoff|Chapter 5]].
 
 ### Receiver budget
 The hours a reader has for taking in new material, and what those hours can carry: a tablespoon of weeks, a few focused hours in each. The hours are fixed; what each hour carries grows with structure the reader has already built. Finite, but trainable. See [[info-time-limit|Chapter 3]]; graph node [[receiver-budget]].
