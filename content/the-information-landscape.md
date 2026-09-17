@@ -72,7 +72,7 @@ By the time something is a meme it is usually about something other than the ori
 
 ## The sibling pipeline: selection
 
-That's transport: five re-encodings, each one lossy. But transport only tells you what happens to information that moves. It says nothing about what gets to move at all, and at every stage most content fails to advance. Most measurements are never taken, most data is never analyzed, most papers never become theory, most theories never become news, most news never becomes a meme. What survives each hop is decided by criteria local to that hop, and almost none of them are about truth. That is the second pipeline: parallel to transport, a pipeline of selection events, one gate per stage.
+That's [[transport]]: five re-encodings, each one lossy. But transport only tells you what happens to information that moves. It says nothing about what gets to move at all, and at every stage most content fails to advance. Most measurements are never taken, most data is never analyzed, most papers never become theory, most theories never become news, most news never becomes a meme. What survives each hop is decided by criteria local to that hop, and almost none of them are about truth. That is the second pipeline: parallel to transport, a pipeline of [[selection]] events, one gate per stage.
 
 ```mermaid
 flowchart LR
@@ -112,7 +112,7 @@ The pipeline I just walked is linear; the reality is messier. Memes feed back in
 
 ## What this sets up
 
-That's the core picture. Reality on one side, memes on the other, five hops in between, each hop compressing and selecting. We never see The Out There directly; we see what survived the gates, in whatever shape the medium it arrived through allows. The rest of Part I goes deeper into what gets lost and selected at each stage, Part II into why the arrangement is structurally unavoidable, Part III into the bridge zone where the worst distortion happens, and Part IV into what to do about it. The book is partly about being honest about that picture, and partly about building infrastructure that does better than what we have.
+That's the core picture. Reality on one side, memes on the other, five hops in between, each hop compressing and selecting. We never see The Out There directly; we see what survived the gates, in whatever shape the medium it arrived through allows. The rest of Part I goes deeper into what gets lost and selected at each stage, Part II into why the arrangement is structurally unavoidable, Part III into the [[bridge-zone|bridge zone]] where the worst distortion happens, and Part IV into what to do about it. The book is partly about being honest about that picture, and partly about building infrastructure that does better than what we have.
 
 ---
 
