@@ -15,3 +15,7 @@ Nations as communities constituted through print capitalism — intersubjective 
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+

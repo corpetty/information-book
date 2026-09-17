@@ -15,3 +15,7 @@ The founding text of the social-construction tradition: externalization, objecti
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+

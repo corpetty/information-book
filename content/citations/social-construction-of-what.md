@@ -15,3 +15,7 @@ Looping effects of human kinds: classifications change the people classified, wh
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+

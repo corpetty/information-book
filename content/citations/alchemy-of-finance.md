@@ -15,3 +15,7 @@ Reflexivity: market participants' beliefs alter the fundamentals the beliefs are
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+

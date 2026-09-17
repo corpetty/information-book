@@ -15,3 +15,7 @@ Institutional facts and status functions: X counts as Y in context C, sustained 
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[intersubjective-truth|Intersubjective Truth]] *(foundational-note)*
+
