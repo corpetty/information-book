@@ -15,7 +15,3 @@ Models memetic propagation using epidemiological dynamics. Formal apparatus for 
 
 **Local copy.** [`sources/epidemiological-approach-to-model-viral-propagation-of-memes.pdf`](../sources/epidemiological-approach-to-model-viral-propagation-of-memes.pdf)
 
-## Where this is cited in the book
-
-- [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
-
