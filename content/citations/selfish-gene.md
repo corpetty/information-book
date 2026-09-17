@@ -15,3 +15,7 @@ Coined the term 'meme.' The selection-side view's foundational text.
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[optionality-vs-access|Ch 4 — Optionality vs. Access]]
+

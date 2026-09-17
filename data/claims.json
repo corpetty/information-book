@@ -288,8 +288,8 @@
       "harvestedFrom": [
         {
           "note": "optionality-vs-access",
-          "lineApprox": 70,
-          "text": "They've constrained the user's options for the benefit of increasing overall accessibility."
+          "lineApprox": 61,
+          "text": "It constrained the user's options for the sake of accessibility."
         }
       ]
     },
