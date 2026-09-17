@@ -1,7 +1,7 @@
 {
   "counts": {
-    "nodes": 263,
-    "edges": 1207,
+    "nodes": 270,
+    "edges": 1220,
     "warnings": 0
   },
   "byNodeType": {
@@ -14,9 +14,9 @@
     "Mechanism": 9,
     "Concept": 61,
     "Question": 8,
-    "Tradition": 10,
-    "Author": 28,
-    "Source": 32,
+    "Tradition": 11,
+    "Author": 31,
+    "Source": 35,
     "CaseStudy": 13,
     "Claim": 39,
     "Tension": 3
@@ -32,8 +32,8 @@
     "enables": 8,
     "evidencedBy": 111,
     "flagsOpenQuestion": 44,
-    "authoredBy": 32,
-    "partOfTradition": 33,
+    "authoredBy": 35,
+    "partOfTradition": 36,
     "representedBy": 1,
     "mentions": 61,
     "argues": 130,
@@ -41,8 +41,8 @@
     "dependsOn": 38,
     "tensionWith": 2,
     "contradicts": 1,
-    "wikiLinks": 289,
-    "cites": 50,
+    "wikiLinks": 294,
+    "cites": 52,
     "supports": 40,
     "pressureTests": 36
   },

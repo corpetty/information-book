@@ -50,6 +50,11 @@
       "id": "expertise-research",
       "label": "Expertise research",
       "summary": "Cognitive-science work on how expert performance is acquired and represented: deliberate practice, chunking, expert–novice differences. The evidence base for the receiver budget being trainable."
+    },
+    {
+      "id": "machine-learning",
+      "label": "Machine learning",
+      "summary": "Technical literature on how large language models are trained, tuned, and fail: RLHF, sycophancy, model collapse. The evidence base for the LLM-as-selection-surface argument."
     }
   ]
 }

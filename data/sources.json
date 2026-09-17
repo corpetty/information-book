@@ -140,6 +140,21 @@
       "id": "malcolm-gladwell",
       "label": "Malcolm Gladwell",
       "summary": "Journalist; Outliers popularised (and compressed) the deliberate-practice finding into '10,000 hours'."
+    },
+    {
+      "id": "long-ouyang",
+      "label": "Long Ouyang",
+      "summary": "Lead author of the InstructGPT / RLHF paper (OpenAI)."
+    },
+    {
+      "id": "mrinank-sharma",
+      "label": "Mrinank Sharma",
+      "summary": "Lead author of Anthropic's study of sycophancy in language models."
+    },
+    {
+      "id": "ilia-shumailov",
+      "label": "Ilia Shumailov",
+      "summary": "Lead author of the model-collapse study on training models on generated data."
     }
   ],
   "sources": [
@@ -582,6 +597,48 @@
       "availability": "external",
       "tags": [
         "illustration"
+      ]
+    },
+    {
+      "id": "instructgpt-rlhf",
+      "label": "Training Language Models to Follow Instructions with Human Feedback",
+      "kind": "paper",
+      "author": "long-ouyang",
+      "year": 2022,
+      "tradition": "machine-learning",
+      "summary": "The InstructGPT paper: reinforcement learning from human feedback (RLHF) as the standard post-training method for aligning a model to human preference labels. In the book's terms, the training objective as a selection criterion lifted into the architecture.",
+      "engagement": "cited in Ch 11 for RLHF as objective-level selection (objective capture)",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "sycophancy-llms",
+      "label": "Towards Understanding Sycophancy in Language Models",
+      "kind": "paper",
+      "author": "mrinank-sharma",
+      "year": 2023,
+      "tradition": "machine-learning",
+      "summary": "Measures sycophancy: RLHF-tuned models systematically shift answers toward what the user appears to want rather than toward accuracy. Evidence that the reward favors the agreeable answer over the faithful one.",
+      "engagement": "cited in Ch 11 as evidence for objective capture (helpful/agreeable over faithful/corrective)",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "model-collapse",
+      "label": "AI Models Collapse When Trained on Recursively Generated Data",
+      "kind": "paper",
+      "author": "ilia-shumailov",
+      "year": 2024,
+      "tradition": "machine-learning",
+      "summary": "Model collapse: models trained on data produced by earlier models degrade across generations as the tails of the distribution are lost. The mechanism behind Ch 11's claim that objective capture is self-reinforcing across model generations.",
+      "engagement": "cited in Ch 11 for the self-reinforcing dynamic of objective capture and manufactured content in the training corpus",
+      "availability": "external",
+      "tags": [
+        "evidence"
       ]
     }
   ]
