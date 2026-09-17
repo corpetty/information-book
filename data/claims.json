@@ -260,13 +260,8 @@
       "harvestedFrom": [
         {
           "note": "complexity-virality-tradeoff",
-          "lineApprox": 50,
-          "text": "the maximum complexity an idea can carry is bounded by the size of the network it needs to traverse."
-        },
-        {
-          "note": "complexity-virality-tradeoff",
-          "lineApprox": 90,
-          "text": "the maximum complexity an idea can carry across a network in a given window of time is bounded by the size of"
+          "lineApprox": 36,
+          "text": "The maximum complexity an idea can carry is bounded by the size of the network it needs to traverse."
         }
       ]
     },
