@@ -15,3 +15,7 @@ Distinguishes epistemic bubbles (missing info) from echo chambers (active discre
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[integration-problem|Ch 9 — The Integration Problem]]
+
