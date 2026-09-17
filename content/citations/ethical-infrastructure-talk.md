@@ -15,3 +15,7 @@ Devcon VI talk, October 2022. Applies Hofstadter's three-layer message model to 
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[three-layer-message|The Three Layers of a Message]] *(foundational-note)*
+

@@ -16,3 +16,7 @@ Chapter VI, 'The Location of Meaning', develops the three-layer message model â€
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[three-layer-message|The Three Layers of a Message]] *(foundational-note)*
+
