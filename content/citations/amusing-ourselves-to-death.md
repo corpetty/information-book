@@ -19,5 +19,6 @@ Argues that television as a medium degraded public discourse. The 'medium shapes
 
 - [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]]
 - [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
+- [[glossary|Glossary]] *(glossary)*
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 

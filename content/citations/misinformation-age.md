@@ -21,6 +21,7 @@ Formal network models of belief propagation. What kills truth in networks: selec
 - [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]]
 - [[bridge-nodes-and-versatile-expertise|Bridge Nodes and Versatile Expertise]] *(foundational-note)*
 - [[capture-taxonomy|Capture Taxonomy]] *(foundational-note)*
+- [[glossary|Glossary]] *(glossary)*
 - [[integration-problem|Ch 9 — The Integration Problem]]
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
