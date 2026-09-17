@@ -15,3 +15,7 @@ tags:
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[medium-and-manipulation|Medium and Manipulation]] *(foundational-note)*
+

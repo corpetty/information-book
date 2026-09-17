@@ -18,6 +18,7 @@ Empirical work on how information morphs as it traverses social-media networks.
 ## Where this is cited in the book
 
 - [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]]
+- [[medium-and-manipulation|Medium and Manipulation]] *(foundational-note)*
 - [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
 - [[selection-as-other-engine|Ch 5b — Selection As The Other Engine]]
 - [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
