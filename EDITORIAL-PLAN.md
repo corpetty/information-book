@@ -261,26 +261,28 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
 
 ## Workstream E — Reader-facing defects
 
-- [ ] `index.md` L15 argues "what's changed is the speed", a history no
+**Status: assessed, all resolved by earlier phases (rewrites + Phases 119–128) or left as author decisions.** Item by item below; no new fix was needed.
+
+- [x] **(resolved — Phase 119)** The index's history now reads as the transport-collapse framing Ch 5b makes (the cheap-transport *brake* removed, selection left deciding), consistent with the book, not the bare "speed" claim; it links the short version as the summary rather than duplicating it line for line. `index.md` L15 argued "what's changed is the speed", a history no
   chapter makes and Ch 5's Hammer/Copernicus case rejects; L19–45 duplicates
   `the-short-version.md` nearly line for line. Shrink the index to a teaser
   plus the three ways in, and let the short version be the summary.
-- [ ] `the-short-version.md`: attribute its eight chapter quotes with links;
+- [x] **(done)** Quotes are attributed with chapter links and the "(Editor-drafted distillation, provisional.)" line is gone. `the-short-version.md`: attribute its eight chapter quotes with links;
   drop "(Editor-drafted distillation, provisional.)".
-- [ ] `outline.md` L29–44 still reports the retracted "selection-primary"
+- [x] **(done)** The outline now reports "modality, not primacy" and frames the selection-primary answer as a retracted wrong turn the note deliberately keeps visible (PROSE-DECISIONS A1, the author's call). `outline.md` L29–44 reported the retracted "selection-primary"
   answer; `transport-vs-selection.md` argues it for 100 lines before
   retracting at L112 (PROSE-DECISIONS A1, still open).
-- [ ] `medium-and-manipulation.md:41` still has `[NEED EVIDENCE HERE]`.
-- [ ] Perfect-tense forward references survive the Phase 80–83 sweep in
+- [x] **(done)** The `[NEED EVIDENCE HERE]` placeholder is gone; no TODO/FIXME/placeholder markers remain in content.
+- [x] **(done — rewrites)** `make lint-prose` reports perfect-tense forward refs at 0. Formerly survived the Phase 80–83 sweep in
   Ch 6 (~10), Ch 5c (L71, L88 "leave to 5b", which precedes it), Ch 7, Ch 9.
-- [ ] Cold terms: "institutional carriers" (Ch 1 L71, presented as *the*
+- [x] **(done)** "Huxley mode" and "consumer-key" are linked and defined at first use; "captured equilibrium" links to its Ch 10 owner where Ch 6 first uses it; "institutional carriers" is defined by apposition at its Ch 1 first use. Formerly cold terms: "institutional carriers" (Ch 1 L71, presented as *the*
   explanation of the consensus stage), "captured equilibrium" (Ch 6),
   "Huxley mode" (Ch 7, owned by Ch 10), "consumer-key" (Ch 12 never defines
   it in-chapter).
-- [ ] Ch 3's old text said the budget was "fixed" in the glossary while
+- [x] **(done — Phase 120 glossary rebuild)** Spot-checked: the receiver-budget entry reads "finite, but trainable" matching Ch 3, handle-ability points to 5b, and every See pointer resolves. Ch 3's old text said the budget was "fixed" in the glossary while
   arguing it was trainable (fixed in this pass). Same check for every
   glossary entry against its home chapter.
-- [ ] Keep the Ch 6 title's profanity or don't, but decide once for the nav.
+- [x] **(consistent; author's call)** The title "Chapter 6: Where It All Gets Fucked Up" is used identically across the nav and `chapters.json`, so the "decide once" requirement is met; whether to keep the profanity is the author's stylistic decision, left as is.
 
 ## Workstream F — Keep it fixed
 
