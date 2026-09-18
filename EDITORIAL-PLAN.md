@@ -231,11 +231,18 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   private text with Church bureaucracy; Ch 2 L78 says power posing "lost at
   consensus" against its own case heading; Ch 5c L69 vs Ch 1 on whether
   manufactured content has a regime.
-- [ ] **C6. Experiments.** The interpretive-latitude design is good; add
-  Hamilton et al. 2016 (frequency confound) and Guilbeault 2021 as the
-  pre-registered adversary. Two cheap new ones: a caveat-loss-per-hop study
-  (Sumner 2014's method on the book's own pipeline) and an age-period-cohort
-  analysis for the floor claim, which Ch 7 says it owes.
+- [x] **C6. Experiments.** *(done — Phase 131.)* Extended the
+  interpretive-latitude design with the diachronic-embedding frequency confound
+  (Hamilton, Leskovec & Jurafsky 2016's laws of conformity/innovation) and
+  [[guilbeault-category-convergence|Guilbeault 2021]] as the pre-registered
+  adversary, sharpening the claim to a falsifiable boundary condition (latitude
+  grows with scale only for feedback-poor claims). Added two new experiment
+  designs: `caveat-loss-per-hop` (Sumner 2014's exaggeration coding pointed at
+  the book's own pipeline, measuring caveat retention per hop) and
+  `floor-age-period-cohort` (the generational test Ch 7 owes, an APC
+  decomposition separating the co-writer cohort claim from the casting-director
+  period claim). All three are linked from the outline; experiment pages are
+  trackers, not graph nodes.
 
 ## Workstream D — Interlinking and searchability
 

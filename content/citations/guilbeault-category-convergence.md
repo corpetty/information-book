@@ -16,3 +16,7 @@ Larger populations independently converge on the same category systems; scale dr
 
 **Availability.** Cited by reference; no local copy held in the repo.
 
+## Where this is cited in the book
+
+- [[outline|Lossy — Outline]] *(outline)*
+
