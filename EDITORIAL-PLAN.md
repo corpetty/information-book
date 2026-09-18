@@ -7,9 +7,11 @@ concision, interlinking, reader-facing defects. The per-file reports live in
 that comes out of them. It follows [`PROSE-DECISIONS.md`](PROSE-DECISIONS.md)
 in spirit: decisions for the author, with the recommended option first.
 
-A few items were applied in the same pass so the plan has a worked example
-(see **What already landed** at the end). Everything else is proposed, not
-done.
+A few items were applied in the original audit pass so the plan had a worked
+example; a later execution pass (Sept 17–18) then did or verified most of
+Workstreams A–E. See **What already landed** at the end for both. What remains
+open is the extraction-dependent evidence work (C1, C2, C4), blocked on source
+PDFs.
 
 ## Where the book stands
 
@@ -358,6 +360,49 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
 - Three sources and one tradition added (Ericsson et al. 1993, Chi et al.
   1981, Gladwell 2008; *expertise research*), citation pages regenerated,
   graph snapshot re-blessed (263 nodes / 1187 edges / 0 warnings).
+
+### Execution pass — September 17–18 session (Phases 122–131)
+
+Most of Workstreams A–E were then executed or verified; the graph grew from
+263 nodes / 1187 edges to **316 / 1581 / 0 warnings**, and all 31 phases are
+pushed to `main`.
+
+- **A1 reading order (Phase 122):** two interludes (Myths at Scale, Capture),
+  the consumer-key principle promoted into Ch 8, `intersubjective-truth`
+  promoted to Chapter 8b, Medium made an interlude, nav rewired.
+- **Note-fold (Phase 123):** folded `three-layer-message` into Ch 5; kept
+  `transport-vs-selection` and `bridge-nodes` as depth notes (their chapters
+  had diverged past them).
+- **D2 first-use links (Phase 124):** 113 wikilinks, first use per node-term
+  per file, bold anchors skipped.
+- **D3 source links (Phase 125):** the rewrites had done all but one; linked
+  Harari in the intersubjective note.
+- **D4 glossary (Phase 126):** five graph-node links plus the *frozen
+  selection* and *seven capture surfaces* entries.
+- **C3 sources (Phase 127):** 16 works the book argues with entered as
+  external sources + authors + citation pages, each with its documented
+  bearing; three traditions added (attention-economy, empirical-social-media,
+  institutional-analysis). Quote-backed edges deferred (no PDFs).
+- **Voice pass v2 (Phase 128):** self-narration 136 → 50 (every file at
+  target); 45 filler *exactly* uses cut.
+- **D6 the abyss (Phase 129):** concepts.json gains an optional `url`; the
+  abyss page now links its published essay, and the feature is generic.
+- **D5 case pages (Phase 130):** five case nodes + pages + in-text links
+  (`covid-mask-guidance`, `nutrition-reversals`, `monetary-policy-press`,
+  `common-law-courts`, `stack-overflow`).
+- **C6 experiments (Phase 131):** interpretive-latitude design extended with
+  the Hamilton frequency confound and Guilbeault adversary; two new designs
+  (`caveat-loss-per-hop`, `floor-age-period-cohort`).
+- **Verified already done by the Phase 99–118 rewrites, marked with an
+  item-by-item assessment:** A2/A3 (chapter cuts, reorders, uncertainty
+  tails), B's tic/reversal rules, C5 (all 13 factual corrections), and
+  Workstream E (reader-facing defects).
+- **Process:** rebased the 29 editorial commits onto the remote's footer
+  commit and pushed to `main`, then pushed each phase.
+
+Still open: **C1, C2, C4** — the extraction-dependent evidence work (quote-
+backed edges and the primary-per-case citations), blocked on adding the source
+PDFs to the repo.
 
 ## Where the audit reports are wrong (so you don't chase them)
 
