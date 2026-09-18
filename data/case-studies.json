@@ -245,6 +245,101 @@
       "appearsIn": [
         "information-landscape"
       ]
+    },
+    {
+      "id": "covid-mask-guidance",
+      "label": "COVID mask guidance — a reversal read as a lie",
+      "summary": "In early 2020 the CDC and WHO advised the public not to wear masks, bundling a genuine wish to preserve scarce medical masks with an early droplet-over-aerosol read of the evidence; on April 3, 2020 the CDC reversed to recommend cloth coverings as aerosol transmission became clearer. That is a field updating on evidence. The bridge zone shipped it as two confident slogans, \"masks don't work\" then \"masks work,\" with the decoding key (the supply motive, the provisional evidence) stripped, so the reversal read not as science working but as experts lying or flip-flopping. The inversion regime operating on institutional credibility itself, and the case that did the most public-trust damage.",
+      "illustrates": [],
+      "illustratesConcepts": [
+        "bridge-zone",
+        "compressed-form",
+        "three-layer-message",
+        "truth-compression-regimes"
+      ],
+      "illustratesClaims": [
+        "compression-strips-the-key",
+        "selection-picks-the-regime"
+      ],
+      "appearsIn": [
+        "bridge-zone-distortion",
+        "truth-compression-and-when-each-wins"
+      ]
+    },
+    {
+      "id": "nutrition-reversals",
+      "label": "Nutrition science — forty years of monocausal reversals",
+      "summary": "Fat, then low-fat, then carbs, then sugar, then ultra-processed food: a forty-year sequence in which the field says \"it's complicated and confounded\" and the bridge zone ships a confident single-cause story on repeat. Each reversal is a real finding stripped of its hedges and conditions and sold as a clean actionable line, leaving the audience with a working model of nutrition worse than none. The specialist consensus was itself more contested than a clean story admits (food-industry conflicts run through nutrition epidemiology), but the whiplash the public experienced is a bridge-zone artifact, not a property of the science.",
+      "illustrates": [],
+      "illustratesConcepts": [
+        "bridge-zone",
+        "compressed-form"
+      ],
+      "illustratesClaims": [
+        "compression-strips-the-key",
+        "engagement-gates-reward-truth-loss"
+      ],
+      "appearsIn": [
+        "bridge-zone-distortion"
+      ]
+    },
+    {
+      "id": "monetary-policy-press",
+      "label": "Monetary policy in the financial press",
+      "summary": "Financial-press coverage of monetary policy collapses aggregates, velocity, and transmission mechanisms into \"the Fed is printing money.\" This is where the political economy of attention bites hardest, because some outlets are owned by interests with positions on what policy should be, so the compression is not only lossy but directional. Monetary policy is genuinely full of paradigm wars, so the specialist consensus is contested too; the point is that the bridge-zone product is systematically wrong about the technical distinctions in a direction that serves its owners.",
+      "illustrates": [],
+      "illustratesConcepts": [
+        "bridge-zone",
+        "compressed-form",
+        "self-vs-external-capture"
+      ],
+      "illustratesClaims": [
+        "compression-strips-the-key",
+        "engagement-gates-reward-truth-loss"
+      ],
+      "appearsIn": [
+        "bridge-zone-distortion",
+        "political-economy-of-attention"
+      ]
+    },
+    {
+      "id": "common-law-courts",
+      "label": "Common-law courts as a curation institution",
+      "summary": "Common-law courts run on generationally trained judges (a multi-decade consumer-key substrate), precedent as preservation, transparent written provenance, and redundant independent jurisdictions, all publicly funded. Read through the book's design principles, they hold funding-decoupling and consumer-key defense the longest and do correspondingly well. Their redundancy only works while the jurisdictions stay genuinely independent, which political capture of appointments erodes: the failure mode the principles predict.",
+      "illustrates": [],
+      "illustratesConcepts": [
+        "curation-layer",
+        "preservation-vs-training-pair",
+        "survivable-polarization",
+        "consumer-key-vs-surface-capture",
+        "work-of-generations"
+      ],
+      "illustratesClaims": [
+        "integration-needs-agent-and-infrastructure"
+      ],
+      "appearsIn": [
+        "integration-problem",
+        "infrastructure-for-integration"
+      ]
+    },
+    {
+      "id": "stack-overflow",
+      "label": "Stack Overflow — curation without funding decoupling",
+      "summary": "Stack Overflow had strong reputation-weighted curation and auditable provenance but was never decoupled from the attention market (ad-supported and venture-backed from its 2008 launch). When LLMs began answering its questions directly, readers took the compressed model answer instead of the curated community one, traffic fell sharply after 2022, and with no funding reserve it had nothing to ride out the shock. The case that shows curation and provenance are not enough without the funding principle, and Chapter 11's worst case landing on a real curation layer.",
+      "illustrates": [],
+      "illustratesConcepts": [
+        "curation-layer",
+        "funding-decoupling",
+        "out-competition-of-carriers",
+        "compressed-form-as-authority"
+      ],
+      "illustratesClaims": [
+        "integration-needs-agent-and-infrastructure"
+      ],
+      "appearsIn": [
+        "integration-problem",
+        "infrastructure-for-integration"
+      ]
     }
   ]
 }

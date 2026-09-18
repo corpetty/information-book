@@ -266,10 +266,14 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   worst case*, *preserve-and-retrain*, *frozen selection*, *trust-bootstrap*,
   the seven capture surfaces, *constitutive transmission*. Fix the entry
   assigning handle-ability to Ch 5 (5b owns it).
-- [ ] **D5. Case pages.** COVID epi, nutrition science, monetary policy
-  (Ch 6), GDPR / plain-language law already exists; common-law courts and
-  Stack Overflow (Ch 9/12) need pages so the five "worked examples" are
-  navigable.
+- [x] **D5. Case pages.** *(done — Phase 130.)* Added five case nodes with
+  generated pages and first-use in-text links: `covid-mask-guidance`,
+  `nutrition-reversals`, `monetary-policy-press` (Ch 6), and `common-law-courts`,
+  `stack-overflow` (Ch 9/12). Each is wired to the concepts, claims, and
+  chapters it illustrates, so the worked examples are now navigable from the
+  prose and the graph. (Plain-language law already existed.) A primary source
+  per case is C4's job, still open — these carry the book's own framing, not
+  yet a cited primary.
 - [x] **D6. The abyss.** *(done — Phase 129.)* In-text was already resolved by
   the rewrites: Chs 4, 9, and 11 link `[[abyss]]` (the concept page), not the
   raw URL. Added the missing half — the concept page now carries the essay
