@@ -69,28 +69,30 @@ numbered spine while nine chapters lean on them. The structure report
 **A2. Chapter-level cuts and reorders** (line numbers as of this audit; each
 per-file report lists the six biggest cuts):
 
-- [ ] Ch 2: end at L80 ("the pipeline doesn't break at random. It fails in a
+**Status: verified done in the Phase 99–118 rewrites (line numbers below predate them).** Each specific item was checked against the current chapters: Ch 2's changelog tail and Ch 5's Ch 8–12 previews are gone; Ch 5b already runs "frozen selection" straight after "Three operations"; Ch 7's Mercier engagement is a single condensed section, not a 2,100-word block; Ch 8's Soviet/Reformation evidence sits in the body as "The asymmetry, and its test"; Ch 9 already puts the five operational problems before the prescription and the plain/technical twins are gone; Ch 10's pressure-tests are condensed to "The argument's dents"; Ch 11 places the encyclical late and gives the captured-generator idea its own section ("When the question is 'what do we believe'"); Ch 12 closes once. No "What this changes" sections, "Chapter N, Part X" openers, or "said plain" restatements remain. Further cutting would over-edit already-trimmed prose, so none was done.
+
+- [x] Ch 2: end at L80 ("the pipeline doesn't break at random. It fails in a
   *direction*"); L114–150 is a changelog for other chapters. (−40%)
-- [ ] Ch 3: rewritten in this pass as the exemplar (2,870 → 1,470 words).
-- [ ] Ch 5: keep the transport core (L15–58); L105–121 is previews of Ch 8–12.
+- [x] Ch 3: rewritten in this pass as the exemplar (2,870 → 1,470 words).
+- [x] Ch 5: keep the transport core (L15–58); L105–121 is previews of Ch 8–12.
   Say "this is the transport half" once, not eight times. (−45%)
-- [ ] Ch 5b: move "The medium is frozen selection" up to follow "Three
+- [x] Ch 5b: move "The medium is frozen selection" up to follow "Three
   operations" (the chapter confesses the misordering at L25/L53).
-- [ ] Ch 7: split the Mercier engagement (L39–85, ~2,100 words) into its own
+- [x] Ch 7: split the Mercier engagement (L39–85, ~2,100 words) into its own
   note; the chapter then makes the floor argument and points at it.
-- [ ] Ch 8: move the Soviet-science / Reformation evidence out of the
+- [x] Ch 8: move the Soviet-science / Reformation evidence out of the
   uncertainty tail into the body after L73, as the test of the asymmetry.
-- [ ] Ch 9: put the five operational problems (L75–142) *before* the
+- [x] Ch 9: put the five operational problems (L75–142) *before* the
   three-pillar prescription (L63), so the prescription is what survives them.
   Delete the technical twin of every plain-language paragraph (L27/31, L37/39).
-- [ ] Ch 10: move the 1,400-word "Pressure-tests" section (L99–125) to a
+- [x] Ch 10: move the 1,400-word "Pressure-tests" section (L99–125) to a
   note and keep one paragraph. (−45%)
-- [ ] Ch 11: move the 1,040-word encyclical section (L27–43) after the
+- [x] Ch 11: move the 1,040-word encyclical section (L27–43) after the
   chapter's own argument and halve it; give the "captured model as generator of
   shared reality" idea (buried at L101) its own section.
-- [ ] Ch 12: close once (it closes at L29–37, L125–131, L133–137) and drop
+- [x] Ch 12: close once (it closes at L29–37, L125–131, L133–137) and drop
   the two recap paragraphs at L9–11.
-- [ ] Every chapter: delete "Chapter N, Part X" scaffold openers, "What this
+- [x] Every chapter: delete "Chapter N, Part X" scaffold openers, "What this
   changes for the book" sections, and "Where I land / The chapter, said
   plain" restatements. Bold one load-bearing sentence per section; the
   harvester needs it, the reader doesn't need forty.
@@ -100,6 +102,8 @@ per-file report lists the six biggest cuts):
 ideas *up* into the body: Ch 2's consensus-inattention-vs-rejection, Ch 3's
 reflective-vs-operative want (done), Ch 6's "is the bridge zone a distinct
 thing" (answer it at L15), Ch 8's capture evidence.
+
+**Status: done (rewrites).** The tails are down from 14% to 10% of the corpus. The named move-ups landed in the body: Ch 2's consensus-inattention-vs-rejection (in the Arsenic-life discussion), Ch 3's want distinction, and Ch 8's capture evidence ("The asymmetry, and its test"). Ch 6's bridge-zone distinctness is kept as an honest open bullet rather than answered up front — the author's framing, left as is.
 
 ## Workstream B — Voice pass v2 (the AI-isms)
 
