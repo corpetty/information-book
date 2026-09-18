@@ -55,6 +55,21 @@
       "id": "machine-learning",
       "label": "Machine learning",
       "summary": "Technical literature on how large language models are trained, tuned, and fail: RLHF, sycophancy, model collapse. The evidence base for the LLM-as-selection-surface argument."
+    },
+    {
+      "id": "attention-economy",
+      "label": "Attention economy",
+      "summary": "The scarcity of attention as the organizing constraint of an information-rich world, and the industries built to capture and sell it."
+    },
+    {
+      "id": "empirical-social-media",
+      "label": "Empirical social-media research",
+      "summary": "Field and experimental studies of what actually spreads online and why: diffusion, moral-emotional content, algorithmic effects, and misinformation."
+    },
+    {
+      "id": "institutional-analysis",
+      "label": "Institutional analysis and governance",
+      "summary": "How collective institutions are designed, sustained, captured, and made legible: commons governance and state simplification."
     }
   ]
 }

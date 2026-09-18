@@ -155,6 +155,116 @@
       "id": "ilia-shumailov",
       "label": "Ilia Shumailov",
       "summary": "Lead author of the model-collapse study on training models on generated data."
+    },
+    {
+      "id": "herbert-simon",
+      "label": "Herbert A. Simon",
+      "summary": "Economist and cognitive scientist; origin of the attention-scarcity framing of information."
+    },
+    {
+      "id": "tim-wu",
+      "label": "Tim Wu",
+      "summary": "Legal scholar; historian of the advertising-funded attention industries."
+    },
+    {
+      "id": "shoshana-zuboff",
+      "label": "Shoshana Zuboff",
+      "summary": "Scholar of surveillance capitalism and behavioral-data markets."
+    },
+    {
+      "id": "kevin-zollman",
+      "label": "Kevin J. S. Zollman",
+      "summary": "Philosopher of science; formal models of epistemic-community communication structure."
+    },
+    {
+      "id": "damon-centola",
+      "label": "Damon Centola",
+      "summary": "Network scientist; complex contagion and behavior spread in social networks."
+    },
+    {
+      "id": "andrea-baronchelli",
+      "label": "Andrea Baronchelli",
+      "summary": "Complexity scientist; collective dynamics and category formation."
+    },
+    {
+      "id": "soroush-vosoughi",
+      "label": "Soroush Vosoughi",
+      "summary": "Computational social scientist; large-scale study of true and false news diffusion."
+    },
+    {
+      "id": "deb-roy",
+      "label": "Deb Roy",
+      "summary": "Media scientist; co-author on the spread of true and false news."
+    },
+    {
+      "id": "sinan-aral",
+      "label": "Sinan Aral",
+      "summary": "Network scientist; co-author on the spread of true and false news."
+    },
+    {
+      "id": "william-brady",
+      "label": "William J. Brady",
+      "summary": "Social psychologist; moral-emotional language and diffusion."
+    },
+    {
+      "id": "levi-boxell",
+      "label": "Levi Boxell",
+      "summary": "Economist; empirical work on internet use and political polarization."
+    },
+    {
+      "id": "matthew-gentzkow",
+      "label": "Matthew Gentzkow",
+      "summary": "Economist; media economics and polarization."
+    },
+    {
+      "id": "jesse-shapiro",
+      "label": "Jesse M. Shapiro",
+      "summary": "Economist; media economics and polarization."
+    },
+    {
+      "id": "andrew-guess",
+      "label": "Andrew M. Guess",
+      "summary": "Political scientist; field experiments on social-media feed algorithms."
+    },
+    {
+      "id": "brendan-nyhan",
+      "label": "Brendan Nyhan",
+      "summary": "Political scientist; misperceptions and exposure to like-minded sources."
+    },
+    {
+      "id": "gordon-pennycook",
+      "label": "Gordon Pennycook",
+      "summary": "Cognitive scientist; accuracy nudges and analytic thinking in misinformation."
+    },
+    {
+      "id": "harry-collins",
+      "label": "Harry Collins",
+      "summary": "Sociologist of science; interactional and contributory expertise."
+    },
+    {
+      "id": "robert-evans",
+      "label": "Robert Evans",
+      "summary": "Sociologist of science; co-author on the theory of expertise."
+    },
+    {
+      "id": "elinor-ostrom",
+      "label": "Elinor Ostrom",
+      "summary": "Political economist; design principles for governing common-pool resources."
+    },
+    {
+      "id": "james-scott",
+      "label": "James C. Scott",
+      "summary": "Political scientist and anthropologist; state legibility and high-modernist simplification."
+    },
+    {
+      "id": "penelope-abernathy",
+      "label": "Penelope Muse Abernathy",
+      "summary": "Journalism scholar; documented the collapse of US local news."
+    },
+    {
+      "id": "douglas-guilbeault",
+      "label": "Douglas Guilbeault",
+      "summary": "Computational social scientist; scale-induced category convergence and collective dynamics."
     }
   ],
   "sources": [
@@ -636,6 +746,249 @@
       "tradition": "machine-learning",
       "summary": "Model collapse: models trained on data produced by earlier models degrade across generations as the tails of the distribution are lost. The mechanism behind Ch 11's claim that objective capture is self-reinforcing across model generations.",
       "engagement": "cited in Ch 11 for the self-reinforcing dynamic of objective capture and manufactured content in the training corpus",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "simon-attention-scarcity",
+      "label": "Designing Organizations for an Information-Rich World",
+      "kind": "paper",
+      "author": "herbert-simon",
+      "year": 1971,
+      "tradition": "attention-economy",
+      "summary": "Origin of \"a wealth of information creates a poverty of attention.\" Attention, not information, is the scarce resource once information is abundant.",
+      "engagement": "Bears on transport-collapse-shifts-constraint, the receiver budget (Ch 3), and cost-shifting (Ch 10). Supports: the founding statement that attention becomes the binding constraint. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art",
+        "evidence"
+      ]
+    },
+    {
+      "id": "attention-merchants",
+      "label": "The Attention Merchants",
+      "kind": "book",
+      "author": "tim-wu",
+      "year": 2016,
+      "tradition": "attention-economy",
+      "summary": "A 150-year history of the industries that harvest and resell human attention, from penny papers to social feeds.",
+      "engagement": "Bears on engagement-gates-reward-truth-loss and self-capture (Ch 10). Supports the engagement-as-business-model claim; pressure-tests the \"no villain\" framing with a long record of deliberate design. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "surveillance-capitalism",
+      "label": "The Age of Surveillance Capitalism",
+      "kind": "book",
+      "author": "shoshana-zuboff",
+      "year": 2019,
+      "tradition": "attention-economy",
+      "summary": "Behavioral surplus, prediction products, and the market that trades in them. The economic logic behind data-driven platforms.",
+      "engagement": "Bears on observation-cheap-defaults-breed-surveillance and captured-generator-decides-truth. Supports the industry claim; pressure-tests the \"default, not choice\" framing by arguing the surveillance is engineered. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "zollman-communication-structure",
+      "label": "The Communication Structure of Epistemic Communities",
+      "kind": "paper",
+      "author": "kevin-zollman",
+      "year": 2007,
+      "tradition": "network-epistemology",
+      "summary": "Formal models showing that denser communication among inquirers can lower a community's accuracy (the Zollman effect); with \"The Epistemic Benefit of Transient Diversity\" (Erkenntnis, 2010) on why premature consensus hurts.",
+      "engagement": "Bears on Chapter 9's Zollman effect (currently cited only via O'Connor & Weatherall) and integration-needs-agent-and-infrastructure. Supports: the primary source for a load-bearing borrowed result. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art",
+        "evidence"
+      ]
+    },
+    {
+      "id": "centola-complex-contagion",
+      "label": "How Behavior Spreads / The Spread of Behavior in an Online Social Network Experiment",
+      "kind": "book",
+      "author": "damon-centola",
+      "year": 2018,
+      "tradition": "empirical-social-media",
+      "summary": "Complex contagions (costly or controversial behaviors) need reinforcement from multiple contacts to spread, unlike simple contagions. Includes the 2010 Science online-network experiment.",
+      "engagement": "Bears on complexity-virality-inverse, complexity-ceiling-by-network-size, and Chapter 9's sparse-bridges prescription. Supports the complexity/spread inverse; pressure-tests \"bridges sparse enough\" — complex ideas need wide, redundant bridges, not thin ones. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art",
+        "evidence"
+      ]
+    },
+    {
+      "id": "guilbeault-category-convergence",
+      "label": "Experimental evidence for scale-induced category convergence across populations",
+      "kind": "paper",
+      "author": "douglas-guilbeault",
+      "coauthors": [
+        "andrea-baronchelli",
+        "damon-centola"
+      ],
+      "year": 2021,
+      "tradition": "empirical-social-media",
+      "summary": "Larger populations independently converge on the same category systems; scale drives convergence rather than fragmentation.",
+      "engagement": "Bears on compression-widens-latitude and myth-reach-determinacy-tradeoff. Pressure-tests: scale produces convergence of categories, the reverse sign of the dilution loop, which the book must answer. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art",
+        "evidence"
+      ]
+    },
+    {
+      "id": "spread-of-true-false-news",
+      "label": "The spread of true and false news online",
+      "kind": "paper",
+      "author": "soroush-vosoughi",
+      "coauthors": [
+        "deb-roy",
+        "sinan-aral"
+      ],
+      "year": 2018,
+      "tradition": "empirical-social-media",
+      "summary": "A study of ~126,000 cascades on Twitter: false news spread farther, faster, and more broadly than true news, driven by novelty and by emotions of surprise and disgust.",
+      "engagement": "Bears on engagement-gates-reward-truth-loss, selection-picks-the-regime, and engagement-floor-of-raw-emotion. Supports (falsehood diffuses farther/faster; novelty plus surprise and disgust); pressure-tests the gate locus, since humans, not bots, did the spreading. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "brady-moralized-content",
+      "label": "Emotion shapes the diffusion of moralized content in social networks",
+      "kind": "paper",
+      "author": "william-brady",
+      "year": 2017,
+      "tradition": "empirical-social-media",
+      "summary": "Each moral-emotional word in a message raised its retweet rate, and diffusion stayed largely within ideological in-groups.",
+      "engagement": "Bears on engagement-floor-of-raw-emotion, floor-is-aggregation-property, and the unify-and-fragment dynamic. Supports: moral-emotional language raises spread and stays in-group. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "boxell-internet-polarization",
+      "label": "Greater Internet use is not associated with faster growth in political polarization among US demographic groups",
+      "kind": "paper",
+      "author": "levi-boxell",
+      "coauthors": [
+        "matthew-gentzkow",
+        "jesse-shapiro"
+      ],
+      "year": 2017,
+      "tradition": "empirical-social-media",
+      "summary": "Across US demographic groups, polarization grew fastest among those least likely to use the internet and social media.",
+      "engagement": "Bears on timescale-distinction-mercier-book and the generational form of the engagement floor. Pressure-tests: the cohort with least exposure polarized fastest, against a simple medium-causes-polarization story. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "guess-feed-algorithms",
+      "label": "How do social media feed algorithms affect attitudes and behavior in an election campaign?",
+      "kind": "paper",
+      "author": "andrew-guess",
+      "year": 2023,
+      "tradition": "empirical-social-media",
+      "summary": "A 2020-election field experiment: switching users from algorithmic to chronological feeds changed exposure but not downstream attitudes over three months.",
+      "engagement": "Bears on adding-channel-can-accelerate-divergence, timescale-distinction, and medium-attached-to-every-gate. Pressure-tests short-run gate-tuning effects; read correctly it supports the timescale distinction, since three-month nulls say nothing about decades. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "nyhan-like-minded",
+      "label": "Like-minded sources on Facebook are prevalent but not polarizing",
+      "kind": "paper",
+      "author": "brendan-nyhan",
+      "year": 2023,
+      "tradition": "empirical-social-media",
+      "summary": "Reducing exposure to like-minded sources on Facebook did not measurably change polarization over the study window.",
+      "engagement": "Bears on adding-channel-can-accelerate-divergence and the timescale-distinction. Pressure-tests short-run effects; supports the timescale distinction that short experiments cannot settle long-run dynamics. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "pennycook-accuracy-nudge",
+      "label": "Shifting attention to accuracy can reduce misinformation online",
+      "kind": "paper",
+      "author": "gordon-pennycook",
+      "year": 2021,
+      "tradition": "empirical-social-media",
+      "summary": "People share misinformation partly because attention is on engagement, not accuracy; a simple accuracy prompt improved sharing quality. With \"Lazy, not biased\" (Cognition, 2019) on analytic thinking.",
+      "engagement": "Bears on demand-side-filter-on-integration and floor-is-aggregation-property. Supports the preference/sharing disconnect; pressure-tests the justification-market reading, since the driver may be inattention rather than motivation. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "rethinking-expertise",
+      "label": "Rethinking Expertise",
+      "kind": "book",
+      "author": "harry-collins",
+      "coauthors": [
+        "robert-evans"
+      ],
+      "year": 2007,
+      "tradition": "expertise-research",
+      "summary": "A taxonomy of expertise, including interactional expertise: fluency in a field's language acquired without contributory practice.",
+      "engagement": "Bears on bridge-node-is-versatile-specialist and Chapter 8's tacit-knowledge argument. Pressure-tests: interactional expertise can bridge without contributory depth; supports the training-function claim that tacit knowledge needs apprenticeship. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "governing-the-commons",
+      "label": "Governing the Commons",
+      "kind": "book",
+      "author": "elinor-ostrom",
+      "year": 1990,
+      "tradition": "institutional-analysis",
+      "summary": "Design principles for durable common-pool-resource institutions: clear boundaries, monitoring, graduated sanctions, nested governance, low-cost exit.",
+      "engagement": "Bears on loop-outcome-set-by-capture-resistance and Chapter 12's design principles. Supports: the prior literature on capture-resistant institutional design the chapter reinvents. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "seeing-like-a-state",
+      "label": "Seeing Like a State",
+      "kind": "book",
+      "author": "james-scott",
+      "year": 1998,
+      "tradition": "institutional-analysis",
+      "summary": "How states impose legibility by simplifying complex local reality, and how high-modernist simplification fails.",
+      "engagement": "Bears on bureaucracy-downstream-of-myth and Chapter 8. Pressure-tests: bureaucracy as the compressor (legibility) rather than the key-restorer, which the book's narrow stipulation must answer. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "news-deserts",
+      "label": "The Expanding News Desert",
+      "kind": "report",
+      "author": "penelope-abernathy",
+      "year": 2018,
+      "tradition": "attention-economy",
+      "summary": "Documented the closure of more than 2,000 US newspapers since 2005, with the Medill State of Local News reports (2022- ) continuing the count.",
+      "engagement": "Bears on Chapter 10's local-journalism-collapse claim and the \"preservation mostly held\" softening. Supports with numbers: the measured scale of local-news collapse. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
       "availability": "external",
       "tags": [
         "evidence"
