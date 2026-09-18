@@ -233,6 +233,7 @@ plugins:
     options:
       links:
         The book on GitHub: https://github.com/corpetty/information-book
+        Bayesian Persuasion: https://bayesianpersuasion.com
   - source: github:quartz-community/recent-notes
     enabled: false
   - source: github:quartz-community/spacer
