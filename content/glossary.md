@@ -277,7 +277,7 @@ A design rule for bridge institutions: build them to work even when trust is *pa
 The structural counter to out-competition: an institution can't survive if its revenue depends on winning the free-engagement market. The survivable shapes fund it from *outside* that market: endowments, public funding, member dues, public-goods mechanisms. See [[infrastructure-for-integration|Chapter 12]]; graph node [[funding-decoupling]].
 
 ### Survival, not victory
-The reframe at the heart of Part IV: integration institutions don't need to *beat* the engagement machine, only to keep doing preserve-and-retrain *alongside* it without being eroded. Trying to win, by being more engaging, is exactly how they get captured. See [[infrastructure-for-integration|Chapter 12]]; graph node [[survival-not-victory]].
+The reframe at the heart of Part IV: integration institutions don't need to *beat* the engagement machine, only to keep doing preserve-and-retrain *alongside* it without being eroded. Trying to win, by being more engaging, is how they get captured. See [[infrastructure-for-integration|Chapter 12]]; graph node [[survival-not-victory]].
 
 ### Work of generations
 Institutions of integration are civilization-scale investments on the timescale of universities, journals, and legal systems, not product launches. The captured equilibrium built itself in two decades; what holds against it has to be funded and protected for at least as long. See [[infrastructure-for-integration|Chapter 12]]; graph node [[work-of-generations]].

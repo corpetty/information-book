@@ -10,7 +10,7 @@ tags:
   - information
 ---
 
-Every idea this book is about has to land somewhere: in an actual person, who has only so many hours to take it in. The limit is so obvious it's easy to walk past. But there is a hard ceiling on how much any of us can absorb in a lifetime and a softer one on how much we can absorb in a day, and the one hopeful thing about them is that the daily ceiling can be raised. This chapter is about where the two ceilings come from and what raising one of them takes.
+Every idea this book is about has to land somewhere: in an actual person, who has only so many hours to take it in. The limit is so obvious it's easy to walk past. But there is a hard ceiling on how much any of us can absorb in a lifetime and a softer one on how much we can absorb in a day, and the one hopeful thing about them is that the daily ceiling can be raised. This is about where the two ceilings come from and what raising one of them takes.
 
 ## A tablespoon of weeks
 

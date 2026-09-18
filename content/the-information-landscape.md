@@ -10,7 +10,7 @@ tags:
   - information
 ---
 
-If you've ever watched a careful finding get flattened into a headline, and then into a meme that means almost the opposite, this is the map of how that happens. I drew the diagram below years ago to trace the path an idea takes from the world to a person. I still think it's mostly right. It was missing a piece, and the back half of this chapter is about the piece. No special background needed; I'll build each part as we go.
+If you've ever watched a careful finding get flattened into a headline, and then into a meme that means almost the opposite, this is the map of how that happens. I drew the diagram below years ago to trace the path an idea takes from the world to a person. I still think it's mostly right. It was missing a piece, and the back half here is about the piece. No special background needed; I'll build each part as we go.
 
 ## The diagram
 
@@ -94,7 +94,7 @@ Each gate applies its own test, and the tests are local and uncoordinated. **Sel
 
 At every stage both run. Content has to pass the gate, then fit the next medium. Sometimes it's reshaped in advance to pass the gate, which is what advocacy and PR do; sometimes the two happen at once. The point is both are operating, and the output of each stage is a small fraction of the input, in heavily transformed form. Model transport alone and you picture a lossy but continuous flow. Add selection and you picture a series of bottlenecks, each discarding most of what it receives, and the second picture is the right one.
 
-A second consequence: the criteria at each gate are *tunable*. You can change what gets measured by changing funding, what gets published by changing review criteria, what becomes news by changing editorial standards, what becomes a meme by changing platform mechanics. The criteria are institutional choices embedded in technologies and incentives, not laws of nature, and most of the prescriptive work later in the book is downstream of that one observation. If the gates are choices, the gates can be redesigned. The question is who does the redesigning, with what criteria, in what medium.
+A second consequence: the criteria at each gate are *tunable*. You can change what gets measured by changing funding, what gets published by changing review criteria, what becomes news by changing editorial standards, what becomes a meme by changing platform mechanics. The criteria are institutional choices embedded in technologies and incentives, not laws of nature, and most of the prescriptive work later is downstream of that one observation. If the gates are choices, the gates can be redesigned. The question is who does the redesigning, with what criteria, in what medium.
 
 ## Where the medium fits
 

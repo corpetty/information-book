@@ -11,7 +11,7 @@ tags:
   - information
 ---
 
-A professional camera with full manual controls can take almost any photograph you can imagine, but hand it to someone who has never used one and they'll come back with a blurry mess. A phone camera in "auto" gets a good-enough shot for almost anybody, instantly, but try to do something unusual with it and you can't, because the choices were already made for you. More control, harder to use. Easier to use, less control. That is the whole trade-off, and once you notice it you see it everywhere: in software, churches, political parties, science books, and the law. The rest of this chapter is five walks through that one shape.
+A professional camera with full manual controls can take almost any photograph you can imagine, but hand it to someone who has never used one and they'll come back with a blurry mess. A phone camera in "auto" gets a good-enough shot for almost anybody, instantly, but try to do something unusual with it and you can't, because the choices were already made for you. More control, harder to use. Easier to use, less control. That is the whole trade-off, and once you notice it you see it everywhere: in software, churches, political parties, science books, and the law. The rest is five walks through that one shape.
 
 ## Software stratification
 
@@ -83,7 +83,7 @@ That is the same curve `matplotlib` and `seaborn` sit on. The Latin Mass is `mat
 
 Parties live on the curve too, and its shape drives much of what looks like political dysfunction. A broad-tent party in a winner-take-all system has to assemble a plurality out of voters who agree on little except who they don't want to win, so it flattens its platform: it avoids specific commitments any sub-coalition would reject and emphasizes the few things they share. High access, low optionality. A narrow party in a proportional system has the opposite shape: it only has to clear a threshold to enter coalition talks, so it can afford a detailed, internally consistent platform for a specific constituency. Low access, high optionality. That the electoral system drives this split is the substance of Duverger's law: plurality rules tend toward a few broad parties, proportional rules toward many narrow ones.
 
-The trade is visible in real time. When a broad-tent party takes a sharp position on a divisive issue, part of the coalition peels off; when a narrow party broadens its appeal, its core defects. No major coalition party in a winner-take-all system has solved this; they all spend their effort managing it. Hold onto the political version, because later, when I argue for institutions that move precise ideas between groups who don't share a starting point, this is the wall they run into: broad coalitions survive by stripping out exactly the precision that integration needs.
+The trade is visible in real time. When a broad-tent party takes a sharp position on a divisive issue, part of the coalition peels off; when a narrow party broadens its appeal, its core defects. No major coalition party in a winner-take-all system has solved this; they all spend their effort managing it. Hold onto the political version, because later, when I argue for institutions that move precise ideas between groups who don't share a starting point, this is the wall they run into: broad coalitions survive by stripping out the precision that integration needs.
 
 ## Scientific popularization
 
