@@ -52,10 +52,10 @@ Different media cultivate different appetites over time: one that rewards shallo
 The mental equipment a receiver must already hold to decode an idea correctly: vocabulary, frameworks, contextual knowledge. An idea is "complex," in the book's sense, when its preconditions are large or rare. Also called the *outer message* (below). See [[complexity-virality-tradeoff|Chapter 5]].
 
 ### The three layers of a message
-Hofstadter's model, adapted: every message has a *frame* layer (this-is-a-message), an *outer* layer (how to decode), and an *inner* layer (the content). The load-bearing move: the outer message is what the book otherwise calls *preconditions*, and it comes mostly from the medium. See [[complexity-virality-tradeoff|Chapter 5]].
+Hofstadter's model, adapted: every message has a *frame* layer (this-is-a-message), an *outer* layer (how to decode), and an *inner* layer (the content). The load-bearing move: the outer message is what the book otherwise calls *preconditions*, and it comes mostly from the medium. See [[complexity-virality-tradeoff|Chapter 5]]; graph node [[three-layer-message]].
 
 ### Outer message / decoding key
-The decoding instructions that come, or fail to come, with a message: what tells you *how* to read the inner message. "Decoding key" is the book's most frequent name for it. Most pipeline distortion is loss of the outer message, not the inner one: the claim survives transit; the key it needed doesn't. See [[complexity-virality-tradeoff|Chapter 5]].
+The decoding instructions that come, or fail to come, with a message: what tells you *how* to read the inner message. "Decoding key" is the book's most frequent name for it. Most pipeline distortion is loss of the outer message, not the inner one: the claim survives transit; the key it needed doesn't. See [[complexity-virality-tradeoff|Chapter 5]]; graph node [[three-layer-message]].
 
 ### Receiver budget
 The hours a reader has for taking in new material, and what those hours can carry: a tablespoon of weeks, a few focused hours in each. The hours are fixed; what each hour carries grows with structure the reader has already built. Finite, but trainable. See [[info-time-limit|Chapter 3]]; graph node [[receiver-budget]].
@@ -112,6 +112,9 @@ The transport collapse's second blade. Agreement states used to carry inertia (a
 ### Algorithm as selection engine
 A recommendation algorithm isn't lossy transport; it's a selection gate with adjustable weights. That makes "who tunes the gate?" a literal, operational question, and turns a few companies' criteria into everyone's. See [[selection-as-other-engine|Chapter 5b]]; graph node [[algorithm-as-selection-engine]].
 
+### Frozen selection
+The medium seen as selection performed once, in advance, and baked into the substrate until it stops looking like a choice. A 280-character limit was somebody's decision; to everyone living inside it, it is simply the shape of the world. That is what makes the medium the highest-leverage and least visible selection surface: a variant the option space cannot hold never has to be suppressed, because it never forms. See [[selection-as-other-engine|Chapter 5b]].
+
 ### Manipulation surface
 What an attacker can exploit. In the pure-transport view it grows with network size; in the fuller view it is the *tunable criteria* of the selection gates, the more dangerous version, because the weights can be set on purpose. See [[selection-as-other-engine|Chapter 5b]]; graph node [[manipulation-surface]].
 
@@ -119,7 +122,7 @@ What an attacker can exploit. In the pure-transport view it grows with network s
 The null model for spread, what propagation looks like with *no* selection: random copying plus rich-get-richer. Most variants follow it; selection is what you detect as a *departure* from it. See [[selection-as-other-engine|Chapter 5b]]; graph node [[neutral-drift-baseline]].
 
 ### False consensus among rational agents
-O'Connor and Weatherall's result: people who each weigh evidence *correctly* can still settle together on a false belief, because the failure lives in the network's structure, not in individual error. See [[selection-as-other-engine|Chapter 5b]]; source [[misinformation-age|The Misinformation Age]].
+O'Connor and Weatherall's result: people who each weigh evidence *correctly* can still settle together on a false belief, because the failure lives in the network's structure, not in individual error. See [[selection-as-other-engine|Chapter 5b]]; source [[misinformation-age|The Misinformation Age]]; graph node [[false-consensus-rational-agents]].
 
 ### Credibility weighting
 The rational, unavoidable habit of trusting evidence more when you trust its source, since no one can check everything first-hand. Also the seam propaganda exploits: manufacture or buy credibility and the weighting carries false evidence as readily as true. See [[selection-as-other-engine|Chapter 5b]]; graph node [[credibility-weighting]].
@@ -133,7 +136,7 @@ Adopting a belief because your peers hold it rather than because of the evidence
 The cognitive defenses people use to screen incoming claims for plausibility and source reliability. Mercier sharpens it into *open vigilance*. See [[emotional-memetics|Chapter 7]]; graph node [[epistemic-vigilance]].
 
 ### Open vigilance (Mercier)
-Mercier's correction to the "people are gullible" story: we are *both* open to useful information *and* on guard against unreliable sources, evolved hand-in-hand. If anything we err cautious, more often failing to trust something we should than swallowing something we shouldn't. See [[emotional-memetics|Chapter 7]]; source [[not-born-yesterday|Not Born Yesterday]].
+Mercier's correction to the "people are gullible" story: we are *both* open to useful information *and* on guard against unreliable sources, evolved hand-in-hand. If anything we err cautious, more often failing to trust something we should than swallowing something we shouldn't. See [[emotional-memetics|Chapter 7]]; source [[not-born-yesterday|Not Born Yesterday]]; graph node [[open-vigilance]].
 
 ### Reflective vs. intuitive belief (Sperber)
 Two ways to hold a belief. *Intuitive* beliefs are wired into your others and drive what you do; *reflective* beliefs are held at arm's length, stated and shared as identity signals but inert in action. Much of what spreads online is held reflectively, which is why people share things they'd never act on. See [[emotional-memetics|Chapter 7]]; graph node [[reflective-vs-intuitive-belief]].
@@ -212,6 +215,9 @@ Two sources. *External*: an outside actor learns a gate's criteria and games the
 ### Consumer-key vs. surface capture
 Why some captures are far worse. Capturing something that installs decoding equipment *in people's heads or models* (what they're taught, what an AI is trained on and for) damages the consumer and can't easily be un-installed. Capturing something that only shapes the *surface* a person meets damages only the surface. The first kind is the dangerous kind. See [[capture-taxonomy|the capture taxonomy]]; graph node [[consumer-key-vs-surface-capture]].
 
+### The seven capture surfaces
+The substrates capture can act on, unified from three chapters and ordered roughly most to least recoverable: *deployment configuration* and *gate-criteria* (the cheapest to re-tune), *preservation archive* and *receiver training* (Chapter 8), and *training corpus* and *training objective* (Chapter 11, the objective the worst of all because it self-reinforces across model generations), plus *option space* (frozen at design time, capture by absence). The recovery hierarchy is the operational point: defend the consumer-key and self-reinforcing surfaces first. See [[capture-taxonomy|the capture taxonomy]].
+
 ## AI as a new kind of node
 
 ### Selection-design surface
@@ -262,7 +268,7 @@ The hardest of Chapter 9's operational problems: a curation institution earns tr
 What the book's narrow "bureaucracy" splits into. *Preservation* keeps the full, un-compressed form alive somewhere; *training* re-installs the ability to decode it in people. They work as a pump (preservation holds the pressure, training releases it), so either alone fails. See [[preservation-vs-training|Chapter 8]]; graph node [[preservation-vs-training-pair]].
 
 ### Capture asymmetry
-When these institutions are captured, the *training* side does more damage and heals more slowly than *preservation*: a captured archive holds a tilted copy you can re-check elsewhere, while captured training tilts the *readers themselves*, and a re-tuned readership reads even good evidence through the bad key. So training is the half to defend first. See [[preservation-vs-training|Chapter 8]].
+When these institutions are captured, the *training* side does more damage and heals more slowly than *preservation*: a captured archive holds a tilted copy you can re-check elsewhere, while captured training tilts the *readers themselves*, and a re-tuned readership reads even good evidence through the bad key. So training is the half to defend first. See [[preservation-vs-training|Chapter 8]]; graph node [[capture-asymmetry]].
 
 ### Survivable polarization
 A design rule for bridge institutions: build them to work even when trust is *partly* broken, instead of needing it whole. In practice: decisions a skeptic can audit, reputation that survives partial distrust, real experts inside the institution, and several independent paths to the same answer. See [[infrastructure-for-integration|Chapter 12]]; graph node [[survivable-polarization]].
