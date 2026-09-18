@@ -51,18 +51,18 @@ numbered spine while nine chapters lean on them. The structure report
   already carry their cores and have diverged past the notes (Ch 9 now argues a
   three-leg prescription to the note's two), so folding would lose the
   working-through and orphan claim anchors.
-- [ ] **(rec)** Make two interludes: *Myths at Scale* between Ch 7 and Ch 8
+- [x] **(done — Phase 122)** Make two interludes: *Myths at Scale* between Ch 7 and Ch 8
   (four chapters gloss the dilution loop in a parenthetical; none argues it),
   and *Capture* between Ch 11 and Ch 12 (only Ch 12 uses the full taxonomy; the
   LLM surfaces don't exist before Ch 11). Promote the consumer-key-vs-surface
   principle into Ch 8 so Chs 5–9's forward references resolve to a chapter.
-- [ ] **(rec)** Promote `intersubjective-truth` to a numbered chapter (8b,
+- [x] **(done — Phase 122)** Promote `intersubjective-truth` to a numbered chapter (8b,
   "Truth the Network Makes"). It carries the book's second thesis and nine
   chapters defer to it rather than restate it; an appendix can't hold a thesis.
-- [ ] *Medium and manipulation*: interlude after 5b, or fold its two remaining
+- [x] **(done — Phase 122; chose the interlude)** *Medium and manipulation*: interlude after 5b, or fold its two remaining
   levers (capacity, want) into 5b's option-space section. Author's call; the
   fold is cheaper, the interlude is cleaner.
-- [ ] Resulting order: 1 · 2 · 3 · 4 · 5 · 5b · [Medium] · 5c · 6 · 7 ·
+- [x] **(done — Phase 122)** Resulting order: 1 · 2 · 3 · 4 · 5 · 5b · [Medium] · 5c · 6 · 7 ·
   [Myths] · 8 · 8b · 9 · 10 · 11 · [Capture] · 12. Update `data/chapters.json`,
   `data/notes.json`, prev/next nav, `outline.md`, and the talk's act map.
 
@@ -210,20 +210,20 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   note-properties block now show them, and `[[alias]]` links resolve).
   Still to write: the seven `cases/` pages Ch 6 needs, and descriptions for
   `general-theme.md` and `outline.md` if they stay published.
-- [ ] **D2. First-use links.** ~250 term–file pairs where a chapter uses a
+- [x] **D2. First-use links.** *(done — Phase 124; 113 links added, one per node-term per file, bold anchors skipped for drift safety.)* ~250 term–file pairs where a chapter uses a
   term that has a `concepts/`, `cases/`, `mechanisms/`, or `questions/` page
   and never links it (`make lint-prose VERBOSE=1` lists them per file).
   Worst: `selection` and `transport` (20 and 14 files), `compressed-form`
   (15), `memetic-fitness` (12), `self-vs-external-capture` (9). Rule: link the
   first use in each chapter, never the rest. Chapters 10, 11, 12 link zero of
   the concept pages they define.
-- [ ] **D3. Sources named in prose, unlinked.** Ch 5b names nine works and
+- [x] **D3. Sources named in prose, unlinked.** *(done — Phase 125; the chapter rewrites had already linked all but one, Harari/Nexus in the intersubjective note, now fixed.)* Ch 5b names nine works and
   links none of their citation pages; Ch 9 names Nguyen and Zollman; Ch 6
   credits Postman's pseudo-context through other notes instead of
   `[[amusing-ourselves-to-death]]`. The intersubjective note never links the
   six social-ontology sources it says are "unengaged" (they're in
   `sources.json` with pages).
-- [ ] **D4. Glossary.** Turn bold headwords into `###` headings so search and
+- [x] **D4. Glossary.** *(done — Phases 120 + 126; ### headings, See pointers, wrong-home and handle-ability fixes in 120; five graph-node links and the frozen-selection and seven-capture-surfaces entries in 126.)* Turn bold headwords into `###` headings so search and
   the TOC can anchor on them; add the missing "See" pointers (12 entries) and
   fix the 8 that point to the wrong home (superspreader and credibility
   weighting → "Ch 10", which never discusses them); link each entry to its
