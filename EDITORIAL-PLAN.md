@@ -159,12 +159,13 @@ the rest.
 The evidence layer is the biggest gap relative to the book's ambition. Full
 detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
 
-- [ ] **C1. Gap pass (cheapest, highest value).** Seven unbacked claims point
-  at sources that are *already extracted* (`misinformation-age`,
-  `not-born-yesterday`, `psychology-of-virality`, `amusing-ourselves-to-death`,
-  `info-evolution-social-media`); they were promoted after the extraction pass.
-  `make catalog`, then re-run the extraction agent over those five PDFs for
-  the seven claims, then `make extract-build`.
+- [x] **C1. Gap pass.** *(done — Phase 121.)* The seven claims promoted after
+  the original extraction were backed by re-running the gap extraction over the
+  five already-extracted sources (`misinformation-age`, `not-born-yesterday`,
+  `psychology-of-virality`, `amusing-ourselves-to-death`,
+  `info-evolution-social-media`); the `*-claimgap.jsonl` files in
+  `data/interpretive/` feed the aggregate, and source-backed claims went
+  16 → 23 of the active set.
 - [ ] **C2. Extract the free sources.** `magnifica-humanitas` (open text, 48
   mentions, backs a tension node), the three author-owned posts
   (`democratization-paradox`, `double-edged-sword-of-expertise`,
@@ -205,6 +206,15 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   primary. Ch 11: Shumailov et al. 2024 (model collapse), Sharma et al. 2023
   (sycophancy); expand "RLHF". Ch 7: verify the Mercier p. 254 and Sperber
   p. 152 quotes (not in the extraction); add Sperber to `sources.json`.
+
+  **Partial (no-source sub-items cleared):** the climate-reporting claim is gone
+  (handled in the rewrites); RLHF is expanded on first use and Shumailov 2024 /
+  Sharma 2023 are cited in Ch 11; the Vatican II passage is already hedged in
+  Ch 4; and Sperber's *Intuitive and Reflective Beliefs* (1997) is now a source,
+  cited in Ch 7 and backing the reflective/intuitive concept. **Still blocked on
+  the papers:** Rosenthal 1979, Ioannidis 2005 (Ch 1); the five Ch 2 case papers;
+  Duverger/Downs (Ch 4); a primary for each of the three Ch 6 case pages; and the
+  page-verified Mercier p. 254 / Sperber p. 152 quotes.
 - [x] **C5. Factual corrections — verified done in the rewrites.** Each flagged
   claim was checked in the current text and is fixed: the invented numbers are
   gone or hedged (Ch 8 "twenty or thirty years" removed; Ch 9 "ten specialists

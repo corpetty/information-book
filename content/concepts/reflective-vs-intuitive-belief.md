@@ -20,7 +20,7 @@ Dan Sperber's distinction between two ways a person can hold a belief. *Intuitiv
 
 - **Defined in:** [[emotional-memetics|Emotional Memetics As The Floor]]
 - **Discussed in:** [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]], [[truth-compression-and-when-each-wins|Ch 5c — Truth, Compression, and When Each Wins]]
-- **Evidenced by:** [[not-born-yesterday|Not Born Yesterday]]
+- **Evidenced by:** [[not-born-yesterday|Not Born Yesterday]], [[sperber-intuitive-reflective|Intuitive and Reflective Beliefs]]
 
 <em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
 

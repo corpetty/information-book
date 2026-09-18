@@ -265,6 +265,11 @@
       "id": "douglas-guilbeault",
       "label": "Douglas Guilbeault",
       "summary": "Computational social scientist; scale-induced category convergence and collective dynamics."
+    },
+    {
+      "id": "dan-sperber",
+      "label": "Dan Sperber",
+      "summary": "Cognitive and social scientist; the intuitive/reflective belief distinction and (with Mercier and others) epistemic vigilance."
     }
   ],
   "sources": [
@@ -991,6 +996,21 @@
       "engagement": "Bears on Chapter 10's local-journalism-collapse claim and the \"preservation mostly held\" softening. Supports with numbers: the measured scale of local-news collapse. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
       "availability": "external",
       "tags": [
+        "evidence"
+      ]
+    },
+    {
+      "id": "sperber-intuitive-reflective",
+      "label": "Intuitive and Reflective Beliefs",
+      "kind": "paper",
+      "author": "dan-sperber",
+      "year": 1997,
+      "tradition": "network-epistemology",
+      "summary": "Sperber's distinction between intuitive beliefs (wired into one's other beliefs, driving action) and reflective beliefs (held at arm's length, stated and shared but often inert in action). Chapter 7's account of what the floor spreads rests on it: most alarming material is forwarded as a reflective belief, a coalition-marker, not an intuitive one that moves behavior.",
+      "engagement": "Cited in Ch 7 for the reflective/intuitive split that explains why people share things they never act on. Page-level quote verification pending the source text.",
+      "availability": "external",
+      "tags": [
+        "prior-art",
         "evidence"
       ]
     }
