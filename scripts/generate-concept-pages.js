@@ -216,6 +216,14 @@ function renderBody(node, cfg) {
     lines.push('');
   }
 
+  // Optional external URL: a concept published in full somewhere off-site
+  // (e.g. a companion essay). Rendered as a plain outbound link so the
+  // landing page points at the full text.
+  if (node.props?.url) {
+    lines.push(`**Read it in full:** [${node.label}](${node.props.url})`);
+    lines.push('');
+  }
+
   // Questions carry a status + working answer worth surfacing prominently.
   if (node.type === 'Question') {
     if (node.props?.status) {

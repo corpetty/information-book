@@ -270,10 +270,15 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   (Ch 6), GDPR / plain-language law already exists; common-law courts and
   Stack Overflow (Ch 9/12) need pages so the five "worked examples" are
   navigable.
-- [ ] **D6. The abyss.** The working tree moves the essay off-site; the
-  chapters now link an external URL where `[[abyss]]` (the concept page)
-  exists. Link the concept page in-text and put the external URL on the
-  concept page.
+- [x] **D6. The abyss.** *(done — Phase 129.)* In-text was already resolved by
+  the rewrites: Chs 4, 9, and 11 link `[[abyss]]` (the concept page), not the
+  raw URL. Added the missing half — the concept page now carries the essay
+  link. Did it in the data: concepts.json takes an optional `url`, build-graph
+  carries it into the node props, and the concept-page generator renders a
+  "Read it in full" link, so the abyss landing page points at
+  bayesianpersuasion.com/posts/the-abyss and it survives regeneration. The raw
+  URL still appears where it should: the index's companion-essays list, the
+  glossary entry (alongside the concept link), and the author outline.
 
 ## Workstream E — Reader-facing defects
 

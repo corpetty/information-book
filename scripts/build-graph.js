@@ -274,7 +274,7 @@ function loadConcepts() {
       id: `concept:${c.id}`,
       type: 'Concept',
       label: c.label,
-      props: { summary: c.summary, aliases: c.aliases || [] },
+      props: { summary: c.summary, aliases: c.aliases || [], ...(c.url ? { url: c.url } : {}) },
       provenance: [{ source: 'concepts.json', kind: 'catalog' }],
     });
     for (const noteSlug of c.definedIn || []) {
