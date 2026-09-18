@@ -43,11 +43,14 @@ argument**, most of it restatement, roadmap, and production notes.
 numbered spine while nine chapters lean on them. The structure report
 ([audit](audit/2026-09-editorial/foundational-notes-structure.md)) recommends:
 
-- [ ] **(rec)** Fold three notes into the chapters that already restate them:
-  `transport-vs-selection` → Ch 5b (keep the five test cases as 5b's evidence
-  section); `three-layer-message` → Ch 5 (a ~600-word "What a message is made
-  of" section, Voyager included); `bridge-nodes-and-versatile-expertise` →
-  Ch 9 (the argument, not the summary Ch 9 already carries).
+- [x] **(done — Phase 123, scoped down)** The recommendation was to fold three
+  notes; on inspection only one was foldable. Folded `three-layer-message` →
+  Ch 5 (a "What a message is made of" section, Voyager included; the slug
+  redirects). Kept `transport-vs-selection` (→ 5b) and
+  `bridge-nodes-and-versatile-expertise` (→ 9) as depth notes: Chs 5b and 9
+  already carry their cores and have diverged past the notes (Ch 9 now argues a
+  three-leg prescription to the note's two), so folding would lose the
+  working-through and orphan claim anchors.
 - [ ] **(rec)** Make two interludes: *Myths at Scale* between Ch 7 and Ch 8
   (four chapters gloss the dilution loop in a parenthetical; none argues it),
   and *Capture* between Ch 11 and Ch 12 (only Ch 12 uses the full taxonomy; the
@@ -147,7 +150,21 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   (`democratization-paradox`, `double-edged-sword-of-expertise`,
   `anatomy-of-exposure`, which carries every number in Ch 10's transparent-
   money section), then `nexus` (10 chapters), GEB ch. VI, McLuhan.
-- [ ] **C3. Enter the works the book argues with but never cites.** The
+- [x] **C3. Enter the works the book argues with but never cites.** *(done —
+  Phase 127, edges deferred.)* The 15 works in evidence-layer.md §3 (with the
+  Guess/Nyhan pair split into two, so 16) are entered as external sources with
+  authors, three new traditions (`attention-economy`, `empirical-social-media`,
+  `institutional-analysis`), and generated citation pages that record each
+  work's claim and direction (supports / pressureTests). No quote-backed
+  supports/pressureTests graph edges were added: all 164 existing interpretive
+  edges carry a verbatim quote and these PDFs are unextracted, so fabricating
+  quotes was declined and the edges await an extraction pass over the real
+  texts. Still to enter (named here but outside §3): Weng et al. 2012, Berger &
+  Milkman 2012, Rathje et al. 2021, Kyrychenko et al. 2024, Sumner et al. 2014,
+  Allport & Postman 1947, Converse 1964, Kuran 1995, Burt 2004, Tetlock 2005,
+  Kahan et al. 2017, Salganik/Dodds/Watts 2006.
+  <!-- original list retained below -->
+  The
   strongest pressure-tests: Boxell/Gentzkow/Shapiro 2017 and Guess et al.
   2023 (against the timescale-distinction claim); Guilbeault/Baronchelli/
   Centola 2021 (scale produces *convergence*, against the dilution loop);
