@@ -203,7 +203,23 @@ detail in [`evidence-layer.md`](audit/2026-09-editorial/evidence-layer.md).
   primary. Ch 11: Shumailov et al. 2024 (model collapse), Sharma et al. 2023
   (sycophancy); expand "RLHF". Ch 7: verify the Mercier p. 254 and Sperber
   p. 152 quotes (not in the extraction); add Sperber to `sources.json`.
-- [ ] **C5. Factual corrections still open** (the ones fixed are listed at
+- [x] **C5. Factual corrections — verified done in the rewrites.** Each flagged
+  claim was checked in the current text and is fixed: the invented numbers are
+  gone or hedged (Ch 8 "twenty or thirty years" removed; Ch 9 "ten specialists
+  per versatile expert" → "several specialists", "additional decade" gone;
+  Ch 4 "under ten thousand" gone; bridge-nodes "15–20 moves" gone); the
+  overstatements are softened to sourced figures (Ch 8 "contact hours falling"
+  and "newsroom employment down ~a quarter since 2008 … newspaper newsrooms by
+  more than half, on Pew's counts"; Ch 9's Wikipedia-trust and editor-aging
+  claims removed; Ch 10's "billions siphoned" gone, the money section now
+  qualitative); the misreadings are corrected (Ch 10 cites *Information
+  Evolution*'s Yule process, whose variants the paper itself calls neutral, not
+  Adamic; myths clears the *Malleus Maleficarum*/Church-doctrine conflation
+  explicitly; Ch 2 says the corrective passed consensus while the meme spread
+  anyway, no "lost at consensus"; Ch 1 and 5c now agree the regimes apply to
+  the measured component and pure manufactured content sits off the map).
+  <!-- original item retained below -->
+  The original list (the ones fixed are listed at
   the end): invented numbers stated as fact (Ch 8 L81 "twenty or thirty
   years", Ch 9 L81/L83 "additional decade", "ten specialists per versatile
   expert"; Ch 4 L104 "under ten thousand" readers); overstatements (Ch 8 L89
