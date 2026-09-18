@@ -103,6 +103,20 @@ thing" (answer it at L15), Ch 8's capture evidence.
 
 ## Workstream B — Voice pass v2 (the AI-isms)
 
+**Status: done, with a caveat (Phases 99–118 rewrites + Phase 128).** Rule 1
+(self-narration) is delivered to target: 507 → 50 hits, every content file at
+or under 1 per 1,000 words. Rule 2 (forward references) resolved in the
+rewrites (perfect-tense forward refs 1 → 0). Rule 3 (tics): the *exactly* tic
+was trimmed (288 → 243 tic words in Phase 128); the rest were left by decision
+— `substrate` (74) is kept consistent across all chapters rather than renamed,
+and *load-bearing / quietly / precisely* were left where they carry meaning,
+which is most of their remaining uses. Rules 4–6 (reversals, aphorisms,
+parenthetical/colon density) were largely handled in the rewrites and are not
+pushed further: the reversal is the book's signature move and usually the
+argument itself, so a mechanical cut would flatten the voice for little gain.
+The raw residual counts (243 tics, 42 reversals) overstate the remaining
+AI-ism problem because most instances are legitimate.
+
 Phase 95 removed em-dashes and produced the current colon/parenthesis density;
 the tics that remain are structural, not typographic. House rules, in priority
 order, with the lint column that tracks each:
