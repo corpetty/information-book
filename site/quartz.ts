@@ -3,7 +3,7 @@ import { fileURLToPath } from "node:url"
 import { dirname, resolve } from "node:path"
 import { loadQuartzConfig, loadQuartzLayout } from "./quartz/plugins/loader/config-loader"
 import * as ExternalPlugin from "./.quartz/plugins"
-import { BookBar, findDataDir } from "./lossy-nav"
+import { BookBar, ThemeTrail, findDataDir } from "./lossy-nav"
 
 // Lossy: the sidebar in reading order, and the book bar.
 //
@@ -126,3 +126,12 @@ export const layout = await loadQuartzLayout({
     header: [BookBar(dataDir)],
   },
 })
+
+// On card pages, the theme's trail goes at the top of the right sidebar (above
+// the graph, table of contents and backlinks the YAML layout puts there). The
+// call above returns the live layout, so adding to its arrays is enough; a
+// page type with its own right-hand list gets the same addition.
+const trail = ThemeTrail(dataDir)
+for (const slots of [layout.defaults, ...Object.values(layout.byPageType)]) {
+  if (Array.isArray(slots.right) && !slots.right.includes(trail)) slots.right.unshift(trail)
+}

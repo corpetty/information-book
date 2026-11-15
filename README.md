@@ -333,7 +333,8 @@ information-book/
 │   ├── quartz.config.yaml             book-specific config and layout (plugins are npm packages)
 │   ├── quartz.ts                      loads the YAML; passes the Explorer its reading-order sort,
 │   │                                  names and filter, built from data/*.json
-│   ├── lossy-nav.tsx                  header bar (ways in + position) and sidebar group labels
+│   ├── lossy-nav.tsx                  header bar (ways in, position, continue), sidebar group labels,
+│   │                                  theme trail on card pages
 │   ├── quartz/styles/custom.scss      page chrome: lead sentence, page-kind colours (ours, not upstream's)
 │   ├── quartz.lock.json               pins for Git/local-sourced plugins (none at present)
 │   ├── quartz/                        vendored Quartz 5.1 engine (unmodified upstream)
@@ -417,6 +418,15 @@ the graph, so the site's shape follows the book's:
   ways in (Read / Explore / Map / Glossary) with the current one marked, and
   where the page sits ("Part II · 6 of 18" for a chapter or interlude; the
   theme and position for a card).
+- **Continue** — on pages outside the read, the bar offers "Continue: Chapter
+  5b →". The last chapter or interlude visited is remembered in the reader's
+  own browser (`localStorage`); nothing is sent anywhere.
+- **Theme trail** — on a card page, the top of the right sidebar lists the
+  cards of its theme in trail order with the current one marked
+  (`ThemeTrail` in `site/lossy-nav.tsx`).
+- **Search results** — each result is labelled with its kind (Idea,
+  Mechanism, Example, Open question, Theme, Source), read from its slug in
+  `site/quartz/styles/custom.scss`.
 - **Previous / next** — `make concept-pages` writes the footer on every
   chapter and interlude from the reading order (between
   `<!-- chapter-nav:begin … -->` and `<!-- chapter-nav:end -->`), so the chain
@@ -440,10 +450,11 @@ override has to be registered before `loadQuartzConfig()` runs. The header bar
 is an ordinary build-time component, added through `loadQuartzLayout({ defaults:
 { header: […] } })`; the YAML layout leaves that slot empty.
 
-Not done: cards are not nested under their themes in the sidebar. The Explorer
-mirrors the folder tree, and cards live in one folder per type; the theme
-pages, the Explore hub and each card's position line carry that structure
-instead.
+Cards are not nested under their themes in the left sidebar: the Explorer
+mirrors the folder tree, and cards live in one folder per type. The theme
+trail on each card page, the theme pages and the Explore hub carry that
+structure instead. `quartz.ts` adds the trail by inserting it into the layout
+that `loadQuartzLayout()` returns, which is the live layout.
 
 ## Upgrading Quartz
 
