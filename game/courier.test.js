@@ -108,6 +108,49 @@ test('card links resolve to content files', () => {
   }
 });
 
+test('resolve is exhaustive-safe for every fitting subset', () => {
+  for (const round of ROUNDS) {
+    const ids = round.chips.map((c) => c.id);
+    const last = round.hops[round.hops.length - 1];
+    for (const option of last.options) {
+      for (let m = 0; m < 1 << ids.length; m++) {
+        const kept = ids.filter((_, i) => m & (1 << i));
+        if (!engine.fits(round, kept, option.budget)) continue;
+        const out = engine.resolve(round, option.id, kept);
+        const total = out.groups.reduce((a, g) => a + g.count, 0);
+        assert.equal(total, option.reach, `${round.id}/${option.id} [${kept}] sums to reach`);
+        assert.ok(round.stamps.includes(out.majority), `${round.id}/${option.id} [${kept}] majority`);
+      }
+    }
+  }
+});
+
+function deepFreeze(o) {
+  if (o && typeof o === 'object' && !Object.isFrozen(o)) {
+    Object.freeze(o);
+    for (const v of Object.values(o)) deepFreeze(v);
+  }
+  return o;
+}
+
+test('step never mutates its input', () => {
+  const run = (s, ...actions) =>
+    actions.reduce((st, a) => engine.step(deepFreeze(st), a), s);
+  const T = (id) => ({ type: 'TOGGLE_CHIP', id });
+  const H = { type: 'HAND_ON' };
+  let s = engine.initialState();
+  assert.doesNotThrow(() => {
+    s = run(s, { type: 'START' }, { type: 'BEGIN_ROUND' }, T('e3'), H, T('e1'), H, T('e4'), H, { type: 'NEXT' });
+    s = run(s, { type: 'BEGIN_ROUND' }, H, T('d3'), T('d2'), H, { type: 'CHOOSE_OPTION', id: 'feed' });
+    s = run(s, H, T('d3'), T('c2'), T('d1'), { type: 'BACK' }, { type: 'CHOOSE_OPTION', id: 'feed' }, T('c2'), T('d1'), H);
+    s = run(s, { type: 'PREDICT', stamp: 'INVERTED' }, { type: 'NEXT' });
+    s = run(s, { type: 'BEGIN_ROUND' }, H, T('q1'), T('q2'), H, { type: 'CHOOSE_OPTION', id: 'upbeat' }, T('p1'), T('p2'), H);
+    s = run(s, { type: 'PREDICT', stamp: 'INVERTED' }, { type: 'NEXT' });
+    s = run(s, { type: 'REPLAY_R2' });
+  });
+  assert.equal(s.screen, 'brief');
+});
+
 test('full playthrough', () => {
   const run = (s, ...actions) => actions.reduce((st, a) => engine.step(st, a), s);
   const T = (id) => ({ type: 'TOGGLE_CHIP', id });

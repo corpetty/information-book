@@ -16,7 +16,7 @@ function h(tag, props = {}, ...children) {
     if (v === false || v == null) continue;
     if (k === 'class') el.className = v;
     else if (k === 'text') el.textContent = v;
-    else if (k === 'onclick') el.addEventListener('click', v);
+    else if (k === 'onclick') el.addEventListener('click', (e) => { if (el.disabled) return; v(e); });
     else if (v === true) el.setAttribute(k, '');
     else el.setAttribute(k, v);
   }
