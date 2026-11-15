@@ -163,12 +163,19 @@ interlink: build
 # come after it; site/CNAME is the source of truth, kept in sync with the
 # baseUrl in site/quartz.config.yaml.)
 #
-# Quartz 5 keeps its community plugins out of the tree (installed under
-# site/.quartz/, pinned by site/quartz.lock.json), so `plugin install` must run
-# before `build`. It's idempotent — a no-op once the pinned commits are present.
+# Since Quartz 5.1 the plugins are npm packages (installed by `npm ci` in
+# site/, versioned by site/package-lock.json), so `plugin install` has nothing
+# to fetch; it stays so that a Git- or local-sourced plugin added later (pinned
+# in site/quartz.lock.json) is installed before the build.
+#
+# fix-typography.js runs straight after the Quartz build: 5.1's Markdown
+# pipeline curls quotes one text node at a time and gets the direction wrong
+# next to links ("Chapter 10‘s"). The script repairs the built HTML; see its
+# header. Drop it once upstream curls across inline nodes.
 site-build: citation-pages concept-pages
 	@cd site && npx quartz plugin install
 	@cd site && npx quartz build
+	@node $(SCRIPTS)/fix-typography.js
 	@$(MAKE) viewer-stage
 	@$(MAKE) talk-stage
 	@cp site/CNAME site/public/CNAME

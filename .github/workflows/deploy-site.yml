@@ -42,18 +42,10 @@ jobs:
         working-directory: site
         run: npm ci
 
-      # Quartz 5 fetches its community plugins from Git into site/.quartz/,
-      # pinned by site/quartz.lock.json. Cache them so every build doesn't
-      # re-clone ~40 plugin repos; the lockfile hash is the cache key.
-      - name: Cache Quartz plugins
-        uses: actions/cache@v4
-        with:
-          path: site/.quartz
-          key: quartz-plugins-${{ hashFiles('site/quartz.lock.json') }}
-
-      - name: Install Quartz plugins
-        working-directory: site
-        run: npx quartz plugin install
+      # Since Quartz 5.1 the plugins are npm packages, installed by the
+      # `npm ci` above and versioned by site/package-lock.json. There is
+      # nothing to clone or cache; `make site-build` still runs
+      # `npx quartz plugin install` for any Git-sourced plugin added later.
 
       - name: Validate graph (strict build + regression tests)
         # Warnings are fatal here: a degraded graph (dropped edges, orphan
@@ -62,6 +54,7 @@ jobs:
 
       - name: Build graph + Quartz site + stage viewer
         # `make site-build` runs build-graph.js, then npx quartz build, then
+        # repairs smart quotes in the output (scripts/fix-typography.js), then
         # copies src/ + data/*.json into site/public/{graph,data}/ so the
         # ontology viewer publishes at /graph/, and drops site/public/CNAME
         # so GitHub Pages serves the artifact from the lossybook.com domain.
