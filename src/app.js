@@ -34,6 +34,13 @@ const VIEWS = {
     predicates: ['partOf'],
     layout: 'spine',
   },
+  ideas: {
+    label: 'Idea map',
+    desc: 'Every idea in the book as a card, grouped into themes. Follow the links between ideas in any order you like.',
+    nodeTypes: ['Theme', 'Concept', 'Mechanism', 'CaseStudy', 'Question'],
+    predicates: ['inTheme', 'relatedTo', 'derivesFrom', 'enables', 'precondition', 'instanceOf', 'illustrates'],
+    layout: 'fcose',
+  },
   overview: {
     label: 'Book overview',
     desc: 'Parts and chapters as a structural map of the book.',
@@ -48,7 +55,7 @@ const VIEWS = {
     label: 'Argument map',
     desc: 'Chapters, claims, concepts/mechanisms, and how the argument depends on itself.',
     nodeTypes: ['Chapter', 'Claim', 'Concept', 'Mechanism', 'Note', 'CaseStudy'],
-    predicates: ['argues', 'covers', 'dependsOn', 'definedIn', 'derivesFrom', 'supersedes', 'representedBy'],
+    predicates: ['argues', 'covers', 'dependsOn', 'definedIn', 'derivesFrom', 'instanceOf', 'illustrates', 'supersedes', 'representedBy'],
     layout: 'fcose',
   },
   sources: {
@@ -114,6 +121,7 @@ const PLAIN_TYPES = {
   CaseStudy: 'Example',
   Tension: 'Tension',
   Status: 'Drafting status',
+  Theme: 'Theme',
 };
 function plainType(type) { return PLAIN_TYPES[type] || type; }
 function typeDesc(type) { return GRAPH.meta?.nodeTypes?.[type]?.description || ''; }
@@ -485,6 +493,16 @@ function proseUrlFor(node) {
     const noteNode = GRAPH.nodeById.get(draft);
     return noteNode ? proseUrlFor(noteNode) : null;
   }
+  // Cards (concepts, mechanisms, examples, questions) and themes have their
+  // own pages, one folder per type. A card whose slug is also a top-level
+  // note has no card page — the note is its page.
+  const CARD_DIRS = { Mechanism: 'mechanisms', Concept: 'concepts', CaseStudy: 'cases', Question: 'questions', Theme: 'themes' };
+  if (CARD_DIRS[node.type]) {
+    const slug = node.id.slice(node.id.indexOf(':') + 1);
+    const ownNote = GRAPH.nodeById.get(`note:${slug}`);
+    if (ownNote) return proseUrlFor(ownNote);
+    return `../${CARD_DIRS[node.type]}/${slug}`;
+  }
   return null;
 }
 
@@ -556,7 +574,7 @@ function renderNeighbourGroup(nodeId, direction) {
 // Pick which props to surface in the detail panel, and which to suppress
 // because we've already rendered them above (summary, file, draftNote, etc.).
 const HIDDEN_PROPS_BY_TYPE = {
-  '*': new Set(['summary']),
+  '*': new Set(['summary', 'plain', 'passages', 'hasCard', 'cardWords', 'cardLinks', 'members']),
   Note:    new Set(['summary', 'file', 'title', 'subtype', 'role']),
   Chapter: new Set(['summary', 'title', 'draftNote', 'ordinal', 'number', 'part']),
   Claim:   new Set(['summary', 'status', 'argues', 'arguedInChapters', 'dependsOn', 'harvestedFrom']),
@@ -589,7 +607,10 @@ function renderProps(node) {
 function renderDetail(node) {
   const panel = document.getElementById('detail');
   const props = node.props || {};
-  const summary = props.summary || props.workingAnswer || '';
+  // Readers get the one-sentence plain version when the node has one; the
+  // dense catalog summary is the author's view.
+  const fullSummary = props.summary || props.workingAnswer || '';
+  const summary = (state.mode !== 'author' && props.plain) ? props.plain : fullSummary;
   const badge = statusBadgeFor(node);
   const proseUrl = proseUrlFor(node);
 
@@ -598,7 +619,7 @@ function renderDetail(node) {
   if (badge) metaPieces.push(`<span class="status-badge status-${escapeHtml(badge.kind)} status-val-${escapeHtml(badge.label.replace(/\s+/g, '-').toLowerCase())}">${escapeHtml(badge.label)}</span>`);
 
   const proseLink = proseUrl
-    ? `<a class="prose-link" href="${escapeHtml(proseUrl)}" target="_blank" rel="noopener">Read the prose →</a>`
+    ? `<a class="prose-link" href="${escapeHtml(proseUrl)}" target="_blank" rel="noopener">${['Note', 'Chapter'].includes(node.type) ? 'Read the prose' : 'Open the page'} →</a>`
     : '';
 
   const subtitleBits = [];
@@ -655,6 +676,7 @@ function tileSummary(viewKey) {
   // Pick 2–3 "headline" types for each view to summarise its contents.
   const headlineTypes = {
     spine: ['Part', 'Chapter'],
+    ideas: ['Theme', 'Concept', 'CaseStudy'],
     overview: ['Part', 'Chapter'],
     argument: ['Chapter', 'Claim', 'Concept'],
     sources: ['Source', 'Claim'],

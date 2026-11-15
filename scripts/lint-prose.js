@@ -47,7 +47,9 @@ const fileArg = (args.find(a => a.startsWith('--file=')) || '').slice(7);
 
 // Author-facing or non-prose files: reported, but flagged as such.
 const AUTHOR_FACING = new Set(['outline.md', 'general-theme.md']);
-const SKIP = new Set([]);
+// Generated hub pages (written by generate-concept-pages.js from the catalogs):
+// catalog text, not prose to lint.
+const SKIP = new Set(['explore.md', 'reading-path.md']);
 
 // ------------------------------------------------------------ pattern sets
 
@@ -206,7 +208,11 @@ function unlinkedTerms(body, pages) {
 }
 
 function analyse(file, order, pages) {
-  const raw = readFileSync(join(contentDir, file), 'utf8');
+  // The generated chapter-map block (a list of card links at the top of each
+  // chapter) is catalog text, not prose: blank it line-for-line so it does
+  // not count toward any density and line numbers still point at the file.
+  const raw = readFileSync(join(contentDir, file), 'utf8')
+    .replace(/<!-- chapter-map:begin[\s\S]*?<!-- chapter-map:end -->/g, (b) => b.replace(/[^\n]/g, ''));
   const { fm, body, fmLines } = splitFrontmatter(raw);
   const words = body.split(/\s+/).filter(Boolean).length;
   const per1k = n => words ? +(n * 1000 / words).toFixed(1) : 0;

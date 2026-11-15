@@ -270,6 +270,81 @@
       "id": "dan-sperber",
       "label": "Dan Sperber",
       "summary": "Cognitive and social scientist; the intuitive/reflective belief distinction and (with Mercier and others) epistemic vigilance."
+    },
+    {
+      "id": "james-c-scott",
+      "label": "James C. Scott",
+      "summary": ""
+    },
+    {
+      "id": "geoffrey-bowker",
+      "label": "Geoffrey C. Bowker",
+      "summary": ""
+    },
+    {
+      "id": "susan-leigh-star",
+      "label": "Susan Leigh Star",
+      "summary": ""
+    },
+    {
+      "id": "donald-mackenzie",
+      "label": "Donald MacKenzie",
+      "summary": ""
+    },
+    {
+      "id": "thomas-kuhn",
+      "label": "Thomas S. Kuhn",
+      "summary": ""
+    },
+    {
+      "id": "amos-tversky",
+      "label": "Amos Tversky",
+      "summary": ""
+    },
+    {
+      "id": "daniel-kahneman",
+      "label": "Daniel Kahneman",
+      "summary": ""
+    },
+    {
+      "id": "george-lakoff",
+      "label": "George Lakoff",
+      "summary": ""
+    },
+    {
+      "id": "mark-johnson",
+      "label": "Mark Johnson",
+      "summary": ""
+    },
+    {
+      "id": "kenneth-iverson",
+      "label": "Kenneth E. Iverson",
+      "summary": ""
+    },
+    {
+      "id": "melvin-conway",
+      "label": "Melvin Conway",
+      "summary": ""
+    },
+    {
+      "id": "michael-frank",
+      "label": "Michael C. Frank",
+      "summary": ""
+    },
+    {
+      "id": "melanie-sclar",
+      "label": "Melanie Sclar",
+      "summary": ""
+    },
+    {
+      "id": "charles-goodhart",
+      "label": "Charles Goodhart",
+      "summary": ""
+    },
+    {
+      "id": "donald-campbell",
+      "label": "Donald T. Campbell",
+      "summary": ""
     }
   ],
   "sources": [
@@ -975,11 +1050,11 @@
       "id": "seeing-like-a-state",
       "label": "Seeing Like a State",
       "kind": "book",
-      "author": "james-scott",
+      "author": "james-c-scott",
       "year": 1998,
-      "tradition": "institutional-analysis",
-      "summary": "How states impose legibility by simplifying complex local reality, and how high-modernist simplification fails.",
-      "engagement": "Bears on bureaucracy-downstream-of-myth and Chapter 8. Pressure-tests: bureaucracy as the compressor (legibility) rather than the key-restorer, which the book's narrow stipulation must answer. Quote-backed supports/pressureTests edges pending extraction of the source PDF",
+      "tradition": "sociology-of-measurement",
+      "summary": "Scott's account of how states simplify societies and landscapes to make them legible (taxable, conscriptable, governable), and how those simplifications, backed by power, remake the reality they describe. Source of legibility and the scientific-forestry case.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
       "availability": "external",
       "tags": [
         "prior-art"
@@ -1012,6 +1087,187 @@
       "tags": [
         "prior-art",
         "evidence"
+      ]
+    },
+    {
+      "id": "sorting-things-out",
+      "label": "Sorting Things Out: Classification and Its Consequences",
+      "kind": "book",
+      "author": "geoffrey-bowker",
+      "coauthors": [
+        "susan-leigh-star"
+      ],
+      "tradition": "sociology-of-measurement",
+      "summary": "Classification systems as invisible infrastructure. Source of torque (lives twisted to fit categories), the apartheid race-classification case and the history of the ICD.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "an-engine-not-a-camera",
+      "label": "An Engine, Not a Camera: How Financial Models Shape Markets",
+      "kind": "book",
+      "author": "donald-mackenzie",
+      "tradition": "sociology-of-measurement",
+      "summary": "Financial models as engines that shape markets rather than cameras that record them. Source of performativity and counterperformativity, worked through the Black-Scholes-Merton option-pricing model.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "structure-of-scientific-revolutions",
+      "label": "The Structure of Scientific Revolutions",
+      "kind": "book",
+      "author": "thomas-kuhn",
+      "tradition": "philosophy-of-science",
+      "summary": "Normal science solves the puzzles a paradigm defines as legitimate; anomalies are set aside until a crisis forces a revolution. The community-scale version of theory-ladenness.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "framing-of-decisions",
+      "label": "The Framing of Decisions and the Psychology of Choice",
+      "kind": "paper",
+      "author": "amos-tversky",
+      "coauthors": [
+        "daniel-kahneman"
+      ],
+      "tradition": "cognitive-science",
+      "summary": "The 1981 Science paper with the disease problem: 72% choose the certain program under a lives-saved framing, 78% the risky one under a lives-lost framing of identical outcomes.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "metaphors-we-live-by",
+      "label": "Metaphors We Live By",
+      "kind": "book",
+      "author": "george-lakoff",
+      "coauthors": [
+        "mark-johnson"
+      ],
+      "tradition": "cognitive-science",
+      "summary": "Abstract domains are structured by metaphors from concrete ones (argument is war, time is money), and the metaphor shapes the inferences drawn.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "iverson-turing-lecture",
+      "label": "Notation as a Tool of Thought",
+      "kind": "talk",
+      "author": "kenneth-iverson",
+      "tradition": "computing",
+      "summary": "Iverson's 1979 Turing Award lecture: notation is a tool of thought, and an effective one must make later analysis and generalization convenient to express.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "how-do-committees-invent",
+      "label": "How Do Committees Invent?",
+      "kind": "paper",
+      "author": "melvin-conway",
+      "tradition": "computing",
+      "summary": "The 1968 paper behind Conway's law: systems mirror the communication structure of the organizations that design them.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "number-as-cognitive-technology",
+      "label": "Number as a Cognitive Technology: Evidence from Pirahã Language and Cognition",
+      "kind": "paper",
+      "author": "michael-frank",
+      "tradition": "cognitive-science",
+      "summary": "Frank, Everett, Fedorenko and Gibson (Cognition, 2008): Pirahã speakers, who lack number words, match large exact quantities when objects stay visible and lose accuracy across memory. Number words extend a capacity; they do not create the concept.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "quantifying-prompt-sensitivity",
+      "label": "Quantifying Language Models' Sensitivity to Spurious Features in Prompt Design",
+      "kind": "paper",
+      "author": "melanie-sclar",
+      "tradition": "computing",
+      "summary": "Sclar, Choi, Tsvetkov and Suhr (ICLR 2024): meaning-preserving prompt formatting changes move few-shot accuracy by up to 76 points for LLaMA-2-13B, and format performance only weakly correlates between models. Recommends reporting ranges across formats.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "goodhart-1975",
+      "label": "Problems of Monetary Management: The U.K. Experience",
+      "kind": "paper",
+      "author": "charles-goodhart",
+      "tradition": "sociology-of-measurement",
+      "summary": "Goodhart's 1975 paper: any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes. The familiar 'when a measure becomes a target' wording is Marilyn Strathern's 1997 generalization.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "campbell-1979",
+      "label": "Assessing the Impact of Planned Social Change",
+      "kind": "paper",
+      "author": "donald-campbell",
+      "tradition": "sociology-of-measurement",
+      "summary": "Campbell's law: the more a quantitative social indicator is used for social decision-making, the more subject it is to corruption pressures and the more it distorts the processes it is meant to monitor.",
+      "engagement": "known secondhand through the frameworks report; not yet read at the source",
+      "availability": "external",
+      "tags": [
+        "prior-art"
+      ]
+    },
+    {
+      "id": "frameworks-report",
+      "label": "Frameworks That Shape the Thoughts Built Inside Them",
+      "kind": "report",
+      "summary": "A literature survey of how human-made frameworks (languages, notations, metaphors, classifications, models, metrics, tools, organizations) make some thoughts cheap and others expensive, so that conclusions carry the framework's shape. Names the concept family (linguistic relativity, theory-ladenness, framing, legibility, Goodhart, performativity, Conway's law, inductive bias), seven mechanisms, a catalog of cases, and an evidence audit: the dependable result is a weak but measurable bias, strongest where a framework feeds back on the world; claims that a framework imprisons thought do not hold up. A secondary source: every claim is relayed from the works it cites.",
+      "engagement": "primary input for the thinking-inside-frameworks note; supports the medium-as-frozen-selection family and pressure-tests its strong form ('never forms'); held as secondhand until the works it relays are read directly",
+      "availability": "open",
+      "file": "frameworks-that-shape-thought-report.md",
+      "tags": [
+        "evidence",
+        "model-origin"
+      ],
+      "cites": [
+        "seeing-like-a-state",
+        "sorting-things-out",
+        "an-engine-not-a-camera",
+        "structure-of-scientific-revolutions",
+        "framing-of-decisions",
+        "metaphors-we-live-by",
+        "iverson-turing-lecture",
+        "how-do-committees-invent",
+        "number-as-cognitive-technology",
+        "quantifying-prompt-sensitivity",
+        "goodhart-1975",
+        "campbell-1979",
+        "social-construction-of-what",
+        "understanding-media"
       ]
     }
   ]

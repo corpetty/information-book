@@ -10,6 +10,15 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (9), each with its own short page
+> **Worked out here:** [[manipulation-surface|Manipulation surface]] · [[medium-shapes-want|Medium shapes want]] · [[memetic-fitness|Memetic fitness]] · [[option-space|Option space]] · [[selection|Selection]] · [[transport|Transport]] · [[want-as-prime-mover|Want as the prime mover]]
+>
+> **Open questions:** [[transport-vs-selection|Transport vs. selection: which is primary?]] · [[medium-and-manipulation|What does the medium do to the gates?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 The foundational question underneath everything: is compression at scale driven by *[[transport]]* (each hop loses something) or by *[[selection]]* (what survives is whatever wins on a [[memetic-fitness|fitness landscape]])? The short answer is selection, and this note is the work that gets there, including a wrong turn worth keeping in view, because the word I first reached for, *primary*, turned out to be doing too much and had to be walked back to something more precise.
 
 A word on *selection* first. The term is loaded: it carries connotations from natural selection (impersonal, fitness-driven, no agency) and from gatekeeping (deliberate, exclusionary, owned). The book uses it in the technical sense, *a mechanism that ranks candidates against criteria and passes only some forward*, and that mechanism turns up in both impersonal forms (a [[algorithm-as-selection-engine|recommendation algorithm]] tuned by aggregate behavior) and deliberate ones (an editor choosing what to publish). Renaming it (*memetic fitness*, *gating*) would buy clarity in one place at the cost of obscuring that the same mechanism runs across very different surfaces. Keep the word, distrust the connotation, attend to which kind of selection is at work in each case.

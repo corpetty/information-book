@@ -15,8 +15,8 @@
     },
     {
       "name": "integrated",
-      "runtimeExecutable": "python3",
-      "runtimeArgs": ["-m", "http.server", "8766", "-d", "site/public"],
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["scripts/serve-site.js", "8766"],
       "port": 8766
     },
     {

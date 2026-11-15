@@ -11,6 +11,13 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (7), each with its own short page
+> **Worked out here:** [[capture-asymmetry|Capture asymmetry]] · [[capture-taxonomy|Capture taxonomy]] · [[consumer-key-vs-surface-capture|Consumer-key vs. surface capture]] · [[corpus-capture|Corpus capture]] · [[deployment-capture|Deployment capture]] · [[objective-capture|Objective capture]] · [[self-vs-external-capture|Self-capture vs. external capture]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 By the time the book reached [[ai-as-new-node|Chapter 11]] it was naming capture in three vocabularies across three chapters, and they had stopped agreeing. [[preservation-vs-training|Chapter 8]] had a capture-asymmetry between two halves of an institutional carrier (training vs. preservation); [[political-economy-of-attention|Chapter 10]] had a self-vs-external distinction at the platform scale; [[ai-as-new-node|Chapter 11]] had three flavors specific to LLMs (corpus, objective, deployment). Each chapter introduced its capture story because it needed it, and the cross-chapter result was that "capture" was doing unification work I hadn't done. This note does it, and the unification is straightforward: each chapter's flavor is *the same mechanism operating on a different [[selection]]-design surface*. Name the surfaces, and the taxonomy falls into place along two further axes, source and recovery.
 
 ## What capture means

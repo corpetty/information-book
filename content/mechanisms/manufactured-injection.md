@@ -1,5 +1,6 @@
 ---
 title: Manufactured injection
+description: "Some of what circulates as information was never checked against the world at all; it was made up and dropped into the stream partway down."
 tags:
   - mechanism
   - graph-node
@@ -10,16 +11,32 @@ aliases:
 
 <!-- generated from the ontology graph — edit the node in data/*.json and rebuild, or replace this file with hand-written prose (delete this comment) to override -->
 
-> **Mechanism**
+*Mechanism · part of [[how-ideas-travel|How ideas travel]]*
 
-Content generated wholesale, never measured against reality, injected at later pipeline stages — astrology, conspiracy theories, propaganda, AI-generated text. Downstream selection criteria cannot easily distinguish measured from manufactured content.
+<!-- card -->
+A horoscope and a psychology finding look about the same by the time they reach you. Both are short, both make a claim about your life, both fit a story. Only one came out of data. [[astrology|Astrology]] uses real planetary positions, but the framework that turns them into personality claims was invented. It skipped peer review and entered directly, as newspaper columns and app readings.
 
-## Connections
+The book calls this **manufactured injection**: content generated wholesale, never measured against reality, and inserted late in the path from world to audience. Conspiracy theories, marketing claims, propaganda, unsourced statistics and AI-generated text can all enter this way. Most content mixes the measured and the made up.
 
-- **Defined in:** [[the-information-landscape|The Information Landscape]]
-- **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[the-information-landscape|Ch 1 — The Information Landscape]]
+The trouble is downstream. The [[selection|gates that decide what spreads]] score an item on [[memetic-fitness|how well it grabs people]] and have no input for where it came from. So an invented claim and a real finding, equally punchy, are promoted with equal enthusiasm. In the terms of the [[three-layer-message|three layers of a message]], manufactured content forges the signal that says a mind measured something and sent this. Whether the result [[truth-compression-regimes|preserves, inverts or drifts away from the truth]] depends on what the invented part is doing.
+<!-- /card -->
+
+## Read the full argument
+
+- [[the-information-landscape#Where manufactured content enters|Chapter 1: The Information Landscape]], section "Where manufactured content enters"
+- [[selection-as-other-engine#The manipulation surface is the gate itself|Chapter 5b: Selection As The Other Engine]], section "The manipulation surface is the gate itself"
+- [[complexity-virality-tradeoff#What a message is made of|Chapter 5: The Complexity / Virality Trade-off]], section "What a message is made of"
+
+## How it connects
+
+- **Examples:** [[astrology|Astrology]]
+- **See also:** [[creation-cheap-review-expensive|Creation cheap / review expensive]], [[manipulation-surface|Manipulation surface]], [[memetic-fitness|Memetic fitness]], [[pseudo-context|Pseudo-context]], [[selection|Selection]], [[three-layer-message|The three-layer message (frame / outer / inner)]]
+- **Evidence:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]], [[info-evolution-social-media|Information Evolution in Social Networks]], [[memetics-critique|Memetics: a critique]], [[psychology-of-virality|Psychology of Virality]]
 - **Supported by:** [[misinformation-age|The Misinformation Age]]
-- **Evidenced by:** [[epidemiological-virality|An epidemiological approach to model viral propagation of memes]], [[info-evolution-social-media|Information Evolution in Social Networks]], [[memetics-critique|Memetics — a critique]], [[psychology-of-virality|Psychology of Virality]]
+- **Where the book discusses it:** [[the-information-landscape|Chapter 1: The Information Landscape]], [[ai-as-new-node|Chapter 11: AI as a New Kind of Node]]
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
+---
 
+← [[option-space|Option space]] · [[how-ideas-travel|How ideas travel]] (6 of 11) · [[astrology|Astrology]] →
+
+<em>[[explore|Explore all the ideas]] · [[reading-path|Read the book in order]] · <a href="../graph/" data-router-ignore="true">Open the interactive map</a></em>

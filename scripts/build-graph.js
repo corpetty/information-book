@@ -55,7 +55,13 @@ function addNode(node) {
 
 function addEdge(source, target, predicate, props = {}) {
   if (!meta.predicates[predicate]) throw new Error(`unknown predicate ${predicate}`);
-  const key = `${source}|${predicate}|${target}`;
+  // Undirected predicates (tensionWith, contradicts, relatedTo) de-dup on the
+  // unordered pair, so A—B declared from both ends is one edge, not two.
+  const undirected = meta.predicates[predicate].directed === false;
+  const key = undirected
+    ? `${[source, target].sort().join('|')}|${predicate}`
+    : `${source}|${predicate}|${target}`;
+  if (source === target) return;
   if (edgeKeys.has(key)) return;
   edgeKeys.add(key);
   edges.push({ id: `e${++edgeCounter}`, source, target, predicate, ...props });
@@ -208,6 +214,7 @@ function seedChapters() {
         part: c.part,
         status: c.status,
         summary: c.summary,
+        ...(c.plain ? { plain: c.plain } : {}),
         ...(c.draftNote ? { draftNote: c.draftNote } : {}),
       },
       provenance: [{ source: 'outline.md', kind: 'seed' }],
@@ -230,6 +237,10 @@ function seedNotes() {
         title: n.title,
         role: n.role,
         summary: n.summary,
+        ...(n.plain ? { plain: n.plain } : {}),
+        ...(n.generated ? { generated: true } : {}),
+        ...(n.readAfter ? { readAfter: n.readAfter } : {}),
+        ...(n.navTitle ? { navTitle: n.navTitle } : {}),
       },
       provenance: [{ source: n.file, kind: 'seed' }],
     });
@@ -242,6 +253,37 @@ function loadJsonCatalog(filename) {
   return JSON.parse(readFileSync(resolve(dataDir, filename), 'utf8'));
 }
 
+// ---------------------------------------------------------------- cards
+//
+// Mechanisms, Concepts, CaseStudies and Questions are the book's "cards":
+// each gets a short, reader-facing, interlinked page (see
+// scripts/generate-concept-pages.js). The catalog fields below are the
+// card layer of the ontology:
+//   plain      one plain-language sentence (hub pages, popovers, chapter maps)
+//   passages   [{ note, section }] — the H2 section(s) where the idea is argued
+//              in full; validated against the note's real headings
+//   related    typed ids → undirected `relatedTo` (curated see-also)
+//   instanceOf typed ids → `instanceOf` (X is a special case of Y)
+//   autolink   false, or an explicit list of terms, to steer scripts/interlink.js
+const CARD_TYPES = ['Mechanism', 'Concept', 'CaseStudy', 'Question'];
+const CARD_DIRS = { Mechanism: 'mechanisms', Concept: 'concepts', CaseStudy: 'cases', Question: 'questions' };
+
+function cardProps(x) {
+  return {
+    ...(x.plain ? { plain: x.plain } : {}),
+    ...(x.passages?.length ? { passages: x.passages } : {}),
+    ...(x.autolink !== undefined ? { autolink: x.autolink } : {}),
+    // Optional external URL: an idea published in full off-site (e.g. a
+    // companion essay). The card page renders it as "Read it in full".
+    ...(x.url ? { url: x.url } : {}),
+  };
+}
+
+function cardEdges(id, x) {
+  for (const target of x.related || []) addEdge(id, target, 'relatedTo');
+  for (const target of x.instanceOf || []) addEdge(id, target, 'instanceOf');
+}
+
 function loadMechanisms() {
   const { mechanisms } = loadJsonCatalog('mechanisms.json');
   for (const m of mechanisms) {
@@ -249,17 +291,21 @@ function loadMechanisms() {
       id: `mechanism:${m.id}`,
       type: 'Mechanism',
       label: m.label,
-      props: { summary: m.summary, aliases: m.aliases || [] },
+      props: { summary: m.summary, aliases: m.aliases || [], ...cardProps(m) },
       provenance: [{ source: 'mechanisms.json', kind: 'catalog' }],
     });
+    cardEdges(`mechanism:${m.id}`, m);
+    for (const srcSlug of m.evidencedBy || []) {
+      addEdge(`mechanism:${m.id}`, `source:${srcSlug}`, 'evidencedBy');
+    }
     for (const noteSlug of m.definedIn || []) {
       addEdge(`mechanism:${m.id}`, `note:${noteSlug}`, 'definedIn');
     }
     for (const chSlug of m.coveredBy || []) {
       addEdge(`chapter:${chSlug}`, `mechanism:${m.id}`, 'covers');
     }
-    for (const otherSlug of m.derivesFrom || []) {
-      addEdge(`mechanism:${m.id}`, `mechanism:${otherSlug}`, 'derivesFrom');
+    for (const other of m.derivesFrom || []) {
+      addEdge(`mechanism:${m.id}`, other.includes(':') ? other : `mechanism:${other}`, 'derivesFrom');
     }
     for (const target of m.enables || []) {
       addEdge(`mechanism:${m.id}`, target, 'enables');
@@ -274,9 +320,13 @@ function loadConcepts() {
       id: `concept:${c.id}`,
       type: 'Concept',
       label: c.label,
-      props: { summary: c.summary, aliases: c.aliases || [], ...(c.url ? { url: c.url } : {}) },
+      props: { summary: c.summary, aliases: c.aliases || [], ...cardProps(c) },
       provenance: [{ source: 'concepts.json', kind: 'catalog' }],
     });
+    cardEdges(`concept:${c.id}`, c);
+    for (const other of c.derivesFrom || []) {
+      addEdge(`concept:${c.id}`, other.includes(':') ? other : `concept:${other}`, 'derivesFrom');
+    }
     for (const noteSlug of c.definedIn || []) {
       addEdge(`concept:${c.id}`, `note:${noteSlug}`, 'definedIn');
     }
@@ -304,9 +354,11 @@ function loadQuestions() {
         aliases: q.aliases || [],
         status: q.status || 'open',
         workingAnswer: q.workingAnswer || null,
+        ...cardProps(q),
       },
       provenance: [{ source: 'questions.json', kind: 'catalog' }],
     });
+    cardEdges(`question:${q.id}`, q);
     for (const noteSlug of q.flaggedIn || []) {
       addEdge(`note:${noteSlug}`, `question:${q.id}`, 'flagsOpenQuestion');
     }
@@ -364,31 +416,81 @@ function loadSources() {
     }
     if (s.tradition) addEdge(`source:${s.id}`, `tradition:${s.tradition}`, 'partOfTradition');
     if (s.representedBy) addEdge(`source:${s.id}`, `note:${s.representedBy}`, 'representedBy');
+    // A secondary source (e.g. a research report) relaying primary ones.
+    for (const other of s.cites || []) addEdge(`source:${s.id}`, `source:${other}`, 'cites');
   }
 }
 
 function loadCaseStudies() {
   const { caseStudies } = loadJsonCatalog('case-studies.json');
+  // `illustrates` holds mechanism slugs (legacy) or typed ids; the two
+  // sibling fields are concept / claim slugs.
+  const typed = (v, ns) => (v.includes(':') ? v : `${ns}:${v}`);
   for (const cs of caseStudies) {
     addNode({
       id: `case:${cs.id}`,
       type: 'CaseStudy',
       label: cs.label,
-      props: { summary: cs.summary || '' },
+      props: {
+        summary: cs.summary || '',
+        aliases: cs.aliases || [],
+        ...(cs.evidence ? { evidence: cs.evidence } : {}),
+        ...cardProps(cs),
+      },
       provenance: [{ source: 'case-studies.json', kind: 'catalog' }],
     });
+    cardEdges(`case:${cs.id}`, cs);
     for (const m of cs.illustrates || []) {
-      addEdge(`case:${cs.id}`, `mechanism:${m}`, 'mentions');
+      addEdge(`case:${cs.id}`, typed(m, 'mechanism'), 'illustrates');
     }
     for (const c of cs.illustratesConcepts || []) {
-      addEdge(`case:${cs.id}`, `concept:${c}`, 'mentions');
+      addEdge(`case:${cs.id}`, typed(c, 'concept'), 'illustrates');
     }
     for (const cl of cs.illustratesClaims || []) {
-      addEdge(`case:${cs.id}`, `claim:${cl}`, 'mentions');
+      addEdge(`case:${cs.id}`, typed(cl, 'claim'), 'illustrates');
     }
     for (const ch of cs.appearsIn || []) {
       addEdge(`chapter:${ch}`, `case:${cs.id}`, 'covers');
     }
+    for (const noteSlug of cs.definedIn || []) {
+      addEdge(`case:${cs.id}`, `note:${noteSlug}`, 'definedIn');
+    }
+    for (const srcSlug of cs.evidencedBy || []) {
+      addEdge(`case:${cs.id}`, `source:${srcSlug}`, 'evidencedBy');
+    }
+  }
+}
+
+// ---------------------------------------------------------------- themes
+//
+// A Theme is a reader-facing cluster of cards with an ordered trail through
+// its members. Themes are ordered along the book's arc, so the Explore hub
+// built from them follows the narrative while staying browsable.
+
+function loadThemes() {
+  const path = resolve(dataDir, 'themes.json');
+  if (!existsSync(path)) return;
+  const { themes } = JSON.parse(readFileSync(path, 'utf8'));
+  const seen = new Map();
+  for (const t of themes) {
+    addNode({
+      id: `theme:${t.id}`,
+      type: 'Theme',
+      label: t.label,
+      props: {
+        ordinal: t.ordinal,
+        plain: t.plain || '',
+        summary: t.summary || '',
+        chapters: t.chapters || [],
+        members: t.members || [],
+      },
+      provenance: [{ source: 'themes.json', kind: 'catalog' }],
+    });
+    (t.members || []).forEach((m, i) => {
+      if (seen.has(m)) warnings.push(`theme membership: ${m} is in both theme:${seen.get(m)} and theme:${t.id} — a card has one home theme`);
+      seen.set(m, t.id);
+      addEdge(m, `theme:${t.id}`, 'inTheme', { order: i });
+    });
   }
 }
 
@@ -585,7 +687,7 @@ function resolveWikilink(slug, aliases) {
   if (aliases[slug]) return aliases[slug];
   const priorityNamespaces = [
     'note', 'source', 'chapter', 'claim', 'concept',
-    'mechanism', 'question', 'case', 'tradition',
+    'mechanism', 'question', 'case', 'tradition', 'theme',
   ];
   for (const ns of priorityNamespaces) {
     if (nodes.has(`${ns}:${slug}`)) return `${ns}:${slug}`;
@@ -606,8 +708,22 @@ function parseNotes() {
       continue;
     }
     const content = readFileSync(filePath, 'utf8');
+    // The frontmatter `description:` is the note's reader-facing summary
+    // (shown by Quartz, and reused by the reading path and chapter maps).
+    const fm = content.match(/^---\n([\s\S]*?)\n---/);
+    const dm = fm && fm[1].match(/^description:\s*(.+)$/m);
+    if (dm) {
+      let description = dm[1].trim();
+      if (/^".*"$/.test(description)) { try { description = JSON.parse(description); } catch { description = description.slice(1, -1); } }
+      else if (/^'.*'$/.test(description)) description = description.slice(1, -1).replace(/''/g, "'");
+      addNode({ id: node.id, type: 'Note', props: { description } });
+    }
     // Strip YAML frontmatter so its tags don't bleed into wikilink scanning.
-    const body = content.replace(/^---\n[\s\S]*?\n---\n?/, '');
+    // Also strip the generated chapter-map block: its links restate `covers`
+    // / `definedIn` edges and would otherwise echo back in as wikiLinks.
+    const body = content
+      .replace(/^---\n[\s\S]*?\n---\n?/, '')
+      .replace(/<!-- chapter-map:begin[\s\S]*?<!-- chapter-map:end -->\n?/g, '');
 
     // Extract H2 section anchors → store on the note for navigation.
     const sections = [];
@@ -617,6 +733,9 @@ function parseNotes() {
       sections.push(sm[1].trim());
     }
     addNode({ id: node.id, type: 'Note', props: { sections } });
+    // Generated hub pages (explore, reading-path) link to everything by
+    // construction; their links carry no authorial signal.
+    if (node.props?.generated) continue;
 
     // Extract wikilinks. [[target]] or [[target|display text]].
     const wikilinkRegex = /\[\[([^\]\|]+)(?:\|[^\]]*)?\]\]/g;
@@ -639,6 +758,97 @@ function parseNotes() {
       }
       const predicate = resolved.startsWith('source:') ? 'cites' : 'wikiLinks';
       addEdge(node.id, resolved, predicate);
+    }
+  }
+}
+
+// ---------------------------------------------------------------- card parser
+//
+// Card pages live at content/{concepts,mechanisms,cases,questions}/<slug>.md.
+// The hand-written body sits between `<!-- card -->` and `<!-- /card -->`;
+// everything around it is generated. Links inside the body are authorial
+// signal — "a reader of this idea should go here next" — so they enter the
+// graph as wikiLinks edges from the card's node. This is what makes the
+// interlinking visible to (and checkable by) the ontology.
+
+const CARD_REGION = /<!-- card -->\n?([\s\S]*?)\n?<!-- \/card -->/;
+const MIN_CARD_LINKS = 3;
+
+function hasOwnNotePage(node) {
+  // A card node whose slug is also a top-level note has no card page: the
+  // note is its page (e.g. concept:capture-taxonomy ↔ capture-taxonomy.md).
+  return nodes.has(`note:${node.id.slice(node.id.indexOf(':') + 1)}`);
+}
+
+function parseCards() {
+  const aliases = loadSlugAliases();
+  const cardNodes = Array.from(nodes.values()).filter(n => CARD_TYPES.includes(n.type));
+  for (const node of cardNodes) {
+    if (hasOwnNotePage(node)) continue;
+    const slug = node.id.slice(node.id.indexOf(':') + 1);
+    const filePath = resolve(NOTES_DIR, CARD_DIRS[node.type], `${slug}.md`);
+    if (!existsSync(filePath)) continue;
+    const m = readFileSync(filePath, 'utf8').match(CARD_REGION);
+    if (!m) continue;
+    const body = m[1];
+    const words = body.replace(/\[\[[^\]|]+\|([^\]]*)\]\]/g, '$1').split(/\s+/).filter(Boolean).length;
+    const targets = new Set();
+    const wikilinkRegex = /\[\[([^\]\|#]+)(?:#[^\]\|]*)?(?:\|[^\]]*)?\]\]/g;
+    let wm;
+    while ((wm = wikilinkRegex.exec(body)) !== null) {
+      const linkSlug = wm[1].trim().toLowerCase().replace(/\s+/g, '-');
+      const resolved = resolveWikilink(linkSlug, aliases);
+      if (!resolved) {
+        warnings.push(`unresolved wikilink in card ${node.id}: [[${wm[1].trim()}]]`);
+        continue;
+      }
+      if (resolved === node.id) continue;
+      targets.add(resolved);
+    }
+    for (const t of targets) {
+      addEdge(node.id, t, t.startsWith('source:') ? 'cites' : 'wikiLinks', { fromCard: true });
+    }
+    addNode({ id: node.id, type: node.type, props: { hasCard: true, cardWords: words, cardLinks: targets.size } });
+  }
+}
+
+function checkCards() {
+  // The card layer's invariants. Each is a warning (fatal under STRICT):
+  // every card has a plain sentence, a home theme, a written body that links
+  // out to enough neighbours, and passages that point at real H2 sections.
+  const themed = new Set(edges.filter(e => e.predicate === 'inTheme').map(e => e.source));
+  for (const node of nodes.values()) {
+    if (!CARD_TYPES.includes(node.type)) continue;
+    if (!node.props?.plain) warnings.push(`card ${node.id}: no \`plain\` sentence in its catalog entry`);
+    if (!themed.has(node.id)) warnings.push(`card ${node.id}: not a member of any theme (data/themes.json)`);
+    for (const p of node.props?.passages || []) {
+      const note = nodes.get(`note:${p.note}`);
+      if (!note) {
+        warnings.push(`card ${node.id}: passage points at unknown note "${p.note}"`);
+      } else if (!(note.props?.sections || []).includes(p.section)) {
+        warnings.push(`card ${node.id}: passage section "${p.section}" is not an H2 in ${p.note}`);
+      }
+    }
+    if (hasOwnNotePage(node)) continue;
+    if (!node.props?.hasCard) {
+      warnings.push(`card ${node.id}: no written card body (<!-- card --> region) in content/${CARD_DIRS[node.type]}/`);
+    } else if ((node.props.cardLinks || 0) < MIN_CARD_LINKS) {
+      warnings.push(`card ${node.id}: body links to ${node.props.cardLinks || 0} other pages — needs at least ${MIN_CARD_LINKS}`);
+    }
+  }
+
+  // Ambiguous terms: a label/alias claimed by two cards can't be auto-linked
+  // and makes [[alias]] redirects collide. Compared case-insensitively.
+  const owner = new Map();
+  for (const node of nodes.values()) {
+    if (!CARD_TYPES.includes(node.type)) continue;
+    if (node.type === 'Question') continue; // question aliases are not link terms
+    for (const term of new Set([node.label, ...(node.props?.aliases || [])].map(t => t.toLowerCase().trim()))) {
+      if (owner.has(term) && owner.get(term) !== node.id) {
+        warnings.push(`ambiguous term "${term}": claimed by ${owner.get(term)} and ${node.id}`);
+      } else {
+        owner.set(term, node.id);
+      }
     }
   }
 }
@@ -801,10 +1011,13 @@ loadSources();
 loadCaseStudies();
 loadClaims();
 loadTensions();
+loadThemes();
 checkClaimDrift();
 parseNotes();
+parseCards();
 checkOrphanNotes();
 loadInterpretive();
 checkSources();
 validateEdges();
+checkCards();
 emit();

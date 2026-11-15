@@ -9,6 +9,19 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (10), each with its own short page
+> **Worked out here:** [[three-realities|Three realities]]
+>
+> **Also used:** [[constitutive-regimes|Constitutive regimes]] · [[constitutive-transmission|Constitutive transmission]] · [[truth-generators|Truth generators]]
+>
+> **Examples:** [[scientists-say-x|'Scientists say X' headline]] · [[arsenic-life|Arsenic-life]] · [[astrology|Astrology]] · [[power-posing|Power posing]] · [[stanford-prison-experiment-corrective|Stanford Prison Experiment correctives]]
+>
+> **Open questions:** [[intersubjective-pipeline|What does the pipeline do to intersubjective truths?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 You have probably watched this happen in real time: a scientific claim gets debunked, the researchers move on, and years later the claim is still circulating as if nothing changed. *Stand like Wonder Woman for two minutes before a job interview and you'll perform better.* The lead author of that study publicly walked it back a decade ago. It is still being repeated.
 
 [[the-information-landscape|Chapter 1]] drew the pipeline in the abstract. Here I walk four real findings through it, stage by stage, to see what each gate actually does to a claim and where a real one gets lost, a shaky one sails through, or a correction dies in a drawer. Then I ask a question the diagram skips: what *kind* of thing is moving? A hormone result and a currency both travel the same pipe, but only one of them has a fact outside the pipe to check against, and that difference changes what "failure" even means.

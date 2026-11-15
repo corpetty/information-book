@@ -12,6 +12,19 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (19), each with its own short page
+> **Worked out here:** [[capture-asymmetry|Capture asymmetry]] · [[institutional-decay-rates|Differential decay rates]] · [[preservation-vs-training-pair|Preservation vs. training]]
+>
+> **Also used:** [[capture-taxonomy|Capture taxonomy]] · [[complex-form|Complex form]] · [[consumer-key-vs-surface-capture|Consumer-key vs. surface capture]] · [[decompression-on-demand|Decompression on demand]] · [[justification-market|Justification market]] · [[myth-dilution|Myth dilution at scale]] · [[out-competition-of-carriers|Out-competition of institutional carriers in attention markets]] · [[receiver-budget|Receiver budget]] · [[three-realities|Three realities]] · [[transferable-preconditions|Transferable preconditions]] · [[versatile-expertise|Versatile expertise]]
+>
+> **Examples:** [[latin-mass-vs-vernacular|Latin Mass vs. vernacular liturgy]] · [[stanford-prison-experiment-corrective|Stanford Prison Experiment correctives]]
+>
+> **Open questions:** [[budget-fixed-or-trainable|Are receiver budgets fixed or trainable?]] · [[transferable-vs-specialized|Transferable vs. specialized preconditions]] · [[intersubjective-pipeline|What does the pipeline do to intersubjective truths?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 Picture everything humanity knows about playing music split into two piles. In one: every score ever written, preserved note-for-note in a vault. In the other: the living musicians who can read those scores and bring them to life. Each pile is useless without the other. Burn the scores and the musicians drift a little further from the original with every performance; lose the musicians and the vault is just paper, perfectly preserved and perfectly unreadable. Keeping hard-won knowledge alive in a society works like this. It takes two separate jobs, holding the complex original somewhere intact and keeping a supply of people trained to read it, and when a culture starts losing its grip on what it knows, it almost always loses one of the two first, the more dangerous one.
 
 [[myths-scale-and-bureaucracy|The myths note]] reached this problem and stopped: a scaled myth drops its decoding key, and the network either grows the institutional repair that re-supplies it or segments until it is no longer one network. Harari's *[[nexus-book|Nexus]]* handed the book that repair under the name *bureaucracy*, which the book uses narrowly (see the [[glossary|glossary]]) to mean the re-supply function, not the broader machinery of real-world bureaucracy. On inspection the word is doing two jobs even inside that narrow reading, and Part IV can't be argued cleanly until they are pulled apart.

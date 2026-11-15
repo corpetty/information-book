@@ -7,10 +7,17 @@
 // directory link (`graph/`, `.`, `..`) by its `index.html`. The resolver
 // mirrors that.
 //
-// External links (http/https/mailto/protocol-relative), pure in-page
-// anchors (#section), and data: URIs are out of scope — this checks the
-// site's own internal integrity, the class that silently 404s for readers
-// (e.g. a citation page linking a PDF the build excluded).
+// External links (http/https/mailto/protocol-relative) and data: URIs are out
+// of scope — this checks the site's own internal integrity, the class that
+// silently 404s for readers (e.g. a citation page linking a PDF the build
+// excluded).
+//
+// Two further checks guard the card layer, which leans on both:
+//   - Heading anchors. A link to `page#section` must find an element with
+//     that id on the target page (card pages deep-link into chapter sections).
+//   - Shadowed pages. A top-level content note must publish as a real page,
+//     not as an alias redirect that some other page's `aliases:` wrote over
+//     it (this once replaced Chapter 8 with a redirect to a concept card).
 //
 // Exit 1 with a report if any internal link is broken. Run in CI after
 // `make site-build`; locally: `node scripts/check-site-links.js`.
@@ -54,14 +61,26 @@ function walk(dir) {
   return out;
 }
 
-// Does a target path (absolute, no query/fragment) resolve to a real file
-// under publicDir, honouring Quartz pretty-URL forms?
-function resolves(absPath) {
+// Resolve a target path (absolute, no query/fragment) to the real file under
+// publicDir that serves it, honouring Quartz pretty-URL forms; null if none.
+function resolveFile(absPath) {
   const candidates = [absPath];
   if (!/\.[a-z0-9]+$/i.test(absPath)) candidates.push(`${absPath}.html`);
   candidates.push(join(absPath, 'index.html'));
-  return candidates.some(c => existsSync(c) && statSync(c).isFile());
+  return candidates.find(c => existsSync(c) && statSync(c).isFile()) || null;
 }
+
+// ids present on a page (cached) — for checking `page#fragment` links.
+const idCache = new Map();
+function idsOf(file) {
+  if (!idCache.has(file)) {
+    const ids = new Set();
+    for (const m of readFileSync(file, 'utf8').matchAll(/\bid=["']([^"']+)["']/g)) ids.add(m[1]);
+    idCache.set(file, ids);
+  }
+  return idCache.get(file);
+}
+const decodeEntities = (s) => s.replace(/&amp;/g, '&').replace(/&#39;/g, "'").replace(/&quot;/g, '"');
 
 const SKIP = /^(https?:|mailto:|tel:|data:|javascript:|#|\/\/)/i;
 const htmlFiles = walk(publicDir);
@@ -76,6 +95,7 @@ for (const file of htmlFiles) {
     const raw = m[1].trim();
     if (!raw || SKIP.test(raw)) continue;
     // Strip query + fragment; a bare fragment was already skipped above.
+    const fragment = raw.includes('#') ? raw.slice(raw.indexOf('#') + 1) : '';
     const path = raw.split('#')[0].split('?')[0];
     if (!path) continue;
     checked++;
@@ -91,9 +111,32 @@ for (const file of htmlFiles) {
       broken.push({ file, raw, reason: 'escapes site root' });
       continue;
     }
-    if (!resolves(abs)) {
+    const target = resolveFile(abs);
+    if (!target) {
       broken.push({ file, raw, reason: 'target missing' });
+      continue;
     }
+    if (fragment && target.endsWith('.html')) {
+      const ids = idsOf(target);
+      let decoded = decodeEntities(fragment);
+      try { decoded = decodeURIComponent(decoded); } catch { /* keep raw */ }
+      if (!ids.has(decoded) && !ids.has(fragment)) {
+        broken.push({ file, raw, reason: 'heading anchor missing on target page' });
+      }
+    }
+  }
+}
+
+// Shadowed pages: every top-level content note must be a real page.
+const contentDir = resolve(repoRoot, 'content');
+for (const name of readdirSync(contentDir)) {
+  if (!name.endsWith('.md')) continue;
+  const slug = name.replace(/\.md$/, '').replace(/\s+/g, '-');
+  const page = resolveFile(join(publicDir, slug));
+  if (!page) {
+    broken.push({ file: join(publicDir, `${slug}.html`), raw: `content/${name}`, reason: 'note did not publish' });
+  } else if (/http-equiv=["']refresh["']/i.test(readFileSync(page, 'utf8'))) {
+    broken.push({ file: page, raw: `content/${name}`, reason: 'page is shadowed by an alias redirect' });
   }
 }
 

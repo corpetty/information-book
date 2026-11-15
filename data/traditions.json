@@ -70,6 +70,26 @@
       "id": "institutional-analysis",
       "label": "Institutional analysis and governance",
       "summary": "How collective institutions are designed, sustained, captured, and made legible: commons governance and state simplification."
+    },
+    {
+      "id": "sociology-of-measurement",
+      "label": "Sociology of measurement and classification",
+      "summary": "How states, markets and professions make the world countable, and what the counting does back: legibility (Scott), classification as infrastructure (Bowker and Star), performative models (MacKenzie), targeted indicators (Goodhart, Campbell)."
+    },
+    {
+      "id": "cognitive-science",
+      "label": "Cognitive science of framing",
+      "summary": "Experimental work on how description, language and learned method steer judgment: framing effects, linguistic relativity, conceptual metaphor, the Einstellung effect."
+    },
+    {
+      "id": "philosophy-of-science",
+      "label": "Philosophy of science",
+      "summary": "Theory-ladenness, paradigms and underdetermination: how the theory a community holds shapes what it can observe and which problems count."
+    },
+    {
+      "id": "computing",
+      "label": "Computing and machine learning",
+      "summary": "Notation as a tool of thought, systems that mirror their organizations, and learning systems whose built-in assumptions and evaluation formats shape their output."
     }
   ]
 }

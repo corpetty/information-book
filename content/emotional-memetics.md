@@ -8,6 +8,17 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (14), each with its own short page
+> **Worked out here:** [[epistemic-vigilance|Epistemic vigilance]] · [[justification-market|Justification market]] · [[open-vigilance|Open vigilance]] · [[paradox-of-virality|Paradox of virality]] · [[reflective-vs-intuitive-belief|Reflective vs. intuitive belief]]
+>
+> **Also used:** [[bridge-zone|Bridge zone]] · [[compressed-form|Compressed form]] · [[conformity|Conformity]] · [[false-consensus-rational-agents|False consensus among rational agents]] · [[memetic-fitness|Memetic fitness]] · [[polarization-via-distrust|Polarization via distrust]] · [[orwell-huxley-axis|The Orwell/Huxley axis]]
+>
+> **Open questions:** [[medium-and-manipulation|What does the medium do to the gates?]] · [[truth-value-placement|Where does truth value enter the model?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 Think of the last thing online that made your blood boil, the post you couldn't scroll past without reacting. Now try to recall the last calm, carefully-qualified piece you read on the same subject. You probably passed the first one along and forgot the second, and so did almost everyone else. That isn't because people are fools: ask them, and most will say they wish the furious stuff *wouldn't* spread. It spreads anyway. This is about why. Once a network gets large enough, what reliably travels is whatever hits a raw nerve: fear, anger, us-against-them, the rush of belonging. I'll call that the *floor*, not the only thing that spreads, but the lower limit the system keeps settling back down to.
 
 [[bridge-zone-distortion|Chapter 6]] worked out *where* the distortion gets produced, in the [[bridge-zone|bridge zone]] that staffs the News and Meme stages. The question here is *what* that zone settles on once the network it serves is big enough. Two ways the argument goes wrong, and I want to avoid both. Said badly, "raw emotion is the floor" is either obvious or cynicism in a lab coat; I want the structural version, an equilibrium of named mechanisms, not a verdict on human nature. And [[not-born-yesterday|Hugo Mercier's *Not Born Yesterday*]] argues that people are much harder to manipulate than this story seems to need. I take that seriously below, and I think the argument survives it, narrowly and in a specific place.

@@ -10,6 +10,15 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (4), each with its own short page
+> **Worked out here:** [[interpretive-latitude|Interpretive latitude]] · [[myth-dilution|Myth dilution at scale]] · [[network-segmentation|Network segmentation]]
+>
+> **Open questions:** [[integration-vs-fragmentation|Part IV: integration or fragmentation?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 [[truth-compression-and-when-each-wins|Chapter 5c]] worked out where [[truth-value-placement|truth value]] lives (in the fit between an idea's decoding key and the key its receiver holds) and described compression as the stripping of that key. But all through, it treats the receiver as supplying *a* key, singular: one receiver, one substituted key, one of three outcomes. That is the right frame for one person and the wrong frame for a network, and the gap between them runs all the way down to why large information networks grow bureaucracies. The thread: a stripped claim is underdetermined, open to many decodings, and following that across a whole population runs in a loop. Scale forces the binding myth to compress; compression widens how many ways the myth can be read; the readings segment the network; the segmentation has to be managed. This note works out the loop.
 
 ## Compression unpins the key
@@ -31,6 +40,8 @@ This is the mechanism Part IV was missing. It has been treating fragmentation as
 ## Bureaucracy is downstream of the myth
 
 Segments pulling apart need something to hold them, and Harari named it: alongside myth, the other thing that binds a large network is bureaucracy. The book uses the term narrowly by stipulation (see the [[glossary|glossary]]) to mean the institutional repair that preserves the [[complex-form|complex form]] and re-supplies the dropped decoding key; real bureaucracies do more (coerce, tax, record), held out of scope to keep the preserve-and-retrain mechanism in focus. What this note adds to Harari is the causal arrow he leaves implicit: myth and bureaucracy are not two co-equal pillars a network simply has. **Bureaucracy is downstream of the myth: it is the institution a network grows to cover the gap that scaling tore open in its myth, and the larger the network, the more of its cohesion has to shift from myth to bureaucracy.** Read through 5c's machinery, you can say what it does: the myth, compressed for reach, dropped its key, and bureaucracy holds the key the myth couldn't carry, keeping the complex form (the actual theology, the actual law) alive in a smaller body that can still afford it and re-supplying the key to receivers who would otherwise read the myth however their segment reads it. A church's clergy, a legal system's courts, a field's graduate programs: each stores an un-compressed form and re-installs its key in people. That is the split [[preservation-vs-training|Chapter 8]] is built around, and this note says where the pair comes from: the moment a myth scales past the latitude its network can tolerate, the network either grows the bureaucracy that re-supplies the key or segments until it is no longer one network. Bureaucracy is the price of staying integrated while staying large.
+
+The part held out of scope has costs of its own. To hold and re-supply anything a bureaucracy has to record, and to record it has to sort the world into categories it can write down. What the categories cannot hold drops out of its reasoning ([[legibility]]), and where the things being sorted are people, the misfit lands on them ([[classification-torque|torque]]). The institution that keeps a myth's key alive also thinks inside a [[framework]] of its own ([[thinking-inside-frameworks]]).
 
 ## What decides the loop
 

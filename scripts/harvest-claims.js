@@ -137,7 +137,14 @@ function main() {
   for (const filepath of iterateMarkdownFiles(NOTES_DIR)) {
     const slug = noteSlugFromFilename(filepath);
     if (slug === 'index') continue;
-    const content = readFileSync(filepath, 'utf8');
+    const raw = readFileSync(filepath, 'utf8');
+    // Generated hub pages (explore, reading-path) restate catalog text and
+    // argue nothing; the generated chapter-map block at the top of a chapter
+    // is likewise catalog text. Neither is a source of claims. The block is
+    // blanked line-for-line so lineApprox still points at the real line.
+    if (raw.includes('generated from the ontology graph by scripts/generate-concept-pages.js')) continue;
+    const content = raw.replace(/<!-- chapter-map:begin[\s\S]*?<!-- chapter-map:end -->/g,
+      (block) => block.replace(/[^\n]/g, ''));
     all.push(...harvest(content, slug));
   }
 

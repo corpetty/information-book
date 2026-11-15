@@ -1,5 +1,5 @@
 {
-  "_doc": "Worked examples the book uses to ground abstract claims. Each case study illustrates one or more Mechanisms or Concepts and appears in specific Chapters.",
+  "_doc": "Worked examples the book uses to ground abstract claims. `illustrates` holds mechanism slugs or typed ids; `illustratesConcepts` / `illustratesClaims` hold concept / claim slugs (all become `illustrates` edges). `appearsIn` lists chapters. `evidence` is one sentence on how far the case can be trusted. Card-layer fields (`plain`, `passages`, `related`, `autolink`) as in concepts.json; the card body lives in content/cases/<id>.md.",
   "caseStudies": [
     {
       "id": "telephone-game",
@@ -18,6 +18,23 @@
       "appearsIn": [
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
+      ],
+      "plain": "Whisper a sentence around a circle of ten children and it comes out garbled, which shows how retelling alone wears an idea down.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The network has a ceiling"
+        },
+        {
+          "note": "transport-vs-selection",
+          "section": "The two views"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "concept:complexity-ceiling",
+        "mechanism:selection",
+        "case:hammer-vs-copernicus"
       ]
     },
     {
@@ -39,6 +56,24 @@
       "appearsIn": [
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
+      ],
+      "plain": "The same early printing presses produced a witch-hunting manual that sold out and an astronomy book by Copernicus that hardly sold at all.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "Hammer of the Witches, properly this time"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "Hammer of the Witches, revisited"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "concept:memetic-fitness",
+        "mechanism:transport",
+        "concept:compressed-form",
+        "question:complexity-doing-two-jobs"
       ]
     },
     {
@@ -55,6 +90,26 @@
       ],
       "appearsIn": [
         "optionality-vs-access"
+      ],
+      "plain": "One charting tool lets you do anything but is hard to learn; another is easy because it has already made most choices for you.",
+      "passages": [
+        {
+          "note": "optionality-vs-access",
+          "section": "Software stratification"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        }
+      ],
+      "related": [
+        "case:latin-mass-vs-vernacular",
+        "case:plain-language-law",
+        "case:brief-history-of-time",
+        "concept:compressed-form",
+        "concept:complex-form",
+        "concept:cost-asymmetry",
+        "concept:default-setting"
       ]
     },
     {
@@ -69,6 +124,23 @@
       "appearsIn": [
         "information-landscape",
         "case-studies-and-three-realities"
+      ],
+      "plain": "Horoscopes use real star and planet positions, but the idea that those positions shape your personality was made up and never tested.",
+      "passages": [
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Case 4: Astrology — manufactured content in the pipeline"
+        },
+        {
+          "note": "the-information-landscape",
+          "section": "Where manufactured content enters"
+        }
+      ],
+      "related": [
+        "mechanism:manufactured-injection",
+        "mechanism:selection",
+        "concept:pseudo-context",
+        "case:power-posing"
       ]
     },
     {
@@ -91,6 +163,28 @@
       "appearsIn": [
         "bridge-zone-distortion",
         "case-studies-and-three-realities"
+      ],
+      "plain": "Twenty years of careful research can reach the public as one confident headline, with every caveat and condition left behind.",
+      "passages": [
+        {
+          "note": "transport-vs-selection",
+          "section": "Test cases that distinguish them"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What a message is made of"
+        },
+        {
+          "note": "the-information-landscape",
+          "section": "Abstraction/Curation → News"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "mechanism:selection",
+        "concept:memetic-fitness",
+        "concept:compressed-form",
+        "concept:bridge-zone"
       ]
     },
     {
@@ -108,6 +202,27 @@
       ],
       "appearsIn": [
         "complexity-virality-tradeoff"
+      ],
+      "plain": "Calling Bitcoin \"internet money\" leaves out nearly everything that matters, yet it is the only description short enough to reach newcomers.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What \"complex\" means"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "A fifth story: money"
+        }
+      ],
+      "related": [
+        "concept:compressed-form",
+        "concept:complex-form",
+        "concept:receiver-budget",
+        "mechanism:constitutive-transmission",
+        "case:scientists-say-x"
+      ],
+      "autolink": [
+        "Bitcoin is internet money"
       ]
     },
     {
@@ -134,6 +249,24 @@
         "selection-as-other-engine",
         "truth-compression-and-when-each-wins",
         "human-time-budget"
+      ],
+      "plain": "A small 2010 study said power poses change your hormones; it failed to replicate, its lead author disowned it, and people still repeat it.",
+      "passages": [
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Case 1: Power posing — all the way to meme"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Reading the four cases"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "concept:memetic-fitness",
+        "concept:bridge-zone",
+        "case:stanford-prison-experiment-corrective",
+        "case:arsenic-life"
       ]
     },
     {
@@ -150,6 +283,23 @@
       "appearsIn": [
         "case-studies-and-three-realities",
         "selection-as-other-engine"
+      ],
+      "plain": "In 2010 NASA scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold.",
+      "passages": [
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Case 2: Arsenic-life — died at consensus"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Four pipeline outcomes"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "case:power-posing",
+        "case:stanford-prison-experiment-corrective",
+        "case:astrology"
       ]
     },
     {
@@ -173,6 +323,24 @@
         "political-economy-of-attention",
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
+      ],
+      "plain": "The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and films still tell the original story.",
+      "passages": [
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Case 3: Stanford Prison Experiment — the correction died at curation"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "Reading the four cases"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "concept:out-competition-of-carriers",
+        "concept:preservation-vs-training-pair",
+        "case:power-posing",
+        "concept:capture-asymmetry"
       ]
     },
     {
@@ -191,6 +359,24 @@
       "appearsIn": [
         "optionality-vs-access",
         "preservation-vs-training"
+      ],
+      "plain": "When the Catholic Mass moved from Latin to local languages, far more people could take part, and much of the precise doctrine dropped out.",
+      "passages": [
+        {
+          "note": "optionality-vs-access",
+          "section": "Religion"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        }
+      ],
+      "related": [
+        "case:matplotlib-vs-seaborn",
+        "case:plain-language-law",
+        "concept:preservation-vs-training-pair",
+        "concept:complex-form",
+        "concept:compressed-form"
       ]
     },
     {
@@ -211,6 +397,24 @@
         "optionality-vs-access",
         "complexity-virality-tradeoff",
         "bridge-zone-distortion"
+      ],
+      "plain": "Stephen Hawking reached millions of readers by cutting nearly every equation from his physics book, trading exactness for reach.",
+      "passages": [
+        {
+          "note": "optionality-vs-access",
+          "section": "Scientific popularization"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The same curve, at design time"
+        }
+      ],
+      "related": [
+        "case:matplotlib-vs-seaborn",
+        "concept:versatile-expertise",
+        "concept:compressed-form",
+        "concept:complex-form",
+        "concept:bridge-zone"
       ]
     },
     {
@@ -231,6 +435,24 @@
         "optionality-vs-access",
         "bridge-zone-distortion",
         "political-economy-of-attention"
+      ],
+      "plain": "A one-line summary of a law is easy to read and right about the usual case, but wrong about edge cases the full text handles.",
+      "passages": [
+        {
+          "note": "optionality-vs-access",
+          "section": "Legal codes"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        }
+      ],
+      "related": [
+        "case:matplotlib-vs-seaborn",
+        "case:latin-mass-vs-vernacular",
+        "concept:cost-shifting",
+        "concept:preservation-vs-training-pair",
+        "concept:complex-form"
       ]
     },
     {
@@ -244,6 +466,19 @@
       "illustratesClaims": [],
       "appearsIn": [
         "information-landscape"
+      ],
+      "plain": "A record sent into deep space had to carry its own playing instructions, because nobody could assume the finder would know anything.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What a message is made of"
+        }
+      ],
+      "related": [
+        "concept:three-layer-message",
+        "mechanism:transport",
+        "mechanism:interpretive-latitude",
+        "case:scientists-say-x"
       ]
     },
     {
@@ -264,7 +499,21 @@
       "appearsIn": [
         "bridge-zone-distortion",
         "truth-compression-and-when-each-wins"
-      ]
+      ],
+      "plain": "Health agencies changed their mask advice as evidence came in, but the public heard two flat slogans and concluded the experts had lied.",
+      "passages": [
+        {
+          "note": "bridge-zone-distortion",
+          "section": "One case, worked: masks"
+        }
+      ],
+      "related": [
+        "concept:bridge-zone",
+        "concept:truth-compression-regimes",
+        "case:nutrition-reversals",
+        "concept:framing-effect"
+      ],
+      "evidence": "The book's own framing of the episode; a primary source for it is still to be cited."
     },
     {
       "id": "nutrition-reversals",
@@ -281,7 +530,21 @@
       ],
       "appearsIn": [
         "bridge-zone-distortion"
-      ]
+      ],
+      "plain": "For forty years the public has been handed one confident dietary villain after another, while the science kept saying it was complicated.",
+      "passages": [
+        {
+          "note": "bridge-zone-distortion",
+          "section": "One case, worked: masks"
+        }
+      ],
+      "related": [
+        "concept:bridge-zone",
+        "case:covid-mask-guidance",
+        "mechanism:interpretive-latitude",
+        "concept:handle-ability"
+      ],
+      "evidence": "The book's own framing of the episode; a primary source for it is still to be cited."
     },
     {
       "id": "monetary-policy-press",
@@ -300,7 +563,25 @@
       "appearsIn": [
         "bridge-zone-distortion",
         "political-economy-of-attention"
-      ]
+      ],
+      "plain": "Coverage of central banking boils a technical subject down to 'the Fed is printing money', and some of the outlets doing it have a stake in the answer.",
+      "passages": [
+        {
+          "note": "bridge-zone-distortion",
+          "section": "One case, worked: masks"
+        },
+        {
+          "note": "bridge-zone-distortion",
+          "section": "Where the political economy hits hardest"
+        }
+      ],
+      "related": [
+        "concept:bridge-zone",
+        "concept:self-vs-external-capture",
+        "mechanism:engagement-equilibrium",
+        "concept:conceptual-metaphor"
+      ],
+      "evidence": "The book's own framing of the episode; a primary source for it is still to be cited."
     },
     {
       "id": "common-law-courts",
@@ -320,7 +601,25 @@
       "appearsIn": [
         "integration-problem",
         "infrastructure-for-integration"
-      ]
+      ],
+      "plain": "Common-law courts have kept hard knowledge alive for centuries by training judges for decades, writing everything down, and being paid for by the public.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "The five operational problems"
+        },
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Worked examples, and their gaps"
+        }
+      ],
+      "related": [
+        "concept:curation-layer",
+        "concept:funding-decoupling",
+        "case:stack-overflow",
+        "concept:preservation-vs-training-pair"
+      ],
+      "evidence": "The book's own framing of the episode; a primary source for it is still to be cited."
     },
     {
       "id": "stack-overflow",
@@ -339,6 +638,472 @@
       "appearsIn": [
         "integration-problem",
         "infrastructure-for-integration"
+      ],
+      "plain": "A programming Q&A site with strong quality control lost its audience when AI began answering the same questions, and it had no funding to fall back on.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "The five operational problems"
+        },
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Worked examples, and their gaps"
+        }
+      ],
+      "related": [
+        "concept:curation-layer",
+        "concept:funding-decoupling",
+        "concept:compressed-form-as-authority",
+        "case:common-law-courts",
+        "concept:out-competition-of-carriers"
+      ],
+      "evidence": "The book's own framing of the episode; a primary source for it is still to be cited."
+    },
+    {
+      "id": "columbia-powerpoint",
+      "label": "The Columbia slide",
+      "summary": "During the 2003 Columbia mission, Boeing engineers briefed NASA managers on possible foam-strike damage with slides whose key caveats were buried in nested bullets under a reassuring headline, while the test data covered far smaller debris. The Columbia Accident Investigation Board (report p. 191) adopted Edward Tufte's analysis and noted that NASA officials often supplied slides in place of technical reports. It shows a presentation format making sustained argument costly and a caveat easy to miss.",
+      "illustrates": [
+        "mechanism:framework-pricing",
+        "concept:cost-asymmetry",
+        "concept:option-space",
+        "concept:compressed-form-as-authority"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "Officially endorsed (the accident board adopted Tufte's analysis), but a single case in which the slide was one factor among many organizational causes.",
+      "plain": "Engineers warned NASA about possible shuttle damage on a bullet-point slide, and the layout buried the caveats that mattered most.",
+      "related": [
+        "concept:cost-asymmetry",
+        "concept:option-space",
+        "concept:compressed-form",
+        "concept:compressed-form-as-authority",
+        "case:calculus-notation"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A slide that could not say it"
+        }
+      ]
+    },
+    {
+      "id": "scientific-forestry",
+      "label": "Scientific forestry and the Normalbaum",
+      "summary": "From about 1765 to 1800, Prussian and Saxon foresters defined a standardized tree (the Normalbaum), then cleared underbrush, reduced species often to monoculture and planted in rows, replacing forests that were about three-quarters broadleaf with Norway spruce or Scotch pine. The first rotation grew well; after the second, Scott quotes production losses of 20 to 30 percent over two or three generations, and the word Waldsterben (forest death) entered German. It shows a simplified record being used to remake the reality it described, and the remade reality failing.",
+      "illustrates": [
+        "concept:legibility",
+        "mechanism:framework-feedback",
+        "concept:map-and-territory",
+        "concept:reification"
+      ],
+      "appearsIn": [
+        "information-landscape"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "seeing-like-a-state"
+      ],
+      "evidence": "A historical case study from James C. Scott's Seeing Like a State; interpretive evidence built on documented detail, which cannot be replicated the way an experiment can.",
+      "plain": "German foresters replanted their woods to match a table of timber yields, and after one good harvest the simplified forests began to fail.",
+      "related": [
+        "concept:legibility",
+        "mechanism:framework-feedback",
+        "concept:map-and-territory",
+        "case:apartheid-classification",
+        "concept:reification"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        }
+      ]
+    },
+    {
+      "id": "black-scholes",
+      "label": "Black-Scholes and the option market",
+      "summary": "Donald MacKenzie identifies three phases for the Black-Scholes-Merton option-pricing model: prices fit it poorly from 1973 to 1976, converged on it from 1976 to summer 1987 as traders used it (partly through arbitrage), and departed from it after the October 1987 crash with a persistent volatility skew. The model's own parameter, implied volatility, became the market's language for pricing options. It is the main documented case of a model reshaping the market it describes, in both directions.",
+      "illustrates": [
+        "concept:performativity",
+        "mechanism:framework-feedback",
+        "mechanism:constitutive-transmission"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report",
+        "an-engine-not-a-camera"
+      ],
+      "evidence": "Compelling for options as one well-documented case, but MacKenzie himself says consistency with performativity does not prove it, and its general scope is debated.",
+      "plain": "A formula for pricing options fit the market badly at first, then traders adopted it and prices moved to match, until the 1987 crash.",
+      "related": [
+        "concept:performativity",
+        "mechanism:framework-feedback",
+        "mechanism:constitutive-transmission",
+        "case:gaussian-copula",
+        "concept:three-realities"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        }
+      ]
+    },
+    {
+      "id": "apartheid-classification",
+      "label": "Apartheid race classification",
+      "summary": "Under the 1950 Population Registration Act and Group Areas Act, South Africans were classified by racial group, initially from 1951 census returns, using criteria of appearance and general acceptance and repute and devices such as the pencil test. About 100,000 people applied for reclassification, appeals averaged 14 months, and in 1984 alone 795 people were reclassified (518 from coloured to white); in one family, twins were classified differently. Bowker and Star present it as classification torque at its most extreme: categories overriding family, biography and self-identification.",
+      "illustrates": [
+        "concept:classification-torque",
+        "concept:legibility",
+        "mechanism:framework-feedback",
+        "concept:three-realities"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report",
+        "sorting-things-out"
+      ],
+      "evidence": "Historical and documentary evidence from Bowker and Star's Sorting Things Out (ch. 6); a case study, not an experiment.",
+      "plain": "South Africa's government sorted every person into a legal race category that decided where they could live and work, even splitting families.",
+      "related": [
+        "concept:classification-torque",
+        "concept:legibility",
+        "concept:looping-effects",
+        "concept:reification",
+        "case:scientific-forestry"
+      ]
+    },
+    {
+      "id": "calculus-notation",
+      "label": "Leibniz's dy/dx and the British lag",
+      "summary": "After the Newton-Leibniz priority dispute, British mathematicians kept Newton's fluxional dot notation while the Continent built analysis on Leibniz's differentials, whose symbols encode the chain rule and change of variables. Woodhouse introduced Leibniz notation in 1803, the Analytical Society (Babbage, Herschel, Peacock) formed in 1812, Peacock used continental notation in the 1817 Tripos, and it was widely adopted by about 1830. It illustrates a notation setting the cost of operations, and loyalty keeping a weaker one in place.",
+      "illustrates": [
+        "concept:notation-as-tool-of-thought",
+        "concept:cost-asymmetry",
+        "concept:path-dependence"
+      ],
+      "appearsIn": [
+        "optionality-vs-access"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "A good illustration but multi-causal: notation, Newton's geometric methods and the post-dispute breakdown of exchange all contributed to the British lag.",
+      "plain": "British mathematicians stayed loyal to Newton's way of writing calculus, while the rest of Europe used Leibniz's handier symbols and pulled ahead.",
+      "related": [
+        "concept:notation-as-tool-of-thought",
+        "concept:cost-asymmetry",
+        "concept:path-dependence",
+        "case:matplotlib-vs-seaborn",
+        "case:qwerty"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        }
+      ]
+    },
+    {
+      "id": "asian-disease-problem",
+      "label": "The Asian disease problem",
+      "summary": "Tversky and Kahneman (Science, 1981) found that 72% of subjects chose a certain program when outcomes were described as lives saved, while 78% chose a risky program when the identical outcomes were described as lives lost. Many Labs (2014) reproduced the reversal in 31 of 36 samples (6,344 participants), with none reversed, and a 2020 survey of 88,181 people in 47 countries found it again. It is the best-replicated demonstration that logically equivalent descriptions produce different choices.",
+      "illustrates": [
+        "concept:framing-effect",
+        "concept:default-setting",
+        "concept:influence-not-imprisonment"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report",
+        "framing-of-decisions"
+      ],
+      "evidence": "Robust: replicated in 31 of 36 Many Labs samples and again across 47 countries, though the effect is smaller than in the 1981 original.",
+      "plain": "Describe the same outcomes as lives saved or as lives lost, and most people switch which plan they choose.",
+      "related": [
+        "concept:framing-effect",
+        "concept:default-setting",
+        "case:crime-metaphor",
+        "concept:truth-compression-regimes",
+        "concept:framework-rotation"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        }
+      ]
+    },
+    {
+      "id": "russian-blues",
+      "label": "Russian blues",
+      "summary": "Russian obligatorily distinguishes lighter blue (goluboy) from darker blue (siniy). Winawer et al. (PNAS, 2007) found Russian speakers discriminated two blues faster when they fell into different Russian categories; the advantage was eliminated by a verbal dual task but not a spatial one, and English speakers showed no category advantage. It shows a language category speeding a perceptual judgment only while language is active.",
+      "illustrates": [
+        "concept:linguistic-relativity",
+        "mechanism:framework-pricing",
+        "concept:influence-not-imprisonment"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "Among the better-supported linguistic-relativity results, but the effect is 'online' and removable by verbal interference, and other specific findings in the field are fragile.",
+      "plain": "Russian has separate words for light blue and dark blue, and its speakers tell those shades apart faster, unless a word task interferes.",
+      "related": [
+        "concept:linguistic-relativity",
+        "concept:influence-not-imprisonment",
+        "case:piraha-numbers",
+        "mechanism:framework-pricing"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        }
+      ]
+    },
+    {
+      "id": "piraha-numbers",
+      "label": "Pirahã and exact number",
+      "summary": "Pirahã has no stable word even for 'one'. Frank, Everett, Fedorenko and Gibson (Cognition, 2008) found Pirahã speakers matched large exact quantities perfectly when objects stayed visible but were inaccurate on tasks requiring memory, and concluded that number words are a cognitive technology for tracking exact quantities across time, space and modality rather than a change to underlying number representation. It is the clearest statement of the weak position: a framework is a tool that extends some capacities, not a cage.",
+      "illustrates": [
+        "concept:linguistic-relativity",
+        "concept:influence-not-imprisonment",
+        "concept:notation-as-tool-of-thought",
+        "concept:receiver-budget"
+      ],
+      "appearsIn": [
+        "selection-as-other-engine"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "number-as-cognitive-technology"
+      ],
+      "evidence": "One published study (Cognition, 2008); it supports the weak view of language as a tool and counts against the strong view that a language fixes what its speakers can think.",
+      "plain": "A people whose language has no number words can still match exact quantities they can see, but slip once the task needs memory.",
+      "related": [
+        "concept:linguistic-relativity",
+        "concept:influence-not-imprisonment",
+        "case:russian-blues",
+        "concept:receiver-budget",
+        "question:budget-fixed-or-trainable"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        }
+      ]
+    },
+    {
+      "id": "prompt-format-sensitivity",
+      "label": "Prompt formatting and the 76-point swing",
+      "summary": "Sclar, Choi, Tsvetkov and Suhr (ICLR 2024) found that meaning-preserving changes to prompt formatting (separators, spacing, capitalization) produced performance differences of up to 76 accuracy points for LLaMA-2-13B, with a median spread of 7.5 points and about 10 points on average across 50+ tasks and several open-source models. Format performance only weakly correlated between models, and sensitivity persisted with larger models, more few-shot examples and instruction tuning. They recommend reporting ranges across plausible formats.",
+      "illustrates": [
+        "mechanism:framework-pricing",
+        "concept:default-setting",
+        "concept:framework-rotation",
+        "concept:deployment-capture"
+      ],
+      "appearsIn": [
+        "ai-as-new-node"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "quantifying-prompt-sensitivity"
+      ],
+      "evidence": "A direct measurement across 50+ tasks and several open-source models in few-shot settings; the 76-point figure is the maximum for one model, against a median spread of 7.5 points.",
+      "plain": "Changing only spacing, separators or capital letters in the wording given to an AI model moved its test accuracy by as much as 76 points.",
+      "related": [
+        "concept:default-setting",
+        "concept:deployment-capture",
+        "concept:inductive-bias",
+        "case:ai-benchmarks",
+        "concept:framework-rotation"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The clearest case is a machine"
+        }
+      ]
+    },
+    {
+      "id": "dsm-and-rdoc",
+      "label": "The DSM and RDoC",
+      "summary": "On 29 April 2013, weeks before DSM-5 appeared, NIMH Director Thomas Insel wrote in 'Transforming Diagnosis' that the DSM's strength is reliability and its weakness a lack of validity, because its diagnoses rest on consensus about symptom clusters rather than objective laboratory measures. He announced that NIMH would re-orient research away from DSM categories toward the Research Domain Criteria (RDoC). The episode shows a classification shaping which research questions get asked and funded.",
+      "illustrates": [
+        "concept:theory-ladenness",
+        "concept:path-dependence",
+        "concept:framework-rotation"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "A documented statement by the NIMH director, not a measured effect; RDoC was a research framework, not a clinical replacement for the DSM.",
+      "plain": "Psychiatry's manual defines illnesses by agreed lists of symptoms, and in 2013 a US research institute said its studies would move away from them.",
+      "related": [
+        "concept:theory-ladenness",
+        "concept:classification-torque",
+        "concept:path-dependence",
+        "concept:truth-generators",
+        "concept:framework-rotation"
+      ]
+    },
+    {
+      "id": "qwerty",
+      "label": "QWERTY and the disputed lock-in story",
+      "summary": "Paul David's 'Clio and the Economics of QWERTY' (1985) made the keyboard layout the standard example of path dependence: an early choice entrenched by network effects and sunk investment, with typing schools training on QWERTY as the early adoption mechanism. Liebowitz and Margolis ('The Fable of the Keys', 1990) argued that the evidence for the rival Dvorak layout's superiority is scant, suspect and traceable largely to Dvorak himself; defenders reply that David never claimed a remediable market failure. The concept of path dependence is accepted; this example of it is disputed.",
+      "illustrates": [
+        "concept:path-dependence",
+        "concept:default-setting"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "The lock-in story is disputed even though path dependence as a concept is not; use it to illustrate coordination lock-in, not proven inefficiency.",
+      "plain": "The standard keyboard layout is the best-known example of an early choice that stuck, though whether a better layout really lost is disputed.",
+      "related": [
+        "concept:path-dependence",
+        "concept:default-setting",
+        "case:calculus-notation",
+        "mechanism:constitutive-transmission"
+      ]
+    },
+    {
+      "id": "chess-einstellung",
+      "label": "Chess experts and the Einstellung effect",
+      "summary": "Bilalić, McLeod and Gobet (Cognition, 2008) showed that chess experts who had found a familiar solution reported searching for a better one while their eye movements kept returning to board regions tied to the familiar solution. Sheridan and Reingold (PLOS ONE, 2013) found a boundary condition: when the familiar move was an outright blunder rather than merely suboptimal, all the experts avoided it. It shows attention staying anchored to a known solution, even in experts.",
+      "illustrates": [
+        "concept:einstellung-effect",
+        "concept:curse-of-expertise",
+        "concept:influence-not-imprisonment"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "Robust, with a known boundary condition: when the familiar move was an outright blunder, all of the experts avoided it.",
+      "plain": "Chess experts who had found a familiar solution said they were hunting for a better one, while their eyes kept returning to the old one.",
+      "related": [
+        "concept:einstellung-effect",
+        "concept:curse-of-expertise",
+        "concept:versatile-expertise",
+        "concept:law-of-the-instrument",
+        "concept:framework-rotation"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        }
+      ]
+    },
+    {
+      "id": "crime-metaphor",
+      "label": "Crime as beast, crime as virus",
+      "summary": "Thibodeau and Boroditsky (PLOS ONE, 2011) found that participants who read that crime was a 'beast' preying on a city favored enforcement more than those who read it was a 'virus' infecting the city, though both groups saw the same statistics; the effect depended on the metaphor appearing early. Steen, Reijnierse and Burgers (2014) argued it was smaller than claimed and sensitive to coding choices, while a German-language replication (Scientific Data, 2016) reproduced it. It is the best-known experimental test of conceptual metaphor theory.",
+      "illustrates": [
+        "concept:conceptual-metaphor",
+        "concept:framing-effect",
+        "concept:influence-not-imprisonment"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "Real but smaller and more conditional than first reported: contested by Steen and colleagues, partly vindicated by a German replication, and dependent on early placement and readers' prior attitudes.",
+      "plain": "Readers told crime was a beast preying on a city favored tougher enforcement than readers told it was a virus, with the same statistics.",
+      "related": [
+        "concept:conceptual-metaphor",
+        "concept:framing-effect",
+        "case:asian-disease-problem",
+        "concept:influence-not-imprisonment"
+      ]
+    },
+    {
+      "id": "gaussian-copula",
+      "label": "The Gaussian copula and 2008",
+      "summary": "Felix Salmon's Wired article called David Li's Gaussian copula 'the formula that killed Wall Street'. MacKenzie and Spears (Social Studies of Science, 2014), drawing on 114 interviews, qualify this: within investment banks' culture of no-arbitrage modelling the copula was shared infrastructure, yielding implied correlations and giving traders and organizations a common way to agree on values and book profit and loss. Because it shaped coordination as much as estimates, its blind spot (correlation behavior in a housing-wide downturn) became systemic.",
+      "illustrates": [
+        "concept:performativity",
+        "mechanism:framework-feedback",
+        "mechanism:constitutive-transmission"
+      ],
+      "appearsIn": [],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "The 'killed Wall Street' claim is overstated; the careful account treats the model as one embedded component of an evaluation culture in a multi-causal crisis, not the sole cause.",
+      "plain": "Investment banks shared one formula for agreeing on values and booking profits, so its blind spot about a housing-wide downturn became everyone's blind spot.",
+      "related": [
+        "concept:performativity",
+        "case:black-scholes",
+        "mechanism:framework-feedback",
+        "mechanism:constitutive-transmission",
+        "concept:framework-rotation"
+      ]
+    },
+    {
+      "id": "ai-benchmarks",
+      "label": "AI benchmarks as milestones",
+      "summary": "Raji, Bender, Paullada, Denton and Hanna ('AI and the Everything in the Whole Wide World Benchmark', NeurIPS Datasets and Benchmarks, 2021) argue that AI research valorizes a small collection of influential benchmarks such as ImageNet and GLUE, treated as stand-ins for common problems framed as milestones toward general AI. Leaderboard gains get read as general progress, a construct-validity failure, and the benchmarks play a critical role in orienting research agendas. It shows a metric steering what a field counts as progress.",
+      "illustrates": [
+        "concept:goodharts-law",
+        "concept:objective-capture",
+        "concept:theory-ladenness"
+      ],
+      "appearsIn": [
+        "ai-as-new-node"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "evidence": "A published critique by researchers in the field, argued rather than measured; it fits the widely documented Goodhart and Campbell pattern but carries no effect size of its own.",
+      "plain": "AI researchers compete on a small set of shared tests, and higher scores on them get read as progress toward general AI.",
+      "related": [
+        "concept:goodharts-law",
+        "concept:objective-capture",
+        "case:prompt-format-sensitivity",
+        "mechanism:engagement-equilibrium",
+        "concept:inductive-bias"
       ]
     }
   ]

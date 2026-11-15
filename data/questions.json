@@ -20,6 +20,27 @@
         "truth-compression-and-when-each-wins",
         "complexity-virality-tradeoff",
         "emotional-memetics"
+      ],
+      "plain": "Whether a claim is true depends on how it is read, so a true sentence can still leave a false belief behind.",
+      "passages": [
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Truth value isn't in the claim"
+        },
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "\"Lossy\" isn't the whole worry"
+        },
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Where I'm still uncertain"
+        }
+      ],
+      "related": [
+        "concept:truth-compression-regimes",
+        "mechanism:interpretive-latitude",
+        "question:intersubjective-pipeline",
+        "mechanism:selection"
       ]
     },
     {
@@ -43,6 +64,24 @@
         "political-economy-of-attention",
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "The format an idea travels in decides what can be said, what gets rewarded, and what audiences learn to want.",
+      "passages": [
+        {
+          "note": "medium-and-manipulation",
+          "section": "Three things the medium does to a gate"
+        },
+        {
+          "note": "medium-and-manipulation",
+          "section": "Where I land"
+        }
+      ],
+      "related": [
+        "concept:option-space",
+        "mechanism:medium-shapes-want",
+        "concept:manipulation-surface",
+        "concept:technology-vs-medium",
+        "concept:algorithm-as-selection-engine"
       ]
     },
     {
@@ -62,6 +101,24 @@
       "blocksChapters": [
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
+      ],
+      "plain": "An idea can be hard to understand and an idea can be hard to care about, and those are two separate obstacles to spreading.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "\"Complexity\" was doing two jobs"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What \"complex\" means"
+        }
+      ],
+      "related": [
+        "concept:handle-ability",
+        "concept:complexity-ceiling",
+        "mechanism:transport",
+        "mechanism:selection",
+        "question:transport-vs-selection"
       ]
     },
     {
@@ -80,6 +137,28 @@
       ],
       "blocksChapters": [
         "human-time-budget"
+      ],
+      "plain": "People cannot add hours to the day, but learning makes each hour of attention hold more, so the limit can be raised.",
+      "passages": [
+        {
+          "note": "info-time-limit",
+          "section": "The receiver budget"
+        },
+        {
+          "note": "preservation-vs-training",
+          "section": "The training function"
+        },
+        {
+          "note": "info-time-limit",
+          "section": "Where I'm still uncertain"
+        }
+      ],
+      "related": [
+        "concept:receiver-budget",
+        "concept:preservation-vs-training-pair",
+        "mechanism:want-as-prime-mover",
+        "concept:decompression-on-demand",
+        "mechanism:medium-shapes-want"
       ]
     },
     {
@@ -99,6 +178,28 @@
       "blocksChapters": [
         "preservation-vs-training",
         "integration-problem"
+      ],
+      "plain": "Carrying knowledge between fields takes a deep specialist who has learned to step outside their own field's habits, and general thinking skills alone fall short.",
+      "passages": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The naive answer doesn't survive"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "Versatile expertise as the bridge"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "Where I land"
+        }
+      ],
+      "related": [
+        "concept:versatile-expertise",
+        "concept:transferable-preconditions",
+        "concept:curse-of-expertise",
+        "concept:polarization-via-distrust",
+        "concept:abyss"
       ]
     },
     {
@@ -119,6 +220,28 @@
       "blocksChapters": [
         "integration-problem",
         "infrastructure-for-integration"
+      ],
+      "plain": "Retreating into small trusted communities does not fix a noisy information world, so the harder task is getting real knowledge across between groups.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "Why integration, not fragmentation"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The prescription"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The five operational problems"
+        }
+      ],
+      "related": [
+        "concept:echo-chambers-vs-bubbles",
+        "concept:network-segmentation",
+        "concept:polarization-via-distrust",
+        "concept:zollman-effect",
+        "concept:versatile-expertise"
       ]
     },
     {
@@ -147,7 +270,29 @@
         "ai-as-new-node",
         "infrastructure-for-integration"
       ],
-      "workingAnswer": "Worked out in intersubjective-truth.md. Intersubjective truths are truths (Harari's terms kept) whose generator is the network's agreement rather than reality, carved per-claim, not per-artifact — a myth can be based in reality too. The pipeline is wired into the generator: transmission is participation in constitution, reach changes the truth itself, and no unharmed fact waits outside a bad transit. The transmission regimes translate to convergent / divergent / hollow constitution (failure axis: spread-and-substance, not error); capture becomes steering the generator — re-weighting whose decodes count — camouflaged by reification; the corrective's role passes to the fork (schism, secession, dollarization, chain split), which determines how many truths there are rather than who was right; and the transport collapse cuts twice — its second blade is constitutive volatility, agreement states moving at meme speed against maintenance institutions built for committee speed. Threaded through Chs 2, 5, 5b, 5c, 8, 9, 10, 11, 12. Still open: the line between generators (consensus-tracks vs. agreement-generates), the regime translation's two-plus-one suspicion, the volatility ratio claim, the sibling treatment's worked cases, and engagement with the social-ontology prior art (Searle, Berger & Luckmann, Anderson, Hacking, Soros, Hirschman)."
+      "workingAnswer": "Worked out in intersubjective-truth.md. Intersubjective truths are truths (Harari's terms kept) whose generator is the network's agreement rather than reality, carved per-claim, not per-artifact — a myth can be based in reality too. The pipeline is wired into the generator: transmission is participation in constitution, reach changes the truth itself, and no unharmed fact waits outside a bad transit. The transmission regimes translate to convergent / divergent / hollow constitution (failure axis: spread-and-substance, not error); capture becomes steering the generator — re-weighting whose decodes count — camouflaged by reification; the corrective's role passes to the fork (schism, secession, dollarization, chain split), which determines how many truths there are rather than who was right; and the transport collapse cuts twice — its second blade is constitutive volatility, agreement states moving at meme speed against maintenance institutions built for committee speed. Threaded through Chs 2, 5, 5b, 5c, 8, 9, 10, 11, 12. Still open: the line between generators (consensus-tracks vs. agreement-generates), the regime translation's two-plus-one suspicion, the volatility ratio claim, the sibling treatment's worked cases, and engagement with the social-ontology prior art (Searle, Berger & Luckmann, Anderson, Hacking, Soros, Hirschman).",
+      "plain": "Retelling can garble a fact but never change it, while for things true only by agreement, like money, the retelling helps decide what is true.",
+      "passages": [
+        {
+          "note": "intersubjective-truth",
+          "section": "Where I land"
+        },
+        {
+          "note": "intersubjective-truth",
+          "section": "No referee, so the corrective's job passes to the fork"
+        },
+        {
+          "note": "intersubjective-truth",
+          "section": "Where I'm still uncertain"
+        }
+      ],
+      "related": [
+        "concept:three-realities",
+        "concept:truth-generators",
+        "mechanism:constitutive-transmission",
+        "concept:constitutive-regimes",
+        "concept:reification"
+      ]
     },
     {
       "id": "transport-vs-selection",
@@ -164,7 +309,61 @@
         "transport-vs-selection",
         "the-information-landscape"
       ],
-      "blocksChapters": []
+      "blocksChapters": [],
+      "plain": "Ideas get worn down in retelling and also filtered by what people choose to pass on, and only the filtering can be steered.",
+      "passages": [
+        {
+          "note": "transport-vs-selection",
+          "section": "Modality, not primacy"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "Transport is a cost; selection is a choice"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "mechanism:selection",
+        "concept:option-space",
+        "mechanism:want-as-prime-mover",
+        "question:complexity-doing-two-jobs"
+      ]
+    },
+    {
+      "id": "framework-wall-or-price",
+      "label": "Does a medium forbid thoughts, or only price them?",
+      "summary": "Ch 5b says a variant the option space cannot hold never has to be suppressed, because it never forms: the medium as a wall. The frameworks literature says strong-form claims of this kind (linguistic determinism above all) mostly fail when tested, and that the dependable effect is a graded bias. If the medium only prices, the book's most powerful and least visible manipulation surface is weaker than claimed for individuals, though perhaps not for populations.",
+      "aliases": [
+        "wall or price",
+        "bound or bias",
+        "strong vs weak medium"
+      ],
+      "status": "provisionally-resolved",
+      "workingAnswer": "Price, not wall, at the scale of an individual and a year; close to a wall at the scale of a population and a generation. A framework (and by extension a medium) rarely forbids a thought; it prices it, and across a population the expensive variant mostly does not form. The remedy differs: a price can be paid (effort, training, subsidy, a second framework). The time-scale caveat from medium-and-manipulation carries over: a price nobody has paid for a generation, because the training that lets people pay it has hollowed out, behaves like a wall (lock-in). Hard capacity limits (a 160-character cap) remain genuine walls for the forms they exclude. Drafted in thinking-inside-frameworks.md; rests on a secondhand survey of the evidence.",
+      "flaggedIn": [
+        "thinking-inside-frameworks",
+        "medium-and-manipulation"
+      ],
+      "blocksChapters": [
+        "selection-as-other-engine"
+      ],
+      "related": [
+        "concept:influence-not-imprisonment",
+        "concept:option-space",
+        "mechanism:framework-pricing",
+        "concept:path-dependence"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "Where I'm still uncertain"
+        }
+      ],
+      "plain": "When a tool or platform makes a thought hard to express, is that thought impossible for its users, or only rarer?"
     }
   ]
 }

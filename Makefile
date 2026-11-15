@@ -15,9 +15,13 @@
 #   make extract-build   aggregate + rebuild (run after extraction agents)
 #   make context CENTER=<id>   emit a markdown context bundle for a node
 #   make citation-pages  regenerate content/citations/*.md from data/sources.json
-#   make concept-pages   regenerate content/{concepts,cases,mechanisms,questions}/*.md from the graph
+#   make concept-pages   regenerate the exploration layer from the graph: card pages
+#                        (content/{concepts,cases,mechanisms,questions}/), theme pages,
+#                        explore.md, reading-path.md and the chapter-map blocks
+#   make interlink       link first mentions of each card's name in the prose (ARGS=--dry to preview)
 #   make site-build  rebuild graph + citation pages + Quartz site + stage viewer at /graph/
 #   make site-serve  build and serve the Quartz site at localhost:8080
+#   make site-preview  serve site/public at localhost:8766 with GitHub Pages URL resolution
 #   make site-check  verify committed pages are fresh + internal links resolve
 #   make site-clean  remove the site build output and cache
 #   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
@@ -41,7 +45,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help lint-prose harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages site-build site-serve site-clean site-check viewer-stage talk-stage test check accept-stats
+.PHONY: all build serve stats sources clean help lint-prose harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages interlink site-build site-serve site-clean site-check viewer-stage talk-stage site-preview test check accept-stats
 
 all: build
 
@@ -133,12 +137,23 @@ talk-stage:
 citation-pages: build
 	@node $(SCRIPTS)/generate-citation-pages.js
 
-# Regenerate landing pages for concept / case / mechanism / question nodes
-# that have no prose page of their own. Idempotent (generator marker), and
-# hand-written overrides are left alone. Depends on `build` so it reads fresh
-# nodes/edges. These pages are committed (part of content/).
+# Regenerate the exploration layer from the graph: a card page for every
+# concept / case / mechanism / question node (generated frame around a
+# hand-written body, which is preserved), a page per theme, the explore.md and
+# reading-path.md hubs, and the chapter-map block at the top of each chapter
+# and foundational note. Idempotent; fully hand-written overrides (no
+# generator marker) are left alone. Depends on `build` so it reads fresh
+# nodes/edges. Everything it writes is committed (part of content/).
 concept-pages: build
 	@node $(SCRIPTS)/generate-concept-pages.js
+
+# Link the first mention of each card's name in the chapters and notes to its
+# card page. Terms come from the catalogs (label + aliases, steered per node
+# by `autolink`). Idempotent and conservative: never touches bold spans,
+# quotes, headings, code or existing links. Run after adding prose or cards;
+# `make interlink ARGS=--dry` previews. Then `make harvest` and `make build`.
+interlink: build
+	@node $(SCRIPTS)/interlink.js $(ARGS)
 
 # Full site build: rebuild the graph (so the data the viewer ships is fresh),
 # regenerate citation + concept landing pages, build the Quartz output,
@@ -165,6 +180,13 @@ site-build: citation-pages concept-pages
 site-serve:
 	@cd site && npx quartz plugin install
 	@cd site && npx quartz build --serve
+
+# Preview the built site locally with the URL resolution GitHub Pages uses
+# (extensionless links → .html / index.html). A plain `python -m http.server`
+# 404s on every in-page link, which looks like broken links but is not.
+# Run after `make site-build`.
+site-preview:
+	@node $(SCRIPTS)/serve-site.js $(PORT_SITE)
 
 # Post-build publish-path checks (also run in CI): committed generated
 # pages must match a fresh regeneration, and every internal link in the

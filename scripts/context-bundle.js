@@ -270,7 +270,7 @@ function renderClaim(lines, claim) {
   }
   // Illustrating case studies — show inline, then mark so the
   // standalone Case studies section knows to skip them.
-  const illustratingCases = inEdges(claim.id, 'mentions')
+  const illustratingCases = inEdges(claim.id, 'illustrates')
     .filter(e => e.source.startsWith('case:'))
     .map(e => nodeById.get(e.source))
     .filter(Boolean);

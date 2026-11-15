@@ -46,6 +46,32 @@ The *technology* is the machine or tool; the *medium* is the whole environment o
 ### Medium shapes want
 Different media cultivate different appetites over time: one that rewards shallow fast engagement trains people to want shallow fast content; one that rewards sustained attention does the opposite. McLuhan's "the medium is the message," restated at the level of what audiences come to *want*. See [[medium-and-manipulation|the medium note]]; graph node [[medium-shapes-want]].
 
+## Thinking inside frameworks
+
+### Framework
+Any structure someone built that other people then think inside: a language, a notation, a metaphor, a classification, a model, a metric, a tool, an org chart. A framework is a medium for thought: a choice made once, in advance, about what its users will find easy to notice, record and say. See [[thinking-inside-frameworks]]; graph node [[framework]].
+
+### Framework pricing
+How a framework biases thinking. It makes some thoughts cheap and others expensive, hands over a default, and leaves some things with nowhere to be written down. Nobody is forced; across a population the cheap thoughts win. See [[thinking-inside-frameworks]]; graph node [[framework-pricing]].
+
+### Legibility
+James C. Scott's term for simplifying a messy reality into what can be recorded and administered. Whatever the record has no place for stops counting. See [[thinking-inside-frameworks]]; graph node [[legibility]].
+
+### Framework feedback
+What happens when people act on a framework's picture of the world: the world changes, toward the picture (forests replanted to match timber tables, prices moving to match a formula) or away from it. See [[thinking-inside-frameworks]]; graph node [[framework-feedback]].
+
+### Goodhart's law
+When a measure becomes a target, it stops being a good measure. Engagement is the main case. See [[political-economy-of-attention|Chapter 10]]; graph node [[goodharts-law]].
+
+### Performativity
+Donald MacKenzie's term for a model that, used widely enough, reshapes the world it describes: an engine, not a camera. See [[intersubjective-truth|Chapter 8b]]; graph node [[performativity]].
+
+### Influence, not imprisonment
+The evidence's verdict on how strong all this is. Frameworks tilt thinking measurably and do not trap it; the strong claims (your language decides what you can think) mostly failed when tested. See [[thinking-inside-frameworks]]; graph node [[influence-not-imprisonment]].
+
+### Framework rotation
+The defense: use more than one framework and look at where they disagree, because a single framework fails silently. See [[thinking-inside-frameworks]]; graph node [[framework-rotation]].
+
 ## The receiver side
 
 ### Preconditions

@@ -10,6 +10,19 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (13), each with its own short page
+> **Worked out here:** [[manufactured-injection|Manufactured injection]] · [[memetic-fitness|Memetic fitness]] · [[selection|Selection]] · [[transport|Transport]]
+>
+> **Also used:** [[framework|Framework]] · [[legibility|Legibility]] · [[option-space|Option space]] · [[technology-vs-medium|Technology vs. medium]] · [[three-layer-message|The three-layer message]]
+>
+> **Examples:** [[astrology|Astrology]] · [[scientific-forestry|Scientific forestry and the Normalbaum]] · [[voyager-golden-record|The Voyager Golden Record]]
+>
+> **Open questions:** [[transport-vs-selection|Transport vs. selection: which is primary?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 If you've ever watched a careful finding get flattened into a headline, and then into a meme that means almost the opposite, this is the map of how that happens. I drew the diagram below years ago to trace the path an idea takes from the world to a person. I still think it's mostly right. It was missing a piece, and the back half here is about the piece. No special background needed; I'll build each part as we go.
 
 ## The diagram
@@ -45,6 +58,8 @@ The Out There is the source. It is also the only node on this diagram we can nev
 The first abstraction. Every measurement is a choice: what to measure, at what resolution, with what instruments, under what conditions. A thermometer gives you a number. The number is the temperature. The temperature is the average kinetic energy of molecules in a region. The region is a choice, the average is a choice, and the choice to measure temperature rather than humidity or particulate density is a choice. The reading is a number; the reality is a continuum.
 
 This generalizes. A poll of voter preference is a measurement: the questions are choices, the respondents are a sample, the response options are constrained. What's lost is every preference that didn't fit the questions; what's gained is a structured artifact other people can analyze. Raw data is misnamed. The "raw" is the first compression, pretending to be the source.
+
+What chooses that first compression is whatever the measurer thinks with: the instrument, the list of categories, the form with its boxes. Eighteenth-century German foresters kept tables of saleable timber with no column for underbrush or soil life, so those never entered forestry's reasoning, and the forests were eventually replanted to match the tables ([[scientific-forestry]]). James C. Scott's word for this is [[legibility]], and nothing later in the pipeline can recover what the record had no place for ([[thinking-inside-frameworks]]).
 
 ## Analysis → Insight
 

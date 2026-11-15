@@ -11,6 +11,15 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (12), each with its own short page
+> **Ideas:** [[cost-asymmetry|Cost asymmetry]] · [[default-setting|Defaults]] · [[framework|Framework]] · [[framework-pricing|Framework pricing]] · [[notation-as-tool-of-thought|Notation as a tool of thought]] · [[receiver-budget|Receiver budget]] · [[abyss|The abyss]]
+>
+> **Examples:** [[brief-history-of-time|A Brief History of Time]] · [[latin-mass-vs-vernacular|Latin Mass vs. vernacular liturgy]] · [[calculus-notation|Leibniz's dy/dx and the British lag]] · [[matplotlib-vs-seaborn|matplotlib vs. seaborn]] · [[plain-language-law|Statutes vs. plain-language legal summaries]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 A professional camera with full manual controls can take almost any photograph you can imagine, but hand it to someone who has never used one and they'll come back with a blurry mess. A phone camera in "auto" gets a good-enough shot for almost anybody, instantly, but try to do something unusual with it and you can't, because the choices were already made for you. More control, harder to use. Easier to use, less control. That is the whole trade-off, and once you notice it you see it everywhere: in software, churches, political parties, science books, and the law. The rest is five walks through that one shape.
 
 ## Software stratification
@@ -100,6 +109,8 @@ What's distinctive about law is that the institution *expects* both forms to coe
 ## What the curve is, and what it isn't
 
 Stand back and the shape is one shape: more optionality buys precision at the cost of access, more access buys reach at the cost of precision, and you can't have both at once in a single artifact. It recurs across these domains because it is about the *receiver*, not the domain. Every reader, believer, voter, and non-lawyer has a finite [[info-time-limit|receiver budget]] and a finite stock of structure to hang new material on. The precise form encodes distinctions that need structure the receiver may not have; the accessible form was compressed to fit the structure most receivers already do. **The optionality-vs-access trade is the receiver budget, showing up in the design of the artifact.** From here on, when a later chapter says a popular form gains reach at the cost of precision, or a technical form keeps precision at the cost of reach, this curve is what it means. It is the receiver-side mechanism behind [[complexity-virality-tradeoff|Chapter 5]]'s complexity-virality trade-off, it is what [[preservation-vs-training|Chapter 8]]'s preservation-and-training pair is *for* (preservation holds the high-optionality form, training expands budgets so more can reach it), and it is the curve [[ai-as-new-node|Chapter 11]]'s decompression-on-demand might, for the first time, let a single artifact serve both ends of at once.
+
+The curve is also a price list. Any artifact makes some moves cheap and others laborious ([[cost-asymmetry|cost asymmetry]]), and notation is the cleanest case: place-value numerals make long division a routine where Roman numerals push it onto an abacus, and Leibniz's *dy/dx* carries a rule in its symbols that Newton's dots leave out ([[calculus-notation]]). `seaborn`'s one-line default plot is the same thing in software ([[thinking-inside-frameworks]]).
 
 One distinction has to be kept, because "lots of options" has been doing two jobs. The curve is about *artifacts*: how much of a domain's precision a designed thing keeps, against how easily a receiver can pick it up. It is not a claim about the domains those artifacts point into. An artifact has a top: `matplotlib` is enormous and brutal but finite and masterable, and power users who command the whole library exist. The domain it points into, everything you could express by turning data into a picture, has no top, and nobody commands it. That bottomless thing is what I work through separately in [[abyss|the abyss]]: the possibility space of a sufficiently complex field, so vast no one can navigate it, which takes real competence even to perceive. A software library is not an abyss; the library is a finite map, the abyss the territory the map is of. Optionality-vs-access is the trade you make when you draw the map. The abyss is why you have to draw one at all.
 
