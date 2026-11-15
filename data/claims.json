@@ -1175,6 +1175,115 @@
           "text": "it removed the inertia that used to be a load-bearing, unpaid-for component of every large intersubjective truth"
         }
       ]
+    },
+    {
+      "id": "framework-is-medium-for-thought",
+      "label": "A framework is a medium for thought",
+      "summary": "A framework (language, notation, classification, model, metric, tool, org chart) is selection performed once, in advance, on what its users will find easy to notice, record and say. The medium-is-frozen-selection claim moved one step upstream: to the hop from the world to a measurement, and to the inside of a single head before anything is sent.",
+      "aliases": [
+        "framework is a medium for thought",
+        "frozen selection inside the thinker"
+      ],
+      "status": "provisional",
+      "argues": [
+        "thinking-inside-frameworks"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine",
+        "information-landscape"
+      ],
+      "dependsOn": [
+        "claim:medium-is-frozen-selection",
+        "claim:medium-attached-to-every-gate"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "thinking-inside-frameworks",
+          "lineApprox": 23,
+          "text": "A framework is a medium for thought: selection performed once, in advance, on what its users will find easy to notice, record and say."
+        }
+      ]
+    },
+    {
+      "id": "frameworks-price-not-forbid",
+      "label": "A framework prices thoughts; it rarely forbids them",
+      "summary": "The weak-form correction to 5b's 'a variant the option space cannot hold never forms'. Tested strong-form claims (linguistic determinism above all) mostly fail; the dependable effect is a graded bias. The expensive variant can form; across a population it mostly does not. It bends populations and leaves individuals free, and it changes the remedy: a price can be paid.",
+      "aliases": [
+        "price list not wall",
+        "prices not forbids",
+        "influence not imprisonment"
+      ],
+      "status": "provisional",
+      "argues": [
+        "thinking-inside-frameworks"
+      ],
+      "arguedInChapters": [
+        "selection-as-other-engine"
+      ],
+      "dependsOn": [
+        "claim:framework-is-medium-for-thought",
+        "question:framework-wall-or-price"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "thinking-inside-frameworks",
+          "lineApprox": 53,
+          "text": "A framework rarely forbids a thought. It prices it."
+        }
+      ]
+    },
+    {
+      "id": "feedback-rebuilds-the-world",
+      "label": "Framework bias bites hardest where the framework is acted on",
+      "summary": "When people act on a framework's outputs the world is rebuilt to fit it and the evidence of misfit disappears (scientific forestry, Black-Scholes before 1987), or the framework is broken by its own use (Goodhart, the post-1987 skew, Waldsterben). The general form of constitutive transmission; it reaches managed objective reality, not only truths made of agreement.",
+      "aliases": [
+        "feedback rebuilds the world",
+        "the map moves the territory"
+      ],
+      "status": "provisional",
+      "argues": [
+        "thinking-inside-frameworks"
+      ],
+      "arguedInChapters": [
+        "political-economy-of-attention"
+      ],
+      "dependsOn": [
+        "claim:framework-is-medium-for-thought",
+        "claim:transmission-is-participation"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "thinking-inside-frameworks",
+          "lineApprox": 67,
+          "text": "The bias matters most where a framework is acted on, because the world is then rebuilt to fit it and the evidence of misfit disappears."
+        }
+      ]
+    },
+    {
+      "id": "plural-frameworks-defense",
+      "label": "The defense against framework bias is plural",
+      "summary": "A single framework fails silently; the disagreement between two shows the shape of each. Use several lenses, report across framings, keep measures apart from targets, red-team the categories. The framework-scale statement of the book's prescription: versatile expertise is rotation practiced by one person, survivable-polarization design is rotation built into an institution.",
+      "aliases": [
+        "the defense is plural",
+        "several frameworks",
+        "framework rotation claim"
+      ],
+      "status": "provisional",
+      "argues": [
+        "thinking-inside-frameworks"
+      ],
+      "arguedInChapters": [],
+      "dependsOn": [
+        "claim:frameworks-price-not-forbid",
+        "claim:bridge-node-is-versatile-specialist"
+      ],
+      "harvestedFrom": [
+        {
+          "note": "thinking-inside-frameworks",
+          "lineApprox": 77,
+          "text": "The defense is plural. A single framework fails silently, and it is the disagreement between two of them that shows the shape of each."
+        }
+      ]
     }
   ]
 }

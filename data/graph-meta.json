@@ -17,7 +17,8 @@
     "Tradition":     { "color": "#db2777", "shape": "round-pentagon",  "description": "Intellectual lineage (memetics, media ecology, network epistemology, ...)" },
     "CaseStudy":     { "color": "#0891b2", "shape": "barrel",          "description": "Worked example the book uses (Hammer/Copernicus, telephone game, matplotlib/seaborn, astrology, ...)" },
     "Tension":       { "color": "#7f1d1d", "shape": "concave-hexagon", "description": "An open contradiction or unresolved trade-off" },
-    "Status":        { "color": "#6b7280", "shape": "ellipse",         "description": "Drafting status (drafted / in-workshop / skeleton / not-yet-drafted / superseded)" }
+    "Status":        { "color": "#6b7280", "shape": "ellipse",         "description": "Drafting status (drafted / in-workshop / skeleton / not-yet-drafted / superseded)" },
+    "Theme":         { "color": "#15803d", "shape": "round-diamond",   "description": "A reader-facing cluster of cards (concepts, mechanisms, examples, questions) that belong together — the unit of self-guided exploration, with an ordered trail through its members" }
   },
 
   "predicates": {
@@ -28,12 +29,14 @@
     "gateFor":           { "category": "structural",  "color": "#f97316", "directed": true,  "description": "Gate is the selection-side sibling of this PipelineStage" },
     "hasStatus":         { "category": "structural",  "color": "#6b7280", "directed": true,  "description": "Chapter has this drafting status" },
     "representedBy":     { "category": "structural",  "color": "#a855f7", "directed": true,  "description": "Source is materially represented as this Note (e.g. conversation transcript that doubles as a source)" },
+    "inTheme":           { "category": "structural",  "color": "#15803d", "directed": true,  "description": "Card (Concept / Mechanism / CaseStudy / Question) belongs to this Theme; edge order within a Theme is the trail order" },
 
     "derivesFrom":       { "category": "causal",      "color": "#dc2626", "directed": true,  "description": "Mechanism / Concept derives from another" },
     "enables":           { "category": "causal",      "color": "#f97316", "directed": true,  "description": "X enables Y (inverse-ish of derivesFrom)" },
     "precondition":      { "category": "causal",      "color": "#b91c1c", "directed": true,  "description": "X is a precondition for Y" },
     "compresses":        { "category": "causal",      "color": "#dc2626", "directed": true,  "description": "PipelineStage compresses into the next" },
     "selectsFor":        { "category": "causal",      "color": "#ef4444", "directed": true,  "description": "Gate selects for this Concept (its filter criterion)" },
+    "instanceOf":        { "category": "causal",      "color": "#be123c", "directed": true,  "description": "X is a special case of Y (the engagement equilibrium is an instance of Goodhart's law; Goodhart's law is an instance of framework feedback)" },
 
     "cites":             { "category": "provenance",  "color": "#a855f7", "directed": true,  "description": "Note cites a Source" },
     "authoredBy":        { "category": "provenance",  "color": "#7c3aed", "directed": true,  "description": "Source authored by Author" },
@@ -49,6 +52,9 @@
     "supports":          { "category": "claim",       "color": "#22c55e", "directed": true,  "description": "Source supports this Claim / Mechanism / Concept (with quote + confidence + rationale)" },
     "pressureTests":     { "category": "claim",       "color": "#ef4444", "directed": true,  "description": "Source pressure-tests / challenges this Claim / Mechanism / Concept" },
     "dependsOn":         { "category": "claim",       "color": "#8b5cf6", "directed": true,  "description": "Claim depends on another Claim, or on a Question resolving a particular way" },
+    "illustrates":       { "category": "claim",       "color": "#0891b2", "directed": true,  "description": "CaseStudy illustrates this Mechanism / Concept / Claim" },
+
+    "relatedTo":         { "category": "associative", "color": "#64748b", "directed": false, "description": "Curated see-also between two cards — close neighbours a reader would want to visit next" },
 
     "mentions":          { "category": "weak",        "color": "#cbd5e1", "directed": true,  "description": "Free-text mention — useful for navigation, not for argument" },
     "wikiLinks":         { "category": "weak",        "color": "#cbd5e1", "directed": true,  "description": "[[wikilink]] reference between Notes" }
@@ -60,6 +66,7 @@
     "provenance":  { "color": "#a855f7", "description": "Where a claim comes from" },
     "dialectical": { "color": "#b45309", "description": "Tensions, contradictions, supersession" },
     "claim":       { "color": "#facc15", "description": "Argument structure: arguing, supporting, pressure-testing, depending" },
+    "associative": { "color": "#64748b", "description": "Curated see-also links between cards — the exploration layer" },
     "weak":        { "color": "#cbd5e1", "description": "Free-text mentions — provenance not yet validated" }
   },
 
@@ -75,6 +82,7 @@
     "paper":                 "Academic paper",
     "post":                  "Online post or essay",
     "talk":                  "Recorded talk or conference presentation",
+    "report":                "Commissioned research report or literature survey (secondary source: relays other sources)",
     "personal-conversation": "Transcribed personal conversation"
   },
 

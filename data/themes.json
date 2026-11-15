@@ -1,0 +1,311 @@
+{
+  "_doc": "Themes: reader-facing clusters of cards (concepts, mechanisms, case studies, questions), ordered along the book's arc by `ordinal`. `members` is an ordered list of typed ids and sets the trail (prev/next) through the theme; every card belongs to exactly one theme (the build warns otherwise). `chapters` lists the chapter slugs (or note slugs) that tell the same ground as narrative. `plain` is one plain sentence; `summary` is the short intro on the theme page. Loaded by loadThemes in build-graph.js; rendered by generate-concept-pages.js into content/themes/ and content/explore.md.",
+  "themes": [
+    {
+      "id": "how-ideas-travel",
+      "label": "How ideas travel",
+      "plain": "An idea reaches you through a chain of retellings, and two things happen at every link: it gets repackaged, and it gets filtered.",
+      "summary": "Start here if you are new. This is the basic machine the rest of the book runs on: a chain of stages from the world to your phone, a loss at every hop, a filter at every hop, and a difference between the two that turns out to matter more than anything else.",
+      "chapters": [
+        "information-landscape",
+        "transport-vs-selection",
+        "complexity-virality-tradeoff"
+      ],
+      "members": [
+        "mechanism:transport",
+        "case:telephone-game",
+        "mechanism:selection",
+        "concept:memetic-fitness",
+        "concept:option-space",
+        "mechanism:manufactured-injection",
+        "case:astrology",
+        "case:scientists-say-x",
+        "question:transport-vs-selection",
+        "concept:three-layer-message",
+        "case:voyager-golden-record"
+      ],
+      "ordinal": 1
+    },
+    {
+      "id": "the-medium",
+      "label": "The medium sets the rules",
+      "plain": "The format an idea travels in decides which ideas can win, before anyone makes a choice.",
+      "summary": "A platform, a printing press or a broadcast schedule looks like a pipe that content flows through. The book argues it is the rulebook for the contest: it fixes what can be said, what gets rewarded, and over time what people come to want.",
+      "chapters": [
+        "selection-as-other-engine",
+        "medium-and-manipulation"
+      ],
+      "members": [
+        "concept:technology-vs-medium",
+        "mechanism:medium-shapes-want",
+        "mechanism:want-as-prime-mover",
+        "concept:algorithm-as-selection-engine",
+        "concept:manipulation-surface",
+        "case:hammer-vs-copernicus",
+        "question:medium-and-manipulation",
+        "question:framework-wall-or-price"
+      ],
+      "ordinal": 2
+    },
+    {
+      "id": "frameworks",
+      "label": "Thinking inside frameworks",
+      "plain": "The tools you think with, from languages to slide decks, make some thoughts cheap and others expensive before you say a word.",
+      "summary": "The same rulebook idea, moved inside your own head. Languages, notations, metaphors, forms and learned habits all tilt what you find easy to think. A dozen fields discovered this separately and gave it a dozen names. The evidence says the tilt is real and measurable, and that it is a tilt and no cage.",
+      "chapters": [
+        "thinking-inside-frameworks"
+      ],
+      "members": [
+        "concept:framework",
+        "mechanism:framework-pricing",
+        "concept:cost-asymmetry",
+        "concept:default-setting",
+        "case:columbia-powerpoint",
+        "concept:notation-as-tool-of-thought",
+        "case:calculus-notation",
+        "concept:linguistic-relativity",
+        "case:russian-blues",
+        "case:piraha-numbers",
+        "concept:influence-not-imprisonment",
+        "concept:framing-effect",
+        "case:asian-disease-problem",
+        "concept:conceptual-metaphor",
+        "case:crime-metaphor",
+        "concept:theory-ladenness",
+        "concept:einstellung-effect",
+        "case:chess-einstellung",
+        "concept:law-of-the-instrument",
+        "concept:inductive-bias",
+        "case:prompt-format-sensitivity"
+      ],
+      "ordinal": 3
+    },
+    {
+      "id": "maps-and-territories",
+      "label": "When the map moves the territory",
+      "plain": "Once people act on a simplified picture of the world, the world starts changing to fit the picture.",
+      "summary": "A biased picture misleads whoever reads it. A picture that gets acted on does something stronger: forests are replanted to match the table, prices move to match the formula, people change to match the category. This is where framework bias stops being a quirk of thought and becomes a force in the world, and it ends with what to do about it.",
+      "chapters": [
+        "thinking-inside-frameworks",
+        "intersubjective-truth"
+      ],
+      "members": [
+        "concept:map-and-territory",
+        "concept:legibility",
+        "case:scientific-forestry",
+        "concept:classification-torque",
+        "case:apartheid-classification",
+        "case:dsm-and-rdoc",
+        "mechanism:framework-feedback",
+        "concept:goodharts-law",
+        "case:ai-benchmarks",
+        "concept:performativity",
+        "case:black-scholes",
+        "case:gaussian-copula",
+        "concept:looping-effects",
+        "concept:conways-law",
+        "concept:path-dependence",
+        "case:qwerty",
+        "concept:framework-rotation"
+      ],
+      "ordinal": 4
+    },
+    {
+      "id": "the-finite-reader",
+      "label": "The finite reader",
+      "plain": "You have a limited number of hours for hard ideas, which is why everything has to be shortened to reach you.",
+      "summary": "The honest part of the machine. Nobody is to blame for the fact that a lifetime is short and fields are vast. Every textbook, sermon, statute and chart library is a trade between saying it all and being usable, and this theme is about that trade.",
+      "chapters": [
+        "human-time-budget",
+        "optionality-vs-access",
+        "complexity-virality-tradeoff"
+      ],
+      "members": [
+        "concept:receiver-budget",
+        "question:budget-fixed-or-trainable",
+        "concept:abyss",
+        "concept:complex-form",
+        "concept:compressed-form",
+        "case:matplotlib-vs-seaborn",
+        "case:latin-mass-vs-vernacular",
+        "case:brief-history-of-time",
+        "case:plain-language-law",
+        "concept:complexity-ceiling",
+        "concept:handle-ability",
+        "question:complexity-doing-two-jobs",
+        "concept:transferable-preconditions",
+        "case:bitcoin-internet-money"
+      ],
+      "ordinal": 5
+    },
+    {
+      "id": "compression-and-truth",
+      "label": "What shortening does to truth",
+      "plain": "A shortened claim loses its reading instructions, so it can land as roughly right, as the opposite of what was found, or as a team badge.",
+      "summary": "Where the book gets its stakes. \"Lossy\" sounds harmless until you see that the same four words can be decoded three different ways by three different readers, and that corrections lose to the myths they chase.",
+      "chapters": [
+        "truth-compression-and-when-each-wins",
+        "case-studies-and-three-realities"
+      ],
+      "members": [
+        "question:truth-value-placement",
+        "concept:truth-compression-regimes",
+        "mechanism:interpretive-latitude",
+        "case:power-posing",
+        "case:arsenic-life",
+        "case:stanford-prison-experiment-corrective"
+      ],
+      "ordinal": 6
+    },
+    {
+      "id": "made-by-agreement",
+      "label": "Truths made by agreement",
+      "plain": "Money, laws and nations are real because people agree they are, and for truths like that, spreading the word is part of what makes them true.",
+      "summary": "Most of the book treats ideas as reports about a world that does not care what we think. Some truths are different: they exist because enough people hold them. For those, the chain of retellings is wired into the thing itself.",
+      "chapters": [
+        "case-studies-and-three-realities",
+        "intersubjective-truth"
+      ],
+      "members": [
+        "concept:three-realities",
+        "concept:truth-generators",
+        "mechanism:constitutive-transmission",
+        "concept:constitutive-regimes",
+        "concept:reification",
+        "question:intersubjective-pipeline"
+      ],
+      "ordinal": 7
+    },
+    {
+      "id": "selection-up-close",
+      "label": "What the filter rewards",
+      "plain": "What spreads is whatever the filter rewards, and the evidence on what that is turns out to be stranger than \"people like lies\".",
+      "summary": "The research on virality, read closely: a handful of accounts doing most of the sharing, people spreading what they say they do not want spread, and the stretch of the chain where expert findings get retold for everyone else.",
+      "chapters": [
+        "bridge-zone-distortion",
+        "emotional-memetics"
+      ],
+      "members": [
+        "concept:paradox-of-virality",
+        "concept:superspreader-dynamics",
+        "concept:meme-ecosystem-competition",
+        "concept:neutral-drift-baseline",
+        "concept:replicator-ontology",
+        "concept:bridge-zone",
+        "case:covid-mask-guidance",
+        "case:nutrition-reversals",
+        "case:monetary-policy-press",
+        "concept:pseudo-context"
+      ],
+      "ordinal": 8
+    },
+    {
+      "id": "how-people-believe",
+      "label": "How people actually believe things",
+      "plain": "People are harder to fool than the panic suggests, and the ways they do go wrong are mostly reasonable habits adding up badly.",
+      "summary": "The strongest objection to the book's alarm, taken seriously. People have real defenses against bad information. This theme is about what those defenses protect, what they leave open, and how sensible individual habits can still produce a group that is confidently wrong.",
+      "chapters": [
+        "emotional-memetics",
+        "selection-as-other-engine"
+      ],
+      "members": [
+        "concept:epistemic-vigilance",
+        "concept:open-vigilance",
+        "concept:reflective-vs-intuitive-belief",
+        "concept:justification-market",
+        "concept:credibility-weighting",
+        "concept:conformity",
+        "concept:false-consensus-rational-agents"
+      ],
+      "ordinal": 9
+    },
+    {
+      "id": "networks-at-scale",
+      "label": "Groups, splits and scale",
+      "plain": "As groups grow, their shared stories blur and they split along the blur, and simply reconnecting the pieces does not fix it.",
+      "summary": "What happens to shared understanding as a network gets big: stories stretch to cover everyone and stop meaning one thing, communities drift apart by distrust, and more connection is sometimes worse.",
+      "chapters": [
+        "myths-scale-and-bureaucracy",
+        "integration-problem"
+      ],
+      "members": [
+        "mechanism:myth-dilution",
+        "concept:network-segmentation",
+        "concept:echo-chambers-vs-bubbles",
+        "concept:polarization-via-distrust",
+        "concept:zollman-effect",
+        "concept:inverted-u",
+        "question:integration-vs-fragmentation"
+      ],
+      "ordinal": 10
+    },
+    {
+      "id": "who-owns-the-gates",
+      "label": "Who owns the filters",
+      "plain": "The filters that decide what you see have owners, and the owners are paid for your attention.",
+      "summary": "The political economy. A filter that follows rules can be tuned, tuning has an owner, and the owner has a business model. This theme covers how that plays out, and a map of the ways a filter can be turned against its purpose.",
+      "chapters": [
+        "political-economy-of-attention",
+        "capture-taxonomy"
+      ],
+      "members": [
+        "mechanism:engagement-equilibrium",
+        "concept:orwell-huxley-axis",
+        "concept:cost-shifting",
+        "concept:creation-cheap-review-expensive",
+        "concept:out-competition-of-carriers",
+        "concept:self-vs-external-capture",
+        "concept:capture-taxonomy",
+        "concept:consumer-key-vs-surface-capture",
+        "concept:capture-asymmetry"
+      ],
+      "ordinal": 11
+    },
+    {
+      "id": "ai-as-a-node",
+      "label": "AI in the chain",
+      "plain": "A language model puts every dial of the filter in one owner's hands, which could finally help the finite reader or finish off the careful version.",
+      "summary": "A new kind of link in the chain, and the first to own almost every setting at once. The hopeful case and the grim case are the same technology under different ownership.",
+      "chapters": [
+        "ai-as-new-node"
+      ],
+      "members": [
+        "concept:llm-design-moment-collapse",
+        "concept:decompression-on-demand",
+        "concept:compressed-form-as-authority",
+        "concept:corpus-capture",
+        "concept:objective-capture",
+        "concept:deployment-capture",
+        "concept:llm-as-capability-extender"
+      ],
+      "ordinal": 12
+    },
+    {
+      "id": "building-bridges",
+      "label": "Building bridges that last",
+      "plain": "The way through is people and institutions that can carry hard truths between groups that distrust each other, and survive long enough to matter.",
+      "summary": "The book's answer. It asks for a particular kind of expert, a particular kind of institution, and a longer time horizon than anyone would like.",
+      "chapters": [
+        "preservation-vs-training",
+        "integration-problem",
+        "infrastructure-for-integration",
+        "bridge-nodes-and-versatile-expertise"
+      ],
+      "members": [
+        "question:transferable-vs-specialized",
+        "concept:curse-of-expertise",
+        "concept:versatile-expertise",
+        "concept:preservation-vs-training-pair",
+        "concept:institutional-decay-rates",
+        "concept:curation-layer",
+        "concept:funding-decoupling",
+        "concept:survivable-polarization",
+        "case:common-law-courts",
+        "case:stack-overflow",
+        "concept:survival-not-victory",
+        "concept:work-of-generations"
+      ],
+      "ordinal": 13
+    }
+  ]
+}

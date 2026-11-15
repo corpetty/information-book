@@ -7,11 +7,11 @@ tags:
 
 <!-- generated from data/sources.json — edit data/sources.json to update structured metadata, or replace this file with hand-written prose (delete this comment) to override -->
 
-> **book** · James C. Scott · tradition: `institutional-analysis`
+> **book** · James C. Scott · tradition: `sociology-of-measurement`
 
-How states impose legibility by simplifying complex local reality, and how high-modernist simplification fails.
+Scott's account of how states simplify societies and landscapes to make them legible (taxable, conscriptable, governable), and how those simplifications, backed by power, remake the reality they describe. Source of legibility and the scientific-forestry case.
 
-**The book's stance.** Bears on bureaucracy-downstream-of-myth and Chapter 8. Pressure-tests: bureaucracy as the compressor (legibility) rather than the key-restorer, which the book's narrow stipulation must answer. Quote-backed supports/pressureTests edges pending extraction of the source PDF.
+**The book's stance.** known secondhand through the frameworks report; not yet read at the source.
 
 **Availability.** Cited by reference; no local copy held in the repo.
 

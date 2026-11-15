@@ -20,7 +20,29 @@
         "complexity-virality-tradeoff",
         "information-landscape"
       ],
-      "derivesFrom": []
+      "derivesFrom": [],
+      "plain": "Each retelling of an idea for a new audience loses something, and what goes first is usually the fine print on how to read it.",
+      "passages": [
+        {
+          "note": "transport-vs-selection",
+          "section": "The two views"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What a message is made of"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "Transport is a cost; selection is a choice"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "case:telephone-game",
+        "concept:complexity-ceiling",
+        "concept:compressed-form",
+        "concept:three-layer-message"
+      ]
     },
     {
       "id": "selection",
@@ -28,9 +50,7 @@
       "summary": "Gates with local fitness criteria at each pipeline stage. What survives is whatever wins on emotional resonance, identity reinforcement, status, action affordance, novelty. Dominant constraint in modern digital networks where transport cost has collapsed.",
       "aliases": [
         "selection",
-        "memetic fitness",
         "selection criteria",
-        "fitness landscape",
         "selection gates"
       ],
       "definedIn": [
@@ -41,7 +61,29 @@
         "selection-as-other-engine",
         "information-landscape"
       ],
-      "derivesFrom": []
+      "derivesFrom": [],
+      "plain": "At every step, someone or something decides which ideas get passed on, and that decision follows rules that people can set on purpose.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "What the gate rewards"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "Transport is a cost; selection is a choice"
+        },
+        {
+          "note": "the-information-landscape",
+          "section": "The sibling pipeline: selection"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "concept:memetic-fitness",
+        "concept:option-space",
+        "concept:algorithm-as-selection-engine",
+        "concept:manipulation-surface"
+      ]
     },
     {
       "id": "want-as-prime-mover",
@@ -62,6 +104,24 @@
       "derivesFrom": [
         "transport",
         "selection"
+      ],
+      "plain": "People only build the background that hard ideas need if they keep wanting to engage, so appetite comes before both ability and taste.",
+      "passages": [
+        {
+          "note": "transport-vs-selection",
+          "section": "Modality, not primacy"
+        },
+        {
+          "note": "medium-and-manipulation",
+          "section": "Three things the medium does to a gate"
+        }
+      ],
+      "related": [
+        "mechanism:medium-shapes-want",
+        "concept:receiver-budget",
+        "question:budget-fixed-or-trainable",
+        "mechanism:transport",
+        "mechanism:selection"
       ]
     },
     {
@@ -82,6 +142,28 @@
       ],
       "derivesFrom": [
         "want-as-prime-mover"
+      ],
+      "plain": "The places where we read, watch and scroll slowly train us to want more of whatever they reward.",
+      "passages": [
+        {
+          "note": "medium-and-manipulation",
+          "section": "Three things the medium does to a gate"
+        },
+        {
+          "note": "medium-and-manipulation",
+          "section": "The medium selects wants; it doesn't author them"
+        },
+        {
+          "note": "transport-vs-selection",
+          "section": "Modality, not primacy"
+        }
+      ],
+      "related": [
+        "mechanism:want-as-prime-mover",
+        "question:medium-and-manipulation",
+        "concept:technology-vs-medium",
+        "mechanism:engagement-equilibrium",
+        "concept:option-space"
       ]
     },
     {
@@ -100,7 +182,29 @@
         "information-landscape",
         "ai-as-new-node"
       ],
-      "derivesFrom": []
+      "derivesFrom": [],
+      "plain": "Some of what circulates as information was never checked against the world at all; it was made up and dropped into the stream partway down.",
+      "passages": [
+        {
+          "note": "the-information-landscape",
+          "section": "Where manufactured content enters"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The manipulation surface is the gate itself"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What a message is made of"
+        }
+      ],
+      "related": [
+        "case:astrology",
+        "mechanism:selection",
+        "concept:memetic-fitness",
+        "concept:three-layer-message",
+        "concept:manipulation-surface"
+      ]
     },
     {
       "id": "interpretive-latitude",
@@ -122,6 +226,28 @@
       ],
       "derivesFrom": [
         "transport"
+      ],
+      "plain": "The shorter a claim gets, the more different things people can take it to mean.",
+      "passages": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "Compression unpins the key"
+        },
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "From latitude to segmentation"
+        },
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Three things compression can do to truth"
+        }
+      ],
+      "related": [
+        "mechanism:myth-dilution",
+        "concept:network-segmentation",
+        "concept:truth-compression-regimes",
+        "mechanism:transport",
+        "concept:compressed-form"
       ]
     },
     {
@@ -148,6 +274,31 @@
       ],
       "enables": [
         "concept:out-competition-of-carriers"
+      ],
+      "plain": "A feed that sells your time keeps showing whatever holds you longest, and nobody has to intend any harm for that to happen.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "What engagement actually measures"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "Two kinds of capture"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "Where I land"
+        }
+      ],
+      "related": [
+        "concept:self-vs-external-capture",
+        "concept:out-competition-of-carriers",
+        "concept:paradox-of-virality",
+        "concept:goodharts-law",
+        "concept:orwell-huxley-axis"
+      ],
+      "instanceOf": [
+        "concept:goodharts-law"
       ]
     },
     {
@@ -175,6 +326,28 @@
       ],
       "enables": [
         "concept:network-segmentation"
+      ],
+      "plain": "The bigger the group a shared story has to hold together, the simpler the story must get, and the more ways people can read it.",
+      "passages": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "A myth dilutes as its network grows"
+        },
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "Bureaucracy is downstream of the myth"
+        },
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "What decides the loop"
+        }
+      ],
+      "related": [
+        "mechanism:interpretive-latitude",
+        "concept:network-segmentation",
+        "concept:complexity-ceiling",
+        "concept:preservation-vs-training-pair",
+        "concept:legibility"
       ]
     },
     {
@@ -202,7 +375,109 @@
       ],
       "enables": [
         "concept:constitutive-regimes"
+      ],
+      "plain": "When something is real only because people agree on it, every retelling adds to or drains the agreement, so spreading the news changes the thing.",
+      "passages": [
+        {
+          "note": "intersubjective-truth",
+          "section": "The pipeline is wired into its own cargo"
+        },
+        {
+          "note": "intersubjective-truth",
+          "section": "Constitutive volatility: the thesis's second blade"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "A fifth story: money"
+        }
+      ],
+      "related": [
+        "concept:truth-generators",
+        "concept:constitutive-regimes",
+        "concept:performativity",
+        "mechanism:framework-feedback",
+        "mechanism:transport"
       ]
+    },
+    {
+      "id": "framework-pricing",
+      "label": "Framework pricing",
+      "summary": "How a framework biases the thinking done inside it: it sets a price on every thought. Some operations are cheap, others laborious (cost asymmetry); one arrives free if nothing is chosen (the default); a few are off the menu because the framework cannot record them (legibility). No individual is forced, but across a population and over time the cheap thoughts win and conclusions carry the framework's shape. It is selection running inside one head with ease as the reward, and it is the weak-form replacement for 5b's 'a variant the option space cannot hold never forms': the variant rarely forms because it is expensive. Because it is a price, it can be paid (effort, training, subsidy, a second framework). Provisional; rests on the frameworks report.",
+      "aliases": [
+        "framework pricing",
+        "price list",
+        "the price list, not the wall",
+        "cost and default"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "selection-as-other-engine",
+        "optionality-vs-access"
+      ],
+      "derivesFrom": [
+        "selection"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:option-space",
+        "concept:cost-asymmetry",
+        "concept:default-setting",
+        "concept:influence-not-imprisonment",
+        "concept:receiver-budget"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        }
+      ],
+      "plain": "A framework makes some thoughts cheap and others expensive, and across a whole population people mostly think the cheap ones."
+    },
+    {
+      "id": "framework-feedback",
+      "label": "Framework feedback",
+      "summary": "The loop in which a framework's outputs are acted on and the world changes in response. It can run toward the framework (Barnesian performativity: Black-Scholes 1976-87; scientific forestry making the Normalbaum real) or away from it (counterperformativity, Goodhart/Campbell corruption of targeted measures, Hacking's looping kinds, Waldsterben). The book's claim: this is where framework bias does its real damage, because a map that is acted on rebuilds the ground and erases the mismatch that would have exposed it. The general form of constitutive transmission, and it reaches further: the forestry case shows managed objective reality being rebuilt to fit a map, which strains the truth-generators carving. Provisional; rests on the frameworks report.",
+      "aliases": [
+        "framework feedback",
+        "feedback onto reality",
+        "the map moves the territory",
+        "acting on the map"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "political-economy-of-attention"
+      ],
+      "derivesFrom": [
+        "constitutive-transmission",
+        "framework-pricing"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:performativity",
+        "concept:goodharts-law",
+        "concept:looping-effects",
+        "concept:legibility",
+        "concept:constitutive-regimes"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        }
+      ],
+      "plain": "When people act on a framework's picture of the world, the world changes, sometimes to match the picture and sometimes to break it."
     }
   ]
 }

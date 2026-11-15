@@ -1,5 +1,6 @@
 ---
 title: Justification market (behavior→belief arrow)
+description: "People often decide what to do first and then go looking for beliefs that make the decision feel right."
 tags:
   - concept
   - graph-node
@@ -11,15 +12,29 @@ aliases:
 
 <!-- generated from the ontology graph — edit the node in data/*.json and rebuild, or replace this file with hand-written prose (delete this comment) to override -->
 
-> **Concept**
+*Concept · part of [[how-people-believe|How people actually believe things]]*
 
-Mercier's reframe of the causal arrow between content consumption and behavior. The naive story (and the book's implicit Part-IV-supply-side framing): content shapes belief, belief drives behavior. Mercier's reversal: behavior is determined upstream (by group identity, in-group commitments, status concerns, material interest); receivers then demand-side select for content that *justifies* the already-decided behavior. The market for false beliefs is therefore downstream of action-already-chosen, and what looks like 'mass persuasion installing beliefs' is more often suppliers of justifications meeting receivers' pre-existing demand. The Trump-supporter finding (corrections accepted, behavior unchanged) is the diagnostic anchor: when corrections land and behavior doesn't move, the belief was never load-bearing for the behavior.
+<!-- card -->
+In a finding Hugo Mercier cites, supporters of Donald Trump were shown corrections to false claims. They accepted the corrections. Their support did not move. If the false beliefs had been holding up the support, removing them should have shaken it.
 
-## Connections
+Mercier's reading, in *Not Born Yesterday*, reverses the usual story, in which content shapes belief and belief drives behavior. He argues that behavior is mostly settled upstream, by group identity, status and material interest, and that people then shop for content that justifies what they were going to do anyway. Politicians, pundits and platforms supply it. The belief is the alibi for a choice that came first.
 
-- **Defined in:** [[emotional-memetics|Emotional Memetics As The Floor]]
-- **Discussed in:** [[emotional-memetics|Ch 7 — Emotional Memetics As The Floor]], [[political-economy-of-attention|Ch 10 — Political Economy of Attention]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
-- **Evidenced by:** [[not-born-yesterday|Not Born Yesterday]]
+The book calls this the **justification market** and treats it as the most disruptive challenge to its own picture, in which [[selection|selection]] installs beliefs. Its answer is that both arrows run. Belief leads where behavior depends on information, as in public health. Justification leads where behavior depends on identity. Such beliefs are often [[reflective-vs-intuitive-belief|reflective]]. For repair, supply is only half the job: even a [[versatile-expertise|bridging expert]] meets an audience whose demand was shaped by [[medium-shapes-want|years of media habit]]. Whether this is a separate mechanism from the [[engagement-equilibrium|engagement equilibrium]], the book leaves open.
+<!-- /card -->
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
+## Read the full argument
 
+- [[emotional-memetics#Engaging Mercier|Chapter 7: Emotional Memetics As The Floor]], section "Engaging Mercier"
+- [[integration-problem#The prescription|Chapter 9: The Integration Problem]], section "The prescription"
+
+## How it connects
+
+- **See also:** [[engagement-equilibrium|Engagement-maximization as a captured equilibrium]], [[medium-shapes-want|Medium shapes want]], [[open-vigilance|Open vigilance (Mercier's paired construct)]], [[paradox-of-virality|Paradox of virality]], [[reflective-vs-intuitive-belief|Reflective vs. intuitive belief (Sperber's split)]]
+- **Evidence:** [[not-born-yesterday|Not Born Yesterday]]
+- **Where the book discusses it:** [[emotional-memetics|Chapter 7: Emotional Memetics As The Floor]], [[preservation-vs-training|Chapter 8: Preservation vs. Training]], [[political-economy-of-attention|Chapter 10: Political Economy of Attention]]
+
+---
+
+← [[reflective-vs-intuitive-belief|Reflective vs. intuitive belief (Sperber's split)]] · [[how-people-believe|How people actually believe things]] (4 of 7) · [[credibility-weighting|Credibility weighting]] →
+
+<em>[[explore|Explore all the ideas]] · [[reading-path|Read the book in order]] · <a href="../graph/" data-router-ignore="true">Open the interactive map</a></em>

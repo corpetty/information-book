@@ -1,5 +1,6 @@
 ---
 title: Superspreader dynamics
+description: "A tiny number of very well-connected accounts do most of the spreading, something that was impossible before networks got this big."
 tags:
   - concept
   - graph-node
@@ -12,15 +13,29 @@ aliases:
 
 <!-- generated from the ontology graph — edit the node in data/*.json and rebuild, or replace this file with hand-written prose (delete this comment) to override -->
 
-> **Concept**
+*Concept · part of [[selection-up-close|What the filter rewards]]*
 
-A small number of high-degree nodes drive a disproportionate share of total spread — a network-structure effect with no offline equivalent at the same scale. Distinct from manipulation surface: it's about who is positioned to amplify, not what can be exploited. (Catalog gap flagged by the psychology-of-virality extraction.)
+<!-- card -->
+Tell a rumor to everyone you know in person and it reaches a few dozen people. Post it from an account with a huge following and nothing offline compares. *Psychology of Virality*, a paper the book draws on, cites one estimate that about 0.1% of Twitter users shared about 80% of the misinformation on the platform.
 
-## Connections
+**Superspreader dynamics** is the name for that lopsidedness: a handful of highly connected accounts drive a wildly disproportionate share of what spreads. It is a fact about the shape of the network, and it has no offline equivalent at the same scale.
 
-- **Defined in:** [[political-economy-of-attention|Political Economy of Attention]]
-- **Discussed in:** [[bridge-zone-distortion|Ch 6 — Where It All Gets Fucked Up]], [[political-economy-of-attention|Ch 10 — Political Economy of Attention]]
-- **Evidenced by:** [[psychology-of-virality|Psychology of Virality]]
+The book keeps it apart from the [[manipulation-surface|manipulation surface]], which covers what can be exploited in an idea or in the filters it passes through. Superspreading is about who is positioned to amplify. The two meet in the [[bridge-zone|bridge zone]], where influencers with large audiences decide which version of an expert finding the public sees, and in the [[algorithm-as-selection-engine|ranking algorithms]] that decide whose posts get shown. The same paper reports that the small group doing most of the political sharing approves of divisive posts, which helps explain [[paradox-of-virality|why what spreads is not what most people say they want]].
+<!-- /card -->
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
+## Read the full argument
 
+- [[bridge-zone-distortion#Who lives here|Chapter 6: Where It All Gets Fucked Up]], section "Who lives here"
+- [[political-economy-of-attention#Two kinds of capture|Chapter 10: Political Economy of Attention]], section "Two kinds of capture"
+
+## How it connects
+
+- **See also:** [[algorithm-as-selection-engine|Algorithm as selection engine]], [[bridge-zone|Bridge zone]], [[manipulation-surface|Manipulation surface]], [[paradox-of-virality|Paradox of virality]]
+- **Evidence:** [[psychology-of-virality|Psychology of Virality]]
+- **Where the book discusses it:** [[bridge-zone-distortion|Chapter 6: Where It All Gets Fucked Up]], [[political-economy-of-attention|Chapter 10: Political Economy of Attention]]
+
+---
+
+← [[paradox-of-virality|Paradox of virality]] · [[selection-up-close|What the filter rewards]] (2 of 10) · [[meme-ecosystem-competition|Meme ecosystem competition]] →
+
+<em>[[explore|Explore all the ideas]] · [[reading-path|Read the book in order]] · <a href="../graph/" data-router-ignore="true">Open the interactive map</a></em>

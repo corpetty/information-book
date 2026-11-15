@@ -1,5 +1,6 @@
 ---
 title: Decompression on demand
+description: "An AI can unpack a dense paper into an explanation fitted to what you already know, as long as it stays faithful to the source."
 tags:
   - concept
   - graph-node
@@ -10,16 +11,29 @@ aliases:
 
 <!-- generated from the ontology graph — edit the node in data/*.json and rebuild, or replace this file with hand-written prose (delete this comment) to override -->
 
-> **Concept**
+*Concept · part of [[ai-as-a-node|AI in the chain]]*
 
-An LLM, used as a faithful expansion service, can take a compressed claim or a complex source and re-expand it into a form pre-loaded with the preconditions a receiver needs to decode it. This is the first structural way out of the fixed receiver-budget constraint the book has named: the receiver's budget has not changed, but the amount of complex form they can engage per unit of budget has gone up, because the LLM is paying the decompression cost. Conditional on faithfulness — a hallucinating LLM supplies plausible-but-wrong outer messages, which is worse than no outer message at all.
+<!-- card -->
+You open a peer-reviewed paper and stall on the second paragraph. The methods assume training you never had. You ask an AI model to expand it: define the terms, explain the method, chase the references, pitch it at what you already know.
 
-## Connections
+The book calls this **decompression on demand**. Most of the book is about ideas being squeezed into a [[compressed-form|short, easy version]] that drops the instructions for reading them. This runs the other way: the [[complex-form|full version]] is unpacked to fit one reader. Your [[receiver-budget|hours of attention]] stay the same, yet each hour reaches further, because the model pays the unpacking cost you could not. The book calls it the first structural way out of that limit: a patient tutor at any scale.
 
-- **Defined in:** [[ai-as-new-node|AI as a New Kind of Node]]
-- **Discussed in:** [[ai-as-new-node|Ch 11 — AI as a New Kind of Node]], [[infrastructure-for-integration|Ch 12 — Infrastructure for Integration]], [[preservation-vs-training|Ch 8 — Preservation vs. Training]]
-- **Enables:** [[llm-as-capability-extender|LLM as capability extender (inside substrate custody)]]
-- **Enabled by:** [[llm-design-moment-collapse|LLM as collapsed selection-design moment]]
+Two conditions hold it back. The model has to be faithful. A made-up explanation hands you confident reading instructions that do not match the source, which the book judges worse than none. And the same tool will as readily shrink the paper to three bullets, the [[compressed-form-as-authority|summary that replaces the original]]. Which use wins depends on what the owner's business rewards, so the book's hopeful version is an [[llm-as-capability-extender|institution running its own model]].
+<!-- /card -->
 
-<em>This is a graph landing page. Use the local graph and backlinks (right) to explore, or open the <a href="../graph/" data-router-ignore="true">interactive ontology</a>.</em>
+## Read the full argument
 
+- [[ai-as-new-node#The receiver-budget shortcut|Chapter 11: AI as a New Kind of Node]], section "The receiver-budget shortcut"
+
+## How it connects
+
+- **Builds on:** [[llm-design-moment-collapse|LLM as collapsed selection-design moment]]
+- **Leads to:** [[llm-as-capability-extender|LLM as capability extender (inside substrate custody)]]
+- **See also:** [[budget-fixed-or-trainable|Are receiver budgets fixed or trainable?]], [[compressed-form-as-authority|Compressed form becoming authoritative]], [[receiver-budget|Receiver budget]]
+- **Where the book discusses it:** [[preservation-vs-training|Chapter 8: Preservation vs. Training]], [[ai-as-new-node|Chapter 11: AI as a New Kind of Node]], [[infrastructure-for-integration|Chapter 12: Infrastructure for Integration]]
+
+---
+
+← [[llm-design-moment-collapse|LLM as collapsed selection-design moment]] · [[ai-as-a-node|AI in the chain]] (2 of 7) · [[compressed-form-as-authority|Compressed form becoming authoritative]] →
+
+<em>[[explore|Explore all the ideas]] · [[reading-path|Read the book in order]] · <a href="../graph/" data-router-ignore="true">Open the interactive map</a></em>

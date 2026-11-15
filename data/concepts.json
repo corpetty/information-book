@@ -1,5 +1,5 @@
 {
-  "_doc": "Cross-cutting concepts the book repeatedly invokes. `definedIn` points to the note where the concept gets its primary development. `coveredBy` lists chapters that discuss it. Aliases will drive an auto-alias matcher in a later phase.",
+  "_doc": "Cross-cutting concepts the book repeatedly invokes. `definedIn` points to the note where the concept gets its primary development. `coveredBy` lists chapters that discuss it. Card layer (see build-graph.js): `plain` is the one-sentence reader-facing statement; `passages` lists { note, section } H2s where the idea is argued in full (validated); `related` (typed ids) is the curated see-also; `instanceOf` / `derivesFrom` (typed ids) are special-case / builds-on links; `autolink` is false or an explicit list of terms for scripts/interlink.js (default: label + aliases). The reader-facing card body is prose and lives in content/concepts/<id>.md between the <!-- card --> markers.",
   "concepts": [
     {
       "id": "receiver-budget",
@@ -21,6 +21,29 @@
         "ai-as-new-node",
         "infrastructure-for-integration",
         "optionality-vs-access"
+      ],
+      "plain": "Each person has only so many focused hours to learn new things, though what you already know makes every hour go further.",
+      "passages": [
+        {
+          "note": "info-time-limit",
+          "section": "The receiver budget"
+        },
+        {
+          "note": "info-time-limit",
+          "section": "A tablespoon of weeks"
+        },
+        {
+          "note": "info-time-limit",
+          "section": "Want decides what the budget is spent on"
+        }
+      ],
+      "related": [
+        "question:budget-fixed-or-trainable",
+        "mechanism:want-as-prime-mover",
+        "concept:complexity-ceiling",
+        "concept:decompression-on-demand",
+        "concept:compressed-form",
+        "case:piraha-numbers"
       ]
     },
     {
@@ -38,6 +61,24 @@
       "coveredBy": [
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
+      ],
+      "plain": "The more people an idea has to pass through, the simpler it must become to survive the trip.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The network has a ceiling"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "Counter-examples"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "case:telephone-game",
+        "concept:receiver-budget",
+        "concept:manipulation-surface",
+        "concept:compressed-form"
       ]
     },
     {
@@ -56,6 +97,33 @@
       "coveredBy": [
         "complexity-virality-tradeoff",
         "emotional-memetics"
+      ],
+      "plain": "The short, easy version of an idea spreads fast because it asks almost nothing of the person hearing it.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What \"complex\" means"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The receiver has a budget"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The manipulation surface"
+        }
+      ],
+      "related": [
+        "concept:complex-form",
+        "case:bitcoin-internet-money",
+        "concept:manipulation-surface",
+        "concept:receiver-budget",
+        "mechanism:interpretive-latitude"
+      ],
+      "autolink": [
+        "compressed form",
+        "low-precondition form",
+        "bumper sticker version"
       ]
     },
     {
@@ -74,6 +142,28 @@
       "coveredBy": [
         "complexity-virality-tradeoff",
         "preservation-vs-training"
+      ],
+      "plain": "The full version of an idea keeps what the short version drops, but it only makes sense to someone who already knows a lot.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What \"complex\" means"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The receiver has a budget"
+        },
+        {
+          "note": "preservation-vs-training",
+          "section": "The preservation function"
+        }
+      ],
+      "related": [
+        "concept:compressed-form",
+        "concept:receiver-budget",
+        "concept:complexity-ceiling",
+        "concept:preservation-vs-training-pair",
+        "case:bitcoin-internet-money"
       ]
     },
     {
@@ -93,6 +183,28 @@
         "complexity-virality-tradeoff",
         "selection-as-other-engine",
         "political-economy-of-attention"
+      ],
+      "plain": "The most powerful way to steer what a crowd believes is to change the rules deciding what spreads, and that takes no lies.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "The manipulation surface"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The manipulation surface is the gate itself"
+        },
+        {
+          "note": "medium-and-manipulation",
+          "section": "Three things the medium does to a gate"
+        }
+      ],
+      "related": [
+        "concept:algorithm-as-selection-engine",
+        "concept:option-space",
+        "mechanism:selection",
+        "concept:capture-taxonomy",
+        "concept:self-vs-external-capture"
       ]
     },
     {
@@ -118,6 +230,28 @@
         "integration-problem",
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "Some things are true whatever anyone thinks, some only inside one mind, and some only because enough people agree, like money or laws.",
+      "passages": [
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "The three realities"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "What the third reality changes"
+        },
+        {
+          "note": "intersubjective-truth",
+          "section": "Two truths, one experiment"
+        }
+      ],
+      "related": [
+        "concept:truth-generators",
+        "mechanism:constitutive-transmission",
+        "concept:constitutive-regimes",
+        "concept:reification",
+        "question:intersubjective-pipeline"
       ]
     },
     {
@@ -135,6 +269,28 @@
       "coveredBy": [
         "bridge-zone-distortion",
         "emotional-memetics"
+      ],
+      "plain": "Most expert knowledge reaches the public through journalists, popularizers, influencers and chatbots, and that handoff is where it gets reshaped the most.",
+      "passages": [
+        {
+          "note": "bridge-zone-distortion",
+          "section": "Where the bridge zone sits"
+        },
+        {
+          "note": "bridge-zone-distortion",
+          "section": "Active reshaping, not passive compression"
+        },
+        {
+          "note": "bridge-zone-distortion",
+          "section": "Who lives here"
+        }
+      ],
+      "related": [
+        "concept:pseudo-context",
+        "mechanism:selection",
+        "concept:versatile-expertise",
+        "case:power-posing",
+        "case:scientists-say-x"
       ]
     },
     {
@@ -151,6 +307,19 @@
       ],
       "coveredBy": [
         "integration-problem"
+      ],
+      "plain": "Never hearing the other side is one thing; being taught to distrust anyone outside your group is another, and small groups drift toward the second.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "Why integration, not fragmentation"
+        }
+      ],
+      "related": [
+        "concept:network-segmentation",
+        "concept:polarization-via-distrust",
+        "question:integration-vs-fragmentation",
+        "concept:survivable-polarization"
       ]
     },
     {
@@ -169,6 +338,28 @@
       "coveredBy": [
         "infrastructure-for-integration",
         "political-economy-of-attention"
+      ],
+      "plain": "Let anyone contribute, then use open, layered review to sort the good from the bad, as Wikipedia does.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "The infrastructure: who holds them"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The prescription"
+        },
+        {
+          "note": "preservation-vs-training",
+          "section": "The preservation function"
+        }
+      ],
+      "related": [
+        "concept:versatile-expertise",
+        "concept:creation-cheap-review-expensive",
+        "concept:survivable-polarization",
+        "concept:funding-decoupling",
+        "concept:preservation-vs-training-pair"
       ]
     },
     {
@@ -187,6 +378,20 @@
         "political-economy-of-attention",
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "When publishing became free, the work of checking what is true did not vanish; it moved onto readers, who have no extra time for it.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "Cost-shifting as the structural move"
+        }
+      ],
+      "related": [
+        "concept:creation-cheap-review-expensive",
+        "concept:curation-layer",
+        "concept:receiver-budget",
+        "concept:credibility-weighting",
+        "concept:out-competition-of-carriers"
       ]
     },
     {
@@ -207,6 +412,24 @@
         "political-economy-of-attention",
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "An institution can be bent by outsiders gaming its rules or by its own way of making money, and the second is harder to undo.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "Two kinds of capture"
+        },
+        {
+          "note": "capture-taxonomy",
+          "section": "Axis 2: who is doing the capturing"
+        }
+      ],
+      "related": [
+        "mechanism:engagement-equilibrium",
+        "concept:capture-taxonomy",
+        "concept:consumer-key-vs-surface-capture",
+        "concept:orwell-huxley-axis",
+        "concept:manipulation-surface"
       ]
     },
     {
@@ -229,6 +452,20 @@
       ],
       "enables": [
         "concept:capture-asymmetry"
+      ],
+      "plain": "Careful journalism and scholarship cost money to make while feed content costs platforms nothing, so depth loses the audience without anyone ever attacking it.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "Why institutional carriers can't keep up"
+        }
+      ],
+      "related": [
+        "mechanism:engagement-equilibrium",
+        "concept:cost-shifting",
+        "concept:funding-decoupling",
+        "concept:preservation-vs-training-pair",
+        "concept:capture-asymmetry"
       ]
     },
     {
@@ -244,6 +481,23 @@
       ],
       "coveredBy": [
         "integration-problem"
+      ],
+      "plain": "For things like group size and how connected people are, the best amount sits in the middle, and both too little and too much hurt.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "Why \"just connect them\" doesn't work"
+        },
+        {
+          "note": "integration-problem",
+          "section": "Why integration, not fragmentation"
+        }
+      ],
+      "related": [
+        "concept:zollman-effect",
+        "concept:echo-chambers-vs-bubbles",
+        "question:integration-vs-fragmentation",
+        "concept:complexity-ceiling"
       ]
     },
     {
@@ -260,6 +514,23 @@
       "coveredBy": [
         "ai-as-new-node",
         "political-economy-of-attention"
+      ],
+      "plain": "Making content has become far quicker than checking it, so the unchecked pile grows faster than anyone can sort it.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "Cost-shifting as the structural move"
+        },
+        {
+          "note": "ai-as-new-node",
+          "section": "Manufactured content at industrial scale"
+        }
+      ],
+      "related": [
+        "concept:cost-shifting",
+        "concept:curation-layer",
+        "mechanism:manufactured-injection",
+        "concept:receiver-budget"
       ]
     },
     {
@@ -280,6 +551,24 @@
         "preservation-vs-training",
         "infrastructure-for-integration",
         "political-economy-of-attention"
+      ],
+      "plain": "Keeping hard knowledge alive takes two jobs at once: storing the full original somewhere, and continually teaching people how to read it.",
+      "passages": [
+        {
+          "note": "preservation-vs-training",
+          "section": "One word, two jobs"
+        },
+        {
+          "note": "preservation-vs-training",
+          "section": "Why each alone fails"
+        }
+      ],
+      "related": [
+        "concept:institutional-decay-rates",
+        "concept:capture-asymmetry",
+        "mechanism:myth-dilution",
+        "concept:curation-layer",
+        "concept:versatile-expertise"
       ]
     },
     {
@@ -297,6 +586,20 @@
       ],
       "coveredBy": [
         "infrastructure-for-integration"
+      ],
+      "plain": "Careful institutions cannot beat the attention economy, so the goal is to keep doing their work alongside it without being worn down.",
+      "passages": [
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Survival, not victory"
+        }
+      ],
+      "related": [
+        "concept:funding-decoupling",
+        "concept:survivable-polarization",
+        "concept:work-of-generations",
+        "mechanism:engagement-equilibrium",
+        "concept:out-competition-of-carriers"
       ]
     },
     {
@@ -315,6 +618,24 @@
       "coveredBy": [
         "infrastructure-for-integration",
         "political-economy-of-attention"
+      ],
+      "plain": "An institution that does slow, careful work has to be paid in some way that does not depend on winning people's attention.",
+      "passages": [
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Principle 1: decouple funding from attention markets"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "Why institutional carriers can't keep up"
+        }
+      ],
+      "related": [
+        "concept:out-competition-of-carriers",
+        "mechanism:engagement-equilibrium",
+        "concept:survival-not-victory",
+        "concept:survivable-polarization",
+        "concept:cost-shifting"
       ]
     },
     {
@@ -333,6 +654,24 @@
       "coveredBy": [
         "infrastructure-for-integration",
         "integration-problem"
+      ],
+      "plain": "Build institutions that still work when some people distrust them, by letting doubters check the evidence and reasoning for themselves.",
+      "passages": [
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Principle 3: build for survivable polarization"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The five operational problems"
+        }
+      ],
+      "related": [
+        "concept:polarization-via-distrust",
+        "concept:curation-layer",
+        "concept:zollman-effect",
+        "concept:versatile-expertise",
+        "concept:framework-rotation"
       ]
     },
     {
@@ -351,6 +690,24 @@
       "coveredBy": [
         "infrastructure-for-integration",
         "ai-as-new-node"
+      ],
+      "plain": "A university that trains and runs its own AI on its own vetted library could teach far more people, with real experts checking the output.",
+      "passages": [
+        {
+          "note": "infrastructure-for-integration",
+          "section": "LLMs as a capability extender, conditional on custody"
+        },
+        {
+          "note": "ai-as-new-node",
+          "section": "The political economy decides"
+        }
+      ],
+      "related": [
+        "concept:decompression-on-demand",
+        "concept:funding-decoupling",
+        "concept:versatile-expertise",
+        "concept:corpus-capture",
+        "concept:preservation-vs-training-pair"
       ]
     },
     {
@@ -368,6 +725,24 @@
       ],
       "coveredBy": [
         "infrastructure-for-integration"
+      ],
+      "plain": "Institutions that keep hard knowledge alive take decades or centuries to build, so rebuilding them is a job for generations.",
+      "passages": [
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Where I land"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The five operational problems"
+        }
+      ],
+      "related": [
+        "concept:survival-not-victory",
+        "concept:institutional-decay-rates",
+        "concept:funding-decoupling",
+        "concept:versatile-expertise",
+        "concept:llm-as-capability-extender"
       ]
     },
     {
@@ -388,6 +763,24 @@
         "political-economy-of-attention",
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "Anything that filters what people see or learn can be turned against its purpose; the questions are which filter, by whom, and how fixable.",
+      "passages": [
+        {
+          "note": "capture-taxonomy",
+          "section": "What capture means"
+        },
+        {
+          "note": "capture-taxonomy",
+          "section": "Where I land"
+        }
+      ],
+      "related": [
+        "concept:self-vs-external-capture",
+        "concept:consumer-key-vs-surface-capture",
+        "concept:capture-asymmetry",
+        "concept:objective-capture",
+        "concept:corpus-capture"
       ]
     },
     {
@@ -406,6 +799,24 @@
       "coveredBy": [
         "preservation-vs-training",
         "ai-as-new-node"
+      ],
+      "plain": "Rigging what people are taught does deeper, longer-lasting damage than rigging what they are shown, because you cannot easily unteach a person.",
+      "passages": [
+        {
+          "note": "capture-taxonomy",
+          "section": "Axis 1: which substrate is captured, and how it recovers"
+        },
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Principle 2: defend consumer-key substrates first"
+        }
+      ],
+      "related": [
+        "concept:capture-asymmetry",
+        "concept:capture-taxonomy",
+        "concept:corpus-capture",
+        "concept:objective-capture",
+        "concept:deployment-capture"
       ]
     },
     {
@@ -426,6 +837,24 @@
         "infrastructure-for-integration"
       ],
       "enables": [
+        "concept:decompression-on-demand",
+        "concept:compressed-form-as-authority"
+      ],
+      "plain": "With an AI chatbot, one company picks what it learned from, what it was rewarded for, how it is configured, and also writes the answer.",
+      "passages": [
+        {
+          "note": "ai-as-new-node",
+          "section": "What an LLM is, structurally"
+        },
+        {
+          "note": "ai-as-new-node",
+          "section": "Where I land"
+        }
+      ],
+      "related": [
+        "concept:corpus-capture",
+        "concept:objective-capture",
+        "concept:deployment-capture",
         "concept:decompression-on-demand",
         "concept:compressed-form-as-authority"
       ]
@@ -449,6 +878,20 @@
       ],
       "enables": [
         "concept:llm-as-capability-extender"
+      ],
+      "plain": "An AI can unpack a dense paper into an explanation fitted to what you already know, as long as it stays faithful to the source.",
+      "passages": [
+        {
+          "note": "ai-as-new-node",
+          "section": "The receiver-budget shortcut"
+        }
+      ],
+      "related": [
+        "concept:compressed-form-as-authority",
+        "concept:llm-as-capability-extender",
+        "concept:receiver-budget",
+        "question:budget-fixed-or-trainable",
+        "concept:llm-design-moment-collapse"
       ]
     },
     {
@@ -466,6 +909,20 @@
       "coveredBy": [
         "ai-as-new-node",
         "truth-compression-and-when-each-wins"
+      ],
+      "plain": "When an AI summary is treated as the answer, people stop reading the original, and the summary quietly takes its place.",
+      "related": [
+        "concept:decompression-on-demand",
+        "concept:compressed-form",
+        "concept:map-and-territory",
+        "concept:abyss",
+        "concept:out-competition-of-carriers"
+      ],
+      "passages": [
+        {
+          "note": "ai-as-new-node",
+          "section": "The summary that replaces the source"
+        }
       ]
     },
     {
@@ -483,6 +940,28 @@
       "coveredBy": [
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "An AI trained on a lopsided selection of text gives lopsided answers, however carefully it is handled afterward.",
+      "passages": [
+        {
+          "note": "ai-as-new-node",
+          "section": "Three new flavors of capture"
+        },
+        {
+          "note": "capture-taxonomy",
+          "section": "Axis 1: which substrate is captured, and how it recovers"
+        },
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Principle 2: defend consumer-key substrates first"
+        }
+      ],
+      "related": [
+        "concept:objective-capture",
+        "concept:deployment-capture",
+        "concept:consumer-key-vs-surface-capture",
+        "concept:inductive-bias",
+        "concept:llm-design-moment-collapse"
       ]
     },
     {
@@ -501,6 +980,31 @@
       "coveredBy": [
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "An AI rewarded for pleasing people learns to please rather than to be right, and its output then feeds the next AI's training.",
+      "passages": [
+        {
+          "note": "ai-as-new-node",
+          "section": "Three new flavors of capture"
+        },
+        {
+          "note": "capture-taxonomy",
+          "section": "Axis 1: which substrate is captured, and how it recovers"
+        },
+        {
+          "note": "infrastructure-for-integration",
+          "section": "Principle 2: defend consumer-key substrates first"
+        }
+      ],
+      "related": [
+        "concept:corpus-capture",
+        "concept:deployment-capture",
+        "concept:goodharts-law",
+        "case:ai-benchmarks",
+        "concept:consumer-key-vs-surface-capture"
+      ],
+      "instanceOf": [
+        "concept:goodharts-law"
       ]
     },
     {
@@ -519,6 +1023,24 @@
       "coveredBy": [
         "ai-as-new-node",
         "infrastructure-for-integration"
+      ],
+      "plain": "The company running an AI can change how it answers with hidden instructions, without retraining it and without users seeing the change.",
+      "passages": [
+        {
+          "note": "ai-as-new-node",
+          "section": "Three new flavors of capture"
+        },
+        {
+          "note": "capture-taxonomy",
+          "section": "Axis 1: which substrate is captured, and how it recovers"
+        }
+      ],
+      "related": [
+        "concept:corpus-capture",
+        "concept:objective-capture",
+        "concept:consumer-key-vs-surface-capture",
+        "case:prompt-format-sensitivity",
+        "concept:default-setting"
       ]
     },
     {
@@ -538,6 +1060,24 @@
         "preservation-vs-training",
         "political-economy-of-attention",
         "ai-as-new-node"
+      ],
+      "plain": "A corrupted library can be rebuilt from other sources, but people trained to read the world wrongly stay that way, so corrupted teaching is worse.",
+      "passages": [
+        {
+          "note": "preservation-vs-training",
+          "section": "The asymmetry, and its test"
+        },
+        {
+          "note": "capture-taxonomy",
+          "section": "Axis 1: which substrate is captured, and how it recovers"
+        }
+      ],
+      "related": [
+        "concept:preservation-vs-training-pair",
+        "concept:consumer-key-vs-surface-capture",
+        "concept:institutional-decay-rates",
+        "concept:capture-taxonomy",
+        "concept:out-competition-of-carriers"
       ]
     },
     {
@@ -556,6 +1096,23 @@
       "coveredBy": [
         "preservation-vs-training",
         "political-economy-of-attention"
+      ],
+      "plain": "A neglected library can sit intact for decades, but skilled people must be trained fresh every generation, so teaching fails first.",
+      "passages": [
+        {
+          "note": "preservation-vs-training",
+          "section": "The asymmetry, and its test"
+        },
+        {
+          "note": "preservation-vs-training",
+          "section": "What this means for the modern environment"
+        }
+      ],
+      "related": [
+        "concept:preservation-vs-training-pair",
+        "concept:capture-asymmetry",
+        "concept:work-of-generations",
+        "concept:versatile-expertise"
       ]
     },
     {
@@ -564,8 +1121,7 @@
       "summary": "The local fitness criteria at each selection gate: emotional valence, identity reinforcement, status, action affordance, novelty, controversy. None coordinated, none particularly interested in truth-preservation.",
       "aliases": [
         "memetic fitness",
-        "fitness landscape",
-        "selection criteria"
+        "fitness landscape"
       ],
       "definedIn": [
         "transport-vs-selection",
@@ -574,6 +1130,28 @@
       "coveredBy": [
         "selection-as-other-engine",
         "emotional-memetics"
+      ],
+      "plain": "What gets passed along is whatever stirs feeling, flatters a group, or gives people something to do, and being true is not on that list.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "What the gate rewards"
+        },
+        {
+          "note": "the-information-landscape",
+          "section": "The sibling pipeline: selection"
+        },
+        {
+          "note": "transport-vs-selection",
+          "section": "Test cases that distinguish them"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "concept:handle-ability",
+        "case:hammer-vs-copernicus",
+        "concept:paradox-of-virality",
+        "concept:meme-ecosystem-competition"
       ]
     },
     {
@@ -592,6 +1170,27 @@
       "coveredBy": [
         "preservation-vs-training",
         "integration-problem"
+      ],
+      "plain": "General skills like reading statistics and asking for evidence help in every subject, but alone they cannot carry expert knowledge between fields.",
+      "passages": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The naive answer doesn't survive"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "Versatile expertise as the bridge"
+        },
+        {
+          "note": "preservation-vs-training",
+          "section": "The training function"
+        }
+      ],
+      "related": [
+        "concept:versatile-expertise",
+        "question:transferable-vs-specialized",
+        "concept:curse-of-expertise",
+        "concept:polarization-via-distrust"
       ]
     },
     {
@@ -614,6 +1213,24 @@
       ],
       "evidencedBy": [
         "double-edged-sword-of-expertise"
+      ],
+      "plain": "The people who can carry hard ideas between fields are deep specialists who also know their own way of seeing is only one of several.",
+      "passages": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "Versatile expertise as the bridge"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The agent: who can bridge"
+        }
+      ],
+      "related": [
+        "concept:curse-of-expertise",
+        "concept:transferable-preconditions",
+        "concept:curation-layer",
+        "concept:framework-rotation",
+        "question:transferable-vs-specialized"
       ]
     },
     {
@@ -635,6 +1252,21 @@
       ],
       "evidencedBy": [
         "double-edged-sword-of-expertise"
+      ],
+      "plain": "Knowing one field very deeply can make it harder to see, or take seriously, anything that does not fit that field's way of thinking.",
+      "passages": [
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The curse of expertise"
+        }
+      ],
+      "related": [
+        "concept:versatile-expertise",
+        "concept:polarization-via-distrust",
+        "concept:abyss",
+        "concept:einstellung-effect",
+        "concept:law-of-the-instrument",
+        "concept:theory-ladenness"
       ]
     },
     {
@@ -654,7 +1286,15 @@
       "enables": [
         "concept:compressed-form"
       ],
-      "url": "https://bayesianpersuasion.com/posts/the-abyss"
+      "url": "https://bayesianpersuasion.com/posts/the-abyss",
+      "plain": "Any rich field holds far more possible paths than anyone could ever explore, and you only see that once you are good at it.",
+      "related": [
+        "concept:curse-of-expertise",
+        "concept:versatile-expertise",
+        "concept:compressed-form",
+        "concept:receiver-budget",
+        "concept:map-and-territory"
+      ]
     },
     {
       "id": "handle-ability",
@@ -671,6 +1311,28 @@
       "coveredBy": [
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
+      ],
+      "plain": "Ideas spread when they are easy to grab: they fit what people already think, stir a feeling, and say what to do.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "\"Complexity\" was doing two jobs"
+        },
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What \"complex\" means"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "What the gate rewards"
+        }
+      ],
+      "related": [
+        "question:complexity-doing-two-jobs",
+        "concept:memetic-fitness",
+        "mechanism:selection",
+        "case:power-posing",
+        "case:hammer-vs-copernicus"
       ]
     },
     {
@@ -689,6 +1351,24 @@
       "coveredBy": [
         "selection-as-other-engine",
         "complexity-virality-tradeoff"
+      ],
+      "plain": "How far an idea spreads depends on what else is competing for people's attention at the same moment.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "The argument's dents"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "What the gate rewards"
+        }
+      ],
+      "related": [
+        "concept:memetic-fitness",
+        "mechanism:selection",
+        "concept:neutral-drift-baseline",
+        "concept:receiver-budget",
+        "concept:algorithm-as-selection-engine"
       ]
     },
     {
@@ -710,6 +1390,24 @@
       ],
       "evidencedBy": [
         "luria-delbruck"
+      ],
+      "plain": "Even if nobody preferred any version of an idea, random copying alone would make a few versions hugely popular and leave most obscure.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "Three operations, not two"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "The argument's dents"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "mechanism:selection",
+        "concept:memetic-fitness",
+        "concept:meme-ecosystem-competition",
+        "concept:replicator-ontology"
       ]
     },
     {
@@ -727,6 +1425,24 @@
       ],
       "coveredBy": [
         "selection-as-other-engine"
+      ],
+      "plain": "Calling ideas \"memes\" quietly assumes they are separate units copied like genes, and critics argue people rebuild ideas instead of copying them.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "What the gate rewards"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "The argument's dents"
+        }
+      ],
+      "related": [
+        "concept:memetic-fitness",
+        "mechanism:selection",
+        "mechanism:transport",
+        "concept:neutral-drift-baseline",
+        "concept:meme-ecosystem-competition"
       ]
     },
     {
@@ -744,6 +1460,28 @@
       "coveredBy": [
         "selection-as-other-engine",
         "emotional-memetics"
+      ],
+      "plain": "Most people say they do not want angry, alarming posts to go viral, and those posts go viral anyway.",
+      "passages": [
+        {
+          "note": "emotional-memetics",
+          "section": "Four lines of evidence"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "What engagement actually measures"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        }
+      ],
+      "related": [
+        "concept:algorithm-as-selection-engine",
+        "mechanism:engagement-equilibrium",
+        "concept:reflective-vs-intuitive-belief",
+        "concept:epistemic-vigilance",
+        "concept:superspreader-dynamics"
       ]
     },
     {
@@ -762,6 +1500,23 @@
       "coveredBy": [
         "bridge-zone-distortion",
         "political-economy-of-attention"
+      ],
+      "plain": "A tiny number of very well-connected accounts do most of the spreading, something that was impossible before networks got this big.",
+      "passages": [
+        {
+          "note": "bridge-zone-distortion",
+          "section": "Who lives here"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "Two kinds of capture"
+        }
+      ],
+      "related": [
+        "concept:algorithm-as-selection-engine",
+        "concept:manipulation-surface",
+        "concept:bridge-zone",
+        "concept:paradox-of-virality"
       ]
     },
     {
@@ -781,6 +1536,28 @@
         "selection-as-other-engine",
         "political-economy-of-attention",
         "ai-as-new-node"
+      ],
+      "plain": "A feed's ranking software is a filter with dials that someone sets, and it decides what millions of people see.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "The medium is frozen selection"
+        },
+        {
+          "note": "medium-and-manipulation",
+          "section": "Three things the medium does to a gate"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "concept:manipulation-surface",
+        "concept:paradox-of-virality",
+        "mechanism:engagement-equilibrium",
+        "concept:option-space"
       ]
     },
     {
@@ -801,6 +1578,24 @@
       ],
       "evidencedBy": [
         "not-born-yesterday"
+      ],
+      "plain": "People come equipped with mental defenses that check whether a claim is plausible and whether its source can be trusted.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        },
+        {
+          "note": "emotional-memetics",
+          "section": "Engaging Mercier"
+        }
+      ],
+      "related": [
+        "concept:open-vigilance",
+        "concept:reflective-vs-intuitive-belief",
+        "concept:paradox-of-virality",
+        "mechanism:medium-shapes-want",
+        "concept:credibility-weighting"
       ]
     },
     {
@@ -821,6 +1616,24 @@
       ],
       "evidencedBy": [
         "not-born-yesterday"
+      ],
+      "plain": "People are both open to useful information and wary of unreliable sources, and their mistakes lean toward doubting too much.",
+      "passages": [
+        {
+          "note": "emotional-memetics",
+          "section": "Engaging Mercier"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        }
+      ],
+      "related": [
+        "concept:epistemic-vigilance",
+        "concept:justification-market",
+        "concept:reflective-vs-intuitive-belief",
+        "concept:paradox-of-virality",
+        "mechanism:medium-shapes-want"
       ]
     },
     {
@@ -843,6 +1656,23 @@
       "evidencedBy": [
         "not-born-yesterday",
         "sperber-intuitive-reflective"
+      ],
+      "plain": "Some beliefs steer what you actually do, while others you only say or share and never act on.",
+      "passages": [
+        {
+          "note": "emotional-memetics",
+          "section": "Engaging Mercier"
+        },
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Three things compression can do to truth"
+        }
+      ],
+      "related": [
+        "concept:paradox-of-virality",
+        "concept:justification-market",
+        "concept:open-vigilance",
+        "concept:truth-compression-regimes"
       ]
     },
     {
@@ -865,6 +1695,24 @@
       ],
       "evidencedBy": [
         "not-born-yesterday"
+      ],
+      "plain": "People often decide what to do first and then go looking for beliefs that make the decision feel right.",
+      "passages": [
+        {
+          "note": "emotional-memetics",
+          "section": "Engaging Mercier"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The prescription"
+        }
+      ],
+      "related": [
+        "concept:reflective-vs-intuitive-belief",
+        "concept:open-vigilance",
+        "mechanism:engagement-equilibrium",
+        "concept:paradox-of-virality",
+        "mechanism:medium-shapes-want"
       ]
     },
     {
@@ -891,6 +1739,20 @@
       "evidencedBy": [
         "godel-escher-bach",
         "ethical-infrastructure-talk"
+      ],
+      "plain": "Every message has three parts: a sign that it is a message, the know-how needed to read it, and the content itself.",
+      "passages": [
+        {
+          "note": "complexity-virality-tradeoff",
+          "section": "What a message is made of"
+        }
+      ],
+      "related": [
+        "mechanism:transport",
+        "concept:truth-compression-regimes",
+        "case:voyager-golden-record",
+        "concept:transferable-preconditions",
+        "concept:theory-ladenness"
       ]
     },
     {
@@ -909,6 +1771,24 @@
       "coveredBy": [
         "integration-problem",
         "infrastructure-for-integration"
+      ],
+      "plain": "A huge group can repeat the same slogan while its subgroups each mean something different by it, so it is already several groups underneath.",
+      "passages": [
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "From latitude to segmentation"
+        },
+        {
+          "note": "integration-problem",
+          "section": "The diagnosis: segmentation is the default"
+        }
+      ],
+      "related": [
+        "mechanism:myth-dilution",
+        "mechanism:interpretive-latitude",
+        "concept:echo-chambers-vs-bubbles",
+        "concept:constitutive-regimes",
+        "question:integration-vs-fragmentation"
       ]
     },
     {
@@ -926,6 +1806,29 @@
       ],
       "coveredBy": [
         "truth-compression-and-when-each-wins"
+      ],
+      "plain": "A shortened claim can stay roughly true, flip into something false, or turn into a team badge, depending on how the listener reads it.",
+      "passages": [
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Three things compression can do to truth"
+        },
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Selection picks the regime"
+        },
+        {
+          "note": "truth-compression-and-when-each-wins",
+          "section": "Truth value isn't in the claim"
+        }
+      ],
+      "related": [
+        "question:truth-value-placement",
+        "mechanism:interpretive-latitude",
+        "mechanism:selection",
+        "concept:constitutive-regimes",
+        "concept:compressed-form",
+        "concept:framing-effect"
       ]
     },
     {
@@ -940,11 +1843,36 @@
       ],
       "definedIn": [
         "transport-vs-selection",
-        "medium-and-manipulation"
+        "medium-and-manipulation",
+        "thinking-inside-frameworks"
       ],
       "coveredBy": [
         "selection-as-other-engine",
         "information-landscape"
+      ],
+      "plain": "Before anyone chooses which version of an idea to pass on, the format has already decided which versions can exist at all.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "Three operations, not two"
+        },
+        {
+          "note": "medium-and-manipulation",
+          "section": "Three things the medium does to a gate"
+        },
+        {
+          "note": "transport-vs-selection",
+          "section": "Modality, not primacy"
+        }
+      ],
+      "related": [
+        "mechanism:selection",
+        "mechanism:transport",
+        "concept:manipulation-surface",
+        "concept:technology-vs-medium",
+        "question:medium-and-manipulation",
+        "concept:framework",
+        "mechanism:framework-pricing"
       ]
     },
     {
@@ -967,6 +1895,28 @@
       ],
       "evidencedBy": [
         "amusing-ourselves-to-death"
+      ],
+      "plain": "A machine is one thing; the habits, rewards and expectations that grow up around using it are another, and those are what shape us.",
+      "passages": [
+        {
+          "note": "medium-and-manipulation",
+          "section": "The medium is not the pipe"
+        },
+        {
+          "note": "the-information-landscape",
+          "section": "Where the medium fits"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The medium is frozen selection"
+        }
+      ],
+      "related": [
+        "concept:option-space",
+        "mechanism:medium-shapes-want",
+        "question:medium-and-manipulation",
+        "concept:algorithm-as-selection-engine",
+        "concept:orwell-huxley-axis"
       ]
     },
     {
@@ -988,6 +1938,19 @@
       ],
       "evidencedBy": [
         "amusing-ourselves-to-death"
+      ],
+      "plain": "Trivia, news quizzes and factoid videos give true facts a pretend use after the real use has been stripped away.",
+      "related": [
+        "concept:bridge-zone",
+        "mechanism:manufactured-injection",
+        "concept:orwell-huxley-axis",
+        "case:astrology"
+      ],
+      "passages": [
+        {
+          "note": "bridge-zone-distortion",
+          "section": "Pseudo-context"
+        }
       ]
     },
     {
@@ -1009,6 +1972,19 @@
       ],
       "evidencedBy": [
         "amusing-ourselves-to-death"
+      ],
+      "plain": "A society can lose the truth by having it banned, or by having it buried under endless entertainment, and the second is harder to fight.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "The Orwell mode and the Huxley mode"
+        }
+      ],
+      "related": [
+        "mechanism:engagement-equilibrium",
+        "concept:self-vs-external-capture",
+        "concept:pseudo-context",
+        "mechanism:selection"
       ]
     },
     {
@@ -1029,6 +2005,24 @@
       ],
       "evidencedBy": [
         "misinformation-age"
+      ],
+      "plain": "A group of people who each reason carefully and honestly can still end up agreeing on something false, because of how evidence reaches them.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        },
+        {
+          "note": "integration-problem",
+          "section": "Why \"just connect them\" doesn't work"
+        }
+      ],
+      "related": [
+        "concept:credibility-weighting",
+        "concept:conformity",
+        "concept:zollman-effect",
+        "concept:polarization-via-distrust",
+        "concept:epistemic-vigilance"
       ]
     },
     {
@@ -1051,6 +2045,28 @@
       ],
       "evidencedBy": [
         "misinformation-age"
+      ],
+      "plain": "Nobody can check everything personally, so we all judge claims partly by how much we trust whoever is telling us.",
+      "passages": [
+        {
+          "note": "political-economy-of-attention",
+          "section": "Cost-shifting as the structural move"
+        },
+        {
+          "note": "integration-problem",
+          "section": "Why \"just connect them\" doesn't work"
+        },
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        }
+      ],
+      "related": [
+        "concept:polarization-via-distrust",
+        "concept:false-consensus-rational-agents",
+        "concept:conformity",
+        "concept:cost-shifting",
+        "concept:open-vigilance"
       ]
     },
     {
@@ -1072,6 +2088,24 @@
       ],
       "evidencedBy": [
         "misinformation-age"
+      ],
+      "plain": "People often take up a belief because the people around them hold it, whatever the evidence says.",
+      "passages": [
+        {
+          "note": "selection-as-other-engine",
+          "section": "The strongest objection: people are not that gullible"
+        },
+        {
+          "note": "emotional-memetics",
+          "section": "Engaging Mercier"
+        }
+      ],
+      "related": [
+        "concept:credibility-weighting",
+        "concept:false-consensus-rational-agents",
+        "concept:polarization-via-distrust",
+        "concept:memetic-fitness",
+        "concept:open-vigilance"
       ]
     },
     {
@@ -1093,6 +2127,24 @@
       ],
       "evidencedBy": [
         "misinformation-age"
+      ],
+      "plain": "Two groups that start slightly apart can drift far apart just by sensibly giving less weight to evidence from people they trust less.",
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "Why \"just connect them\" doesn't work"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The curse of expertise"
+        }
+      ],
+      "related": [
+        "concept:credibility-weighting",
+        "concept:curse-of-expertise",
+        "concept:zollman-effect",
+        "concept:versatile-expertise",
+        "concept:survivable-polarization"
       ]
     },
     {
@@ -1114,6 +2166,20 @@
       ],
       "evidencedBy": [
         "misinformation-age"
+      ],
+      "plain": "Wiring a group together more tightly can make it less accurate, because everyone hears early, shaky results and settles on an answer too soon.",
+      "related": [
+        "concept:polarization-via-distrust",
+        "concept:inverted-u",
+        "concept:false-consensus-rational-agents",
+        "question:integration-vs-fragmentation",
+        "concept:conformity"
+      ],
+      "passages": [
+        {
+          "note": "integration-problem",
+          "section": "Why \"just connect them\" doesn't work"
+        }
       ]
     },
     {
@@ -1133,6 +2199,28 @@
       "coveredBy": [
         "case-studies-and-three-realities",
         "truth-compression-and-when-each-wins"
+      ],
+      "plain": "Two statements can both be true while one is made true by the world and the other only by people continuing to agree.",
+      "passages": [
+        {
+          "note": "intersubjective-truth",
+          "section": "Two truths, one experiment"
+        },
+        {
+          "note": "intersubjective-truth",
+          "section": "The generator, not the genre"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "A fifth story: money"
+        }
+      ],
+      "related": [
+        "concept:three-realities",
+        "mechanism:constitutive-transmission",
+        "concept:reification",
+        "concept:constitutive-regimes",
+        "case:astrology"
       ]
     },
     {
@@ -1152,6 +2240,24 @@
         "case-studies-and-three-realities",
         "integration-problem",
         "infrastructure-for-integration"
+      ],
+      "plain": "A shared agreement like money or law can hold together, split into rival versions, or survive in words only while people stop acting on it.",
+      "passages": [
+        {
+          "note": "intersubjective-truth",
+          "section": "The three regimes, translated"
+        },
+        {
+          "note": "case-studies-and-three-realities",
+          "section": "A fifth story: money"
+        }
+      ],
+      "related": [
+        "concept:truth-compression-regimes",
+        "mechanism:constitutive-transmission",
+        "concept:network-segmentation",
+        "concept:reification",
+        "concept:truth-generators"
       ]
     },
     {
@@ -1169,7 +2275,807 @@
       "coveredBy": [
         "truth-compression-and-when-each-wins",
         "political-economy-of-attention"
+      ],
+      "plain": "People forget that money, markets and laws are arrangements humans made and could remake, and start treating them like facts of nature.",
+      "passages": [
+        {
+          "note": "intersubjective-truth",
+          "section": "Capture, when there is no truth to tune against"
+        }
+      ],
+      "related": [
+        "concept:truth-generators",
+        "concept:map-and-territory",
+        "concept:constitutive-regimes",
+        "concept:truth-compression-regimes",
+        "concept:consumer-key-vs-surface-capture"
       ]
+    },
+    {
+      "id": "framework",
+      "label": "Framework (a medium for thought)",
+      "summary": "Any human-made structure one thinks inside: a language, notation, metaphor, classification, model, metric, tool or organization. The book treats a framework as a medium for thought: selection performed once, in advance, on what its users will find easy to notice, record and say. It is the medium argument moved one step upstream, to the hop from the world to a measurement and to the inside of a single head before anything is sent. A framework does four things: decides what can be recorded (capacity / legibility), makes some operations cheap and others laborious (cost asymmetry), supplies the default, and feeds back on the world when acted on. Named independently by a dozen fields (linguistic relativity, theory-ladenness, framing, legibility, Goodhart, performativity, Conway, inductive bias). Provisional; rests on the frameworks report.",
+      "aliases": [
+        "frameworks",
+        "framework-dependence",
+        "representational bias",
+        "medium for thought"
+      ],
+      "autolink": [
+        "frameworks shape",
+        "medium for thought",
+        "framework-dependence",
+        "representational bias"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "information-landscape",
+        "selection-as-other-engine",
+        "optionality-vs-access"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:option-space",
+        "concept:technology-vs-medium",
+        "mechanism:medium-shapes-want",
+        "concept:map-and-territory"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        }
+      ],
+      "plain": "Any structure people build to think with, such as a language, a form, a metric or a model, quietly shapes what they find easy to think."
+    },
+    {
+      "id": "cost-asymmetry",
+      "label": "Cost asymmetry",
+      "summary": "Inside a framework some operations are cheap and others laborious, and over time people mostly do what is cheap. Leibniz's dy/dx encodes the chain rule in its symbols where Newton's dots do not; a slide format makes bullet hierarchies cheap and sustained argument costly; place-value numerals make long division routine. The working part of framework pricing, and the same trade Ch 4 finds in every designed artifact (optionality vs access): what is easy to reach was paid for with what is hard to reach.",
+      "aliases": [
+        "cost asymmetry",
+        "cheap and expensive thoughts"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "optionality-vs-access"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "mechanism:framework-pricing",
+        "concept:default-setting",
+        "concept:notation-as-tool-of-thought",
+        "case:matplotlib-vs-seaborn"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        }
+      ],
+      "plain": "Inside any tool or system of notation, some things take one step and others take fifty, and people mostly do the one-step things."
+    },
+    {
+      "id": "default-setting",
+      "label": "Defaults",
+      "summary": "The unmarked option a framework supplies when nothing is chosen: a reference point, a category, a prompt template, a pre-ticked box. Framing studies show defaults steer choices even when the alternatives are logically equivalent. The report's one-line statement of the whole strand: the framework sets the default, and defaults drive outcomes. The cheapest item on the framework's price list, and the quietest place to steer.",
+      "aliases": [
+        "default setting",
+        "the default",
+        "defaults drive outcomes",
+        "reference point"
+      ],
+      "autolink": [
+        "defaults drive outcomes",
+        "default setting"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "optionality-vs-access"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:framing-effect",
+        "mechanism:framework-pricing",
+        "concept:manipulation-surface",
+        "concept:deployment-capture"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        }
+      ],
+      "plain": "Whatever a system gives you when you make no choice is what most people end up with, so whoever sets the default sets the outcome."
+    },
+    {
+      "id": "influence-not-imprisonment",
+      "label": "Influence, not imprisonment",
+      "summary": "The graded-effects finding: wherever the strong claim (a framework fixes what its users can think) has been tested hard, it has failed; what survives is a weak but measurable bias toward whatever the framework makes easy, visible or rewarded. Pirahã speakers match exact quantities without number words; the Russian-blues advantage vanishes under verbal interference; chess experts escape the familiar pattern when it is a blunder; Boroditsky's time-metaphor result failed replication. The book takes it as a correction to its own 'never forms' in 5b: rarely forms. Changes the remedy (a price can be paid; a wall must be torn down). Open worry: a price nobody pays for a generation may harden into lock-in.",
+      "aliases": [
+        "influence not imprisonment",
+        "weak form",
+        "graded effects",
+        "strong and weak versions",
+        "bias not prison"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "selection-as-other-engine"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:linguistic-relativity",
+        "mechanism:framework-pricing",
+        "question:framework-wall-or-price",
+        "mechanism:medium-shapes-want"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        }
+      ],
+      "plain": "The tools you think with tilt your thinking in measurable ways, but careful testing shows they do not trap it."
+    },
+    {
+      "id": "linguistic-relativity",
+      "label": "Linguistic relativity",
+      "summary": "The Sapir-Whorf hypothesis: the language one speaks influences habitual thought. The strong (determinist) form is rejected; the weak form holds in specific domains with modest effects: color (Winawer et al. 2007, Russian blues, an 'online' effect removed by verbal interference), space (Levinson's Guugu Yimithirr absolute-frame results, still debated), number (Frank et al. 2008, Pirahã: number words as cognitive technology). Specific findings are fragile: Boroditsky's 2001 time-metaphor result failed six replications. The oldest and best-tested case of a framework biasing the thinking done inside it, and the clearest evidence for influence, not imprisonment.",
+      "aliases": [
+        "linguistic relativity",
+        "Sapir-Whorf",
+        "Sapir-Whorf hypothesis",
+        "Whorfian"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "number-as-cognitive-technology"
+      ],
+      "related": [
+        "concept:influence-not-imprisonment",
+        "concept:notation-as-tool-of-thought",
+        "case:russian-blues",
+        "case:piraha-numbers"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        }
+      ],
+      "plain": "The language you speak nudges what you notice and remember, but it does not decide what you are able to think."
+    },
+    {
+      "id": "notation-as-tool-of-thought",
+      "label": "Notation as a tool of thought",
+      "summary": "Iverson's 1979 Turing lecture: notation is a tool of thought, and an effective one must allow convenient expression of the notions that arise in later analysis and generalization as well as the first ones. Leibniz's dy/dx vs Newton's dots; place-value vs Roman numerals; programming languages (Graham's Blub paradox). A clean instance of cost asymmetry, and the hopeful case: a good notation lets a finite mind hold more. Subject to lock-in. Historical-case support; little experimental work.",
+      "aliases": [
+        "notation as a tool of thought",
+        "tool of thought",
+        "Blub paradox"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "optionality-vs-access"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "iverson-turing-lecture"
+      ],
+      "related": [
+        "concept:cost-asymmetry",
+        "case:calculus-notation",
+        "concept:linguistic-relativity",
+        "concept:path-dependence",
+        "case:matplotlib-vs-seaborn"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        }
+      ],
+      "plain": "The symbols you write a problem in decide which steps are easy, so a better notation puts harder thoughts within reach."
+    },
+    {
+      "id": "framing-effect",
+      "label": "Framing effect",
+      "summary": "Tversky and Kahneman (Science, 1981): logically equivalent descriptions produce different choices. In the disease problem 72% chose the certain program under a lives-saved description and 78% chose the risky program under a lives-lost description of identical outcomes. Robustly replicated (Many Labs: 31 of 36 samples; a 47-country 2020 survey), smaller than the original. Goffman's frame analysis is the sociological ancestor. The cleanest proof that a framework biases thought with nothing hidden or false, and a close cousin of the book's key-fit account of truth under compression: same inner message, different frame, different decode.",
+      "aliases": [
+        "framing effect",
+        "framing effects",
+        "framing"
+      ],
+      "autolink": [
+        "framing effect",
+        "framing effects"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "framing-of-decisions"
+      ],
+      "related": [
+        "concept:default-setting",
+        "concept:conceptual-metaphor",
+        "concept:truth-compression-regimes",
+        "case:asian-disease-problem",
+        "concept:manipulation-surface"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "Where I land"
+        }
+      ],
+      "plain": "Describe the same facts in two different ways and people will make two different choices."
+    },
+    {
+      "id": "conceptual-metaphor",
+      "label": "Conceptual metaphor",
+      "summary": "Lakoff and Johnson (Metaphors We Live By, 1980): abstract domains are structured by metaphors from concrete ones (ARGUMENT IS WAR, TIME IS MONEY), and the metaphor shapes inference. Best-known test: Thibodeau and Boroditsky (2011), crime as beast vs virus; contested by Steen et al. (2014) on effect size and coding, reproduced in a German replication (2016); depends on early placement and prior attitudes. Evidence mixed. For the book a metaphor is a compact framework that survives compression when the qualifications do not, which is why it does so much work in the bridge zone. McLuhan's 'the medium is the message' is the media-scale sibling.",
+      "aliases": [
+        "conceptual metaphor",
+        "metaphorical framing",
+        "metaphors we live by"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "metaphors-we-live-by"
+      ],
+      "related": [
+        "concept:framing-effect",
+        "case:crime-metaphor",
+        "concept:bridge-zone",
+        "concept:compressed-form"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        }
+      ],
+      "plain": "The comparison you use to describe a problem quietly suggests which solutions make sense."
+    },
+    {
+      "id": "theory-ladenness",
+      "label": "Theory-ladenness and paradigms",
+      "summary": "Hanson (1958): what a scientist sees depends on the conceptual background brought to the observation. Kuhn (1962) extends it to communities: a paradigm defines which puzzles are legitimate and sets anomalies aside until crisis. Duhem-Quine: evidence tests a bundle, so the framework decides what gets blamed (Ptolemaic epicycles). Foucault's episteme is the era-wide version. Philosophical, with strong historical-case support. In the book's vocabulary a paradigm is a specialist community's shared decoding key (outer message), which is why findings cross between fields badly and why deep training can blind as well as equip.",
+      "aliases": [
+        "theory-ladenness",
+        "theory-laden",
+        "paradigm",
+        "paradigms",
+        "Duhem-Quine",
+        "episteme"
+      ],
+      "autolink": [
+        "theory-ladenness",
+        "theory-laden",
+        "Duhem-Quine"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "structure-of-scientific-revolutions"
+      ],
+      "related": [
+        "concept:curse-of-expertise",
+        "concept:einstellung-effect",
+        "concept:transferable-preconditions",
+        "concept:three-layer-message"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        }
+      ],
+      "plain": "What an expert sees when looking at evidence depends on the theory they already hold."
+    },
+    {
+      "id": "einstellung-effect",
+      "label": "Einstellung effect",
+      "summary": "A known solution method blocks the search for better ones (Luchins's water jars, 1942); functional fixedness (Duncker's candle problem) is the sibling. Bilalić, McLeod and Gobet (2008): chess experts who had found a familiar solution reported searching for a better one while their eye movements kept returning to the familiar pattern. Boundary condition (Sheridan and Reingold, 2013): when the familiar move was an outright blunder, all experts avoided it. Robust. A framework installed by practice rather than design: a learned method acting as an attention-capturing default. The lab-scale cousin of the curse of expertise.",
+      "aliases": [
+        "Einstellung effect",
+        "Einstellung",
+        "functional fixedness",
+        "cognitive set",
+        "attention capture"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:curse-of-expertise",
+        "concept:law-of-the-instrument",
+        "case:chess-einstellung",
+        "concept:versatile-expertise"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The price list, not the wall"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The curse of expertise"
+        }
+      ],
+      "plain": "Once you know one way to solve a problem, that way keeps pulling your attention back and hides better ones."
+    },
+    {
+      "id": "law-of-the-instrument",
+      "label": "Law of the instrument",
+      "summary": "Maslow (1966): 'it is tempting, if the only tool you have is a hammer, to treat everything as if it were a nail' (also Kaplan, 1964). Tools define the problems seen. The streetlight effect is its measurement cousin: people search where it is easy to look. Anecdotal and observational support. The everyday face of framework pricing: the tool you own is the cheap option. Trained into a person it becomes Einstellung and the curse of expertise; built into an institution's instruments it becomes legibility.",
+      "aliases": [
+        "law of the instrument",
+        "Maslow's hammer",
+        "streetlight effect",
+        "golden hammer"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:einstellung-effect",
+        "concept:curse-of-expertise",
+        "concept:legibility",
+        "mechanism:framework-pricing"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        }
+      ],
+      "plain": "People reach for the tool they already have, and then see every problem as one that tool can fix."
+    },
+    {
+      "id": "inductive-bias",
+      "label": "Inductive bias",
+      "summary": "Every learning algorithm needs assumptions beyond the data to generalize at all: convolutions assume locality and translation invariance, linear models additivity, tokenizers fix the units a language model reasons over (irregular chunking of digits makes arithmetic harder, a direct analogue of Roman numerals). The one field where framework bias is treated as unavoidable and designed deliberately rather than as an error. The same field shows how fast implicit frameworks (benchmarks, prompt templates) shape research and output. Necessary, not a defect: the aim is to choose biases deliberately and test against them.",
+      "aliases": [
+        "inductive bias",
+        "inductive biases",
+        "tokenization"
+      ],
+      "autolink": [
+        "inductive bias",
+        "inductive biases"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "ai-as-new-node"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:llm-design-moment-collapse",
+        "concept:corpus-capture",
+        "case:prompt-format-sensitivity",
+        "case:ai-benchmarks",
+        "concept:notation-as-tool-of-thought"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The clearest case is a machine"
+        }
+      ],
+      "plain": "A system that learns from examples has to make assumptions that go beyond those examples, and the assumptions shape everything it concludes."
+    },
+    {
+      "id": "map-and-territory",
+      "label": "The map is not the territory",
+      "summary": "Korzybski (1933): the representation is not the thing represented; reification is treating an abstraction as concrete. Box: all models are wrong (1976), but some are useful (1979). Taleb's ludic fallacy: treating real-world uncertainty as if it had the tidy structure of games. Model risk is the regulatory name for losses from flawed or misapplied models. A warning, not a mechanism. The book adds two things: a map drawn for a budget-limited reader is unavoidable (the abyss is the territory), so the goal is to remember what was left out; and maps get acted on, at which point the territory starts changing (framework feedback).",
+      "aliases": [
+        "map is not the territory",
+        "the map is not the territory",
+        "map and territory",
+        "all models are wrong",
+        "ludic fallacy",
+        "model risk"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:reification",
+        "concept:abyss",
+        "concept:compressed-form",
+        "mechanism:framework-feedback",
+        "concept:compressed-form-as-authority"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        }
+      ],
+      "plain": "A model or a summary is a simplified picture of something, and trouble starts when people forget what the picture left out."
+    },
+    {
+      "id": "legibility",
+      "label": "Legibility",
+      "summary": "James C. Scott (Seeing Like a State, 1998): the state's effort 'to make a society legible, to arrange the population in ways that simplified the classic state functions of taxation, conscription, and prevention of rebellion.' State simplifications are 'rather like abridged maps', but maps that, 'when allied with state power, would enable much of the reality they depicted to be remade.' What the framework cannot record drops out of reasoning (the foresters saw saleable volume; underbrush, soil biota and diversity lay 'outside the brackets'). For the book this is the framework at the pipeline's first hop (the Out There to Raw Data): the medium of the measurement gate, and the entry point for torque and feedback. Historical case studies.",
+      "aliases": [
+        "legibility",
+        "legible",
+        "seeing like a state",
+        "outside the brackets",
+        "visibility and invisibility"
+      ],
+      "autolink": [
+        "legibility"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "information-landscape"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "seeing-like-a-state"
+      ],
+      "related": [
+        "concept:classification-torque",
+        "case:scientific-forestry",
+        "mechanism:framework-feedback",
+        "concept:option-space",
+        "concept:compressed-form"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "What a framework does to a thought"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        },
+        {
+          "note": "the-information-landscape",
+          "section": "Measurement → Raw Data"
+        }
+      ],
+      "plain": "To manage something large, you first simplify it into what can be written down, and whatever cannot be written down stops counting."
+    },
+    {
+      "id": "classification-torque",
+      "label": "Classification torque",
+      "summary": "Bowker and Star (Sorting Things Out, 1999): classification systems are infrastructure, invisible when they work and consequential for everyone sorted by them. Torque names 'a twisting of time lines that pull at each other', a mismatch in which 'Lives are twisted, even torn, in the attempt to force the one into the other.' 'Politically and socially charged agendas are often first presented as purely technical and they are difficult even to see.' Cases: apartheid race classification, the ICD. What legibility costs the people made legible; a category that reads as nature is one nobody audits (reification). Historical and ethnographic.",
+      "aliases": [
+        "classification torque",
+        "torque",
+        "sorting things out"
+      ],
+      "autolink": [
+        "classification torque"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "sorting-things-out"
+      ],
+      "related": [
+        "concept:legibility",
+        "concept:looping-effects",
+        "case:apartheid-classification",
+        "concept:reification",
+        "case:dsm-and-rdoc"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        },
+        {
+          "note": "myths-scale-and-bureaucracy",
+          "section": "Bureaucracy is downstream of the myth"
+        }
+      ],
+      "plain": "When official categories do not fit the people sorted into them, the categories hold and the people are the ones who bend."
+    },
+    {
+      "id": "goodharts-law",
+      "label": "Goodhart's law",
+      "summary": "Goodhart (1975): 'Any observed statistical regularity will tend to collapse once pressure is placed upon it for control purposes.' The aphorism 'When a measure becomes a target, it ceases to be a good measure' is Strathern's 1997 generalization. Campbell's law (1979): the more a quantitative social indicator is used for decision-making, the more subject it is to corruption pressures and the more it distorts the processes it monitors. Target substitution: effort flows to the measure rather than what it stood for. Widely documented. For the book, the prior art for Ch 10's 'engagement is a proxy for revenue, dressed up as a proxy for user benefit', and for objective capture in Ch 11. Framework feedback in its commonest form.",
+      "aliases": [
+        "Goodhart's law",
+        "Goodhart",
+        "Campbell's law",
+        "target substitution",
+        "when a measure becomes a target"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "coveredBy": [
+        "political-economy-of-attention",
+        "ai-as-new-node"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "goodhart-1975",
+        "campbell-1979"
+      ],
+      "instanceOf": [
+        "mechanism:framework-feedback"
+      ],
+      "related": [
+        "mechanism:engagement-equilibrium",
+        "concept:objective-capture",
+        "case:ai-benchmarks",
+        "concept:performativity"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        },
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The clearest case is a machine"
+        },
+        {
+          "note": "political-economy-of-attention",
+          "section": "What engagement actually measures"
+        }
+      ],
+      "plain": "Once people are rewarded for hitting a number, they find ways to hit it that no longer deliver what the number was meant to track."
+    },
+    {
+      "id": "performativity",
+      "label": "Performativity",
+      "summary": "MacKenzie (An Engine, Not a Camera, 2006): financial models are engines that shape markets, not cameras that record them. Barnesian performativity: using a model makes reality more like the model (Black-Scholes-Merton, 1976 to summer 1987). Counterperformativity: use makes reality less like it (the post-1987 skew). MacKenzie denies the crude version: not any arbitrary formula could have made itself true, and consistency with performativity does not prove it. Compelling for options; general scope debated. The best-documented case of framework feedback, and the outside literature's name for what the book calls constitutive transmission; pairs with Soros's reflexivity and Hacking's looping effects.",
+      "aliases": [
+        "performativity",
+        "Barnesian performativity",
+        "counterperformativity",
+        "performative",
+        "an engine, not a camera"
+      ],
+      "autolink": [
+        "performativity",
+        "counterperformativity"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "an-engine-not-a-camera"
+      ],
+      "instanceOf": [
+        "mechanism:framework-feedback"
+      ],
+      "related": [
+        "mechanism:constitutive-transmission",
+        "concept:looping-effects",
+        "concept:goodharts-law",
+        "case:black-scholes",
+        "concept:constitutive-regimes"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        },
+        {
+          "note": "intersubjective-truth",
+          "section": "The pipeline is wired into its own cargo"
+        }
+      ],
+      "plain": "A model that enough people use to make decisions stops merely describing the world and starts pushing the world toward itself."
+    },
+    {
+      "id": "looping-effects",
+      "label": "Looping effects",
+      "summary": "Hacking ('making up people'; The Social Construction of What?): human kinds differ from natural kinds because the people classified respond to their classification, which changes the people and therefore the category. Philosophical/historical. Framework feedback applied to the sorting of human beings; sits beside torque (what categories do to lives) and performativity (what models do to markets). The intersubjective-truth note flags Hacking as owed a closer reading for the self-fulfilling-loop material.",
+      "aliases": [
+        "looping effects",
+        "looping effect",
+        "looping kinds",
+        "making up people",
+        "human kinds"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "social-construction-of-what"
+      ],
+      "instanceOf": [
+        "mechanism:framework-feedback"
+      ],
+      "related": [
+        "concept:classification-torque",
+        "concept:performativity",
+        "mechanism:constitutive-transmission",
+        "concept:three-realities"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "When the map starts moving the territory"
+        }
+      ],
+      "plain": "People who are put in a category react to being put there, and their reaction changes what the category contains."
+    },
+    {
+      "id": "conways-law",
+      "label": "Conway's law",
+      "summary": "Conway (1968): systems mirror the communication structure of the organizations that design them (the 'mirroring hypothesis'). MacCormack, Rusnak and Baldwin (2012): in matched pairs of products with the same function, the product from the loosely coupled organization was significantly more modular in every pair. Colfer and Baldwin (2016), 142 studies: 70% strong support, 22% partial, 8% none; most descriptive studies of open collaborative projects did not support it. Reversible on purpose (the inverse Conway maneuver). An org chart as a framework: talking to the next desk is cheap, talking across departments is expensive, and the product takes that shape.",
+      "aliases": [
+        "Conway's law",
+        "mirroring hypothesis",
+        "inverse Conway maneuver"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report",
+        "how-do-committees-invent"
+      ],
+      "related": [
+        "mechanism:framework-pricing",
+        "concept:path-dependence",
+        "concept:curation-layer",
+        "concept:funding-decoupling"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "A framework is a medium you think in"
+        }
+      ],
+      "plain": "The things an organization builds end up shaped like the organization's own internal lines of communication."
+    },
+    {
+      "id": "path-dependence",
+      "label": "Path dependence and lock-in",
+      "summary": "David (1985), Arthur (1989): early, sometimes arbitrary choices get entrenched by network effects, training, tooling, standards and sunk investment, so a framework survives after its fit has declined (fluxional notation at Cambridge, arguably QWERTY, the DSM's continued use). The concept is accepted; the QWERTY example is disputed (Liebowitz and Margolis: evidence for Dvorak's superiority is 'scant and suspect'; only third-degree path dependence implies a remediable inefficiency). The Overton window is the political version. Lock-in is what turns a framework's price list into something closer to a wall over time.",
+      "aliases": [
+        "path dependence",
+        "lock-in",
+        "locked in",
+        "Overton window"
+      ],
+      "autolink": [
+        "path dependence",
+        "lock-in"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:influence-not-imprisonment",
+        "case:qwerty",
+        "case:calculus-notation",
+        "concept:work-of-generations",
+        "concept:option-space"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "Where I'm still uncertain"
+        }
+      ],
+      "plain": "An early choice, even an arbitrary one, can become nearly impossible to change once everyone has built their habits around it."
+    },
+    {
+      "id": "framework-rotation",
+      "label": "Framework rotation",
+      "summary": "The countermeasure family: single frameworks fail silently; disagreement between several exposes the shape of each. Use several models/notations and look for disagreement (ensembles, triangulation); report results across framings (prompt-format ranges; gains and losses; absolute and relative risk); separate measures from targets and rotate indicators; change the notation when the problem changes; red-team the categories, not just the conclusions; treat models as engines and expect feedback; design organizations for the architecture wanted; seek out-of-framework input (pre-mortems, outsider review); keep Box's maxim operational. The framework strand's answer and the book's larger one in miniature: versatile expertise is rotation practiced by one person; survivable-polarization design is rotation built into an institution.",
+      "aliases": [
+        "framework rotation",
+        "multiple frameworks",
+        "several lenses",
+        "triangulation",
+        "red-team the categories"
+      ],
+      "autolink": [
+        "framework rotation"
+      ],
+      "definedIn": [
+        "thinking-inside-frameworks"
+      ],
+      "evidencedBy": [
+        "frameworks-report"
+      ],
+      "related": [
+        "concept:versatile-expertise",
+        "concept:survivable-polarization",
+        "concept:goodharts-law",
+        "concept:einstellung-effect",
+        "concept:curation-layer"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "Where I land"
+        }
+      ],
+      "plain": "The way to see how one way of looking is bending your view is to look a second way and compare."
     }
   ]
 }

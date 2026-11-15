@@ -1,5 +1,5 @@
 {
-  "_doc": "Notes — the markdown files in content/ the graph tracks. file is the filename under content/; subtype is prose|conversation|reference; role is the editorial role; summary is the node summary. Loaded by seedNotes in build-graph.js; the note parser then reads each file for wikilinks + H2 sections.",
+  "_doc": "Notes — the markdown files in content/ the graph tracks. file is the filename under content/; subtype is prose|conversation|reference; role is the editorial role; summary is the node summary. An interlude sits in the linear reading order: `readAfter` is the chapter slug it follows and `navTitle` its name in the reading path (keep both in step with the prev/next footers in the prose). `generated: true` marks hub pages written by generate-concept-pages.js (their links are not read back into the graph). Loaded by seedNotes in build-graph.js; the note parser then reads each file for its frontmatter description, wikilinks and H2 sections.",
   "notes": [
     {
       "slug": "outline",
@@ -79,7 +79,9 @@
       "subtype": "prose",
       "title": "Medium and Manipulation",
       "role": "interlude",
-      "summary": "Foundational note on what the medium does to the selection gates. Provisional answer: the medium is the selection criteria — it sets the capacity, the criteria, and the want cultivated at every gate."
+      "summary": "Foundational note on what the medium does to the selection gates. Provisional answer: the medium is the selection criteria — it sets the capacity, the criteria, and the want cultivated at every gate.",
+      "readAfter": "selection-as-other-engine",
+      "navTitle": "Interlude: The Medium"
     },
     {
       "slug": "truth-compression-and-when-each-wins",
@@ -95,7 +97,9 @@
       "subtype": "prose",
       "title": "Myths, Scale, and Bureaucracy",
       "role": "interlude",
-      "summary": "Foundational note. Works out the loop: network scale forces myth compression, compression widens interpretive latitude, latitude segments the network, and segmentation forces the bureaucracy that re-supplies the dropped decoding key."
+      "summary": "Foundational note. Works out the loop: network scale forces myth compression, compression widens interpretive latitude, latitude segments the network, and segmentation forces the bureaucracy that re-supplies the dropped decoding key.",
+      "readAfter": "emotional-memetics",
+      "navTitle": "Interlude: Myths at Scale"
     },
     {
       "slug": "selection-as-other-engine",
@@ -151,7 +155,9 @@
       "subtype": "prose",
       "title": "Capture Taxonomy",
       "role": "interlude",
-      "summary": "Unifies capture across Ch 8, Ch 10, Ch 11. Three-axis taxonomy: substrate (gate-criteria / option-space / training-corpus / training-objective / deployment-configuration / receiver-training / preservation-archive), source (external / self / composite), target asymmetry (recovery dynamics determined by substrate). Names two cross-cutting principles: consumer-key captures are harder to recover from than surface captures (generalizing Ch 8's asymmetry); training-objective capture is uniquely bad because it self-reinforces across model generations. Composition rule: self-capture creates the gradient external capture rides; composite capture is the empirically dominant mode."
+      "summary": "Unifies capture across Ch 8, Ch 10, Ch 11. Three-axis taxonomy: substrate (gate-criteria / option-space / training-corpus / training-objective / deployment-configuration / receiver-training / preservation-archive), source (external / self / composite), target asymmetry (recovery dynamics determined by substrate). Names two cross-cutting principles: consumer-key captures are harder to recover from than surface captures (generalizing Ch 8's asymmetry); training-objective capture is uniquely bad because it self-reinforces across model generations. Composition rule: self-capture creates the gradient external capture rides; composite capture is the empirically dominant mode.",
+      "readAfter": "ai-as-new-node",
+      "navTitle": "Interlude: Capture"
     },
     {
       "slug": "intersubjective-truth",
@@ -200,6 +206,32 @@
       "title": "Lossy — The Short Version",
       "role": "distillation",
       "summary": "The whole argument at three sizes — a sentence, a paragraph, a page — for a reader arriving cold. Built from the chapters' own load-bearing lines; the chapters are the proof, this is the package. Editor-drafted, provisional."
+    },
+    {
+      "slug": "thinking-inside-frameworks",
+      "file": "thinking-inside-frameworks.md",
+      "subtype": "prose",
+      "title": "Thinking Inside Frameworks",
+      "role": "foundational-note",
+      "summary": "Foundational note integrating the frameworks report. A framework (language, notation, classification, model, metric, tool, org chart) is a medium for thought: frozen selection running inside the thinker and at the pipeline's first hop. It works by price and default (cost asymmetry, defaults, legibility), which corrects 5b's 'never forms' to 'rarely forms'; it bites hardest where acted on (framework feedback: forestry, Black-Scholes, Goodhart); the defense is plural (framework rotation). Flags that the forestry case strains the truth-generators carving and that the book and its ontology are themselves frameworks."
+    },
+    {
+      "slug": "explore",
+      "file": "explore.md",
+      "subtype": "prose",
+      "title": "Explore the ideas",
+      "role": "hub",
+      "generated": true,
+      "summary": "Generated hub: every card (concept, mechanism, example, open question) grouped into themes ordered along the book's arc. The front door for self-guided exploration."
+    },
+    {
+      "slug": "reading-path",
+      "file": "reading-path.md",
+      "subtype": "prose",
+      "title": "The reading path",
+      "role": "hub",
+      "generated": true,
+      "summary": "Generated hub: the chapters in reading order, each in a sentence or two, with the ideas introduced in each. The front door for reading the narrative."
     }
   ]
 }

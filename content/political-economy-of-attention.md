@@ -12,6 +12,19 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (29), each with its own short page
+> **Worked out here:** [[cost-shifting|Cost-shifting from producers to consumers]] · [[creation-cheap-review-expensive|Creation cheap / review expensive]] · [[credibility-weighting|Credibility weighting]] · [[engagement-equilibrium|Engagement-maximization as a captured equilibrium]] · [[out-competition-of-carriers|Out-competition of institutional carriers in attention markets]] · [[self-vs-external-capture|Self-capture vs. external capture]] · [[superspreader-dynamics|Superspreader dynamics]] · [[orwell-huxley-axis|The Orwell/Huxley axis]]
+>
+> **Also used:** [[algorithm-as-selection-engine|Algorithm as selection engine]] · [[capture-asymmetry|Capture asymmetry]] · [[capture-taxonomy|Capture taxonomy]] · [[constitutive-transmission|Constitutive transmission]] · [[curation-layer|Curation layer]] · [[institutional-decay-rates|Differential decay rates]] · [[framework-feedback|Framework feedback]] · [[funding-decoupling|Funding decoupling from attention markets]] · [[goodharts-law|Goodhart's law]] · [[justification-market|Justification market]] · [[manipulation-surface|Manipulation surface]] · [[medium-shapes-want|Medium shapes want]] · [[preservation-vs-training-pair|Preservation vs. training]] · [[reification|Reification]] · [[technology-vs-medium|Technology vs. medium]] · [[three-realities|Three realities]]
+>
+> **Examples:** [[monetary-policy-press|Monetary policy in the financial press]] · [[stanford-prison-experiment-corrective|Stanford Prison Experiment correctives]] · [[plain-language-law|Statutes vs. plain-language legal summaries]]
+>
+> **Open questions:** [[medium-and-manipulation|What does the medium do to the gates?]] · [[intersubjective-pipeline|What does the pipeline do to intersubjective truths?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 Open your phone to check one thing, and an hour later you surface from a stream of outrage clips and arguments you never went looking for, a little more wound up than when you started. Ask yourself honestly whether that was what you *wanted*, and then ask why it keeps happening anyway. Nobody censored the calm, useful version of the day; it is still right there if you go dig for it. It just lost, quietly, at every turn, to whatever kept you scrolling. What follows is the machinery behind that, and about its most uncomfortable feature: there is no villain to blame here, no censor to overthrow. Just an arrangement that pays better when the noise wins.
 
 Everything so far has been machinery: how ideas get compressed, which gates they pass, why the medium decides what can win. Machinery has no interests. But the moment you say a gate works by criteria, and criteria have to be *set*, you have to ask who sets them and who benefits. [[selection-as-other-engine|Chapter 5b]] called [[selection]] the mechanism with a steering wheel and pointed here for whose hands are on it. [[preservation-vs-training|Chapter 8]] found the modern collapse asymmetric, preservation mostly holding while training hollowed, and pointed here for which interest that asymmetry serves. That is the question here.
@@ -27,6 +40,8 @@ The [[selection-as-other-engine|frozen-selection]] point sharpens it. The medium
 ## What engagement actually measures
 
 The dominant medium's gates are tuned for *engagement*, a word repetition has drained of meaning. It does not measure how much a piece of content helps you, or teaches you, or anything you would reflectively want. It measures how much *time* you spend inside the medium as a result of seeing it: clicks, dwell, scroll depth, comments, return visits. That time is what gets sold to advertisers. So **engagement is a proxy for revenue, dressed up as a proxy for user benefit**, and the fit between the metric and any honest reading of "what people want" is an accident, not a design goal.
+
+The move is older than the platforms. Charles Goodhart saw in 1975 that a statistical regularity tends to collapse once it is used for control, and the version everyone quotes came later: when a measure becomes a target, it ceases to be a good measure ([[goodharts-law|Goodhart's law]]). Engagement began as a rough sign that people valued what they were shown; once the gates were tuned to it, content was shaped to produce it, and it stopped measuring what it once tracked. What the platforms add to Goodhart is an owner. The measure did not drift into being a target. Someone chose it, because it was the one that paid.
 
 The evidence that the fit is bad is sharper than I expected. [[psychology-of-virality|*Psychology of Virality*]] calls it the [[paradox-of-virality|paradox of virality]] (p.9): people know that "negative and high-arousal content goes 'viral'," and "the vast majority of people across the political spectrum reported that they do not want this to be the case," preferring "more positive, nuanced, and accurate content." When asked, people want different content than the gates deliver, and the gates deliver it anyway.
 

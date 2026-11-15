@@ -10,6 +10,17 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (3), each with its own short page
+> **Worked out here:** [[receiver-budget|Receiver budget]]
+>
+> **Examples:** [[power-posing|Power posing]]
+>
+> **Open questions:** [[budget-fixed-or-trainable|Are receiver budgets fixed or trainable?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 Every idea this book is about has to land somewhere: in an actual person, who has only so many hours to take it in. The limit is so obvious it's easy to walk past. But there is a hard ceiling on how much any of us can absorb in a lifetime and a softer one on how much we can absorb in a day, and the one hopeful thing about them is that the daily ceiling can be raised. This is about where the two ceilings come from and what raising one of them takes.
 
 ## A tablespoon of weeks

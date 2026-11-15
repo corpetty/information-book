@@ -12,6 +12,19 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (23), each with its own short page
+> **Worked out here:** [[complex-form|Complex form]] · [[complexity-ceiling|Complexity ceiling]] · [[compressed-form|Compressed form]] · [[handle-ability|Handle-ability]] · [[manipulation-surface|Manipulation surface]] · [[three-layer-message|The three-layer message]] · [[transport|Transport]]
+>
+> **Also used:** [[constitutive-transmission|Constitutive transmission]] · [[interpretive-latitude|Interpretive latitude]] · [[meme-ecosystem-competition|Meme ecosystem competition]] · [[myth-dilution|Myth dilution at scale]] · [[neutral-drift-baseline|Neutral drift baseline]] · [[receiver-budget|Receiver budget]] · [[three-realities|Three realities]] · [[want-as-prime-mover|Want as the prime mover]]
+>
+> **Examples:** [[brief-history-of-time|A Brief History of Time]] · [[bitcoin-internet-money|Bitcoin]] · [[hammer-vs-copernicus|Hammer of the Witches vs. Copernicus]] · [[power-posing|Power posing]] · [[stanford-prison-experiment-corrective|Stanford Prison Experiment correctives]] · [[telephone-game|The telephone game]]
+>
+> **Open questions:** [[complexity-doing-two-jobs|Is 'complexity' doing two jobs?]] · [[truth-value-placement|Where does truth value enter the model?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 Think about how a real discovery reaches you. A scientist spends twenty years on a result; you meet it as "scientists say X," and a week later it has hardened into "X is what the good guys believe." Each retelling made it a little easier to pass along and stripped a little more of the actual finding out of it. This is about that exchange rate, the rule that the easier an idea is to spread, the less of the real thing it can carry, and about why the cheap, slightly-wrong version reliably out-travels the accurate one.
 
 [[the-information-landscape|Chapter 1]] split the pipeline into two mechanisms: [[transport]], which reshapes an idea in transit, and [[selection]], which decides whether it moves at all. This is the transport half; [[selection-as-other-engine|the next]] is selection. Both are real; they are easier to see one at a time. The transport claim: **how easily a piece of information spreads across a social network is inversely related to how complex it is.**

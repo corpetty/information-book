@@ -11,6 +11,15 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (3), each with its own short page
+> **Worked out here:** [[option-space|Option space]]
+>
+> **Open questions:** [[framework-wall-or-price|Does a medium forbid thoughts, or only price them?]] · [[medium-and-manipulation|What does the medium do to the gates?]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 [[transport-vs-selection|The transport/selection note]] landed somewhere provisional: [[transport]] and [[selection]] are parallel mechanisms, selection is the dominant one in modern digital networks, and *want* is the prime mover behind both. It closed on a question it couldn't answer. If selection is what matters, and the criteria at each gate are tunable rather than fixed, then *what tunes them?* The one-word answer was "the medium." This note takes that seriously, in its sharpest form: **which media let core truth survive which kinds of manipulation?**
 
 ## The medium is not the pipe
@@ -44,6 +53,7 @@ Which media let core truth survive which kinds of manipulation? **Core truth sur
 - **The two conditions might not be independent.** I've written gate-criteria and want-loop as two separate failure modes, but the want-loop is partly *built out of* what the gate rewarded in the past, so they may be one feedback system seen at two timescales. If so, "both, not either" is the wrong logical shape and the section needs rebuilding.
 - **"Correlated with truth" is doing heavy lifting and isn't defined.** It leans on the [[truth-value-placement|truth-value question]], which [[truth-compression-and-when-each-wins|Chapter 5c]] takes up; until then it's a promissory note this note can't fully discharge.
 - **Is the reach/truth trade-off fundamental, or historically contingent?** I asserted it as hard, but that's the kind of claim that turns out to be an artifact of the media we happen to have had. If it's contingent, Part IV is far more hopeful than this note implies, and I don't know which.
+- **Capacity may be mostly a price.** A character limit does exclude an argument that cannot fit. Most of what a medium does is softer: the evidence on languages, notations and categories, which are media for thought, supports a measurable lean and rejects the claim that the disfavored thought cannot form ([[thinking-inside-frameworks]]). A price can be paid, and the open part is whether one nobody pays for a generation hardens into a wall ([[framework-wall-or-price]]).
 - **The co-writer claim across generations is unearned.** The note rests on the casting-director (one-year) reading because that's what the evidence supports; comparative generational studies of want formation under different media regimes would be the evidence for the stronger claim, and a Part IV prescription running across cohorts will have to commit on which scale matters.
 
 ---

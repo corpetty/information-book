@@ -132,6 +132,99 @@ test('every Chapter has partOf and hasStatus edges and a resolvable draftNote', 
   assert.deepEqual(problems, []);
 });
 
+// ---------------------------------------------------------------- card layer
+//
+// The site's exploration layer: every Concept / Mechanism / CaseStudy /
+// Question is a "card" — a short, plain, interlinked page. These invariants
+// are what keep the layer chunked and connected as the book grows.
+
+const CARD_TYPES = ['Concept', 'Mechanism', 'CaseStudy', 'Question'];
+const CARD_DIRS = { Mechanism: 'mechanisms', Concept: 'concepts', CaseStudy: 'cases', Question: 'questions' };
+const cards = nodes.filter(n => CARD_TYPES.includes(n.type));
+const hasOwnNote = (n) => nodeById.has(`note:${n.id.slice(n.id.indexOf(':') + 1)}`);
+const cardFile = (n) => resolve(repoRoot, 'content', CARD_DIRS[n.type], `${n.id.slice(n.id.indexOf(':') + 1)}.md`);
+const cardBody = (n) => {
+  if (!existsSync(cardFile(n))) return null;
+  const m = readFileSync(cardFile(n), 'utf8').match(/<!-- card -->\n?([\s\S]*?)\n?<!-- \/card -->/);
+  return m ? m[1] : null;
+};
+
+test('every card has one plain sentence and exactly one home theme', () => {
+  const problems = [];
+  for (const n of cards) {
+    const plain = n.props?.plain;
+    if (!plain) problems.push(`${n.id}: no plain`);
+    else if (plain.split(/\s+/).length > 30) problems.push(`${n.id}: plain is ${plain.split(/\s+/).length} words (max 30)`);
+    const themes = edges.filter(e => e.source === n.id && e.predicate === 'inTheme');
+    if (themes.length !== 1) problems.push(`${n.id}: in ${themes.length} themes (must be 1)`);
+  }
+  assert.deepEqual(problems, []);
+});
+
+test('every card page has a short, interlinked, voice-clean body', () => {
+  const problems = [];
+  for (const n of cards) {
+    if (hasOwnNote(n)) continue; // the note is its page
+    const body = cardBody(n);
+    if (body == null) { problems.push(`${n.id}: no <!-- card --> body`); continue; }
+    const words = body.replace(/\[\[[^\]|]+\|([^\]]*)\]\]/g, '$1').split(/\s+/).filter(Boolean).length;
+    if (words > 240) problems.push(`${n.id}: body is ${words} words (max 240 — a card is a chunk, not a chapter)`);
+    if ((n.props?.cardLinks || 0) < 3) problems.push(`${n.id}: body links to ${n.props?.cardLinks || 0} pages (min 3)`);
+    if (body.includes('—')) problems.push(`${n.id}: em-dash in body (voice rule)`);
+    if (/^#{1,6}\s/m.test(body)) problems.push(`${n.id}: heading inside card body`);
+  }
+  assert.deepEqual(problems, []);
+});
+
+test('card passages point at real H2 sections', () => {
+  const problems = [];
+  for (const n of cards) {
+    for (const p of n.props?.passages || []) {
+      const note = nodeById.get(`note:${p.note}`);
+      if (!note) problems.push(`${n.id}: unknown note ${p.note}`);
+      else if (!(note.props?.sections || []).includes(p.section)) problems.push(`${n.id}: "${p.section}" not an H2 in ${p.note}`);
+    }
+  }
+  assert.deepEqual(problems, []);
+});
+
+test('themes are ordered, non-trivial, and made only of cards', () => {
+  const themes = nodes.filter(n => n.type === 'Theme');
+  assert.ok(themes.length > 0, 'no themes');
+  const problems = [];
+  const ordinals = themes.map(t => t.props.ordinal).sort((a, b) => a - b);
+  if (new Set(ordinals).size !== ordinals.length) problems.push('duplicate theme ordinals');
+  for (const t of themes) {
+    if (!t.props?.plain) problems.push(`${t.id}: no plain`);
+    if ((t.props?.members || []).length < 3) problems.push(`${t.id}: fewer than 3 members`);
+    for (const m of t.props?.members || []) {
+      const node = nodeById.get(m);
+      if (!node) problems.push(`${t.id}: unknown member ${m}`);
+      else if (!CARD_TYPES.includes(node.type)) problems.push(`${t.id}: member ${m} is a ${node.type}, not a card`);
+    }
+  }
+  for (const e of edges.filter(e => e.predicate === 'illustrates')) {
+    if (!e.source.startsWith('case:')) problems.push(`illustrates subject must be case:* — ${e.source} → ${e.target}`);
+  }
+  assert.deepEqual(problems, []);
+});
+
+test('every chapter, interlude and depth note has a frontmatter description', () => {
+  // The reading path and the site's properties block both render it.
+  const roles = new Set(['chapter-draft', 'interlude', 'foundational-note']);
+  const missing = nodes
+    .filter(n => n.type === 'Note' && roles.has(n.props?.role) && !n.props?.description)
+    .map(n => n.id);
+  assert.deepEqual(missing, []);
+});
+
+test('interludes name a real chapter to follow', () => {
+  const bad = nodes
+    .filter(n => n.type === 'Note' && n.props?.readAfter && !nodeById.has(`chapter:${n.props.readAfter}`))
+    .map(n => `${n.id} → ${n.props.readAfter}`);
+  assert.deepEqual(bad, []);
+});
+
 // NOTE: the "Quartz Explorer reading order matches chapter ordinals" test was
 // removed in the Quartz v5 migration. It guarded the custom reading-order
 // Explorer sortFn (a hardcoded ORDER array in site/quartz.layout.ts), which v5

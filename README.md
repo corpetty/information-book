@@ -19,6 +19,18 @@ The book's repo. Three subsystems share one tree:
 - **`site/`** — a Quartz 4 install whose `content/` symlinks to the
   prose. Builds the book as a static site.
 
+The site has **two reading modes**, both driven by the ontology:
+
+- **The narrative** — the chapters and interludes, in order.
+  `content/reading-path.md` (generated) is the spine: each one in a sentence
+  or two, taken from its own `description:` frontmatter.
+- **The cards** — every Concept, Mechanism, CaseStudy and Question in the
+  graph is a short, self-contained, interlinked page (one plain sentence, an
+  example, a few paragraphs, links to its neighbours, a pointer to the chapter
+  section that argues it in full). Cards are grouped into ordered **themes**;
+  `content/explore.md` (generated) is the map of all of them. See
+  **The card layer** below.
+
 ## Run it
 
 Prerequisites: **Node ≥ 22** (declared in `package.json`; the scripts are
@@ -42,16 +54,18 @@ make context CENTER=claim:<slug> ARGS="-o foo.md" # write bundle to file
 
 # Site
 make citation-pages                               # regenerate content/citations/*.md from sources.json
-make concept-pages                                # regenerate content/{concepts,cases,mechanisms,questions}/*.md from the graph
+make concept-pages                                # regenerate cards, theme pages, explore.md, reading-path.md, chapter maps
+make interlink                                    # link the first use of each card's name in each file (ARGS=--dry previews)
 make site-build                                   # build Quartz output into site/public/
 make site-serve                                   # build and live-serve at localhost:8080
+make site-preview                                 # serve site/public locally the way GitHub Pages does (after site-build)
 make site-clean                                   # remove site/public + site/.quartz-cache
 
 make help                                         # list targets
 ```
 
 <!-- graph-stats: kept in sync with data/expected-stats.json by a test in scripts/graph.test.js -->
-Current state: **318 nodes / 1585 edges / 0 warnings**.
+Current state: **410 nodes / 3228 edges / 0 warnings**.
 
 A bare `make build` is now self-contained: it folds in the committed
 per-PDF source extractions (`data/interpretive/*.jsonl`) directly, so the
@@ -106,27 +120,30 @@ This is what the tool is for. The graph exists to make this loop tight.
 
 Schema is the contract in [`data/graph-meta.json`](data/graph-meta.json).
 
-**15 node types**, grouped by role (current counts in parentheses):
+**16 node types**, grouped by role (current counts in parentheses):
 
-- **Outline scaffolding**: `Part` (4), `Chapter` (14), `Note` (26), `Status` (5)
+- **Outline scaffolding**: `Part` (4), `Chapter` (15), `Note` (28), `Status` (5)
 - **Pipeline model**: `PipelineStage` (6), `Gate` (5) (from
   `the-information-landscape.md`)
-- **Argument layer**: `Mechanism` (8), `Concept` (58), `Question` (7),
-  `Claim` (33), `Tension` (3)
-- **Source layer**: `Source` (23), `Author` (18), `Tradition` (8)
-- **Illustration**: `CaseStudy` (13)
+- **Argument layer**: `Mechanism` (11), `Concept` (82), `Question` (9),
+  `Claim` (43), `Tension` (5)
+- **Source layer**: `Source` (64), `Author` (69), `Tradition` (18)
+- **Illustration**: `CaseStudy` (33)
+- **Exploration**: `Theme` (13) — ordered clusters of cards
 
-**26 predicates** in 6 categories:
+**30 predicates** in 7 categories:
 
 - **structural** — `partOf`, `covers`, `definedIn`, `succeedsStage`,
-  `gateFor`, `hasStatus`, `representedBy`
+  `gateFor`, `hasStatus`, `representedBy`, `inTheme`
 - **causal** — `derivesFrom`, `enables`, `precondition`, `compresses`,
-  `selectsFor`
+  `selectsFor`, `instanceOf`
 - **provenance** — `cites`, `authoredBy`, `partOfTradition`,
   `evidencedBy`
 - **dialectical** — `tensionWith`, `contradicts`, `supersedes`,
   `flagsOpenQuestion`
-- **claim** — `argues`, `supports`, `pressureTests`, `dependsOn`
+- **claim** — `argues`, `supports`, `pressureTests`, `dependsOn`,
+  `illustrates`
+- **associative** — `relatedTo` (curated see-also between cards)
 - **weak** — `mentions`, `wikiLinks`
 
 **Direction conventions worth memorising:**
@@ -135,6 +152,43 @@ Schema is the contract in [`data/graph-meta.json`](data/graph-meta.json).
 - `evidencedBy`: **Concept/Mechanism/Claim → Source** (reversed)
 - `argues`: **Chapter or Note → Claim**
 - `covers`: **Chapter → Concept/Mechanism/Question/Claim/CaseStudy**
+- `illustrates`: **CaseStudy → Mechanism/Concept/Claim**
+- `inTheme`: **card → Theme** (edge `order` is the trail position)
+- `instanceOf`: **special case → general case**
+- `relatedTo`: undirected (de-duped on the unordered pair)
+
+## The card layer
+
+Every Concept, Mechanism, CaseStudy and Question is a **card**: a page under
+`content/{concepts,mechanisms,cases,questions}/`. The ontology owns the
+structure; the prose stays prose.
+
+| What | Where it lives | Notes |
+|---|---|---|
+| One plain sentence (`plain`) | the node's catalog entry in `data/*.json` | ≤ 30 words, no jargon. Becomes the page's `description:` (shown in the properties block), and appears on theme pages and in the viewer. |
+| The card body | `content/<type>/<slug>.md`, between `<!-- card -->` and `<!-- /card -->` | Hand-written, ≤ 240 words, example first, ≥ 3 links to other pages. Preserved verbatim by the generator; its links are read back into the graph as edges. |
+| Where it is argued in full (`passages`) | catalog entry: `[{ "note", "section" }]` | Must be exact H2 headings; the build validates them, so a renamed section is caught. |
+| See-also / special-case links | catalog entry: `related`, `instanceOf`, `derivesFrom` | Typed ids. |
+| Home theme + position in its trail | `data/themes.json` | Exactly one theme per card. |
+| Everything else on the page | generated | Frontmatter, "Read the full argument", "How it connects", prev/next trail. |
+
+`make concept-pages` also writes the theme pages (`content/themes/`), the two
+hubs (`content/explore.md`, `content/reading-path.md`) and a **chapter map**
+at the top of every chapter, interlude and depth note (a collapsed list of the
+cards on the page, between `<!-- chapter-map:begin … -->` and
+`<!-- chapter-map:end -->`). Interludes take their place in the reading path
+from `readAfter` / `navTitle` in `data/notes.json`. `make interlink` links the
+first use of each card's name in each file (the D2 house rule), using the
+catalogs' labels and aliases; steer a node with `"autolink": false` or an
+explicit list of terms. It never touches bold spans, so claim anchors stay
+stable. `make lint-prose` ignores the generated hubs and chapter maps.
+
+The build warns (and `make check` fails) when a card has no `plain`, no theme,
+no written body, fewer than three links out, a passage that points at a
+heading that no longer exists, or a term claimed by two cards. The generator
+refuses to emit an alias that would shadow a real page, and
+`scripts/check-site-links.js` verifies heading anchors and that no note is
+shadowed by an alias redirect in the built site.
 
 ## Phases landed
 
@@ -224,8 +278,10 @@ information-book/
 │   ├── glossary.md                    plain-language definitions of load-bearing terms
 │   ├── outline.md                     working outline / TOC (dense; read after the landing page)
 │   ├── *.md                           chapter drafts and foundational notes
-│   ├── concepts/ cases/               GENERATED landing pages for graph nodes
-│   │   mechanisms/ questions/         with no prose home (one folder per type)
+│   ├── concepts/ cases/               CARD pages: generated frame, hand-written body
+│   │   mechanisms/ questions/         (one folder per type; see "The card layer")
+│   ├── themes/                        GENERATED theme pages (ordered trails of cards)
+│   ├── explore.md  reading-path.md    GENERATED hubs: all the cards / the chapters in order
 │   ├── experiments/                   experiment-tracker notes
 │   ├── sources/                       open-licence academic PDFs (cited by the graph)
 │   ├── images/                        figures referenced from prose
@@ -242,6 +298,7 @@ information-book/
 │   ├── case-studies.json              13 worked examples
 │   ├── claims.json                    33 canonical claims (promoted from candidates)
 │   ├── tensions.json                  3 dialectical tensions (tensionWith / contradicts edges)
+│   ├── themes.json                    13 themes: ordered clusters of cards (the exploration layer)
 │   ├── slug-aliases.json              wikilink-resolution overrides
 │   ├── expected-stats.json            committed snapshot the tests compare against
 │   ├── interpretive/<slug>.jsonl      per-PDF extraction outputs (committed)
@@ -261,7 +318,9 @@ information-book/
 │   ├── context-bundle.js              graph → markdown drafting packet
 │   ├── sources-report.js              per-source dashboard
 │   ├── generate-citation-pages.js     sources.json → content/citations/*.md
-│   ├── generate-concept-pages.js      graph → content/{concepts,cases,mechanisms,questions}/*.md
+│   ├── generate-concept-pages.js      graph → card pages, theme pages, hubs, chapter maps
+│   ├── interlink.js                   link the first use of each card in each file
+│   ├── check-site-links.js            built-site link, heading-anchor and shadowed-page checks
 │   └── EXTRACTION_PROMPT.md           agent prompt for per-PDF extraction
 ├── src/                               ONTOLOGY viewer (Cytoscape)
 │   ├── index.html                     viewer shell
@@ -290,9 +349,14 @@ information-book/
   title, role, summary). The file must exist under `content/`; a
   top-level `content/*.md` with no entry triggers an "orphan note"
   warning.
-- **New concept / mechanism / question / source / case study** — edit
-  the relevant `data/*.json`, then `make build`. Aliases drive future
-  alias-matching (planned).
+- **New concept / mechanism / question / case study (a card)** — add the
+  node to the relevant `data/*.json` with a `plain` sentence, add it to a
+  theme's `members` in `data/themes.json`, then `make concept-pages` to
+  create its page. Write the body between the `<!-- card -->` markers
+  (example first, ≥ 3 links out), then `make interlink`, `make harvest`,
+  `make build`. The build's warnings are the checklist.
+- **New source** — edit `data/sources.json`, then `make build`. A secondary
+  source that relays others (e.g. a research report) lists them in `cites`.
 - **New canonical claim** — pick a candidate from
   `data/claim-candidates.jsonl`, write its entry into `data/claims.json`
   (id, label, summary, aliases, status, `argues` / `arguedInChapters`,

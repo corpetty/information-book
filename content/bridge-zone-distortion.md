@@ -12,6 +12,17 @@ tags:
   - information
 ---
 
+<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->
+> [!example]- The ideas on this page (13), each with its own short page
+> **Worked out here:** [[pseudo-context|Pseudo-context]] · [[technology-vs-medium|Technology vs. medium]]
+>
+> **Also used:** [[bridge-zone|Bridge zone]] · [[credibility-weighting|Credibility weighting]] · [[superspreader-dynamics|Superspreader dynamics]] · [[curse-of-expertise|The curse of expertise]]
+>
+> **Examples:** [[scientists-say-x|'Scientists say X' headline]] · [[brief-history-of-time|A Brief History of Time]] · [[covid-mask-guidance|COVID mask guidance]] · [[monetary-policy-press|Monetary policy in the financial press]] · [[nutrition-reversals|Nutrition science]] · [[power-posing|Power posing]] · [[plain-language-law|Statutes vs. plain-language legal summaries]]
+>
+> *[[reading-path|Where this sits in the book]] · [[explore|Explore all the ideas]]*
+<!-- chapter-map:end -->
+
 You have lived through this, and it probably made you a little crazy. Eggs are killing you; eggs are fine; actually it's sugar; no, it's seed oils. Stand far enough back and the whiplash isn't about nutrition; it's about a *handoff*. Somewhere between the careful, hedged thing the scientists found and the confident headline that reached you, the finding got reshaped into something punchier, cleaner, and wrong. This is about that handoff, the stretch of the journey where expert knowledge crosses to the rest of us and the people who make their living working the crossing. Most of the visible damage happens here, and fair warning, it's the part I'm angriest about.
 
 ## Where the bridge zone sits
