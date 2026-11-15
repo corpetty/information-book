@@ -89,6 +89,8 @@ Selection is the other engine, and the one that matters most. Transport explains
 - **Emergent versus engineered tuning.** I have said gates "are tuned" and let the passive voice carry it. A gate that drifts toward engagement under an ad-revenue incentive and a gate someone deliberately set to invert a finding are different things, and "tuned" hides the difference. Telling them apart is Chapter 10's job; until then the villain is a little blurry.
 - **The receiver-gate deserves its own treatment.** I introduced vigilance as "the receiver is a gate too" and used it to absorb Mercier in a paragraph. That is a lot of weight on one move; within-receiver selection, what a single mind attends to, retains, and re-transmits, may need its own section.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[complexity-virality-tradeoff|← Chapter 5: The Complexity / Virality Trade-off]] · [[medium-and-manipulation|Interlude: The Medium →]]
+<!-- chapter-nav:end -->

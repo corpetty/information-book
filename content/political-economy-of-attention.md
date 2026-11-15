@@ -109,6 +109,8 @@ I have pushed this argument against the strongest published objections to it, an
 - **The displacement bet is asserted, not argued.** I treat displacement (selection arrangements outside the captured market) as the structurally available move and reform-from-within as the slow auxiliary. Both routes have mixed historical records, and the bet needs an argument not given here.
 - **The money case may be analogy, not instance.** Attention monetizes the *gate*; transparent rails monetize the *shadow*. "Media whose defaults make observation cheapest" unifies them at one altitude, but the captured surfaces are different objects, and I have not checked whether the [[capture-taxonomy|capture taxonomy]] files them in the same cell or merely adjacent ones. If adjacent, the equilibrium claim generalizes; if only rhyming, this section should be demoted from instance to illustration.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[integration-problem|← Chapter 9: The Integration Problem]] · [[ai-as-new-node|Chapter 11: AI as a New Kind of Node →]]
+<!-- chapter-nav:end -->

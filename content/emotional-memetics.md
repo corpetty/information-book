@@ -77,6 +77,8 @@ The value of the structural version is that it locates the breakage at the equil
 - **The cross-cultural claim is asserted, not argued.** I've committed to the floor being similar across cultures with similar media exposure, on the grounds that the attentional substrate is shared. There is comparative work (and counter-work) on whether emotional-payload virality varies by culture, and a careful version would either cite it or bound the claim to Anglophone digital media.
 - **"Raw strong emotion" may flatten a distinction that matters.** Anger and awe both reach floor-class virality but have opposite downstream effects: anger drives polarization, awe sometimes drives synthesis. Bundling them under one label may hide the difference a prescription would most want to exploit.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[bridge-zone-distortion|← Chapter 6: Where It All Gets Fucked Up]] · [[myths-scale-and-bureaucracy|Interlude: Myths at Scale →]]
+<!-- chapter-nav:end -->

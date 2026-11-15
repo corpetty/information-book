@@ -56,6 +56,8 @@ Which media let core truth survive which kinds of manipulation? **Core truth sur
 - **Capacity may be mostly a price.** A character limit does exclude an argument that cannot fit. Most of what a medium does is softer: the evidence on languages, notations and categories, which are media for thought, supports a measurable lean and rejects the claim that the disfavored thought cannot form ([[thinking-inside-frameworks]]). A price can be paid, and the open part is whether one nobody pays for a generation hardens into a wall ([[framework-wall-or-price]]).
 - **The co-writer claim across generations is unearned.** The note rests on the casting-director (one-year) reading because that's what the evidence supports; comparative generational studies of want formation under different media regimes would be the evidence for the stronger claim, and a Part IV prescription running across cohorts will have to commit on which scale matters.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[selection-as-other-engine|← Chapter 5b: Selection As The Other Engine]] · [[truth-compression-and-when-each-wins|Chapter 5c: Truth, Compression, and When Each Wins →]]
+<!-- chapter-nav:end -->

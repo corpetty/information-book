@@ -104,6 +104,8 @@ An LLM is the first node in the book's pipeline to own the gate, the option spac
 - **"Manufactured content" may flatten a real distinction.** The book uses one word for [[astrology]] (invented wholesale) and LLM output (plausibility-tracked against a real corpus). On well-represented topics the second often approximates reality and the first never does. The category may need splitting into "manufactured-from-nothing" and "manufactured-from-training-distribution," a real middle left unnamed.
 - **The salvation/worst-case binary is too clean.** Most real deployments are neither: somewhat faithful, somewhat tilted, useful for some queries and misleading for others. The binary is a presentational convenience, and the real political economy will sort models along a continuum Chapter 12's prescription should engage directly.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[political-economy-of-attention|← Chapter 10: Political Economy of Attention]] · [[capture-taxonomy|Interlude: Capture →]]
+<!-- chapter-nav:end -->

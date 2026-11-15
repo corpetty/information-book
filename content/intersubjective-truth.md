@@ -69,6 +69,8 @@ Intersubjective truths are truths whose generator is the network's agreement rat
 - **The volatility claim is a ratio asserted from cases.** "Constitution moves at meme speed, institutions at committee speed" rests on a handful of vivid instances (SVB against Northern Rock, chain forks against schisms). The systematic version, measuring agreement-state half-lives against institutional response times across eras, is the empirical work the book's experiments folder exists to spec and hasn't done.
 - **The philosophical literature is only now being engaged.** This note runs on Harari plus the book's own machinery, with the deep prior literature (Searle's [[construction-of-social-reality|institutional facts]], Berger and Luckmann's [[social-construction-of-reality|social construction of reality]], Anderson's [[imagined-communities|imagined communities]], Hacking's [[social-construction-of-what|looping effects]], Soros's [[alchemy-of-finance|reflexivity]], Hirschman's [[exit-voice-loyalty|exit and voice]]) linked here but not yet argued with. The draft is the book's own working-out, written before that engagement rather than in dialogue with it, and reading those sources will sharpen or correct parts of it.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[preservation-vs-training|← Chapter 8: Preservation vs. Training]] · [[integration-problem|Chapter 9: The Integration Problem →]]
+<!-- chapter-nav:end -->

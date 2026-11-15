@@ -67,6 +67,8 @@ Picture instead handing a dense research paper to a patient tutor who first teac
 - **Four hours is one study's number.** The argument only needs the budget to be finite and the capacity trainable, not a precise figure. A careful treatment would survey the absorption-rate literature rather than lean on Ericsson.
 - **Decompression can become substitution.** The tutor story assumes the receiver reads the paper. Many will read the tutor's summary and stop. How much of the leverage survives that is an empirical question, and Chapter 11's worst case is what it looks like when it doesn't.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
-[[case-studies-and-three-realities|← Chapter 2: Case Studies and Three Realities]] · [[optionality vs access|Chapter 4: Optionality vs. Access →]]
+[[case-studies-and-three-realities|← Chapter 2: Case Studies and Three Realities]] · [[optionality-vs-access|Chapter 4: Optionality vs. Access →]]
+<!-- chapter-nav:end -->

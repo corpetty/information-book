@@ -288,6 +288,7 @@ information-book/
 │   └── citations/                     reference notes for cross-cited sources (part generated)
 ├── data/                              ONTOLOGY catalogs + outputs
 │   ├── graph-meta.json                schema contract — node types + predicates
+│   ├── parts.json                     the 4 Parts (labels shared by the graph and the site's navigation)
 │   ├── chapters.json                  14 chapters (outline spine; ordinal = reading order)
 │   ├── notes.json                     25 tracked markdown notes
 │   ├── mechanisms.json                8 named structural mechanisms
@@ -330,7 +331,10 @@ information-book/
 │   └── styles.css
 ├── site/                              QUARTZ publishing site
 │   ├── quartz.config.yaml             book-specific config and layout (plugins are npm packages)
-│   ├── quartz.ts                      loads the YAML; the place for TypeScript overrides
+│   ├── quartz.ts                      loads the YAML; passes the Explorer its reading-order sort,
+│   │                                  names and filter, built from data/*.json
+│   ├── lossy-nav.tsx                  header bar (ways in + position) and sidebar group labels
+│   ├── quartz/styles/custom.scss      page chrome: lead sentence, page-kind colours (ours, not upstream's)
 │   ├── quartz.lock.json               pins for Git/local-sourced plugins (none at present)
 │   ├── quartz/                        vendored Quartz 5.1 engine (unmodified upstream)
 │   ├── content -> ../content          symlink — prose has one canonical home
@@ -395,6 +399,52 @@ stale prose. CI's `make check` enforces the *structural* invariants
 (counts, edge directions, orphans, links); claim-drift stays the
 author's local responsibility by design.
 
+## Navigation
+
+The sidebar, breadcrumbs and page headers are driven by the same catalogs as
+the graph, so the site's shape follows the book's:
+
+- **Sidebar order** — `site/quartz.ts` builds the Explorer's sort from
+  `data/chapters.json` (ordinals), `data/notes.json` (`readAfter` /
+  `navTitle` for interludes, `foundational-note` for depth notes) and
+  `data/themes.json` (theme order). Start-here pages come first, then the read
+  in order, then depth notes, the glossary, and the folders. Adding a chapter
+  or an interlude to the catalogs places it; nothing else needs editing.
+- **Sidebar groups** — the Explorer is a flat, ordered list; `site/lossy-nav.tsx`
+  adds CSS labels on the first entry of each group (Start here, Part I … IV,
+  Depth notes, Reference, Browse). Part names come from `data/parts.json`.
+- **Header bar** — the same file renders a slim bar above every title: the
+  ways in (Read / Explore / Map / Glossary) with the current one marked, and
+  where the page sits ("Part II · 6 of 18" for a chapter or interlude; the
+  theme and position for a card).
+- **Previous / next** — `make concept-pages` writes the footer on every
+  chapter and interlude from the reading order (between
+  `<!-- chapter-nav:begin … -->` and `<!-- chapter-nav:end -->`), so the chain
+  cannot drift when the order changes.
+- **Folder names** — `make concept-pages` writes an `index.md` into each
+  content folder so readers see "Ideas", "Examples", "Open questions" and
+  "Sources" instead of directory names. A hand-written `index.md` is left alone.
+- **Hidden pages** — `unlisted: true` in a page's frontmatter keeps it out of
+  the sidebar, search and graph while leaving it reachable by link (the
+  outline and the conversation transcript use it).
+- **Page header** — the frontmatter `description:` is set as the lead sentence
+  and `aliases:` as an "Also called" line; tags are not shown. Ideas,
+  mechanisms, examples, open questions, themes and sources each carry the
+  accent colour the `/graph/` viewer uses for that node type. All of it is CSS
+  keyed on the URL (`site/quartz/styles/custom.scss`); the Markdown carries no
+  presentation.
+
+The Explorer serialises its functions and runs them in the browser, so they
+are built in `quartz.ts` from source text with the data inlined, and the
+override has to be registered before `loadQuartzConfig()` runs. The header bar
+is an ordinary build-time component, added through `loadQuartzLayout({ defaults:
+{ header: […] } })`; the YAML layout leaves that slot empty.
+
+Not done: cards are not nested under their themes in the sidebar. The Explorer
+mirrors the folder tree, and cards live in one folder per type; the theme
+pages, the Explore hub and each card's position line carry that structure
+instead.
+
 ## Upgrading Quartz
 
 `site/` is a vendored, unmodified copy of upstream Quartz inside this repo, so
@@ -403,11 +453,14 @@ a new release:
 
 1. Clone the release tag of `jackyzha0/quartz` somewhere outside the repo.
 2. Replace `site/quartz/` and `site/docs/` with the release's (`rsync -a
-   --delete`), and copy its top-level files (`package.json`,
-   `package-lock.json`, `quartz.ts`, `quartz.config.default.yaml`,
-   `tsconfig.json`, …). Leave the three site-specific files alone:
-   `site/quartz.config.yaml`, `site/quartz.lock.json`, `site/CNAME` (and the
-   `site/content` symlink).
+   --delete --exclude styles/custom.scss`), and copy its top-level files
+   (`package.json`, `package-lock.json`, `quartz.config.default.yaml`,
+   `tsconfig.json`, …). Leave the site-specific files alone:
+   `site/quartz.config.yaml`, `site/quartz.ts` (the sidebar's reading order),
+   `site/lossy-nav.tsx` (the header bar and sidebar labels),
+   `site/quartz/styles/custom.scss` (the page chrome), `site/quartz.lock.json`,
+   `site/CNAME`, and the `site/content` symlink. Compare `site/quartz.ts`
+   against the release's by hand: ours adds to the stock file.
 3. `cd site && npm ci`, then `npx quartz plugin doctor` (add `--fix` to let it
    migrate the config) and compare `quartz.config.yaml` against the new
    `quartz.config.default.yaml`.

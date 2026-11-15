@@ -44,8 +44,9 @@ jobs:
 
       # Since Quartz 5.1 the plugins are npm packages, installed by the
       # `npm ci` above and versioned by site/package-lock.json. There is
-      # nothing to clone or cache; `make site-build` still runs
-      # `npx quartz plugin install` for any Git-sourced plugin added later.
+      # nothing to clone or cache; `make site-build` runs
+      # `npm run install-plugins`, which generates the plugin index that
+      # site/quartz.ts imports and installs any Git-sourced plugin added later.
 
       - name: Validate graph (strict build + regression tests)
         # Warnings are fatal here: a degraded graph (dropped edges, orphan

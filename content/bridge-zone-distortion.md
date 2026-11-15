@@ -77,6 +77,8 @@ The bridge zone is the pipeline stage where specialist findings get reshaped for
 - **Pseudo-context may not generalize past Postman's 1985 cases.** It extends to short-form social media and LLM summaries roughly, but I haven't worked out whether it is one phenomenon or a family (information-without-context, action-without-information, identity-without-knowledge). A polish pass should test whether the concept survives at the generality I'm using it.
 - **"The bridge zone" may reduce to Chapter 1's News and Meme gates.** I argued the population framing is additive because populations have incentives and gates don't, and I believe that is the right call, but a reader could fairly ask whether it names a distinct phenomenon or relabels operators already in the Chapter 1 picture.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[truth-compression-and-when-each-wins|← Chapter 5c: Truth, Compression, and When Each Wins]] · [[emotional-memetics|Chapter 7: Emotional Memetics As The Floor →]]
+<!-- chapter-nav:end -->

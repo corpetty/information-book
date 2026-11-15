@@ -9,16 +9,17 @@
 #   - graph options (local + global graph, carried over from v4)
 #   - footer links
 #   - explorer title ("Contents")
-#   - tag-list enabled (shown in beforeBody, as in v4)
+#   - tag-list disabled; note-properties shows description + aliases only
+#   - Explorer order, names and filtering come from quartz.ts (reading order)
 #
 # Plugins are npm packages ("@quartz-community/…"), installed by `npm ci` and
 # versioned by package-lock.json. Link resolution, drafts and the content index
 # are built into Quartz since 5.1 and configured under `configuration`.
 #
-# NOTE: the sidebar uses the Explorer's default sort (folders first, then
-# alphabetical). YAML can't hold a sort function, but since 5.1 a `quartz.ts`
-# override can pass one (ExternalPlugin.Explorer({ sortFn, mapFn, filterFn })),
-# which is how a reading-order sidebar would be restored.
+# NOTE: YAML can't hold functions, so the Explorer's reading-order sort, its
+# display names and its filter are passed from quartz.ts
+# (ExternalPlugin.Explorer({ sortFn, mapFn, filterFn })), built there from
+# data/chapters.json, data/notes.json and data/themes.json.
 configuration:
   pageTitle: Lossy
   pageTitleSuffix: ""
@@ -198,8 +199,11 @@ plugins:
     layout:
       position: beforeBody
       priority: 20
+  # Off: the tag chips under every title (#information, #graph-node) are
+  # authoring bookkeeping, not navigation. Tags still exist and tag pages still
+  # build; page type is shown by the styling in quartz/styles/custom.scss.
   - source: "@quartz-community/tag-list"
-    enabled: true
+    enabled: false
     layout:
       position: beforeBody
       priority: 30
@@ -258,9 +262,10 @@ plugins:
     enabled: true
     options:
       includeAll: false
+      # description is rendered as the page's lead sentence and aliases as an
+      # "also called" line (styled in quartz/styles/custom.scss); tags are left out.
       includedProperties:
         - description
-        - tags
         - aliases
       excludedProperties: []
       hidePropertiesView: false

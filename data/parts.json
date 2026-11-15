@@ -1,0 +1,37 @@
+{
+  "_doc": "The Parts of the book. slug is what data/chapters.json refers to in `part`; ordinal sets the order; label is the full display label; short is the compact form used in tight spaces (the site's header bar and sidebar). Loaded by seedParts in build-graph.js and by site/lossy-nav.tsx.",
+  "parts": [
+    {
+      "slug": "pipeline",
+      "ordinal": 1,
+      "label": "Part I — The Pipeline",
+      "short": "Part I",
+      "name": "The Pipeline",
+      "summary": "How information moves from reality to people."
+    },
+    {
+      "slug": "lossy",
+      "ordinal": 2,
+      "label": "Part II — Why It Has To Be Lossy (And Selective)",
+      "short": "Part II",
+      "name": "Why It Has To Be Lossy",
+      "summary": "The structural reasons compression and selection both operate."
+    },
+    {
+      "slug": "bridge-zone",
+      "ordinal": 3,
+      "label": "Part III — The Bridge Zone",
+      "short": "Part III",
+      "name": "The Bridge Zone",
+      "summary": "Where complex specialist knowledge gets transformed (and often destroyed) on its way to mass audiences."
+    },
+    {
+      "slug": "integration",
+      "ordinal": 4,
+      "label": "Part IV — A Way Through",
+      "short": "Part IV",
+      "name": "A Way Through",
+      "summary": "Hypothesis territory. Rebuilt around integration between networks that don't share preconditions."
+    }
+  ]
+}

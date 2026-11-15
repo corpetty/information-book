@@ -164,16 +164,17 @@ interlink: build
 # baseUrl in site/quartz.config.yaml.)
 #
 # Since Quartz 5.1 the plugins are npm packages (installed by `npm ci` in
-# site/, versioned by site/package-lock.json), so `plugin install` has nothing
-# to fetch; it stays so that a Git- or local-sourced plugin added later (pinned
-# in site/quartz.lock.json) is installed before the build.
+# site/, versioned by site/package-lock.json). `npm run install-plugins` still
+# has to run before the build: it installs any Git- or local-sourced plugin
+# pinned in site/quartz.lock.json and (re)generates site/.quartz/plugins/index.ts,
+# which site/quartz.ts imports to pass the Explorer its reading-order functions.
 #
 # fix-typography.js runs straight after the Quartz build: 5.1's Markdown
 # pipeline curls quotes one text node at a time and gets the direction wrong
 # next to links ("Chapter 10‘s"). The script repairs the built HTML; see its
 # header. Drop it once upstream curls across inline nodes.
 site-build: citation-pages concept-pages
-	@cd site && npx quartz plugin install
+	@cd site && npm run --silent install-plugins
 	@cd site && npx quartz build
 	@node $(SCRIPTS)/fix-typography.js
 	@$(MAKE) viewer-stage
@@ -185,7 +186,7 @@ site-build: citation-pages concept-pages
 # for viewer-only dev, or `make site-build` then a static server for the
 # integrated experience.
 site-serve:
-	@cd site && npx quartz plugin install
+	@cd site && npm run --silent install-plugins
 	@cd site && npx quartz build --serve
 
 # Preview the built site locally with the URL resolution GitHub Pages uses
