@@ -15,7 +15,7 @@ aliases:
 *Concept · part of [[building-bridges|Building bridges that last]]*
 
 <!-- card -->
-Stack Overflow began with funding that did not depend on ad views, and its reputation-based curation was strong. As it leaned more on advertising, the book notes, the curation got worse. Wikipedia, paid for by donations and a foundation, has held up better.
+Stack Overflow had strong reputation-based curation, but it was paid for by advertising and venture capital from its launch, so it never left the attention market. When AI models began answering its questions, traffic fell and it had no reserve. Wikipedia, paid for by donations and a foundation, has held up better.
 
 The book's explanation is the rule it calls funding decoupling. An institution doing slow, careful work cannot pay its way by competing for attention, because platforms supply engaging content at near-zero cost and [[out-competition-of-carriers|win that contest]]. If its income depends on attention, it inherits the attention market's tastes: it drifts toward [[engagement-equilibrium|chasing engagement]] or it starves.
 

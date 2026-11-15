@@ -15,7 +15,7 @@ aliases:
 *Concept · part of [[the-finite-reader|The finite reader]]*
 
 <!-- card -->
-Tim Urban once worked out that a 90-year life, counted as one tiny diamond per week, fills just under a tablespoon. A good share of those weeks go to growing up and to the upkeep of being a person. Of what is left, the book's rough figure is about five hours a day of real focus, and it flags that number as a ballpark.
+Tim Urban once worked out that a 90-year life, counted as one tiny diamond per week, fills just under a tablespoon. A good share of those weeks go to growing up and to the upkeep of being a person. Of what is left, the book's rough figure is four or five hours a day of real focus, and it flags that number as contested.
 
 The book calls this limit the **receiver budget**: the time a person has for taking in new ideas, and how much each hour of it can carry. The hours are fixed. The carrying capacity can grow. Material that hooks onto things you already know is cheap, and material with nothing to hook onto is expensive. That is why [[budget-fixed-or-trainable|education and shared vocabulary stretch the budget]]. Mental tools count too: [[piraha-numbers|a people with no number words]] can match exact quantities but lose them across memory.
 

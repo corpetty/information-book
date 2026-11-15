@@ -25,7 +25,6 @@ The book thinks the critique largely lands. It treats the meme-as-gene picture a
 ## Read the full argument
 
 - [[selection-as-other-engine#What the gate rewards|Chapter 5b: Selection As The Other Engine]], section "What the gate rewards"
-- [[political-economy-of-attention#The argument's dents|Chapter 10: Political Economy of Attention]], section "The argument's dents"
 
 ## How it connects
 

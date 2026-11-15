@@ -27,7 +27,7 @@ Each one is a short page. Walk them in this order, or start with whichever catch
 7. [[framework-feedback|Framework feedback]] *(mechanism)*: When people act on a framework's picture of the world, the world changes, sometimes to match the picture and sometimes to break it.
 8. [[goodharts-law|Goodhart's law]]: Once people are rewarded for hitting a number, they find ways to hit it that no longer deliver what the number was meant to track.
 9. [[ai-benchmarks|AI benchmarks as milestones]] *(example)*: AI researchers compete on a small set of shared tests, and higher scores on them get read as progress toward general AI.
-10. [[performativity|Performativity]]: A model that enough people use to make decisions stops merely describing the world and starts pushing the world toward itself.
+10. [[performativity|Performativity]]: A model that enough people use to make decisions can stop merely describing the world and start pushing the world toward itself.
 11. [[black-scholes|Black-Scholes and the option market]] *(example)*: A formula for pricing options fit the market badly at first, then traders adopted it and prices moved to match, until the 1987 crash.
 12. [[gaussian-copula|The Gaussian copula and 2008]] *(example)*: Investment banks shared one formula for agreeing on values and booking profits, so its blind spot about a housing-wide downturn became everyone's blind spot.
 13. [[looping-effects|Looping effects]]: People who are put in a category react to being put there, and their reaction changes what the category contains.

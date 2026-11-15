@@ -17,7 +17,7 @@ aliases:
 <!-- card -->
 A platform caps posts at a few hundred characters. A long, careful argument does not fit. One way to describe what happened: the careful argument has been removed from that platform, full stop. Another: it now costs extra (a thread, a link, a screenshot of text), so most people skip it and a few still manage.
 
-The book first took the hard line. Chapter 5b says an idea the [[option-space|menu of available forms]] cannot hold never needs suppressing, because it never forms. The research on [[framework|frameworks]] pushes back. Where the hard version has been tested, mostly on language, it has failed: people can think things their words make awkward ([[piraha-numbers]]).
+The book first took the hard line. Chapter 5b says an idea the [[option-space|menu of available forms]] cannot hold never needs suppressing, because it never forms. The research on [[framework|frameworks]] pushes back. Where the hard version has been tested, mostly on language, it has mostly failed: people can think things their words make awkward ([[piraha-numbers]]).
 
 Where the book now lands: mostly a price. A medium rarely forbids a thought. It makes it expensive, and across a large population expensive thoughts become rare ([[framework-pricing|framework pricing]], [[influence-not-imprisonment|influence, not imprisonment]]). Two limits apply. A strict physical cap really does exclude what cannot fit. And a price nobody pays for a generation may harden into a wall ([[path-dependence|lock-in]]). The answer is provisional and rests on a survey of the evidence the author has not yet read at the source.
 <!-- /card -->

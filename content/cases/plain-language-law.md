@@ -22,6 +22,7 @@ Law is unusual, the book argues, in expecting both forms to coexist, with lawyer
 
 - [[optionality-vs-access#Legal codes|Chapter 4: Optionality vs. Access]], section "Legal codes"
 - [[optionality-vs-access#What the curve is, and what it isn't|Chapter 4: Optionality vs. Access]], section "What the curve is, and what it isn't"
+- [[optionality-vs-access#Where I'm still uncertain|Chapter 4: Optionality vs. Access]], section "Where I'm still uncertain"
 
 ## How it connects
 

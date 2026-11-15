@@ -11,9 +11,9 @@ tags:
 *Example · part of [[how-ideas-travel|How ideas travel]]*
 
 <!-- card -->
-The Voyager Golden Record was launched into deep space with no recipient and no shared context. Nothing about a finder can be assumed, so the record carries its own instructions: a cover etched with diagrams showing how to build a player and how fast to run it.
+The Voyager Golden Record was launched into deep space with no recipient and no shared context. Nothing about a finder can be assumed, so the record carries its own instructions: a cover etched with diagrams showing how to build a player.
 
-Douglas Hofstadter uses the record in *Gödel, Escher, Bach* to show that every message has [[three-layer-message|three layers]]. The recorded sounds and images are the inner message: the content. The etched cover is the outer message: how to decode it. The object itself, plainly manufactured, is the frame message: the sign that something here was made to be understood.
+The book uses the record to illustrate Douglas Hofstadter's model from *Gödel, Escher, Bach*, in which every message has [[three-layer-message|three layers]]. The recorded sounds and images are the inner message: the content. The etched cover is the outer message: how to decode it. The object itself, plainly manufactured, is the frame message: the sign that something here was made to be understood.
 
 It is the rare case where all three shipped together. Most messages omit the decoding instructions and assume the reader has them. A physics paper assumes you can read physics. A meme assumes you know the reference. An idea that needs much pre-installed knowledge is what the book calls a [[complex-form|complex form]]. When an idea is [[transport|retold for a new audience]], the instructions are usually lost first, as in a [[scientists-say-x|"scientists say X" headline]]. Readers [[interpretive-latitude|decode with whatever key they have]], and a true message read with the wrong key produces a false belief.
 <!-- /card -->

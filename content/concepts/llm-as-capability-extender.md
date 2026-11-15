@@ -19,7 +19,7 @@ Picture a university that stops relying on whatever chatbot a tech company is se
 
 That picture is the book's hopeful case for AI. The technology is the same as the commercial chatbot. The difference is custody: the institution holds the [[corpus-capture|training text]], the [[objective-capture|reward]] and the [[deployment-capture|configuration]], and makes those choices in the open. Used this way the model extends what the institution already does. It gives students [[decompression-on-demand|patient unpacking of hard sources]] from the institution's own archive, tutors at scale, and drafts material that [[versatile-expertise|experts with real depth]] then verify. It speeds the experts up and does not replace them.
 
-The book is blunt about the odds. Curating the text, training from scratch and running the system cost more than any current revenue stream covers, and the money cannot come from ads without recreating the problem (see [[funding-decoupling|funding decoupling]]). Its verdict: technically realizable, economically marginal, and politically blocked by the forces that shaped social media. Almost no institution or commercial model meets the spec today.
+The book is blunt about the odds. Curating the text, training from scratch and running the system is the most expensive infrastructure the project has had to consider, and the money cannot come from ads without recreating the problem (see [[funding-decoupling|funding decoupling]]). Its verdict: technically realizable, economically marginal, and politically blocked by the forces that shaped social media. Almost no institution or commercial model meets the spec today.
 <!-- /card -->
 
 ## Read the full argument

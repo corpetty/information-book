@@ -21,7 +21,7 @@ Harari, in *Nexus*, calls the story that binds a large network its myth. A bigge
 
 What holds the segments together is what the book narrowly calls bureaucracy: clergy, courts, graduate programs, bodies that keep the full version and teach people to read the short one. Real bureaucracies also record and classify, with costs of their own: see [[legibility|legibility]] and [[classification-torque|classification torque]].
 
-How the loop ends depends on that institution. Effective and hard to capture, it makes growth safe. Too weak, and the network fragments. Effective but captured, it teaches a bent reading, as the Church did in the era of [[hammer-vs-copernicus|the Hammer of the Witches]]. The book offers this on instinct, without evidence yet.
+How the loop ends depends on that institution. Effective and hard to capture, it makes growth safe. Too weak, and the network fragments. Effective but captured, it teaches a bent reading, as the Church did in the witch-hunt panics of early modern Europe (though [[hammer-vs-copernicus|the Hammer of the Witches]] itself was a private manual, not Church doctrine). The book offers this on instinct, without evidence yet.
 <!-- /card -->
 
 ## Read the full argument

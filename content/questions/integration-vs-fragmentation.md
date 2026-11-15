@@ -25,7 +25,7 @@ The book marks this provisionally resolved. Problems it still names: a thin supp
 **Status:** provisionally resolved.
 
 > [!note]- The working answer, in the author's words
-> Integration between networks that don't share preconditions, not fragmentation into smaller ones. Bridge nodes carrying transferable preconditions are the stitching infrastructure.
+> Integration between networks that don't share preconditions, not fragmentation into smaller ones. The prescription has three legs that only work together: cultivate versatile experts inside specialist communities, build curation-layer institutions that survive polarized trust, and reform the demand side that filters even good supply.
 
 ## Read the full argument
 

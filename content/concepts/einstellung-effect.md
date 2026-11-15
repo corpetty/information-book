@@ -16,7 +16,7 @@ aliases:
 *Concept · part of [[frameworks|Thinking inside frameworks]]*
 
 <!-- card -->
-Strong chess players were shown a position with a familiar winning pattern and a faster win hidden elsewhere on the board. They found the familiar one and said they were now looking for something better. A camera tracking their eyes showed them looking, again and again, at the squares involved in the solution they already had ([[chess-einstellung]]).
+Strong chess players were shown a position with a familiar solution and a better one. They found the familiar one and said they were now looking for something better. A camera tracking their eyes showed them looking, again and again, at the squares involved in the solution they already had ([[chess-einstellung]]).
 
 Psychologists call this the **Einstellung effect**, after a 1942 experiment with water jars: a method that has worked blocks the search for a better one. Its sibling is functional fixedness, where seeing an object only in its usual role stops you using it for anything else. The effect is robust, with a limit. When the familiar move was an outright blunder, every expert avoided it.
 

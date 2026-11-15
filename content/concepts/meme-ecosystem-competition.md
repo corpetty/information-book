@@ -22,12 +22,12 @@ That is **meme ecosystem competition**. Ideas do not spread in isolation. How fa
 
 So [[memetic-fitness|fitness]] is relative to the current crowd. An idea's [[handle-ability|handle-ability]], how easily people can grab it and use it, is also a comparison: easy next to what. Because every person has a [[receiver-budget|limited budget of attention]], [[selection|selection]] is always a contest among whatever showed up today.
 
-The book treats this as a refinement of its account. Ideas still compete inside rules that somebody set, such as a feed's [[algorithm-as-selection-engine|ranking algorithm]], and who sets those rules is the question the book cares about.
+Ideas compete inside rules that somebody set, such as a feed's [[algorithm-as-selection-engine|ranking algorithm]], and who sets those rules is the question the book cares about.
 <!-- /card -->
 
 ## Read the full argument
 
-- [[political-economy-of-attention#The argument's dents|Chapter 10: Political Economy of Attention]], section "The argument's dents"
+- [[transport-vs-selection#The two views|Transport vs. Selection]], section "The two views"
 - [[selection-as-other-engine#What the gate rewards|Chapter 5b: Selection As The Other Engine]], section "What the gate rewards"
 
 ## How it connects

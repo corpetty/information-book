@@ -14,18 +14,18 @@ aliases:
 *Mechanism · part of [[how-ideas-travel|How ideas travel]]*
 
 <!-- card -->
-A horoscope and a psychology finding look about the same by the time they reach you. Both are short, both make a claim about your life, both fit a story. Only one came out of data. [[astrology|Astrology]] uses real planetary positions, but the framework that turns them into personality claims was invented. It skipped peer review and entered directly, as newspaper columns and app readings.
+A horoscope and a psychology finding look about the same by the time they reach you. Both are short, both make a claim about your life, both fit a story. Only one came out of data. [[astrology|Astrology]] uses real planetary positions, but the framework that turns them into personality claims was invented. It skipped peer review and entered directly, as newspaper horoscope columns and "as a Virgo" talk.
 
 The book calls this **manufactured injection**: content generated wholesale, never measured against reality, and inserted late in the path from world to audience. Conspiracy theories, marketing claims, propaganda, unsourced statistics and AI-generated text can all enter this way. Most content mixes the measured and the made up.
 
-The trouble is downstream. The [[selection|gates that decide what spreads]] score an item on [[memetic-fitness|how well it grabs people]] and have no input for where it came from. So an invented claim and a real finding, equally punchy, are promoted with equal enthusiasm. In the terms of the [[three-layer-message|three layers of a message]], manufactured content forges the signal that says a mind measured something and sent this. Whether the result [[truth-compression-regimes|preserves, inverts or drifts away from the truth]] depends on what the invented part is doing.
+The trouble is downstream. The [[selection|gates that decide what spreads]] score an item on [[memetic-fitness|how well it grabs people]] and have no input for where it came from. So an invented claim and a real finding, equally punchy, are promoted with equal enthusiasm. In the terms of the [[three-layer-message|three layers of a message]], manufactured content forges the signal that says a mind measured something and sent this. In a mixture, whether compression [[truth-compression-regimes|preserves, inverts or drifts away from the truth]] can be asked only of the measured part; the book says the invented part sits off that map.
 <!-- /card -->
 
 ## Read the full argument
 
 - [[the-information-landscape#Where manufactured content enters|Chapter 1: The Information Landscape]], section "Where manufactured content enters"
 - [[selection-as-other-engine#The manipulation surface is the gate itself|Chapter 5b: Selection As The Other Engine]], section "The manipulation surface is the gate itself"
-- [[complexity-virality-tradeoff#What a message is made of|Chapter 5: The Complexity / Virality Trade-off]], section "What a message is made of"
+- [[truth-compression-and-when-each-wins#The edge of the map: manufactured content|Chapter 5c: Truth, Compression, and When Each Wins]], section "The edge of the map: manufactured content"
 
 ## How it connects
 

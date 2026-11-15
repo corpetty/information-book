@@ -11,11 +11,11 @@ tags:
 *Example · part of [[the-finite-reader|The finite reader]]*
 
 <!-- card -->
-Here are two descriptions of one thing. The first: "Bitcoin is internet money." The second: "Bitcoin is a credibly neutral, fixed-supply settlement layer for value transfer that derives its security from a proof-of-work consensus mechanism designed to be expensive to attack and cheap to verify."
+Here are two descriptions of one thing. The first: "Bitcoin is internet money." The second: "Bitcoin is a credibly neutral, fixed-supply settlement layer whose security comes from proof-of-work consensus designed to be expensive to attack and cheap to verify."
 
 The first asks almost nothing of you. You know what money is and what the internet is. The second needs five or six ideas already in your head before it reads as anything but noise. The book uses the pair to define two terms: the short one is the [[compressed-form|compressed form]], the long one the [[complex-form|complex form]]. They are not equivalent. The short one is missing almost everything that matters, and it is the only one with a chance of reaching someone who has not done the homework, given the [[receiver-budget|limited attention]] every reader has. The same gap sits behind a [[scientists-say-x|"scientists say X" headline]].
 
-The case returns later with a second job. In 2009, "bitcoin is worth something" was simply false. It became true through accumulating agreement, each new holder adding to it, with "internet money" doing the recruiting. The book reads that as [[constitutive-transmission|a retelling that helps make the thing it describes]].
+The case has a second job elsewhere in the book. In 2009, "bitcoin is worth something" was simply false. It became true through accumulating agreement, each new holder adding to it, with "internet money" doing the recruiting. The book reads that as [[constitutive-transmission|a retelling that helps make the thing it describes]].
 <!-- /card -->
 
 ## Read the full argument

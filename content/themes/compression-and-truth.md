@@ -22,8 +22,8 @@ Each one is a short page. Walk them in this order, or start with whichever catch
 2. [[truth-compression-regimes|Truth-compression regimes (preservation / inversion / orthogonality)]]: A shortened claim can stay roughly true, flip into something false, or turn into a team badge, depending on how the listener reads it.
 3. [[interpretive-latitude|Interpretive latitude]] *(mechanism)*: The shorter a claim gets, the more different things people can take it to mean.
 4. [[power-posing|Power posing: the meme that survived its own corrective]] *(example)*: A small 2010 study said power poses change your hormones; it failed to replicate, its lead author disowned it, and people still repeat it.
-5. [[arsenic-life|Arsenic-life (Wolfe-Simon et al. 2010): died at consensus]] *(example)*: In 2010 NASA scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold.
-6. [[stanford-prison-experiment-corrective|Stanford Prison Experiment correctives: died at curation]] *(example)*: The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and films still tell the original story.
+5. [[arsenic-life|Arsenic-life (Wolfe-Simon et al. 2010): died at consensus]] *(example)*: In 2010 NASA-funded scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold.
+6. [[stanford-prison-experiment-corrective|Stanford Prison Experiment correctives: died at curation]] *(example)*: The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and introductory courses still teach the original story.
 
 ---
 

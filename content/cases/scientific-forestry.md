@@ -15,7 +15,7 @@ Between about 1765 and 1800, Prussian and Saxon foresters defined a standardized
 
 The first rotation grew well, partly by mining the soil the old forest had built. The problems became obvious only after the second. James C. Scott, who tells the story in Seeing Like a State, quotes a source citing production losses of 20 to 30 percent over two or three generations. German gained a word for the worst cases: Waldsterben, forest death.
 
-Scott calls the simplifying move [[legibility|legibility]]. The foresters' tables recorded saleable wood, so underbrush, soil life and species diversity dropped out of the reasoning. Then came [[framework-feedback|framework feedback]]: people acted on the [[map-and-territory|map]] until the territory matched it, and the territory failed. Treating a made thing as a found thing is what the book calls [[reification|reification]].
+Scott calls the simplifying move [[legibility|legibility]]. The foresters' tables recorded saleable wood, so underbrush, soil life and species diversity dropped out of the reasoning. Then came [[framework-feedback|framework feedback]]: people acted on the [[map-and-territory|map]] until the territory matched it, and the territory failed. A forest is not made of agreement, so the book reads this case as a strain on its line between [[truth-generators|truths made by reality and truths made by agreement]]: the foresters rebuilt the fact itself.
 
 The evidence is a historical case study. It cannot be rerun as an experiment.
 <!-- /card -->
@@ -29,7 +29,7 @@ The evidence is a historical case study. It cannot be rerun as an experiment.
 
 ## How it connects
 
-- **What it shows:** [[framework-feedback|Framework feedback]], [[legibility|Legibility]], [[reification|Reification]], [[map-and-territory|The map is not the territory]]
+- **What it shows:** [[framework-feedback|Framework feedback]], [[legibility|Legibility]], [[map-and-territory|The map is not the territory]]
 - **See also:** [[apartheid-classification|Apartheid race classification]]
 - **In tension with:** [[truth-generators|Truth generators (reality vs. agreement)]]
 - **Evidence:** [[frameworks-report|Frameworks That Shape the Thoughts Built Inside Them]], [[seeing-like-a-state|Seeing Like a State]]

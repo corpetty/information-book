@@ -15,7 +15,7 @@ aliases:
 *Mechanism · part of [[frameworks|Thinking inside frameworks]]*
 
 <!-- card -->
-Try long division in Roman numerals. It can be done, and almost nobody ever did it on paper. They used an abacus and wrote down the answer. Switch to the numerals we use now and long division becomes a routine a ten-year-old can run. Same numbers, same arithmetic, a different price.
+Try long division in Roman numerals. The people who wrote in them did their calculating on an abacus and used the numerals to record the answer. Switch to the numerals we use now and long division becomes a routine a ten-year-old can run. Same numbers, same arithmetic, a different price.
 
 The book calls this mechanism **framework pricing**. A [[framework]] puts a price on every thought you might have inside it. Some operations are cheap and some are laborious ([[cost-asymmetry|cost asymmetry]]). One arrives free if you do nothing ([[default-setting|the default]]). A few are missing from the menu, because the framework cannot record them ([[legibility]]).
 

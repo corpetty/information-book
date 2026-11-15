@@ -16,7 +16,7 @@ aliases:
 <!-- card -->
 You ask an AI model to summarize a research paper in three bullet points. The bullets arrive in seconds and sound sure of themselves. You do not open the paper, and neither does anyone you pass the bullets to.
 
-The book's claim is that this is new in degree. A magazine piece presents itself as one popularization among many. An AI summary presents itself as the answer, with the machine's authority behind it. At scale the summary stands in for the source in what people collectively remember: the paper still exists and nobody reads it. It is the old warning about [[map-and-territory|maps and territories]], with a map so convenient that the territory goes unvisited.
+The book's claim is that this is new: no earlier compression carried this kind of authority. A magazine piece presents itself as one popularization among many. An AI summary presents itself as the answer, with the machine's authority behind it. At scale the summary stands in for the source in what people collectively remember: the paper still exists and nobody reads it. It is the old warning about [[map-and-territory|maps and territories]], with a map so convenient that the territory goes unvisited.
 
 Two things drive it. The summary costs nothing to get while the paper costs hours, the same [[out-competition-of-carriers|price gap that starves depth]] elsewhere. And the model writes without the hedging a human expert has, because it never felt [[abyss|where a field's knowledge runs out]]. So a [[compressed-form|compressed version]], which may keep or distort the truth ([[truth-compression-regimes|the book describes three outcomes]]), arrives with no sign of what was dropped. It is the mirror image of [[decompression-on-demand|decompression on demand]].
 <!-- /card -->
@@ -28,7 +28,7 @@ Two things drive it. The summary costs nothing to get while the paper costs hour
 ## How it connects
 
 - **Builds on:** [[llm-design-moment-collapse|LLM as collapsed selection-design moment]]
-- **Examples:** [[stack-overflow|Stack Overflow: curation without funding decoupling]], [[columbia-powerpoint|The Columbia slide]]
+- **Examples:** [[stack-overflow|Stack Overflow: curation without funding decoupling]]
 - **See also:** [[compressed-form|Compressed form]], [[decompression-on-demand|Decompression on demand]], [[out-competition-of-carriers|Out-competition of institutional carriers in attention markets]], [[abyss|The abyss]], [[map-and-territory|The map is not the territory]]
 - **Where the book discusses it:** [[truth-compression-and-when-each-wins|Chapter 5c: Truth, Compression, and When Each Wins]], [[ai-as-new-node|Chapter 11: AI as a New Kind of Node]]
 

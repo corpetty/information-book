@@ -15,7 +15,7 @@ aliases:
 *Concept · part of [[frameworks|Thinking inside frameworks]]*
 
 <!-- card -->
-Russian has no single word for blue. Lighter blue and darker blue are two different colors with two different names, the way pink and red are in English. Tested on shades that fall on either side of that line, Russian speakers tell them apart faster than English speakers do ([[russian-blues]]).
+Russian has no single word for blue. Lighter blue and darker blue are two different colors with two different names, the way pink and red are in English. Russian speakers tell two shades apart faster when they fall on either side of that line than when both fall on the same side, and English speakers show no such difference ([[russian-blues]]).
 
 **Linguistic relativity**, often called the Sapir-Whorf hypothesis, is the idea that the language you speak shapes your habits of thought. Decades of testing have split it in two. The strong form, that a language fixes what its speakers can think, has been rejected. The weak form, that a language makes some distinctions quicker and more automatic, holds up in color, in spatial direction and in number ([[piraha-numbers]]), with effects that are real and often small. Several famous findings have failed to replicate.
 

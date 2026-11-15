@@ -19,7 +19,7 @@ Imagine two people who have both missed an important news story. The first never
 
 C. Thi Nguyen separates these two situations. An epistemic bubble is a structure where outside information is missing. An echo chamber is a structure where outside information is actively discredited.
 
-The book uses the distinction to close a door on its own first instinct, which was to shrink back into smaller communities whose [[selection|filters]] could be trusted. Small communities with strong identity filters, it argues, produce chambers faster than they produce bubbles. So the prescription flips to [[integration-vs-fragmentation|moving knowledge between networks]], since size matters less than how networks are connected.
+The book uses the distinction to close a door on its own first instinct, which was to shrink back into smaller communities whose [[selection|filters]] could be trusted. Small communities with strong identity filters, it argues, produce chambers fast. So the prescription flips to [[integration-vs-fragmentation|moving knowledge between networks]], since size matters less than how networks are connected.
 
 It also changes what a connection has to do. In a chamber a new channel is not enough, because whatever arrives through it gets discounted: the loop the book describes as [[polarization-via-distrust|polarization via distrust]]. That is why the book looks to [[versatile-expertise|people accepted as peers on both sides]] and to institutions designed for [[survivable-polarization|partly broken trust]]. Such structures come from [[network-segmentation|network segmentation]].
 <!-- /card -->

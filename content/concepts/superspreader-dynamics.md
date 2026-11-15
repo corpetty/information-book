@@ -26,7 +26,6 @@ The book keeps it apart from the [[manipulation-surface|manipulation surface]], 
 ## Read the full argument
 
 - [[bridge-zone-distortion#Who lives here|Chapter 6: Where It All Gets Fucked Up]], section "Who lives here"
-- [[political-economy-of-attention#Two kinds of capture|Chapter 10: Political Economy of Attention]], section "Two kinds of capture"
 
 ## How it connects
 

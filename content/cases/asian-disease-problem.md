@@ -15,10 +15,10 @@ You are asked to choose between two programs to fight a disease. One has a certa
 
 The facts were the same in both versions. Only the description changed. This is the [[framing-effect|framing effect]]: the wording supplies a [[default-setting|reference point]], and the reference point steers a choice between logically equivalent options. The book makes a related claim about messages. The same content can land differently depending on the key a reader decodes it with, the idea behind its [[truth-compression-regimes|three truth regimes]].
 
-The finding is robust. The Many Labs project reran it in 36 samples with 6,344 participants. The reversal appeared in 31 of them, and none showed the opposite. A 2020 survey of 88,181 people in 47 countries found it again. The effect was smaller than in 1981, which fits the wider pattern of [[influence-not-imprisonment|influence, not imprisonment]]. The practical answer is [[framework-rotation|to show both wordings]].
+The finding is robust. The Many Labs project reran it in 36 samples with 6,344 participants. The reversal appeared in 31 of them, and none showed the opposite. The effect there was smaller than in 1981. A 2020 survey of 88,181 people in 47 countries found it again. A smaller effect fits the wider pattern of [[influence-not-imprisonment|influence, not imprisonment]]. The practical answer is [[framework-rotation|to show both wordings]].
 <!-- /card -->
 
-**How solid is this?** Robust: replicated in 31 of 36 Many Labs samples and again across 47 countries, though the effect is smaller than in the 1981 original.
+**How solid is this?** Robust: replicated in 31 of 36 Many Labs samples, with a smaller effect than in the 1981 original, and found again across 47 countries.
 
 ## Read the full argument
 

@@ -1,6 +1,6 @@
 ---
 title: Latin Mass vs. vernacular liturgy
-description: "When the Catholic Mass moved from Latin to local languages, far more people could take part, and much of the precise doctrine dropped out."
+description: "When the Catholic Mass moved from Latin to local languages, far more people could take part, at some cost in doctrinal precision."
 tags:
   - case-study
   - graph-node
@@ -11,9 +11,9 @@ tags:
 *Example · part of [[the-finite-reader|The finite reader]]*
 
 <!-- card -->
-Before the reforms of the Second Vatican Council, the Catholic Mass was said in Latin. Every gesture, phrase and fixed prayer pointed at a specific piece of doctrine with centuries of qualification behind it. A worshipper who knew that apparatus had access to the whole tradition. A worshipper without it took part in the surface forms but could not read them.
+Before the reforms of the Second Vatican Council, the Catholic Mass was said in Latin. Its gestures and fixed Latin prayers pointed at specific pieces of doctrine with centuries of qualification behind them. A worshipper who knew that apparatus had access to the whole tradition. A worshipper without it took part in the surface forms but could not read them.
 
-The Mass that came out of the Council is in the local language, with simpler gestures, so that untrained people can take part. Access went up sharply. Precision went down just as sharply: many commitments the Latin form encoded are absent, or worded so generally that they [[interpretive-latitude|can be read several ways]]. Traditionalists and reformers dispute the trade, and both accept, the book notes, that you cannot have both at once.
+The Mass that came out of the Council is in the local language, with simpler gestures, so that untrained people can take part. Access went up, often dramatically. Precision came down: some of the specific commitments the Latin form encoded now arrive in language general enough that they [[interpretive-latitude|can be read several ways]]. Traditionalists and reformers dispute the trade, and both accept, the book notes, that you cannot have both at once.
 
 The book reads this as the same trade as [[matplotlib-vs-seaborn|a powerful coding tool and its easy wrapper]]: the Latin rite is the [[complex-form|full version]], the vernacular the [[compressed-form|short one]]. Each [[cost-asymmetry|makes some things cheap and others costly]]. Religions that outgrow their first community tend to split the work, with specialists holding the precise form. The book later names that split [[preservation-vs-training-pair|preservation and training]].
 <!-- /card -->

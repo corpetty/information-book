@@ -1,6 +1,6 @@
 ---
 title: The Columbia slide
-description: "Engineers warned NASA about possible shuttle damage on a bullet-point slide, and the layout buried the caveats that mattered most."
+description: "Engineers briefed NASA on possible shuttle damage with bullet-point slides, and the layout buried the caveats that mattered most."
 tags:
   - case-study
   - graph-node
@@ -15,7 +15,7 @@ During the 2003 Columbia mission, Boeing engineers briefed NASA managers on poss
 
 The accident investigation board adopted Edward Tufte's analysis of that slide. Its report said it was easy to see how a senior manager could read it "and not realize that it addresses a life-threatening situation." The board was also surprised, at many points, to be handed slides where it expected technical reports.
 
-A slide deck is a [[framework|framework for thinking]]. It makes bullet hierarchies cheap and sustained argument costly, a [[cost-asymmetry|cost asymmetry]] that shapes what gets said. The book calls the menu of forms a medium allows its [[option-space|option space]]. Here the menu favored the [[compressed-form|compressed form]] of a warning, and the summary [[compressed-form-as-authority|stood in for the full report]].
+A slide deck is a [[framework|framework for thinking]]. It makes bullet hierarchies cheap and sustained argument costly, a [[cost-asymmetry|cost asymmetry]] that shapes what gets said. The book calls the menu of forms a medium allows its [[option-space|option space]]. Here the menu favored the [[compressed-form|compressed form]] of a warning, and slides stood in for technical reports. The book describes the same substitution at AI scale as [[compressed-form-as-authority|the summary that replaces the source]].
 
 Keep the scale in mind. This is one slide in one accident, and the board documented many organizational causes at length.
 <!-- /card -->
@@ -28,7 +28,7 @@ Keep the scale in mind. This is one slide in one accident, and the board documen
 
 ## How it connects
 
-- **What it shows:** [[compressed-form-as-authority|Compressed form becoming authoritative]], [[cost-asymmetry|Cost asymmetry]], [[framework-pricing|Framework pricing]], [[option-space|Option space]]
+- **What it shows:** [[cost-asymmetry|Cost asymmetry]], [[framework-pricing|Framework pricing]], [[option-space|Option space]]
 - **See also:** [[compressed-form|Compressed form]], [[calculus-notation|Leibniz's dy/dx and the British lag]]
 - **Evidence:** [[frameworks-report|Frameworks That Shape the Thoughts Built Inside Them]]
 - **Where the book discusses it:** [[thinking-inside-frameworks|Thinking Inside Frameworks]]

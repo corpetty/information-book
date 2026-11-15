@@ -13,7 +13,7 @@ aliases:
 *Concept · part of [[frameworks|Thinking inside frameworks]]*
 
 <!-- card -->
-Describe rising crime as a beast preying on a city, and people lean toward hunting it down: more police, tougher sentences. Describe it as a virus infecting the city, and they lean toward finding the cause and treating it. In the experiment both groups saw the same crime statistics ([[crime-metaphor]]).
+Describe crime as a beast preying on a city, and people favor enforcement more than people told it is a virus infecting the city. In the experiment both groups saw the same crime statistics ([[crime-metaphor]]).
 
 George Lakoff and Mark Johnson argued in 1980 that people understand abstract things through metaphors borrowed from concrete ones (argument as war, time as money), and that the borrowed picture brings its logic with it. If argument is war, there are winners, positions and attacks, and it becomes harder to think of an argument as a joint search.
 

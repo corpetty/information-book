@@ -15,7 +15,7 @@ aliases:
 <!-- card -->
 Anyone can now publish a post, a video or a paper in minutes. Working out whether any one of them is true still takes as long as it always did, and you have no more hours than before.
 
-The book's shorthand for this gap is **creation cheap, review expensive**. When making content scales far faster than the means of checking it, noise wins, however many gems are in the flood. The gems are there. Finding them is review, and review is the scarce part. The burden lands on readers through [[cost-shifting|cost-shifting]], and it runs straight into the [[receiver-budget|limited attention]] every reader has. It is also the reason the book wants a [[curation-layer|curation layer]]: institutions whose job is the expensive half.
+The shorthand for this gap, from the author's earlier essay on the democratization paradox, is **creation cheap, review expensive**. When making content scales far faster than the means of checking it, noise wins, however many gems are in the flood. The gems are there. Finding them is review, and review is the scarce part. The burden lands on readers through [[cost-shifting|cost-shifting]], and it runs straight into the [[receiver-budget|limited attention]] every reader has. It is also the reason the book wants a [[curation-layer|curation layer]]: institutions whose job is the expensive half.
 
 The book adds that AI language models widen the gap. They produce [[manufactured-injection|fluent text that was never measured against anything]] at almost no cost, and it looks the same as checked knowledge. The share of such text keeps rising, the book argues, while the filters that would tell the two apart have not improved to match.
 <!-- /card -->

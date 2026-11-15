@@ -22,7 +22,7 @@ Each one is a short page. Walk them in this order, or start with whichever catch
 2. [[framework-pricing|Framework pricing]] *(mechanism)*: A framework makes some thoughts cheap and others expensive, and across a whole population people mostly think the cheap ones.
 3. [[cost-asymmetry|Cost asymmetry]]: Inside any tool or system of notation, some things take one step and others take fifty, and people mostly do the one-step things.
 4. [[default-setting|Defaults]]: Whatever a system gives you when you make no choice is what most people end up with, so whoever sets the default sets the outcome.
-5. [[columbia-powerpoint|The Columbia slide]] *(example)*: Engineers warned NASA about possible shuttle damage on a bullet-point slide, and the layout buried the caveats that mattered most.
+5. [[columbia-powerpoint|The Columbia slide]] *(example)*: Engineers briefed NASA on possible shuttle damage with bullet-point slides, and the layout buried the caveats that mattered most.
 6. [[notation-as-tool-of-thought|Notation as a tool of thought]]: The symbols you write a problem in decide which steps are easy, so a better notation puts harder thoughts within reach.
 7. [[calculus-notation|Leibniz's dy/dx and the British lag]] *(example)*: British mathematicians stayed loyal to Newton's way of writing calculus, while the rest of Europe used Leibniz's handier symbols and pulled ahead.
 8. [[linguistic-relativity|Linguistic relativity]]: The language you speak nudges what you notice and remember, but it does not decide what you are able to think.

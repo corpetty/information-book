@@ -14,7 +14,7 @@ aliases:
 *Concept · part of [[made-by-agreement|Truths made by agreement]]*
 
 <!-- card -->
-In 1971 a presidential signature ended the dollar's convertibility into gold. For an instant everyone could see that money is a decision. Then the moment passed, and money went back to reading like physics.
+In 1971 a signature ended the dollar's convertibility into gold. For an instant everyone could see that money is a decision. Then the moment passed, and money went back to reading like physics.
 
 **Reification** is the old name the book uses for that long in-between state: treating a made thing as a found thing. "Money just is valuable." "The market decided." "The law is the law." Each sentence files a [[truth-generators|truth made by agreement]] under truths made by reality. It is a close sibling of mistaking [[map-and-territory|the map for the territory]].
 
@@ -29,7 +29,6 @@ The book pairs it with the opposite slip, the "orthogonal" case among its [[trut
 
 ## How it connects
 
-- **Examples:** [[scientific-forestry|Scientific forestry and the Normalbaum]]
 - **See also:** [[apartheid-classification|Apartheid race classification]], [[classification-torque|Classification torque]], [[constitutive-regimes|Constitutive regimes (convergent / divergent / hollow)]], [[consumer-key-vs-surface-capture|Consumer-key vs. surface capture]], [[map-and-territory|The map is not the territory]], [[three-realities|Three realities (Harari)]], [[truth-generators|Truth generators (reality vs. agreement)]], [[truth-compression-regimes|Truth-compression regimes (preservation / inversion / orthogonality)]], [[intersubjective-pipeline|What does the pipeline do to intersubjective truths?]]
 - **Supported by:** [[frameworks-report|Frameworks That Shape the Thoughts Built Inside Them]]
 - **Where the book discusses it:** [[truth-compression-and-when-each-wins|Chapter 5c: Truth, Compression, and When Each Wins]], [[political-economy-of-attention|Chapter 10: Political Economy of Attention]], [[intersubjective-truth|Intersubjective Truth]]

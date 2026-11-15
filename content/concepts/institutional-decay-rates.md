@@ -16,7 +16,7 @@ aliases:
 *Concept · part of [[building-bridges|Building bridges that last]]*
 
 <!-- card -->
-A library can sit on its shelves for decades while the institution around it coasts. Nobody notices until someone tries to use what is in it. Training is different. Every year's students have to be taught fresh, and when the people who produce deep experts stop producing them, the supply runs out within twenty or thirty years.
+A library can sit on its shelves for decades while the institution around it coasts. Nobody notices until someone tries to use what is in it. Training is different. Every year's students have to be taught fresh, and when the people who produce deep experts stop producing them, the supply runs out within a working lifetime.
 
 The book calls this gap differential decay rates. Of the [[preservation-vs-training-pair|two jobs that keep hard knowledge alive]], storing it degrades slowly and mostly out of sight, while teaching people to read it degrades within a generation. Together with the [[capture-asymmetry|capture asymmetry]] (corrupted teaching is harder to undo than a corrupted archive), this leads the book to call training the half to defend first, even though the archive is what institutions point to.
 

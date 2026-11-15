@@ -15,7 +15,7 @@ aliases:
 *Concept · part of [[the-finite-reader|The finite reader]]*
 
 <!-- card -->
-"Bitcoin is a credibly neutral, fixed-supply settlement layer for value transfer that derives its security from a proof-of-work consensus mechanism designed to be expensive to attack and cheap to verify." Unless you have already absorbed five or six separate concepts, that sentence is noise. It points at the same thing as "Bitcoin is internet money", and it carries nearly everything the short sentence leaves out.
+"Bitcoin is a credibly neutral, fixed-supply settlement layer whose security comes from proof-of-work consensus designed to be expensive to attack and cheap to verify." Unless you have already absorbed five or six separate concepts, that sentence is noise. It points at the same thing as "Bitcoin is internet money", and it carries nearly everything the short sentence leaves out.
 
 The book calls this the **complex form** of an idea. Complex here does not mean fancy or wordy. It means the listener must already have a lot in place before the idea lands. Taking it in costs real time from a [[receiver-budget|limited supply of attention]]: you load the background, work through the implications, and decide whether it fits what you believe. If the background is missing you have to build that first, and the idea often never gets its turn.
 

@@ -18,7 +18,7 @@ A publisher used to pay editors and fact-checkers to vet a book before it reache
 
 The book calls this **cost-shifting**, a term from the author's earlier essay on the democratization paradox. When the barriers to creating content fall, the cost of judging quality does not disappear. It transfers from producers to readers, reviewers and maintainers. A reader with a [[receiver-budget|fixed attention budget]] cannot pay it, so they fall back on the cheapest shortcut: [[credibility-weighting|trusting sources that already feel familiar]].
 
-The move has no agent, which the book argues is why it is so hard to oppose. The platform made [[creation-cheap-review-expensive|creation cheap]] and walked away, and can fairly claim it widened access. Cost-shifting also constrains the book's remedies. A [[curation-layer|curation layer]] means someone pays for the checking, so either the cost goes back to producers or the checkers are [[funding-decoupling|funded directly]].
+The move has no villain, which the book argues is what keeps it invisible. The platform never has to defund a journal or censor anything. It just makes [[creation-cheap-review-expensive|creation cheap]]. Cost-shifting also constrains the book's remedies. A [[curation-layer|curation layer]] means someone pays for the checking, so unless the checkers are [[funding-decoupling|funded directly]], the free default out-competes it.
 <!-- /card -->
 
 ## Read the full argument
