@@ -156,3 +156,49 @@ body[data-slug="reading-path"] {
     display: none;
   }
 }
+
+// ---------------------------------------------------------------- 4. search results
+
+// A search for "selection" returns the chapter, the idea, three examples and
+// a source, all looking alike. Label each result with its kind (read from the
+// result's slug) so the idea page is easy to pick out.
+.result-card {
+  &[id^="concepts/"] .card-title::before {
+    content: "Idea";
+    --kind-color: #d98a06;
+  }
+  &[id^="mechanisms/"] .card-title::before {
+    content: "Mechanism";
+    --kind-color: #0ea5a3;
+  }
+  &[id^="cases/"] .card-title::before {
+    content: "Example";
+    --kind-color: #0891b2;
+  }
+  &[id^="questions/"] .card-title::before {
+    content: "Open question";
+    --kind-color: #c2590c;
+  }
+  &[id^="themes/"] .card-title::before {
+    content: "Theme";
+    --kind-color: #1a9b4b;
+  }
+  &[id^="citations/"] .card-title::before {
+    content: "Source";
+    --kind-color: #a855f7;
+  }
+
+  .card-title::before {
+    display: inline-block;
+    margin-right: 0.5rem;
+    padding: 0 0.4rem;
+    border: 1px solid var(--kind-color, transparent);
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: $semiBoldWeight;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    vertical-align: middle;
+    color: var(--kind-color, inherit);
+  }
+}
