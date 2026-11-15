@@ -16,7 +16,7 @@ The book's repo. Three subsystems share one tree:
   them, questions still open, chapters with missing anchors — and
   bundles it into context packets ready to drop into a drafting
   prompt.
-- **`site/`** — a Quartz 4 install whose `content/` symlinks to the
+- **`site/`** — a Quartz 5.1 install whose `content/` symlinks to the
   prose. Builds the book as a static site.
 
 The site has **two reading modes**, both driven by the ontology:
@@ -321,15 +321,18 @@ information-book/
 │   ├── generate-concept-pages.js      graph → card pages, theme pages, hubs, chapter maps
 │   ├── interlink.js                   link the first use of each card in each file
 │   ├── check-site-links.js            built-site link, heading-anchor and shadowed-page checks
+│   ├── fix-typography.js              post-build smart-quote repair (works around a Quartz 5.1 regression)
+│   ├── serve-site.js                  local preview with GitHub Pages URL resolution
 │   └── EXTRACTION_PROMPT.md           agent prompt for per-PDF extraction
 ├── src/                               ONTOLOGY viewer (Cytoscape)
 │   ├── index.html                     viewer shell
 │   ├── app.js                         Cytoscape wiring + side panel
 │   └── styles.css
 ├── site/                              QUARTZ publishing site
-│   ├── quartz.config.ts               book-specific config
-│   ├── quartz.layout.ts               layout
-│   ├── quartz/                        vendored Quartz 4 engine
+│   ├── quartz.config.yaml             book-specific config and layout (plugins are npm packages)
+│   ├── quartz.ts                      loads the YAML; the place for TypeScript overrides
+│   ├── quartz.lock.json               pins for Git/local-sourced plugins (none at present)
+│   ├── quartz/                        vendored Quartz 5.1 engine (unmodified upstream)
 │   ├── content -> ../content          symlink — prose has one canonical home
 │   ├── package.json                   site deps
 │   ├── public/                        build output (gitignored)
@@ -391,6 +394,33 @@ trusting a clean build — a stale candidates file checks claims against
 stale prose. CI's `make check` enforces the *structural* invariants
 (counts, edge directions, orphans, links); claim-drift stays the
 author's local responsibility by design.
+
+## Upgrading Quartz
+
+`site/` is a vendored, unmodified copy of upstream Quartz inside this repo, so
+`npx quartz upgrade` (which pulls from a Git remote) does not apply. To move to
+a new release:
+
+1. Clone the release tag of `jackyzha0/quartz` somewhere outside the repo.
+2. Replace `site/quartz/` and `site/docs/` with the release's (`rsync -a
+   --delete`), and copy its top-level files (`package.json`,
+   `package-lock.json`, `quartz.ts`, `quartz.config.default.yaml`,
+   `tsconfig.json`, …). Leave the three site-specific files alone:
+   `site/quartz.config.yaml`, `site/quartz.lock.json`, `site/CNAME` (and the
+   `site/content` symlink).
+3. `cd site && npm ci`, then `npx quartz plugin doctor` (add `--fix` to let it
+   migrate the config) and compare `quartz.config.yaml` against the new
+   `quartz.config.default.yaml`.
+4. Keep a copy of `site/public/` from before, run `make site-build`,
+   `node scripts/check-site-links.js` and `make check`, and diff the rendered
+   pages (text, heading ids, link targets) against the copy. The 5.0 → 5.1
+   move changed nothing in the page set, anchors or links, but its new
+   Markdown parser curled quotes the wrong way next to links; that is what
+   `scripts/fix-typography.js` (run by `make site-build`) repairs.
+
+`make site-serve` (Quartz's dev server) does not run the typography repair, so
+quotes beside links look wrong there; `make site-build` + `make site-preview`
+shows the site as deployed.
 
 ## CI & tests
 
