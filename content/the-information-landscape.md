@@ -129,6 +129,8 @@ The pipeline I just walked is linear; the reality is messier. Memes feed back in
 
 That's the core picture. Reality on one side, memes on the other, five hops in between, each hop compressing and selecting. We never see The Out There directly; we see what survived the gates, in whatever shape the medium it arrived through allows. The rest of Part I goes deeper into what gets lost and selected at each stage, Part II into why the arrangement is structurally unavoidable, Part III into the [[bridge-zone|bridge zone]] where the worst distortion happens, and Part IV into what to do about it. The book is partly about being honest about that picture, and partly about building infrastructure that does better than what we have.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
-[[index|← Home]] · [[case-studies-and-three-realities|Chapter 2: Case Studies and Three Realities →]]
+[[reading-path|← The reading path]] · [[case-studies-and-three-realities|Chapter 2: Case Studies and Three Realities →]]
+<!-- chapter-nav:end -->

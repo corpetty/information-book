@@ -106,16 +106,9 @@ function seedStatuses() {
 }
 
 function seedParts() {
-  const parts = [
-    { slug: 'pipeline',    ordinal: 1, label: 'Part I — The Pipeline',
-      summary: 'How information moves from reality to people.' },
-    { slug: 'lossy',       ordinal: 2, label: 'Part II — Why It Has To Be Lossy (And Selective)',
-      summary: 'The structural reasons compression and selection both operate.' },
-    { slug: 'bridge-zone', ordinal: 3, label: 'Part III — The Bridge Zone',
-      summary: 'Where complex specialist knowledge gets transformed (and often destroyed) on its way to mass audiences.' },
-    { slug: 'integration', ordinal: 4, label: 'Part IV — A Way Through',
-      summary: 'Hypothesis territory. Rebuilt around integration between networks that don\'t share preconditions.' },
-  ];
+  // Parts live in data/parts.json (like every other catalog) so the site's
+  // navigation can read the same labels the graph uses.
+  const { parts } = JSON.parse(readFileSync(resolve(dataDir, 'parts.json'), 'utf8'));
   for (const p of parts) {
     addNode({
       id: `part:${p.slug}`,
@@ -607,6 +600,8 @@ function checkSources() {
       readdirSync(dir, { withFileTypes: true })
         .filter(d => d.isFile() && !d.name.startsWith('.'))
         .map(d => d.name)
+        // index.md is the folder's generated landing page, not a source.
+        .filter(f => f !== 'index.md')
         .filter(f => SOURCE_EXTS.includes(extname(f).toLowerCase())),
     );
   };

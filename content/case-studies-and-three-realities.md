@@ -117,6 +117,8 @@ None of the money story fits the four-exit taxonomy, because the taxonomy assume
 - **Clean correctives are the exception.** Power posing is unusually tidy: the author disavowed and the replication failed dramatically. The common case is messier, with no disavowal, partial replications, and a split field. The stage-by-stage reading here assumes a clean corrective signal and hasn't engaged the noisy one.
 - **The gradient is asserted, not measured.** The claim that corrective signal has systematically worse gate-fitness is consistent with these four cases but not established across many. There is a literature to hold it to (the spread of misinformation versus its corrections, and retraction visibility versus original-paper citation rates), and the book should engage it rather than lean on four cases.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[the-information-landscape|← Chapter 1: The Information Landscape]] · [[info-time-limit|Chapter 3: The Human Time Budget →]]
+<!-- chapter-nav:end -->

@@ -1,3 +1,158 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Lossy: reader-facing page chrome.
+//
+// This is the one file under site/quartz/ that is ours, not upstream's: keep
+// it when upgrading Quartz (see "Upgrading Quartz" in the repo README).
+//
+// Three jobs:
+//   1. The properties block becomes a lead sentence (the page's description)
+//      plus an "also called" line, instead of a key/value table.
+//   2. Each kind of page is recognisable at a glance: ideas, mechanisms,
+//      examples, open questions, themes and sources get an accent colour (the
+//      same colours the /graph/ viewer uses for those node types).
+//   3. Generated pages don't show a "last modified" date; it is only the date
+//      of the last build.
+//
+// Page kind is read from the URL (body[data-slug^="concepts/"] …), so nothing
+// in the Markdown has to carry presentation.
+
+// ---------------------------------------------------------------- 1. lead sentence
+
+.note-properties {
+  border: 0;
+  background: none;
+  padding: 0;
+  margin: 0.25rem 0 0.75rem;
+
+  // No "Properties (2)" header, no key column: the values speak for themselves.
+  > summary.note-properties-header,
+  .note-properties-key {
+    display: none;
+  }
+
+  .note-properties-table,
+  .note-properties-table tbody,
+  .note-properties-row,
+  .note-properties-value {
+    display: block;
+    width: auto;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    background: none;
+  }
+
+  // A scalar value is the description: set it as the lead.
+  .note-properties-value > .note-properties-text {
+    display: block;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: var(--darkgray);
+    max-width: 42rem;
+  }
+
+  // A list value is the aliases: one quiet line.
+  .note-properties-value > .note-properties-list {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--gray);
+
+    &::before {
+      content: "Also called: ";
+    }
+
+    .note-properties-text {
+      color: inherit;
+    }
+  }
+}
+
+// ---------------------------------------------------------------- 2. page kinds
+
+body {
+  --kind-color: transparent;
+}
+body[data-slug^="concepts/"] {
+  --kind-color: #d98a06; // Concept
+}
+body[data-slug^="mechanisms/"] {
+  --kind-color: #0ea5a3; // Mechanism
+}
+body[data-slug^="cases/"] {
+  --kind-color: #0891b2; // CaseStudy
+}
+body[data-slug^="questions/"] {
+  --kind-color: #c2590c; // Question
+}
+body[data-slug^="themes/"] {
+  --kind-color: #1a9b4b; // Theme
+}
+body[data-slug^="citations/"] {
+  --kind-color: #a855f7; // Source
+}
+
+body[data-slug^="concepts/"],
+body[data-slug^="mechanisms/"],
+body[data-slug^="cases/"],
+body[data-slug^="questions/"],
+body[data-slug^="themes/"],
+body[data-slug^="citations/"] {
+  // A rule in the kind's colour beside the title.
+  .article-title {
+    border-left: 4px solid var(--kind-color);
+    padding-left: 0.75rem;
+  }
+
+  // The folder's index page is a listing, not a page of that kind.
+  &[data-slug$="/index"] .article-title {
+    border-left: 0;
+    padding-left: 0;
+  }
+}
+
+// Card and theme pages open with a generated line naming the kind
+// ("Concept · part of …", "Theme 3 of 13 · 21 ideas"). Set it as a label.
+body[data-slug^="concepts/"],
+body[data-slug^="mechanisms/"],
+body[data-slug^="cases/"],
+body[data-slug^="questions/"],
+body[data-slug^="themes/"] {
+  &:not([data-slug$="/index"]) article .markdown-rendered > p:first-child > em:only-child {
+    display: block;
+    font-style: normal;
+    font-size: 0.8rem;
+    font-weight: $semiBoldWeight;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--kind-color);
+
+    a {
+      color: inherit;
+      background: none;
+      padding: 0;
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
+  }
+}
+
+// ---------------------------------------------------------------- 3. build dates
+
+// Pages written by the generators carry the build date, which tells a reader
+// nothing. Chapters and notes keep theirs.
+body[data-slug^="concepts/"],
+body[data-slug^="mechanisms/"],
+body[data-slug^="cases/"],
+body[data-slug^="questions/"],
+body[data-slug^="themes/"],
+body[data-slug^="citations/"],
+body[data-slug^="experiments/index"],
+body[data-slug^="sources/index"],
+body[data-slug="explore"],
+body[data-slug="reading-path"] {
+  .content-meta > time {
+    display: none;
+  }
+}

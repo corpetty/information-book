@@ -120,6 +120,8 @@ One distinction has to be kept, because "lots of options" has been doing two job
 - **The framing may understate the medium.** I blame the curve on the [[receiver-budget|receiver budget]], but the medium imposes its own limit too: a 280-character medium can't carry a high-optionality form even for a reader who has the budget. The honest version is probably receiver-budget and medium-capacity jointly.
 - **Law's wealth-gated bridge is darker than the others.** Software, religion, politics, and popular science all keep the access end broadly available even when the optionality end is professionally gated. Law builds the wealth-gated bridge between them in as a structural feature. Whether that is unique to law or a pattern the other domains hide is something I haven't engaged.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[info-time-limit|← Chapter 3: The Human Time Budget]] · [[complexity-virality-tradeoff|Chapter 5: The Complexity / Virality Trade-off →]]
+<!-- chapter-nav:end -->

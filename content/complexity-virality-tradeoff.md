@@ -91,6 +91,8 @@ The honest counter-examples, and what they expose:
 
 The religions case names the right refinement: universities, orders, journals, and apprenticeship lineages are infrastructure for complexity, holding the un-compressed form and expanding the budget that can absorb it. [[preservation-vs-training|Chapter 8]] splits that work into [[preservation-vs-training-pair|preservation and training]] and reads the modern collapse through it. Most current information technology does the opposite: it grows the network without growing the budget and tunes the gates for engagement, so the ceiling drops and nothing catches it. What compression does to *truth*, as opposed to detail, is [[truth-compression-and-when-each-wins|Chapter 5c]]; who tunes the gates is [[political-economy-of-attention|Chapter 10]]; and whether a faithful LLM can soften the constraint itself, the first candidate for that, is [[ai-as-new-node|Chapter 11]]. If you think I have the relationship between transport and selection wrong, I would rather hear it now than late.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
-[[optionality vs access|← Chapter 4: Optionality vs. Access]] · [[selection-as-other-engine|Chapter 5b: Selection As The Other Engine →]]
+[[optionality-vs-access|← Chapter 4: Optionality vs. Access]] · [[selection-as-other-engine|Chapter 5b: Selection As The Other Engine →]]
+<!-- chapter-nav:end -->

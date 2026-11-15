@@ -78,6 +78,8 @@ That is the brief for Part IV. The prescriptive chapters are not chasing a mediu
 - **The scheme here is about objective claims, by decision.** The scheme assumes the inner message has a generator the decode can be scored against. [[intersubjective-truth|The intersubjective-truth note]] carries the other case: intersubjective truths are still truths (the generator differs, not the truth-ness), and the regimes translate rather than transfer, convergent / divergent / [[constitutive-regimes|hollow constitution]]. The residual risk is at the boundary, deciding which generator a given claim answers to, whose hard cases are open there.
 - **Inversion with a manipulator versus without one.** I claim inversion needs no liar, that an engagement-tuned gate produces it from honest findings by itself, and I believe it. But the line between an emergent inversion and a deliberately engineered one is blurry, and until Chapters 5b and 10 draw it, the word *systematically* in the landing claim carries more weight than it has strictly earned.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[medium-and-manipulation|← Interlude: The Medium]] · [[bridge-zone-distortion|Chapter 6: Where It All Gets Fucked Up →]]
+<!-- chapter-nav:end -->

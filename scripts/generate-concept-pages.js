@@ -14,7 +14,12 @@
 //   4. Reading path    content/reading-path.md       (the chapters in order,
 //                                                     each in two sentences)
 //   5. Chapter maps    a generated block at the top of each chapter / note:
-//                      the chapter in brief + the cards it contains
+//                      the cards it contains
+//   6. Reading nav     a generated previous / next footer on every chapter
+//                      and interlude, in reading order
+//   7. Folder indexes  content/<folder>/index.md — gives each folder a
+//                      reader-facing name ("Ideas", not "concepts") in the
+//                      sidebar, breadcrumbs and folder page
 //
 // Inputs:
 //   data/nodes.jsonl        graph nodes (built by scripts/build-graph.js)
@@ -52,6 +57,12 @@ const CARD_REGION = /<!-- card -->\n?([\s\S]*?)\n?<!-- \/card -->/;
 const MAP_BEGIN = '<!-- chapter-map:begin (generated from the ontology by scripts/generate-concept-pages.js; edit data/chapters.json, data/notes.json or the catalogs, not this block) -->';
 const MAP_END = '<!-- chapter-map:end -->';
 const MAP_REGION = /<!-- chapter-map:begin[\s\S]*?<!-- chapter-map:end -->\n*/;
+const NAV_BEGIN = '<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->';
+const NAV_END = '<!-- chapter-nav:end -->';
+const NAV_REGION = /\n*<!-- chapter-nav:begin[\s\S]*?<!-- chapter-nav:end -->\n*$/;
+// The hand-written footer this block replaces: a rule, then one line of
+// "← previous · next →" wikilinks at the very end of the file.
+const LEGACY_NAV = /\n+---\n+(?:\[\[[^\]]+\]\](?: · )?){1,2}\s*$/;
 
 // type → { dir, tag, badge }
 const TYPE_CONFIG = {
@@ -461,7 +472,7 @@ for (const dir of GENERATED_DIRS) {
   const outDir = resolve(contentDir, dir);
   if (!existsSync(outDir)) continue;
   for (const name of readdirSync(outDir)) {
-    if (!name.endsWith('.md')) continue;
+    if (!name.endsWith('.md') || name === 'index.md') continue; // index.md: see section 6
     const slug = basename(name, '.md');
     if (validSlugsByDir[dir].has(slug)) continue;
     const path = resolve(outDir, name);
@@ -675,9 +686,82 @@ for (const note of nodes.filter(n => n.type === 'Note' && MAP_ROLES.has(n.props?
   if (next !== current) { writeFileSync(path, next); mapsWritten++; }
 }
 
+// ---------------------------------------------------------------- 6. reading nav
+
+// The linear read: chapters by ordinal, each followed by the interludes that
+// name it in `readAfter`. Every page in it gets a generated footer linking
+// the page before and the page after, so the chain cannot drift when the
+// order changes (it used to be hand-written in every file).
+const readingOrder = [];
+for (const ch of chapters) {
+  const note = ch.props?.draftNote ? nodeById.get(ch.props.draftNote) : null;
+  if (note) readingOrder.push({ note, label: labelFor(ch) });
+  for (const il of nodes.filter(n => n.type === 'Note' && n.props?.readAfter === slugOf(ch.id))) {
+    readingOrder.push({ note: il, label: il.props.navTitle || labelFor(il) });
+  }
+}
+let navsWritten = 0;
+readingOrder.forEach((entry, i) => {
+  const path = resolve(contentDir, entry.note.props.file);
+  if (!existsSync(path)) return;
+  const prev = readingOrder[i - 1], next = readingOrder[i + 1];
+  const link = (e) => slugOf(e.note.id);
+  const left = prev ? `[[${link(prev)}|← ${safe(prev.label)}]]` : '[[reading-path|← The reading path]]';
+  const right = next ? `[[${link(next)}|${safe(next.label)} →]]` : '[[explore|Explore the ideas →]]';
+  const block = `${NAV_BEGIN}\n---\n\n${left} · ${right}\n${NAV_END}\n`;
+  const current = readFileSync(path, 'utf8');
+  const body = current.replace(NAV_REGION, '').replace(LEGACY_NAV, '').replace(/\s*$/, '');
+  const updated = `${body}\n\n${block}`;
+  if (updated !== current) { writeFileSync(path, updated); navsWritten++; }
+});
+
+// ---------------------------------------------------------------- 7. folder indexes
+
+// Quartz names a folder after the title of its index.md, in the sidebar, the
+// breadcrumbs and the folder page. Without one a reader sees the directory
+// name ("concepts", "cases"), which is authoring vocabulary. Each index is a
+// title, a description and two sentences; the folder page lists the folder's
+// pages underneath. A hand-written index.md (no generator note) is left alone.
+const FOLDERS = [
+  { dir: 'themes', title: 'Themes',
+    text: `The book's ideas grouped into ${themes.length} themes, in the order of the argument. Each theme is a short trail of pages you can walk in order or dip into.` },
+  { dir: 'concepts', title: 'Ideas',
+    text: 'Every idea the argument uses, each on its own short page: one plain sentence, an example, and links to the ideas next to it.' },
+  { dir: 'mechanisms', title: 'Mechanisms',
+    text: 'The handful of processes the whole argument runs on. If you read only one folder, read this one.' },
+  { dir: 'cases', title: 'Examples',
+    text: 'Real cases that ground the ideas, each with a note on how far it can be trusted.' },
+  { dir: 'questions', title: 'Open questions',
+    text: 'Questions the book is still working out, each with where it currently lands and how settled that is.' },
+  { dir: 'citations', title: 'Sources',
+    text: 'The books, papers and essays the argument draws on or argues with, each with what it is used for.' },
+  { dir: 'experiments', title: 'Experiments',
+    text: "Designs for testing the book's empirical claims. Trackers, not results." },
+  { dir: 'sources', title: 'Source files',
+    text: 'Open-licence source documents held alongside the book. Each has a page under Sources that says how it is used.' },
+];
+let indexesWritten = 0;
+for (const f of FOLDERS) {
+  const dirPath = resolve(contentDir, f.dir);
+  if (!existsSync(dirPath)) continue;
+  const path = resolve(dirPath, 'index.md');
+  if (existsSync(path) && !readFileSync(path, 'utf8').includes(HUB_NOTE)) continue; // hand-written
+  const text = [
+    renderFrontmatter(f.title, ['information'], { description: f.text }),
+    '',
+    HUB_NOTE,
+    '',
+    f.text,
+    '',
+    '<em>[[explore|Explore all the ideas by theme]] · [[reading-path|Read the book in order]]</em>',
+    '',
+  ].join('\n');
+  if (writeIfChanged(path, text)) indexesWritten++;
+}
+
 // ---------------------------------------------------------------- report
 
-console.log(`generate-concept-pages: ${written} card pages written, ${themesWritten} theme pages, ${hubsWritten} hub pages, ${mapsWritten} chapter maps updated; ${skippedCollision} collision-skipped, ${skippedHand} hand-written skipped, ${pruned} orphan-pruned`);
+console.log(`generate-concept-pages: ${written} card pages written, ${themesWritten} theme pages, ${hubsWritten} hub pages, ${indexesWritten} folder indexes, ${mapsWritten} chapter maps and ${navsWritten} reading-nav footers updated; ${skippedCollision} collision-skipped, ${skippedHand} hand-written skipped, ${pruned} orphan-pruned`);
 if (prunedFiles.length) {
   console.log('  pruned (node renamed/removed):');
   for (const p of prunedFiles) console.log(`    ${p}`);

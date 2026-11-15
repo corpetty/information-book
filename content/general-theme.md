@@ -2,6 +2,8 @@
 title: General Theme
 tags:
   - information
+# Raw conversation transcript (a source, not a chapter): reachable by link, kept out of the sidebar, search and graph.
+unlisted: true
 ---
 I explained this whole book concept and societal issue to someone the other day, and it came out nicely and reasonably succinctly. So I thought I'd copy and paste my explanation to him here and then structure it better. This was a conversation, so excuse spelling and grammar mistakes.
 

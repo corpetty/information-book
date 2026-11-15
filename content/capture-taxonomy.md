@@ -62,6 +62,8 @@ The unified vocabulary: **capture is one mechanism, tuning a selection-design su
 - **Self-capture's "no captor to defeat" may be too absolute.** Equilibria do dismantle: businesses fail, institutions reform, captured states sometimes recover without an external actor defeating anything. The composition rules suggest the route (change the resource flow), but the historical evidence is mixed, and a polish pass should engage the cases where self-capture broke on its own.
 - **"Consumer-key vs. surface" may deserve its own note.** It is the sharpest principle here, underlies Ch 8's asymmetry, and explains why corpus, objective, and training are the hard cases; whether to extract it depends on how often it surfaces later.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[ai-as-new-node|← Chapter 11: AI as a New Kind of Node]] · [[infrastructure-for-integration|Chapter 12: Infrastructure for Integration →]]
+<!-- chapter-nav:end -->

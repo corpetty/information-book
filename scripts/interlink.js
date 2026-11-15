@@ -147,8 +147,8 @@ for (const note of nodes.filter(n => n.type === 'Note' && TARGET_ROLES.has(n.pro
     if (inFront) { kind[i] = 'skip'; if (line === '---') inFront = false; continue; }
     if (/^```/.test(line)) { inCode = !inCode; kind[i] = 'skip'; continue; }
     if (inCode) { kind[i] = 'skip'; continue; }
-    if (line.startsWith('<!-- chapter-map:begin')) inMap = true;
-    if (inMap) { kind[i] = 'skip'; if (line.startsWith('<!-- chapter-map:end')) inMap = false; continue; }
+    if (/^<!-- chapter-(map|nav):begin/.test(line)) inMap = true;
+    if (inMap) { kind[i] = 'skip'; if (/^<!-- chapter-(map|nav):end/.test(line)) inMap = false; continue; }
     if (/^##\s/.test(line)) section++;
     sectionOf[i] = section;
     if (/^#{1,6}\s/.test(line) || /^\s*>/.test(line) || /^\s*<!--/.test(line)) kind[i] = 'skip';

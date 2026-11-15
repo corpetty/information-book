@@ -2,6 +2,8 @@
 title: Lossy — Outline
 tags:
   - information
+# Author-facing working document: reachable by link, kept out of the sidebar, search and graph.
+unlisted: true
 ---
 
 > *Working document for the author. If you've arrived here cold, start with the [[index|landing page]] and keep the [[glossary]] open in a tab; they give the plain-language onramp this outline assumes. Terms like "selection gate," "outer message," "interpretive latitude," "polarization via distrust," and "curse of expertise" are all defined there.*

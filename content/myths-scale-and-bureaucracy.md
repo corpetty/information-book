@@ -62,6 +62,8 @@ The loop whole: a network grows, its binding myth compresses to keep crossing it
 - **Superficial unification might still be worth something.** I've written latitude as pure loss, but a shared flag read a dozen ways may still coordinate action at a coarse grain: everyone shows up, even for different reasons. If thin agreement does real work, latitude is a trade rather than a defect and this note is too gloomy.
 - **Is this about myths, or any compressed claim?** Latitude is a property of any heavily compressed claim; I framed the loop around network-binding myths because that is where bureaucracy enters. This may be the special case of something more general, and I haven't checked what the general version looks like. (The [[interpretive-latitude|interpretive-latitude]] construct is the one an experiment would try to measure, and the book tracks a design for that in its experiments folder.)
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[emotional-memetics|← Chapter 7: Emotional Memetics As The Floor]] · [[preservation-vs-training|Chapter 8: Preservation vs. Training →]]
+<!-- chapter-nav:end -->

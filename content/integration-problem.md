@@ -111,6 +111,8 @@ The bridge node has a sibling here, the same shape with higher stakes. The diplo
 - **The case studies are Anglosphere and technical.** Wikipedia, Stack Overflow, open source, peer review, common-law courts are all English-language and academic-adjacent. Other traditions (East Asian academies, decentralized Islamic scholarship, indigenous knowledge governance) have their own integration mechanisms not engaged here, and might surface design properties it missed.
 - **The intersubjective sibling is an outline, not a treatment.** It has no worked cases at the depth the objective project got, and one structural question is open: whether a *curation layer* even makes sense for constitutive content, since curating an agreement is not the same as curating evidence. The answer decides how much of Part IV's design transfers.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[intersubjective-truth|← Chapter 8b: Intersubjective Truth]] · [[political-economy-of-attention|Chapter 10: Political Economy of Attention →]]
+<!-- chapter-nav:end -->

@@ -75,6 +75,8 @@ None of this is the work of a platform launch or a regulatory season. Universiti
 - **The "work of generations" framing invites "then why bother now."** It is honest but doesn't answer what an individual builder should do *this year* given a generational project. That intermediate-term gap is real, and "start building anyway" is a thin answer.
 - **The spec doesn't say who decides what "integration" means.** I've written as if there is one integration project without engaging *whose* complex truth, *which* networks, and *whose* judgment of success. Those are political questions held out of scope, and a revised version would at least need a credible account of what makes an integration-judgment process legitimate, because these institutions can't be designed without committing to one.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
-[[capture-taxonomy|← Interlude: Capture]] · [[index|Home →]]
+[[capture-taxonomy|← Interlude: Capture]] · [[explore|Explore the ideas →]]
+<!-- chapter-nav:end -->

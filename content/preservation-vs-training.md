@@ -78,6 +78,8 @@ This is where the [[medium-shapes-want|medium-shapes-want]] loop turns up. Train
 - **The decay-rate carving is a rule of thumb, not a law.** Preservation can decay fast (format obsolescence, lost languages) and training can outlast a generation (apprenticeship traditions that train trainers for centuries). "Preservation slow, training fast" is approximately right and the right strategic emphasis, but not structural.
 - **The "bureaucracy" stipulation is provisional.** Using the word narrowly works for the argument but doesn't settle whether the narrow function is the *core* of bureaucracy or the slice needed here. The cleaner alternative, calling it *institutional carriers* throughout and reserving "bureaucracy" for Harari's broad sense, is worth reconsidering once Part IV is fully in hand.
 
+<!-- chapter-nav:begin (generated from the ontology by scripts/generate-concept-pages.js; reading order comes from data/chapters.json and data/notes.json) -->
 ---
 
 [[myths-scale-and-bureaucracy|← Interlude: Myths at Scale]] · [[intersubjective-truth|Chapter 8b: Intersubjective Truth →]]
+<!-- chapter-nav:end -->
