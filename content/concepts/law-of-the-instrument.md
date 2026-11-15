@@ -15,9 +15,9 @@ aliases:
 *Concept · part of [[frameworks|Thinking inside frameworks]]*
 
 <!-- card -->
-Give a small child a hammer and everything in the house needs hammering. The psychologist Abraham Maslow put the grown-up version in 1966: if the only tool you have is a hammer, it is tempting to treat everything as if it were a nail.
+Give a small child a hammer and everything in the house needs hammering. Abraham Maslow put the grown-up version in 1966: if the only tool you have is a hammer, it is tempting to treat everything as if it were a nail.
 
-The **law of the instrument** says that tools define the problems people see. A statistician sees a regression, a lawyer sees a liability, an engineer sees a missing feature. Its measurement cousin is the streetlight effect, named for the man hunting for his keys under the lamp because that is where the light is: people look where looking is easy.
+The **law of the instrument** says that tools define the problems people see. A statistician sees a regression, a lawyer sees a liability, an engineer sees a missing feature. Its measurement cousin is the streetlight effect: people look where looking is easy, not where the answer is.
 
 The support here is anecdote and observation, with no tidy experiment behind it. It earns its place because it names the everyday face of [[framework-pricing|framework pricing]]: the tool you own is the cheap option, so it gets used. Trained into a person over years it becomes the [[einstellung-effect|Einstellung effect]] and the [[curse-of-expertise|curse of expertise]]. Built into an institution's instruments it becomes [[legibility]], where only what the instrument can register gets counted.
 <!-- /card -->

@@ -20,13 +20,13 @@ You probably believe you should floss every night. You can say it, defend it, ev
 
 Dan Sperber calls the first kind reflective and the second intuitive. Intuitive beliefs are wired into the rest of what you think and drive what you do. Reflective beliefs are held at arm's length: stated, shared as a badge of belonging, and inert when it comes to action. Hugo Mercier argues that most false rumors are held reflectively, since they would have far more serious consequences if people acted on them.
 
-The split explains the [[paradox-of-virality|paradox of virality]]: people share alarming posts they would never act on and say they wish would not spread. So the outrage that [[engagement-equilibrium|engagement-tuned feeds]] reward mostly produces bumper-sticker belief. Some fraction crosses into the intuitive kind and drives action, and the book says the proportion is an open empirical matter. It pairs with Mercier's [[justification-market|justification market]], where a belief serves a choice already made, and with the [[truth-compression-regimes|regime where a claim becomes a team flag]].
+The split explains the [[paradox-of-virality|paradox of virality]]: people share alarming posts they would never act on and say they wish would not spread. So the outrage that [[engagement-equilibrium|engagement-tuned feeds]] reward mostly produces bumper-sticker belief. A smaller subset crosses into the intuitive kind and drives action. It pairs with Mercier's [[justification-market|justification market]], where a belief serves a choice already made, and with the [[truth-compression-regimes|regime where a claim becomes a team flag]].
 <!-- /card -->
 
 ## Read the full argument
 
+- [[emotional-memetics#Four lines of evidence|Chapter 7: Emotional Memetics As The Floor]], section "Four lines of evidence"
 - [[emotional-memetics#Engaging Mercier|Chapter 7: Emotional Memetics As The Floor]], section "Engaging Mercier"
-- [[truth-compression-and-when-each-wins#Three things compression can do to truth|Chapter 5c: Truth, Compression, and When Each Wins]], section "Three things compression can do to truth"
 
 ## How it connects
 

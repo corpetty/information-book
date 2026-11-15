@@ -1,6 +1,6 @@
 ---
 title: Stanford Prison Experiment correctives — died at curation
-description: "The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and films still tell the original story."
+description: "The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and introductory courses still teach the original story."
 tags:
   - case-study
   - graph-node
@@ -11,11 +11,11 @@ tags:
 *Example · part of [[compression-and-truth|What shortening does to truth]]*
 
 <!-- card -->
-In 1971 Philip Zimbardo put student volunteers in a mock prison in a Stanford basement, some as guards and some as prisoners. Within days the guards turned cruel, and the study became the standard proof that ordinary people turn monstrous when handed power. It filled textbooks, documentaries and films for four decades.
+In 1971 Philip Zimbardo put student volunteers in a mock prison in a Stanford basement, some as guards and some as prisoners. Within days the guards turned cruel, and the study became the standard proof that ordinary people turn monstrous when handed power. It filled textbooks and documentaries for four decades, and in 2015 a feature film.
 
-In 2018, reporting by Ben Blum and a book by Thibault Le Texier went back to the original tapes and notes. Zimbardo had coached the guards, and one prisoner's famous breakdown had been performed. Social psychologists largely accepted the critique. Introductory courses still teach the experiment. The films have not been re-cut.
+In 2018, reporting by Ben Blum and a book by Thibault Le Texier went back to the original tapes and notes. Zimbardo had coached the guards, and one prisoner's famous breakdown had been performed. Social psychologists largely accepted the critique. Introductory courses still teach the experiment. The film has not been re-cut.
 
-The book's reading: the correction passed every scientific check and then died where knowledge is repackaged for the public, in the [[bridge-zone|bridge zone]]. It is technical, unflattering to a famous figure, and offers no replacement story. The original is dramatic and morally clean. Under [[selection|selection]] for drama, an accurate correction loses to a wrong original, a failure the book calls [[out-competition-of-carriers|out-competition]]. The journals hold the correction and almost nobody is being retrained on it, the split described by the [[preservation-vs-training-pair|preservation and training pair]]. The book concludes that corrections need channels built for [[survivable-polarization|carrying unwelcome news]].
+The book's reading: the correction passed every scientific check and then died where knowledge is repackaged for the public, in the [[bridge-zone|bridge zone]]. It is technical, unflattering to a famous figure, and offers no replacement story. The original is dramatic and morally clean. Under [[selection|selection]] for drama, an accurate correction loses to a wrong original. The journals hold the correction and almost nobody is being retrained on it, the split described by the [[preservation-vs-training-pair|preservation and training pair]]. The book concludes that corrections need channels built for [[survivable-polarization|carrying unwelcome news]].
 <!-- /card -->
 
 ## Read the full argument

@@ -13,7 +13,7 @@ tags:
 <!-- card -->
 Open the financial pages during any argument about interest rates and you will read that the central bank is "printing money." Behind that phrase sit several things economists keep apart: measures of the money supply, how fast money changes hands, and the channels through which policy reaches the economy. The phrase flattens all of them.
 
-Some flattening is the ordinary cost of writing for a general reader. The book uses this case for what is added on top. Some outlets are owned by interests that hold positions on what policy should be, so the simplification leans in a direction. The coverage is wrong about the technical distinctions in a way that serves its owners.
+Some flattening is the ordinary cost of writing for a general reader. The book uses this case for what is added on top. Some outlets are owned by interests that hold positions on what policy should be, so the simplification can lean in a direction that suits its owners.
 
 That makes it the [[bridge-zone|bridge zone]] case where the [[engagement-equilibrium|economics of attention]] bite hardest, and an example of [[self-vs-external-capture|capture]]: a filter turned against the purpose it claims to serve. "Printing money" is also a [[conceptual-metaphor|metaphor]] doing the work of an argument, and a [[compressed-form|short form]] that has replaced the long one. The book notes the limit of the case: monetary economics is full of real disputes among specialists, so there is no single settled account being distorted.
 <!-- /card -->

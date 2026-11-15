@@ -23,7 +23,7 @@ Each one is a short page. Walk them in this order, or start with whichever catch
 3. [[want-as-prime-mover|Want as the prime mover]] *(mechanism)*: People only build the background that hard ideas need if they keep wanting to engage, so appetite comes before both ability and taste.
 4. [[algorithm-as-selection-engine|Algorithm as selection engine]]: A feed's ranking software is a filter with dials that someone sets, and it decides what millions of people see.
 5. [[manipulation-surface|Manipulation surface]]: The most powerful way to steer what a crowd believes is to change the rules deciding what spreads, and that takes no lies.
-6. [[hammer-vs-copernicus|Hammer of the Witches vs. Copernicus]] *(example)*: The same early printing presses produced a witch-hunting manual that sold out and an astronomy book by Copernicus that hardly sold at all.
+6. [[hammer-vs-copernicus|Hammer of the Witches vs. Copernicus]] *(example)*: The same early printing presses produced a witch-hunting manual that ran through edition after edition and an astronomy book by Copernicus that reached only specialists.
 7. [[medium-and-manipulation|What does the medium do to the gates?]] *(open question)*: The format an idea travels in decides what can be said, what gets rewarded, and what audiences learn to want.
 8. [[framework-wall-or-price|Does a medium forbid thoughts, or only price them?]] *(open question)*: When a tool or platform makes a thought hard to express, is that thought impossible for its users, or only rarer?
 

@@ -19,7 +19,7 @@ The book's name for the missing ingredient is **handle-ability**: how many handl
 
 The book first worried this might be the real variable behind everything it had been calling complexity. [[complexity-doing-two-jobs|Its answer]] was to split the word in two. How much background an idea needs governs what survives [[transport|being retold]]. Handle-ability governs how the idea scores when [[selection|someone decides whether to pass it on]].
 
-The two come apart. A simple idea with no handles dies. A hard idea can still travel if its short version has plenty, as with [[hammer-vs-copernicus|the witch-hunting manual that outsold Copernicus]] and [[power-posing|power posing]]. The book flags that handle-ability may be a small bundle of traits. It sits close to [[memetic-fitness|memetic fitness]].
+The two come apart. A simple idea with no handles dies. A hard idea can still travel if its short version has plenty, as with [[hammer-vs-copernicus|the witch-hunting manual that reached far more people than Copernicus]] and [[power-posing|power posing]]. The book flags that handle-ability may be a small bundle of traits. It sits close to [[memetic-fitness|memetic fitness]].
 <!-- /card -->
 
 ## Read the full argument

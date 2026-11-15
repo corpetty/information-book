@@ -19,7 +19,7 @@ aliases:
 <!-- card -->
 Suppose a university is judged on how many papers its staff publish. Staff publish more papers. Whether more has been discovered is a separate matter, and the count can no longer tell you.
 
-The economist Charles Goodhart noticed in 1975 that a statistical regularity tends to collapse once it is used for control. The version everyone quotes, "when a measure becomes a target, it ceases to be a good measure," is the anthropologist Marilyn Strathern's, from a 1997 paper on auditing British universities. Donald Campbell said the same of social indicators: the more a number is used for decisions, the more it gets corrupted, and the more it distorts what it monitors.
+Charles Goodhart noticed in 1975 that a statistical regularity tends to collapse once it is used for control. The version everyone quotes, "when a measure becomes a target, it ceases to be a good measure," is Marilyn Strathern's, from a 1997 paper on auditing British universities. Donald Campbell said the same of social indicators: the more a number is used for decisions, the more it gets corrupted, and the more it distorts what it monitors.
 
 **Goodhart's law** is [[framework-feedback|framework feedback]] in its most common form. The book's central case is the feed. Engagement began as a rough sign that people valued something, became the number platforms steer by, and now measures mostly how well content holds attention (the [[engagement-equilibrium|engagement equilibrium]]). The same happens to AI systems tuned to a score ([[objective-capture]], [[ai-benchmarks]]). The standard defenses are to keep measures apart from targets and to change them over time ([[framework-rotation]]).
 <!-- /card -->

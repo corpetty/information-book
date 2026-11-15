@@ -16,7 +16,7 @@ aliases:
 *Concept · part of [[selection-up-close|What the filter rewards]]*
 
 <!-- card -->
-Picture a status update that people copy and paste, some making small edits along the way. A study of more than 460 million instances of Facebook memes, *Information Evolution in Social Media*, found that the resulting spread of versions mostly looks like chance. Most variants spread no better or worse than their parent. They pile up by random copying plus a rich-get-richer effect, where versions with many copies get copied more. Statisticians call this a Yule process.
+Picture a status update that people copy and paste, some making small edits along the way. A study of more than 460 million instances of Facebook memes, *Information Evolution in Social Networks*, found that the resulting spread of versions mostly looks like chance. Most variants spread no better or worse than their parent. They pile up by random copying plus a rich-get-richer effect, where versions with many copies get copied more. Statisticians call this a Yule process.
 
 The **neutral drift baseline** is that picture: what spread looks like with no preference at work. It is a null model, a simple [[map-and-territory|map]] to hold real data against, and [[theory-ladenness|what you can see depends on the model you bring]]. [[selection|Selection]] only becomes visible as a departure from it, as when the same study found phrases ("paste if you agree") that reliably beat chance.
 

@@ -11,7 +11,7 @@ tags:
 *Example · part of [[the-finite-reader|The finite reader]]*
 
 <!-- card -->
-Stephen Hawking's *A Brief History of Time* explains general relativity, quantum mechanics and cosmology to readers with no physics background. Hawking and his editor reportedly removed every equation but one, E = mc², which was kept reluctantly. Analogies stand in for the technical apparatus, and qualifications are squeezed into single sentences. It has sold over 25 million copies. By *Lossy*'s estimate, the papers it popularizes have probably been read in full by fewer than ten thousand people.
+Stephen Hawking's *A Brief History of Time* explains general relativity, quantum mechanics and cosmology to readers with no physics background. Hawking's editor cut every equation past E = mc². Analogies stand in for the technical apparatus, and qualifications are squeezed into single sentences. It has sold over 25 million copies. The papers it popularizes have been read in full by a tiny fraction of that, mostly specialists.
 
 *Lossy* treats this as the standard case of shrinking an idea on purpose. The papers are the [[complex-form|full version]]. The bestseller is the [[compressed-form|short version]], designed to fit the [[receiver-budget|limited time and background]] of a general reader. Reach went up enormously, and the precision the technical version holds stayed behind. It is the same trade as [[matplotlib-vs-seaborn|an easy software tool built on top of a powerful one]].
 

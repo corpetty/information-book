@@ -15,7 +15,7 @@ In one South African family, one twin was classified as coloured and the other a
 
 About 100,000 people applied to be reclassified. Appeals averaged 14 months, and the person waited in limbo. In 1984 alone, 795 people were reclassified, 518 of them from coloured to white.
 
-Geoffrey Bowker and Susan Leigh Star treat this as the extreme case of [[classification-torque|torque]]: the categories overrode family, biography and how people identified themselves. A legal race category is real in the sense the book's [[three-realities|three realities]] calls intersubjective, real because a society enforces it. Treating it as a found thing is [[reification|reification]]. The census form made people [[legibility|legible]] to the state, and [[framework-feedback|framework feedback]] did the rest: the categories remade the lives they claimed to describe.
+Geoffrey Bowker and Susan Leigh Star analyze the case in Sorting Things Out. It is [[classification-torque|torque]], their term, at its most extreme: the categories overrode family, biography and how people identified themselves. A legal race category is real in the sense the book's [[three-realities|three realities]] calls intersubjective, real because a society enforces it. Treating it as a found thing is [[reification|reification]]. The census form made people [[legibility|legible]] to the state, and [[framework-feedback|framework feedback]] did the rest: the categories remade the lives they claimed to describe.
 
 The evidence is historical, drawn from one book's analysis of the records.
 <!-- /card -->

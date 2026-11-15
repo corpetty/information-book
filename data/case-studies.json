@@ -57,7 +57,7 @@
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
       ],
-      "plain": "The same early printing presses produced a witch-hunting manual that sold out and an astronomy book by Copernicus that hardly sold at all.",
+      "plain": "The same early printing presses produced a witch-hunting manual that ran through edition after edition and an astronomy book by Copernicus that reached only specialists.",
       "passages": [
         {
           "note": "selection-as-other-engine",
@@ -272,7 +272,7 @@
     {
       "id": "arsenic-life",
       "label": "Arsenic-life (Wolfe-Simon et al. 2010) — died at consensus",
-      "summary": "December 2010 Science paper claiming GFAJ-1 bacteria could substitute arsenic for phosphorus in DNA. NASA press conference; initial curation began. Within hours independent biochemists pointed out methodological problems; within 18 months Science published technical comments and refutation showing the original measurement had been contaminated. Scientific consensus rejected the claim. The meme never propagated past the initial press cycle because the consensus gate caught the variant before curation could compound it. The book's worked example of the consensus stage working as designed.",
+      "summary": "December 2010 Science paper claiming GFAJ-1 bacteria could substitute arsenic for phosphorus in DNA. NASA press conference; initial curation began. Within days the microbiologist Rosie Redfield posted a detailed critique; Science published eight technical comments in 2011 and, in 2012, two independent refutations showing that GFAJ-1's DNA held no arsenate and the original signal came from arsenic contamination. Consensus settled to negative inside eighteen months. The meme barely propagated past the first press cycle because the consensus gate caught the variant before curation could compound it. The book's worked example of the consensus stage working as designed.",
       "illustrates": [
         "selection"
       ],
@@ -284,7 +284,7 @@
         "case-studies-and-three-realities",
         "selection-as-other-engine"
       ],
-      "plain": "In 2010 NASA scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold.",
+      "plain": "In 2010 NASA-funded scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold.",
       "passages": [
         {
           "note": "case-studies-and-three-realities",
@@ -324,7 +324,7 @@
         "complexity-virality-tradeoff",
         "selection-as-other-engine"
       ],
-      "plain": "The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and films still tell the original story.",
+      "plain": "The famous 1971 prison experiment was shown to be coached and partly staged, yet textbooks and introductory courses still teach the original story.",
       "passages": [
         {
           "note": "case-studies-and-three-realities",
@@ -346,7 +346,7 @@
     {
       "id": "latin-mass-vs-vernacular",
       "label": "Latin Mass vs. vernacular liturgy",
-      "summary": "Pre-Vatican-II Catholicism: the Latin Mass is high optionality, low access — ritual carries enormous doctrinal precision encoded across centuries; full participation requires a trained reader of the apparatus. The vernacular reform shifted to high access, lower precision — local-language liturgy that the broader laity can participate in, with many of the Latin form's specific theological commitments either flattened or absent. Optionality-vs-access trade-off in religion; canonical example of religions scaling past their original community by institutionalizing the split between a preservation-side (specialist apparatus) and an access-side (lay participation form).",
+      "summary": "Pre-Vatican-II Catholicism: the Latin Mass is high optionality, low access — ritual carries a great deal of doctrinal precision, with centuries of qualification behind it; full participation requires a trained reader of the apparatus. The vernacular reform shifted to high access, lower precision — local-language liturgy that the broader laity can participate in, with some of the specific commitments the Latin form encoded arriving in language general enough to be read several ways. Optionality-vs-access trade-off in religion; the example of a tradition scaling past its founding community by making the trade through an institutional split, with the high-optionality form kept by a smaller specialist community while the high-access form reaches the wider audience.",
       "illustrates": [],
       "illustratesConcepts": [
         "compressed-form",
@@ -360,7 +360,7 @@
         "optionality-vs-access",
         "preservation-vs-training"
       ],
-      "plain": "When the Catholic Mass moved from Latin to local languages, far more people could take part, and much of the precise doctrine dropped out.",
+      "plain": "When the Catholic Mass moved from Latin to local languages, far more people could take part, at some cost in doctrinal precision.",
       "passages": [
         {
           "note": "optionality-vs-access",
@@ -382,7 +382,7 @@
     {
       "id": "brief-history-of-time",
       "label": "A Brief History of Time",
-      "summary": "Hawking's 1988 popularization of general relativity, quantum mechanics, and cosmology — written for readers with no physics background. By acknowledged design every equation past E=mc² was removed; technical apparatus was substituted with analogies; qualifications were compressed into single sentences. Sold over 25 million copies. The original papers Hawking popularized have probably been read in full by under ten thousand people. Optionality-vs-access trade in scientific popularization, with the same shape as software stratification: the popular form gains reach by trading the precision the technical form preserves.",
+      "summary": "Hawking's 1988 popularization of general relativity, quantum mechanics, and cosmology — written for readers with no physics background. Hawking's editor cut every equation past E=mc², and the book is full of choices about which apparatus to skip and which analogy to substitute for which equation. It sold more than 25 million copies; the papers it popularized have been read in full by a tiny fraction of that, mostly specialists. Optionality-vs-access trade in scientific popularization, with the same shape as software stratification: the popular form gains reach by trading the precision the technical form preserves.",
       "illustrates": [],
       "illustratesConcepts": [
         "compressed-form",
@@ -445,6 +445,10 @@
         {
           "note": "optionality-vs-access",
           "section": "What the curve is, and what it isn't"
+        },
+        {
+          "note": "optionality-vs-access",
+          "section": "Where I'm still uncertain"
         }
       ],
       "related": [
@@ -458,7 +462,7 @@
     {
       "id": "voyager-golden-record",
       "label": "The Voyager Golden Record",
-      "summary": "Hofstadter's canonical illustration of the three-layer message. A record launched into deep space with no shared context to assume: the recorded sounds and images are the inner message, the playback diagrams etched on the cover are the outer message, and the artifact's evident designed-ness is the frame message. The rare case where all three layers had to be shipped together.",
+      "summary": "The book's illustration of Hofstadter's three-layer model of a message. A record launched into deep space with no shared context to assume: the recorded sounds and images are the inner message, the playback diagrams etched on the cover are the outer message, and the artifact's evident designed-ness is the frame message. The rare case where all three layers had to be shipped together.",
       "illustrates": [],
       "illustratesConcepts": [
         "three-layer-message"
@@ -666,20 +670,18 @@
       "illustrates": [
         "mechanism:framework-pricing",
         "concept:cost-asymmetry",
-        "concept:option-space",
-        "concept:compressed-form-as-authority"
+        "concept:option-space"
       ],
       "appearsIn": [],
       "evidencedBy": [
         "frameworks-report"
       ],
       "evidence": "Officially endorsed (the accident board adopted Tufte's analysis), but a single case in which the slide was one factor among many organizational causes.",
-      "plain": "Engineers warned NASA about possible shuttle damage on a bullet-point slide, and the layout buried the caveats that mattered most.",
+      "plain": "Engineers briefed NASA on possible shuttle damage with bullet-point slides, and the layout buried the caveats that mattered most.",
       "related": [
         "concept:cost-asymmetry",
         "concept:option-space",
         "concept:compressed-form",
-        "concept:compressed-form-as-authority",
         "case:calculus-notation"
       ],
       "definedIn": [
@@ -695,12 +697,11 @@
     {
       "id": "scientific-forestry",
       "label": "Scientific forestry and the Normalbaum",
-      "summary": "From about 1765 to 1800, Prussian and Saxon foresters defined a standardized tree (the Normalbaum), then cleared underbrush, reduced species often to monoculture and planted in rows, replacing forests that were about three-quarters broadleaf with Norway spruce or Scotch pine. The first rotation grew well; after the second, Scott quotes production losses of 20 to 30 percent over two or three generations, and the word Waldsterben (forest death) entered German. It shows a simplified record being used to remake the reality it described, and the remade reality failing.",
+      "summary": "From about 1765 to 1800, Prussian and Saxon foresters defined a standardized tree (the Normalbaum), then cleared underbrush, reduced species often to monoculture and planted in rows, replacing forests that were about three-quarters broadleaf largely with Norway spruce or Scotch pine. The first rotation grew well; after the second, Scott quotes production losses of 20 to 30 percent over two or three generations, and the word Waldsterben (forest death) entered German. It shows a simplified record being used to remake the reality it described, and the remade reality failing.",
       "illustrates": [
         "concept:legibility",
         "mechanism:framework-feedback",
-        "concept:map-and-territory",
-        "concept:reification"
+        "concept:map-and-territory"
       ],
       "appearsIn": [
         "information-landscape"
@@ -715,8 +716,7 @@
         "concept:legibility",
         "mechanism:framework-feedback",
         "concept:map-and-territory",
-        "case:apartheid-classification",
-        "concept:reification"
+        "case:apartheid-classification"
       ],
       "definedIn": [
         "thinking-inside-frameworks"
@@ -768,7 +768,7 @@
     {
       "id": "apartheid-classification",
       "label": "Apartheid race classification",
-      "summary": "Under the 1950 Population Registration Act and Group Areas Act, South Africans were classified by racial group, initially from 1951 census returns, using criteria of appearance and general acceptance and repute and devices such as the pencil test. About 100,000 people applied for reclassification, appeals averaged 14 months, and in 1984 alone 795 people were reclassified (518 from coloured to white); in one family, twins were classified differently. Bowker and Star present it as classification torque at its most extreme: categories overriding family, biography and self-identification.",
+      "summary": "Under the 1950 Population Registration Act and Group Areas Act, South Africans were classified by racial group, initially from 1951 census returns, using criteria of appearance and general acceptance and repute and devices such as the pencil test. About 100,000 people applied for reclassification, appeals averaged 14 months, and in 1984 alone 795 people were reclassified (518 from coloured to white); in one family, twins were classified differently. Bowker and Star analyze it in Sorting Things Out (ch. 6); it is classification torque at its most extreme: categories overriding family, biography and self-identification.",
       "illustrates": [
         "concept:classification-torque",
         "concept:legibility",
@@ -827,7 +827,7 @@
     {
       "id": "asian-disease-problem",
       "label": "The Asian disease problem",
-      "summary": "Tversky and Kahneman (Science, 1981) found that 72% of subjects chose a certain program when outcomes were described as lives saved, while 78% chose a risky program when the identical outcomes were described as lives lost. Many Labs (2014) reproduced the reversal in 31 of 36 samples (6,344 participants), with none reversed, and a 2020 survey of 88,181 people in 47 countries found it again. It is the best-replicated demonstration that logically equivalent descriptions produce different choices.",
+      "summary": "Tversky and Kahneman (Science, 1981) found that 72% of subjects chose a certain program when outcomes were described as lives saved, while 78% chose a risky program when the identical outcomes were described as lives lost. Many Labs (2014) reproduced the reversal in 31 of 36 samples (6,344 participants), with none reversed, and a 2020 survey of 88,181 people in 47 countries found it again. It is a robustly replicated demonstration that logically equivalent descriptions produce different choices.",
       "illustrates": [
         "concept:framing-effect",
         "concept:default-setting",
@@ -838,7 +838,7 @@
         "frameworks-report",
         "framing-of-decisions"
       ],
-      "evidence": "Robust: replicated in 31 of 36 Many Labs samples and again across 47 countries, though the effect is smaller than in the 1981 original.",
+      "evidence": "Robust: replicated in 31 of 36 Many Labs samples, with a smaller effect than in the 1981 original, and found again across 47 countries.",
       "plain": "Describe the same outcomes as lives saved or as lives lost, and most people switch which plan they choose.",
       "related": [
         "concept:framing-effect",
@@ -1104,6 +1104,16 @@
         "case:prompt-format-sensitivity",
         "mechanism:engagement-equilibrium",
         "concept:inductive-bias"
+      ],
+      "passages": [
+        {
+          "note": "thinking-inside-frameworks",
+          "section": "The clearest case is a machine"
+        },
+        {
+          "note": "ai-as-new-node",
+          "section": "Three new flavors of capture"
+        }
       ]
     }
   ]

@@ -15,7 +15,7 @@ aliases:
 *Concept · part of [[maps-and-territories|When the map moves the territory]]*
 
 <!-- card -->
-Compare two pieces of software that do the same job. One was built by volunteers scattered around the world, loosely connected. The other was built by one company's tightly knit staff. Researchers who made this comparison, pair after pair, found the volunteers' software was built from much more separate, swappable parts.
+Compare two pieces of software that do the same job. One was built by an open-source community, loosely connected. The other was built by one company's tightly knit staff. Researchers who made this comparison, pair after pair, found the community's software was built from much more separate, swappable parts.
 
 Melvin Conway said in 1968 that systems mirror the communication structure of the organizations that design them. Teams that rarely talk build components that barely depend on each other. Teams that talk constantly build things that are tangled together. A review of 142 studies found strong support in most of them, with open collaborative projects as the main exception.
 

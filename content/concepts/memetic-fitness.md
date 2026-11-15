@@ -17,7 +17,7 @@ Chain posts that say "paste if you agree" get copied more than posts that don't.
 
 The book calls this bundle **memetic fitness**: what a [[selection|gate]] rewards when a person, an editor or an algorithm decides what to pass on. Emotional charge, identity, status, a call to action, novelty, controversy. "Fitness" carries no praise here. The criteria are local and uncoordinated, and none of them is truth.
 
-It explains cases that loss in retelling cannot. A conspiracy theory and its correction both fit in a sentence, but only one offers identity and a story. The same presses printed a witch-hunting manual and Copernicus, and [[hammer-vs-copernicus|only the manual sold out]]. The book goes on to argue that raw emotion is the floor of an [[engagement-equilibrium|engagement-tuned system]], notes that people say they [[paradox-of-virality|do not want this content to win]], and names the idea-side score [[handle-ability|handle-ability]].
+It explains cases that loss in retelling cannot. A conspiracy theory and its correction both fit in a sentence, but only one offers identity and a story. The same presses printed a witch-hunting manual and Copernicus, and [[hammer-vs-copernicus|only the manual reached a mass readership]]. The book goes on to argue that raw emotion is the floor of an [[engagement-equilibrium|engagement-tuned system]], notes that people say they [[paradox-of-virality|do not want this content to win]], and names the idea-side score [[handle-ability|handle-ability]].
 <!-- /card -->
 
 ## Read the full argument

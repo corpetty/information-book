@@ -17,11 +17,11 @@ aliases:
 <!-- card -->
 Look down at a keyboard. The letters are in an order settled long ago, and you still use it because you learned on it, every keyboard is made that way, and switching alone would cost you a great deal and gain you little ([[qwerty]]).
 
-**Path dependence** is the economists' name for this. Early choices, sometimes arbitrary ones, get entrenched by training, tooling, standards and the plain need to coordinate with everyone else. A framework can survive this way long after it stopped being the best fit. British mathematicians kept Newton's notation for generations, partly out of loyalty ([[calculus-notation]]).
+**Path dependence** is the economists' name for this. Early choices, sometimes arbitrary ones, get entrenched by training, tooling, standards and the plain need to coordinate with everyone else. A framework can survive this way long after it stopped being the best fit. British mathematicians kept Newton's notation while the Continent built on Leibniz's, partly out of loyalty ([[calculus-notation]]).
 
-One caution. The keyboard is the famous example and a disputed one: the evidence that a better layout was ever on offer is weak. It is safest as a picture of coordination lock-in, with no claim that the outcome was a mistake.
+One caution. The keyboard is the famous example and a disputed one: critics argue the evidence that a better layout was ever on offer is weak. It is safest as a picture of coordination lock-in, with no claim that the outcome was a mistake.
 
-Lock-in is what turns a [[framework]]'s [[framework-pricing|price list]] into something closer to a wall over time. Any one person could switch, and the cost of switching alone keeps almost everyone in place. It is the long-run limit on [[influence-not-imprisonment|influence, not imprisonment]], and one reason the book treats rebuilding institutions as the [[work-of-generations|work of generations]].
+Lock-in is what turns a [[framework]]'s [[framework-pricing|price list]] into something closer to a wall over time. Any one person could switch, and the cost of switching alone keeps almost everyone in place. It is the long-run limit on [[influence-not-imprisonment|influence, not imprisonment]], and it fits the book's view that rebuilding institutions is the [[work-of-generations|work of generations]].
 <!-- /card -->
 
 ## Read the full argument

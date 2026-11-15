@@ -1,6 +1,6 @@
 ---
 title: Arsenic-life (Wolfe-Simon et al. 2010) — died at consensus
-description: "In 2010 NASA scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold."
+description: "In 2010 NASA-funded scientists announced a bacterium built with arsenic in its DNA, and other scientists disproved it before the story could take hold."
 tags:
   - case-study
   - graph-node
@@ -13,7 +13,7 @@ tags:
 <!-- card -->
 In December 2010 NASA held a press conference for a paper in *Science*. A bacterium from California's Mono Lake, the authors said, could build its DNA with arsenic in place of phosphorus. Stories about "alien life on Earth" began within days.
 
-Within hours, other biochemists were pointing out problems with the methods. Within weeks, labs were trying to repeat the result. Within eighteen months *Science* published a refutation: the bacterium's DNA contained no arsenic, and the original measurement had been contaminated. Coverage spiked for about two days and went quiet.
+Within days, the microbiologist Rosie Redfield had posted a detailed critique of the methods. Within weeks, labs were trying to repeat the result. Within eighteen months *Science* published two independent refutations: the bacterium's DNA contained no arsenic, and the original measurement had been contaminated. Coverage spiked for about two days and went quiet.
 
 The book includes this case to show the system working. A finding passes several checkpoints on its way to the public, each one a round of [[selection|selection]]. Here the scientific community's check caught the error before the journalists and popularizers of the [[bridge-zone|bridge zone]] could build a lasting story on it. Without this case the book's diagnosis would read as blanket pessimism. Set it beside [[power-posing|power posing]], where the correction came after the story had spread. The book suggests the check works better for extraordinary claims in the hard sciences than for crowd-pleasing claims in social science, and ties the difference to [[engagement-equilibrium|the economics of attention]].
 <!-- /card -->

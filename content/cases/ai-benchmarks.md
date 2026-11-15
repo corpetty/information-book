@@ -22,6 +22,11 @@ The evidence is an argued critique from inside the field, with no measurement of
 
 **How solid is this?** A published critique by researchers in the field, argued rather than measured; it fits the widely documented Goodhart and Campbell pattern but carries no effect size of its own.
 
+## Read the full argument
+
+- [[thinking-inside-frameworks#The clearest case is a machine|Thinking Inside Frameworks]], section "The clearest case is a machine"
+- [[ai-as-new-node#Three new flavors of capture|Chapter 11: AI as a New Kind of Node]], section "Three new flavors of capture"
+
 ## How it connects
 
 - **What it shows:** [[goodharts-law|Goodhart's law]], [[objective-capture|Objective capture]], [[theory-ladenness|Theory-ladenness and paradigms]]

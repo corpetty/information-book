@@ -18,7 +18,7 @@ aliases:
 <!-- card -->
 Sort rocks into granite and basalt and the rocks do not care. Sort people into a diagnosis, a credit grade or a type of student and they notice. Some lean into the label, some fight it, some reorganize their lives around it. The group you end up with is no longer the group you first described.
 
-The philosopher Ian Hacking calls this a **looping effect**, and uses it to separate human kinds from natural kinds. A classification of people is a moving target, because the people classified respond to the classification, and that changes the people and therefore the category.
+Ian Hacking calls this a **looping effect**, and uses it to separate human kinds from natural kinds. A classification of people is a moving target, because the people classified respond to the classification, and that changes the people and therefore the category.
 
 It is [[framework-feedback|framework feedback]] applied to the sorting of human beings. It sits beside [[classification-torque|torque]] (what categories do to lives) and [[performativity]] (what models do to markets). It matters for the book's account of things that are real because people agree on them (the [[three-realities|three realities]]): a category of people is partly [[constitutive-transmission|made by being used]]. The book has flagged Hacking's work as owed a closer reading.
 <!-- /card -->

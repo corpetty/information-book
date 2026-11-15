@@ -1,6 +1,6 @@
 ---
 title: Capture asymmetry (training vs. preservation)
-description: "A corrupted library can be rebuilt from other sources, but people trained to read the world wrongly stay that way, so corrupted teaching is worse."
+description: "A corrupted library can be rebuilt from other sources, but people trained to read wrongly are slow to retrain, so corrupted teaching is usually worse."
 tags:
   - concept
   - graph-node
@@ -18,7 +18,7 @@ You can replace a corrupted book. You cannot replace a corrupted generation, at 
 
 The book splits what institutions do for hard knowledge into [[preservation-vs-training-pair|two jobs]]: keeping the full version alive in archives and journals, and training people who can read it. Either job can be captured, meaning bent to serve whoever controls it. A captured archive holds a slanted version, but other archives may exist, the original evidence is still out there, and outside scholars can rebuild it. A captured school slants the readers themselves. What they were trained with is the equipment they read with, so they take in new evidence through it. Each captured class also trains the next.
 
-So the book argues that captured training does more damage, recovers more slowly, and should be defended first. The [[institutional-decay-rates|different speeds at which the two halves decay]] point the same way. The capture taxonomy later widens this into a general rule about [[consumer-key-vs-surface-capture|capturing people versus capturing surfaces]], which also covers [[corpus-capture|AI training data]]. The book calls the asymmetry an intuition it has not yet tested against cases.
+So the book argues that captured training does more damage, recovers more slowly, and should be defended first. The [[institutional-decay-rates|different speeds at which the two halves decay]] point the same way. The capture taxonomy later widens this into a general rule about [[consumer-key-vs-surface-capture|capturing people versus capturing surfaces]], which also covers [[corpus-capture|AI training data]]. The book tests the asymmetry against Lysenko's Soviet biology and the Reformation, and concludes it is a strong tendency, not a law.
 <!-- /card -->
 
 ## Read the full argument

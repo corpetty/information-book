@@ -1,6 +1,6 @@
 ---
 title: Hammer of the Witches vs. Copernicus
-description: "The same early printing presses produced a witch-hunting manual that sold out and an astronomy book by Copernicus that hardly sold at all."
+description: "The same early printing presses produced a witch-hunting manual that ran through edition after edition and an astronomy book by Copernicus that reached only specialists."
 tags:
   - case-study
   - graph-node
@@ -11,7 +11,7 @@ tags:
 *Example · part of [[the-medium|The medium sets the rules]]*
 
 <!-- card -->
-Yuval Noah Harari pairs two books from the early printing-press era. *The Hammer of the Witches* was a short, emotionally loaded manual for finding and prosecuting witches. It sold out and fixed an image of the witch that still lingers. Copernicus's *On the Revolutions of the Heavenly Bodies*, the case for the Earth circling the Sun, was called "an all-time worst seller" by Arthur Koestler.
+Yuval Noah Harari pairs two books from the early printing-press era. *The Hammer of the Witches* (1486) was a short, emotionally loaded manual for finding and prosecuting witches. It ran through edition after edition and fixed an image of the witch that still lingers. Copernicus's *On the Revolutions of the Heavenly Bodies* (1543), the case for the Earth circling the Sun, was called "an all-time worst seller" by Arthur Koestler, though Owen Gingerich later showed its first edition sold out. The contrast is popular against specialist reach.
 
 A first reading says the short simple book beat the long hard one: the [[compressed-form|compressed form]] travels. True, the book says, but incomplete. Both were printed on the same press, so the cost of [[transport|making and moving copies]] was identical. The difference was [[selection|selection]]. The *Hammer* offered fear, urgency, a clear enemy, something to do (find the witches) and a story with the reader as hero. Copernicus offered a redrawn sky with no enemy and nothing to do. Measured against [[memetic-fitness|what human gates reward]], the contest was lopsided.
 

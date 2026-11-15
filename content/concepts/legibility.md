@@ -15,7 +15,7 @@ aliases:
 *Concept · part of [[maps-and-territories|When the map moves the territory]]*
 
 <!-- card -->
-An eighteenth-century forester looks at a forest and writes down one number: the volume of timber that can be sold. Fungi, underbrush, birds and the mix of species are all there in front of him. None of them has a column in the ledger, so none of them enters the plan.
+An eighteenth-century forester looks at a forest and writes down one number: the volume of timber that can be sold. Underbrush, soil life and the mix of species are all there in front of him. None of them has a column in the ledger, so none of them enters the plan.
 
 James C. Scott calls this **legibility**: arranging a messy reality so it can be read, recorded and administered from a distance. States do it to populations so they can tax, conscript and keep order. He compares the results to abridged maps, with one difference. Backed by power, these maps let much of the reality they depict be remade ([[scientific-forestry]]).
 

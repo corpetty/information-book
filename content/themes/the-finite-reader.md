@@ -24,7 +24,7 @@ Each one is a short page. Walk them in this order, or start with whichever catch
 4. [[complex-form|Complex form]]: The full version of an idea keeps what the short version drops, but it only makes sense to someone who already knows a lot.
 5. [[compressed-form|Compressed form]]: The short, easy version of an idea spreads fast because it asks almost nothing of the person hearing it.
 6. [[matplotlib-vs-seaborn|matplotlib vs. seaborn]] *(example)*: One charting tool lets you do anything but is hard to learn; another is easy because it has already made most choices for you.
-7. [[latin-mass-vs-vernacular|Latin Mass vs. vernacular liturgy]] *(example)*: When the Catholic Mass moved from Latin to local languages, far more people could take part, and much of the precise doctrine dropped out.
+7. [[latin-mass-vs-vernacular|Latin Mass vs. vernacular liturgy]] *(example)*: When the Catholic Mass moved from Latin to local languages, far more people could take part, at some cost in doctrinal precision.
 8. [[brief-history-of-time|A Brief History of Time]] *(example)*: Stephen Hawking reached millions of readers by cutting nearly every equation from his physics book, trading exactness for reach.
 9. [[plain-language-law|Statutes vs. plain-language legal summaries]] *(example)*: A one-line summary of a law is easy to read and right about the usual case, but wrong about edge cases the full text handles.
 10. [[complexity-ceiling|Complexity ceiling]]: The more people an idea has to pass through, the simpler it must become to survive the trip.

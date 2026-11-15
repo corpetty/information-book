@@ -928,7 +928,7 @@
     {
       "id": "corpus-capture",
       "label": "Corpus capture",
-      "summary": "Capture of an LLM by selection of the training corpus. The most upstream version of capture in an LLM: choosing what data the model was fitted to (what included, in what proportions, with what filtering) tilts every output regardless of how careful the runtime gate is. A captured corpus produces a captured outer message — every output is decoded by receivers using the very preconditions the corpus installed. Will be unified with related flavors in the forthcoming capture-taxonomy note.",
+      "summary": "Capture of an LLM by selection of the training corpus. The most upstream version of capture in an LLM: choosing what data the model was fitted to (what included, in what proportions, with what filtering) tilts every output regardless of how careful the runtime gate is. A captured corpus produces a captured outer message — every output is decoded by receivers using the very preconditions the corpus installed. The capture-taxonomy interlude places it alongside the other flavors of capture.",
       "aliases": [
         "corpus capture",
         "training-corpus capture",
@@ -1061,7 +1061,7 @@
         "political-economy-of-attention",
         "ai-as-new-node"
       ],
-      "plain": "A corrupted library can be rebuilt from other sources, but people trained to read the world wrongly stay that way, so corrupted teaching is worse.",
+      "plain": "A corrupted library can be rebuilt from other sources, but people trained to read wrongly are slow to retrain, so corrupted teaching is usually worse.",
       "passages": [
         {
           "note": "preservation-vs-training",
@@ -1083,7 +1083,7 @@
     {
       "id": "institutional-decay-rates",
       "label": "Differential decay rates (preservation vs. training)",
-      "summary": "Preservation institutions degrade slowly — archives and journals can run on inertia for decades with the loss mostly invisible until someone tries to use the form. Training institutions degrade within a generation — every cohort needs to be carried fresh, and once the producers of versatile experts stop producing, supply runs out within twenty or thirty years. Together with the capture asymmetry, this makes training the more time-sensitive function to defend even though preservation is what the institution rhetorically advertises.",
+      "summary": "Preservation institutions degrade slowly — archives and journals can run on inertia for decades with the loss mostly invisible until someone tries to use the form. Training institutions degrade within a generation — every cohort needs to be carried fresh, and once the producers of versatile experts stop producing, supply runs out within a working lifetime. Together with the capture asymmetry, this makes training the more time-sensitive function to defend even though preservation is what the institution rhetorically advertises.",
       "aliases": [
         "decay rates",
         "differential decay",
@@ -1294,6 +1294,20 @@
         "concept:compressed-form",
         "concept:receiver-budget",
         "concept:map-and-territory"
+      ],
+      "passages": [
+        {
+          "note": "optionality-vs-access",
+          "section": "What the curve is, and what it isn't"
+        },
+        {
+          "note": "bridge-nodes-and-versatile-expertise",
+          "section": "The curse of expertise"
+        },
+        {
+          "note": "ai-as-new-node",
+          "section": "The summary that replaces the source"
+        }
       ]
     },
     {
@@ -1355,8 +1369,8 @@
       "plain": "How far an idea spreads depends on what else is competing for people's attention at the same moment.",
       "passages": [
         {
-          "note": "political-economy-of-attention",
-          "section": "The argument's dents"
+          "note": "transport-vs-selection",
+          "section": "The two views"
         },
         {
           "note": "selection-as-other-engine",
@@ -1431,10 +1445,6 @@
         {
           "note": "selection-as-other-engine",
           "section": "What the gate rewards"
-        },
-        {
-          "note": "political-economy-of-attention",
-          "section": "The argument's dents"
         }
       ],
       "related": [
@@ -1506,10 +1516,6 @@
         {
           "note": "bridge-zone-distortion",
           "section": "Who lives here"
-        },
-        {
-          "note": "political-economy-of-attention",
-          "section": "Two kinds of capture"
         }
       ],
       "related": [
@@ -1661,11 +1667,11 @@
       "passages": [
         {
           "note": "emotional-memetics",
-          "section": "Engaging Mercier"
+          "section": "Four lines of evidence"
         },
         {
-          "note": "truth-compression-and-when-each-wins",
-          "section": "Three things compression can do to truth"
+          "note": "emotional-memetics",
+          "section": "Engaging Mercier"
         }
       ],
       "related": [
@@ -2719,10 +2725,6 @@
       "passages": [
         {
           "note": "thinking-inside-frameworks",
-          "section": "A framework is a medium you think in"
-        },
-        {
-          "note": "thinking-inside-frameworks",
           "section": "The clearest case is a machine"
         }
       ],
@@ -2940,7 +2942,7 @@
           "section": "The pipeline is wired into its own cargo"
         }
       ],
-      "plain": "A model that enough people use to make decisions stops merely describing the world and starts pushing the world toward itself."
+      "plain": "A model that enough people use to make decisions can stop merely describing the world and start pushing the world toward itself."
     },
     {
       "id": "looping-effects",

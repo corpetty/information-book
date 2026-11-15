@@ -23,7 +23,6 @@ This is the one field that treats a [[framework]]'s bias as unavoidable and choo
 
 ## Read the full argument
 
-- [[thinking-inside-frameworks#A framework is a medium you think in|Thinking Inside Frameworks]], section "A framework is a medium you think in"
 - [[thinking-inside-frameworks#The clearest case is a machine|Thinking Inside Frameworks]], section "The clearest case is a machine"
 
 ## How it connects

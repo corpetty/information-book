@@ -26,7 +26,7 @@ Each one is a short page. Walk them in this order, or start with whichever catch
 6. [[self-vs-external-capture|Self-capture vs. external capture]]: An institution can be bent by outsiders gaming its rules or by its own way of making money, and the second is harder to undo.
 7. [[capture-taxonomy|Capture taxonomy (substrate × source × target asymmetry)]]: Anything that filters what people see or learn can be turned against its purpose; the questions are which filter, by whom, and how fixable.
 8. [[consumer-key-vs-surface-capture|Consumer-key vs. surface capture]]: Rigging what people are taught does deeper, longer-lasting damage than rigging what they are shown, because you cannot easily unteach a person.
-9. [[capture-asymmetry|Capture asymmetry (training vs. preservation)]]: A corrupted library can be rebuilt from other sources, but people trained to read the world wrongly stay that way, so corrupted teaching is worse.
+9. [[capture-asymmetry|Capture asymmetry (training vs. preservation)]]: A corrupted library can be rebuilt from other sources, but people trained to read wrongly are slow to retrain, so corrupted teaching is usually worse.
 
 ---
 

@@ -16,9 +16,9 @@ aliases:
 *Concept · part of [[frameworks|Thinking inside frameworks]]*
 
 <!-- card -->
-The Pirahã people of the Amazon have no words for exact numbers. If language decided what could be thought, they could not lay out one row of objects to match another. They can, perfectly, as long as both rows stay in view. They slip only when they have to carry the number in memory ([[piraha-numbers]]).
+The Pirahã people have no words for exact numbers. If language decided what could be thought, they could not match one set of objects exactly with another. They can, perfectly, as long as the objects stay in view. They slip only when they have to carry the number in memory ([[piraha-numbers]]).
 
-That result is typical of the whole field. Wherever the strong claim (a [[framework]] fixes what its users can think) has been tested hard, it has failed. What survives is weaker and sturdier: a measurable lean toward whatever the framework makes easy, visible or rewarded. Russian speakers' edge with blues vanishes when their inner speech is kept busy ([[russian-blues]]). Chess experts escape a familiar pattern when it is plainly a blunder ([[chess-einstellung]]).
+That result is typical of the whole field. Where the strong claim (a [[framework]] fixes what its users can think) has been tested hard, it has mostly failed. What survives is weaker and sturdier: a measurable lean toward whatever the framework makes easy, visible or rewarded. Russian speakers' edge with blues vanishes when their inner speech is kept busy ([[russian-blues]]). Chess experts escape a familiar pattern when it is plainly a blunder ([[chess-einstellung]]).
 
 The book takes this as a correction to itself. It had said that a thought the medium cannot hold "never forms." The evidence supports "rarely forms": the thought is on the menu at a higher [[framework-pricing|price]]. That changes what can be done. A wall has to be torn down. A price can be paid, by a reader with enough [[want-as-prime-mover|reason to want to]]. The open worry is time: a price nobody pays for a generation may harden into [[path-dependence|lock-in]].
 <!-- /card -->
