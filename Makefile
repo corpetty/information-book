@@ -25,6 +25,7 @@
 #   make site-check  verify committed pages are fresh + internal links resolve
 #   make site-clean  remove the site build output and cache
 #   make viewer-stage  copy src/ + data/*.json into site/public/{graph,data}
+#   make play-stage  copy game/ into site/public/play
 #   make test      run the graph regression tests (snapshot + invariants)
 #   make check     strict build (warnings fatal) + tests — what CI gates on
 #   make accept-stats  refresh data/expected-stats.json after an intentional graph change
@@ -45,7 +46,7 @@ CATALOGS := $(DATA)/mechanisms.json $(DATA)/concepts.json $(DATA)/questions.json
             $(DATA)/slug-aliases.json
 
 .DEFAULT_GOAL := all
-.PHONY: all build serve stats sources clean help lint-prose harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages interlink site-build site-serve site-clean site-check viewer-stage talk-stage site-preview test check accept-stats
+.PHONY: all build serve stats sources clean help lint-prose harvest catalog aggregate-interpretive extract-build context citation-pages concept-pages interlink site-build site-serve site-clean site-check viewer-stage talk-stage play-stage site-preview test check accept-stats
 
 all: build
 
@@ -68,12 +69,14 @@ stats: build
 # plus structural invariants. The test file runs the build itself.
 test:
 	@node --test $(SCRIPTS)/*.test.js
+	@node --test game/*.test.js
 
 # What CI runs before building the site: a strict build (warnings are
 # fatal) plus the regression tests. Local `make build` stays lenient.
 check:
 	@STRICT=1 node $(SCRIPTS)/build-graph.js
 	@node --test $(SCRIPTS)/*.test.js
+	@node --test game/*.test.js
 
 # After an INTENTIONAL graph change (new claim, concept, edge, …), refresh
 # the committed snapshot the tests compare against. Commit it with the change.
@@ -130,6 +133,13 @@ talk-stage:
 	@mkdir -p site/public/talk
 	@cp presentation/lossy-talk.html site/public/talk/index.html
 
+# Stage the Courier game (game/) at /play/ in the built site. Same
+# post-build pattern as /talk/ and /graph/: kept out of content/ because
+# Quartz would strip the .html extension.
+play-stage:
+	@mkdir -p site/public/play
+	@cp game/index.html game/courier.css game/courier-data.js game/courier-engine.js game/courier-ui.js site/public/play/
+
 # Regenerate citation pages from data/sources.json. Idempotent — files
 # carrying the generator marker get overwritten, hand-written ones are
 # left alone. Depends on `build` so the back-pointer pass can read
@@ -179,6 +189,7 @@ site-build: citation-pages concept-pages
 	@node $(SCRIPTS)/fix-typography.js
 	@$(MAKE) viewer-stage
 	@$(MAKE) talk-stage
+	@$(MAKE) play-stage
 	@cp site/CNAME site/public/CNAME
 
 # Quartz dev server (hot-reloads prose). Note: subsequent rebuilds wipe
