@@ -42,9 +42,16 @@ game/
   bridge.test.js      node --test
   bridge.html         page shell
   bridge-ui.js        renders state, dispatches actions; nothing else
+
+  KEEPER-PLAN.md      the build plan for part five
+  keeper-data.js      all Keeper content: rules, funding, outcomes, cards, copy
+  keeper-engine.js    pure logic and state machine, no DOM
+  keeper.test.js      node --test
+  keeper.html         page shell
+  keeper-ui.js        renders state, dispatches actions; nothing else
 ```
 
-All behaviour lives in the four engines as pure functions; the UIs only draw
+All behaviour lives in the five engines as pure functions; the UIs only draw
 the current state and turn clicks into actions.
 
 ## Part two: the Desk
@@ -83,6 +90,19 @@ and the curse of expertise, polarization via distrust and the Zollman effect (Ch
 and survivable polarization (Ch. 12). `BRIDGE-PLAN.md` fixes every line and outcome;
 `bridge.test.js` checks the outcome table, all 243 paths (50 end with both towns
 roughly right: 49 through the panel, 1 kept apart, none through the shared forum), two
+playthroughs, and every quote against its chapter.
+
+## Part five: the Keeper
+
+`keeper.html` is reached from the Bridge's end screen and published at
+[lossybook.com/play/keeper.html](https://lossybook.com/play/keeper.html). The player
+keeps a library through four generations, spending each generation's funds on copying
+texts (which fade a quarter per generation) or teaching readers (who all retire each
+generation). An endowment trades funds now for funds later; in generation 3 a summary
+engine offers readers who cannot read the texts. It covers the preservation and training
+pair, differential decay and the capture asymmetry (Ch. 8), and the work of generations
+(Ch. 12). `KEEPER-PLAN.md` fixes every rule, number and line; `keeper.test.js` checks
+all 2,100 paths (147 keep books and readers, none with the summary engine), four
 playthroughs, and every quote against its chapter.
 
 ## Tests

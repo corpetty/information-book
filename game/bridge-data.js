@@ -149,6 +149,7 @@ export const COPY = {
     ],
     replay: 'Build the bridge again',
     links: [
+      { label: 'Next: keep the library', href: './keeper.html' },
       { label: 'Back to Courier', href: './' },
       { label: 'The Reader', href: './reader.html' },
       { label: 'Read Chapter 9', href: '../integration-problem' },
