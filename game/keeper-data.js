@@ -45,7 +45,7 @@ export const CARDS = [
   { id: 'institutional-decay-rates', title: 'Books fade, readers retire', href: '../concepts/institutional-decay-rates',
     text: 'Your archive lost a quarter a generation. Your readers were all gone each generation unless you had trained new ones. Training is the half that decays fast.' },
   { id: 'capture-asymmetry', title: 'The corrupted generation', href: '../concepts/capture-asymmetry',
-    text: 'The summary engine’s students could not read the books, so they could not teach anyone who could. A bad copy can be replaced from another; a generation cannot.' },
+    text: 'Had the summary engine taught a generation, its students could not have read the books, or taught anyone who could. A bad copy can be replaced from another; a generation cannot.' },
   { id: 'work-of-generations', title: 'The work of generations', href: '../concepts/work-of-generations',
     text: 'Nothing you did paid off inside one generation. Institutions that hold hard knowledge are built, and lost, on that timescale.' },
 ];
