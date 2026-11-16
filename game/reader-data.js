@@ -214,6 +214,7 @@ export const COPY = {
     ],
     replay: 'Read the feed again',
     links: [
+      { label: 'Next: build the bridge', href: './bridge.html' },
       { label: 'Back to Courier', href: './' },
       { label: 'The Desk', href: './desk.html' },
       { label: 'Read Chapter 1', href: '../the-information-landscape' },

@@ -35,9 +35,16 @@ game/
   reader.test.js      node --test
   reader.html         page shell
   reader-ui.js        renders state, dispatches actions; nothing else
+
+  BRIDGE-PLAN.md      the build plan for part four
+  bridge-data.js      all Bridge content: towns, messengers, framings, cards, copy
+  bridge-engine.js    pure logic and state machine, no DOM
+  bridge.test.js      node --test
+  bridge.html         page shell
+  bridge-ui.js        renders state, dispatches actions; nothing else
 ```
 
-All behaviour lives in the three engines as pure functions; the UIs only draw
+All behaviour lives in the four engines as pure functions; the UIs only draw
 the current state and turn clicks into actions.
 
 ## Part two: the Desk
@@ -65,6 +72,18 @@ the source (Ch. 11). `READER-PLAN.md` fixes every claim, cost and line of copy;
 `reader.test.js` checks the costs, that the budgets admit exactly the intended
 all-correct routes (2 in week 1, 1 in week 2), three scripted playthroughs, and every
 quote against its chapter.
+
+## Part four: the Bridge
+
+`bridge.html` is reached from the Reader's end screen and published at
+[lossybook.com/play/bridge.html](https://lossybook.com/play/bridge.html). The player
+holds one finding two distrustful towns both need, picks a messenger and a framing for
+each town, then picks how the towns talk for ten years. It covers versatile expertise
+and the curse of expertise, polarization via distrust and the Zollman effect (Ch. 9),
+and survivable polarization (Ch. 12). `BRIDGE-PLAN.md` fixes every line and outcome;
+`bridge.test.js` checks the outcome table, all 243 paths (50 end with both towns
+roughly right: 49 through the panel, 1 kept apart, none through the shared forum), two
+playthroughs, and every quote against its chapter.
 
 ## Tests
 
