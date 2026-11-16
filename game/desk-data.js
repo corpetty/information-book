@@ -195,6 +195,7 @@ export const COPY = {
     ],
     replay: 'Run the desk again',
     links: [
+      { label: 'Next: be the reader', href: './reader.html' },
       { label: 'Back to Courier', href: './' },
       { label: 'Read Chapter 10', href: '../political-economy-of-attention' },
       { label: 'Read Chapter 12', href: '../infrastructure-for-integration' },

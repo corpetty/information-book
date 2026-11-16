@@ -138,7 +138,7 @@ talk-stage:
 # Quartz would strip the .html extension.
 play-stage:
 	@mkdir -p site/public/play
-	@cp game/index.html game/courier.css game/courier-data.js game/courier-engine.js game/courier-ui.js game/desk.html game/desk-data.js game/desk-engine.js game/desk-ui.js site/public/play/
+	@cp game/index.html game/courier.css game/courier-data.js game/courier-engine.js game/courier-ui.js game/desk.html game/desk-data.js game/desk-engine.js game/desk-ui.js game/reader.html game/reader-data.js game/reader-engine.js game/reader-ui.js site/public/play/
 
 # Regenerate citation pages from data/sources.json. Idempotent — files
 # carrying the generator marker get overwritten, hand-written ones are
