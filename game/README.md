@@ -19,12 +19,31 @@ game/
   courier-engine.js   pure logic and state machine, no DOM
   courier.test.js     node --test
   index.html          page shell
-  courier.css         styles
+  courier.css         styles (shared by both games)
   courier-ui.js       renders state, dispatches actions; nothing else
+
+  DESK-PLAN.md        the build plan for part two
+  desk-data.js        all Desk content: days, stories, cards, quotes, copy
+  desk-engine.js      pure logic and state machine, no DOM
+  desk.test.js        node --test
+  desk.html           page shell
+  desk-ui.js          renders state, dispatches actions; nothing else
 ```
 
-All behaviour lives in `courier-engine.js` as pure functions; the UI only draws
-the current state and turns clicks into actions.
+All behaviour lives in the two engines as pure functions; the UIs only draw
+the current state and turn clicks into actions.
+
+## Part two: the Desk
+
+`desk.html` is reached from Courier's end screen and published at
+[lossybook.com/play/desk.html](https://lossybook.com/play/desk.html). The player runs a
+news desk: six stories a day, three slots, rent paid in attention. The rent rises until
+careful stories alone can't pay it; an audit then shows what readers came away
+believing, and on day 5 a library pays the rent. It covers selection (Ch. 5b), the
+engagement equilibrium and Goodhart's law (Ch. 10), and funding outside the attention
+market (Ch. 12). `DESK-PLAN.md` fixes every story, number and line of copy;
+`desk.test.js` checks the outcome table, the rent squeeze (careful stories pay day 1,
+not days 2–4), both scripted playthroughs, and every quote against its chapter.
 
 ## Tests
 

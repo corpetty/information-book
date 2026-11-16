@@ -252,6 +252,7 @@ export const COPY = {
     replay: 'Carry Compound X again',
     replayNote: 'This time you can see which parts are the key.',
     links: [
+      { label: 'Next: run the desk', href: './desk.html' },
       { label: 'Read Chapter 1', href: '../the-information-landscape' },
       { label: 'The short version', href: '../the-short-version' },
       { label: 'Explore the ideas', href: '../explore' },
