@@ -121,7 +121,7 @@ export const WEEKS = [
           { text: 'Kepler’s laws of planetary motion, fitted to decades of observations.', lands: 'PRESERVED' },
           { text: 'Tycho Brahe’s naked-eye records of planetary positions, and in 1838 the first measured stellar parallax.', lands: 'PRESERVED' },
         ],
-        lesson: 'The short version was right. Tracing it cost minutes you needed elsewhere.',
+        lesson: 'The short version was right. Tracing it would have cost minutes you needed elsewhere.',
       },
       {
         id: 'power',
@@ -183,7 +183,7 @@ export const WEEKS = [
           { text: 'Arsenic readings from the DNA of cells grown in an arsenic-rich medium.', lands: 'PRESERVED' },
         ],
         assistant: { text: 'The 2010 “arsenic life” claim was refuted; later studies found no arsenic in the bacterium’s DNA.', lands: 'PRESERVED' },
-        lesson: 'The assistant got this one right: the refutation is all over its training text.',
+        lesson: 'The free assistant gets this one right: the refutation is all over its training text.',
       },
       {
         id: 'prison',
@@ -195,7 +195,7 @@ export const WEEKS = [
           { text: 'Tapes and notes from the Stanford basement, reread in 2018.', lands: 'PRESERVED' },
         ],
         assistant: { text: 'The Stanford Prison Experiment (1971) showed that ordinary people can become abusive when given power over others.', lands: 'INVERTED' },
-        lesson: 'The assistant gave the textbook version, because that is most of what it read.',
+        lesson: 'Ask the free assistant and you get the textbook version, because that is most of what it read.',
       },
       {
         id: 'compoundx',
@@ -207,7 +207,7 @@ export const WEEKS = [
           { text: 'Tumour counts in two groups of lab mice.', lands: 'PRESERVED' },
         ],
         assistant: { text: 'Studies have linked Compound X to cancer.', lands: 'INVERTED' },
-        lesson: 'The assistant’s one line was true and dropped the key: in mice, at huge doses.',
+        lesson: 'The free assistant’s one line is true and drops the key: in mice, at huge doses.',
       },
     ],
   },
