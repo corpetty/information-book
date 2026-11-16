@@ -100,11 +100,11 @@ export const DAYS = [
 
 export const CARDS = [
   { id: 'algorithm-as-selection-engine', at: 'audit', title: 'You were the gate', href: '../concepts/algorithm-as-selection-engine',
-    text: 'Six stories in, three out, every day. Whatever chooses is a gate, and the gate’s criteria decide what readers see. The rent set yours.' },
+    text: 'Six stories in, three out, every day. Whatever chooses is a gate, and its criteria decide what readers see. The rent pushed on yours.' },
   { id: 'engagement-equilibrium', at: 'audit', title: 'The engagement trap', href: '../mechanisms/engagement-equilibrium',
-    text: 'Nobody told you to run the hot stories. The rent did. When every desk pays the same rent, the hot stories win everywhere, and there is no villain to blame.' },
+    text: 'Nobody tells a desk to run the hot stories. The rent does. When every desk pays the same rent, the hot stories win everywhere, and there is no villain to blame.' },
   { id: 'goodharts-law', at: 'audit', title: 'Goodhart’s law', href: '../concepts/goodharts-law',
-    text: 'The meter measured attention, so attention is what you produced. Once a measure becomes the target, it stops telling you what you cared about.' },
+    text: 'The meter measured attention, so attention is what the rent asked for. Once a measure becomes the target, it stops telling you what you cared about.' },
   { id: 'out-competition-of-carriers', at: 'audit', title: 'Priced out', href: '../concepts/out-competition-of-carriers',
     text: 'The careful desk is not censored. It is out-competed: the hot story costs the same to run and brings in more.' },
   { id: 'funding-decoupling', at: 'final', title: 'Funding outside the feed', href: '../concepts/funding-decoupling',

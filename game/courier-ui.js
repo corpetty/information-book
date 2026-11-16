@@ -27,9 +27,18 @@ function h(tag, props = {}, ...children) {
   return el;
 }
 
+// Focus follows the view: toggling a chip keeps focus on that chip;
+// anything that changes the view moves focus to its heading.
+const viewKey = (s) => `${s.screen}:${s.roundIndex}:${s.hopIndex}`;
+
 function dispatch(action) {
+  const before = viewKey(state);
   state = engine.step(state, action);
   render();
+  if (action.id && viewKey(state) === before) {
+    const same = app.querySelector(`[data-id="${action.id}"]`);
+    if (same) { same.focus(); return; }
+  }
   const h1 = app.querySelector('h1');
   if (h1) h1.focus();
   window.scrollTo(0, 0);
@@ -110,6 +119,7 @@ function screenHop() {
       return h('button', {
         type: 'button',
         class: 'chip',
+        'data-id': c.id,
         'aria-pressed': kept ? 'true' : 'false',
         disabled: !alive,
         onclick: () => dispatch({ type: 'TOGGLE_CHIP', id: c.id }),
