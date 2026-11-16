@@ -135,6 +135,10 @@ blockquote .attr { display: block; font-family: var(--mono); font-style: normal;
 .where { font-family: var(--mono); font-size: 13px; text-transform: uppercase; letter-spacing: .12em; color: var(--signal-soft); }
 .tools { display: flex; flex-wrap: wrap; gap: 12px; margin: 20px 0; border-top: 1px solid var(--wire); padding-top: 14px; }
 
+/* ---- The Bridge ---- */
+.finding { background: var(--bg-raise); border: 1px solid var(--wire); border-radius: 8px; padding: 14px; font-family: var(--serif); }
+.heard { list-style: none; padding: 0; margin: 8px 0 16px; font-style: italic; font-family: var(--serif); color: var(--ink-dim); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
