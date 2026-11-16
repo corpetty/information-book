@@ -116,6 +116,18 @@ blockquote .attr { display: block; font-family: var(--mono); font-style: normal;
 .ledger-entry li { font-size: 15px; }
 .noscript { padding-top: 24px; }
 
+/* ---- The Desk ---- */
+.item { width: 100%; text-align: left; }
+.item[aria-pressed="true"] { border-color: var(--signal); background: var(--bg-raise); }
+.item .headline { display: block; font-family: var(--serif); font-size: 18px; }
+.item .headline.caps { font-family: var(--sans); font-weight: 700; }
+.item .heat { display: block; font-family: var(--mono); font-size: 13px; color: var(--signal); }
+.status { font-family: var(--mono); font-size: 15px; color: var(--ink-dim); }
+.story-line { border-top: 1px solid var(--wire); padding: 10px 0; }
+.story-line .headline { font-family: var(--serif); }
+.story-line .stamp-line { font-family: var(--mono); }
+.story-line .story-note { color: var(--ink-dim); }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; scroll-behavior: auto !important; }
 }
