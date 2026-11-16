@@ -28,9 +28,16 @@ game/
   desk.test.js        node --test
   desk.html           page shell
   desk-ui.js          renders state, dispatches actions; nothing else
+
+  READER-PLAN.md      the build plan for part three
+  reader-data.js      all Reader content: weeks, claims, cards, quotes, copy
+  reader-engine.js    pure logic and state machine, no DOM
+  reader.test.js      node --test
+  reader.html         page shell
+  reader-ui.js        renders state, dispatches actions; nothing else
 ```
 
-All behaviour lives in the two engines as pure functions; the UIs only draw
+All behaviour lives in the three engines as pure functions; the UIs only draw
 the current state and turn clicks into actions.
 
 ## Part two: the Desk
@@ -44,6 +51,20 @@ engagement equilibrium and Goodhart's law (Ch. 10), and funding outside the atte
 market (Ch. 12). `DESK-PLAN.md` fixes every story, number and line of copy;
 `desk.test.js` checks the outcome table, the rent squeeze (careful stories pay day 1,
 not days 2–4), both scripted playthroughs, and every quote against its chapter.
+
+## Part three: the Reader
+
+`reader.html` is reached from the Desk's end screen and published at
+[lossybook.com/play/reader.html](https://lossybook.com/play/reader.html). The player is
+at the end of the pipe: claims arrive as memes, and a week's minutes buy tracing them
+upstream (the news, the field, the paper, the measurement), each stop dearer than the
+last. Week 2 adds a free assistant and a library tutor. It covers the five-stage
+pipeline and "raw data is the first compression" (Ch. 1), the receiver budget (Ch. 3),
+open vigilance (Ch. 7) and decompression on demand versus the summary that replaces
+the source (Ch. 11). `READER-PLAN.md` fixes every claim, cost and line of copy;
+`reader.test.js` checks the costs, that the budgets admit exactly the intended
+all-correct routes (2 in week 1, 1 in week 2), three scripted playthroughs, and every
+quote against its chapter.
 
 ## Tests
 
