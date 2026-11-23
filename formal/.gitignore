@@ -1,0 +1,4 @@
+# Lake build outputs and fetched dependencies (Mathlib is several GB)
+/.lake
+# Project-local Lean toolchain used when no system elan is installed (see lake.sh)
+/.elan
