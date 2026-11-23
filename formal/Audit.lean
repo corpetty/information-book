@@ -99,17 +99,24 @@ open Complexity
 #print axioms MonoidGen.slK_pow_le
 #print axioms Monomial.slK_add_one_le
 #print axioms Monomial.exists_slK_gt
+#print axioms Monomial.exists_slK_gt_mul
 #print axioms KraftChaitin.exists_machine
 #print axioms PrefixMachine.U_isPrefixMachine
 #print axioms PrefixMachine.U_simulates
 #print axioms PrefixMachine.dominates
 #print axioms PrefixMachine.invariance
 #print axioms PrefixMachine.K_pair_le
+#print axioms PrefixMachine.K_map_le'
+#print axioms PrefixMachine.K_map_equiv
+#print axioms PrefixMachine.K_fst_le
+#print axioms PrefixMachine.K_pair_comm
+#print axioms PrefixMachine.K_pair_map_le
 #print axioms PrefixMachine.K_U_lt_top
 #print axioms Levin.exists_coding_machine
 #print axioms Levin.levin
 #print axioms Levin.P_le_two_pow_mul_wt
 #print axioms Levin.P_pos
+#print axioms Levin.K_U_le_log
 
 /-! ### Every declaration -/
 

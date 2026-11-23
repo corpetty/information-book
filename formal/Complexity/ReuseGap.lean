@@ -57,9 +57,10 @@ Upper bounds, and the limit of the two obstructions:
                         `∑ (2 log₂ (e i) + 2) - 1` steps: every monomial comes within a
                         logarithm of the multiplicity bound.
 * `Monomial.exists_slK_gt` – but some monomial with exponents below `m` needs about
-                        `k log m / log (k log m)` steps, more than the support bound `k`
-                        and the growth bound `log m` together. The two obstructions are
-                        **not** jointly tight.
+                        `k log m / log (k log m)` steps.
+* `Monomial.exists_slK_gt_mul` – hence for every constant `C` some monomial costs more than
+                        `C · (#atoms + log₂ (largest exponent))`. The support bound and
+                        the growth bound are **not** jointly tight.
 
 What is *not* here: the exact order for monomials (Pippenger's theorem on vector addition
 chains), and anything about Boolean functions beyond the trivial bound. There a function
@@ -653,6 +654,65 @@ theorem Monomial.slK_add_one_le {k : ℕ} (hk : 0 < k) (e : Fin k → ℕ) (he :
     simp [Finset.sum_apply, Pi.single_apply]
   rw [← hprod]
   exact MonoidGen.slK_prod_pow_le _ e (Finset.univ_nonempty_iff.2 ⟨⟨0, hk⟩⟩) fun i _ => he i
+
+private theorem refute_pow (a j : ℕ) (h : a + (j + 1 + 2 * a) * 2 ^ a < 2 ^ j * 2 ^ j) :
+    2 ^ a * ((2 ^ j + 1) * (2 ^ a) ^ 2) ^ 2 ^ a < (2 ^ 2 ^ j) ^ 2 ^ j := by
+  have hk1 : 2 ^ j + 1 ≤ 2 ^ (j + 1) := by
+    have := Nat.one_le_two_pow (n := j)
+    rw [pow_succ]; omega
+  have e : 2 ^ a * (2 ^ (j + 1) * (2 ^ a) ^ 2) ^ 2 ^ a = 2 ^ (a + (j + 1 + 2 * a) * 2 ^ a) := by
+    have e2 : 2 ^ (2 * a) = (2 ^ a) ^ 2 := by rw [← pow_mul, mul_comm]
+    rw [pow_add 2 a, pow_mul, pow_add 2 (j + 1), e2]
+  calc 2 ^ a * ((2 ^ j + 1) * (2 ^ a) ^ 2) ^ 2 ^ a
+      ≤ 2 ^ a * (2 ^ (j + 1) * (2 ^ a) ^ 2) ^ 2 ^ a := by gcongr
+    _ = 2 ^ (a + (j + 1 + 2 * a) * 2 ^ a) := e
+    _ < 2 ^ (2 ^ j * 2 ^ j) := Nat.pow_lt_pow_right (by norm_num) h
+    _ = _ := by rw [pow_mul]
+
+private theorem refute_arith (C : ℕ) :
+    2 ^ (3 * C + 13) * ((2 ^ (2 * C + 12) + 1) * (2 ^ (3 * C + 13)) ^ 2) ^ 2 ^ (3 * C + 13)
+      < (2 ^ 2 ^ (2 * C + 12)) ^ 2 ^ (2 * C + 12) := by
+  apply refute_pow
+  have hC : C < 2 ^ C := Nat.lt_two_pow_self
+  have haa : 3 * C + 13 < 2 ^ (3 * C + 13) := Nat.lt_two_pow_self
+  have e1 : 2 ^ (2 * C + 12) * 2 ^ (2 * C + 12) = 2 ^ (C + 11) * 2 ^ (3 * C + 13) := by
+    rw [← pow_add, ← pow_add]; congr 1; omega
+  have e2 : (8 * C + 40) * 2 ^ (3 * C + 13) < 2 ^ (C + 11) * 2 ^ (3 * C + 13) := by
+    apply Nat.mul_lt_mul_of_pos_right _ (by positivity)
+    have : 2 ^ (C + 11) = 2048 * 2 ^ C := by rw [pow_add]; ring
+    omega
+  have e3 : 2 * C + 12 + 1 + 2 * (3 * C + 13) = 8 * C + 39 := by omega
+  rw [e1, e3]
+  calc 3 * C + 13 + (8 * C + 39) * 2 ^ (3 * C + 13)
+      ≤ 2 ^ (3 * C + 13) + (8 * C + 39) * 2 ^ (3 * C + 13) := by omega
+    _ = (8 * C + 40) * 2 ^ (3 * C + 13) := by ring
+    _ < _ := e2
+
+/-- **The sharing cost of monomials is not `O(#atoms + log (max multiplicity))`.** For every
+constant `C` there is a monomial whose cost with sharing exceeds `C` times the number of its
+atoms plus the binary logarithm of its largest exponent. So the support bound and the growth
+bound, each attained on its own, are not attained together. -/
+theorem Monomial.exists_slK_gt_mul (C : ℕ) :
+    ∃ (k : ℕ) (e : Fin k → ℕ),
+      ((C * ((Finset.univ.filter fun i => e i ≠ 0).card + Nat.log 2 (Finset.univ.sup e)) : ℕ) : ℕ∞)
+        < MonoidGen.slK
+          (fun i : Fin k => Multiplicative.ofAdd (Pi.single i 1 : Fin k → ℕ))
+          (Multiplicative.ofAdd e) := by
+  obtain ⟨e, he, hK⟩ := Monomial.exists_slK_gt (2 ^ (2 * C + 12)) (2 ^ 2 ^ (2 * C + 12))
+    (2 ^ (3 * C + 13)) (refute_arith C)
+  refine ⟨_, e, lt_of_le_of_lt ?_ hK⟩
+  have h1 : (Finset.univ.filter fun i => e i ≠ 0).card ≤ 2 ^ (2 * C + 12) := by
+    simpa using Finset.card_filter_le (Finset.univ : Finset (Fin (2 ^ (2 * C + 12)))) fun i => e i ≠ 0
+  have h2 : Nat.log 2 (Finset.univ.sup e) ≤ 2 ^ (2 * C + 12) := by
+    calc Nat.log 2 (Finset.univ.sup e) ≤ Nat.log 2 (2 ^ 2 ^ (2 * C + 12)) :=
+          Nat.log_mono_right (Finset.sup_le fun i _ => (he i).le)
+      _ = _ := Nat.log_pow (by norm_num) _
+  have hC : C ≤ 2 ^ C := Nat.lt_two_pow_self.le
+  have h3 : C * ((Finset.univ.filter fun i => e i ≠ 0).card + Nat.log 2 (Finset.univ.sup e))
+      ≤ 2 ^ (3 * C + 13) := by
+    calc _ ≤ 2 ^ C * (2 ^ (2 * C + 12) + 2 ^ (2 * C + 12)) := by gcongr
+      _ = 2 ^ (3 * C + 13) := by rw [← two_mul, ← pow_succ', ← pow_add]; congr 1; omega
+  exact_mod_cast h3
 
 namespace Circuit
 

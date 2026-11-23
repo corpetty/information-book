@@ -31,7 +31,9 @@ Results:
 * `P_le_two_pow_mul_wt`   – equivalently `P x ≤ 2 ^ c * 2 ^ (-K x)`. With
                             `Prefix.wt_K_le_P` (`2 ^ (-K x) ≤ P x`), algorithmic probability
                             and `2 ^ (-K)` agree up to a constant factor;
-* `P_pos`                 – every number has positive algorithmic probability.
+* `P_pos`                 – every number has positive algorithmic probability;
+* `K_U_le_log`            – `K x ≤ 2 log₂ (x + 1) + c`, from a second use of the
+                            Kraft–Chaitin machine.
 -/
 
 namespace Complexity
@@ -475,6 +477,71 @@ theorem P_pos (x : ℕ) : 0 < P (sys U) x := by
   have hn' : (sys U).K x = (n : ℕ∞) := hn.symm
   rw [hn', Prefix.wt_coe]
   exact pos_iff_ne_zero.2 (pow_ne_zero _ (by simp))
+
+/-! ### A logarithmic upper bound -/
+
+/-- Requests for a length-prefixed code: `x = 2 ^ l - 1 + j` with `j < 2 ^ l` asks for a
+program of length `2 l + 1`. -/
+def logReq (i : ℕ) : Option (ℕ × ℕ) :=
+  if i.unpair.2 < 2 ^ i.unpair.1 then some (2 ^ i.unpair.1 - 1 + i.unpair.2, 2 * i.unpair.1 + 1)
+  else none
+
+theorem logReq_primrec : Primrec logReq := by
+  have hpow : Primrec fun i : ℕ => 2 ^ i.unpair.1 :=
+    (Primrec₂.unpaired'.1 Nat.Primrec.pow).comp (Primrec.const 2)
+      (Primrec.fst.comp Primrec.unpair)
+  exact Primrec.ite (Primrec.nat_lt.comp (Primrec.snd.comp Primrec.unpair) hpow)
+    (Primrec.option_some.comp (Primrec.pair
+      (Primrec.nat_add.comp (Primrec.nat_sub.comp hpow (Primrec.const 1))
+        (Primrec.snd.comp Primrec.unpair))
+      (Primrec.nat_add.comp (Primrec.nat_mul.comp (Primrec.const 2)
+        (Primrec.fst.comp Primrec.unpair)) (Primrec.const 1))))
+    (Primrec.const none)
+
+theorem tsum_logReq : ∑' i, KraftChaitin.wE (logReq i) ≤ 1 := by
+  rw [tsum_pair]
+  have hin : ∀ l : ℕ, ∑' j, KraftChaitin.wE (logReq (Nat.pair l j)) = (2⁻¹ : ℝ≥0∞) ^ (l + 1) := by
+    intro l
+    have hterm : ∀ j, KraftChaitin.wE (logReq (Nat.pair l j)) =
+        if j ∈ Finset.range (2 ^ l) then (2⁻¹ : ℝ≥0∞) ^ (2 * l + 1) else 0 := by
+      intro j
+      simp only [logReq, Nat.unpair_pair, Finset.mem_range]
+      split_ifs <;> rfl
+    simp_rw [hterm]
+    rw [tsum_eq_sum (s := Finset.range (2 ^ l)) (fun j hj => by simp [hj]),
+      Finset.sum_ite_mem, Finset.inter_self, Finset.sum_const, Finset.card_range, nsmul_eq_mul]
+    have e : 2 * l + 1 = (l + 1) + l := by omega
+    rw [e]
+    push_cast
+    exact two_pow_mul_inv' (l + 1) l
+  simp_rw [hin, pow_succ]
+  rw [ENNReal.tsum_mul_right, ENNReal.tsum_geometric, ENNReal.one_sub_inv_two, inv_inv,
+    ENNReal.mul_inv_cancel two_ne_zero ENNReal.ofNat_ne_top]
+
+/-- **Logarithmic upper bound**: `K(x) ≤ 2 log₂ (x + 1) + c` for the universal prefix
+machine. With the Kraft counting law this pins prefix complexity of most numbers between
+`log₂ x` and `2 log₂ x`, up to constants. -/
+theorem K_U_le_log : ∃ c : ℕ, ∀ x : ℕ,
+    Kolmogorov.K U x ≤ ((2 * Nat.log 2 (x + 1) + c : ℕ) : ℕ∞) := by
+  obtain ⟨M, hM, hpf, hserve, -⟩ := KraftChaitin.exists_machine logReq logReq_primrec tsum_logReq
+  obtain ⟨k, hk⟩ := PrefixMachine.K_U_le (φ := M) ⟨hM, hpf⟩
+  refine ⟨2 + k, fun x => (hk x).trans ?_⟩
+  have h1 : 2 ^ Nat.log 2 (x + 1) ≤ x + 1 := Nat.pow_log_le_self 2 (by omega)
+  have h2 : x + 1 < 2 ^ (Nat.log 2 (x + 1) + 1) := Nat.lt_pow_succ_log_self (by norm_num) _
+  have hr : logReq (Nat.pair (Nat.log 2 (x + 1)) (x + 1 - 2 ^ Nat.log 2 (x + 1))) =
+      some (x, 2 * Nat.log 2 (x + 1) + 1) := by
+    rw [pow_succ] at h2
+    simp only [logReq, Nat.unpair_pair]
+    split_ifs with hlt
+    · congr 2
+      omega
+    · omega
+  obtain ⟨w, hw, hx⟩ := hserve _ _ _ hr
+  have h := Kolmogorov.K_le_length hx
+  rw [hw] at h
+  refine (add_le_add h le_rfl).trans (le_of_eq ?_)
+  push_cast
+  ring
 
 end Levin
 

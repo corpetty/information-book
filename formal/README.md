@@ -281,6 +281,9 @@ a universal member exists, and the conditional results above become unconditiona
 | `invariance` | two optimal prefix machines agree up to a constant | from the general invariance lemma. The restricted class is the one `not_exists_universal` shows to be necessary |
 | `K_U_lt_top`, `P_pos` | every number has a `U`-program and positive probability | non-vacuity: the theorems are not about an empty machine |
 | `K_pair_le` | `K(⟨x,y⟩) ≤ K(x) + K(y) + c` | subadditivity, **unconditional**. False for plain complexity (`Limits.lean`) |
+| `K_map_le'`, `K_map_le` | for partial recursive `f`: `K(y) ≤ K(x) + c_f` whenever `f x = y` | computation creates no information (the algorithmic data-processing inequality). Classical; the proof is one line of universality once `(U ·).bind f` is seen to be a prefix machine |
+| `K_map_equiv`, `K_fst_le`, `K_snd_le`, `K_pair_comm`, `K_pair_map_le` | computable bijections preserve `K` up to a constant; `K(x) ≤ K(⟨x,y⟩) + c`; `K(⟨y,x⟩) ≤ K(⟨x,y⟩) + c`; `K(⟨x, f x⟩) ≤ K(x) + c` | corollaries. The last says a computable function of `x` adds nothing to `x` |
+| `K_U_le_log` | `K(x) ≤ 2 log₂(x+1) + c` | logarithmic upper bound, from a length-prefixed request list fed to the Kraft–Chaitin machine. The lower side for most `x` is the counting law (`card_le_two_pow_of_K_le`); the two are not combined into one statement |
 | `KraftChaitin.exists_machine` | a primitive recursive list of requests `(x, n)` with `∑ 2^(−n) ≤ 1` has a partial recursive prefix-free decoder giving each request a program of length `n + 1` | the effective converse of Kraft's inequality, with one bit of slack. The allocation is Shannon–Fano–Elias (an aligned half-length interval inside each request's own interval), which needs no free-list bookkeeping |
 | `exists_coding_machine` | for every prefix machine `φ` there is a prefix machine `M` with `2^(−K_M x) ≤ P_φ x` and `K_M x ≤ n + 3` whenever `2^(−n) ≤ P_φ x` | `exists_coding` with the built system computable |
 | `levin` | for `U`: `K(x) ≤ n + c` whenever `2^(−n) ≤ P(x)` | **Levin's coding theorem** (1974), unconditional |
@@ -337,8 +340,9 @@ How much does sharing parts buy, and what decides it?
   needs more than `n` steps whenever `n·((k+1)n²)ⁿ < mᵏ` (`Monomial.exists_slK_gt`), which
   is about `k log m / log(k log m)`. That exceeds `k + log m`. An earlier draft of this
   section conjectured `dagK = Θ(#atoms + log(max multiplicity))`; that conjecture is
-  false. The theorem refutes it once parameters are chosen (`m = 2^k` with `k` large);
-  that last arithmetic step is done by hand, not machine-checked.
+  false, and the refutation is machine-checked: for every constant `C` some monomial
+  costs more than `C · (#atoms + log₂(largest exponent))` (`Monomial.exists_slK_gt_mul`,
+  with `k = 2^(2C+12)` atoms and exponents below `2^k`).
 
 Read together: **reuse pays for repetition**. The gain is bounded by
 `min(2^dagK / dagK, μ/|σ|)`, it is zero when nothing repeats, and idempotent operations
@@ -348,8 +352,8 @@ All of this is elementary, and none of it is new mathematics.
 
 ### Still open
 
-- **The other additive laws for `U`.** Subadditivity is proved with a constant. The
-  iteration bound `K(fᵗx) ≤ K(x) + 2 log t + c` (for computable `f`) and the two-part bound
+- **The other additive laws for `U`.** Subadditivity and monotonicity under computable
+  maps are proved with constants. The iteration bound `K(fᵗx) ≤ K(x) + 2 log t + c` (for computable `f`) and the two-part bound
   are proved between suitable prefix-free systems (`Prefix.iterate`, `Prefix.twoPart_card`)
   but not yet transferred to `U`; each needs one more machine shown partial recursive.
 - **Symmetry of information** (`K(x,y) = K(x) + K(y | x, K(x)) + O(1)`), and with it the
@@ -375,8 +379,8 @@ All of this is elementary, and none of it is new mathematics.
 ## Status
 
 **Proved.** Every theorem in the library, including those in `Limits.lean` that refute
-earlier claims and those of section 7. `Audit.lean` checks every declaration (986, of
-which 673 are theorems including generated ones; 29 module files, 7,071 lines).
+earlier claims and those of section 7. `Audit.lean` checks every declaration (1013, of
+which 699 are theorems including generated ones; 29 module files, 7,269 lines).
 
 **Not established.** That any real domain satisfies a theorem's hypotheses. Novelty of
 the pieces not found by the prior-art search. Any empirical claim.

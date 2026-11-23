@@ -30,7 +30,11 @@ Results:
                                    up to an additive constant;
 * `invariance`                   – any two optimal prefix machines agree up to a constant;
 * `K_U_le_linear`, `K_U_lt_top` – the machine is not empty: every number has a program;
-* `K_pair_le`                    – subadditivity: `K(⟨x, y⟩) ≤ K(x) + K(y) + c`.
+* `K_pair_le`                    – subadditivity: `K(⟨x, y⟩) ≤ K(x) + K(y) + c`;
+* `K_map_le'`, `K_map_le`        – computation creates no information: `K(f x) ≤ K(x) + c`
+                                   for partial recursive `f`;
+* `K_map_equiv`, `K_fst_le`, `K_snd_le`, `K_pair_comm`, `K_pair_map_le` – its consequences
+                                   for computable bijections and for pairs.
 -/
 
 namespace Complexity
@@ -464,6 +468,73 @@ theorem K_pair_le :
     exact (congrArg₂ (· + ·) hpc hqc).symm
   rw [e]
   exact h
+
+/-! ### Complexity under computable maps -/
+
+/-- Post-composing a prefix machine with a partial recursive map gives a prefix machine. -/
+theorem IsPrefixMachine.bind {φ : List Bool →. ℕ} (hφ : IsPrefixMachine φ) {f : ℕ →. ℕ}
+    (hf : Partrec f) : IsPrefixMachine fun w => (φ w).bind f :=
+  ⟨hφ.1.bind (hf.comp Computable.snd).to₂, fun w z h h' =>
+    hφ.2 w z (Part.dom_iff_mem.2 ((Part.dom_iff_mem.1 h).elim fun _ hy =>
+      (Part.mem_bind_iff.1 hy).elim fun a ha => ⟨a, ha.1⟩))
+      (Part.dom_iff_mem.2 ((Part.dom_iff_mem.1 h').elim fun _ hy =>
+      (Part.mem_bind_iff.1 hy).elim fun a ha => ⟨a, ha.1⟩))⟩
+
+/-- **Computation creates no information.** For every partial recursive `f` there is a
+constant `c` with `K(y) ≤ K(x) + c` whenever `f x = y`: the algorithmic counterpart of the
+data-processing inequality. -/
+theorem K_map_le' {f : ℕ →. ℕ} (hf : Partrec f) :
+    ∃ c : ℕ, ∀ x y, y ∈ f x → Kolmogorov.K U y ≤ Kolmogorov.K U x + c := by
+  obtain ⟨k, hk⟩ := K_U_le (U_isPrefixMachine.bind hf)
+  refine ⟨k, fun x y hy => (hk y).trans (add_le_add ?_ le_rfl)⟩
+  rcases eq_or_ne (Kolmogorov.K U x) ⊤ with hx | hx
+  · simp [hx]
+  obtain ⟨p, hp, hpc⟩ := (sys U).exists_cost_eq_K hx
+  have h : Kolmogorov.K (fun w => (U w).bind f) y ≤ (p.length : ℕ∞) :=
+    Kolmogorov.K_le_length (Part.mem_bind_iff.2 ⟨x, hp, hy⟩)
+  exact h.trans hpc.le
+
+/-- The total case: `K(f x) ≤ K(x) + c` for computable `f`. -/
+theorem K_map_le {f : ℕ → ℕ} (hf : Computable f) :
+    ∃ c : ℕ, ∀ x, Kolmogorov.K U (f x) ≤ Kolmogorov.K U x + c := by
+  obtain ⟨c, hc⟩ := K_map_le' (f := fun x => Part.some (f x)) hf
+  exact ⟨c, fun x => hc x (f x) (Part.mem_some _)⟩
+
+/-- **Computable bijections preserve complexity** up to an additive constant. -/
+theorem K_map_equiv {f g : ℕ → ℕ} (hf : Computable f) (hg : Computable g)
+    (hgf : ∀ x, g (f x) = x) :
+    ∃ c : ℕ, ∀ x, Kolmogorov.K U (f x) ≤ Kolmogorov.K U x + c ∧
+      Kolmogorov.K U x ≤ Kolmogorov.K U (f x) + c := by
+  obtain ⟨a, ha⟩ := K_map_le hf
+  obtain ⟨b, hb⟩ := K_map_le hg
+  refine ⟨max a b, fun x => ⟨(ha x).trans ?_, ?_⟩⟩
+  · gcongr; exact le_max_left a b
+  · have h := hb (f x)
+    rw [hgf] at h
+    exact h.trans (by gcongr; exact le_max_right a b)
+
+/-- A part is no more complex than the whole: `K(x) ≤ K(⟨x, y⟩) + c`. -/
+theorem K_fst_le : ∃ c : ℕ, ∀ x y, Kolmogorov.K U x ≤ Kolmogorov.K U (Nat.pair x y) + c := by
+  obtain ⟨c, hc⟩ := K_map_le (f := fun n => n.unpair.1) (Computable.fst.comp Computable.unpair)
+  exact ⟨c, fun x y => by simpa using hc (Nat.pair x y)⟩
+
+theorem K_snd_le : ∃ c : ℕ, ∀ x y, Kolmogorov.K U y ≤ Kolmogorov.K U (Nat.pair x y) + c := by
+  obtain ⟨c, hc⟩ := K_map_le (f := fun n => n.unpair.2) (Computable.snd.comp Computable.unpair)
+  exact ⟨c, fun x y => by simpa using hc (Nat.pair x y)⟩
+
+/-- **Symmetry of the pair**: `K(⟨y, x⟩) ≤ K(⟨x, y⟩) + c`. -/
+theorem K_pair_comm :
+    ∃ c : ℕ, ∀ x y, Kolmogorov.K U (Nat.pair y x) ≤ Kolmogorov.K U (Nat.pair x y) + c := by
+  obtain ⟨c, hc⟩ := K_map_le (f := fun n => Nat.pair n.unpair.2 n.unpair.1)
+    (Primrec₂.natPair.comp (Primrec.snd.comp Primrec.unpair)
+      (Primrec.fst.comp Primrec.unpair)).to_comp
+  exact ⟨c, fun x y => by simpa using hc (Nat.pair x y)⟩
+
+/-- **A computable function of `x` adds nothing to `x`**: `K(⟨x, f x⟩) ≤ K(x) + c`. -/
+theorem K_pair_map_le {f : ℕ → ℕ} (hf : Computable f) :
+    ∃ c : ℕ, ∀ x, Kolmogorov.K U (Nat.pair x (f x)) ≤ Kolmogorov.K U x + c :=
+  K_map_le (f := fun x => Nat.pair x (f x))
+    (Primrec₂.natPair.to_comp.comp Computable.id hf)
 
 end PrefixMachine
 
