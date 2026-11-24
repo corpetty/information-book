@@ -84,9 +84,12 @@ prefix machine exists and Levin's coding theorem is proved for it.
 Not found in one place by the search: the whole set under one roof; the counting bound
 `n·(m·nʳ)ⁿ` for an arbitrary finitely generated algebra; reuse complexity as
 shortest-path distance on pools with DAG ≤ tree by a potential argument; formal proofs of
-the circuit-counting bound and of the generic reuse laws. The reviewer rates the
-mathematical items as short generalizations. The search was about 55 queries; absence
-from it is not proof of novelty.
+the generic reuse laws. The reviewer rates the mathematical items as short
+generalizations. The search was about 55 queries; absence from it is not proof of
+novelty. **Correction, November 2026:** this list used to include "formal proofs of the
+circuit-counting bound". That is no longer true: CSLib has Shannon's lower bound, generic
+over finite carriers and signatures of arity at most 2, and Lupanov's upper bound, both in
+Lean 4 since September 2026. See "Prior art for the reuse results" in section 7.
 
 ### Held
 
@@ -153,7 +156,7 @@ definition is the field's is by inspection, except for Kolmogorov complexity.
 |---|---|---|
 | **Kolmogorov complexity** (plain, of natural numbers) | a universal interpreter over Mathlib's `Nat.Partrec.Code`; optimality, invariance, incompressibility. No conditional complexity, chain rule or prefix version | II (prefix lemma), V, VIII |
 | **Shannon source coding** | one-shot `H ≤ L* ≤ H + 1` for Kraft-admissible length functions. `L*` equals `H` only for dyadic sources. No block limit, no Kraft–McMillan | none (textbook Gibbs argument) |
-| **Circuit and formula size** (NAND, inputs counted) | circuits ≤ formulas; soundness of formal complexity measures; a hard function exists once `s·((n+1)s²)ˢ < 2^(2ⁿ)` (order `2ⁿ/2n`, existence only, no upper bound) | IV weak, V′, VI |
+| **Circuit and formula size** (NAND, inputs counted) | circuits ≤ formulas; soundness of formal complexity measures; a hard function exists once `s·((n+1)s²)ˢ < 2^(2ⁿ)` (order `2ⁿ/2n`); with `n ≥ 1` variables every function has a circuit of size at most `5 + 2ⁿ(4n + 7)` (`Circuit.circuitK_le`, disjunctive normal form), so the hard function's size is finite (`Circuit.exists_hard_function_between`). Section 7 sharpens the upper bound to the order `2ⁿ/n` (`Circuit.circuitK_le_shannon`); the exact constant (Lupanov 1958) is not proved | IV weak, V′, VI |
 | **Addition chains** | doubling upper bound and `l(n) ≥ log₂ n` | VI, VII |
 | **String straight-line programs** | `|w| ≤ 2^(K−1)`; squaring upper bound; exponential tree/DAG gap | VI, VII, IV weak |
 | **Molecular assembly** | nothing specific. V′ does not apply as stated: a join of two fragments is multi-valued | — |
@@ -268,7 +271,7 @@ another.
 | `pair`, `iterate`, `twoPart_card` | `K(x,y) ≤ K(x)+K(y)`; `K(fᵗx) ≤ K(x)+2 log t+1`; `K(x) ≤ K(πx)+⌈log₂ W⌉` | the additive bounds that are false for plain complexity hold here exactly, and the composed system is again self-delimiting |
 | `not_exists_universal` | on an infinite set no system dominates all self-delimiting systems | invariance needs a further restriction (computability) |
 
-### The effective layer ([`PrefixMachine.lean`](Complexity/Instances/PrefixMachine.lean), [`KraftChaitin.lean`](Complexity/KraftChaitin.lean), [`Levin.lean`](Complexity/Levin.lean), [`Conditional.lean`](Complexity/Conditional.lean), [`Symmetry.lean`](Complexity/Symmetry.lean))
+### The effective layer ([`PrefixMachine.lean`](Complexity/Instances/PrefixMachine.lean), [`KraftChaitin.lean`](Complexity/KraftChaitin.lean), [`Levin.lean`](Complexity/Levin.lean), [`Conditional.lean`](Complexity/Conditional.lean), [`Symmetry.lean`](Complexity/Symmetry.lean), [`Semicomputable.lean`](Complexity/Semicomputable.lean), [`Guessing.lean`](Complexity/Guessing.lean))
 
 Restrict further to **prefix machines**: partial recursive functions (Mathlib's
 `Nat.Partrec.Code`) from bit strings to numbers whose domain is prefix-free. In this class
@@ -294,6 +297,10 @@ a universal member exists, and the conditional results above become unconditiona
 | `symmetry_of_information` | `K(⟨x,y⟩) = K(x) + K(y \| x*) ± c` with `x* = ⟨x, K(x)⟩`, both directions | **symmetry of information** (Levin, Gács, Chaitin), unconditional. Easy direction: a shortest program for `x` yields `x*`. Hard direction: Levin's request list for pairs, re-issued for each condition `⟨x, k⟩` with weights scaled by `2^(k−C)`; the weights fit when `k = K(x)`, and the Kraft–Chaitin decoder is prefix-free regardless (`KraftChaitin.machine_partrec₂`, `tsum_creq_le`) |
 | `symmetry` | `K(x) + K(y \| x*) ≤ K(y) + K(x \| y*) + c` | the information `x` carries about `y` equals the information `y` carries about `x`, up to a constant |
 | `K_macro_add_condK_le`, `card_K_lt_macro_add` | for computable `π`: `K(π x) + K(x \| (π x)*) ≤ K(x) + c`; in any set of microstates of one macrostate `a`, fewer than `2^m` have `K(x) + c < K(a) + m` | the **lower half of "micro = macro + log W"**: all but a fraction `2^(−d)` of `W` microstates have `K(x) ≥ K(a) + log₂ W − d − c`. The upper half for enumerable macrostates is `K_twoPart_le` |
+| `micro_eq_macro_add_log` | for a family of macrostates with `2^(ℓ a)` microstates listed without repetition by a computable `e a`, and a computable `π` recovering the macrostate: every microstate has `K(x) ≤ K(a) + ℓ a + c`, and fewer than `2^m` have `K(x) + c < K(a) + m` | **"micro = macro + log W", both halves in one statement**. All but a fraction `2^(−d)` of the microstates lie within `d + 2c` of `K(a) + log₂ W` |
+| `Upper.exists_approx`, `Upper.exists_machine_K_eq`, `Upper.prefix_complexity_iff` | call `f` approximable from above if it is the least value shown by a primitive recursive table. Every `K_φ` is; conversely if `∑ 2^(−f x) ≤ 1` then `f + 2` is exactly `K_M` for a prefix machine `M`; so `f + c` is a prefix-machine complexity for some `c` **iff** `∑ 2^(−f x) < ∞` | the **representation theorem for prefix machines**, the counterpart of `exists_binary_iff` and `exists_prefix_iff` one restriction further. Classical (Levin) |
+| `Upper.K_U_le_of_summable` | `K_U ≤ f + c` for every such `f` | `K_U` is, up to a constant, the least function approximable from above with summable weights |
+| `Upper.exists_primrec_table`, `Upper.exists_table_iff_re` | a computable table has the same limit as some primitive recursive table; `f` is such a limit iff `{(x, n) \| f x ≤ n}` is recursively enumerable (`REPred`) | "approximable from above" does not depend on the kind of table, and agrees with Mathlib's notion of a recursively enumerable set. `prefix_complexity_iff_of_computable` and `K_U_le_of_computable` restate the two theorems above for computable tables |
 | `KraftChaitin.exists_machine` | a primitive recursive list of requests `(x, n)` with `∑ 2^(−n) ≤ 1` has a partial recursive prefix-free decoder giving each request a program of length `n + 1` | the effective converse of Kraft's inequality, with one bit of slack. The allocation is Shannon–Fano–Elias (an aligned half-length interval inside each request's own interval), which needs no free-list bookkeeping |
 | `exists_coding_machine` | for every prefix machine `φ` there is a prefix machine `M` with `2^(−K_M x) ≤ P_φ x` and `K_M x ≤ n + 3` whenever `2^(−n) ≤ P_φ x` | `exists_coding` with the built system computable |
 | `levin` | for `U`: `K(x) ≤ n + c` whenever `2^(−n) ≤ P(x)` | **Levin's coding theorem** (1974), unconditional |
@@ -336,59 +343,202 @@ How much does sharing parts buy, and what decides it?
   `(treeK+1)·|σx| ≤ μ(x)·(dagK+1)` (`gain_le_multiplicity`): sharing improves on the tree
   by at most the mean number of times an atom is repeated. For strings that is
   `|w| / #letters`.
-- **Boolean functions.** The support bound specializes to the trivial circuit lower bound:
-  `m` essential variables need `m` inputs and `m − 1` gates
-  (`Circuit.two_mul_card_essential_le`). Nothing stronger is claimed.
-
 - **Upper bound.** Binary exponentiation: `x^m` costs `2 log₂ m` steps beyond `x`
   (`MonoidGen.slK_pow_le`). So in the free commutative monoid a monomial with `k` atoms
   and exponents `eᵢ` costs at most `∑(2 log₂ eᵢ + 2) − 1` steps
   (`Monomial.slK_add_one_le`) against `2∑eᵢ − 1` nodes for the tree. With all exponents
   equal to `m`, the gain is at least `m / (log₂ m + 1)` and at most `m`: the multiplicity
   bound is attained up to a logarithm.
-- **The two obstructions are not jointly tight.** Some monomial with exponents below `m`
-  needs more than `n` steps whenever `n·((k+1)n²)ⁿ < mᵏ` (`Monomial.exists_slK_gt`), which
-  is about `k log m / log(k log m)`. That exceeds `k + log m`. An earlier draft of this
-  section conjectured `dagK = Θ(#atoms + log(max multiplicity))`; that conjecture is
-  false, and the refutation is machine-checked: for every constant `C` some monomial
+- **The two obstructions are not jointly tight.** Some monomial with exponents from `1`
+  to `m` needs more than `n` steps whenever `n·((k+1)n²)ⁿ < mᵏ`
+  (`Monomial.exists_slK_gt`), which is about `k log m / log(k log m)`. That exceeds
+  `k + log m`. An earlier draft of this section conjectured
+  `dagK = Θ(#atoms + log(max multiplicity))`; that conjecture is false, and the refutation
+  is machine-checked: for every constant `C` some monomial with all exponents at least `1`
   costs more than `C · (#atoms + log₂(largest exponent))` (`Monomial.exists_slK_gt_mul`,
-  with `k = 2^(2C+12)` atoms and exponents below `2^k`).
+  with `k = 2^(2C+12)` atoms and exponents up to `2^k`).
+- **A correction to those two theorems.** Until this round both allowed the exponent `0`.
+  The empty monomial cannot be built from the atoms at all, so its cost is `⊤` and it
+  satisfied both statements trivially: as stated, they proved nothing. The witnesses now
+  have every exponent at least `1`, so they can be built and their cost is finite. The
+  counting argument was sound; the statements were too weak to show it.
+- **Shared squarings.** The binary method spends `2 log₂ m` steps on each atom. Straus's
+  method (Straus 1964, as cited by Pippenger 1980) spends them once: tabulate the products of all nonempty
+  sets of atoms (`2^k − 1` steps, `MonoidGen.poolK_subsetProds_le`), then read the
+  exponents one binary digit at a time, squaring the running product and multiplying by
+  one table entry (`MonoidGen.poolK_insert_prod_pow_le`). So `k` atoms with exponents
+  below `2^L` cost fewer than `2^k + 2L` steps (`MonoidGen.slK_prod_pow_add_one_le`), and
+  in groups of `g` atoms fewer than `(k/g + 1)(2^g + 2L)` (`Monomial.slK_add_one_le_grouped`).
+  With `g = log₂ L` that is at most `3L(k / log₂ L + 1)` (`Monomial.slK_add_one_le_log`).
+- **The worst case from both sides.** For `k = 2^j` atoms and exponents from `1` to `2^k`,
+  one monomial needs more than `2^a` steps whenever `a + (j + 1 + 2a)·2^a < 4^j` and costs
+  fewer than `(k/j + 1)(3k + 2)` (`Monomial.exists_slK_between`). That is between about
+  `k² / (10 log₂ k)` and `3k² / log₂ k`: the order `k log m / log log m` is right when
+  `k = log₂ m`, with a factor of 15 to 30 between the constants. For `k = 1024`: more than
+  16,384 steps and fewer than 316,622 (`Monomial.exists_slK_between_1024`), where the
+  binary method allows about two million.
+- **Boolean functions.** The support bound specializes to the trivial circuit lower bound:
+  `m` essential variables need `m` inputs and `m − 1` gates
+  (`Circuit.two_mul_card_essential_le`). Nothing stronger is claimed for any explicit
+  function.
+- **The same table, for circuits.** Shannon's construction (1949): build
+  every function of `k` chosen variables once (`Circuit.poolK_dependsOn_le`), then select
+  among table entries with the other `n − k` variables at four gates per selection
+  (`Circuit.poolK_insert_select_le`). Every function of `n ≥ 1` variables costs at most
+  `n + 2^(2^k)·(5 + 2^k(4k + 7)) + 4·2^(n−k)` steps (`Circuit.circuitK_le_shannon`). With
+  the counting bound, the hardest function costs between about `2ⁿ/4n` and `8·2ⁿ/n`
+  (`Circuit.exists_circuitK_between`). For 32 variables: more than 67 million steps and at
+  most 1,098,186,784 (`Circuit.exists_circuitK_between_32`), where the normal form allows
+  about 580 billion.
+- **The same table, for strings.** Build every nonempty binary string of length at most
+  `g` (`Str.poolK_blocks_le`), then concatenate blocks, one step per block
+  (`Str.poolK_insert_le_div`). Every binary string of length `L` costs at most
+  `g·2^g·2g + L/g` steps (`Str.strK_le_blocks`), so the hardest costs between about
+  `L / (4 log₂ L)` and `2L / log₂ L` (`Str.exists_strK_between`). For a million letters:
+  more than 16,384 steps and at most 163,840 (`Str.exists_strK_between_million`), against
+  about two million without sharing.
 
 Read together: **reuse pays for repetition**. The gain is bounded by
 `min(2^dagK / dagK, μ/|σ|)`, it is zero when nothing repeats, and idempotent operations
-remove it because repeating an argument produces nothing new. For monomials the cost with
-sharing lies between `k log m / log(k log m)` (for some) and `2k(log₂ m + 1)` (for all).
+remove it because repeating an argument produces nothing new.
+
+**In three populations the worst case is the counting bound.** The hardest object costs,
+up to a constant between 8 and 32, what the general counting law
+(`Sig.card_le_of_dagK_le`) says it must: `log N / log log N` steps for a population of `N`
+objects.
+
+| Population | `N` | Hardest object, lower | Upper | Known as |
+|---|---|---|---|---|
+| binary strings of length `L` | `2^L` | `L / (4 log₂ L)` | `2L / log₂ L` | Berstel and Brlek 1987: `Θ(n / log_σ n)` for word chains |
+| monomials, `k` atoms, exponents up to `2^k` | `2^(k²)` | `k² / (10 log₂ k)` | `3k² / log₂ k` | Straus 1964; Pippenger 1980 gives the exact asymptotics |
+| Boolean functions of `n` variables | `2^(2ⁿ)` | `2ⁿ / 4n` | `8·2ⁿ / n` | Shannon 1949; Lupanov 1958 gives `(1 + o(1))·2ⁿ/n` |
+
+The three upper bounds are one construction: a shared table of everything small, then one
+step per use. The literature calls the phenomenon the **Shannon effect**: the hardest
+object of a class costs asymptotically what almost all of them cost. Every row is a known
+theorem with better constants than here. The approximate forms in the table are read off
+the exact inequalities in the Lean theorems and are not themselves machine-checked.
+
+**It is not a general law** (`SetUnion.counting_not_tight`). In the free semilattice on `k`
+atoms the hardest object costs `2k − 1` by the support bound, while counting over the
+`2^k − 1` nonempty sets can only show about `k / log₂ k`. For every constant `C` some `k`
+has the true cost above `C` times anything the counting law yields. An earlier draft of
+this section listed "a general theorem that the counting bound is attained" as open; it is
+false as stated.
+
+**Three obstructions, not two.** Support (`2|σ| − 1`), growth (`log₂` of the size) and
+counting (`log N / log log N`) are each a lower bound, and each one binds somewhere:
+support in the free semilattice, growth for powers of a single generator, counting for
+strings, circuits and dense monomials. The refuted conjecture `Θ(#atoms + log multiplicity)`
+had left counting out. Whether the maximum of the three always gives the order of the
+hardest object is not known to me and not claimed.
+
+**Where size is additive, sharing always saves a logarithm**
+(`MonoidGen.slK_list_prod_le_blocks`). In any monoid with `σ` generators, a product of `L`
+generators costs at most `g·σ^g·2g + L/g` steps for every block length `g`, which is about
+`2L / log_σ L`. Without sharing the cost is exactly `2L − 1` when size is additive
+(`binTreeK_add_one_eq`). So in an extensive domain every large object gains a factor of
+order `log L` from sharing, and in the free monoid most objects gain no more
+(`Str.exists_low_gain`). This is the Berstel–Brlek bound, carried to any monoid.
+
 All of this is elementary, and none of it is new mathematics.
+
+### Complexity cannot be guessed ([`Guessing.lean`](Complexity/Guessing.lean))
+
+Symmetry of information conditions on `x* = ⟨x, K(x)⟩`. The condition cannot be weakened
+to `x`.
+
+| Lean name | Statement | What it is |
+|---|---|---|
+| `Guessing.exists_wrong_guess` | along a computable injective sequence `a`, if a computable table shows at most `N` different values for each `n`, then for some `n` none of them is `K(a n)` | **no bounded list of guesses contains the complexity.** Induction on `N`, striking one guess per round: find guesses `vᵢ ≥ 2i + 2`, request a description of length `vᵢ − 1 − i`, and use minimality of `K_U` (`Upper.K_U_le_of_computable`) to make `vᵢ` wrong from some stage on |
+| `Guessing.K_U_not_computable` | no computable `f` has `f x = K(x)` for all `x` | the case `N = 1`. The library had this only for plain complexity |
+| `Guessing.condK_K_unbounded` | for every `c` some `x` has `K(K(x) \| x) > c` | the qualitative form of a theorem of Gács. The programs of length at most `c` give at most `2^(c+1)` guesses. Gács's logarithmic lower bound is **not** formalized |
+| `Guessing.condK_star_add_lt` | for every `c` there are `x, y` with `K(y \| x*) + c < K(y \| x)` | conditioning on `x` is strictly weaker than conditioning on `x*` |
+| `Guessing.not_symmetry_bare` | no `c` gives `K(x) + K(y \| x) ≤ K(⟨x,y⟩) + c` for all `x, y` | **symmetry of information fails for the bare condition**, by more than any constant. The other direction, `K(⟨x,y⟩) ≤ K(x) + K(y \| x) + c`, holds (`K_pair_le_add_condK`) |
+
+### Comparison with `kolmogorov-complexity-lean`
+
+Alexey Milovanov's Lean 4 library (`AlexeyMilovanov/kolmogorov-complexity-lean`, commit
+`77b47ac` of 23 November 2026, Lean v4.35.0) formalizes Shen, Uspensky and Vereshchagin's
+book. It has 1,811 files and about 800,000 lines; this library has 33 and about 9,500. Its
+statements were read from a clone of the source by a subagent, which copied the signatures
+and searched for `sorry` and `axiom` (none found); I spot-checked the main ones. The
+proofs were not read and nothing was compiled. "Not found" means not found by searching
+names and statements, not by reading everything.
+
+| Topic | There | Here |
+|---|---|---|
+| Universal prefix machine | concrete, on `Nat.Partrec.Code`; theorems hold for **every** optimal prefix machine (`IsOptimalPrefixConditional U`), on bit strings | concrete, on `Nat.Partrec.Code`; theorems for the one machine `U`, on numbers. Theirs is more general |
+| Kraft and Kraft–Chaitin | Kraft's inequality; an online free-list allocator giving each request a code of exactly the requested length (`exists_online_prefixFree_of_kraft_le_one`) | Kraft's inequality for arbitrary index sets; a Shannon–Fano–Elias allocator with one bit of slack. Theirs is sharper |
+| Coding theorem | `2^(−K)` against the a priori measure, against a universal semimeasure, and conditionally | against the a priori measure of a prefix machine only |
+| Symmetry of information | `K(x,y) = K(x) + K(y \| x, K(x)) ± c`, both directions, and relativized to a third string (`KPPair_symmetryOfInformation_staged`) | the same statement, unrelativized (`symmetry_of_information`). **Not new** |
+| Which functions are prefix complexities | summable and upper semicomputable, with a recursively enumerable upper graph; exact realization as `F + 1` (`exists_exact_prefixDecompressor`) | the same, realized as `F + 2`. **Not new**, and theirs has the better constant |
+| Two-part code and counting | for finite sets, with the complexity of the set (`KP_le_setComplexity_add_condKP`, `fraction_deficiency_gt_le`) | for computably enumerated families (`micro_eq_macro_add_log`) |
+| `K(K(x) \| x)` | for **plain** complexity, the tight bound `log n ± c` by the Kalinina–Bauwens game (`exists_condK_cVal_within_log_length`). For prefix complexity: not found | for **prefix** complexity, unbounded, with no rate (`condK_K_unbounded`). Theirs is quantitative; the two are about different complexities |
+| `K(y \| x)` against `K(y \| x, K(x))`; failure of symmetry with the bare condition | not found; a docstring remarks that the bare lower bound "is not the standard prefix symmetry theorem" | proved (`condK_star_add_lt`, `not_symmetry_bare`) |
+| Non-computability | plain complexity, including no unbounded computable lower bound. For prefix complexity: not found | prefix complexity (`K_U_not_computable`), and no bounded list of guesses (`exists_wrong_guess`). No lower-bound form |
+| General description systems, the refuted and empty laws, the reuse gap | not found (no match for addition chains or Straus) | sections 1 to 6 and the reuse gap above |
+
+So the effective layer here is a small, independent re-proof of results that library
+already has in greater generality, with three exceptions that I could not find there: the
+failure of symmetry for the bare condition, the non-computability of prefix complexity,
+and the bounded-guess theorem behind both. Those three are textbook mathematics too.
+
+### Prior art for the reuse results
+
+Searched on 24 November 2026: about a dozen web searches by me, then a subagent that
+opened the sources. I spot-checked the two CSLib theorems against the source files.
+"Not found" is a negative result from a limited search.
+
+| Result here | The mathematics | Formalized elsewhere? |
+|---|---|---|
+| Hardest string: `Str.strK_le_blocks`, `Str.exists_strK_between` | Berstel and Brlek, "On the length of word chains", *Inf. Process. Lett.* 26 (1987): the worst case over words of length `n` on `σ` letters is `Θ(n / log_σ n)`, as stated by Bannai et al., "The smallest grammar problem revisited". Brlek's 1988 notes give the constant `1 + ε` | not found. Hucke (arXiv 2609.12106) formalizes straight-line grammars in Lean 4, for a lower bound on the Greedy compressor, without this bound |
+| Hardest monomial: `Monomial.slK_add_one_le_grouped`, `Monomial.exists_slK_between` | Straus, "Addition chains of vectors", *Amer. Math. Monthly* (1964); Yao (1976) for several powers of one base; Pippenger (1980): `L(p, q, N) = min{p, q}·log N + H/log H + o(H/log H)` with `H = pq·log(N + 1)`, for `p = (N+1)^{o(q)}` and `q = (N+1)^{o(p)}`. Read from the abstract and from Bernstein's survey; the papers themselves could not be opened | not found. `coq-addition-chains` (Castéran and Bertot) proves chain algorithms for `x^n` correct, with no length bounds and no vectors |
+| Hardest circuit: `Circuit.circuitK_le_shannon`, `Circuit.exists_circuitK_between` | Shannon (1949); Lupanov (1958) gives `(1 + o(1))·2ⁿ/n` | **yes, and sharper.** CSLib, `Cslib/Computability/Circuit/Boolean/Shannon.lean` (`exists_hard_function`: more than `2ⁿ/n` gates for large `n`) and `Lupanov.lean` (`exists_circuit`: at most `(1 + ε)·2ⁿ/n`), by Samuel Schlesinger, September 2026. Its lower bound is generic over finite carriers. The result here has constants 4 to 32 times worse and a different basis (NAND, inputs counted) |
+| The pattern "hardest = counting bound" | the **Shannon effect**, named by Lupanov (1970) and proved measure by measure: circuits, formulas, straight-line programs for finite languages (Goodrich, Ladner and Fischer 1977), regular expressions (Serna 1989) | no general criterion found, in mathematics or in a prover |
+| `SetUnion.counting_not_tight`, the three obstructions | elementary; not found stated, and not searched for specifically | not found |
+| Assembly index as straight-line cost | Bieniawski (arXiv 2608.19228) reports that the assembly index of a string **equals** the size of its smallest straight-line program, citing Masierak (2026), and that for `a^N` it is the shortest addition chain | not found |
+
+So the circuit results of this section are a weaker duplicate of CSLib. The string and
+monomial results are textbook mathematics that the search did not find formalized. Nothing
+in this section is new mathematics.
 
 ### Still open
 
-- **The additive laws for `U` are closed, with one seam.** Subadditivity, monotonicity
-  under computable maps, the chain rule in both directions (symmetry of information,
-  `Symmetry.lean`), the two-part code and the logarithmic growth law are all proved for
-  the universal prefix machine. The seam: the upper half of "micro = macro + log W" is
-  stated for a computable enumerator of the macrostate (`K_twoPart_le`), the lower half for
-  a computable coarse-graining and an arbitrary finite set of its microstates
-  (`card_K_lt_macro_add`). They are not combined into one two-sided statement about one
-  family of macrostates.
-- **`K(y | x)` versus `K(y | x*)`.** Symmetry is proved with the condition `⟨x, K(x)⟩`.
-  That the reverse chain rule fails with the bare condition `x` is a known result which
-  is not formalized here.
-- **The two-part code is stated for enumerators.** `K_twoPart_le` takes a computable
-  `e a i` and a computable bound `2^(ℓ a)`; it is not connected to the abstract
-  `Prefix.twoPart_card`, whose macrostate map `π` is arbitrary.
-- **The exact order for monomials.** The bounds here differ by a factor of about
-  `log(k log m)`. Pippenger's theorem on vector addition chains closes it
-  (`log m + (1+o(1))·k log m / log(k log m)`); it is not formalized, and I am quoting it
-  from memory.
+- **The additive laws for `U` are closed.** Subadditivity, monotonicity under computable
+  maps, the chain rule in both directions (symmetry of information), the two-part code in
+  both directions (`micro_eq_macro_add_log`) and the logarithmic growth law are all proved
+  for the universal prefix machine, and the class of prefix-machine complexities is
+  characterized (`Upper.prefix_complexity_iff`).
+- **`K(y | x)` versus `K(y | x*)`: settled qualitatively.** The gap exceeds every constant
+  (`Guessing.condK_star_add_lt`). Its size is not formalized here. For plain complexity
+  the tight bound `log |x| ± c` is formalized in Milovanov's library, whose source
+  attributes the result to Gács and the game proof to Kalinina and Bauwens.
+- **Approximable from above** now has three equivalent forms: the limit of a primitive
+  recursive table, the limit of a computable table (`Upper.exists_primrec_table`), and a
+  recursively enumerable upper graph `{(x, n) | f x ≤ n}` in Mathlib's sense
+  (`Upper.exists_table_iff_re`). Still unconnected: `micro_eq_macro_add_log` and the
+  abstract `Prefix.twoPart_card`, whose macrostate map is arbitrary.
+- **The exact order for monomials.** The proved bounds now agree up to a constant when
+  `k` is about `log₂ m` (`Monomial.exists_slK_between`), and differ by a factor of about
+  `log(k log m) / log log m` in general. Pippenger (*On the evaluation of powers and monomials*, SIAM J. Comput.
+  1980) closes it: `L(p, q, N) = min{p, q}·log N + H / log H` plus lower-order terms, with
+  `H = pq·log(N + 1)`, under growth conditions on `p`, `q`, `N`. For one monomial in `k`
+  atoms that is `log m + (1 + o(1))·k log m / log(k log m)`. Checked against a search
+  summary of the abstract, not against the paper; not formalized.
 - **Boolean functions.** Small support and no additive size, so both obstructions are
   silent beyond the trivial bound. The gap there is formula size versus circuit size,
   which is open in complexity theory.
-- **Tightness of the counting bound** for general finitely generated algebras.
-- **Prior art for this section.** The mathematics is textbook throughout. Two web searches
-  (not a literature review) turned up earlier formalizations of neighbouring results: the
-  Kraft inequalities for prefix-free complexity in HOL4 (Catt and Norrish, CPP 2021) and a
-  proof of the Kraft–Chaitin theorem in Isabelle. They did not turn up a formalization of
-  the coding theorem itself. That is not evidence that none exists.
+- **What decides the hardest object in general.** Counting is tight up to a constant for
+  strings, dense monomials and circuits, and is not tight in the free semilattice
+  (`SetUnion.counting_not_tight`). Support, growth and counting are three lower bounds;
+  whether their maximum is always the right order is open here.
+- **Prior art for this section.** The mathematics is textbook throughout, and the
+  formalization is **not the first in Lean**; see the comparison below. Earlier work in
+  other systems: the Kraft inequalities for prefix-free complexity in HOL4 (Catt and
+  Norrish, CPP 2021), Kraft–Chaitin in Isabelle, synthetic Kolmogorov complexity in Coq
+  (ITP 2022). Nothing in the effective layer of this library should be described as a
+  first formalization.
 - The machine's outputs are natural numbers, its program index is read in unary, and the
   constants are whatever the constructions give. None of this affects the statements, which
   are up to additive constants.
@@ -396,8 +546,8 @@ All of this is elementary, and none of it is new mathematics.
 ## Status
 
 **Proved.** Every theorem in the library, including those in `Limits.lean` that refute
-earlier claims and those of section 7. `Audit.lean` checks every declaration (1083, of
-which 760 are theorems including generated ones; 31 module files, 8,091 lines).
+earlier claims and those of section 7. `Audit.lean` checks every declaration (1261, of
+which 914 are theorems including generated ones; 33 module files, 10,193 lines).
 
 **Not established.** That any real domain satisfies a theorem's hypotheses. Novelty of
 the pieces not found by the prior-art search. Any empirical claim.
@@ -444,7 +594,9 @@ Complexity/
   KraftChaitin.lean  effective converse of Kraft's inequality: a computable decoder
   Levin.lean         Levin's coding theorem for the universal prefix machine
   Conditional.lean   conditional prefix complexity; chain rule, two-part code, growth law on U
-  Symmetry.lean      symmetry of information; micro = macro + log W, lower half
+  Symmetry.lean      symmetry of information; micro = macro + log W
+  Semicomputable.lean  which functions are prefix-machine complexities; K_U is the least
+  Guessing.lean      no bounded list of guesses contains K; K(K(x)|x) unbounded; bare symmetry fails
   Instances/
     Kolmogorov.lean  Shannon.lean  Circuit.lean  Monoid.lean  CoarseGraining.lean
     Causal.lean      Regulator.lean  Learning.lean  Channel.lean

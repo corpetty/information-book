@@ -19,6 +19,8 @@ import Complexity.KraftChaitin
 import Complexity.Levin
 import Complexity.Conditional
 import Complexity.Symmetry
+import Complexity.Semicomputable
+import Complexity.Guessing
 import Complexity.Instances.Kolmogorov
 import Complexity.Instances.PrefixMachine
 import Complexity.Instances.Shannon
@@ -80,7 +82,11 @@ separately are theorems about the infimum that hold for every setting.
                   universal machine: the chain rule (easy half), the two-part code, the
                   logarithmic growth law.
 * `Symmetry`    – symmetry of information, `K(⟨x, y⟩) = K(x) + K(y | x, K(x)) + O(1)`,
-                  and the lower half of "micro = macro + log W" for typical microstates.
+                  and "micro = macro + log W" for typical microstates.
+* `Semicomputable` – which functions are prefix complexities: those approximable from
+                  above with summable weights, up to a constant; `K_U` is the least.
+* `Guessing`    – no bounded list of guesses contains `K`: `K` is not computable,
+                  `K(K(x) | x)` is unbounded, and symmetry fails for the bare condition `x`.
 
 ## Instances
 

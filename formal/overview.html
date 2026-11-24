@@ -1,0 +1,659 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Complexity as cheapest description</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=STIX+Two+Text:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --paper: #edf1f5;
+  --surface: #ffffff;
+  --ink: #101b33;
+  --ink-soft: #46526b;
+  --rule: #c5cedb;
+  --accent: #2740c9;
+  --accent-wash: #dfe5fb;
+  --holds: #17694c;
+  --holds-wash: #d9efe5;
+  --fails: #a12a3c;
+  --fails-wash: #f6dde1;
+  --empty: #5f6b7d;
+  --empty-wash: #e3e7ed;
+  --open: #8f5a00;
+  --open-wash: #f6e8cc;
+  --serif: "STIX Two Text", "STIX Two Math", Georgia, "Times New Roman", serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #0e1626;
+    --surface: #162035;
+    --ink: #e8edf6;
+    --ink-soft: #a5b1c7;
+    --rule: #2f3d58;
+    --accent: #8ea2ff;
+    --accent-wash: #1f2c57;
+    --holds: #6fd3ab;
+    --holds-wash: #143a2e;
+    --fails: #f08a99;
+    --fails-wash: #45202a;
+    --empty: #a5b1c7;
+    --empty-wash: #26324a;
+    --open: #e9b35a;
+    --open-wash: #40311a;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--serif);
+  font-size: 19px;
+  line-height: 1.55;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+code, .lean { font-family: var(--mono); font-size: 0.78em; }
+.lean { color: var(--ink-soft); overflow-wrap: anywhere; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+.read { max-width: 68ch; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+/* top navigation */
+.top {
+  position: sticky; top: 0; z-index: 5;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+.top .wrap { display: flex; gap: 28px; align-items: baseline; padding-top: 10px; padding-bottom: 10px; overflow-x: auto; white-space: nowrap; }
+.top a { color: var(--ink-soft); text-decoration: none; font-size: 16px; }
+.top a:hover { color: var(--ink); text-decoration: underline; }
+.top .name { color: var(--ink); font-weight: 700; margin-right: auto; }
+
+/* hero */
+.hero { padding: 72px 0 28px; }
+h1 {
+  font-size: clamp(38px, 6.2vw, 76px);
+  line-height: 1.02;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  margin: 0 0 28px;
+  max-width: 17ch;
+  text-wrap: balance;
+}
+.hero p { margin: 0 0 16px; }
+.formula {
+  font-style: italic;
+  font-size: clamp(22px, 3vw, 31px);
+  line-height: 1.3;
+  margin: 30px 0 8px;
+  padding-left: 22px;
+  border-left: 3px solid var(--accent);
+}
+.formula span { font-style: normal; }
+.formula-note { color: var(--ink-soft); font-size: 17px; padding-left: 25px; margin: 0; }
+
+h2 { font-size: clamp(28px, 3.6vw, 42px); line-height: 1.1; font-weight: 500; margin: 0 0 14px; letter-spacing: -0.01em; text-wrap: balance; }
+h3 { font-size: 22px; line-height: 1.25; font-weight: 700; margin: 0 0 6px; }
+section { padding: 64px 0 8px; }
+section, .ladder { scroll-margin-top: 56px; }
+.lede { color: var(--ink-soft); margin: 0 0 26px; }
+
+/* the ladder */
+.ladder { margin-top: 36px; }
+.stages { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--ink); background: var(--surface); }
+.stages label { position: relative; padding: 14px 16px 16px; cursor: pointer; border-right: 1px solid var(--rule); line-height: 1.25; }
+.stages label:last-child { border-right: 0; }
+.stages input { position: absolute; opacity: 0; pointer-events: none; }
+.stages .step { display: block; font-size: 15px; color: var(--ink-soft); }
+.stages .nm { display: block; font-size: 19px; font-weight: 700; }
+.stages label:has(input:checked) { background: var(--ink); color: var(--paper); }
+.stages label:has(input:checked) .step { color: var(--rule); }
+.stages label:has(input:focus-visible) { outline: 3px solid var(--accent); outline-offset: -3px; }
+.narrow { display: flex; height: 10px; margin: 0 0 22px; }
+.narrow i { display: block; height: 100%; background: var(--accent); transition: width .35s ease; }
+.stage-body { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.6fr); gap: 36px; align-items: start; }
+.stage-about p { margin: 0 0 14px; }
+.stage-about .q { font-size: 16px; color: var(--ink-soft); margin: 18px 0 4px; }
+.stage-about .rep { font-size: 22px; line-height: 1.3; margin: 0 0 6px; }
+.laws { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.laws li { display: grid; grid-template-columns: 172px minmax(0, 1fr); gap: 16px; padding: 13px 0 14px; border-bottom: 1px solid var(--rule); }
+.laws .law-name { font-weight: 700; line-height: 1.25; }
+.laws .law-form { display: block; font-weight: 400; font-style: italic; font-size: 16px; color: var(--ink-soft); margin-top: 2px; }
+.laws .note { margin: 5px 0 2px; font-size: 17px; line-height: 1.4; }
+.chip { display: inline-block; font-size: 15px; font-weight: 700; padding: 1px 9px 2px; border-radius: 3px; line-height: 1.4; }
+.chip.holds, .chip.proved { color: var(--holds); background: var(--holds-wash); }
+.chip.const { color: var(--holds); background: transparent; box-shadow: inset 0 0 0 1.5px var(--holds); }
+.chip.fails, .chip.refuted { color: var(--fails); background: var(--fails-wash); }
+.chip.empty { color: var(--empty); background: var(--empty-wash); }
+.chip.none { color: var(--empty); background: transparent; box-shadow: inset 0 0 0 1.5px var(--rule); }
+.chip.open { color: var(--open); background: var(--open-wash); }
+
+/* history */
+.history { list-style: none; counter-reset: h; margin: 0; padding: 0; max-width: 78ch; }
+.history li { counter-increment: h; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 14px; padding: 14px 0; border-top: 1px solid var(--rule); }
+.history li::before { content: counter(h); font-size: 30px; line-height: 1; color: var(--accent); font-weight: 500; padding-top: 2px; }
+.history p { margin: 2px 0 0; color: var(--ink-soft); font-size: 17.5px; }
+
+/* demos */
+.demo { background: var(--surface); border: 1px solid var(--rule); border-top: 3px solid var(--ink); padding: 26px 28px 28px; margin: 0 0 28px; }
+.demo > p { max-width: 70ch; margin: 0 0 16px; }
+.demo .ties { font-size: 16.5px; color: var(--ink-soft); margin: 16px 0 0; max-width: 78ch; }
+.controls { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin: 14px 0 18px; }
+button, .btn {
+  font: inherit; font-size: 17px; color: var(--ink); background: var(--paper);
+  border: 1px solid var(--ink); border-radius: 3px; padding: 5px 13px 6px; cursor: pointer;
+}
+button:hover { background: var(--accent-wash); }
+button.quiet { border-color: var(--rule); color: var(--ink-soft); }
+input[type=range] { accent-color: var(--accent); width: min(360px, 100%); }
+.readouts { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 18px 28px; margin: 6px 0 0; }
+.readouts div { border-top: 1px solid var(--rule); padding-top: 8px; }
+.readouts dt { font-size: 16px; color: var(--ink-soft); line-height: 1.3; }
+.readouts dd { margin: 2px 0 0; font-size: 30px; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.readouts dd small { font-size: 16px; color: var(--ink-soft); }
+.bars { display: grid; gap: 5px; margin: 4px 0 18px; }
+.bars .row { display: grid; grid-template-columns: 128px minmax(0, 1fr) 82px; gap: 12px; align-items: center; font-size: 15px; }
+.bars .track { height: 14px; background: var(--empty-wash); }
+.bars .fill { height: 100%; background: var(--accent); min-width: 1px; }
+.bars .row.best .fill { background: var(--holds); }
+.bars .num { font-variant-numeric: tabular-nums; text-align: right; color: var(--ink-soft); }
+.saywhat { min-height: 2.9em; margin: 14px 0 0; font-size: 18px; }
+svg { display: block; width: 100%; height: auto; }
+.codes { display: flex; flex-wrap: wrap; gap: 6px 8px; margin: 14px 0 0; padding: 0; list-style: none; }
+.codes li { font-family: var(--mono); font-size: 14.5px; padding: 3px 8px; background: var(--accent-wash); border-radius: 3px; }
+.codes li b { font-family: var(--serif); font-size: 16px; font-weight: 400; font-style: italic; margin-right: 6px; }
+.msg { margin: 12px 0 0; font-size: 17.5px; min-height: 1.6em; }
+.msg.bad { color: var(--fails); }
+.chain { font-family: var(--mono); font-size: 14.5px; line-height: 1.9; overflow-wrap: anywhere; margin: 8px 0 0; color: var(--ink-soft); }
+.chain b { color: var(--ink); font-weight: 500; }
+.cmp { display: grid; gap: 8px; margin: 14px 0 4px; }
+.cmp .row { display: grid; grid-template-columns: 190px minmax(0, 1fr) 76px; gap: 12px; align-items: center; font-size: 16px; }
+.cmp .track { height: 18px; background: var(--empty-wash); }
+.cmp .fill { height: 100%; min-width: 2px; }
+.cmp .tree .fill { background: var(--fails); }
+.cmp .dag .fill { background: var(--holds); }
+.cmp .cap .fill { background: var(--accent); }
+.cmp .num { text-align: right; font-variant-numeric: tabular-nums; }
+label.slide { display: grid; grid-template-columns: 150px minmax(0, 360px) 70px; gap: 12px; align-items: center; font-size: 17px; margin: 4px 0; }
+label.slide output { font-variant-numeric: tabular-nums; }
+
+/* ledger */
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 8px; }
+.filters button[aria-pressed=true] { background: var(--ink); color: var(--paper); }
+.count { font-size: 16px; color: var(--ink-soft); margin: 10px 0 14px; }
+.ledger { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--ink); }
+.ledger li { display: grid; grid-template-columns: 104px 150px minmax(0, 1fr); gap: 16px; padding: 12px 0 13px; border-bottom: 1px solid var(--rule); align-items: start; }
+.ledger .area { font-size: 16px; color: var(--ink-soft); padding-top: 2px; }
+.ledger p { margin: 0; line-height: 1.42; }
+.ledger .lean { display: block; margin-top: 3px; }
+
+/* after */
+.after { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 0 44px; }
+.after article { border-top: 1px solid var(--ink); padding: 14px 0 20px; }
+.after p { margin: 0 0 8px; font-size: 17.5px; line-height: 1.45; }
+.after .close { color: var(--ink-soft); }
+
+footer { margin-top: 64px; border-top: 1px solid var(--ink); padding: 26px 0 60px; font-size: 17px; color: var(--ink-soft); }
+footer dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(170px, 1fr)); gap: 16px 28px; margin: 0 0 18px; }
+footer dt { font-size: 15.5px; }
+footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+@media (max-width: 820px) {
+  body { font-size: 18px; }
+  .hero { padding-top: 44px; }
+  .stages { grid-template-columns: 1fr 1fr; }
+  .stages label:nth-child(2) { border-right: 0; }
+  .stages label:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
+  .stage-body { grid-template-columns: 1fr; gap: 22px; }
+  .laws li { grid-template-columns: 1fr; gap: 4px; }
+  .ledger li { grid-template-columns: 1fr; gap: 3px; }
+  .bars .row { grid-template-columns: 92px minmax(0, 1fr) 66px; }
+  .cmp .row { grid-template-columns: 1fr; gap: 2px; }
+  .cmp .num { text-align: left; }
+  label.slide { grid-template-columns: 1fr; gap: 2px; }
+  .demo { padding: 20px 18px 22px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <a class="name" href="#top">Complexity, formalized</a>
+    <a href="#ladder">The ladder</a>
+    <a href="#history">How we got here</a>
+    <a href="#try">Try the objects</a>
+    <a href="#ledger">The ledger</a>
+    <a href="#after">What we're after</a>
+  </div>
+</nav>
+
+<main id="top">
+<div class="wrap">
+
+  <header class="hero">
+    <h1>Complexity is the cheapest description. The laws depend on what a description may be.</h1>
+    <div class="read">
+      <p>This is a recap of a Lean&nbsp;4 library that set out to be a unified theory of complexity, was attacked, and came back narrower and true. Everything on this page marked as proved has been checked by the machine.</p>
+      <p class="formula">K(x) <span>=</span> the least cost of any description that realizes x</p>
+      <p class="formula-note">Choose what counts as a description, what it costs, and what "realizes" means, and you get Kolmogorov complexity, circuit size, addition chains, source coding, and more.</p>
+      <p style="margin-top:22px">On its own, that definition excludes nothing: every function is <i>K</i> for some choice. The content appears only as the choice is restricted. Step through the restrictions below and watch which laws switch on.</p>
+    </div>
+
+    <div class="ladder" id="ladder">
+      <div class="stages" role="radiogroup" aria-label="How restricted descriptions are" id="stages"></div>
+      <div class="narrow" aria-hidden="true"><i id="narrowbar" style="width:100%"></i></div>
+      <div class="stage-body">
+        <div class="stage-about" id="stageAbout" aria-live="polite"></div>
+        <ul class="laws" id="laws"></ul>
+      </div>
+    </div>
+  </header>
+
+  <section id="history">
+    <h2>How we got here</h2>
+    <p class="lede read">Thirteen rounds. The second one did the most good.</p>
+    <ol class="history">
+      <li><div><h3>A unified theory</h3><p>One definition, eight laws, a dozen instances from different fields, all in Lean. It claimed the laws hold "for every setting of the dials".</p></div></li>
+      <li><div><h3>Adversarial review</h3><p>By the author and four independent reviewers. Eight claims were false, five were true but empty, and most of the mathematics was already in the literature. The definition turned out to be a language, not a theory.</p></div></li>
+      <li><div><h3>Restrict until something is excluded</h3><p>Self-delimiting descriptions give a representation theorem (Kraft's inequality and its converse) and make the additive laws true. Domination is given a mechanism: one translator, constant overhead.</p></div></li>
+      <li><div><h3>A universal prefix machine and Levin's coding theorem</h3><p>Restricting further to computable systems produces a universal member. An online Kraft–Chaitin allocator turns "complex implies improbable" from a refuted slogan into a theorem about that machine.</p></div></li>
+      <li><div><h3>The reuse gap</h3><p>How much does sharing parts buy? At most an exponential; nothing when no atom repeats; at most the multiplicity of the atoms in between.</p></div></li>
+      <li><div><h3>An upper bound, and a conjecture that died</h3><p>Binary exponentiation attains the multiplicity bound up to a logarithm. The guess that cost is of order atoms + log multiplicity was refuted by counting, and the refutation is machine-checked.</p></div></li>
+      <li><div><h3>The additive laws, on one machine</h3><p>Conditional complexity <i>K(y | x)</i> is defined. Subadditivity, the chain rule's upper half, the two-part code and the logarithmic growth law all hold for the universal prefix machine, each up to a constant.</p></div></li>
+      <li><div><h3>Symmetry of information</h3><p><i>K(x, y) = K(x) + K(y | x, K(x))</i> up to a constant, in both directions. With it, typical microstates really do cost macrostate plus log&nbsp;W.</p></div></li>
+      <li><div><h3>Closing gaps, and finding company</h3><p>The functions that are prefix-machine complexities are characterized, and the two halves of micro&nbsp;=&nbsp;macro&nbsp;+&nbsp;log&nbsp;W are joined in one theorem. A prior-art search turned up an existing Lean&nbsp;4 library that already covers much of this ground.</p></div></li>
+      <li><div><h3>Complexity cannot be guessed</h3><p>No bounded list of guesses contains <i>K</i>. So <i>K(K(x) | x)</i> is unbounded, and symmetry of information is false with the bare condition <i>x</i>: the counterexample just outside the law is now a theorem.</p></div></li>
+      <li><div><h3>Shared squarings, and a statement that proved nothing</h3><p>Straus's method shares the squarings among all the atoms, and brings the upper bound for monomials within a constant of the lower one when the atoms number about log&nbsp;<i>m</i>. Checking the two against each other exposed a flaw: the lower-bound theorems had allowed the empty monomial, which cannot be built at all, so they were trivially true. They now require every exponent to be at least one. A statement-by-statement comparison with the other Lean library shows that most of the universal-machine layer here is a re-proof.</p></div></li>
+      <li><div><h3>The worst case is the counting bound</h3><p>One construction, three times: build a shared table of everything small, then pay one step per use. For binary strings, for monomials and for Boolean circuits, the hardest object now costs what counting says it must, up to a constant.</p></div></li>
+      <li><div><h3>Checking the prior art, and one more overreach</h3><p>All three of those results are classical: Berstel and Brlek for strings, Straus and Pippenger for monomials, Shannon and Lupanov for circuits. The literature calls the pattern the Shannon effect. I had listed "the counting bound is always attained" as an open question; it is false, and the counterexample is now a theorem. In the free semilattice it is support that binds. And the circuit bounds turn out to be in CSLib already, in Lean, with better constants.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="try">
+    <h2>Try the objects</h2>
+    <p class="lede read">Three small machines from the library, runnable here. Each one is the idea behind a theorem.</p>
+
+    <div class="demo" id="demo-dial">
+      <h3>The temperature dial</h3>
+      <p>An object with eight descriptions of different lengths. Weigh each description by <i>q</i> raised to its length and add them up: that sum is <i>Z(q)</i>. One dial takes you from complexity, through probability, to plain counting.</p>
+      <div class="controls">
+        <input type="range" id="q" min="0.02" max="1" step="0.01" value="0.5" aria-label="q, the weight per bit">
+        <button data-q="0.02">Cold: q near 0</button>
+        <button data-q="0.5">q = ½</button>
+        <button data-q="1">Hot: q = 1</button>
+      </div>
+      <div class="bars" id="dialBars"></div>
+      <dl class="readouts">
+        <div><dt>q, the weight per bit</dt><dd id="qOut"></dd></div>
+        <div><dt>Z(q), the total weight</dt><dd id="zOut"></dd></div>
+        <div><dt>Share carried by the shortest description</dt><dd id="shareOut"></dd></div>
+      </dl>
+      <p class="saywhat" id="dialSay" aria-live="polite"></p>
+      <p class="ties">In the library: <span class="lean">Thermo.pow_le_Z_of_K_le</span> (simple implies probable) holds for every system. The converse does not: it needed the universal prefix machine and Levin's theorem.</p>
+    </div>
+
+    <div class="demo" id="demo-kc">
+      <h3>The Kraft–Chaitin allocator</h3>
+      <p>Ask for codewords one at a time. A request of length <i>n</i> claims a slice of width 2<sup>−n</sup> of the unit interval and receives a codeword of length <i>n</i> + 1: the aligned half-slice that fits inside it. No codeword is ever a prefix of another, and nothing has to be planned ahead.</p>
+      <div class="controls" id="kcButtons" role="group" aria-label="Request a codeword"></div>
+      <svg id="kcSvg" viewBox="0 0 1000 86" role="img" aria-label="The unit interval, with the slice claimed by each request and the half-slice its codeword names"></svg>
+      <ul class="codes" id="kcCodes"></ul>
+      <p class="msg" id="kcMsg" aria-live="polite"></p>
+      <p class="ties">In the library: <span class="lean">KraftChaitin.exists_machine</span>. The same decoder, fed Levin's requests, proves the coding theorem; fed those requests rescaled for each condition, it proves symmetry of information.</p>
+    </div>
+
+    <div class="demo" id="demo-reuse">
+      <h3>What reuse buys</h3>
+      <p>Build a product of <i>k</i> different atoms, each repeated <i>m</i> times. Without sharing, every copy is paid for. With sharing, a power is built by squaring and each intermediate result is paid for once.</p>
+      <label class="slide">Repeats of each atom, m <input type="range" id="rm" min="1" max="1024" value="100"> <output id="rmOut"></output></label>
+      <label class="slide">Different atoms, k <input type="range" id="rk" min="1" max="8" value="3"> <output id="rkOut"></output></label>
+      <div class="cmp" id="cmp"></div>
+      <dl class="readouts">
+        <div><dt>Gain from sharing</dt><dd id="gainOut"></dd></div>
+        <div><dt>Proved ceiling on the gain</dt><dd id="capOut"></dd></div>
+      </dl>
+      <p class="chain" id="chain"></p>
+      <p class="ties">In the library: <span class="lean">MonoidGen.slK_pow_le</span>, <span class="lean">Monomial.slK_add_one_le</span>, <span class="lean">gain_le_multiplicity</span>. Set m to 1 and the gain disappears: when nothing repeats, reuse buys nothing (<span class="lean">binK_eq_binTreeK_of_le</span>).</p>
+    </div>
+  </section>
+
+  <section id="ledger">
+    <h2>The ledger</h2>
+    <p class="lede read">Every headline claim, with what happened to it. "Refuted" entries are theorems too: the library proves the counterexample.</p>
+    <div class="filters" id="statusFilters" role="group" aria-label="Filter by status"></div>
+    <div class="filters" id="areaFilters" role="group" aria-label="Filter by area"></div>
+    <p class="count" id="ledgerCount" aria-live="polite"></p>
+    <ul class="ledger" id="ledgerList"></ul>
+  </section>
+
+  <section id="after">
+    <h2>What we're after</h2>
+    <div class="read">
+      <p>The original aim was one theory of complexity across fields. The review showed that the shared definition is only a common language. The aim that survived is sharper: for each law, find the weakest restriction on descriptions under which it holds, and prove a counterexample just outside it.</p>
+      <p>For the information-theoretic laws that classification is now nearly complete, as the ladder shows: every stage has a representation theorem, and every law has a stage where it holds. For reuse it is partial. These are the gaps.</p>
+    </div>
+    <div class="after" id="afterList" style="margin-top:26px"></div>
+    <div class="read" style="margin-top:8px">
+      <p>One standing caveat. Almost every result here is classical in the field it comes from. What the library adds is that the laws are stated once, proved once, checked by a machine, and that the places where they fail are proved as well. It is also not the first formalization. A Lean 4 library covering much of the same ground on prefix complexity already exists, and CSLib has the circuit bounds of Shannon and Lupanov with better constants. The framing by restrictions, the proved counterexamples, and the worst-case bounds for strings and monomials were not found formalized elsewhere, but the searches were short.</p>
+    </div>
+  </section>
+
+  <footer>
+    <dl>
+      <div><dt>Declarations checked</dt><dd>1,261</dd></div>
+      <div><dt>Theorems among them</dt><dd>914</dd></div>
+      <div><dt>Lean files</dt><dd>33</dd></div>
+      <div><dt>Lines</dt><dd>10,193</dd></div>
+    </dl>
+    <p class="read">Lean 4 with Mathlib. No <code>sorry</code>. Every declaration depends only on the three standard axioms (<code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>), checked by <code>Audit.lean</code>. Full detail and the review's findings are in <a href="README.md">README.md</a>.</p>
+  </footer>
+
+</div>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+
+  /* ---------- the ladder ---------- */
+  const STATUS = { holds: "Holds", const: "Holds, up to a constant", fails: "Fails", empty: "True but empty", none: "Not a law here" };
+  const stages = [
+    { name: "Any description system", width: 100,
+      rule: "Descriptions, a cost for each, and a relation saying which objects a description realizes. Nothing more is assumed.",
+      rep: "Every function is the complexity of some system.", lean: "Limits.exists_system_K_eq",
+      after: "So nothing is excluded, and nothing can be predicted." },
+    { name: "Unambiguous bit strings", width: 70,
+      rule: "Descriptions are bit strings, cost is length, and each string describes at most one object. Plain Kolmogorov complexity lives here.",
+      rep: "f is a complexity exactly when at most 2ⁿ objects have f = n.", lean: "Limits.exists_binary_iff",
+      after: "Counting is the only general fact at this level." },
+    { name: "Self-delimiting strings", width: 44,
+      rule: "No description is a proper prefix of another, so a description announces its own end.",
+      rep: "f is a complexity exactly when the weights 2^(−f(x)) sum to at most 1.", lean: "Prefix.exists_prefix_iff",
+      after: "Kraft's inequality and its converse. This is the first restriction that excludes functions in an interesting way." },
+    { name: "The universal prefix machine", width: 22,
+      rule: "Self-delimiting and computable. One machine, U, runs every other prefix machine from a fixed prefix.",
+      rep: "f + c is a complexity for some c exactly when f can be approximated from above and the weights 2^(−f(x)) have a finite sum.", lean: "Upper.prefix_complexity_iff",
+      after: "And K for the universal machine is the least such function, up to a constant." }
+  ];
+  const laws = [
+    { name: "Counting", form: "few objects are cheap", cells: [
+      ["none", "Needs unambiguous descriptions. Otherwise one description can stand for everything.", ""],
+      ["holds", "Fewer than 2ⁿ objects have complexity below n.", "card_le_of_K_lt"],
+      ["holds", "At most 2ⁿ objects have complexity at most n.", "Thermo.card_le_two_pow_of_K_le"],
+      ["holds", "Also given any condition: fewer than 2ᵐ objects have K(y | a) below m.", "Conditional.card_condK_lt"] ] },
+    { name: "Invariance", form: "the language costs a constant", cells: [
+      ["empty", "Domination is defined as the inequality it concludes, and a zero-cost system dominates everything.", "Limits.dominates_iff_pointwise"],
+      ["const", "Among computable systems a universal interpreter exists.", "Kolmogorov.invariance"],
+      ["fails", "No self-delimiting system dominates all the others.", "Prefix.not_exists_universal"],
+      ["const", "Any two optimal prefix machines agree up to a constant.", "PrefixMachine.invariance"] ] },
+    { name: "Subadditivity", form: "K(x, y) ≤ K(x) + K(y)", cells: [
+      ["none", "Nothing says how two descriptions combine.", ""],
+      ["fails", "False for plain complexity: two lengths are added with no delimiter between them.", "Limits.not_forall_K_obj_le"],
+      ["holds", "Exactly, in a purpose-built system that is again self-delimiting.", "Prefix.pair"],
+      ["const", "On the one machine, with a constant.", "PrefixMachine.K_pair_le"] ] },
+    { name: "Growth law", form: "K(fᵗx) ≤ K(x) + 2 log t", cells: [
+      ["none", "No dynamics, no clock.", ""],
+      ["fails", "False for the plain universal machine and a primitive recursive f.", "Limits.not_iterate_bound_kolmogorov"],
+      ["holds", "In a purpose-built self-delimiting system.", "Prefix.iterate"],
+      ["const", "For every computable f: a dynamics adds at most the information in the clock.", "Conditional.K_iterate_le_log"] ] },
+    { name: "Two-part code", form: "micro ≤ macro + log W", cells: [
+      ["none", "No macrostates.", ""],
+      ["fails", "False for plain complexity, for the same reason as subadditivity.", "Limits.not_twoPart_bound_kolmogorov"],
+      ["holds", "In a purpose-built self-delimiting system.", "Prefix.twoPart_card"],
+      ["const", "Every microstate is within c above macrostate + log W, and all but a fraction 2^(−d) are within d + c below.", "Symmetry.micro_eq_macro_add_log"] ] },
+    { name: "Coding theorem", form: "complex implies improbable", cells: [
+      ["none", "No probability without bit strings.", ""],
+      ["fails", "For the plain machine the probability of every object is infinite.", ""],
+      ["fails", "A self-delimiting system exists where objects of complexity n + 1 have probability ½.", "Limits.exists_complex_probable"],
+      ["const", "Levin's theorem: probability equals 2^(−K) up to a constant factor.", "Levin.levin"] ] },
+    { name: "Symmetry of information", form: "K(x,y) = K(x) + K(y | x, K(x))", cells: [
+      ["none", "Conditional complexity is not defined.", ""],
+      ["none", "Conditional complexity is not defined.", ""],
+      ["none", "Conditional complexity needs a machine to condition.", ""],
+      ["const", "Both directions. With the bare condition x in place of ⟨x, K(x)⟩ it is false, by more than any constant.", "Symmetry.symmetry_of_information, Guessing.not_symmetry_bare"] ] }
+  ];
+  let stageIx = 0;
+  function renderStage() {
+    const s = stages[stageIx];
+    $("narrowbar").style.width = s.width + "%";
+    const a = $("stageAbout"); a.textContent = "";
+    a.append(el("p", "", s.rule));
+    a.append(el("p", "q", "Which functions can be a complexity?"));
+    a.append(el("p", "rep", s.rep));
+    a.append(el("span", "lean", s.lean));
+    a.append(el("p", "q", s.after));
+    const ul = $("laws"); ul.textContent = "";
+    laws.forEach((law) => {
+      const [st, note, lean] = law.cells[stageIx];
+      const li = el("li");
+      const left = el("div", "law-name", law.name);
+      left.append(el("span", "law-form", law.form));
+      const right = el("div");
+      right.append(el("span", "chip " + st, STATUS[st]));
+      right.append(el("p", "note", note));
+      if (lean) right.append(el("span", "lean", lean));
+      li.append(left, right); ul.append(li);
+    });
+  }
+  stages.forEach((s, i) => {
+    const lab = el("label");
+    const inp = el("input"); inp.type = "radio"; inp.name = "stage"; inp.value = i; if (i === 0) inp.checked = true;
+    inp.addEventListener("change", () => { stageIx = i; renderStage(); });
+    lab.append(inp, el("span", "step", i === 0 ? "Start" : "Restriction " + i), el("span", "nm", s.name));
+    $("stages").append(lab);
+  });
+  renderStage();
+
+  /* ---------- temperature dial ---------- */
+  const lens = [3, 5, 5, 6, 8, 8, 8, 9];
+  const fmt = (v) => v >= 100 ? v.toFixed(0) : v >= 1 ? v.toFixed(2) : v >= 0.001 ? v.toFixed(4) : v.toExponential(2);
+  function renderDial() {
+    const q = parseFloat($("q").value);
+    const w = lens.map((n) => Math.pow(q, n));
+    const Z = w.reduce((a, b) => a + b, 0);
+    const top = w[0];
+    const bars = $("dialBars"); bars.textContent = "";
+    lens.forEach((n, i) => {
+      const row = el("div", "row" + (i === 0 ? " best" : ""));
+      row.append(el("span", "", i === 0 ? n + " bits, the shortest" : n + " bits"));
+      const track = el("div", "track"); const fill = el("div", "fill"); fill.style.width = (100 * w[i] / top) + "%"; track.append(fill);
+      row.append(track, el("span", "num", fmt(w[i])));
+      bars.append(row);
+    });
+    $("qOut").textContent = q.toFixed(2);
+    $("zOut").textContent = fmt(Z);
+    $("shareOut").textContent = (100 * top / Z).toFixed(q < 0.1 ? 2 : 1) + "%";
+    let say;
+    if (q <= 0.1) say = "Cold. Only the shortest description counts, so Z is essentially q to the power K, with K = 3. This end of the dial is least-cost complexity.";
+    else if (Math.abs(q - 0.5) < 0.006) say = "q = ½. Z is the chance that fair coin flips spell out a description: the algorithmic probability. Here −log₂ Z = " + (-Math.log2(Z)).toFixed(2) + ", against K = 3.";
+    else if (q >= 0.995) say = "Hot. Every description counts once, so Z is just the number of descriptions: " + lens.length + ". This end is degeneracy, Boltzmann's W.";
+    else if (q < 0.5) say = "Cooling toward complexity: the shortest description carries more and more of the weight.";
+    else say = "Heating toward counting: long descriptions matter almost as much as short ones.";
+    $("dialSay").textContent = say;
+  }
+  $("q").addEventListener("input", renderDial);
+  document.querySelectorAll("#demo-dial button[data-q]").forEach((b) => b.addEventListener("click", () => { $("q").value = b.dataset.q; renderDial(); }));
+  renderDial();
+
+  /* ---------- Kraft–Chaitin allocator ---------- */
+  const SVGNS = "http://www.w3.org/2000/svg";
+  let reqs = [];            // each: {n, start, slot, code}
+  let cum = 0;              // dyadic rational, exact in floating point at these sizes
+  const sub = (i) => String(i).split("").map((d) => "₀₁₂₃₄₅₆₇₈₉"[d]).join("");
+  function request(n) {
+    const w = Math.pow(2, -n);
+    if (cum + w > 1 + 1e-12) {
+      const left = 1 - cum;
+      $("kcMsg").className = "msg bad";
+      $("kcMsg").textContent = "A length-" + n + " request needs " + w + " of the interval and only " + left + " is unclaimed. Kraft's inequality says no prefix code has these lengths. Ask for something longer, or start over.";
+      return;
+    }
+    const slot = Math.ceil(cum * Math.pow(2, n + 1) - 1e-9);
+    reqs.push({ n: n, start: cum, slot: slot, code: slot.toString(2).padStart(n + 1, "0") });
+    cum += w;
+    renderKC();
+  }
+  function prefixFree() {
+    for (let i = 0; i < reqs.length; i++) for (let j = 0; j < reqs.length; j++)
+      if (i !== j && reqs[j].code.startsWith(reqs[i].code)) return false;
+    return true;
+  }
+  function renderKC() {
+    const svg = $("kcSvg"); svg.textContent = "";
+    const add = (tag, attrs) => { const e = document.createElementNS(SVGNS, tag); for (const k in attrs) e.setAttribute(k, attrs[k]); svg.append(e); return e; };
+    add("rect", { x: 0, y: 14, width: 1000, height: 44, fill: "var(--empty-wash)" });
+    reqs.forEach((r, i) => {
+      const w = Math.pow(2, -r.n), cw = Math.pow(2, -(r.n + 1));
+      add("rect", { x: r.start * 1000, y: 14, width: w * 1000, height: 44, fill: "var(--accent-wash)", stroke: "var(--accent)", "stroke-width": 1 });
+      add("rect", { x: r.slot * cw * 1000, y: 22, width: cw * 1000, height: 28, fill: "var(--accent)" });
+      if (w * 1000 > 26) { const t = add("text", { x: (r.start + w / 2) * 1000, y: 78, "text-anchor": "middle", "font-size": 17, "font-style": "italic", fill: "var(--ink-soft)", "font-family": "var(--serif)" }); t.textContent = "x" + sub(i + 1); }
+    });
+    [0, 0.25, 0.5, 0.75, 1].forEach((v) => {
+      add("line", { x1: v * 1000, x2: v * 1000, y1: 6, y2: 14, stroke: "var(--ink-soft)", "stroke-width": 1 });
+    });
+    const codes = $("kcCodes"); codes.textContent = "";
+    reqs.forEach((r, i) => { const li = el("li"); li.append(el("b", "", "x" + sub(i + 1)), document.createTextNode(r.code)); codes.append(li); });
+    const m = $("kcMsg"); m.className = "msg";
+    if (!reqs.length) m.textContent = "The interval is empty. Request a few codewords, short ones first or last, in any order.";
+    else m.textContent = reqs.length + (reqs.length === 1 ? " codeword" : " codewords") + ", " + (cum) + " of the interval claimed. " + (prefixFree() ? "Checked: no codeword is a prefix of another." : "Prefix clash found.");
+  }
+  [1, 2, 3, 4, 5, 6].forEach((n) => { const b = el("button", "", "Length " + n); b.addEventListener("click", () => request(n)); $("kcButtons").append(b); });
+  const rnd = el("button", "quiet", "Add five at random"); rnd.addEventListener("click", () => { for (let i = 0; i < 5; i++) { const n = 2 + Math.floor(Math.random() * 5); if (cum + Math.pow(2, -n) <= 1) request(n); } }); $("kcButtons").append(rnd);
+  const rst = el("button", "quiet", "Start over"); rst.addEventListener("click", () => { reqs = []; cum = 0; renderKC(); }); $("kcButtons").append(rst);
+  [2, 3, 3, 4].forEach(request);
+
+  /* ---------- reuse ---------- */
+  function renderReuse() {
+    const m = parseInt($("rm").value, 10), k = parseInt($("rk").value, 10);
+    $("rmOut").textContent = m; $("rkOut").textContent = k;
+    const lg = Math.floor(Math.log2(m));
+    const pop = m.toString(2).split("").filter((c) => c === "1").length;
+    const onePower = 1 + lg + (pop - 1);
+    const tree = 2 * k * m - 1;
+    const dag = k * onePower + (k - 1);
+    const proved = k * (2 * lg + 2) - 1;
+    const cmp = $("cmp"); cmp.textContent = "";
+    const max = Math.max(tree, proved);
+    [["tree", "Without sharing", tree], ["dag", "With sharing, binary method", dag], ["cap", "Proved bound with sharing", proved]].forEach(([cls, label, v]) => {
+      const row = el("div", "row " + cls);
+      const track = el("div", "track"); const fill = el("div", "fill"); fill.style.width = (100 * v / max) + "%"; track.append(fill);
+      row.append(el("span", "", label), track, el("span", "num", v.toLocaleString("en-US") + (v === 1 ? " step" : " steps")));
+      cmp.append(row);
+    });
+    $("gainOut").innerHTML = ""; $("gainOut").append(document.createTextNode((tree / dag).toFixed(tree / dag >= 10 ? 0 : 1) + "×"));
+    $("capOut").innerHTML = ""; $("capOut").append(document.createTextNode(m + "×"), el("small", "", "  the multiplicity"));
+    // the chain for one power
+    const bits = m.toString(2); let e = 1; const seq = [1];
+    for (let i = 1; i < bits.length; i++) { e *= 2; seq.push(e); if (bits[i] === "1") { e += 1; seq.push(e); } }
+    const ch = $("chain"); ch.textContent = "";
+    ch.append(document.createTextNode("Exponents built for one atom: "));
+    seq.forEach((v, i) => { if (i) ch.append(document.createTextNode(" → ")); ch.append(el("b", "", String(v))); });
+    ch.append(document.createTextNode(m === 1 ? ". One step: the atom itself." : ". " + seq.length + " steps, each paid once."));
+  }
+  $("rm").addEventListener("input", renderReuse); $("rk").addEventListener("input", renderReuse);
+  renderReuse();
+
+  /* ---------- ledger ---------- */
+  const L = [
+    ["proved", "General", "No more cheap objects than cheap descriptions. The one lemma behind incompressibility, Ashby's law, the VC bound and the channel ceiling.", "card_le_of_K_lt"],
+    ["proved", "General", "Counting is the only general fact about bit-string descriptions: a function is such a complexity exactly when each level has at most 2ⁿ members.", "Limits.exists_binary_iff"],
+    ["proved", "General", "Sharing never costs more than not sharing, and a repeated part is paid for once.", "Sig.dagK_le_treeK"],
+    ["proved", "General", "With m operations of arity at most r, at most n·(m·nʳ)ⁿ objects can be built in n steps. Gives hard Boolean functions, hard strings and hard monomials from one count.", "Sig.card_le_of_dagK_le"],
+    ["empty", "General", "\"Every measure is this infimum for some setting of the dials.\" True, because every function is.", "Limits.exists_system_K_eq"],
+    ["empty", "General", "Invariance in general. It holds by definition, and has content only relative to a class of admissible systems fixed from outside.", "Limits.dominates_iff_pointwise"],
+    ["refuted", "General", "\"Measures agree exactly when each system simulates the other.\" Two systems can have equal complexity with neither translatable into the other.", "Translation.exists_dominates_not_simulates"],
+    ["refuted", "General", "\"K(fᵗx) ≤ K(x) + log t + c for the universal machine.\" False for plain complexity.", "Limits.not_iterate_bound_kolmogorov"],
+    ["refuted", "General", "\"K(micro) ≤ K(macro) + log W + c for the universal machine.\" False for plain complexity.", "Limits.not_twoPart_bound_kolmogorov"],
+    ["refuted", "General", "\"Complex implies improbable\" as a law of description systems. A self-delimiting system exists where complex objects have probability ½.", "Limits.exists_complex_probable"],
+    ["proved", "Self-delimiting", "Kraft's inequality and its converse, for arbitrary index sets: the representation theorem the first version lacked.", "Prefix.exists_prefix_iff"],
+    ["proved", "Self-delimiting", "Coding theorem, existence form: for every such system another one has complexity ⌈−log₂ probability⌉.", "Prefix.exists_coding"],
+    ["proved", "Self-delimiting", "No self-delimiting system dominates all the others. Invariance needs computability as well.", "Prefix.not_exists_universal"],
+    ["proved", "Universal machine", "A universal prefix machine: it runs every prefix machine from a fixed prefix, so its complexity is optimal up to a constant.", "PrefixMachine.U_simulates"],
+    ["proved", "Universal machine", "Kraft–Chaitin: an online decoder serving any computable list of requests whose weights sum to at most one, one bit over each request.", "KraftChaitin.exists_machine"],
+    ["proved", "Universal machine", "Levin's coding theorem: algorithmic probability equals 2^(−K) up to a constant factor.", "Levin.levin, Levin.P_le_two_pow_mul_wt"],
+    ["proved", "Universal machine", "Computation creates no information: K(f(x)) ≤ K(x) + c for computable f.", "PrefixMachine.K_map_le"],
+    ["proved", "Universal machine", "K(x) ≤ 2 log₂(x + 1) + c.", "Levin.K_U_le_log"],
+    ["proved", "Universal machine", "Chain rule, upper half: K(x, y) ≤ K(x) + K(y | x) + c, with conditional complexity defined from a universal conditional machine.", "Conditional.K_pair_le_add_condK"],
+    ["proved", "Universal machine", "Two-part code: an element of a set of 2^ℓ enumerable candidates costs K(set) + ℓ + c, and given the set no code beats ℓ on all of them.", "Conditional.K_twoPart_le, Conditional.exists_condK_ge"],
+    ["proved", "Universal machine", "Logarithmic growth law for every computable dynamics.", "Conditional.K_iterate_le_log"],
+    ["proved", "Universal machine", "Symmetry of information, both directions, with the condition ⟨x, K(x)⟩.", "Symmetry.symmetry_of_information"],
+    ["proved", "Universal machine", "Micro = macro + log W, both halves: every microstate of a macrostate a has K(x) ≤ K(a) + log₂ W + c, and all but a fraction 2^(−d) have K(x) ≥ K(a) + log₂ W − d − c.", "Symmetry.micro_eq_macro_add_log"],
+    ["proved", "Universal machine", "Which functions are prefix-machine complexities: those that can be approximated from above and have summable weights 2^(−f), up to a constant. K for the universal machine is the least of them.", "Upper.prefix_complexity_iff, Upper.K_U_le_of_summable"],
+    ["proved", "Universal machine", "\"Approximated from above\" means the same thing three ways: by a primitive recursive table, by a computable table, or by a recursively enumerable set of pairs (x, n) with f(x) ≤ n.", "Upper.exists_primrec_table, Upper.exists_table_iff_re"],
+    ["proved", "Universal machine", "No bounded list of guesses contains the complexity: if a computable procedure lists at most N candidates for each object, it misses K for some object. With N = 1, K is not computable.", "Guessing.exists_wrong_guess, Guessing.K_U_not_computable"],
+    ["proved", "Universal machine", "K(K(x) | x) is unbounded, so symmetry of information fails with the bare condition x, by more than any constant.", "Guessing.condK_K_unbounded, Guessing.not_symmetry_bare"],
+    ["proved", "Reuse", "Ceiling: sharing never buys more than an exponential.", "binTreeK_add_one_le_two_pow"],
+    ["proved", "Reuse", "Rigidity: where size is additive, cost without sharing is exactly twice the size minus one. All differences between objects of one size are differences in reuse.", "binTreeK_add_one_eq"],
+    ["proved", "Reuse", "Support bound: m distinct atoms need m introductions and m − 1 joins, shared or not.", "two_mul_card_support_le_binK"],
+    ["proved", "Reuse", "The gain from sharing is at most the mean number of times an atom repeats. It is zero when nothing repeats.", "gain_le_multiplicity, binK_eq_binTreeK_of_le"],
+    ["proved", "Reuse", "Binary method: every monomial comes within a logarithm of the multiplicity bound.", "Monomial.slK_add_one_le"],
+    ["refuted", "Reuse", "My own conjecture that cost with sharing is of order atoms + log multiplicity. For every constant C some monomial costs more than C times that.", "Monomial.exists_slK_gt_mul"],
+    ["refuted", "Lossy", "\"Loss scales with cascade depth\" as a result of the budget model. A stable relay iterated any number of times loses what one pass loses; depth dependence was an assumption.", "Limits.relay_iterate_saturates"],
+    ["proved", "Lossy", "Budget ceiling and bottleneck: within B bits fewer than 2^(B+1) distinct ideas can land, and a chain of retellings emits no more versions than its tightest hop allows.", "Channel.card_lt_of_load_le, Channel.Relay.card_image_chain_lt"],
+    ["open", "Lossy", "Does retention depend on depth alone, at equal audience size? Does putting the key before the claim help per-hop survival? Both are experiments for the book, not theorems.", ""],
+    ["open", "Universal machine", "How large the gap between K(y | x) and K(y | x, K(x)) gets. It is proved to exceed every constant; the logarithmic lower bound is not formalized.", ""],
+    ["proved", "Reuse", "Straus's method: tabulate the products of all subsets of k atoms, then share the squarings. Exponents below 2^L cost fewer than 2^k + 2L steps; in groups, at most 3L(k / log₂ L + 1).", "MonoidGen.slK_prod_pow_add_one_le, Monomial.slK_add_one_le_log"],
+    ["proved", "Reuse", "The worst case from both sides: with k atoms and exponents up to 2^k, some monomial needs about k² / (10 log₂ k) steps and none needs more than about 3k² / log₂ k.", "Monomial.exists_slK_between"],
+    ["empty", "Reuse", "My own lower bounds for monomials, as first stated. They allowed the empty monomial, which cannot be built from the atoms, so its infinite cost satisfied them trivially. Restated with every exponent at least one.", "Monomial.exists_slK_gt, Monomial.exists_slK_gt_mul"],
+    ["open", "Reuse", "The exact order of the cost of monomials outside the range where k is about log m, and the exact constant inside it.", ""],
+    ["proved", "Reuse", "Every Boolean function of n ≥ 1 variables has a NAND circuit of at most 5 + 2ⁿ(4n + 7) steps. So the hard function that counting produces has a finite size, about 2ⁿ/2n or more.", "Circuit.circuitK_le, Circuit.exists_hard_function_between"],
+    ["proved", "Reuse", "Shannon's table for circuits: build every function of k variables once, then select with the rest. The hardest function of n variables costs between about 2ⁿ/4n and 8·2ⁿ/n steps. Already in CSLib with constants near 1.", "Circuit.circuitK_le_shannon, Circuit.exists_circuitK_between"],
+    ["proved", "Reuse", "A table of blocks for strings: the hardest binary string of length L costs between about L / (4 log₂ L) and 2L / log₂ L steps.", "Str.strK_le_blocks, Str.exists_strK_between"],
+    ["refuted", "Reuse", "My own open question, that the counting bound is always attained. In the free semilattice on k atoms the hardest object costs 2k − 1, more than any constant times what counting can show.", "SetUnion.counting_not_tight"],
+    ["proved", "Reuse", "Where size is additive, sharing always saves a logarithm: in any monoid with σ generators a product of L generators costs about 2L / log_σ L steps, against exactly 2L − 1 without sharing.", "MonoidGen.slK_list_prod_le_blocks"],
+    ["open", "Reuse", "What decides the hardest object in general. Support, growth and counting are three lower bounds and each binds somewhere; whether their maximum is always the right order is not known here.", ""],
+    ["open", "Reuse", "Lower bounds for explicit Boolean functions: both reuse obstructions are silent beyond the trivial bound. The real gap is formula size against circuit size, open in complexity theory.", ""]
+  ];
+  const STAT = { proved: "Proved", refuted: "Refuted", empty: "Empty", open: "Open" };
+  let fStatus = "all", fArea = "all";
+  const areas = ["General", "Self-delimiting", "Universal machine", "Reuse", "Lossy"];
+  function mkFilters(host, opts, get, set) {
+    opts.forEach(([val, label]) => {
+      const b = el("button", "", label); b.setAttribute("aria-pressed", String(get() === val));
+      b.addEventListener("click", () => { set(val); host.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", "false")); b.setAttribute("aria-pressed", "true"); renderLedger(); });
+      host.append(b);
+    });
+  }
+  function renderLedger() {
+    const ul = $("ledgerList"); ul.textContent = "";
+    const rows = L.filter((r) => (fStatus === "all" || r[0] === fStatus) && (fArea === "all" || r[1] === fArea));
+    rows.forEach(([st, area, text, lean]) => {
+      const li = el("li");
+      const c = el("div"); c.append(el("span", "chip " + st, STAT[st]));
+      const body = el("div"); body.append(el("p", "", text)); if (lean) body.append(el("span", "lean", lean));
+      li.append(c, el("div", "area", area), body); ul.append(li);
+    });
+    $("ledgerCount").textContent = rows.length ? "Showing " + rows.length + " of " + L.length + " entries." : "Nothing matches both filters. Choose \"All areas\" or \"Everything\" to widen.";
+  }
+  mkFilters($("statusFilters"), [["all", "Everything"], ["proved", "Proved"], ["refuted", "Refuted"], ["empty", "Empty"], ["open", "Open"]], () => fStatus, (v) => { fStatus = v; });
+  mkFilters($("areaFilters"), [["all", "All areas"]].concat(areas.map((a) => [a, a])), () => fArea, (v) => { fArea = v; });
+  renderLedger();
+
+  /* ---------- what we're after ---------- */
+  const A = [
+    ["Measure the gap between K(y | x) and K(y | x, K(x))", "Proved to exceed every constant, so symmetry needs K(x) in the condition. How fast the gap grows is not formalized.", "For plain complexity the tight logarithmic bound is already formalized in Milovanov's library, by a game argument. For prefix complexity it is open in both."],
+    ["Pin down the cost of monomials", "Between k log m / log(k log m) for some monomials and 3 log₂ m · (k / log₂ log₂ m + 1) for all. The two agree up to a constant when k is about log₂ m.", "Pippenger's 1980 theorem on powers and monomials gives the exact order everywhere. Checked against a summary of its abstract; not formalized."],
+    ["Say what decides the hardest object", "Three lower bounds: support, growth and counting. Counting binds for strings, dense monomials and circuits (the classical Shannon effect); support binds in the free semilattice; growth binds for powers of one generator.", "Is the largest of the three always the right order? Unknown here. A counterexample or a proof would both be progress."],
+    ["Say something about explicit Boolean functions", "The worst case is settled up to a constant. For a named function, both obstructions are silent past the trivial bound.", "This is formula size against circuit size. Do not expect it to close here."],
+    ["Stop re-proving what other Lean libraries have", "Milovanov's library has the symmetry statement, the coding theorem, Kraft–Chaitin and the characterization of prefix complexities, for every optimal machine. CSLib has Shannon's lower bound and Lupanov's upper bound for circuits, sharper than here. Statements were read; proofs were not.", "Not found formalized elsewhere: the worst-case bounds for strings and monomials, symmetry failing for the bare condition, general description systems. Search before proving, not after."],
+    ["Run the two experiments for Lossy", "The model says loss depends on the tightest hop, not on depth. The chapter argues from depth.", "Depth against size at equal audience; key before claim in transmission chains."]
+  ];
+  A.forEach(([title, where, close]) => {
+    const art = el("article");
+    art.append(el("h3", "", title), el("p", "", where), el("p", "close", close));
+    $("afterList").append(art);
+  });
+})();
+</script>
+</body>
+</html>

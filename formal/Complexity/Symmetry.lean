@@ -39,7 +39,8 @@ Results:
 * `K_macro_add_condK_le`, `card_K_lt_macro_add` – for a computable coarse-graining, all
                               but a fraction `2 ^ (-d)` of the microstates of a macrostate
                               `a` with `W` members have `K(x) ≥ K(a) + log₂ W - d - c`:
-                              the lower half of "micro = macro + log W".
+                              the lower half of "micro = macro + log W";
+* `micro_eq_macro_add_log` – both halves, for one enumerated family of macrostates.
 -/
 
 namespace Complexity
@@ -325,6 +326,40 @@ theorem card_K_lt_macro_add {π : ℕ → ℕ} (hπ : Computable π) :
   have h1 := hc x
   rw [hA x hx.1] at h1
   exact absurd (lt_of_le_of_lt ((add_le_add le_rfl hge).trans h1) hx.2) (lt_irrefl _)
+
+open Classical in
+/-- **Micro = macro + log W**, both halves for one family of macrostates. Let the
+macrostate `a` have `2 ^ ℓ a` microstates, listed without repetition by a computable `e a`,
+and let a computable `π` recover the macrostate from each. Then there is a constant `c`
+such that, for every macrostate:
+
+* every microstate has `K(x) ≤ K(a) + ℓ a + c`;
+* fewer than `2 ^ m` microstates have `K(x) + c < K(a) + m`.
+
+With `m = ℓ a - d`: all but a fraction `2 ^ (-d)` of the microstates have
+`K(a) + ℓ a - d - c ≤ K(x) ≤ K(a) + ℓ a + c`. -/
+theorem micro_eq_macro_add_log {e : ℕ → ℕ → ℕ} {ℓ π : ℕ → ℕ} (he : Computable₂ e)
+    (hℓ : Computable ℓ) (hπ : Computable π) (hmem : ∀ a i, i < 2 ^ ℓ a → π (e a i) = a)
+    (hinj : ∀ a, Set.InjOn (e a) (Finset.range (2 ^ ℓ a) : Set ℕ)) :
+    ∃ c : ℕ, ∀ a,
+      (∀ i < 2 ^ ℓ a, Kolmogorov.K U (e a i) ≤ Kolmogorov.K U a + ((ℓ a + c : ℕ) : ℕ∞)) ∧
+      ∀ m : ℕ, ((Finset.range (2 ^ ℓ a)).filter fun i =>
+        Kolmogorov.K U (e a i) + c < Kolmogorov.K U a + m).card < 2 ^ m := by
+  obtain ⟨c1, h1⟩ := K_twoPart_le he hℓ
+  obtain ⟨c2, h2⟩ := card_K_lt_macro_add hπ
+  refine ⟨max c1 c2, fun a => ⟨fun i hi => (h1 a i hi).trans ?_, fun m => ?_⟩⟩
+  · gcongr
+    exact le_max_left c1 c2
+  · have hA : ∀ x ∈ (Finset.range (2 ^ ℓ a)).image (e a), π x = a := by
+      intro x hx
+      obtain ⟨i, hi, rfl⟩ := Finset.mem_image.1 hx
+      exact hmem a i (Finset.mem_range.1 hi)
+    refine lt_of_le_of_lt (Finset.card_le_card_of_injOn (e a) (fun i hi => ?_)
+      ((hinj a).mono fun i hi => (Finset.mem_filter.1 hi).1)) (h2 a m _ hA)
+    obtain ⟨hi1, hi2⟩ := Finset.mem_filter.1 hi
+    refine Finset.mem_filter.2 ⟨Finset.mem_image_of_mem _ hi1, lt_of_le_of_lt ?_ hi2⟩
+    gcongr
+    exact le_max_right c1 c2
 
 end Symmetry
 

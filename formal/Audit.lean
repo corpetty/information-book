@@ -100,6 +100,30 @@ open Complexity
 #print axioms Monomial.slK_add_one_le
 #print axioms Monomial.exists_slK_gt
 #print axioms Monomial.exists_slK_gt_mul
+#print axioms MonoidGen.poolK_insert_prod_pow_le
+#print axioms MonoidGen.poolK_subsetProds_le
+#print axioms MonoidGen.slK_prod_pow_add_one_le
+#print axioms Monomial.slK_add_one_le_grouped
+#print axioms Monomial.slK_add_one_le_log
+#print axioms Monomial.exists_slK_between
+#print axioms Monomial.exists_slK_between_1024
+#print axioms Circuit.circuitK_le
+#print axioms Circuit.exists_hard_function_between
+#print axioms Circuit.circuitK_le_of_dependsOn
+#print axioms Circuit.poolK_dependsOn_le
+#print axioms Circuit.poolK_insert_select_le
+#print axioms Circuit.circuitK_le_shannon
+#print axioms Circuit.exists_circuitK_between
+#print axioms Circuit.exists_circuitK_between_32
+#print axioms Str.poolK_blocks_le
+#print axioms Str.poolK_insert_le_div
+#print axioms Str.strK_le_blocks
+#print axioms Str.exists_strK_between
+#print axioms Str.exists_strK_between_million
+#print axioms SetUnion.counting_not_tight
+#print axioms MonoidGen.poolK_prod_blocks_le
+#print axioms MonoidGen.poolK_insert_prod_le_div
+#print axioms MonoidGen.slK_list_prod_le_blocks
 #print axioms KraftChaitin.exists_machine
 #print axioms PrefixMachine.U_isPrefixMachine
 #print axioms PrefixMachine.U_simulates
@@ -138,6 +162,20 @@ open Complexity
 #print axioms Symmetry.symmetry
 #print axioms Symmetry.K_macro_add_condK_le
 #print axioms Symmetry.card_K_lt_macro_add
+#print axioms Symmetry.micro_eq_macro_add_log
+#print axioms Upper.exists_approx
+#print axioms Upper.exists_machine_K_eq
+#print axioms Upper.prefix_complexity_iff
+#print axioms Upper.K_U_le_of_summable
+#print axioms Upper.exists_primrec_table
+#print axioms Upper.prefix_complexity_iff_of_computable
+#print axioms Upper.K_U_le_of_computable
+#print axioms Upper.exists_table_iff_re
+#print axioms Guessing.exists_wrong_guess
+#print axioms Guessing.K_U_not_computable
+#print axioms Guessing.condK_K_unbounded
+#print axioms Guessing.condK_star_add_lt
+#print axioms Guessing.not_symmetry_bare
 
 /-! ### Every declaration -/
 
