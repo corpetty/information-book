@@ -534,14 +534,15 @@ theorem exists_complex_probable (n : ℕ) :
 
 end Probable
 
-/-! ### 8. A receiver budget alone gives no depth-dependent loss -/
+/-! ### 8. A receiver budget alone neither forces nor forbids depth-dependent loss -/
 
 /-- **Retelling saturates.** If a relay re-encodes what it understood into the message it
 received (`enc (pass x) = enc x`), then any number of retellings through it changes an
-idea exactly as much as one retelling. Under the budget model of `Channel.Relay`, loss is
-set by the tightest hop and does *not* grow with the length of the chain; the growth with
-depth in `Channel.exists_loss_ge` comes entirely from its separate hypothesis that every
-hop loses at least `lam`. -/
+idea exactly as much as one retelling. So the budget model of `Channel.Relay` does not
+*force* loss to grow with the length of the chain; the growth with depth in
+`Channel.exists_loss_ge` comes entirely from its separate hypothesis that every hop loses
+at least `lam`. The stability hypothesis is essential: without it loss can grow with
+depth inside the same budget (`leak_iterate` below). -/
 theorem relay_iterate_saturates {X : Type*} {B : ℕ} (h : Channel.Relay X B)
     (hstable : ∀ x, h.enc (h.pass x) = h.enc x) (n : ℕ) (x : X) :
     h.pass^[n + 1] x = h.pass x := by
@@ -564,6 +565,31 @@ theorem truncRelay_iterate (B n : ℕ) (x : List Bool) :
     (truncRelay B).pass^[n + 1] x = x.take B :=
   relay_iterate_saturates (truncRelay B)
     (fun x => by simp [truncRelay, Channel.Relay.pass, List.take_take]) n x
+
+/-- A relay within budget `B` that drops one more bit at every retelling. -/
+def leakRelay (B : ℕ) : Channel.Relay (List Bool) B where
+  enc x := (x.take B).tail
+  dec := id
+  short x := by
+    have := List.length_take_le B x
+    simp only [List.length_tail]
+    omega
+
+/-- **The budget model does not forbid loss that grows with depth either.** Through the
+same budget-`B` relay, `n ≤ B` retellings of a `B`-bit idea leave `B - n` bits: one more is
+lost at every hop. So the model alone says neither "loss grows with depth" nor "loss is set
+by the tightest hop"; `relay_iterate_saturates` needs its stability hypothesis. An earlier
+note here claimed the second without that hypothesis; an independent review supplied this
+counterexample. -/
+theorem leak_iterate (B n : ℕ) (hn : n ≤ B) :
+    ((leakRelay B).pass^[n] (List.replicate B true)).length = B - n := by
+  induction n with
+  | zero => simp
+  | succ n ih =>
+    rw [Function.iterate_succ_apply']
+    have := ih (by omega)
+    simp only [Channel.Relay.pass, leakRelay, id, List.length_tail, List.length_take] at this ⊢
+    omega
 
 /-! ### 9. With a delimiter, both bounds hold
 

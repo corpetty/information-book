@@ -135,6 +135,44 @@ section, .ladder { scroll-margin-top: 56px; }
 .chip.none { color: var(--empty); background: transparent; box-shadow: inset 0 0 0 1.5px var(--rule); }
 .chip.open { color: var(--open); background: var(--open-wash); }
 
+/* plain-language explainer */
+.plain { margin: 0; border-top: 1px solid var(--ink); max-width: 98ch; }
+.plain > div { display: grid; grid-template-columns: minmax(170px, 0.34fr) minmax(0, 1fr); gap: 6px 34px; padding: 18px 0 20px; border-bottom: 1px solid var(--rule); }
+.plain dt { font-weight: 700; font-size: 21px; line-height: 1.25; text-wrap: balance; }
+.plain dd { margin: 0; min-width: 0; }
+.plain dd p { margin: 0 0 12px; max-width: 64ch; }
+.plain dd p:last-child { margin-bottom: 0; }
+.fields { overflow-x: auto; margin: 4px 0 14px; }
+.fields table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 17px; line-height: 1.35; }
+.fields th { text-align: left; font-weight: 400; font-size: 15.5px; color: var(--ink-soft); padding: 0 14px 5px 0; }
+.fields td { padding: 6px 14px 7px 0; border-top: 1px solid var(--rule); vertical-align: top; }
+.fields td:first-child { font-weight: 700; white-space: nowrap; }
+.guide { margin: 26px 0 0; color: var(--ink-soft); font-size: 17.5px; max-width: 78ch; }
+
+/* sharing ladder */
+.share { margin: 0; max-width: 1080px; }
+.share article { border-top: 1px solid var(--ink); padding: 16px 0 22px; display: grid; grid-template-columns: minmax(190px, 0.3fr) minmax(0, 1fr); gap: 8px 34px; }
+.share h3 { margin: 0 0 4px; text-wrap: balance; }
+.share .eg { margin: 0; color: var(--ink-soft); font-size: 17px; line-height: 1.4; }
+.share dl { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px 28px; margin: 0; }
+.share dt { font-size: 15.5px; color: var(--ink-soft); line-height: 1.3; }
+.share dd { margin: 3px 0 0; font-size: 17.5px; line-height: 1.42; }
+.share .lean { display: block; margin-top: 4px; }
+.share-read { margin: 22px 0 0; }
+
+/* glossary */
+.gfind { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: baseline; margin: 0 0 6px; }
+.gfind label { font-weight: 700; }
+.gfind input { font: inherit; font-size: 18px; color: var(--ink); background: var(--surface); border: 1px solid var(--ink); border-radius: 3px; padding: 5px 10px 6px; width: min(340px, 100%); }
+.gfind .count { margin: 0; }
+.ggroup { margin-top: 30px; }
+.ggroup h3 { border-top: 1px solid var(--ink); padding-top: 12px; margin-bottom: 4px; }
+.gloss { margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 330px), 1fr)); gap: 0 40px; }
+.gloss > div { padding: 11px 0 13px; border-bottom: 1px solid var(--rule); scroll-margin-top: 64px; }
+.gloss dt { font-weight: 700; line-height: 1.3; }
+.gloss dd { margin: 2px 0 0; font-size: 17.5px; line-height: 1.45; color: var(--ink-soft); }
+.gloss > div:target { background: var(--accent-wash); box-shadow: -10px 0 0 var(--accent-wash), 10px 0 0 var(--accent-wash); }
+
 /* history */
 .history { list-style: none; counter-reset: h; margin: 0; padding: 0; max-width: 78ch; }
 .history li { counter-increment: h; display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 4px 14px; padding: 14px 0; border-top: 1px solid var(--rule); }
@@ -213,6 +251,9 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
   .stages label:nth-child(-n+2) { border-bottom: 1px solid var(--rule); }
   .stage-body { grid-template-columns: 1fr; gap: 22px; }
   .laws li { grid-template-columns: 1fr; gap: 4px; }
+  .plain > div { grid-template-columns: minmax(0, 1fr); gap: 6px; }
+  .share article { grid-template-columns: minmax(0, 1fr); }
+  .share dl { grid-template-columns: minmax(0, 1fr); gap: 10px; }
   .ledger li { grid-template-columns: 1fr; gap: 3px; }
   .bars .row { grid-template-columns: 92px minmax(0, 1fr) 66px; }
   .cmp .row { grid-template-columns: 1fr; gap: 2px; }
@@ -227,11 +268,14 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
 <nav class="top" aria-label="Sections">
   <div class="wrap">
     <a class="name" href="#top">Complexity, formalized</a>
-    <a href="#ladder">The ladder</a>
-    <a href="#history">How we got here</a>
-    <a href="#try">Try the objects</a>
-    <a href="#ledger">The ledger</a>
-    <a href="#after">What we're after</a>
+    <a href="#plain">Plain terms</a>
+    <a href="#ladder">Ladder</a>
+    <a href="#sharing">Sharing</a>
+    <a href="#history">History</a>
+    <a href="#try">Try it</a>
+    <a href="#ledger">Ledger</a>
+    <a href="#after">What's open</a>
+    <a href="#glossary">Glossary</a>
   </div>
 </nav>
 
@@ -241,7 +285,7 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
   <header class="hero">
     <h1>Complexity is the cheapest description. The laws depend on what a description may be.</h1>
     <div class="read">
-      <p>This is a recap of a Lean&nbsp;4 library that set out to be a unified theory of complexity, was attacked, and came back narrower and true. Everything on this page marked as proved has been checked by the machine.</p>
+      <p>This is a recap of a Lean&nbsp;4 library that set out to be a unified theory of complexity, was attacked, and came back narrower and true. Everything on this page marked as proved has been checked by the machine. If the notation below is unfamiliar, <a href="#plain">start with the plain-language version</a>; single words are explained in the <a href="#glossary">glossary</a>.</p>
       <p class="formula">K(x) <span>=</span> the least cost of any description that realizes x</p>
       <p class="formula-note">Choose what counts as a description, what it costs, and what "realizes" means, and you get Kolmogorov complexity, circuit size, addition chains, source coding, and more.</p>
       <p style="margin-top:22px">On its own, that definition excludes nothing: every function is <i>K</i> for some choice. The content appears only as the choice is restricted. Step through the restrictions below and watch which laws switch on.</p>
@@ -257,9 +301,130 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
     </div>
   </header>
 
+  <section id="plain">
+    <h2>The whole thing, without the notation</h2>
+    <p class="lede read">Six questions someone outside the field would ask, in the order they would ask them.</p>
+    <dl class="plain">
+      <div>
+        <dt>What is being measured?</dt>
+        <dd>
+          <p>How hard something is to describe. A million zeros make a long string with a short description: "a million zeros". A million coin flips make a string of the same length that almost certainly has no description much shorter than itself. The complexity of a thing is the size of its shortest description.</p>
+          <p>The same question is asked in several fields under different names:</p>
+          <div class="fields">
+            <table>
+              <thead><tr><th>Field</th><th>The thing</th><th>A description of it</th><th>What it costs</th></tr></thead>
+              <tbody>
+                <tr><td>Text</td><td>a string of letters</td><td>a program that prints it</td><td>the program's length in bits</td></tr>
+                <tr><td>Arithmetic</td><td>a whole number</td><td>a chain of additions that reaches it from 1</td><td>the number of additions (the library also counts the starting 1)</td></tr>
+                <tr><td>Chemistry</td><td>a molecule</td><td>a sequence of joins, reusing parts already made</td><td>the number of joins</td></tr>
+                <tr><td>Logic</td><td>a yes-or-no rule</td><td>a circuit of simple gates</td><td>the number of gates (the library also counts the inputs)</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p>In every row the answer is "the cheapest description that produces the thing". That shared shape is what the library formalizes.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>What was the ambition?</dt>
+        <dd>
+          <p>One theory for all of those rows. State the definition once, find the laws that hold for every row (for instance: describing two things together costs no more than describing each one separately), and prove them once in Lean, a program that checks mathematical proofs line by line. Every field would then inherit the laws for free.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>What went wrong?</dt>
+        <dd>
+          <p>The first version was reviewed with the aim of breaking it, and it broke. The definition is so general that it rules nothing out: pick any assignment of numbers to things, and some choice of "description" makes that assignment the complexity. A definition that fits everything can have no law that says anything about a particular notion of complexity.</p>
+          <p>Eight of the claimed laws were false as stated. Five were true only because, at that generality, they said nothing. And most of the mathematics that was true had been known for decades.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>What survived?</dt>
+        <dd>
+          <p>A map in place of a theory. Each law becomes true at some point as you tighten what a description is allowed to be, and the library now locates that point and proves a counterexample just before it. Two examples:</p>
+          <p>Costs add up once a description must announce its own end: two such descriptions can simply be written one after the other, so a pair can always be described at the sum of the two costs. Without that, you cannot tell where the first description stops and the second begins, and the law is false.</p>
+          <p>Complicated things are improbable (a random process rarely produces them) once all descriptions are programs for one <em>universal</em> machine, a machine that can imitate every other at the cost of a fixed header. For an arbitrary machine, even a computable self-delimiting one, there is a counterexample.</p>
+          <p>A second part asks what reusing parts buys when you build things. The answers are bounds, each proved: never more than an exponential saving; nothing at all if no part repeats; always at least a logarithmic factor for large things built by stringing together a fixed stock of parts, as strings are. Several different things cap the saving, because each forces a minimum cost even with sharing: the number of distinct atoms, the depth, and a counting argument. The library proves that these three together still do not determine the cost.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>What does the machine checking buy?</dt>
+        <dd>
+          <p>Every theorem named on this page was verified by Lean down to its basic axioms, with no gaps. That is a guarantee about the formal statement, and it is the reason the errors on this page are listed with confidence. The sentence beside each name is my summary of it. Where a summary gives a size with "about", that size is an asymptotic form read off the theorem by hand; at the worked examples the proved numbers are somewhat larger.</p>
+          <p>It did not prevent weak statements. Five times now a theorem of mine was true for a silly reason: the object it produced could not be built at all, or the smallest case satisfied it trivially. Two of those I found by comparing results; three were found by an independent reviewer who proved the trivial versions in a few lines. It also says nothing about novelty: nearly all of this is classical, and other Lean libraries already contain much of it, sometimes in sharper form. And it says nothing about the world. Whether a real system meets a theorem's assumptions is a separate question.</p>
+        </dd>
+      </div>
+      <div>
+        <dt>Why is this in a book about information?</dt>
+        <dd>
+          <p>The book argues that ideas lose detail as they are retold. The formal model separates what is forced from what was assumed. Forced: a chain of retellings can pass on no more distinct versions than its tightest step allows, however long the chain. Not forced either way: whether loss grows with the number of steps. A retelling that settles after one pass loses nothing further; one that drops a little each time keeps losing. Both fit the same limits. That more steps mean more loss was an assumption of the chapter, and it is now listed as an experiment to run.</p>
+          <p>An earlier version of this paragraph said the model shows loss depends on the tightest step and not on the number of steps. That was wrong, and a reviewer found the counterexample.</p>
+        </dd>
+      </div>
+    </dl>
+    <p class="guide">The rest of the page goes deeper in the same order. <a href="#ladder">The ladder</a> shows where each law switches on. <a href="#sharing">What sharing buys</a> does the same for building things from parts. <a href="#history">How we got here</a> is the sequence of rounds, including the wrong turns. <a href="#try">Try the objects</a> has three small working models. <a href="#ledger">The ledger</a> lists every claim with its status. <a href="#after">What we're after</a> is what remains open. Any unfamiliar word should be in the <a href="#glossary">glossary</a> at the end.</p>
+  </section>
+
+  <section id="sharing">
+    <h2>What sharing buys, law by law</h2>
+    <div class="read">
+      <p class="lede" style="margin-bottom:12px">The ladder at the top narrows what a description may be. For things built from parts the question is different: what does the joining operation obey? Each row below adds one law.</p>
+      <p style="margin:0 0 26px">Costs count steps: bringing in a basic part, or joining two things already built. Without sharing, every part is rebuilt each time it is used. With sharing, anything built once can be reused.</p>
+    </div>
+    <div class="share">
+      <article>
+        <div>
+          <h3>No laws</h3>
+          <p class="eg">Binary trees, built by pairing. Grouping and order both matter. Take a tree with n pairings.</p>
+        </div>
+        <dl>
+          <div><dt>Without sharing</dt><dd>2n + 1 steps, whatever the shape.<span class="lean">Comb.binTreeK_tree</span></dd></div>
+          <div><dt>With sharing, cheapest shape</dt><dd>A perfectly balanced tree of depth d has 2^d − 1 pairings and costs d + 1 steps: an exponential saving.<span class="lean">Comb.cost_perfect, Comb.binTreeK_perfect</span></dd></div>
+          <div><dt>With sharing, dearest shape</dt><dd>A comb costs n + 1 steps, less than half saved, and no tree costs more. In general the cost is exactly the number of different subtrees.<span class="lean">Comb.binK_comb, Comb.cost_le, Comb.cost_eq_card_sub</span></dd></div>
+        </dl>
+      </article>
+      <article>
+        <div>
+          <h3>Grouping does not matter</h3>
+          <p class="eg">Strings over two letters, built by joining. Take a string of length L.</p>
+        </div>
+        <dl>
+          <div><dt>Without sharing</dt><dd>2L − 1 steps, whatever the string.<span class="lean">Str.treeK_eq</span></dd></div>
+          <div><dt>With sharing, cheapest strings</dt><dd>One block repeated 2^k times costs k steps more than the block. No string of length L is cheaper than about log₂ L.<span class="lean">Str.strK_pow_two_pow_le, Str.length_mul_two_le</span></dd></div>
+          <div><dt>With sharing, dearest strings</dt><dd>About L / log L, up to a constant: every string can be cut into blocks from a shared table, and most strings cannot do better.<span class="lean">Str.strK_le_blocks, Str.card_cheap_lt</span></dd></div>
+        </dl>
+      </article>
+      <article>
+        <div>
+          <h3>Order does not matter either</h3>
+          <p class="eg">Products of powers of k variables, with exponents up to 2^L. The size is the total degree, as large as k · 2^L.</p>
+        </div>
+        <dl>
+          <div><dt>Without sharing</dt><dd>Twice the total degree, minus one.<span class="lean">Binary.binTreeK_add_one_eq</span></dd></div>
+          <div><dt>With sharing, at least</dt><dd>2k − 1 steps to bring in every variable, and more than log₂ of the degree.<span class="lean">Monomial.two_mul_le_slK_add_one, Monomial.sum_mul_two_le_two_pow</span></dd></div>
+          <div><dt>With sharing, dearest products</dt><dd>k + L + kL / log(kL), up to a constant. That is about the number of digits in the exponents, not their size.<span class="lean">Monomial.slK_le_order, Monomial.exists_slK_gt_order</span></dd></div>
+        </dl>
+      </article>
+      <article>
+        <div>
+          <h3>Repeating changes nothing</h3>
+          <p class="eg">Sets, built by union. A thing joined with itself is itself. Take a set of m elements.</p>
+        </div>
+        <dl>
+          <div><dt>Without sharing</dt><dd>2m − 1 steps.</dd></div>
+          <div><dt>With sharing, cheapest</dt><dd>2m − 1 steps.</dd></div>
+          <div><dt>With sharing, dearest</dt><dd>2m − 1 steps. Sharing buys nothing, because there is nothing to repeat.<span class="lean">SetUnion.binK_add_one_eq</span></dd></div>
+        </dl>
+      </article>
+    </div>
+    <div class="read share-read">
+      <p>Read downward. With no laws, sharing can save almost nothing or almost everything, and the shape decides. Once grouping stops mattering, every long object must repeat short blocks, so the dearest cost drops from n to about n / log n. Once order stops mattering too, an object is just its exponents, and the cost falls to about the number of their digits. Once repeating changes nothing, size disappears and so does the saving.</p>
+      <p>The sizes with "about" are read off the theorems by hand. None of this is new mathematics; the rows are, in order, the common subexpression problem, word chains, addition chains for vectors, and a remark.</p>
+    </div>
+  </section>
+
   <section id="history">
     <h2>How we got here</h2>
-    <p class="lede read">Thirteen rounds. The second one did the most good.</p>
+    <p class="lede read">Twenty-four rounds. The second one did the most good, and three later reviews repeated it.</p>
     <ol class="history">
       <li><div><h3>A unified theory</h3><p>One definition, eight laws, a dozen instances from different fields, all in Lean. It claimed the laws hold "for every setting of the dials".</p></div></li>
       <li><div><h3>Adversarial review</h3><p>By the author and four independent reviewers. Eight claims were false, five were true but empty, and most of the mathematics was already in the literature. The definition turned out to be a language, not a theory.</p></div></li>
@@ -274,6 +439,17 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
       <li><div><h3>Shared squarings, and a statement that proved nothing</h3><p>Straus's method shares the squarings among all the atoms, and brings the upper bound for monomials within a constant of the lower one when the atoms number about log&nbsp;<i>m</i>. Checking the two against each other exposed a flaw: the lower-bound theorems had allowed the empty monomial, which cannot be built at all, so they were trivially true. They now require every exponent to be at least one. A statement-by-statement comparison with the other Lean library shows that most of the universal-machine layer here is a re-proof.</p></div></li>
       <li><div><h3>The worst case is the counting bound</h3><p>One construction, three times: build a shared table of everything small, then pay one step per use. For binary strings, for monomials and for Boolean circuits, the hardest object now costs what counting says it must, up to a constant.</p></div></li>
       <li><div><h3>Checking the prior art, and one more overreach</h3><p>All three of those results are classical: Berstel and Brlek for strings, Straus and Pippenger for monomials, Shannon and Lupanov for circuits. The literature calls the pattern the Shannon effect. I had listed "the counting bound is always attained" as an open question; it is false, and the counterexample is now a theorem. In the free semilattice it is support that binds. And the circuit bounds turn out to be in CSLib already, in Lean, with better constants.</p></div></li>
+      <li><div><h3>No short list of obstructions</h3><p>Depth is a lower bound too, and growth turns out to be its shadow in a monoid. But support, depth and counting together still do not decide the cost: a bushy binary tree with one atom and logarithmic height needs almost as many steps as it has nodes, because it has that many distinct subtrees. The question I left open last round has a proved answer, and it is no.</p></div></li>
+      <li><div><h3>Failures that were only asserted</h3><p>Three cells of the ladder claimed a failure with no theorem behind it. They have one now: counting fails when a description may stand for many objects, the plain machine gives every object infinite probability, and the chain rule is false for plain complexity even in its easy half.</p></div></li>
+      <li><div><h3>A plainer account, and a wider match</h3><p>This page gained a section that explains the work without notation. The two-sided bound for monomials, which held for one shape of problem, now holds for any number of atoms between the logarithm of the exponent size and a fixed power of it.</p></div></li>
+      <li><div><h3>Claims that outran their proofs</h3><p>Two sentences on this page said more than had been proved. "In a tree the cost is the number of distinct subtrees" had only "at least" behind it; it is now an equality. "Most strings gain only a logarithm" had only one such string behind it; it now has a count.</p></div></li>
+      <li><div><h3>Monomials, every shape</h3><p>Grouping the atoms works when exponents are long. Grouping the binary digits of the exponents works when atoms are many. With both, the bounds on the hardest monomial meet up to a constant for every number of atoms and every exponent size. At first the comparison was done by hand; it is now four theorems with explicit constants.</p></div></li>
+      <li><div><h3>A second adversarial review</h3><p>A reviewer with no stake in the work compared each sentence on this page with the theorem it cites. Three theorems were true for a trivial reason and are restated. One heading was false: additive size does not guarantee a logarithmic gain, associativity does. Two ladder cells cited a result for a different class or a different formula. All are corrected, and the page now says which sizes are theorems and which are read off by hand.</p></div></li>
+      <li><div><h3>A third review, of the older claims</h3><p>The same kind of reviewer went through the first six sections. Two claims were false as worded. One matters to the book: the model does not show that loss is set by the tightest hop; a relay that leaks a bit per retelling fits it too. The other: the plain universal machine dominates more than the computable methods, not exactly those. The refutation of "complex implies improbable" used a different toy system for each constant; it now uses one system. First-version slogans still sitting in the source files were retired.</p></div></li>
+      <li><div><h3>Words for everyone</h3><p>This page gained a glossary of 74 terms in plain language, so that a reader who has never met Kolmogorov complexity, a straight-line program or a proof assistant can follow the rest.</p></div></li>
+      <li><div><h3>The defect is small</h3><p>Symmetry of information fails when the condition is the bare object. A chain rule for conditional complexity shows it fails by no more than a logarithm of the object's own complexity. The counterexample just outside the law now has a size, from both sides.</p></div></li>
+      <li><div><h3>A review of the plain-language text</h3><p>A reviewer checked the explainer, the glossary and the demos against the theorems. One sentence was wrong: what makes complicated things improbable is not that there is one fixed machine but that the machine is universal. Others had a direction reversed, or defined a word by its best-known example. The reviewer also found that the other Lean library does treat general description relations, which this page had listed as not found. All corrected.</p></div></li>
+      <li><div><h3>A second ladder</h3><p>The reuse results were a list. They are now arranged by what the joining operation obeys: no laws, then grouping, then order, then repetition. One small theorem was missing for it, the cost of a perfect tree without sharing.</p></div></li>
     </ol>
   </section>
 
@@ -283,7 +459,7 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
 
     <div class="demo" id="demo-dial">
       <h3>The temperature dial</h3>
-      <p>An object with eight descriptions of different lengths. Weigh each description by <i>q</i> raised to its length and add them up: that sum is <i>Z(q)</i>. One dial takes you from complexity, through probability, to plain counting.</p>
+      <p>An object with eight self-delimiting descriptions of various lengths. Weigh each description by <i>q</i> raised to its length and add them up: that sum is <i>Z(q)</i>. One dial takes you from complexity, through probability, to plain counting.</p>
       <div class="controls">
         <input type="range" id="q" min="0.02" max="1" step="0.01" value="0.5" aria-label="q, the weight per bit">
         <button data-q="0.02">Cold: q near 0</button>
@@ -317,11 +493,11 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
       <label class="slide">Different atoms, k <input type="range" id="rk" min="1" max="8" value="3"> <output id="rkOut"></output></label>
       <div class="cmp" id="cmp"></div>
       <dl class="readouts">
-        <div><dt>Gain from sharing</dt><dd id="gainOut"></dd></div>
+        <div><dt>Gain from sharing, binary method</dt><dd id="gainOut"></dd></div>
         <div><dt>Proved ceiling on the gain</dt><dd id="capOut"></dd></div>
       </dl>
       <p class="chain" id="chain"></p>
-      <p class="ties">In the library: <span class="lean">MonoidGen.slK_pow_le</span>, <span class="lean">Monomial.slK_add_one_le</span>, <span class="lean">gain_le_multiplicity</span>. Set m to 1 and the gain disappears: when nothing repeats, reuse buys nothing (<span class="lean">binK_eq_binTreeK_of_le</span>).</p>
+      <p class="ties">In the library: <span class="lean">MonoidGen.slK_pow_le</span>, <span class="lean">Monomial.slK_add_one_le</span>, <span class="lean">Binary.gain_le_multiplicity</span>. Set m to 1 and the gain disappears: when nothing repeats, reuse buys nothing (<span class="lean">Binary.binK_eq_binTreeK_of_le</span>). The gain shown is for the binary method, so it is a lower estimate of the best possible gain.</p>
     </div>
   </section>
 
@@ -342,16 +518,128 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
     </div>
     <div class="after" id="afterList" style="margin-top:26px"></div>
     <div class="read" style="margin-top:8px">
-      <p>One standing caveat. Almost every result here is classical in the field it comes from. What the library adds is that the laws are stated once, proved once, checked by a machine, and that the places where they fail are proved as well. It is also not the first formalization. A Lean 4 library covering much of the same ground on prefix complexity already exists, and CSLib has the circuit bounds of Shannon and Lupanov with better constants. The framing by restrictions, the proved counterexamples, and the worst-case bounds for strings and monomials were not found formalized elsewhere, but the searches were short.</p>
+      <p>One standing caveat. Almost every result here is classical in the field it comes from. What the library adds is one counting lemma and one set of reuse lemmas from which the circuit, addition-chain and string bounds all follow, a map of which law holds under which restriction, and machine-checked proofs of where each fails. It is also not the first formalization. A Lean 4 library covering much of the same ground on prefix complexity already exists; it obtains plain and prefix complexity by restricting a general relation between descriptions and objects, and it has a stronger form of one of the counterexamples here. CSLib has the circuit bounds of Shannon and Lupanov with better constants. The ladder of representation theorems, most of the proved counterexamples, and the worst-case bounds for strings and monomials were not found formalized elsewhere, but the searches were short.</p>
     </div>
+  </section>
+
+  <section id="glossary">
+    <h2>Words used here</h2>
+    <p class="lede read">74 terms, in plain language. Definitions are the working meaning on this page, not the full technical one.</p>
+    <div class="gfind">
+      <label for="gq">Find a word</label>
+      <input id="gq" type="search" autocomplete="off" spellcheck="false">
+      <span class="count" id="gcount" aria-live="polite"></span>
+    </div>
+    <div id="glist">
+      <div class="ggroup">
+        <h3>The basic idea</h3>
+        <dl class="gloss">
+          <div id="g-complexity"><dt>Complexity</dt><dd>Here, the size of the shortest description of a thing. It is not the same as looking complicated: a huge but regular object, like a million zeros, has low complexity.</dd></div>
+          <div id="g-description"><dt>Description</dt><dd>Anything that, by the rules in force, stands for an object. A program that prints a text, a recipe of joins for a molecule and a circuit for a yes-or-no rule are all descriptions. In the most general setting one description may stand for several objects; requiring that it stand for at most one is the first restriction.</dd></div>
+          <div id="g-cost"><dt>Cost</dt><dd>The size of a description, in whatever unit the field counts: bits for programs, steps for constructions, gates for circuits.</dd></div>
+          <div id="g-realizes"><dt>Realizes</dt><dd>A description realizes an object when following it produces that object.</dd></div>
+          <div id="g-description-system"><dt>Description system</dt><dd>A choice of three things: what counts as a description, what each one costs, and which object each one realizes. Every statement in the library is relative to such a choice.</dd></div>
+          <div id="g-k-x"><dt>K(x)</dt><dd>The complexity of x: the least cost of any description that realizes x. If nothing realizes x, the complexity is infinite.</dd></div>
+          <div id="g-law"><dt>Law</dt><dd>A general statement about complexity that is meant to hold for a whole class of description systems. Example: describing two things together costs no more than describing each one separately.</dd></div>
+          <div id="g-restriction"><dt>Restriction</dt><dd>A rule that narrows what counts as a description, such as "a description must announce its own end". The library tracks which laws become true under which restrictions.</dd></div>
+          <div id="g-the-ladder"><dt>The ladder</dt><dd>This page's name for four nested classes of description systems, from "anything at all" down to "programs for one universal machine". Each step down is a restriction.</dd></div>
+        </dl>
+      </div>
+      <div class="ggroup">
+        <h3>Bits, programs and machines</h3>
+        <dl class="gloss">
+          <div id="g-bit-bit-string"><dt>Bit, bit string</dt><dd>A bit is one yes-or-no choice, written 0 or 1. A bit string is a row of them. Lengths of descriptions are counted in bits.</dd></div>
+          <div id="g-unambiguous"><dt>Unambiguous</dt><dd>Each description realizes at most one object. Without this, one description could stand for everything and counting would mean nothing.</dd></div>
+          <div id="g-self-delimiting"><dt>Self-delimiting</dt><dd>No description is the beginning of another one, so a reader knows where a description ends without being told. Phone numbers work this way: no complete number is the start of a longer one. Also called prefix-free.</dd></div>
+          <div id="g-kraft-s-inequality"><dt>Kraft&#x27;s inequality</dt><dd>The budget rule for self-delimiting descriptions. Give each description of length n a weight of one half to the power n; the weights can add up to at most 1. Short descriptions are scarce.</dd></div>
+          <div id="g-machine-program"><dt>Machine, program</dt><dd>A machine is a fixed mechanical rule that turns an input string into an output. A program is an input for it.</dd></div>
+          <div id="g-computable"><dt>Computable</dt><dd>Producible by a program that follows mechanical steps and eventually stops.</dd></div>
+          <div id="g-universal-machine"><dt>Universal machine</dt><dd>One machine that can imitate any other, given a fixed header that says which one. Complexity measured on it is, up to a constant, as small as on any machine.</dd></div>
+          <div id="g-kolmogorov-complexity"><dt>Kolmogorov complexity</dt><dd>The length of the shortest program that prints an object on a universal machine. Named after Andrey Kolmogorov.</dd></div>
+          <div id="g-plain-complexity"><dt>Plain complexity</dt><dd>Kolmogorov complexity with no requirement that programs be self-delimiting. Often written C. Several additive laws are false for it.</dd></div>
+          <div id="g-prefix-complexity"><dt>Prefix complexity</dt><dd>Kolmogorov complexity on a universal machine whose programs are self-delimiting. Often written K. This is the version for which costs add up properly.</dd></div>
+          <div id="g-up-to-a-constant"><dt>Up to a constant</dt><dd>True after adding one fixed number that does not depend on the objects involved. Changing from one universal machine to another changes complexities by at most such a number.</dd></div>
+          <div id="g-invariance"><dt>Invariance</dt><dd>The fact that any two universal machines assign complexities that differ by at most a constant. It is what makes "the" complexity of an object meaningful.</dd></div>
+          <div id="g-domination"><dt>Domination</dt><dd>One description system dominates another when its complexities are never larger than the other's plus a constant.</dd></div>
+          <div id="g-incompressible"><dt>Incompressible</dt><dd>Having no description much shorter than the object itself. Most objects are incompressible, because there are too few short descriptions to go round.</dd></div>
+          <div id="g-counting-law"><dt>Counting law</dt><dd>There cannot be more cheap objects than cheap descriptions. With bit strings: fewer than 2 to the power n objects have complexity below n.</dd></div>
+          <div id="g-subadditivity"><dt>Subadditivity</dt><dd>Describing two things together costs at most the sum of describing each, plus a constant.</dd></div>
+          <div id="g-conditional-complexity"><dt>Conditional complexity</dt><dd>The length of the shortest program that produces y when it is handed x for free. Written K(y | x).</dd></div>
+          <div id="g-x"><dt>x*</dt><dd>The object x together with its own complexity K(x). It carries slightly more information than x alone, because K(x) cannot be worked out from x.</dd></div>
+          <div id="g-chain-rule"><dt>Chain rule</dt><dd>The cost of a pair is the cost of the first plus the cost of the second given the first. For prefix complexity it holds up to a constant when "given the first" means given x*.</dd></div>
+          <div id="g-symmetry-of-information"><dt>Symmetry of information</dt><dd>The chain rule read both ways: what x tells you about y is as much as what y tells you about x, up to a constant.</dd></div>
+          <div id="g-algorithmic-probability"><dt>Algorithmic probability</dt><dd>The chance that a machine fed random coin flips as its program prints x.</dd></div>
+          <div id="g-coding-theorem"><dt>Coding theorem</dt><dd>For the universal self-delimiting machine, the algorithmic probability of x is one half to the power K(x), up to a constant factor. Simple things are likely and complex things are unlikely. Due to Leonid Levin.</dd></div>
+          <div id="g-not-computable"><dt>Not computable</dt><dd>No program works out K(x) for every x. The library proves more: no program can even list a fixed number of guesses that always include the right value.</dd></div>
+          <div id="g-approximable-from-above"><dt>Approximable from above</dt><dd>There is a mechanical procedure that produces better and better upper estimates and eventually reaches the true value, but may never announce that it has. Every computable quantity is like this; K is like this without being computable.</dd></div>
+          <div id="g-macrostate-microstate"><dt>Macrostate, microstate</dt><dd>A macrostate is a group of similar objects; a microstate is one member. A two-part description names the group, then says which member: the cost of the group plus the logarithm of its size.</dd></div>
+          <div id="g-growth-law"><dt>Growth law</dt><dd>Running a fixed computable rule for t steps adds at most the cost of writing down t in self-delimiting form: about twice the logarithm of t, in the form proved here.</dd></div>
+        </dl>
+      </div>
+      <div class="ggroup">
+        <h3>Building things from parts</h3>
+        <dl class="gloss">
+          <div id="g-generator-atom"><dt>Generator, atom</dt><dd>A basic part that is given at the start: a letter, a variable, the number 1.</dd></div>
+          <div id="g-operation-join"><dt>Operation, join</dt><dd>The way two things already built are combined into a new one: concatenating strings, multiplying, wiring a gate.</dd></div>
+          <div id="g-step"><dt>Step</dt><dd>Introducing one generator, or applying the operation once.</dd></div>
+          <div id="g-cost-without-sharing"><dt>Cost without sharing</dt><dd>The number of steps if every part must be rebuilt each time it is used. For circuits this is formula size. Also called tree cost.</dd></div>
+          <div id="g-cost-with-sharing"><dt>Cost with sharing</dt><dd>The number of steps if anything built once may be reused freely. For circuits this is circuit size; for numbers, one more than the length of the shortest addition chain, because the library counts the starting 1 as a step.</dd></div>
+          <div id="g-straight-line-program"><dt>Straight-line program</dt><dd>A list of steps with no loops, each using results of earlier steps. The length of the shortest one is the cost with sharing.</dd></div>
+          <div id="g-addition-chain"><dt>Addition chain</dt><dd>A way to reach a number from 1 where each new number is the sum of two earlier ones. Reaching 16 takes four doublings.</dd></div>
+          <div id="g-monomial-exponent"><dt>Monomial, exponent</dt><dd>A monomial is a product of variables raised to whole-number powers, like x squared times y to the fifth. The powers are the exponents; the variables are its atoms.</dd></div>
+          <div id="g-boolean-function"><dt>Boolean function</dt><dd>A yes-or-no rule that depends on several yes-or-no inputs.</dd></div>
+          <div id="g-circuit-gate-nand"><dt>Circuit, gate, NAND</dt><dd>A circuit computes a Boolean function by wiring simple gates together. NAND is a gate that says no only when both inputs say yes; every Boolean function can be built from it.</dd></div>
+          <div id="g-monoid"><dt>Monoid</dt><dd>A setting where combining is associative: grouping does not matter, as with joining strings or multiplying. This is what allows a long product to be cut into blocks.</dd></div>
+          <div id="g-binary-tree"><dt>Binary tree</dt><dd>A shape built by pairing, where grouping does matter. A comb is one long spine; a perfect tree is fully balanced; the bush in the library's counterexample is a balanced tree with a different chain at each tip.</dd></div>
+          <div id="g-lower-bound-upper-bound"><dt>Lower bound, upper bound</dt><dd>A lower bound says every way of building the thing needs at least this many steps. An upper bound says this many always suffice.</dd></div>
+          <div id="g-support-bound"><dt>Support bound</dt><dd>Every distinct atom must be brought in at least once, and joined to the rest: m atoms need 2m − 1 steps.</dd></div>
+          <div id="g-depth-bound"><dt>Depth bound</dt><dd>A construction cannot be shallower than the object is deep. The growth bound is a special case: if size can at most double per step, a thing of size n needs about log₂ n steps.</dd></div>
+          <div id="g-counting-bound"><dt>Counting bound</dt><dd>With few steps only few different things can be built, so in a large population some member needs many steps.</dd></div>
+          <div id="g-distinct-parts"><dt>Distinct parts</dt><dd>In binary trees the cost with sharing is exactly the number of different subtrees; that is proved here. The same is expected wherever nothing is equal by accident.</dd></div>
+          <div id="g-shared-table"><dt>Shared table</dt><dd>The idea behind the upper bounds here: build everything small once, then pay one step each time an entry is used.</dd></div>
+          <div id="g-shannon-effect"><dt>Shannon effect</dt><dd>The hardest object in a class costs about as much as almost every object in it.</dd></div>
+          <div id="g-logarithm"><dt>Logarithm</dt><dd>log₂ n is the number of doublings needed to get from 1 to n. It grows very slowly: the logarithm of a million is about 20.</dd></div>
+          <div id="g-exponential"><dt>Exponential</dt><dd>Growing by a fixed factor at every step, such as doubling. Twenty doublings reach a million.</dd></div>
+          <div id="g-up-to-a-constant-factor"><dt>Up to a constant factor</dt><dd>Two quantities whose ratio stays between two fixed numbers however large the objects get. Also said as "of the same order".</dd></div>
+        </dl>
+      </div>
+      <div class="ggroup">
+        <h3>Proof, checking and review</h3>
+        <dl class="gloss">
+          <div id="g-lean"><dt>Lean</dt><dd>A programming language in which mathematical statements and their proofs are written out so that a program can check every step.</dd></div>
+          <div id="g-formalize"><dt>Formalize</dt><dd>To write a statement and its proof in such a language.</dd></div>
+          <div id="g-theorem-proved"><dt>Theorem, proved</dt><dd>A statement the checker has verified. The names in monospace on this page are the identifiers of theorems in the library.</dd></div>
+          <div id="g-axiom-audit"><dt>Axiom audit</dt><dd>Axioms are the starting assumptions. The audit confirms that every theorem in the library rests only on Lean's three standard ones, with no gaps left to fill.</dd></div>
+          <div id="g-counterexample"><dt>Counterexample</dt><dd>One specific case that shows a general claim is false.</dd></div>
+          <div id="g-conjecture"><dt>Conjecture</dt><dd>A statement someone believes but has not proved.</dd></div>
+          <div id="g-refuted"><dt>Refuted</dt><dd>Shown to be false. On this page that means a machine-checked counterexample exists.</dd></div>
+          <div id="g-empty-statement"><dt>Empty statement</dt><dd>A statement that is true only because it says nothing, for instance because an object that cannot be built satisfies it. Also called vacuous.</dd></div>
+          <div id="g-degenerate-witness"><dt>Degenerate witness</dt><dd>The junk example that makes a "there exists" statement true for a silly reason.</dd></div>
+          <div id="g-adversarial-review"><dt>Adversarial review</dt><dd>A review whose aim is to break the claims, not to confirm them.</dd></div>
+          <div id="g-prior-art"><dt>Prior art</dt><dd>What was already known or already done by others. Nearly all the mathematics here is.</dd></div>
+          <div id="g-about-asymptotic"><dt>About, asymptotic</dt><dd>A size given with "about" describes what happens for large objects. At small sizes the exact proved numbers can be noticeably larger.</dd></div>
+        </dl>
+      </div>
+      <div class="ggroup">
+        <h3>The book&#x27;s model of retelling</h3>
+        <dl class="gloss">
+          <div id="g-relay"><dt>Relay</dt><dd>A person or step that receives an idea and passes on a version of it.</dd></div>
+          <div id="g-budget"><dt>Budget</dt><dd>The largest number of bits a relay's message may use.</dd></div>
+          <div id="g-hop-chain"><dt>Hop, chain</dt><dd>A hop is one passing-on. A chain is a sequence of relays, each receiving what the last one sent.</dd></div>
+          <div id="g-bottleneck"><dt>Bottleneck</dt><dd>The tightest budget along a chain. It caps how many different versions can come out the far end, however long the chain is.</dd></div>
+          <div id="g-stable-relay-leaking-relay"><dt>Stable relay, leaking relay</dt><dd>A stable relay, retold through itself, changes nothing further after the first pass. A leaking relay drops a little more each time. Both respect the same budget.</dd></div>
+        </dl>
+      </div>
+    </div>
+    <p class="msg" id="gnone" hidden>No term matches. Clear the box to see them all.</p>
   </section>
 
   <footer>
     <dl>
-      <div><dt>Declarations checked</dt><dd>1,261</dd></div>
-      <div><dt>Theorems among them</dt><dd>914</dd></div>
-      <div><dt>Lean files</dt><dd>33</dd></div>
-      <div><dt>Lines</dt><dd>10,193</dd></div>
+      <div><dt>Declarations checked</dt><dd>1,484</dd></div>
+      <div><dt>Theorems among them</dt><dd>1,093</dd></div>
+      <div><dt>Lean files</dt><dd>34</dd></div>
+      <div><dt>Lines</dt><dd>12,201</dd></div>
     </dl>
     <p class="read">Lean 4 with Mathlib. No <code>sorry</code>. Every declaration depends only on the three standard axioms (<code>propext</code>, <code>Classical.choice</code>, <code>Quot.sound</code>), checked by <code>Audit.lean</code>. Full detail and the review's findings are in <a href="README.md">README.md</a>.</p>
   </footer>
@@ -381,31 +669,31 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
       rep: "f is a complexity exactly when the weights 2^(−f(x)) sum to at most 1.", lean: "Prefix.exists_prefix_iff",
       after: "Kraft's inequality and its converse. This is the first restriction that excludes functions in an interesting way." },
     { name: "The universal prefix machine", width: 22,
-      rule: "Self-delimiting and computable. One machine, U, runs every other prefix machine from a fixed prefix.",
-      rep: "f + c is a complexity for some c exactly when f can be approximated from above and the weights 2^(−f(x)) have a finite sum.", lean: "Upper.prefix_complexity_iff",
+      rule: "Self-delimiting and computable, and then one particular machine among those: U, which runs every other prefix machine from a fixed prefix. The laws on the right are about U; some fail for other machines of this kind.",
+      rep: "For f that can be approximated from above: f + c is the complexity of some prefix machine, for some c, exactly when the weights 2^(−f(x)) have a finite sum.", lean: "Upper.prefix_complexity_iff",
       after: "And K for the universal machine is the least such function, up to a constant." }
   ];
   const laws = [
     { name: "Counting", form: "few objects are cheap", cells: [
-      ["none", "Needs unambiguous descriptions. Otherwise one description can stand for everything.", ""],
-      ["holds", "Fewer than 2ⁿ objects have complexity below n.", "card_le_of_K_lt"],
-      ["holds", "At most 2ⁿ objects have complexity at most n.", "Thermo.card_le_two_pow_of_K_le"],
+      ["fails", "Needs unambiguous descriptions. Otherwise one description can stand for everything, and every object has complexity 0.", "Plain.exists_ambiguous_binary"],
+      ["holds", "Fewer than 2ⁿ objects have complexity below n.", "DescSystem.IsBinary.card_compressible_lt"],
+      ["holds", "At most 2ⁿ objects have complexity at most n.", "Plain.card_le_two_pow_of_prefixFree"],
       ["holds", "Also given any condition: fewer than 2ᵐ objects have K(y | a) below m.", "Conditional.card_condK_lt"] ] },
     { name: "Invariance", form: "the language costs a constant", cells: [
       ["empty", "Domination is defined as the inequality it concludes, and a zero-cost system dominates everything.", "Limits.dominates_iff_pointwise"],
-      ["const", "Among computable systems a universal interpreter exists.", "Kolmogorov.invariance"],
+      ["fails", "No unambiguous system dominates all the others. Among computable ones a universal interpreter exists, but that is a smaller class than this stage.", "DescSystem.not_exists_universal, Kolmogorov.invariance"],
       ["fails", "No self-delimiting system dominates all the others.", "Prefix.not_exists_universal"],
       ["const", "Any two optimal prefix machines agree up to a constant.", "PrefixMachine.invariance"] ] },
     { name: "Subadditivity", form: "K(x, y) ≤ K(x) + K(y)", cells: [
       ["none", "Nothing says how two descriptions combine.", ""],
-      ["fails", "False for plain complexity: two lengths are added with no delimiter between them.", "Limits.not_forall_K_obj_le"],
+      ["fails", "False for plain complexity: two lengths are added with no delimiter between them.", "Plain.not_subadditive_plain"],
       ["holds", "Exactly, in a purpose-built system that is again self-delimiting.", "Prefix.pair"],
       ["const", "On the one machine, with a constant.", "PrefixMachine.K_pair_le"] ] },
-    { name: "Growth law", form: "K(fᵗx) ≤ K(x) + 2 log t", cells: [
+    { name: "Growth law", form: "K(fᵗx) ≤ K(x) + c · log t", cells: [
       ["none", "No dynamics, no clock.", ""],
-      ["fails", "False for the plain universal machine and a primitive recursive f.", "Limits.not_iterate_bound_kolmogorov"],
-      ["holds", "In a purpose-built self-delimiting system.", "Prefix.iterate"],
-      ["const", "For every computable f: a dynamics adds at most the information in the clock.", "Conditional.K_iterate_le_log"] ] },
+      ["fails", "With c = 1 it is false for the plain universal machine: the clock is written with no delimiter. With c = 2 it is classically true there; that form is not proved here.", "Limits.not_iterate_bound_kolmogorov"],
+      ["holds", "With c = 2, in a purpose-built self-delimiting system.", "Prefix.iterate"],
+      ["const", "With c = 2, for every computable f: a dynamics adds at most the information in the clock.", "Conditional.K_iterate_le_log"] ] },
     { name: "Two-part code", form: "micro ≤ macro + log W", cells: [
       ["none", "No macrostates.", ""],
       ["fails", "False for plain complexity, for the same reason as subadditivity.", "Limits.not_twoPart_bound_kolmogorov"],
@@ -413,14 +701,14 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
       ["const", "Every microstate is within c above macrostate + log W, and all but a fraction 2^(−d) are within d + c below.", "Symmetry.micro_eq_macro_add_log"] ] },
     { name: "Coding theorem", form: "complex implies improbable", cells: [
       ["none", "No probability without bit strings.", ""],
-      ["fails", "For the plain machine the probability of every object is infinite.", ""],
-      ["fails", "A self-delimiting system exists where objects of complexity n + 1 have probability ½.", "Limits.exists_complex_probable"],
+      ["fails", "For the plain machine the probability of every object is infinite: a program that ignores its input can be padded.", "Plain.P_plain_eq_top"],
+      ["fails", "One self-delimiting system where no constant works: the number n has complexity 2n + 1 and probability 2^(−(n+1)).", "Plain.not_coding_self_delimiting"],
       ["const", "Levin's theorem: probability equals 2^(−K) up to a constant factor.", "Levin.levin"] ] },
     { name: "Symmetry of information", form: "K(x,y) = K(x) + K(y | x, K(x))", cells: [
       ["none", "Conditional complexity is not defined.", ""],
-      ["none", "Conditional complexity is not defined.", ""],
+      ["fails", "For plain complexity even the easy half, C(x, y) ≤ C(x) + C(y | x) + c, is false.", "Plain.not_chain_rule_plain"],
       ["none", "Conditional complexity needs a machine to condition.", ""],
-      ["const", "Both directions. With the bare condition x in place of ⟨x, K(x)⟩ it is false, by more than any constant.", "Symmetry.symmetry_of_information, Guessing.not_symmetry_bare"] ] }
+      ["const", "Both directions. With the bare condition x in place of ⟨x, K(x)⟩ it is false by more than any constant, and true up to about 2 log₂ K(x).", "Symmetry.symmetry_of_information, Guessing.not_symmetry_bare, Guessing.symmetry_bare_log"] ] }
   ];
   let stageIx = 0;
   function renderStage() {
@@ -565,21 +853,22 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
 
   /* ---------- ledger ---------- */
   const L = [
-    ["proved", "General", "No more cheap objects than cheap descriptions. The one lemma behind incompressibility, Ashby's law, the VC bound and the channel ceiling.", "card_le_of_K_lt"],
+    ["proved", "General", "No more cheap objects than cheap descriptions. The one lemma behind incompressibility, Ashby's law, a bound on VC dimension and the channel ceiling.", "DescSystem.card_le_of_K_lt"],
     ["proved", "General", "Counting is the only general fact about bit-string descriptions: a function is such a complexity exactly when each level has at most 2ⁿ members.", "Limits.exists_binary_iff"],
-    ["proved", "General", "Sharing never costs more than not sharing, and a repeated part is paid for once.", "Sig.dagK_le_treeK"],
+    ["proved", "General", "Sharing never costs more than not sharing, and a repeated part is paid for once.", "Sig.dagK_le_treeK, Sig.dagK_alg_const_le"],
     ["proved", "General", "With m operations of arity at most r, at most n·(m·nʳ)ⁿ objects can be built in n steps. Gives hard Boolean functions, hard strings and hard monomials from one count.", "Sig.card_le_of_dagK_le"],
     ["empty", "General", "\"Every measure is this infimum for some setting of the dials.\" True, because every function is.", "Limits.exists_system_K_eq"],
     ["empty", "General", "Invariance in general. It holds by definition, and has content only relative to a class of admissible systems fixed from outside.", "Limits.dominates_iff_pointwise"],
-    ["refuted", "General", "\"Measures agree exactly when each system simulates the other.\" Two systems can have equal complexity with neither translatable into the other.", "Translation.exists_dominates_not_simulates"],
+    ["refuted", "General", "\"Measures agree exactly when each system simulates the other.\" Two systems can have equal complexity with neither translatable into the other by prefixing a fixed header.", "DescSystem.exists_dominates_not_simulates"],
     ["refuted", "General", "\"K(fᵗx) ≤ K(x) + log t + c for the universal machine.\" False for plain complexity.", "Limits.not_iterate_bound_kolmogorov"],
     ["refuted", "General", "\"K(micro) ≤ K(macro) + log W + c for the universal machine.\" False for plain complexity.", "Limits.not_twoPart_bound_kolmogorov"],
-    ["refuted", "General", "\"Complex implies improbable\" as a law of description systems. A self-delimiting system exists where complex objects have probability ½.", "Limits.exists_complex_probable"],
+    ["refuted", "General", "\"Complex implies improbable\" as a law of description systems. In one self-delimiting system the number n has complexity 2n + 1 and probability 2^(−(n+1)), so no constant relates the two. The first witness for this used a different two-object system for each constant, which shows less.", "Plain.not_coding_self_delimiting"],
     ["proved", "Self-delimiting", "Kraft's inequality and its converse, for arbitrary index sets: the representation theorem the first version lacked.", "Prefix.exists_prefix_iff"],
     ["proved", "Self-delimiting", "Coding theorem, existence form: for every such system another one has complexity ⌈−log₂ probability⌉.", "Prefix.exists_coding"],
     ["proved", "Self-delimiting", "No self-delimiting system dominates all the others. Invariance needs computability as well.", "Prefix.not_exists_universal"],
+    ["proved", "General", "Just outside three laws: an ambiguous binary system gives every object complexity 0; the plain machine gives every object infinite probability; the chain rule is false for plain complexity even in its easy half.", "Plain.exists_ambiguous_binary, Plain.P_plain_eq_top, Plain.not_chain_rule_plain"],
     ["proved", "Universal machine", "A universal prefix machine: it runs every prefix machine from a fixed prefix, so its complexity is optimal up to a constant.", "PrefixMachine.U_simulates"],
-    ["proved", "Universal machine", "Kraft–Chaitin: an online decoder serving any computable list of requests whose weights sum to at most one, one bit over each request.", "KraftChaitin.exists_machine"],
+    ["proved", "Universal machine", "Kraft–Chaitin: an online decoder serving any primitive recursive list of requests whose weights sum to at most one, one bit over each request.", "KraftChaitin.exists_machine"],
     ["proved", "Universal machine", "Levin's coding theorem: algorithmic probability equals 2^(−K) up to a constant factor.", "Levin.levin, Levin.P_le_two_pow_mul_wt"],
     ["proved", "Universal machine", "Computation creates no information: K(f(x)) ≤ K(x) + c for computable f.", "PrefixMachine.K_map_le"],
     ["proved", "Universal machine", "K(x) ≤ 2 log₂(x + 1) + c.", "Levin.K_U_le_log"],
@@ -592,26 +881,37 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
     ["proved", "Universal machine", "\"Approximated from above\" means the same thing three ways: by a primitive recursive table, by a computable table, or by a recursively enumerable set of pairs (x, n) with f(x) ≤ n.", "Upper.exists_primrec_table, Upper.exists_table_iff_re"],
     ["proved", "Universal machine", "No bounded list of guesses contains the complexity: if a computable procedure lists at most N candidates for each object, it misses K for some object. With N = 1, K is not computable.", "Guessing.exists_wrong_guess, Guessing.K_U_not_computable"],
     ["proved", "Universal machine", "K(K(x) | x) is unbounded, so symmetry of information fails with the bare condition x, by more than any constant.", "Guessing.condK_K_unbounded, Guessing.not_symmetry_bare"],
-    ["proved", "Reuse", "Ceiling: sharing never buys more than an exponential.", "binTreeK_add_one_le_two_pow"],
-    ["proved", "Reuse", "Rigidity: where size is additive, cost without sharing is exactly twice the size minus one. All differences between objects of one size are differences in reuse.", "binTreeK_add_one_eq"],
-    ["proved", "Reuse", "Support bound: m distinct atoms need m introductions and m − 1 joins, shared or not.", "two_mul_card_support_le_binK"],
-    ["proved", "Reuse", "The gain from sharing is at most the mean number of times an atom repeats. It is zero when nothing repeats.", "gain_le_multiplicity, binK_eq_binTreeK_of_le"],
+    ["proved", "Reuse", "Ceiling: sharing never buys more than an exponential.", "Binary.binTreeK_add_one_le_two_pow"],
+    ["proved", "Reuse", "Rigidity: where size is additive, cost without sharing is exactly twice the size minus one. All differences between objects of one size are differences in reuse.", "Binary.binTreeK_add_one_eq"],
+    ["proved", "Reuse", "Support bound: m distinct atoms need m introductions and m − 1 joins, shared or not.", "Binary.two_mul_card_support_le_binK"],
+    ["proved", "Reuse", "The gain from sharing is at most the mean number of times an atom repeats. It is zero when nothing repeats.", "Binary.gain_le_multiplicity, Binary.binK_eq_binTreeK_of_le"],
     ["proved", "Reuse", "Binary method: every monomial comes within a logarithm of the multiplicity bound.", "Monomial.slK_add_one_le"],
     ["refuted", "Reuse", "My own conjecture that cost with sharing is of order atoms + log multiplicity. For every constant C some monomial costs more than C times that.", "Monomial.exists_slK_gt_mul"],
     ["refuted", "Lossy", "\"Loss scales with cascade depth\" as a result of the budget model. A stable relay iterated any number of times loses what one pass loses; depth dependence was an assumption.", "Limits.relay_iterate_saturates"],
+    ["refuted", "Lossy", "My own replacement for it, \"the model says loss is set by the tightest hop, not by depth\". A relay that drops one bit per retelling stays within the same budget and loses n bits in n hops. The budget model says nothing about depth either way.", "Limits.leak_iterate"],
     ["proved", "Lossy", "Budget ceiling and bottleneck: within B bits fewer than 2^(B+1) distinct ideas can land, and a chain of retellings emits no more versions than its tightest hop allows.", "Channel.card_lt_of_load_le, Channel.Relay.card_image_chain_lt"],
     ["open", "Lossy", "Does retention depend on depth alone, at equal audience size? Does putting the key before the claim help per-hop survival? Both are experiments for the book, not theorems.", ""],
-    ["open", "Universal machine", "How large the gap between K(y | x) and K(y | x, K(x)) gets. It is proved to exceed every constant; the logarithmic lower bound is not formalized.", ""],
+    ["proved", "Universal machine", "The gap between K(y | x) and K(y | x, K(x)) is at most K(K(x) | x), which is at most about 2 log₂ K(x). So symmetry with the bare condition fails by more than any constant and by no more than a logarithm.", "Guessing.condK_le_condK_star_add, Guessing.symmetry_bare_log"],
+    ["open", "Universal machine", "How close to that logarithm the gap actually gets. For plain complexity the answer (the full logarithm) is formalized in another Lean library; for prefix complexity it is not formalized anywhere I found.", ""],
     ["proved", "Reuse", "Straus's method: tabulate the products of all subsets of k atoms, then share the squarings. Exponents below 2^L cost fewer than 2^k + 2L steps; in groups, at most 3L(k / log₂ L + 1).", "MonoidGen.slK_prod_pow_add_one_le, Monomial.slK_add_one_le_log"],
-    ["proved", "Reuse", "The worst case from both sides: with k atoms and exponents up to 2^k, some monomial needs about k² / (10 log₂ k) steps and none needs more than about 3k² / log₂ k.", "Monomial.exists_slK_between"],
-    ["empty", "Reuse", "My own lower bounds for monomials, as first stated. They allowed the empty monomial, which cannot be built from the atoms, so its infinite cost satisfied them trivially. Restated with every exponent at least one.", "Monomial.exists_slK_gt, Monomial.exists_slK_gt_mul"],
-    ["open", "Reuse", "The exact order of the cost of monomials outside the range where k is about log m, and the exact constant inside it.", ""],
+    ["proved", "Reuse", "The worst case from both sides, for k a power of two: with k atoms and exponents up to 2^k, some monomial needs about k² / (10 log₂ k) steps and none needs more than about 3k² / log₂ k.", "Monomial.exists_slK_between, Monomial.slK_add_one_le_grouped"],
+    ["empty", "Reuse", "My own lower bounds for monomials, as first stated, and again as second stated. First they allowed the exponent 0; after that fix one still allowed a monomial with no atoms. Either way an object that cannot be built satisfied them trivially. Now: at least one atom, every exponent at least one.", "Monomial.exists_slK_gt, Monomial.exists_slK_gt_mul"],
+    ["empty", "Reuse", "Two of my counterexample theorems said \"for some size\" where they needed \"for every large size\"; the smallest size satisfied them trivially. An independent review proved the trivial versions in a few lines. Both are restated.", "SetUnion.counting_not_tight, Comb.counting_misses_depth"],
+    ["proved", "Reuse", "The hardest monomial from both sides for any number of atoms k and exponents up to 2^L: at least about kL / (6 log₂ kL) steps for one, at most about 3kL / log₂ L for all. Same order when k is between log₂ L and a power of L.", "Monomial.exists_slK_between_general"],
+    ["proved", "Reuse", "Many atoms: group the binary digits of the exponents instead of the atoms. A monomial with k atoms and exponents below 2^L costs at most about 3k + 2L + 4kL / log₂ k steps.", "Monomial.slK_le_digits, Monomial.slK_le_many_atoms"],
+    ["proved", "Reuse", "The order of the hardest monomial, for k ≥ 4 atoms and exponents up to 2^L: every monomial costs at most 12kL / (log₂k + log₂L) + 6(k + L) steps; some monomial costs more than kL / (8(log₂k + log₂L + 2)); every one costs at least 2k − 1; some one costs more than L. All four are theorems with these constants.", "Monomial.slK_le_order, Monomial.exists_slK_gt_order, Monomial.two_mul_le_slK_add_one, Monomial.exists_slK_gt_exponent"],
+    ["open", "Reuse", "The exact constant in the cost of the hardest monomial. Pippenger's 1980 theorem gives it; it is not formalized.", ""],
     ["proved", "Reuse", "Every Boolean function of n ≥ 1 variables has a NAND circuit of at most 5 + 2ⁿ(4n + 7) steps. So the hard function that counting produces has a finite size, about 2ⁿ/2n or more.", "Circuit.circuitK_le, Circuit.exists_hard_function_between"],
     ["proved", "Reuse", "Shannon's table for circuits: build every function of k variables once, then select with the rest. The hardest function of n variables costs between about 2ⁿ/4n and 8·2ⁿ/n steps. Already in CSLib with constants near 1.", "Circuit.circuitK_le_shannon, Circuit.exists_circuitK_between"],
+    ["proved", "Reuse", "Most strings gain only a logarithm: all but a fraction 2^(−d) of the binary strings of length L cost more than about L / (4 log₂ L) steps. Before, only one such string was shown to exist.", "Str.card_cheap_lt"],
     ["proved", "Reuse", "A table of blocks for strings: the hardest binary string of length L costs between about L / (4 log₂ L) and 2L / log₂ L steps.", "Str.strK_le_blocks, Str.exists_strK_between"],
-    ["refuted", "Reuse", "My own open question, that the counting bound is always attained. In the free semilattice on k atoms the hardest object costs 2k − 1, more than any constant times what counting can show.", "SetUnion.counting_not_tight"],
-    ["proved", "Reuse", "Where size is additive, sharing always saves a logarithm: in any monoid with σ generators a product of L generators costs about 2L / log_σ L steps, against exactly 2L − 1 without sharing.", "MonoidGen.slK_list_prod_le_blocks"],
-    ["open", "Reuse", "What decides the hardest object in general. Support, growth and counting are three lower bounds and each binds somewhere; whether their maximum is always the right order is not known here.", ""],
+    ["refuted", "Reuse", "My own open question, that the counting bound is always attained. In the free semilattice on k atoms the hardest object costs 2k − 1, which for every constant C and all large k is more than C times what counting can show.", "SetUnion.counting_not_tight"],
+    ["proved", "Reuse", "In a monoid with finitely many generators, sharing always saves a logarithm: with σ generators a product of L generators costs about 2L / log_σ L steps, against exactly 2L − 1 without sharing when size is additive.", "MonoidGen.slK_list_prod_le_blocks"],
+    ["refuted", "Reuse", "My heading for that result, \"where size is additive, sharing always saves a logarithm\". Binary trees have an additive size and a comb gains less than a factor of two: n + 1 steps against 2n + 1. Associativity is what the result needs.", "Comb.binK_comb, Comb.binTreeK_comb"],
+    ["proved", "Reuse", "In binary trees the cost with sharing is exactly the number of distinct subtrees. With the same number of nodes it runs from logarithmic (a perfect tree with 2^d − 1 nodes costs d + 1) to linear (a comb with n nodes costs n + 1).", "Comb.cost_eq_card_sub, Comb.cost_perfect"],
+    ["proved", "Reuse", "The depth bound: anything that grows by at most one per operation is a lower bound on cost with sharing. The growth bound is the case of ⌈log₂ size⌉. A comb-shaped tree with n nodes costs exactly n + 1 steps.", "Binary.depth_add_one_le, Binary.clog_add_one_le, Comb.binK_comb"],
+    ["refuted", "Reuse", "The guess that the largest of support, depth and counting gives the order of the cost. A bushy tree with one atom and height about 3d has at least d·2^d distinct subtrees among fewer than 6d·2^d nodes, and costs that much.", "Comb.obstructions_incomplete"],
+    ["open", "Reuse", "What decides the cost when the algebra has relations. In a free algebra it is the number of distinct parts; with relations no simple description is known, and for one explicit Boolean function this is the circuit lower bound problem.", ""],
     ["open", "Reuse", "Lower bounds for explicit Boolean functions: both reuse obstructions are silent beyond the trivial bound. The real gap is formula size against circuit size, open in complexity theory.", ""]
   ];
   const STAT = { proved: "Proved", refuted: "Refuted", empty: "Empty", open: "Open" };
@@ -639,14 +939,32 @@ footer dd { margin: 0; font-size: 26px; color: var(--ink); font-variant-numeric:
   mkFilters($("areaFilters"), [["all", "All areas"]].concat(areas.map((a) => [a, a])), () => fArea, (v) => { fArea = v; });
   renderLedger();
 
+  /* ---------- glossary filter ---------- */
+  (function () {
+    const q = $("gq"), items = Array.from(document.querySelectorAll("#glist .gloss > div"));
+    const groups = Array.from(document.querySelectorAll("#glist .ggroup"));
+    function apply() {
+      const needle = q.value.trim().toLowerCase();
+      let shown = 0;
+      items.forEach((it) => {
+        const hit = !needle || it.textContent.toLowerCase().includes(needle);
+        it.hidden = !hit; if (hit) shown++;
+      });
+      groups.forEach((g) => { g.hidden = !g.querySelector(".gloss > div:not([hidden])"); });
+      $("gnone").hidden = shown !== 0;
+      $("gcount").textContent = needle ? shown + " of " + items.length + " terms" : "";
+    }
+    q.addEventListener("input", apply);
+  })();
+
   /* ---------- what we're after ---------- */
   const A = [
-    ["Measure the gap between K(y | x) and K(y | x, K(x))", "Proved to exceed every constant, so symmetry needs K(x) in the condition. How fast the gap grows is not formalized.", "For plain complexity the tight logarithmic bound is already formalized in Milovanov's library, by a game argument. For prefix complexity it is open in both."],
-    ["Pin down the cost of monomials", "Between k log m / log(k log m) for some monomials and 3 log₂ m · (k / log₂ log₂ m + 1) for all. The two agree up to a constant when k is about log₂ m.", "Pippenger's 1980 theorem on powers and monomials gives the exact order everywhere. Checked against a summary of its abstract; not formalized."],
-    ["Say what decides the hardest object", "Three lower bounds: support, growth and counting. Counting binds for strings, dense monomials and circuits (the classical Shannon effect); support binds in the free semilattice; growth binds for powers of one generator.", "Is the largest of the three always the right order? Unknown here. A counterexample or a proof would both be progress."],
+    ["Measure the gap between K(y | x) and K(y | x, K(x))", "Bounded on both sides now: it exceeds every constant, and it is at most about 2 log₂ K(x). Whether it really reaches the order of a logarithm is not formalized here.", "For plain complexity the tight logarithmic bound is already formalized in Milovanov's library, by a game argument. For prefix complexity it is open in both."],
+    ["Pin down the constant for monomials", "The order is settled for every shape, as theorems: with k atoms and exponents up to 2^L the hardest monomial costs k + L + kL / log(kL) up to a constant. The proved constants on the two sides differ by a factor below 170. Two constructions do it, one grouping atoms and one grouping digits.", "Pippenger's 1980 theorem gives the exact asymptotics. Read from its abstract and a survey; not formalized here or, as far as a search shows, anywhere."],
+    ["Say what decides the cost", "Support, depth and counting are lower bounds, each binding somewhere, and together they are still not enough: in binary trees the cost is the number of distinct subtrees, which none of them sees.", "With relations in the algebra there is no such formula. For finite semigroups a 2026 paper characterizes which classes compress at all; nothing general is claimed here."],
     ["Say something about explicit Boolean functions", "The worst case is settled up to a constant. For a named function, both obstructions are silent past the trivial bound.", "This is formula size against circuit size. Do not expect it to close here."],
-    ["Stop re-proving what other Lean libraries have", "Milovanov's library has the symmetry statement, the coding theorem, Kraft–Chaitin and the characterization of prefix complexities, for every optimal machine. CSLib has Shannon's lower bound and Lupanov's upper bound for circuits, sharper than here. Statements were read; proofs were not.", "Not found formalized elsewhere: the worst-case bounds for strings and monomials, symmetry failing for the bare condition, general description systems. Search before proving, not after."],
-    ["Run the two experiments for Lossy", "The model says loss depends on the tightest hop, not on depth. The chapter argues from depth.", "Depth against size at equal audience; key before claim in transmission chains."]
+    ["Stop re-proving what other Lean libraries have", "Milovanov's library has the symmetry statement, the coding theorem, Kraft–Chaitin and the characterization of prefix complexities, for every optimal machine. CSLib has Shannon's lower bound and Lupanov's upper bound for circuits, sharper than here. Statements were read; proofs were not.", "Not found formalized elsewhere: the worst-case bounds for strings and monomials, symmetry failing for the bare condition, description systems with arbitrary costs. That library does treat general description relations on bit strings. Search before proving, not after."],
+    ["Run the two experiments for Lossy", "The model caps the number of versions a chain can pass on by its tightest hop, and says nothing about whether loss grows with depth: both a settling relay and a leaking one fit it. The chapter argues from depth.", "Depth against size at equal audience; key before claim in transmission chains."]
   ];
   A.forEach(([title, where, close]) => {
     const art = el("article");

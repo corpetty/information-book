@@ -9,8 +9,8 @@ description complexity at most `n` has fewer than `2 ^ (n + 1)` members. Hence
 
   `VC dimension ≤ maximal description complexity`.
 
-This is the deterministic core of Occam's razor in learning theory: restricting to simple
-hypotheses restricts capacity, and capacity is what sample complexity is measured against.
+This bounds VC dimension. It is not a sample-complexity bound, which is what "the VC
+bound" usually means, and nothing about generalization is proved here.
 -/
 
 namespace Complexity

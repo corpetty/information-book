@@ -9,8 +9,9 @@ operation**. Multiplication in a monoid, a NAND gate on Boolean functions, the j
 fragments, concatenation of strings, application of one term to another.
 
 This file specializes the general theory of `Generative.lean`, `Reuse.lean` and
-`Growth.lean` to that shape once, so that addition chains, grammars, assembly pathways and
-Boolean circuits are literally the same theorems.
+`Growth.lean` to that shape once, so that addition chains, grammars and Boolean circuits
+are literally the same theorems. Assembly pathways fit only when a join of two fragments
+has a single result; the counting law in particular needs that.
 
 * `binK` / `binTreeK`   – complexity with reuse (DAG) and without (tree), unit step cost;
 * `binK_op_self_le`     – using something twice costs one step;

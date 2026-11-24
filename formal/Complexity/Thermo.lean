@@ -41,14 +41,16 @@ infinite-temperature limit. This file proves what holds for every description sy
                               descriptions.
 
 **Review note.** The inequalities below are true but much weaker than the prose above suggests.
-"Complex implies improbable" is **not** a consequence of them: there are prefix-free
-unambiguous systems in which objects of complexity `n + 1` have weight `1/2`
-(`Limits.exists_complex_probable`). `Z_le_tail` bounds `Z x` by the weight of *all* long
+"Complex implies improbable" is **not** a consequence of them: there is a prefix-free
+unambiguous system in which no constant relates complexity and weight
+(`Plain.not_coding_self_delimiting`; the older `Limits.exists_complex_probable` uses a
+different two-object system for each constant and shows less). `Z_le_tail` bounds `Z x` by the weight of *all* long
 descriptions; for bit strings at `q = 1/2` that bound is `⊤`, and for the plain universal
 machine of `Instances/Kolmogorov.lean` `Z (1/2) x = ⊤` for every `x`. The upper half of
 the coding theorem (simplicity bias) is a theorem about universal prefix machines.
-`Prefix.lean` proves its existence form (`Prefix.exists_coding`) and reduces the
-universal-machine statement to one domination hypothesis (`Prefix.coding_of_dominates`);
+`Prefix.lean` proves its existence form (`Prefix.exists_coding`); its
+`Prefix.coding_of_dominates` is little more than the definition of domination unfolded and
+is not used;
 `Levin.lean` proves the statement itself for the universal prefix machine of
 `Instances/PrefixMachine.lean`.
 -/

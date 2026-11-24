@@ -91,7 +91,9 @@ private theorem K_of_code (e : List Bool → List Bool) (x : List Bool) :
 
 /-- **Simulation is strictly stronger than domination.** Two unambiguous binary systems
 with the same complexity function, neither of which simulates the other by prefixing:
-agreeing on `K` does not make one language translatable into the other. -/
+agreeing on `K` does not make one language translatable into the other by a fixed header.
+(The two witnesses are translated into each other by flipping every bit, so the statement
+is about prefixing only.) -/
 theorem exists_dominates_not_simulates :
     ∃ S S' : DescSystem (List Bool) (List Bool) ℕ∞, S.IsBinary ∧ S'.IsBinary ∧
       S.Functional ∧ S'.Functional ∧ (∀ x, S'.K x = S.K x) ∧

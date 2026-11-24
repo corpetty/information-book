@@ -10,18 +10,20 @@ import Complexity.Invariance
 /-!
 # The laws of complexity
 
-The theory in one file. Each statement below is a restatement, in its most general form,
-of a theorem proved elsewhere in the library; together they are the content of the claim
-that "complexity" is one notion.
+The general statements in one file. Each is a restatement, in its most general form, of a
+theorem proved elsewhere in the library. The column "Results of the same shape" names
+classical results that look like the statement; whether each one is actually an instance,
+and under what hypothesis, is recorded in the README (sections 3 and 4) and is often "no"
+or "only its trivial half".
 
-| Law | Statement | Classical shadows |
+| Law | Statement | Results of the same shape |
 |-----|-----------|-------------------|
 | 0 Definition    | `K x = ⨅ cost of realizations`                      | every scalar measure |
 | I Fidelity      | `K(class) = ⨅ K(members)`                           | rate–distortion, macrostates |
 | II Transport    | `K'(T x) ≤ f (K x)` along a simulation              | reductions, compilers, coarse-graining |
-| III Conservation| `K(c) ≤ K(b) + K(c ∣ b)`                            | data processing, slow growth, second laws |
+| III Conservation| `dist a c ≤ dist a b + dist b c`                    | the triangle inequality for path costs; not the chain rule |
 | IV Duality      | `K` is the greatest potential / Bellman fixed point | lower-bound methods, monotones, entropy |
-| V Counting      | `#{K < c} ≤ #{cost < c}`                            | incompressibility, Shannon, Ashby, Boltzmann |
+| V Counting      | `#{K < c} ≤ #{cost < c}`, unambiguous descriptions  | incompressibility, Hartley, Ashby under his hypothesis |
 | VI Reuse        | `K_dag ≤ K_tree`, copies are free                   | circuits vs formulas, assembly, hierarchy |
 | VII Logarithm   | `μ ≤ r ^ (K − 1)` for extensive `μ`                 | addition chains, grammar bounds, depth |
 | VIII Invariance | universal systems agree up to a constant            | Kolmogorov invariance |

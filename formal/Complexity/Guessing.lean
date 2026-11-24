@@ -429,6 +429,62 @@ theorem not_symmetry_bare :
       _ = Kolmogorov.K U x + ((c1 + c : ℕ) : ℕ∞) := by push_cast; rw [add_assoc]
   exact absurd ((ENat.add_le_add_iff_left (K_U_lt_top x).ne).1 h) (not_le.2 hx)
 
+/-! ### How large the gap can be
+
+The gap between conditioning on `x` and on `x*` is unbounded, but it is small: at most
+`K(K(x) | x)`, which is at most about `2 log₂ K(x)`. So symmetry of information with the
+bare condition fails, and fails by no more than a logarithm. -/
+
+/-- The gap is at most the cost of finding `K(x)` from `x`:
+`K(y | x) ≤ K(y | x*) + K(K(x) | x) + c`. -/
+theorem condK_le_condK_star_add : ∃ c : ℕ, ∀ x y,
+    condK x y ≤ condK (Symmetry.star x) y + condK x (Kolmogorov.K U x).toNat + c := by
+  obtain ⟨c, hc⟩ := condK_chain_le
+  refine ⟨c, fun x y => ?_⟩
+  have h := hc x (Kolmogorov.K U x).toNat y
+  rw [add_comm (condK x (Kolmogorov.K U x).toNat)] at h
+  exact h
+
+/-- `K(K(x) | x) ≤ 2 log₂ (K(x) + 1) + c`: a number is described in about twice as many
+bits as it has digits. -/
+theorem condK_K_le_log : ∃ c : ℕ, ∀ x, condK x (Kolmogorov.K U x).toNat ≤
+    ((2 * Nat.log 2 ((Kolmogorov.K U x).toNat + 1) + c : ℕ) : ℕ∞) := by
+  obtain ⟨c1, h1⟩ := condK_le_K
+  obtain ⟨c2, h2⟩ := Levin.K_U_le_log
+  refine ⟨c2 + c1, fun x => (h1 x _).trans ?_⟩
+  calc Kolmogorov.K U (Kolmogorov.K U x).toNat + (c1 : ℕ∞)
+      ≤ ((2 * Nat.log 2 ((Kolmogorov.K U x).toNat + 1) + c2 : ℕ) : ℕ∞) + c1 := by
+        gcongr
+        exact_mod_cast h2 _
+    _ = ((2 * Nat.log 2 ((Kolmogorov.K U x).toNat + 1) + (c2 + c1) : ℕ) : ℕ∞) := by
+        push_cast
+        ring
+
+/-- **Symmetry of information with the bare condition holds up to a logarithm**:
+`K(x) + K(y | x) ≤ K(x, y) + 2 log₂ (K(x) + 1) + c`. With `not_symmetry_bare`: the defect
+is unbounded and at most logarithmic in `K(x)`. -/
+theorem symmetry_bare_log : ∃ c : ℕ, ∀ x y,
+    Kolmogorov.K U x + condK x y ≤ Kolmogorov.K U (Nat.pair x y) +
+      ((2 * Nat.log 2 ((Kolmogorov.K U x).toNat + 1) + c : ℕ) : ℕ∞) := by
+  obtain ⟨c1, h1⟩ := K_add_condK_star_le
+  obtain ⟨c2, h2⟩ := condK_le_condK_star_add
+  obtain ⟨c3, h3⟩ := condK_K_le_log
+  refine ⟨c3 + c2 + c1, fun x y => ?_⟩
+  calc Kolmogorov.K U x + condK x y
+      ≤ Kolmogorov.K U x +
+          (condK (Symmetry.star x) y + condK x (Kolmogorov.K U x).toNat + c2) := by
+        gcongr
+        exact h2 x y
+    _ = (Kolmogorov.K U x + condK (Symmetry.star x) y) +
+          condK x (Kolmogorov.K U x).toNat + c2 := by ring
+    _ ≤ (Kolmogorov.K U (Nat.pair x y) + c1) +
+          ((2 * Nat.log 2 ((Kolmogorov.K U x).toNat + 1) + c3 : ℕ) : ℕ∞) + c2 :=
+        add_le_add (add_le_add (h1 x y) (h3 x)) le_rfl
+    _ = Kolmogorov.K U (Nat.pair x y) +
+          ((2 * Nat.log 2 ((Kolmogorov.K U x).toNat + 1) + (c3 + c2 + c1) : ℕ) : ℕ∞) := by
+        push_cast
+        ring
+
 end Guessing
 
 end Complexity

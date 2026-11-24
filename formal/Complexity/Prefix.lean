@@ -18,12 +18,12 @@ theory has content.
                            `S` there is a prefix-free system `T` with
                            `K_T(x) = ⌈-log₂ P_S(x)⌉`, where `P_S` is the algorithmic
                            probability of `S`;
-* `coding_of_dominates`  – hence in any system `U` dominating that `T`,
-                           `K_U(x) ≤ ⌈-log₂ P_U(x)⌉ + c`: *complex implies improbable*. The
-                           one hypothesis – that `U` dominates the system built from its own
-                           algorithmic probability – is what Levin's theorem establishes for
-                           the universal prefix machine; it is assumed here and proved in
-                           `Levin.lean`;
+* `coding_of_dominates`  – in any system `U` dominating that `T`,
+                           `K_U(x) ≤ ⌈-log₂ P_U(x)⌉ + c`. This is little more than the
+                           definition of domination unfolded: `T` is hidden behind an
+                           existential, so the hypothesis cannot be discharged without
+                           already having the conclusion. It is not used; `Levin.lean`
+                           proves the statement for the universal prefix machine directly;
 * `pair`, `iterate`, `twoPart` – the class is **closed under composition at exact additive
                            cost**: `K(x, y) ≤ K(x) + K(y)`, `K(fᵗ x) ≤ K(x) + 2 log t + 1`,
                            `K(x) ≤ K(π x) + ⌈log₂ W(π x)⌉`, each realized by a system that

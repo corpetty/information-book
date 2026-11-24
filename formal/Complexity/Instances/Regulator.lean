@@ -9,14 +9,14 @@ fixed response distinct disturbances give distinct outcomes, then
 
   `#disturbances ≤ #responses · #outcomes`,   i.e.   `V_O ≥ V_D − V_R`.
 
-In the unified theory this is not a separate principle. The pair
+This is the counting law applied to one situation. The pair
 `(response, outcome)` is a *description* of the disturbance, the hypothesis on `T` says
 that descriptions are unambiguous, and the conclusion is the counting law of
 `Counting.lean`: there are never more objects than descriptions.
 
-The same argument reads: a controller, model, immune repertoire, institution or receiver
-that keeps outcomes within a tolerance must itself carry at least the complexity of what
-it faces minus the complexity of the tolerance.
+The theorem is the cardinality inequality above, under the separation hypothesis. Reading
+it as a statement about controllers, models, immune repertoires or institutions is an
+interpretation and is not proved here.
 -/
 
 namespace Complexity

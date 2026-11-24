@@ -5,14 +5,18 @@ import Complexity.Basic
 
 There are never more cheap objects than cheap descriptions.
 
-This single pigeonhole statement is the common root of
+This single pigeonhole statement is used in the library for
 
 * the incompressibility theorem of algorithmic information theory,
-* Shannon's counting lower bound for circuits ("most Boolean functions are hard"),
 * the converse of noiseless source coding (Hartley: selecting one of `N` costs `log N`),
-* Boltzmann's `S = log W` read as the residual cost of a microstate given its macrostate,
-* Ashby's law of requisite variety (see `Instances/Regulator.lean`),
-* "most states are maximally complex" in quantum-circuit and Cayley-graph complexity.
+* the `log W - c` lower bound for most of `W` candidates (`Instances/CoarseGraining.lean`),
+* Ashby's law of requisite variety, under his separation hypothesis
+  (`Instances/Regulator.lean`),
+* a bound on VC dimension (`Instances/Learning.lean`).
+
+It is *not* what proves Shannon's counting lower bound for circuits: that is a separate
+direct count of construction histories (`Growth.lean`). An earlier version of this list
+also named quantum-circuit and Cayley-graph complexity, which are not formalized here.
 
 The law is parametric in the **growth function** of the description system – the number
 of descriptions below a given cost. Each domain plugs in its own growth function; the

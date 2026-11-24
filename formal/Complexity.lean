@@ -21,6 +21,7 @@ import Complexity.Conditional
 import Complexity.Symmetry
 import Complexity.Semicomputable
 import Complexity.Guessing
+import Complexity.Plain
 import Complexity.Instances.Kolmogorov
 import Complexity.Instances.PrefixMachine
 import Complexity.Instances.Shannon
@@ -33,15 +34,21 @@ import Complexity.Instances.Learning
 import Complexity.Instances.Channel
 
 /-!
-# A unified theory of complexity
+# Complexity as least cost of description
 
-**Thesis.** Complexity is the least cost of realization,
+The common definition is
 
-  `K x = ⨅ { cost d | d realizes x }`,
+  `K x = ⨅ { cost d | d realizes x }`.
 
-and every notion of complexity in use is this infimum for some setting of four dials –
-generators, cost, fidelity, context – plus a temperature. The laws each field discovered
-separately are theorems about the infimum that hold for every setting.
+Many notions of complexity are this infimum for some choice of what a description is, what
+it costs and what "realizes" means. The definition is a common language, not a theory:
+every function is `K` for some choice (`Limits.exists_system_K_eq`), so no law holds for
+every choice. What the library does is locate, for each law, the restriction on
+descriptions under which it holds, and prove a counterexample without it. See `README.md`.
+
+An earlier version of this docstring was titled "A unified theory of complexity" and said
+that the laws each field discovered "hold for every setting". That claim was refuted by
+the review recorded in `Limits.lean` and the README.
 
 ## Layout
 
@@ -60,8 +67,10 @@ separately are theorems about the infimum that hold for every setting.
 * `Profile`     – several resources: the profile is `K` in a lattice of sets; depth and
                   sophistication as sections.
 * `Thermo`      – the temperature dial: partition functions, simplicity bias.
-* `Dynamics`    – deterministic laws add at most `log t`.
-* `Laws`        – the theory in one file.
+* `Dynamics`    – iteration systems. That a deterministic law adds at most `log t + c` is
+                  false for the plain machine (`Limits`); `2 log t` holds for the universal
+                  prefix machine (`Conditional`).
+* `Laws`        – the general statements in one file.
 * `Limits`      – theorems proved *against* the theory: what the framework does not say,
                   and two advertised bounds that fail for the universal machine.
 * `Translation` – domination with a mechanism: simulation by admissible translations;
@@ -87,6 +96,8 @@ separately are theorems about the infimum that hold for every setting.
                   above with summable weights, up to a constant; `K_U` is the least.
 * `Guessing`    – no bounded list of guesses contains `K`: `K` is not computable,
                   `K(K(x) | x)` is unbounded, and symmetry fails for the bare condition `x`.
+* `Plain`       – failures one stage before each law: counting without unambiguity,
+                  infinite probability and no chain rule for the plain machine.
 
 ## Instances
 

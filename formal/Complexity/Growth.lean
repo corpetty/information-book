@@ -7,8 +7,9 @@ Shannon's counting argument – "there are far more Boolean functions than small
 so almost every function needs a large circuit" – uses nothing about Boolean functions.
 It only uses that a circuit is built step by step, each step being one of finitely many
 choices. This file states and proves the argument for *every* finitely generated
-generative system with reuse: circuits, straight-line programs, grammars, assembly
-pathways, addition chains.
+generative system with reuse whose operations are single-valued: circuits, straight-line
+programs, grammars, addition chains. (Not assembly pathways as usually defined; see the
+last paragraph.)
 
 Let the signature have `m` operation symbols, each of arity at most `r`, and let every
 construction step cost one. Then:

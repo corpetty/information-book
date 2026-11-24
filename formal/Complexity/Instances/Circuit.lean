@@ -22,8 +22,9 @@ One statement does need a circuit-specific argument:
                              the counting theorem could be satisfied by a function that
                              cannot be built at all.
 
-The same three statements, with the same proofs, hold for molecules under joining, strings
-under concatenation and numbers under addition.
+The same three statements, with the same proofs, hold for strings under concatenation and
+numbers under addition. They do not transfer as stated to molecular assembly, where a join
+of two fragments can have several results and the counting argument does not apply.
 -/
 
 namespace Complexity
@@ -68,7 +69,9 @@ theorem le_formulaK {n : ℕ} (φ : BoolFn n → ℕ∞) (hproj : ∀ i, φ (pro
 
 /-- **Shannon's counting theorem.** There are `2 ^ 2ⁿ` Boolean functions of `n` variables
 but at most `s · ((n + 1) · s²)ˢ` of them have circuit size at most `s`; so whenever the
-latter is smaller, some function is hard. -/
+latter is smaller, some function is hard. With no variables nothing can be built and the
+statement is satisfied by a function of infinite cost; `exists_hard_function_between` adds
+`n ≥ 1` and a finite upper bound. -/
 theorem exists_hard_function (n s : ℕ) (h : s * ((n + 1) * s ^ 2) ^ s < 2 ^ 2 ^ n) :
     ∃ f : BoolFn n, (s : ℕ∞) < circuitK f := by
   have hcard : (Finset.univ : Finset (BoolFn n)).card = 2 ^ 2 ^ n := by
@@ -77,9 +80,12 @@ theorem exists_hard_function (n s : ℕ) (h : s * ((n + 1) * s ^ 2) ^ s < 2 ^ 2 
     (by rw [hcard, Fintype.card_fin]; exact h)
   exact ⟨f, hf⟩
 
-/-- A concrete case: some Boolean function of five variables needs more than four steps. -/
-theorem exists_hard_five : ∃ f : BoolFn 5, (4 : ℕ∞) < circuitK f := by
-  have := exists_hard_function 5 4 (by norm_num)
+/-- A concrete case where counting says more than the support bound: some Boolean function
+of eight variables needs more than `21` steps. (Inputs count as steps, so any function that
+depends on all eight variables needs at least `15`; counting first beats that at eight
+variables. An earlier example with five variables and four steps showed nothing.) -/
+theorem exists_hard_eight : ∃ f : BoolFn 8, (21 : ℕ∞) < circuitK f := by
+  have := exists_hard_function 8 21 (by norm_num)
   simpa using this
 
 /-! ### Every function has a circuit

@@ -256,6 +256,98 @@ theorem K_U_le_add_of_cond {ψ : ℕ → List Bool →. ℕ} (hψ : IsCondPrefix
   rw [e]
   exact h
 
+/-! ### The dependent-pair machine with a condition -/
+
+theorem depStep_primrec' : Primrec fun a : (Code × Code) × List Bool × ℕ =>
+    depStep a.1.1 a.1.2 a.2.1 a.2.2 :=
+  have hj : Primrec fun a : (Code × Code) × List Bool × ℕ => a.2.2.unpair.1 :=
+    fst.comp (Primrec.unpair.comp (snd.comp snd))
+  have ht : Primrec fun a : (Code × Code) × List Bool × ℕ => a.2.2.unpair.2 :=
+    snd.comp (Primrec.unpair.comp (snd.comp snd))
+  have hT : Primrec fun a : (Code × Code) × List Bool × ℕ =>
+      evaln a.2.2.unpair.2 a.1.1 (encode (a.2.1.take a.2.2.unpair.1)) :=
+    Nat.Partrec.Code.primrec_evaln.comp
+      ((ht.pair (fst.comp fst)).pair
+        (Primrec.encode.comp (list_take.comp hj (fst.comp snd))))
+  have hD : Primrec fun b : ((Code × Code) × List Bool × ℕ) × ℕ =>
+      evaln b.1.2.2.unpair.2 b.1.1.2 (encode (b.2, b.1.2.1.drop b.1.2.2.unpair.1)) :=
+    Nat.Partrec.Code.primrec_evaln.comp
+      (((ht.comp fst).pair (snd.comp (fst.comp fst))).pair
+        (Primrec.encode.comp (snd.pair (list_drop.comp (hj.comp fst)
+          (fst.comp (snd.comp fst))))))
+  option_bind hT hD.to₂
+
+/-- **Composition of two conditional prefix machines.** There is a conditional prefix
+machine that, given `x`, reads a conditional program for `z` given `x` and then a
+conditional program given `⟨x, z⟩`. -/
+theorem exists_cond_dep_machine :
+    ∃ Ψ : ℕ → List Bool →. ℕ, IsCondPrefixMachine Ψ ∧
+      ∀ (x : ℕ) (p q : List Bool) (z v : ℕ), z ∈ condU x p → v ∈ condU (Nat.pair x z) q →
+        v ∈ Ψ x (p ++ q) := by
+  obtain ⟨c0, hc0⟩ := exists_code₂ condU_partrec
+  -- a program that, given `x`, maps a coded pair `(a, q)` to `condU ⟨x, a⟩ q`
+  have hF : Partrec fun p : ℕ × ℕ =>
+      ((decode (α := ℕ × List Bool) p.2 : Option (ℕ × List Bool)) : Part (ℕ × List Bool)).bind
+        fun aq => condU (Nat.pair p.1 aq.1) aq.2 :=
+    Partrec.bind (Computable.ofOption (Computable.decode.comp Computable.snd))
+      (condU_partrec.comp
+        (Primrec₂.natPair.to_comp.comp (Computable.fst.comp Computable.fst)
+          (Computable.fst.comp Computable.snd))
+        (Computable.snd.comp Computable.snd)).to₂
+  have hF' : Nat.Partrec fun n =>
+      Part.bind (decode (α := ℕ × ℕ) n) fun p : ℕ × ℕ =>
+        (((decode (α := ℕ × List Bool) p.2 : Option (ℕ × List Bool)) :
+          Part (ℕ × List Bool)).bind fun aq => condU (Nat.pair p.1 aq.1) aq.2).map encode := hF
+  obtain ⟨e', he'⟩ := Nat.Partrec.Code.exists_code.1 hF'
+  have hrunc : ∀ x l, run (Code.curry c0 x) l = condU x l := fun x l => by
+    show (Code.curry c0 x).eval (encode l) = condU x l
+    rw [Nat.Partrec.Code.eval_curry]
+    exact hc0 x l
+  have hrund : ∀ x a q, (Code.curry e' x).eval (encode (a, q)) = condU (Nat.pair x a) q :=
+    fun x a q => by
+      rw [Nat.Partrec.Code.eval_curry, he']
+      have e1 : Nat.pair x (encode (a, q)) = encode (x, encode (a, q)) := rfl
+      rw [e1]
+      simp only [encodek, Part.coe_some, Part.bind_some]
+      exact Part.map_id' (fun _ => rfl) _
+  have hpfc : ∀ x (w z : List Bool), (run (Code.curry c0 x) w).Dom →
+      (run (Code.curry c0 x) (w ++ z)).Dom → z = [] := fun x w z h h' => by
+    rw [hrunc] at h h'
+    exact condU_prefixFree x h h'
+  refine ⟨fun x w => depM (Code.curry c0 x) (Code.curry e' x) w, ⟨?_, fun x w z h h' => ?_⟩,
+    fun x p q z v hz hv => ?_⟩
+  · exact Partrec.rfindOpt
+      (f := fun (a : ℕ × List Bool) n =>
+        depStep (Code.curry c0 a.1) (Code.curry e' a.1) a.2 n)
+      (depStep_primrec'.comp
+        (((Nat.Partrec.Code.primrec₂_curry.comp (const c0) (fst.comp fst)).pair
+            (Nat.Partrec.Code.primrec₂_curry.comp (const e') (fst.comp fst))).pair
+          ((snd.comp fst).pair snd))).to_comp
+  · exact depM_prefixFree (hpfc x) (fun a w z h h' => by
+      rw [hrund] at h h'
+      exact condU_prefixFree _ h h') h h'
+  · exact dep_mem_depM (hpfc x) (by rw [hrunc]; exact hz) (by rw [hrund]; exact hv)
+
+/-- **The chain rule for conditional complexity**:
+`K(y | x) ≤ K(z | x) + K(y | ⟨x, z⟩) + c`. -/
+theorem condK_chain_le :
+    ∃ c : ℕ, ∀ x z y, condK x y ≤ condK x z + condK (Nat.pair x z) y + c := by
+  obtain ⟨Ψ, hΨ, hdep⟩ := exists_cond_dep_machine
+  obtain ⟨k, hk⟩ := condK_le hΨ
+  refine ⟨k, fun x z y => (hk x y).trans (add_le_add ?_ le_rfl)⟩
+  rcases eq_or_ne (condK x z) ⊤ with hz | hz
+  · simp [hz]
+  rcases eq_or_ne (condK (Nat.pair x z) y) ⊤ with hy | hy
+  · simp [hy]
+  obtain ⟨p, hp, hpc⟩ := (sys (condU x)).exists_cost_eq_K hz
+  obtain ⟨q, hq, hqc⟩ := (sys (condU (Nat.pair x z))).exists_cost_eq_K hy
+  have h := Kolmogorov.K_le_length (hdep x p q z y hp hq)
+  have e : condK x z + condK (Nat.pair x z) y = ((p ++ q).length : ℕ∞) := by
+    rw [List.length_append, Nat.cast_add]
+    exact (congrArg₂ (· + ·) hpc hqc).symm
+  rw [e]
+  exact h
+
 /-! ### The chain rule -/
 
 /-- **The chain rule**, easy half: `K(⟨x, y⟩) ≤ K(x) + K(y | x) + c`. -/
