@@ -268,7 +268,7 @@ another.
 | `pair`, `iterate`, `twoPart_card` | `K(x,y) ≤ K(x)+K(y)`; `K(fᵗx) ≤ K(x)+2 log t+1`; `K(x) ≤ K(πx)+⌈log₂ W⌉` | the additive bounds that are false for plain complexity hold here exactly, and the composed system is again self-delimiting |
 | `not_exists_universal` | on an infinite set no system dominates all self-delimiting systems | invariance needs a further restriction (computability) |
 
-### The effective layer ([`PrefixMachine.lean`](Complexity/Instances/PrefixMachine.lean), [`KraftChaitin.lean`](Complexity/KraftChaitin.lean), [`Levin.lean`](Complexity/Levin.lean))
+### The effective layer ([`PrefixMachine.lean`](Complexity/Instances/PrefixMachine.lean), [`KraftChaitin.lean`](Complexity/KraftChaitin.lean), [`Levin.lean`](Complexity/Levin.lean), [`Conditional.lean`](Complexity/Conditional.lean), [`Symmetry.lean`](Complexity/Symmetry.lean))
 
 Restrict further to **prefix machines**: partial recursive functions (Mathlib's
 `Nat.Partrec.Code`) from bit strings to numbers whose domain is prefix-free. In this class
@@ -284,6 +284,16 @@ a universal member exists, and the conditional results above become unconditiona
 | `K_map_le'`, `K_map_le` | for partial recursive `f`: `K(y) ≤ K(x) + c_f` whenever `f x = y` | computation creates no information (the algorithmic data-processing inequality). Classical; the proof is one line of universality once `(U ·).bind f` is seen to be a prefix machine |
 | `K_map_equiv`, `K_fst_le`, `K_snd_le`, `K_pair_comm`, `K_pair_map_le` | computable bijections preserve `K` up to a constant; `K(x) ≤ K(⟨x,y⟩) + c`; `K(⟨y,x⟩) ≤ K(⟨x,y⟩) + c`; `K(⟨x, f x⟩) ≤ K(x) + c` | corollaries. The last says a computable function of `x` adds nothing to `x` |
 | `K_U_le_log` | `K(x) ≤ 2 log₂(x+1) + c` | logarithmic upper bound, from a length-prefixed request list fed to the Kraft–Chaitin machine. The lower side for most `x` is the counting law (`card_le_two_pow_of_K_le`); the two are not combined into one statement |
+| `condU`, `condK`, `condU_simulates`, `condK_le` | a universal conditional prefix machine (the s-m-n function supplies the condition to the prefix-free restriction of a program); `K(y \| a)` is complexity relative to it, and it is optimal among conditional prefix machines, uniformly in the condition | the definition the symmetry-of-information statement needs. Classical |
+| `exists_dep_machine` | a prefix machine followed by a conditional prefix machine that is told the first output is again a prefix machine | the construction behind the next four rows; generalizes the pairing machine |
+| `K_pair_le_add_condK`, `K_le_add_condK` | `K(⟨x,y⟩) ≤ K(x) + K(y \| x) + c` and `K(y) ≤ K(x) + K(y \| x) + c` | the **chain rule, easy half**. The reverse inequality is not proved (see below) |
+| `condK_le_K`, `condK_map_le` | `K(y \| x) ≤ K(y) + c`; `K(f x \| x) ≤ c` for computable `f` | conditioning does not hurt; a computable function of the condition is free |
+| `condK_le_length`, `K_twoPart_le` | if `e a` enumerates at most `2^(ℓ a)` elements (`e`, `ℓ` computable) then each element `y` has `K(y \| a) ≤ ℓ a + c` and `K(y) ≤ K(a) + ℓ a + c` | the **two-part code on `U`**: "micro ≤ macro + log W", with `log W` exact rather than doubled |
+| `exists_condK_ge`, `card_condK_lt` | if the `2^(ℓ a)` elements are distinct, one has `K(y \| a) ≥ ℓ a`; fewer than `2^m` numbers have `K(y \| a) < m` | tightness of the conditional bound, by counting. True for every machine, so it says nothing special about `U` |
+| `K_iterate_le`, `K_iterate_le_log` | for computable `f`: `K(fᵗx) ≤ K(x) + K(t) + c ≤ K(x) + 2 log₂(t+1) + c'` | the **logarithmic growth law on `U`**: a computable dynamics adds at most the information in the clock |
+| `symmetry_of_information` | `K(⟨x,y⟩) = K(x) + K(y \| x*) ± c` with `x* = ⟨x, K(x)⟩`, both directions | **symmetry of information** (Levin, Gács, Chaitin), unconditional. Easy direction: a shortest program for `x` yields `x*`. Hard direction: Levin's request list for pairs, re-issued for each condition `⟨x, k⟩` with weights scaled by `2^(k−C)`; the weights fit when `k = K(x)`, and the Kraft–Chaitin decoder is prefix-free regardless (`KraftChaitin.machine_partrec₂`, `tsum_creq_le`) |
+| `symmetry` | `K(x) + K(y \| x*) ≤ K(y) + K(x \| y*) + c` | the information `x` carries about `y` equals the information `y` carries about `x`, up to a constant |
+| `K_macro_add_condK_le`, `card_K_lt_macro_add` | for computable `π`: `K(π x) + K(x \| (π x)*) ≤ K(x) + c`; in any set of microstates of one macrostate `a`, fewer than `2^m` have `K(x) + c < K(a) + m` | the **lower half of "micro = macro + log W"**: all but a fraction `2^(−d)` of `W` microstates have `K(x) ≥ K(a) + log₂ W − d − c`. The upper half for enumerable macrostates is `K_twoPart_le` |
 | `KraftChaitin.exists_machine` | a primitive recursive list of requests `(x, n)` with `∑ 2^(−n) ≤ 1` has a partial recursive prefix-free decoder giving each request a program of length `n + 1` | the effective converse of Kraft's inequality, with one bit of slack. The allocation is Shannon–Fano–Elias (an aligned half-length interval inside each request's own interval), which needs no free-list bookkeeping |
 | `exists_coding_machine` | for every prefix machine `φ` there is a prefix machine `M` with `2^(−K_M x) ≤ P_φ x` and `K_M x ≤ n + 3` whenever `2^(−n) ≤ P_φ x` | `exists_coding` with the built system computable |
 | `levin` | for `U`: `K(x) ≤ n + c` whenever `2^(−n) ≤ P(x)` | **Levin's coding theorem** (1974), unconditional |
@@ -352,13 +362,20 @@ All of this is elementary, and none of it is new mathematics.
 
 ### Still open
 
-- **The other additive laws for `U`.** Subadditivity and monotonicity under computable
-  maps are proved with constants. The iteration bound `K(fᵗx) ≤ K(x) + 2 log t + c` (for computable `f`) and the two-part bound
-  are proved between suitable prefix-free systems (`Prefix.iterate`, `Prefix.twoPart_card`)
-  but not yet transferred to `U`; each needs one more machine shown partial recursive.
-- **Symmetry of information** (`K(x,y) = K(x) + K(y | x, K(x)) + O(1)`), and with it the
-  two-sided form of "micro = macro + log W". Conditional prefix complexity is not defined
-  here.
+- **The additive laws for `U` are closed, with one seam.** Subadditivity, monotonicity
+  under computable maps, the chain rule in both directions (symmetry of information,
+  `Symmetry.lean`), the two-part code and the logarithmic growth law are all proved for
+  the universal prefix machine. The seam: the upper half of "micro = macro + log W" is
+  stated for a computable enumerator of the macrostate (`K_twoPart_le`), the lower half for
+  a computable coarse-graining and an arbitrary finite set of its microstates
+  (`card_K_lt_macro_add`). They are not combined into one two-sided statement about one
+  family of macrostates.
+- **`K(y | x)` versus `K(y | x*)`.** Symmetry is proved with the condition `⟨x, K(x)⟩`.
+  That the reverse chain rule fails with the bare condition `x` is a known result which
+  is not formalized here.
+- **The two-part code is stated for enumerators.** `K_twoPart_le` takes a computable
+  `e a i` and a computable bound `2^(ℓ a)`; it is not connected to the abstract
+  `Prefix.twoPart_card`, whose macrostate map `π` is arbitrary.
 - **The exact order for monomials.** The bounds here differ by a factor of about
   `log(k log m)`. Pippenger's theorem on vector addition chains closes it
   (`log m + (1+o(1))·k log m / log(k log m)`); it is not formalized, and I am quoting it
@@ -379,8 +396,8 @@ All of this is elementary, and none of it is new mathematics.
 ## Status
 
 **Proved.** Every theorem in the library, including those in `Limits.lean` that refute
-earlier claims and those of section 7. `Audit.lean` checks every declaration (1013, of
-which 699 are theorems including generated ones; 29 module files, 7,269 lines).
+earlier claims and those of section 7. `Audit.lean` checks every declaration (1083, of
+which 760 are theorems including generated ones; 31 module files, 8,091 lines).
 
 **Not established.** That any real domain satisfies a theorem's hypotheses. Novelty of
 the pieces not found by the prior-art search. Any empirical claim.
@@ -426,6 +443,8 @@ Complexity/
   ReuseGap.lean      ceiling on reuse; rigidity in extensive domains; support bound; zero gain
   KraftChaitin.lean  effective converse of Kraft's inequality: a computable decoder
   Levin.lean         Levin's coding theorem for the universal prefix machine
+  Conditional.lean   conditional prefix complexity; chain rule, two-part code, growth law on U
+  Symmetry.lean      symmetry of information; micro = macro + log W, lower half
   Instances/
     Kolmogorov.lean  Shannon.lean  Circuit.lean  Monoid.lean  CoarseGraining.lean
     Causal.lean      Regulator.lean  Learning.lean  Channel.lean

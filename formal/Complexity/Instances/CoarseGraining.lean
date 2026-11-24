@@ -27,7 +27,8 @@ entropy) is the chain rule read at a coarse-graining.
 **Review note.** `(twoPart S π code).K x = S.K (π x) + |code x|` holds by construction of the
 cost, for any code. The lower bound `card_fiber_compressible_lt` gives `log₂ W - c` with
 no `K(macrostate)` term, so "`K(micro) ≈ K(macro) + log₂ W`" is **not** proved here; it
-needs symmetry of information. The transfer `exists_const_K_le_macro_add` cannot be
+needs symmetry of information (`Symmetry.card_K_lt_macro_add` proves the lower half for
+the universal prefix machine and computable coarse-grainings). The transfer `exists_const_K_le_macro_add` cannot be
 applied to the universal machine: `K(x) ≤ K(π x) + log₂ W + c` is false for plain
 complexity (`Limits.not_twoPart_bound_kolmogorov`). The correct form uses a
 self-delimiting description of the macrostate (`Limits.exists_binary_twoPart`,

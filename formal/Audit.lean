@@ -117,6 +117,27 @@ open Complexity
 #print axioms Levin.P_le_two_pow_mul_wt
 #print axioms Levin.P_pos
 #print axioms Levin.K_U_le_log
+#print axioms Conditional.condU_simulates
+#print axioms Conditional.condK_le
+#print axioms Conditional.exists_dep_machine
+#print axioms Conditional.K_pair_le_add_condK
+#print axioms Conditional.K_le_add_condK
+#print axioms Conditional.condK_le_K
+#print axioms Conditional.condK_map_le
+#print axioms Conditional.condK_le_length
+#print axioms Conditional.K_twoPart_le
+#print axioms Conditional.exists_condK_ge
+#print axioms Conditional.K_iterate_le
+#print axioms Conditional.K_iterate_le_log
+#print axioms KraftChaitin.machine_partrec₂
+#print axioms Levin.P_le_two_pow_mul_wt_of
+#print axioms Symmetry.tsum_P_pair_le
+#print axioms Symmetry.K_add_condK_star_le
+#print axioms Symmetry.K_pair_le_add_condK_star
+#print axioms Symmetry.symmetry_of_information
+#print axioms Symmetry.symmetry
+#print axioms Symmetry.K_macro_add_condK_le
+#print axioms Symmetry.card_K_lt_macro_add
 
 /-! ### Every declaration -/
 

@@ -17,6 +17,8 @@ import Complexity.Prefix
 import Complexity.ReuseGap
 import Complexity.KraftChaitin
 import Complexity.Levin
+import Complexity.Conditional
+import Complexity.Symmetry
 import Complexity.Instances.Kolmogorov
 import Complexity.Instances.PrefixMachine
 import Complexity.Instances.Shannon
@@ -74,6 +76,11 @@ separately are theorems about the infimum that hold for every setting.
                   decoder for a primitive recursive list of requests.
 * `Levin`       – Levin's coding theorem for the universal prefix machine:
                   `2^(-K x) ≤ P x ≤ 2^c * 2^(-K x)`.
+* `Conditional` – conditional prefix complexity `K(y | x)` and the additive laws for the
+                  universal machine: the chain rule (easy half), the two-part code, the
+                  logarithmic growth law.
+* `Symmetry`    – symmetry of information, `K(⟨x, y⟩) = K(x) + K(y | x, K(x)) + O(1)`,
+                  and the lower half of "micro = macro + log W" for typical microstates.
 
 ## Instances
 

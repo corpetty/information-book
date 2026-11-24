@@ -355,19 +355,10 @@ theorem req_primrec (c : Code) : Primrec (req c) :=
 
 /-! ### The requests fit -/
 
-/-- **The requests have total weight at most one.** Each threshold is requested at most
-once, only thresholds below `P x` are requested, and `P` is a semimeasure. -/
-theorem tsum_req_le (c : Code)
-    (hc : ∀ w z : List Bool, (run c w).Dom → (run c (w ++ z)).Dom → z = []) :
-    ∑' i, KraftChaitin.wE (req c i) ≤ 1 := by
-  have e1 : ∑' i, KraftChaitin.wE (req c i) =
-      ∑' (x : ℕ) (k : ℕ) (s : ℕ), KraftChaitin.wE (req c (Nat.pair x (Nat.pair k s))) :=
-    (tsum_pair _).trans (tsum_congr fun x =>
-      tsum_pair fun m => KraftChaitin.wE (req c (Nat.pair x m)))
-  rw [e1]
-  refine (tsum_le_tsum fun x => ?_).trans
-    (Prefix.tsum_P_le_one (sys (run c)) (Kolmogorov.sys_functional _)
-      (PrefixMachine.sys_prefixFree hc))
+/-- The requests for one object have total weight at most its algorithmic probability. -/
+theorem tsum_req_obj_le (c : Code) (x : ℕ) :
+    ∑' (k : ℕ) (s : ℕ), KraftChaitin.wE (req c (Nat.pair x (Nat.pair k s))) ≤
+      P (sys (run c)) x := by
   refine (tsum_le_tsum fun k => ?_).trans (tsum_half_le (P (sys (run c)) x))
   by_cases h : ∃ s, first c x k s = true
   · obtain ⟨s0, hs0⟩ := h
@@ -386,6 +377,29 @@ theorem tsum_req_le (c : Code)
         exact h ⟨s, by simpa using hf⟩
       simp [req_pair, hf, KraftChaitin.wE]
     simp [h0]
+
+/-- Every threshold at or below the algorithmic probability is requested, one step down. -/
+theorem exists_req {c : Code} {x n : ℕ} (hn : (2⁻¹ : ℝ≥0∞) ^ n ≤ P (sys (run c)) x) :
+    ∃ s, req c (Nat.pair x (Nat.pair (n + 1) s)) = some (x, n + 1 + 1) := by
+  have hlt : (2⁻¹ : ℝ≥0∞) ^ (n + 1) < P (sys (run c)) x :=
+    lt_of_lt_of_le (inv_pow_succ_lt n) hn
+  obtain ⟨s1, hs1⟩ := exists_first (exists_cross hlt)
+  exact ⟨s1, by rw [req_pair, hs1]; rfl⟩
+
+/-- **The requests have total weight at most one.** Each threshold is requested at most
+once, only thresholds below `P x` are requested, and `P` is a semimeasure. -/
+theorem tsum_req_le (c : Code)
+    (hc : ∀ w z : List Bool, (run c w).Dom → (run c (w ++ z)).Dom → z = []) :
+    ∑' i, KraftChaitin.wE (req c i) ≤ 1 := by
+  have e1 : ∑' i, KraftChaitin.wE (req c i) =
+      ∑' (x : ℕ) (k : ℕ) (s : ℕ), KraftChaitin.wE (req c (Nat.pair x (Nat.pair k s))) :=
+    (tsum_pair _).trans (tsum_congr fun x =>
+      tsum_pair fun m => KraftChaitin.wE (req c (Nat.pair x m)))
+  rw [e1]
+  refine (tsum_le_tsum fun x => ?_).trans
+    (Prefix.tsum_P_le_one (sys (run c)) (Kolmogorov.sys_functional _)
+      (PrefixMachine.sys_prefixFree hc))
+  exact tsum_req_obj_le c x
 
 /-! ### The coding theorem -/
 
@@ -424,50 +438,62 @@ theorem exists_coding_machine {φ : List Bool →. ℕ} (hφ : IsPrefixMachine �
     have hle := Kolmogorov.K_le_length hx
     rwa [hw] at hle
 
-/-- **Levin's coding theorem.** For the universal prefix machine, complex implies
-improbable: there is a constant `c` with `K x ≤ n + c` whenever `2 ^ (-n) ≤ P x`. -/
-theorem levin : ∃ c : ℕ, ∀ x (n : ℕ),
-    (2⁻¹ : ℝ≥0∞) ^ n ≤ P (sys U) x → Kolmogorov.K U x ≤ ((n + c : ℕ) : ℕ∞) := by
-  obtain ⟨M, hM, -, h⟩ := exists_coding_machine PrefixMachine.U_isPrefixMachine
+/-- **The coding theorem against any prefix machine.** What a prefix machine `φ` produces
+with probability `2 ^ (-n)` has complexity at most `n + c` on the universal machine. -/
+theorem levin_of {φ : List Bool →. ℕ} (hφ : IsPrefixMachine φ) : ∃ c : ℕ, ∀ x (n : ℕ),
+    (2⁻¹ : ℝ≥0∞) ^ n ≤ P (sys φ) x → Kolmogorov.K U x ≤ ((n + c : ℕ) : ℕ∞) := by
+  obtain ⟨M, hM, -, h⟩ := exists_coding_machine hφ
   obtain ⟨k, hk⟩ := PrefixMachine.K_U_le hM
   refine ⟨3 + k, fun x n hn => (hk x).trans ?_⟩
   refine (add_le_add (h x n hn) (le_refl (k : ℕ∞))).trans (le_of_eq ?_)
   push_cast
   ring
 
-/-- **Algorithmic probability is `2 ^ (-K)` up to a constant factor**: with
-`Prefix.wt_K_le_P`, `2 ^ (-K x) ≤ P x ≤ 2 ^ c * 2 ^ (-K x)` for the universal prefix
-machine. -/
-theorem P_le_two_pow_mul_wt :
-    ∃ c : ℕ, ∀ x, P (sys U) x ≤ 2 ^ c * wt (Kolmogorov.K U x) := by
+/-- The algorithmic probability of any prefix machine is at most a constant times
+`2 ^ (-K)` of the universal one. -/
+theorem P_le_two_pow_mul_wt_of {φ : List Bool →. ℕ} (hφ : IsPrefixMachine φ) :
+    ∃ c : ℕ, ∀ x, P (sys φ) x ≤ 2 ^ c * wt (Kolmogorov.K U x) := by
   classical
-  obtain ⟨c, hc⟩ := levin
+  obtain ⟨c, hc⟩ := levin_of hφ
   refine ⟨c + 1, fun x => ?_⟩
-  by_cases h0 : P (sys U) x = 0
+  by_cases h0 : P (sys φ) x = 0
   · rw [h0]
     exact zero_le
-  have hex : ∃ n : ℕ, (2⁻¹ : ℝ≥0∞) ^ n ≤ P (sys U) x := by
+  have hex : ∃ n : ℕ, (2⁻¹ : ℝ≥0∞) ^ n ≤ P (sys φ) x := by
     obtain ⟨n, hn⟩ := ENNReal.exists_inv_two_pow_lt h0
     exact ⟨n, hn.le⟩
-  obtain ⟨n0, hn0, hmin⟩ : ∃ n0 : ℕ, (2⁻¹ : ℝ≥0∞) ^ n0 ≤ P (sys U) x ∧
-      ∀ m < n0, ¬(2⁻¹ : ℝ≥0∞) ^ m ≤ P (sys U) x :=
+  obtain ⟨n0, hn0, hmin⟩ : ∃ n0 : ℕ, (2⁻¹ : ℝ≥0∞) ^ n0 ≤ P (sys φ) x ∧
+      ∀ m < n0, ¬(2⁻¹ : ℝ≥0∞) ^ m ≤ P (sys φ) x :=
     ⟨Nat.find hex, Nat.find_spec hex, fun m hm => Nat.find_min hex hm⟩
   have hwt : (2⁻¹ : ℝ≥0∞) ^ (n0 + c) ≤ wt (Kolmogorov.K U x) := inv_pow_le_wt (hc x n0 hn0)
-  have hp2 : P (sys U) x ≤ 2 * 2⁻¹ ^ n0 := by
+  have hp2 : P (sys φ) x ≤ 2 * 2⁻¹ ^ n0 := by
     rcases n0 with _ | m
     · rw [pow_zero, mul_one]
-      have h1 : P (sys U) x ≤ 1 :=
-        (le_tsum (P (sys U)) x).trans (Prefix.tsum_P_le_one _ (Kolmogorov.sys_functional _)
-          PrefixMachine.sys_U_prefixFree)
+      have h1 : P (sys φ) x ≤ 1 :=
+        (le_tsum (P (sys φ)) x).trans (Prefix.tsum_P_le_one _ (Kolmogorov.sys_functional _)
+          (PrefixMachine.sys_prefixFree hφ.2))
       exact h1.trans one_le_two
     · have h2 : (2 : ℝ≥0∞) * 2⁻¹ ^ (m + 1) = 2⁻¹ ^ m := by
         rw [pow_succ', ← mul_assoc, ENNReal.mul_inv_cancel two_ne_zero ENNReal.ofNat_ne_top,
           one_mul]
       rw [h2]
       exact (not_le.1 (hmin m (Nat.lt_succ_self m))).le
-  calc P (sys U) x ≤ 2 * 2⁻¹ ^ n0 := hp2
+  calc P (sys φ) x ≤ 2 * 2⁻¹ ^ n0 := hp2
     _ = 2 ^ (c + 1) * 2⁻¹ ^ (n0 + c) := by rw [pow_succ', mul_assoc, two_pow_mul_inv']
     _ ≤ 2 ^ (c + 1) * wt (Kolmogorov.K U x) := by gcongr
+
+/-- **Levin's coding theorem.** For the universal prefix machine, complex implies
+improbable: there is a constant `c` with `K x ≤ n + c` whenever `2 ^ (-n) ≤ P x`. -/
+theorem levin : ∃ c : ℕ, ∀ x (n : ℕ),
+    (2⁻¹ : ℝ≥0∞) ^ n ≤ P (sys U) x → Kolmogorov.K U x ≤ ((n + c : ℕ) : ℕ∞) :=
+  levin_of PrefixMachine.U_isPrefixMachine
+
+/-- **Algorithmic probability is `2 ^ (-K)` up to a constant factor**: with
+`Prefix.wt_K_le_P`, `2 ^ (-K x) ≤ P x ≤ 2 ^ c * 2 ^ (-K x)` for the universal prefix
+machine. -/
+theorem P_le_two_pow_mul_wt :
+    ∃ c : ℕ, ∀ x, P (sys U) x ≤ 2 ^ c * wt (Kolmogorov.K U x) :=
+  P_le_two_pow_mul_wt_of PrefixMachine.U_isPrefixMachine
 
 /-- Every number has positive algorithmic probability: the theorems above are not about
 an empty machine. -/

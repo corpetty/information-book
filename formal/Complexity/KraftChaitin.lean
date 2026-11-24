@@ -163,6 +163,47 @@ theorem hit_primrec {r : ℕ → Option (ℕ × ℕ)} (hr : Primrec r) : Primrec
 theorem machine_partrec {r : ℕ → Option (ℕ × ℕ)} (hr : Primrec r) : Partrec (machine r) :=
   Partrec.rfindOpt (hit_primrec hr).to_comp
 
+/-! ### Uniformity in a parameter
+
+The same decoder for a family of request lists `r a`, primitive recursive in `a` and the
+index together, is partial recursive in `a` and the input together. Correctness below is
+proved list by list and needs no uniformity. -/
+
+theorem st_primrec₂ {r : ℕ → ℕ → Option (ℕ × ℕ)} (hr : Primrec₂ r) :
+    Primrec fun p : ℕ × ℕ => st (r p.1) p.2 :=
+  (nat_rec' (f := fun p : ℕ × ℕ => p.2) snd (const (0, 0))
+    (upd_primrec.comp (hr.comp (fst.comp fst) (fst.comp snd)) (snd.comp snd)).to₂).of_eq
+      fun _ => rfl
+
+theorem slot_primrec₂ {r : ℕ → ℕ → Option (ℕ × ℕ)} (hr : Primrec₂ r) :
+    Primrec fun x : (ℕ × ℕ) × ℕ => slot (r x.1.1) x.1.2 x.2 :=
+  have hs := st_primrec₂ hr
+  nat_div.comp
+    (nat_sub.comp
+      (nat_add.comp
+        (nat_mul.comp (fst.comp (hs.comp fst)) (primrec_pow.comp (const 2) (succ.comp snd)))
+        (primrec_pow.comp (const 2) (snd.comp (hs.comp fst))))
+      (const 1))
+    (primrec_pow.comp (const 2) (snd.comp (hs.comp fst)))
+
+theorem hit_primrec₂ {r : ℕ → ℕ → Option (ℕ × ℕ)} (hr : Primrec₂ r) :
+    Primrec fun x : (ℕ × List Bool) × ℕ => hit (r x.1.1) x.1.2 x.2 :=
+  option_bind (hr.comp (fst.comp fst) snd)
+    (Primrec.ite
+      (PrimrecPred.and
+        (Primrec.eq.comp (list_length.comp (snd.comp (fst.comp fst))) (succ.comp (snd.comp snd)))
+        (Primrec.eq.comp (val_primrec.comp (snd.comp (fst.comp fst)))
+          ((slot_primrec₂ hr).comp
+            (((fst.comp (fst.comp fst)).pair (snd.comp fst)).pair (snd.comp snd)))))
+      (option_some.comp (fst.comp snd)) (const none)).to₂
+
+/-- The decoders of a primitive recursive family of request lists are partial recursive,
+jointly in the parameter and the input. -/
+theorem machine_partrec₂ {r : ℕ → ℕ → Option (ℕ × ℕ)} (hr : Primrec₂ r) :
+    Partrec₂ fun a w => machine (r a) w :=
+  Partrec.rfindOpt (f := fun (x : ℕ × List Bool) i => hit (r x.1) x.2 i)
+    (hit_primrec₂ hr).to_comp
+
 /-! ### Correctness, over the reals -/
 
 /-- The weight `2 ^ (-n)` of a request. -/
