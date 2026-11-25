@@ -409,7 +409,7 @@ Two questions survive as testable, and both belong to the book, not to the libra
 
 ### Simulations ([`sim/README.md`](sim/README.md))
 
-Six simulations probe what the theorems leave open. None of it is evidence about people.
+Seven simulations probe what the theorems leave open. None of it is evidence about people.
 In short:
 
 - The chain law is exact for the fading hop and silent for hops that only move ideas
@@ -428,11 +428,23 @@ In short:
 - With a lexical distance, the budget needed for the book's own claims rises steadily, by
   about one bit per 0.05 of tolerance, and the claims are provably more compressible than
   unstructured points at tolerance 0.2 and below.
-- A small language model used as reteller cut the text once at the first retelling, eroded
-  conditions slowly for two more hops and then settled. It was noisy at the first pass, not
-  a fixed function. Conditions survived about as well as claims, and the three losses of a
-  claim were all in originals that stated it last (not statistically significant). That is
-  a pilot of 32 chains run in four batches with one coder, and says nothing about people.
+- A language model used as reteller (the script's default is a small one; the files do
+  not record it), in 1,440 retellings over six hops (five arms: three word limits, a
+  "punchy" and a "gist" instruction). With words to spare almost no condition disappeared
+  (none at 40 words, 3 of 144 at 20), though some lost their specifics. Under a tight limit or the punchy instruction a condition was
+  lost at 2.6 to 2.8% per hop after the first and was still being lost at hops 4 to 6. The
+  reteller was noisy: the same original gave the same first retelling in 6 of 240 pairs.
+  In the two lossiest arms messages arriving intact fell to about one in ten, while by the
+  coding the source stayed identifiable in every retelling, so the advantage never left 1
+  and the chain law of `Noisy.lean` is not tested by this run. In those two arms the claim
+  outlasted its conditions by 11 to 15 points; it was not stripped of them in any arm. In
+  a second coder's sample, 16 of 150 retellings said something materially different from
+  the source, 13 of them with every item still coded present; 11 of the 16 came from two
+  originals. Two model coders agree on presence (98%, kappa 0.82), fairly on specifics
+  (0.69), poorly on the three-level state of the claim (0.35). An earlier pilot of 32
+  chains suggested the erosion stops after two hops, which recurred at its 20-word limit
+  and not at a tighter one, and that claims stated last are the ones cut, which was not
+  confirmed. None of this says anything about people.
 
 ## 7. After the review: restricting the dials until something is excluded
 
@@ -908,5 +920,5 @@ Complexity/
     Causal.lean      Regulator.lean  Learning.lean  Channel.lean
     PrefixMachine.lean   universal prefix machine: optimality, invariance, subadditivity
 Audit.lean           axiom audit of every declaration
-sim/                 six simulations of the retelling model, with a report (sim/README.md)
+sim/                 seven simulations of the retelling model, with a report (sim/README.md)
 ```

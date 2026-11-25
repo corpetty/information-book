@@ -1,10 +1,11 @@
 # Simulations of the retelling model
 
-Six simulations around [`Complexity/Lossy.lean`](../Complexity/Lossy.lean) and
+Seven simulations around [`Complexity/Lossy.lean`](../Complexity/Lossy.lean) and
 [`Complexity/Noisy.lean`](../Complexity/Noisy.lean). The theorems there are bounds. These
 runs show where the bounds are tight, where they are silent, what happens in settings that
 are not formalized (trees, many routes), and whether the experiments proposed for the book
-could tell the models apart. None of them is evidence about how people retell things.
+could tell the models apart. The last two use a language model as the reteller. None of
+them is evidence about how people retell things.
 
 Run any of them with `python3 s1_tightness.py` and so on (numpy, scipy, matplotlib). Numbers
 land in `out/*.json`, figures in `out/*.png`. Random seeds are fixed. Simulation 5 reads the
@@ -23,7 +24,8 @@ better than chance the best test on the outcome tells which one was sent (1 is c
 | 3 | What does redundancy buy against depth? | For one receiver, the routes needed to hold the line grow like c^(−2n) or c^(−n) with depth n. On a tree, simulation is consistent with the threshold reported in the literature for the two-idea case (branching above 1/c²), without locating it; when the fallback can never pass for the original the threshold is branching above 1/c |
 | 4 | Can the proposed experiments separate the models, and how big must they be? | Noisy people and one particular mix of fixed people give the same curve; rerunning the same chain separates them. A 30-chain caveat pilot sees a retention gap of 0.2 per hop, not one of 0.1 |
 | 5 | What does the budget-against-tolerance curve look like for real text? | With a lexical distance the budget rises steadily across the usable range of tolerance, about one bit per 0.05. The book's claims need fewer balls than unstructured points, provably so at tolerance 0.2 and below |
-| 6 | What does a language model do as reteller? | It cuts the text once at the first retelling, then erodes conditions slowly for two more hops and settles. It is noisy at the first pass, not a fixed function. Conditions survived about as well as the claim |
+| 6 | What does a language model do as reteller? (pilot, 160 retellings) | It cuts the text at the first retelling and is noisy, not a fixed function. Conditions survived about as well as the claim. Its "erosion that stops after two hops" recurred at 20 words in the larger run and did not hold at a tighter limit or under other instructions |
+| 7 | The same with 1,440 retellings, three word limits and two other instructions | With words to spare almost no condition disappears in six hops (none at 40 words, 3 of 144 at 20), though some lose their specifics. Under a tight limit or a "punchy" instruction, a condition is lost at 2.6 to 2.8% per hop after the first and was still being lost at hops 4 to 6. In those two arms messages arriving intact fall to about one in ten, while by the coding the source stays identifiable in every one of the 1,440. The claim outlasts its conditions by 11 to 15 points there, and is never stripped of them. In one coder's sample, 16 of 150 retellings say something materially different from the source, 13 of them with every item still coded present; 11 of the 16 come from two originals |
 
 ## 1. How loose is the product law? (`s1_tightness.py`)
 
@@ -286,8 +288,10 @@ This does not show the book's predicted split (claim survives, conditions fall a
 it should not be read as evidence against it. A model asked to retell within a word budget
 has the previous version fully in view and compresses it carefully; a person retells from
 memory, to an audience, with reasons to be punchy. What the pilot shows is that the
-pipeline runs end to end and that a word budget alone produces one cut and then a slow
-erosion that stops. Position in the message is worth a controlled comparison.
+pipeline runs end to end. Its further reading, that a word budget alone produces one cut
+and then a slow erosion that stops, recurred in simulation 7 at the same 20-word limit and
+did not hold at a tighter limit or under other instructions. Its hint about position in
+the message was not confirmed there, on too few losses to tell.
 
 Limits. One model. Eight items per call, so chains within a batch are not independent. The
 sampling temperature could not be set, so no fixed-function arm was run. One coder, no
@@ -300,25 +304,233 @@ some versions add "I heard". The coding needs a second coder before any number h
 leaned on. The chains were run with subagents because no API key was available and the
 command-line login had expired.
 
-## 7. The larger scripted run (`s7_llm_chains_cli.py`), not yet run
+## 7. The larger scripted run (`s7_llm_chains_cli.py`, `s7_more.py`)
 
-The pilot could not vary the instruction or the word budget. This script does, with one
-model call per retelling through the `claude` command line: five arms (careful retelling at
-10, 20 and 40 words; "short, striking, easy to repeat" at 20; "you remember the gist, not
-the details" at 20), three chains per original per arm, six hops, and one blind judging
-call per retelling that codes the claim and the conditions of both variants. That is 1,440
-retellings and as many judging calls by default. Chains of the same original in the same
-arm are reruns with the same reteller, so their disagreement measures noise in the
-reteller.
+![](out/s7_followup.png)
+
+Run on 2026-11-25 through the `claude` command line: 1,440 retellings, each from one model
+call that saw nothing but the previous version, and 1,440 blind judging calls. No call
+failed and no retelling is missing. The script's defaults are Claude Haiku as reteller and
+Claude Sonnet as judge; the result files of this run do not record which models answered
+(later runs do, in `run_info.jsonl`).
+
+Five arms: "pass it on in your own words" in at most 10, 20 and 40 words (`careful10`,
+`careful20`, `careful40`); "short, striking and easy to repeat" in at most 20
+(`punchy20`); "you remember the gist, not the details" in at most 20 (`gist20`). Each arm
+has 48 chains of six retellings: the 16 originals of simulation 6, three chains each. The
+judge coded the claim and the six conditions of both variants of the topic, in random
+order, as kept, weakened or dropped. Below, a condition is *present* if kept or weakened,
+*in full* if kept, and a retelling *arrived intact* if the claim is present and all three
+conditions are in full.
+
+The eight topics are the independent materials, so every interval below is a 95% bootstrap
+interval that resamples topics (`s7_more.py`). With eight units these are rough, and
+probably a little narrow.
+
+**A correction first.** The summary the script printed at the end of the run had three
+wrong lines. The judge saw the conditions in a random order, and the analysis compared
+position *i* across hops and chains without undoing the shuffle, so "per-hop retention",
+"conditions by kind" and "reruns" compared different conditions with each other. For
+`careful10` it printed retention 0.94, 0.95, 0.92, 0.91, 0.87, 0.84 where the right figures
+are 0.94, 0.99, 0.95, 0.98, 0.97, 0.97. The shares summed over the three conditions
+(present, in full, advantage, claim) were not affected. The script is fixed (`load_run`)
+and everything here is recomputed. The pilot of simulation 6 did not shuffle and is not
+affected.
+
+### The word limits were often exceeded
+
+| arm | limit | words at hop 1 | at hop 6 | retellings over the limit |
+|---|---|---|---|---|
+| careful10 | 10 | 16.5 | 13.0 | 92% |
+| careful20 | 20 | 21.4 | 19.1 | 36% |
+| careful40 | 40 | 28.9 | 27.2 | 1% |
+| punchy20 | 20 | 18.9 | 16.2 | 9% |
+| gist20 | 20 | 22.8 | 19.5 | 44% |
+
+The originals have 26 to 43 words, 33 on average. The arms are ordered by length as
+intended, but "10 words" was really 13 to 17, and the 40-word limit did not bind: allowed
+40, the model used 28.
+
+### What survived
+
+| arm | a condition is present: hop 1, 3, 6 | in full: hop 1, 3, 6 | arrived intact: hop 1, 3, 6 |
+|---|---|---|---|
+| careful10 | 94, 89, **83** (76–88) | 77, 62, **52** (42–62) | 46, 25, **8** (0–21) |
+| careful20 | 99, 98, **98** (95–100) | 91, 84, **82** (72–92) | 73, 58, **52** (27–77) |
+| careful40 | 100, 100, **100** | 99, 99, **95** (90–100) | 92, 98, **85** (73–96) |
+| punchy20 | 99, 92, **85** (76–94) | 90, 66, **56** (46–64) | 75, 27, **12** (4–23) |
+| gist20 | 100, 97, **94** (90–97) | 92, 77, **65** (51–77) | 79, 52, **35** (21–50) |
+
+Percentages of 144 conditions, or of 48 retellings for the last column; intervals for
+hop 6.
+
+- **With words to spare, almost no condition disappeared in six hops.** In `careful40` all 144
+  conditions were present at every hop, and in `careful20` 141 of 144 were present at
+  hop 6, with a net loss per hop after the first of 0.3% (0 to 0.8). Specifics were still
+  lost: conditions in full went from 91% to 82% in `careful20` and from 99% to 95% in
+  `careful40`, and messages arriving intact from 73% to 52% and from 92% to 85%.
+- **Under a tight limit or a "punchy" instruction, loss went on late into the chain.** Net loss
+  of present conditions per hop: `careful10` 5.6% at the first hop (2.1 to 9.7), then 2.6%
+  per hop (1.8 to 3.6); `punchy20` 1.4% (0 to 3.5), then 2.8% (1.0 to 4.9); `gist20` none
+  at the first hop, then 1.1% (0.6 to 2.0). In `careful10` the loss at hops 4 to 6 is 2.4%
+  per hop (1.3 to 3.5), against 3.0% at hops 2 and 3; the difference is −0.6 points (−3.0
+  to 1.8). In `punchy20` it is 2.3% at hops 4 to 6 (1.0 to 4.1), with no change at hop 6
+  itself (123 of 144 before and after). So in these arms conditions were still being lost
+  late in the chain, and the run cannot tell a steady rate from one that is slowly falling.
+  The pilot's "erodes for two more hops and then settles" recurred in the like-for-like arm:
+  in `careful20` the conditions present were 143, 143, 141, 140, 141, 141 of 144. It did
+  not hold at the tighter limit or under the punchy and gist instructions.
+- **Specifics went faster than presence.** More conditions lost their specifics than
+  disappeared. But a condition that disappeared mostly went in one step, not by way of a
+  vaguer version: of 60 conditions ever coded gone, 44 had been coded in full at the hop
+  before. Net loss of conditions in full per hop after the first: 7.5% (`careful10`),
+  9.0% (`punchy20`), 6.6% (`gist20`), 2.0% (`careful20`), 0.8% (`careful40`). In `punchy20`
+  and `gist20` this rate fell between hops 2–3 and hops 4–6 (by 8.6 and 3.2 points, both
+  intervals clear of zero). The line between "in full" and "weakened" is the soft part of
+  the coding; see below.
+- **"Arrived intact" collapsed while "can be told apart" did not move.** By hop 6 a
+  retelling had the claim and all three conditions with their specifics in 8% of chains in
+  `careful10` and 12% in `punchy20` (39% over all five arms). Yet every one of the 1,440
+  retellings kept at least one condition of its own variant, and the judge never coded a
+  condition of the other variant as present (0 of 4,320 codes). So by the coding the source
+  could be identified in every case: the advantage was 1 at every depth in every arm. No
+  reader was tested; this is read off the codes. These are different quantities, and the
+  theorems of `Noisy.lean` bound the second, not the first.
+- **So this run does not test the chain law.** The line-up was too easy (two variants that
+  share no condition) and six hops are too few. If each condition went on being lost
+  independently at the rate of hops 2 to 6, half the retellings would have no condition
+  left after about 59 hops in `careful10` (43 to 87 over the interval of the rate) and 55
+  in `punchy20` (31 to 157). The kinds of condition are not lost at equal rates, so even
+  that is rough: some tens of hops, perhaps 30 to 150. An extrapolation to plan with, not a
+  result.
+- **Across the arms survival rises with length, with one exception.** At hop 6: 13 words
+  and 83% of conditions present (`careful10`), 16 and 85% (`punchy20`), 19 and 98%
+  (`careful20`), 27 and 100% (`careful40`). "Punchy" shortened the text, and its effect
+  cannot be separated from that. "Gist" can: at the same length as `careful20` (19.5 words
+  against 19.1) it kept fewer conditions (94% against 98%, a difference of 3.5 points, 0.7
+  to 5.6) and fewer specifics (65% against 82% in full, 17 points, 5 to 30). Nor does
+  length alone fix survival: 16.5 words went with 94% at hop 1 of `careful10` and 16.2
+  words with 85% at hop 6 of `punchy20`.
+- **How many words the full message needs, and how much of the loss that explains.** For
+  each original, the shortest version that the judge coded as claim kept and all three
+  conditions kept has 10 to 27 words, median 16: about half the original. Ten of those
+  sixteen shortest versions come from the two lossiest arms. `careful40` is clearly above
+  that length and `careful10` at hop 6 clearly below it. Only part of the loss is a budget
+  falling below what the content needs. Of the retellings that were not intact, those
+  shorter than any intact version of their original were 166 of 224 in `careful10`, 86 of
+  189 in `punchy20` and 24 of 140 in `gist20`: most of the loss at the tight limit, about
+  half under "punchy", little under "gist". The rest happened at lengths that sufficed:
+  the model could fit everything in and did not. These counts lean on a minimum taken over
+  about 90 noisy codes per original, which picks up coding errors and so sets the bar low:
+  one of the sixteen is "Volunteer firms, no control group, hours only fell 38 to 34:
+  four-day-week burnout claims lack support", which has every item and, on my reading,
+  turns the limits into a verdict against the claim (the second coder did not see it).
+- **The reteller is noisy.** Two chains from the same original in the same arm produced
+  the same first retelling in 6 of 240 pairs. With a single reteller, that is noise in the
+  reteller by the criterion of simulation 4. How far the content decides which condition is
+  lost is not pinned down. At hop 6, agreement between the three chains of an original on
+  whether a given condition survived, beyond what chance would give, is 0.32 (−0.12 to
+  0.65) in `careful10`, 0.33 (−0.04 to 0.56) in `punchy20` and 0.07 (−0.05 to 0.18) in
+  `gist20`, where 1 would mean the content decides and 0 that each chain loses conditions
+  independently. For specifics it is 0.24 to 0.39 in all five arms. So: weakly to
+  moderately, and well short of a fixed function of the content.
+- **The second kind of condition was lost most.** Pooled over arms at hop 6: who it was
+  shown for 93%, strength of evidence or circumstance 87%, size or limit of the effect 96%;
+  the second kind is 8 points below the other two (1 to 17). It is the lowest kind in four
+  of the eight topics and the pooled gap leans on one of them. In `careful10` it is 71%
+  against 85% and 92%, a gap whose interval includes zero (−41 to 1). The label is loose:
+  this kind mixes study design with dose and setting.
+- **The claim outlasted its conditions in the two lossy arms, without being stripped of
+  them.** At hop 6 the claim was present more often than a condition by 11 points in
+  `careful10` (94% against 83%; 2 to 21) and by 15 points in `punchy20` (100% against 85%;
+  6 to 24), and by nothing measurable in the other three arms. That is the direction the
+  book predicts. The strong form is absent: a claim with at most one condition left
+  occurred in 1 and 2 of 48 chains in those arms and in none elsewhere.
+- **A few chains went the other way, on shaky codes.** In `punchy20` the claim was coded
+  present in all 288 retellings. In each other arm it was coded gone at some hop in 3 or 4
+  of 48 chains, from five originals, and each time at least two conditions were still
+  there: the headline cut, the small print kept ("A mouse study found eight daily coffees
+  lasted about two hours"). Of 29 "gone" codes with a next hop, 10 were followed by
+  "present" on the next version, usually a light rewording, and mostly where a condition
+  implies the claim ("improved letter recognition but not story comprehension"). The
+  second coder said "kept" for two of the first coder's four "gone" codes in its sample.
+- **No detectable effect of where the claim stands, on too few losses to tell.** At hop 6
+  the claim was coded gone in 3 of 120 chains that state it first and 5 of 120 that state
+  it last (exact test swapping the order within topics, p = 0.88). Counting "gone" codes at
+  any hop gives 9 against 28, which leans the pilot's way and is not significant either
+  (p = 0.25): the 37 codes come from five originals. The pilot's hint is not confirmed and
+  not refuted.
+
+### A kind of change the coding does not see
+
+A second coder (below) also judged, for a sample of 150 retellings, whether the retelling
+still says what the source said. In 16 of 150 it judged the meaning shifted, and in 2 more
+the finding was no longer stated. That judgement was made by one model and has no
+reliability check of its own. The shifts were in every arm, including 3 of 30 in
+`careful40`, but 11 of the 16 come from two originals (5 of the 10 sampled retellings of
+one, 6 of the 8 of the other; 5 of 132 for the remaining fourteen), so the share is very
+uncertain: 11%, or 4 to 20% resampling topics. They are mostly of two sorts. A limitation
+becomes a verdict: "Study used volunteer firms with no control group; hours fell 4, so
+burnout claim is unproven", where the source stated the finding and listed those limits.
+Or a condition becomes the finding: "Cutting salt dropped office workers' blood pressure
+11 points, but it's just correlation. Daily 20-minute walks help too", where the source
+was about walking. In 13 of the 16, both coders coded the claim and all three conditions
+as present. Counting which items survive misses this: little or nothing was dropped and
+the message changed.
+
+### How far to trust the coding
+
+- The same text judged in two separate calls (72 pairs of retellings, 288 codes) got the
+  same three-level code 94% of the time and the same present-or-absent code 99%.
+- Information cannot come back, so a condition coded absent and then present at the next
+  hop is a coding flip: 6 of 159 (4%). A condition coded weakened and then in full: 98 of
+  575 (17%). Presence is coded steadily; "in full" is not. The net-loss figures above
+  cancel flips only to the extent that they go both ways equally.
+- **Second coder.** Another model (Claude Opus was requested, through a subagent), blind to the first
+  coding, to arm and to hop, coded a stratified random sample of 150 retellings, five per
+  arm and hop (`llm/cli_run/second_coder/`). On the 450 conditions the two agree on
+  present or absent in 98% (Cohen's kappa 0.82) and on the three levels in 90% (kappa
+  0.69); the first coder is the stricter about "in full" (29 codes weakened where the
+  second says kept, 11 the other way). On whether a retelling arrived intact they agree in
+  80% (kappa 0.60; 76 intact by the first coder, 86 by the second). On the claim they
+  agree on present or absent in 98%, but with so few absences that kappa is only 0.56, and
+  on the three levels in 75% (kappa 0.35). The second coder coded one condition of the
+  other variant as present, in error. So the "present" columns are solid, the "in full"
+  and "intact" columns are fair and somewhat strict, and nothing should be built on the
+  claim's three-level code or on single "claim gone" codes. Both coders are language
+  models; no person has coded any of this.
+- "Something was added" was flagged in 32 of 1,440 retellings by the first coder and in
+  none of 150 by the second, so that flag means little.
+
+### What it changes
+
+- For the model: with a generous limit no condition disappeared over six hops, and with a
+  tight limit or a punchy instruction a noisy reteller kept losing conditions late in the
+  chain. Recurring loss from a noisy reteller is the regime in which per-hop bounds
+  compound, and the contrast between arms agrees with the correction made to the book's
+  chapter: a budget alone neither forces compounding nor forbids it. Whether the advantage
+  itself decays as a product is still untested here. A limit below what the content needs
+  explains most of the loss at the tight limit and little of it under the gist
+  instruction.
+- For the pilot of simulation 6: its "one cut and then a slow erosion that stops" is what
+  20 words give. It is not a general property of a word limit.
+- For the book's prediction (claim survives, conditions fall away): a gap in the predicted
+  direction of 11 to 15 points in the two lossy arms, and no stripping, even with a
+  "punchy" instruction. A language model with the previous version in view is not a person
+  retelling from memory to an audience, so this bears on the instrument, not on people.
+
+Limits. One retelling model and one judging model, not recorded in the files. Eight
+invented findings, and two of them (blood pressure with the salt condition, the four-day
+week) account for most of the shifts of meaning. The reteller had the previous version in
+full view. Both coders are models. Word counts here split on spaces; the script's own
+summary counts "20-minute" as two words and so prints slightly higher lengths.
 
 ```
-python3 s7_llm_chains_cli.py --smoke      # 4 retellings + 4 judgings, checks the login
+python3 s7_llm_chains_cli.py --smoke      # 8 retellings + 8 judgings, checks the login
 python3 s7_llm_chains_cli.py              # the full run; safe to interrupt and rerun
-python3 s7_llm_chains_cli.py --analyze    # redo the analysis of what is on disk
+python3 s7_llm_chains_cli.py --analyze    # redo the first analysis of what is on disk
+python3 s7_more.py                        # the second pass: intervals, coding checks, second coder
 ```
-
-Results land in `out/s7_llm_chains.json`, `out/s7_llm_chains_summary.txt`,
-`out/s7_llm_chains.png` and `llm/cli_run/`. Nothing here has been run with a model yet.
 
 ## What this changes for the book's experiments
 
@@ -337,6 +549,19 @@ Results land in `out/s7_llm_chains.json`, `out/s7_llm_chains_summary.txt`,
    when the fallback cannot pass for the original. That is measurable.
 5. **Size.** About 30 finding-chains are enough for a per-hop retention gap of 0.2 and too
    few for 0.1; depth-10 effects need tens of chains at c = 0.9 and thousands at c = 0.7.
-6. **Pressure and coding.** A word budget alone did not reproduce the stripping of
-   conditions in a language model. Memory, delay, audience and selection for punchiness are
-   the candidates to add. Any coding of what survived needs two coders.
+6. **Pressure and coding.** Neither a word limit nor an instruction to be punchy or to
+   remember only the gist reproduced the stripping of conditions in a language model; the
+   claim outlasted its conditions by 11 to 15 points in the two lossy arms. Memory, delay,
+   audience and selection between versions were not tried. Two model coders agree well on
+   whether a condition is present (kappa 0.82), fairly on whether it kept its specifics
+   (0.69) and poorly on the three-level state of the claim (0.35). Whether human coders
+   show the same pattern is untested; it argues for making presence the primary code.
+7. **Make the line-up hard, and the chain long or the budget tight.** With two variants
+   that share no condition, the source stayed identifiable through six hops in every arm,
+   so nothing was learned about how the advantage decays. Variants that differ in one
+   condition, or a line-up of several, would put the measure where it can move.
+8. **Code what the message says, not only which items survive.** In one coder's sample,
+   16 of 150 retellings said something materially different from the source, 13 of them
+   with the claim and every condition still coded present: a limitation turned into a
+   verdict, or a condition turned into the finding. Most came from two originals, so the
+   rate is uncertain (4 to 20%), but item counts miss it at any rate.

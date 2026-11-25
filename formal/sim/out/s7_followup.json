@@ -1,0 +1,3426 @@
+{
+ "note": "intervals are 95% percentile bootstrap intervals over the 8 topics",
+ "compliance": {
+  "careful10": {
+   "limit": 10,
+   "mean_words": 14.5,
+   "min": 8,
+   "max": 23,
+   "share_over_limit": 0.924,
+   "mean_words_by_hop": [
+    16.5,
+    15.2,
+    14.3,
+    14.1,
+    13.7,
+    13.0
+   ]
+  },
+  "careful20": {
+   "limit": 20,
+   "mean_words": 19.9,
+   "min": 13,
+   "max": 32,
+   "share_over_limit": 0.365,
+   "mean_words_by_hop": [
+    21.4,
+    20.4,
+    20.0,
+    19.3,
+    19.1,
+    19.1
+   ]
+  },
+  "careful40": {
+   "limit": 40,
+   "mean_words": 27.8,
+   "min": 18,
+   "max": 42,
+   "share_over_limit": 0.007,
+   "mean_words_by_hop": [
+    28.9,
+    28.1,
+    27.8,
+    27.5,
+    27.6,
+    27.2
+   ]
+  },
+  "punchy20": {
+   "limit": 20,
+   "mean_words": 17.0,
+   "min": 9,
+   "max": 27,
+   "share_over_limit": 0.09,
+   "mean_words_by_hop": [
+    18.9,
+    17.5,
+    16.7,
+    16.4,
+    16.1,
+    16.2
+   ]
+  },
+  "gist20": {
+   "limit": 20,
+   "mean_words": 20.5,
+   "min": 10,
+   "max": 39,
+   "share_over_limit": 0.444,
+   "mean_words_by_hop": [
+    22.8,
+    21.1,
+    20.1,
+    19.6,
+    19.8,
+    19.5
+   ]
+  },
+  "original_words": {
+   "mean": 32.9,
+   "min": 26,
+   "max": 43
+  }
+ },
+ "judge": {
+  "other_variant_conditions_coded_present": 0,
+  "other_variant_codes": 4320,
+  "absent_then_present": 6,
+  "absent_at_risk": 159,
+  "weakened_then_kept_in_full": 98,
+  "weakened_at_risk": 575,
+  "identical_text_code_pairs": 288,
+  "identical_text_same_three_level_code": 0.938,
+  "identical_text_same_present_or_absent": 0.993,
+  "something_added_flagged": 32
+ },
+ "arms": {
+  "careful10": {
+   "by_hop": {
+    "1": {
+     "present": {
+      "value": 0.944,
+      "ci": [
+       0.903,
+       0.979
+      ]
+     },
+     "full": {
+      "value": 0.771,
+      "ci": [
+       0.701,
+       0.826
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.458,
+      "ci": [
+       0.312,
+       0.583
+      ]
+     },
+     "all_present": {
+      "value": 0.833,
+      "ci": [
+       0.708,
+       0.938
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "2": {
+     "present": {
+      "value": 0.938,
+      "ci": [
+       0.882,
+       0.979
+      ]
+     },
+     "full": {
+      "value": 0.674,
+      "ci": [
+       0.604,
+       0.736
+      ]
+     },
+     "claim": {
+      "value": 0.938,
+      "ci": [
+       0.875,
+       0.979
+      ]
+     },
+     "intact": {
+      "value": 0.271,
+      "ci": [
+       0.167,
+       0.375
+      ]
+     },
+     "all_present": {
+      "value": 0.771,
+      "ci": [
+       0.625,
+       0.875
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "3": {
+     "present": {
+      "value": 0.889,
+      "ci": [
+       0.826,
+       0.944
+      ]
+     },
+     "full": {
+      "value": 0.625,
+      "ci": [
+       0.528,
+       0.715
+      ]
+     },
+     "claim": {
+      "value": 0.938,
+      "ci": [
+       0.875,
+       0.979
+      ]
+     },
+     "intact": {
+      "value": 0.25,
+      "ci": [
+       0.125,
+       0.375
+      ]
+     },
+     "all_present": {
+      "value": 0.625,
+      "ci": [
+       0.458,
+       0.75
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "4": {
+     "present": {
+      "value": 0.875,
+      "ci": [
+       0.812,
+       0.931
+      ]
+     },
+     "full": {
+      "value": 0.59,
+      "ci": [
+       0.493,
+       0.681
+      ]
+     },
+     "claim": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.146,
+      "ci": [
+       0.062,
+       0.229
+      ]
+     },
+     "all_present": {
+      "value": 0.604,
+      "ci": [
+       0.438,
+       0.75
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "5": {
+     "present": {
+      "value": 0.854,
+      "ci": [
+       0.778,
+       0.917
+      ]
+     },
+     "full": {
+      "value": 0.562,
+      "ci": [
+       0.465,
+       0.653
+      ]
+     },
+     "claim": {
+      "value": 0.917,
+      "ci": [
+       0.854,
+       0.979
+      ]
+     },
+     "intact": {
+      "value": 0.125,
+      "ci": [
+       0.042,
+       0.229
+      ]
+     },
+     "all_present": {
+      "value": 0.521,
+      "ci": [
+       0.312,
+       0.688
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "6": {
+     "present": {
+      "value": 0.826,
+      "ci": [
+       0.764,
+       0.875
+      ]
+     },
+     "full": {
+      "value": 0.521,
+      "ci": [
+       0.424,
+       0.618
+      ]
+     },
+     "claim": {
+      "value": 0.938,
+      "ci": [
+       0.875,
+       0.979
+      ]
+     },
+     "intact": {
+      "value": 0.083,
+      "ci": [
+       0.0,
+       0.208
+      ]
+     },
+     "all_present": {
+      "value": 0.458,
+      "ci": [
+       0.271,
+       0.604
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   "conditions_left_at_last_hop": {
+    "3": 24,
+    "2": 23,
+    "1": 1
+   },
+   "net_loss_per_hop_present": {
+    "hop_1": {
+     "value": 0.056,
+     "ci": [
+      0.021,
+      0.097
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.026,
+     "ci": [
+      0.018,
+      0.036
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.03,
+     "ci": [
+      0.011,
+      0.049
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.024,
+     "ci": [
+      0.013,
+      0.035
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.006,
+     "ci": [
+      -0.03,
+      0.018
+     ]
+    }
+   },
+   "net_loss_per_hop_kept_in_full": {
+    "hop_1": {
+     "value": 0.229,
+     "ci": [
+      0.174,
+      0.299
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.075,
+     "ci": [
+      0.046,
+      0.106
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.099,
+     "ci": [
+      0.053,
+      0.149
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.059,
+     "ci": [
+      0.025,
+      0.094
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.04,
+     "ci": [
+      -0.101,
+      0.01
+     ]
+    }
+   },
+   "extrapolated_hops_to_half_unidentifiable": {
+    "at_the_rate": 59,
+    "range": [
+     43,
+     87
+    ]
+   }
+  },
+  "careful20": {
+   "by_hop": {
+    "1": {
+     "present": {
+      "value": 0.993,
+      "ci": [
+       0.979,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.91,
+      "ci": [
+       0.861,
+       0.958
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.729,
+      "ci": [
+       0.583,
+       0.854
+      ]
+     },
+     "all_present": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "2": {
+     "present": {
+      "value": 0.993,
+      "ci": [
+       0.979,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.882,
+      "ci": [
+       0.771,
+       0.972
+      ]
+     },
+     "claim": {
+      "value": 0.938,
+      "ci": [
+       0.854,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.667,
+      "ci": [
+       0.417,
+       0.875
+      ]
+     },
+     "all_present": {
+      "value": 0.917,
+      "ci": [
+       0.833,
+       0.979
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "3": {
+     "present": {
+      "value": 0.979,
+      "ci": [
+       0.951,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.84,
+      "ci": [
+       0.743,
+       0.917
+      ]
+     },
+     "claim": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.583,
+      "ci": [
+       0.375,
+       0.771
+      ]
+     },
+     "all_present": {
+      "value": 0.917,
+      "ci": [
+       0.833,
+       0.979
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "4": {
+     "present": {
+      "value": 0.972,
+      "ci": [
+       0.944,
+       0.993
+      ]
+     },
+     "full": {
+      "value": 0.819,
+      "ci": [
+       0.688,
+       0.924
+      ]
+     },
+     "claim": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.583,
+      "ci": [
+       0.333,
+       0.812
+      ]
+     },
+     "all_present": {
+      "value": 0.917,
+      "ci": [
+       0.833,
+       0.979
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "5": {
+     "present": {
+      "value": 0.979,
+      "ci": [
+       0.951,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.812,
+      "ci": [
+       0.694,
+       0.91
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.562,
+      "ci": [
+       0.312,
+       0.792
+      ]
+     },
+     "all_present": {
+      "value": 0.938,
+      "ci": [
+       0.854,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "6": {
+     "present": {
+      "value": 0.979,
+      "ci": [
+       0.951,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.819,
+      "ci": [
+       0.715,
+       0.917
+      ]
+     },
+     "claim": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.521,
+      "ci": [
+       0.271,
+       0.771
+      ]
+     },
+     "all_present": {
+      "value": 0.917,
+      "ci": [
+       0.833,
+       0.979
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   "conditions_left_at_last_hop": {
+    "3": 45,
+    "2": 3
+   },
+   "net_loss_per_hop_present": {
+    "hop_1": {
+     "value": 0.007,
+     "ci": [
+      0.0,
+      0.021
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.003,
+     "ci": [
+      -0.0,
+      0.008
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.007,
+     "ci": [
+      0.0,
+      0.021
+     ]
+    },
+    "hops_4_to_6": {
+     "value": -0.0,
+     "ci": [
+      -0.0,
+      0.0
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.007,
+     "ci": [
+      -0.021,
+      0.0
+     ]
+    }
+   },
+   "net_loss_per_hop_kept_in_full": {
+    "hop_1": {
+     "value": 0.09,
+     "ci": [
+      0.042,
+      0.139
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.02,
+     "ci": [
+      0.0,
+      0.045
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.039,
+     "ci": [
+      0.003,
+      0.094
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.008,
+     "ci": [
+      -0.008,
+      0.026
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.031,
+     "ci": [
+      -0.09,
+      0.007
+     ]
+    }
+   },
+   "extrapolated_hops_to_half_unidentifiable": {
+    "at_the_rate": 566,
+    "range": [
+     197,
+     null
+    ]
+   }
+  },
+  "careful40": {
+   "by_hop": {
+    "1": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.993,
+      "ci": [
+       0.979,
+       1.0
+      ]
+     },
+     "claim": {
+      "value": 0.938,
+      "ci": [
+       0.812,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.917,
+      "ci": [
+       0.792,
+       1.0
+      ]
+     },
+     "all_present": {
+      "value": 0.938,
+      "ci": [
+       0.812,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "2": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.979,
+      "ci": [
+       0.951,
+       1.0
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.917,
+      "ci": [
+       0.833,
+       0.979
+      ]
+     },
+     "all_present": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "3": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.993,
+      "ci": [
+       0.979,
+       1.0
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "all_present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "4": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.972,
+      "ci": [
+       0.931,
+       1.0
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.938,
+      "ci": [
+       0.854,
+       1.0
+      ]
+     },
+     "all_present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "5": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.972,
+      "ci": [
+       0.931,
+       1.0
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "all_present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "6": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.951,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.854,
+      "ci": [
+       0.729,
+       0.958
+      ]
+     },
+     "all_present": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   "conditions_left_at_last_hop": {
+    "3": 48
+   },
+   "net_loss_per_hop_present": {
+    "hop_1": {
+     "value": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "late_minus_early": {
+     "value": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "net_loss_per_hop_kept_in_full": {
+    "hop_1": {
+     "value": 0.007,
+     "ci": [
+      0.0,
+      0.021
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.008,
+     "ci": [
+      0.0,
+      0.018
+     ]
+    },
+    "hops_2_to_3": {
+     "value": -0.0,
+     "ci": [
+      -0.001,
+      0.0
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.014,
+     "ci": [
+      0.0,
+      0.031
+     ]
+    },
+    "late_minus_early": {
+     "value": 0.014,
+     "ci": [
+      0.0,
+      0.032
+     ]
+    }
+   },
+   "extrapolated_hops_to_half_unidentifiable": {
+    "at_the_rate": null,
+    "range": [
+     null,
+     null
+    ]
+   }
+  },
+  "punchy20": {
+   "by_hop": {
+    "1": {
+     "present": {
+      "value": 0.986,
+      "ci": [
+       0.965,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.896,
+      "ci": [
+       0.819,
+       0.951
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.75,
+      "ci": [
+       0.604,
+       0.875
+      ]
+     },
+     "all_present": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "2": {
+     "present": {
+      "value": 0.944,
+      "ci": [
+       0.896,
+       0.986
+      ]
+     },
+     "full": {
+      "value": 0.785,
+      "ci": [
+       0.715,
+       0.847
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.458,
+      "ci": [
+       0.312,
+       0.604
+      ]
+     },
+     "all_present": {
+      "value": 0.833,
+      "ci": [
+       0.688,
+       0.958
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "3": {
+     "present": {
+      "value": 0.917,
+      "ci": [
+       0.861,
+       0.965
+      ]
+     },
+     "full": {
+      "value": 0.66,
+      "ci": [
+       0.59,
+       0.729
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.271,
+      "ci": [
+       0.125,
+       0.396
+      ]
+     },
+     "all_present": {
+      "value": 0.75,
+      "ci": [
+       0.583,
+       0.896
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "4": {
+     "present": {
+      "value": 0.896,
+      "ci": [
+       0.826,
+       0.958
+      ]
+     },
+     "full": {
+      "value": 0.632,
+      "ci": [
+       0.549,
+       0.722
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.25,
+      "ci": [
+       0.125,
+       0.375
+      ]
+     },
+     "all_present": {
+      "value": 0.708,
+      "ci": [
+       0.521,
+       0.875
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "5": {
+     "present": {
+      "value": 0.854,
+      "ci": [
+       0.764,
+       0.938
+      ]
+     },
+     "full": {
+      "value": 0.611,
+      "ci": [
+       0.514,
+       0.708
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.208,
+      "ci": [
+       0.062,
+       0.354
+      ]
+     },
+     "all_present": {
+      "value": 0.604,
+      "ci": [
+       0.396,
+       0.812
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "6": {
+     "present": {
+      "value": 0.854,
+      "ci": [
+       0.764,
+       0.938
+      ]
+     },
+     "full": {
+      "value": 0.556,
+      "ci": [
+       0.458,
+       0.639
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.125,
+      "ci": [
+       0.042,
+       0.229
+      ]
+     },
+     "all_present": {
+      "value": 0.604,
+      "ci": [
+       0.396,
+       0.812
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   "conditions_left_at_last_hop": {
+    "3": 29,
+    "2": 17,
+    "1": 2
+   },
+   "net_loss_per_hop_present": {
+    "hop_1": {
+     "value": 0.014,
+     "ci": [
+      0.0,
+      0.035
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.028,
+     "ci": [
+      0.01,
+      0.049
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.036,
+     "ci": [
+      0.011,
+      0.065
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.023,
+     "ci": [
+      0.01,
+      0.041
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.013,
+     "ci": [
+      -0.028,
+      0.003
+     ]
+    }
+   },
+   "net_loss_per_hop_kept_in_full": {
+    "hop_1": {
+     "value": 0.104,
+     "ci": [
+      0.049,
+      0.181
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.09,
+     "ci": [
+      0.07,
+      0.11
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.142,
+     "ci": [
+      0.107,
+      0.173
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.055,
+     "ci": [
+      0.024,
+      0.084
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.086,
+     "ci": [
+      -0.134,
+      -0.036
+     ]
+    }
+   },
+   "extrapolated_hops_to_half_unidentifiable": {
+    "at_the_rate": 55,
+    "range": [
+     31,
+     157
+    ]
+   }
+  },
+  "gist20": {
+   "by_hop": {
+    "1": {
+     "present": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.924,
+      "ci": [
+       0.847,
+       0.986
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.792,
+      "ci": [
+       0.625,
+       0.938
+      ]
+     },
+     "all_present": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "2": {
+     "present": {
+      "value": 0.986,
+      "ci": [
+       0.965,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.806,
+      "ci": [
+       0.708,
+       0.882
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.562,
+      "ci": [
+       0.438,
+       0.688
+      ]
+     },
+     "all_present": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "3": {
+     "present": {
+      "value": 0.972,
+      "ci": [
+       0.931,
+       1.0
+      ]
+     },
+     "full": {
+      "value": 0.771,
+      "ci": [
+       0.667,
+       0.847
+      ]
+     },
+     "claim": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.521,
+      "ci": [
+       0.396,
+       0.625
+      ]
+     },
+     "all_present": {
+      "value": 0.917,
+      "ci": [
+       0.792,
+       1.0
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "4": {
+     "present": {
+      "value": 0.965,
+      "ci": [
+       0.924,
+       0.993
+      ]
+     },
+     "full": {
+      "value": 0.743,
+      "ci": [
+       0.611,
+       0.84
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.438,
+      "ci": [
+       0.292,
+       0.583
+      ]
+     },
+     "all_present": {
+      "value": 0.875,
+      "ci": [
+       0.708,
+       0.979
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "5": {
+     "present": {
+      "value": 0.958,
+      "ci": [
+       0.917,
+       0.993
+      ]
+     },
+     "full": {
+      "value": 0.681,
+      "ci": [
+       0.535,
+       0.806
+      ]
+     },
+     "claim": {
+      "value": 0.979,
+      "ci": [
+       0.938,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.417,
+      "ci": [
+       0.229,
+       0.604
+      ]
+     },
+     "all_present": {
+      "value": 0.875,
+      "ci": [
+       0.75,
+       0.979
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    },
+    "6": {
+     "present": {
+      "value": 0.944,
+      "ci": [
+       0.903,
+       0.972
+      ]
+     },
+     "full": {
+      "value": 0.653,
+      "ci": [
+       0.514,
+       0.771
+      ]
+     },
+     "claim": {
+      "value": 0.958,
+      "ci": [
+       0.896,
+       1.0
+      ]
+     },
+     "intact": {
+      "value": 0.354,
+      "ci": [
+       0.208,
+       0.5
+      ]
+     },
+     "all_present": {
+      "value": 0.833,
+      "ci": [
+       0.708,
+       0.917
+      ]
+     },
+     "identifiable": {
+      "value": 1.0,
+      "ci": [
+       1.0,
+       1.0
+      ]
+     }
+    }
+   },
+   "conditions_left_at_last_hop": {
+    "3": 40,
+    "2": 8
+   },
+   "net_loss_per_hop_present": {
+    "hop_1": {
+     "value": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.011,
+     "ci": [
+      0.006,
+      0.02
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.014,
+     "ci": [
+      0.0,
+      0.035
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.01,
+     "ci": [
+      0.002,
+      0.016
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.004,
+     "ci": [
+      -0.03,
+      0.014
+     ]
+    }
+   },
+   "net_loss_per_hop_kept_in_full": {
+    "hop_1": {
+     "value": 0.076,
+     "ci": [
+      0.014,
+      0.153
+     ]
+    },
+    "hops_2_to_6": {
+     "value": 0.066,
+     "ci": [
+      0.039,
+      0.101
+     ]
+    },
+    "hops_2_to_3": {
+     "value": 0.085,
+     "ci": [
+      0.06,
+      0.12
+     ]
+    },
+    "hops_4_to_6": {
+     "value": 0.054,
+     "ci": [
+      0.02,
+      0.093
+     ]
+    },
+    "late_minus_early": {
+     "value": -0.032,
+     "ci": [
+      -0.058,
+      -0.004
+     ]
+    }
+   },
+   "extrapolated_hops_to_half_unidentifiable": {
+    "at_the_rate": 138,
+    "range": [
+     78,
+     262
+    ]
+   }
+  }
+ },
+ "contrasts_at_last_hop": {
+  "careful20 minus careful10": {
+   "present": {
+    "value": 0.153,
+    "ci": [
+     0.118,
+     0.201
+    ]
+   },
+   "full": {
+    "value": 0.299,
+    "ci": [
+     0.181,
+     0.417
+    ]
+   },
+   "intact": {
+    "value": 0.438,
+    "ci": [
+     0.188,
+     0.688
+    ]
+   },
+   "claim": {
+    "value": 0.021,
+    "ci": [
+     -0.042,
+     0.083
+    ]
+   }
+  },
+  "careful40 minus careful20": {
+   "present": {
+    "value": 0.021,
+    "ci": [
+     0.0,
+     0.049
+    ]
+   },
+   "full": {
+    "value": 0.132,
+    "ci": [
+     0.049,
+     0.222
+    ]
+   },
+   "intact": {
+    "value": 0.333,
+    "ci": [
+     0.125,
+     0.562
+    ]
+   },
+   "claim": {
+    "value": 0.021,
+    "ci": [
+     0.0,
+     0.062
+    ]
+   }
+  },
+  "careful40 minus careful10": {
+   "present": {
+    "value": 0.174,
+    "ci": [
+     0.125,
+     0.236
+    ]
+   },
+   "full": {
+    "value": 0.431,
+    "ci": [
+     0.354,
+     0.514
+    ]
+   },
+   "intact": {
+    "value": 0.771,
+    "ci": [
+     0.667,
+     0.896
+    ]
+   },
+   "claim": {
+    "value": 0.042,
+    "ci": [
+     -0.042,
+     0.125
+    ]
+   }
+  },
+  "careful20 minus punchy20": {
+   "present": {
+    "value": 0.125,
+    "ci": [
+     0.062,
+     0.194
+    ]
+   },
+   "full": {
+    "value": 0.264,
+    "ci": [
+     0.188,
+     0.333
+    ]
+   },
+   "intact": {
+    "value": 0.396,
+    "ci": [
+     0.208,
+     0.583
+    ]
+   },
+   "claim": {
+    "value": -0.042,
+    "ci": [
+     -0.104,
+     0.0
+    ]
+   }
+  },
+  "careful20 minus gist20": {
+   "present": {
+    "value": 0.035,
+    "ci": [
+     0.007,
+     0.056
+    ]
+   },
+   "full": {
+    "value": 0.167,
+    "ci": [
+     0.049,
+     0.299
+    ]
+   },
+   "intact": {
+    "value": 0.167,
+    "ci": [
+     -0.062,
+     0.396
+    ]
+   },
+   "claim": {
+    "value": 0.0,
+    "ci": [
+     -0.062,
+     0.062
+    ]
+   }
+  }
+ },
+ "reruns": {
+  "careful10": {
+   "identical_first_retellings": [
+    2,
+    48
+   ],
+   "chains_of_three_keeping_a_condition_at_last_hop": {
+    "3": 31,
+    "2": 12,
+    "1": 2,
+    "0": 3
+   },
+   "agreement_beyond_chance_present": {
+    "value": 0.322,
+    "ci": [
+     -0.115,
+     0.646
+    ]
+   },
+   "agreement_beyond_chance_kept_in_full": {
+    "value": 0.249,
+    "ci": [
+     0.044,
+     0.463
+    ]
+   }
+  },
+  "careful20": {
+   "identical_first_retellings": [
+    3,
+    48
+   ],
+   "chains_of_three_keeping_a_condition_at_last_hop": {
+    "3": 45,
+    "2": 3,
+    "1": 0,
+    "0": 0
+   },
+   "agreement_beyond_chance_present": {
+    "value": -0.021,
+    "ci": [
+     -0.051,
+     -0.007
+    ],
+    "share_of_resamples_undefined": 0.094
+   },
+   "agreement_beyond_chance_kept_in_full": {
+    "value": 0.39,
+    "ci": [
+     0.239,
+     0.619
+    ]
+   }
+  },
+  "careful40": {
+   "identical_first_retellings": [
+    1,
+    48
+   ],
+   "chains_of_three_keeping_a_condition_at_last_hop": {
+    "3": 48,
+    "2": 0,
+    "1": 0,
+    "0": 0
+   },
+   "agreement_beyond_chance_present": {
+    "value": null,
+    "ci": [
+     null,
+     null
+    ]
+   },
+   "agreement_beyond_chance_kept_in_full": {
+    "value": 0.249,
+    "ci": [
+     -0.014,
+     0.493
+    ],
+    "share_of_resamples_undefined": 0.027
+   }
+  },
+  "punchy20": {
+   "identical_first_retellings": [
+    0,
+    48
+   ],
+   "chains_of_three_keeping_a_condition_at_last_hop": {
+    "3": 34,
+    "2": 9,
+    "1": 3,
+    "0": 2
+   },
+   "agreement_beyond_chance_present": {
+    "value": 0.331,
+    "ci": [
+     -0.043,
+     0.564
+    ]
+   },
+   "agreement_beyond_chance_kept_in_full": {
+    "value": 0.241,
+    "ci": [
+     0.021,
+     0.462
+    ]
+   }
+  },
+  "gist20": {
+   "identical_first_retellings": [
+    0,
+    48
+   ],
+   "chains_of_three_keeping_a_condition_at_last_hop": {
+    "3": 41,
+    "2": 6,
+    "1": 1,
+    "0": 0
+   },
+   "agreement_beyond_chance_present": {
+    "value": 0.074,
+    "ci": [
+     -0.051,
+     0.182
+    ]
+   },
+   "agreement_beyond_chance_kept_in_full": {
+    "value": 0.326,
+    "ci": [
+     0.074,
+     0.47
+    ]
+   }
+  }
+ },
+ "claim_position": {
+  "last hop": {
+   "careful10": {
+    "claim_gone_when_first": [
+     0,
+     24
+    ],
+    "claim_gone_when_last": [
+     3,
+     24
+    ],
+    "originals_with_any_first": 0,
+    "originals_with_any_last": 3,
+    "p_two_sided": 0.25
+   },
+   "careful20": {
+    "claim_gone_when_first": [
+     1,
+     24
+    ],
+    "claim_gone_when_last": [
+     1,
+     24
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 1,
+    "p_two_sided": 1.0
+   },
+   "careful40": {
+    "claim_gone_when_first": [
+     1,
+     24
+    ],
+    "claim_gone_when_last": [
+     0,
+     24
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 0,
+    "p_two_sided": 1.0
+   },
+   "punchy20": {
+    "claim_gone_when_first": [
+     0,
+     24
+    ],
+    "claim_gone_when_last": [
+     0,
+     24
+    ],
+    "originals_with_any_first": 0,
+    "originals_with_any_last": 0,
+    "p_two_sided": 1.0
+   },
+   "gist20": {
+    "claim_gone_when_first": [
+     1,
+     24
+    ],
+    "claim_gone_when_last": [
+     1,
+     24
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 1,
+    "p_two_sided": 1.0
+   },
+   "all arms": {
+    "claim_gone_when_first": [
+     3,
+     120
+    ],
+    "claim_gone_when_last": [
+     5,
+     120
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 3,
+    "p_two_sided": 0.875
+   }
+  },
+  "any hop": {
+   "careful10": {
+    "claim_gone_when_first": [
+     0,
+     144
+    ],
+    "claim_gone_when_last": [
+     16,
+     144
+    ],
+    "originals_with_any_first": 0,
+    "originals_with_any_last": 4,
+    "p_two_sided": 0.125
+   },
+   "careful20": {
+    "claim_gone_when_first": [
+     5,
+     144
+    ],
+    "claim_gone_when_last": [
+     6,
+     144
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 2,
+    "p_two_sided": 1.0
+   },
+   "careful40": {
+    "claim_gone_when_first": [
+     3,
+     144
+    ],
+    "claim_gone_when_last": [
+     2,
+     144
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 1,
+    "p_two_sided": 1.0
+   },
+   "punchy20": {
+    "claim_gone_when_first": [
+     0,
+     144
+    ],
+    "claim_gone_when_last": [
+     0,
+     144
+    ],
+    "originals_with_any_first": 0,
+    "originals_with_any_last": 0,
+    "p_two_sided": 1.0
+   },
+   "gist20": {
+    "claim_gone_when_first": [
+     1,
+     144
+    ],
+    "claim_gone_when_last": [
+     4,
+     144
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 2,
+    "p_two_sided": 0.5
+   },
+   "all arms": {
+    "claim_gone_when_first": [
+     9,
+     720
+    ],
+    "claim_gone_when_last": [
+     28,
+     720
+    ],
+    "originals_with_any_first": 1,
+    "originals_with_any_last": 4,
+    "p_two_sided": 0.25
+   }
+  }
+ },
+ "claim_fate": {
+  "careful10": {
+   "by_hop": {
+    "1": {
+     "in_full": 0.771,
+     "vaguer": 0.208,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "2": {
+     "in_full": 0.688,
+     "vaguer": 0.25,
+     "gone": 3,
+     "gone_with_two_or_more_conditions_present": 3,
+     "of": 48
+    },
+    "3": {
+     "in_full": 0.729,
+     "vaguer": 0.208,
+     "gone": 3,
+     "gone_with_two_or_more_conditions_present": 3,
+     "of": 48
+    },
+    "4": {
+     "in_full": 0.583,
+     "vaguer": 0.375,
+     "gone": 2,
+     "gone_with_two_or_more_conditions_present": 2,
+     "of": 48
+    },
+    "5": {
+     "in_full": 0.646,
+     "vaguer": 0.271,
+     "gone": 4,
+     "gone_with_two_or_more_conditions_present": 4,
+     "of": 48
+    },
+    "6": {
+     "in_full": 0.604,
+     "vaguer": 0.333,
+     "gone": 3,
+     "gone_with_two_or_more_conditions_present": 3,
+     "of": 48
+    }
+   },
+   "chains_where_the_claim_was_ever_coded_gone": 4,
+   "chains": 48
+  },
+  "careful20": {
+   "by_hop": {
+    "1": {
+     "in_full": 0.854,
+     "vaguer": 0.125,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "2": {
+     "in_full": 0.792,
+     "vaguer": 0.146,
+     "gone": 3,
+     "gone_with_two_or_more_conditions_present": 3,
+     "of": 48
+    },
+    "3": {
+     "in_full": 0.896,
+     "vaguer": 0.062,
+     "gone": 2,
+     "gone_with_two_or_more_conditions_present": 2,
+     "of": 48
+    },
+    "4": {
+     "in_full": 0.729,
+     "vaguer": 0.229,
+     "gone": 2,
+     "gone_with_two_or_more_conditions_present": 2,
+     "of": 48
+    },
+    "5": {
+     "in_full": 0.812,
+     "vaguer": 0.167,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "6": {
+     "in_full": 0.833,
+     "vaguer": 0.125,
+     "gone": 2,
+     "gone_with_two_or_more_conditions_present": 2,
+     "of": 48
+    }
+   },
+   "chains_where_the_claim_was_ever_coded_gone": 3,
+   "chains": 48
+  },
+  "careful40": {
+   "by_hop": {
+    "1": {
+     "in_full": 0.812,
+     "vaguer": 0.125,
+     "gone": 3,
+     "gone_with_two_or_more_conditions_present": 3,
+     "of": 48
+    },
+    "2": {
+     "in_full": 0.792,
+     "vaguer": 0.188,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "3": {
+     "in_full": 0.833,
+     "vaguer": 0.167,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "4": {
+     "in_full": 0.833,
+     "vaguer": 0.167,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "5": {
+     "in_full": 0.771,
+     "vaguer": 0.229,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "6": {
+     "in_full": 0.875,
+     "vaguer": 0.104,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    }
+   },
+   "chains_where_the_claim_was_ever_coded_gone": 4,
+   "chains": 48
+  },
+  "punchy20": {
+   "by_hop": {
+    "1": {
+     "in_full": 0.833,
+     "vaguer": 0.167,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "2": {
+     "in_full": 0.896,
+     "vaguer": 0.104,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "3": {
+     "in_full": 0.875,
+     "vaguer": 0.125,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "4": {
+     "in_full": 0.854,
+     "vaguer": 0.146,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "5": {
+     "in_full": 0.833,
+     "vaguer": 0.167,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "6": {
+     "in_full": 0.812,
+     "vaguer": 0.188,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    }
+   },
+   "chains_where_the_claim_was_ever_coded_gone": 0,
+   "chains": 48
+  },
+  "gist20": {
+   "by_hop": {
+    "1": {
+     "in_full": 0.688,
+     "vaguer": 0.292,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "2": {
+     "in_full": 0.688,
+     "vaguer": 0.312,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "3": {
+     "in_full": 0.625,
+     "vaguer": 0.375,
+     "gone": 0,
+     "gone_with_two_or_more_conditions_present": 0,
+     "of": 48
+    },
+    "4": {
+     "in_full": 0.667,
+     "vaguer": 0.312,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "5": {
+     "in_full": 0.604,
+     "vaguer": 0.375,
+     "gone": 1,
+     "gone_with_two_or_more_conditions_present": 1,
+     "of": 48
+    },
+    "6": {
+     "in_full": 0.688,
+     "vaguer": 0.271,
+     "gone": 2,
+     "gone_with_two_or_more_conditions_present": 2,
+     "of": 48
+    }
+   },
+   "chains_where_the_claim_was_ever_coded_gone": 4,
+   "chains": 48
+  },
+  "coded_gone_then_present_at_the_next_hop": [
+   10,
+   29
+  ]
+ },
+ "how_conditions_went": {
+  "careful10": {
+   "conditions_ever_coded_gone": 26,
+   "in_full_at_the_hop_before": 21,
+   "vaguer_at_the_hop_before": 5,
+   "vaguer_at_some_earlier_hop": 5
+  },
+  "careful20": {
+   "conditions_ever_coded_gone": 4,
+   "in_full_at_the_hop_before": 3,
+   "vaguer_at_the_hop_before": 1,
+   "vaguer_at_some_earlier_hop": 2
+  },
+  "careful40": {
+   "conditions_ever_coded_gone": 0,
+   "in_full_at_the_hop_before": 0,
+   "vaguer_at_the_hop_before": 0,
+   "vaguer_at_some_earlier_hop": 0
+  },
+  "punchy20": {
+   "conditions_ever_coded_gone": 21,
+   "in_full_at_the_hop_before": 15,
+   "vaguer_at_the_hop_before": 6,
+   "vaguer_at_some_earlier_hop": 7
+  },
+  "gist20": {
+   "conditions_ever_coded_gone": 9,
+   "in_full_at_the_hop_before": 5,
+   "vaguer_at_the_hop_before": 4,
+   "vaguer_at_some_earlier_hop": 4
+  },
+  "all arms": {
+   "conditions_ever_coded_gone": 60,
+   "in_full_at_the_hop_before": 44,
+   "vaguer_at_the_hop_before": 16,
+   "vaguer_at_some_earlier_hop": 18
+  }
+ },
+ "claim_against_conditions": {
+  "careful10": {
+   "claim_present_minus_condition_present": {
+    "value": 0.111,
+    "ci": [
+     0.021,
+     0.208
+    ]
+   },
+   "claim_present_with_at_most_one_condition": 1,
+   "of": 48
+  },
+  "careful20": {
+   "claim_present_minus_condition_present": {
+    "value": -0.021,
+    "ci": [
+     -0.069,
+     0.014
+    ]
+   },
+   "claim_present_with_at_most_one_condition": 0,
+   "of": 48
+  },
+  "careful40": {
+   "claim_present_minus_condition_present": {
+    "value": -0.021,
+    "ci": [
+     -0.062,
+     0.0
+    ]
+   },
+   "claim_present_with_at_most_one_condition": 0,
+   "of": 48
+  },
+  "punchy20": {
+   "claim_present_minus_condition_present": {
+    "value": 0.146,
+    "ci": [
+     0.062,
+     0.236
+    ]
+   },
+   "claim_present_with_at_most_one_condition": 2,
+   "of": 48
+  },
+  "gist20": {
+   "claim_present_minus_condition_present": {
+    "value": 0.014,
+    "ci": [
+     -0.028,
+     0.042
+    ]
+   },
+   "claim_present_with_at_most_one_condition": 0,
+   "of": 48
+  }
+ },
+ "second_coder": {
+  "retellings": 150,
+  "conditions": {
+   "codes": 450,
+   "same_three_level": 0.896,
+   "kappa_three_level": 0.689,
+   "same_present_or_absent": 0.984,
+   "kappa_present_or_absent": 0.821,
+   "first_to_second (2 in full, 1 vaguer, 0 gone)": {
+    "2->2": 338,
+    "2->1": 11,
+    "2->0": 3,
+    "1->2": 29,
+    "1->1": 48,
+    "1->0": 0,
+    "0->2": 0,
+    "0->1": 4,
+    "0->0": 17
+   }
+  },
+  "claim": {
+   "codes": 150,
+   "same_three_level": 0.753,
+   "kappa_three_level": 0.347,
+   "same_present_or_absent": 0.98,
+   "kappa_present_or_absent": 0.561,
+   "first_to_second (2 in full, 1 vaguer, 0 gone)": {
+    "2->2": 96,
+    "2->1": 12,
+    "2->0": 0,
+    "1->2": 22,
+    "1->1": 15,
+    "1->0": 1,
+    "0->2": 2,
+    "0->1": 0,
+    "0->0": 2
+   }
+  },
+  "share_present_and_in_full_by_arm": {
+   "careful40": {
+    "first": {
+     "present": 1.0,
+     "in_full": 0.978
+    },
+    "second": {
+     "present": 0.989,
+     "in_full": 0.978
+    }
+   },
+   "gist20": {
+    "first": {
+     "present": 1.0,
+     "in_full": 0.778
+    },
+    "second": {
+     "present": 1.0,
+     "in_full": 0.844
+    }
+   },
+   "careful10": {
+    "first": {
+     "present": 0.867,
+     "in_full": 0.667
+    },
+    "second": {
+     "present": 0.867,
+     "in_full": 0.678
+    }
+   },
+   "careful20": {
+    "first": {
+     "present": 0.978,
+     "in_full": 0.767
+    },
+    "second": {
+     "present": 0.989,
+     "in_full": 0.822
+    }
+   },
+   "punchy20": {
+    "first": {
+     "present": 0.922,
+     "in_full": 0.722
+    },
+    "second": {
+     "present": 0.933,
+     "in_full": 0.756
+    }
+   }
+  },
+  "conditions_in_full_or_not": {
+   "same": 0.904,
+   "kappa": 0.703
+  },
+  "arrived_intact": {
+   "same": 0.8,
+   "kappa": 0.599,
+   "first_says_intact": 76,
+   "second_says_intact": 86
+  },
+  "shifted_share": {
+   "value": 0.107,
+   "ci": [
+    0.037,
+    0.202
+   ]
+  },
+  "shifted_by_original": {
+   "1B": [
+    5,
+    10
+   ],
+   "2B": [
+    1,
+    11
+   ],
+   "3B": [
+    1,
+    11
+   ],
+   "6B": [
+    1,
+    9
+   ],
+   "7A": [
+    1,
+    12
+   ],
+   "7B": [
+    1,
+    13
+   ],
+   "8A": [
+    6,
+    8
+   ]
+  },
+  "shifted_with_claim_and_all_conditions_present": {
+   "first": 13,
+   "second": 14,
+   "both": 13
+  },
+  "other_variant_conditions_coded_present_by_second": 1,
+  "something_added_first_and_second": [
+   1,
+   0
+  ],
+  "meaning_by_arm": {
+   "careful40": {
+    "same": 26,
+    "shifted": 3,
+    "no_claim": 1
+   },
+   "all arms": {
+    "same": 132,
+    "shifted": 16,
+    "no_claim": 2
+   },
+   "gist20": {
+    "same": 27,
+    "shifted": 3
+   },
+   "careful10": {
+    "same": 26,
+    "shifted": 4
+   },
+   "careful20": {
+    "same": 25,
+    "shifted": 4,
+    "no_claim": 1
+   },
+   "punchy20": {
+    "same": 28,
+    "shifted": 2
+   }
+  },
+  "shifted": [
+   {
+    "key": "gist20|2|B|3|2",
+    "text": "Coffee supposedly helps memory, but the evidence is weak: sleep-deprived students, and only a tiny 2% gain.",
+    "note": "Frames the claim as weakly supported, arguing against it",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful10|8|A|2|3",
+    "text": "A trial of a four-day workweek lacked a control group, so its burnout claim is unsupported.",
+    "note": "Lack of control group becomes verdict that claim is unsupported",
+    "first_coder_claim": "weakened"
+   },
+   {
+    "key": "gist20|8|A|2|4",
+    "text": "A friend said a study with volunteers, no control group, and a small drop in hours makes the burnout claim doubtful.",
+    "note": "Limitations recast as doubt about the claim",
+    "first_coder_claim": "weakened"
+   },
+   {
+    "key": "careful10|8|A|3|2",
+    "text": "Study used volunteer firms with no control group; hours fell 4, so burnout claim is unproven.",
+    "note": "Limitations turned into verdict that burnout claim is unproven",
+    "first_coder_claim": "weakened"
+   },
+   {
+    "key": "careful40|3|B|2|3",
+    "text": "Three start-up software teams self-rated higher productivity while working from home, but the gain vanished after six months, so the claim that remote work boosts productivity has weak support.",
+    "note": "Concludes the work-from-home claim has weak support",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful10|8|A|3|3",
+    "text": "Study lacked a control group and used volunteer firms; hours dropped 4, so burnout is unproven.",
+    "note": "Limitations recast as verdict that burnout effect is unproven",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful20|1|B|3|4",
+    "text": "A 12,000-person study under 40 linked an 11-point blood pressure drop to cutting salt, but it's correlational; daily walks are known to help too.",
+    "note": "Blood pressure drop attributed to cutting salt; walking becomes an aside",
+    "first_coder_claim": "weakened"
+   },
+   {
+    "key": "careful40|8|A|2|1",
+    "text": "A four-day week trial used only volunteer firms and had no comparison group. Weekly hours fell just from 38 to 34, so the claim that it reduces burnout is shaky.",
+    "note": "Limitations recast as verdict that burnout claim is shaky",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful20|6|B|1|5",
+    "text": "A study found a children's English reading app performed no better than no teaching, and its gains disappeared within a year.",
+    "note": "Now says the app was no better than no teaching, reversing the claim",
+    "first_coder_claim": "dropped"
+   },
+   {
+    "key": "careful10|1|B|1|4",
+    "text": "A study found 20-minute daily walks and less salt each lowered blood pressure in 12,000 under-40 office workers.",
+    "note": "Salt restriction becomes an independent second effect; causal caveat lost",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "punchy20|7|B|2|6",
+    "text": "Pesticides spare honeybees but wipe out bumblebees: English queen counts fell a quarter in one season.",
+    "note": "Exaggerates harm to bumblebees being wiped out",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful20|7|A|1|4",
+    "text": "Lab tests found a pesticide only harms bees at ten times field doses, shortening foraging trips without killing colonies.",
+    "note": "Dose condition becomes a threshold claim that harm occurs only at tenfold doses",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "punchy20|1|B|2|6",
+    "text": "Cutting salt dropped office workers' blood pressure 11 points, but it's just correlation. Daily 20-minute walks help too.",
+    "note": "Salt cutting becomes the main finding; walking is an aside",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful20|1|B|2|3",
+    "text": "A 12,000-worker office survey tied cutting salt to an 11-point blood pressure drop, and daily 20-minute walks also helped.",
+    "note": "Salt cutting becomes the main finding; walking is an aside",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "careful40|1|B|1|4",
+    "text": "A study of 12,000 young office workers linked an 11-point blood pressure drop to cutting salt, though it's correlational, so cause isn't proven. Daily 20-minute walks also lower blood pressure.",
+    "note": "Salt cutting becomes the main finding; walking added as a general fact",
+    "first_coder_claim": "kept"
+   },
+   {
+    "key": "gist20|8|A|3|1",
+    "text": "Trial firms volunteered with no comparison group, and hours dropped only slightly, so the burnout claim is doubtful.",
+    "note": "Limitations recast as verdict that the burnout claim is doubtful",
+    "first_coder_claim": "weakened"
+   }
+  ]
+ },
+ "kinds_at_last_hop": {
+  "careful10": {
+   "who": {
+    "present": {
+     "value": 0.854,
+     "ci": [
+      0.729,
+      0.938
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.646,
+     "ci": [
+      0.5,
+      0.792
+     ]
+    }
+   },
+   "second": {
+    "present": {
+     "value": 0.708,
+     "ci": [
+      0.521,
+      0.854
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.375,
+     "ci": [
+      0.188,
+      0.604
+     ]
+    }
+   },
+   "size_or_limit": {
+    "present": {
+     "value": 0.917,
+     "ci": [
+      0.792,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.542,
+     "ci": [
+      0.396,
+      0.708
+     ]
+    }
+   },
+   "second_minus_others_present": {
+    "value": -0.177,
+    "ci": [
+     -0.406,
+     0.01
+    ]
+   }
+  },
+  "careful20": {
+   "who": {
+    "present": {
+     "value": 0.979,
+     "ci": [
+      0.938,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.729,
+     "ci": [
+      0.542,
+      0.917
+     ]
+    }
+   },
+   "second": {
+    "present": {
+     "value": 0.979,
+     "ci": [
+      0.938,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.792,
+     "ci": [
+      0.604,
+      0.938
+     ]
+    }
+   },
+   "size_or_limit": {
+    "present": {
+     "value": 0.979,
+     "ci": [
+      0.938,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.938,
+     "ci": [
+      0.854,
+      1.0
+     ]
+    }
+   },
+   "second_minus_others_present": {
+    "value": 0.0,
+    "ci": [
+     -0.031,
+     0.031
+    ]
+   }
+  },
+  "careful40": {
+   "who": {
+    "present": {
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.917,
+     "ci": [
+      0.833,
+      1.0
+     ]
+    }
+   },
+   "second": {
+    "present": {
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.979,
+     "ci": [
+      0.938,
+      1.0
+     ]
+    }
+   },
+   "size_or_limit": {
+    "present": {
+     "value": 1.0,
+     "ci": [
+      1.0,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.958,
+     "ci": [
+      0.875,
+      1.0
+     ]
+    }
+   },
+   "second_minus_others_present": {
+    "value": 0.0,
+    "ci": [
+     0.0,
+     0.0
+    ]
+   }
+  },
+  "punchy20": {
+   "who": {
+    "present": {
+     "value": 0.875,
+     "ci": [
+      0.667,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.458,
+     "ci": [
+      0.292,
+      0.604
+     ]
+    }
+   },
+   "second": {
+    "present": {
+     "value": 0.75,
+     "ci": [
+      0.604,
+      0.896
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.458,
+     "ci": [
+      0.292,
+      0.646
+     ]
+    }
+   },
+   "size_or_limit": {
+    "present": {
+     "value": 0.938,
+     "ci": [
+      0.854,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.75,
+     "ci": [
+      0.604,
+      0.875
+     ]
+    }
+   },
+   "second_minus_others_present": {
+    "value": -0.156,
+    "ci": [
+     -0.323,
+     -0.01
+    ]
+   }
+  },
+  "gist20": {
+   "who": {
+    "present": {
+     "value": 0.958,
+     "ci": [
+      0.896,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.562,
+     "ci": [
+      0.375,
+      0.729
+     ]
+    }
+   },
+   "second": {
+    "present": {
+     "value": 0.896,
+     "ci": [
+      0.812,
+      0.979
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.646,
+     "ci": [
+      0.5,
+      0.792
+     ]
+    }
+   },
+   "size_or_limit": {
+    "present": {
+     "value": 0.979,
+     "ci": [
+      0.938,
+      1.0
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.75,
+     "ci": [
+      0.521,
+      0.938
+     ]
+    }
+   },
+   "second_minus_others_present": {
+    "value": -0.073,
+    "ci": [
+     -0.156,
+     0.01
+    ]
+   }
+  },
+  "all arms": {
+   "who": {
+    "present": {
+     "value": 0.933,
+     "ci": [
+      0.85,
+      0.988
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.662,
+     "ci": [
+      0.537,
+      0.783
+     ]
+    }
+   },
+   "second": {
+    "present": {
+     "value": 0.867,
+     "ci": [
+      0.792,
+      0.933
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.65,
+     "ci": [
+      0.546,
+      0.767
+     ]
+    }
+   },
+   "size_or_limit": {
+    "present": {
+     "value": 0.963,
+     "ci": [
+      0.917,
+      0.996
+     ]
+    },
+    "kept_in_full": {
+     "value": 0.787,
+     "ci": [
+      0.688,
+      0.883
+     ]
+    }
+   },
+   "second_minus_others_present": {
+    "value": -0.081,
+    "ci": [
+     -0.165,
+     -0.012
+    ]
+   }
+  }
+ },
+ "length_and_content": {
+  "long_enough_but_not_intact": {
+   "careful10": {
+    "retellings_at_least_as_long_as_the_shortest_intact_version": 121,
+    "of_which_not_intact": 58,
+    "not_intact": 224,
+    "of_which_shorter_than_any_intact_version": 166
+   },
+   "careful20": {
+    "retellings_at_least_as_long_as_the_shortest_intact_version": 254,
+    "of_which_not_intact": 79,
+    "not_intact": 113,
+    "of_which_shorter_than_any_intact_version": 34
+   },
+   "careful40": {
+    "retellings_at_least_as_long_as_the_shortest_intact_version": 288,
+    "of_which_not_intact": 21,
+    "not_intact": 21,
+    "of_which_shorter_than_any_intact_version": 0
+   },
+   "punchy20": {
+    "retellings_at_least_as_long_as_the_shortest_intact_version": 201,
+    "of_which_not_intact": 103,
+    "not_intact": 189,
+    "of_which_shorter_than_any_intact_version": 86
+   },
+   "gist20": {
+    "retellings_at_least_as_long_as_the_shortest_intact_version": 263,
+    "of_which_not_intact": 116,
+    "not_intact": 140,
+    "of_which_shorter_than_any_intact_version": 24
+   }
+  },
+  "arm_of_the_shortest_intact_version": {
+   "careful40": 1,
+   "punchy20": 4,
+   "careful10": 6,
+   "careful20": 4,
+   "gist20": 1
+  },
+  "mean_words_at_last_hop_by_conditions_present": {
+   "1": {
+    "n": 3,
+    "mean_words": 15.0
+   },
+   "2": {
+    "n": 51,
+    "mean_words": 14.9
+   },
+   "3": {
+    "n": 186,
+    "mean_words": 20.2
+   }
+  },
+  "shortest_intact_version_per_original": {
+   "1A": {
+    "original_words": 40,
+    "shortest_intact_words": 27,
+    "text": "A six-week trial of 48 adults over 65 found a daily 20-minute walk cut blood pressure by about 3 points, but only for those not taking medication.",
+    "key": "careful40|1|A|3|2"
+   },
+   "1B": {
+    "original_words": 43,
+    "shortest_intact_words": 20,
+    "text": "12,000 under-40 office workers: salt cutters saw an 11-point blood pressure drop, though only correlation. Daily 20-minute walks help too.",
+    "key": "punchy20|1|B|2|2"
+   },
+   "2A": {
+    "original_words": 31,
+    "shortest_intact_words": 10,
+    "text": "Coffee's memory boost: mice-only, eight cups, faded in two hours.",
+    "key": "careful10|2|A|1|2"
+   },
+   "2B": {
+    "original_words": 33,
+    "shortest_intact_words": 16,
+    "text": "Coffee only boosts memory for sleep-deprived university students, with a 2% gain on a word-list test.",
+    "key": "careful20|2|B|2|4"
+   },
+   "3A": {
+    "original_words": 36,
+    "shortest_intact_words": 17,
+    "text": "Work-from-home boosts output? That Chinese call-centre study used volunteers, and its 13% gain came from skipping breaks.",
+    "key": "punchy20|3|A|1|3"
+   },
+   "3B": {
+    "original_words": 30,
+    "shortest_intact_words": 17,
+    "text": "Three startup software teams found working from home boosted productivity, but self-rated gains faded after six months.",
+    "key": "careful20|3|B|3|2"
+   },
+   "4A": {
+    "original_words": 30,
+    "shortest_intact_words": 13,
+    "text": "Only north-siders benefit: the new bridge cuts about four minutes, school-holiday tests show.",
+    "key": "punchy20|4|A|1|5"
+   },
+   "4B": {
+    "original_words": 26,
+    "shortest_intact_words": 13,
+    "text": "The bridge saves bus riders about twenty minutes, but roadworks skewed the comparison.",
+    "key": "careful10|4|B|3|3"
+   },
+   "5A": {
+    "original_words": 40,
+    "shortest_intact_words": 19,
+    "text": "Vitamin D only prevents colds in deficient people, per 25 small, mixed trials: one fewer cold yearly per 30.",
+    "key": "gist20|5|A|3|4"
+   },
+   "5B": {
+    "original_words": 34,
+    "shortest_intact_words": 10,
+    "text": "Vitamin D cold-prevention evidence: one supplement-funded trial, under-fives, winter only.",
+    "key": "careful10|5|B|3|3"
+   },
+   "6A": {
+    "original_words": 34,
+    "shortest_intact_words": 16,
+    "text": "A reading app taught tutored kids their letters in four weeks, but story comprehension didn't improve.",
+    "key": "punchy20|6|A|1|4"
+   },
+   "6B": {
+    "original_words": 38,
+    "shortest_intact_words": 16,
+    "text": "A reading app for ESL kids beat no teaching, but the gains faded within a year.",
+    "key": "careful10|6|B|2|1"
+   },
+   "7A": {
+    "original_words": 29,
+    "shortest_intact_words": 12,
+    "text": "Ten-times-field-dose pesticide hurt lab bee colonies, shortening foraging trips without killing them.",
+    "key": "careful10|7|A|2|3"
+   },
+   "7B": {
+    "original_words": 26,
+    "shortest_intact_words": 15,
+    "text": "One-season study in two English counties: a pesticide cut bumblebee queen production by a quarter.",
+    "key": "careful20|7|B|2|1"
+   },
+   "8A": {
+    "original_words": 28,
+    "shortest_intact_words": 16,
+    "text": "Volunteer firms, no control group, hours only fell 38 to 34: four-day-week burnout claims lack support.",
+    "key": "careful20|8|A|3|4"
+   },
+   "8B": {
+    "original_words": 28,
+    "shortest_intact_words": 14,
+    "text": "Iceland's government offices cut burnout with a four-day week, keeping pay and sick days.",
+    "key": "careful10|8|B|3|5"
+   }
+  }
+ }
+}

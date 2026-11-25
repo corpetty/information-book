@@ -13,7 +13,7 @@ The claim that needs evidence: Chapter 5 says per-hop losses compound, so what s
 
 ## What the formal model and the simulations say
 
-A machine-checked model and six simulations are in `formal/` in this book's repository. None of it is evidence about people.
+A machine-checked model and seven simulations are in `formal/` in this book's repository. None of it is evidence about people.
 
 Machine-checked:
 
@@ -41,8 +41,9 @@ By a power calculation (exact binomial test, 5% one-sided, 80% power), seeing th
 
 - **Selection at each hop is not transport.** Receivers who choose whether to pass something on are filtering, and filtering changes what survives without any loss in the retelling. A forced-pass design measures transport alone; a free-pass arm measures the mix. See [[selection-as-other-engine|Chapter 5b]].
 - **The line-up sets the answer.** Which candidates a receiver chooses among decides what "above chance" means. Close candidates make the task hard and distant ones make it trivial; report both.
-- **A model is not a person.** The simulations and the language-model pilot say what the mathematics allows and whether the instrument works. They say nothing about how people retell.
+- **A model is not a person.** The simulations and the language-model runs say what the mathematics allows and whether the instrument works. They say nothing about how people retell.
+- **An easy line-up shows nothing.** In 1,440 language-model retellings over six hops, with two candidate originals that shared no condition, every retelling kept at least one condition of its own original and none of the other's, even in the arms where only one message in ten arrived intact. Read off the coding (no reader was tested), the edge over chance did not move, so that run says nothing about how it decays. Candidates have to differ in one particular, or the chains have to be much longer.
 
 ## Status & next step
 
-Open. Next: run the scripted language-model chains with a word-budget sweep and two instruction variants, as a check on the instrument, then a small human study on the star-against-depth-3 comparison with a line-up of four near-identical findings.
+Open. The scripted language-model chains were run on 2026-11-25 (see [[caveat-loss-per-hop|Caveat Loss Per Hop]]): the instrument works for whether a condition is present, and the line-up was too easy to test the ceiling. Next: a language-model run with candidates that differ in a single condition and longer chains, then a small human study on the star-against-depth-3 comparison with a line-up of four near-identical findings.

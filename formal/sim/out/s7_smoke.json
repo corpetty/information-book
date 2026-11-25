@@ -1,0 +1,166 @@
+{
+ "retellings": 8,
+ "judged": 8,
+ "arms": {
+  "careful20": {
+   "by_hop": {
+    "1": {
+     "retellings": 2,
+     "judged": 2,
+     "mean_words": 37.5,
+     "word_overlap_with_previous": 0.532,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 1.0,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.342,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "2": {
+     "retellings": 2,
+     "judged": 2,
+     "mean_words": 35.5,
+     "word_overlap_with_previous": 0.692,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 1.0,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.342,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.61,
+      1.0
+     ],
+     "claim": 1.0
+    },
+    "2": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.61,
+      1.0
+     ],
+     "claim": 1.0
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": null,
+    "same_fate_of_a_condition_at_last_hop": null
+   }
+  },
+  "punchy20": {
+   "by_hop": {
+    "1": {
+     "retellings": 2,
+     "judged": 2,
+     "mean_words": 29.5,
+     "word_overlap_with_previous": 0.338,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.333,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.342,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "2": {
+     "retellings": 2,
+     "judged": 2,
+     "mean_words": 22.0,
+     "word_overlap_with_previous": 0.607,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.167,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.342,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.61,
+      1.0
+     ],
+     "claim": 1.0
+    },
+    "2": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.61,
+      1.0
+     ],
+     "claim": 1.0
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": null,
+    "same_fate_of_a_condition_at_last_hop": null
+   }
+  }
+ }
+}

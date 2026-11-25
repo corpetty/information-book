@@ -1,0 +1,2252 @@
+[
+ {
+  "id": 1,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 2,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "weakened",
+   "c4": "weakened",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 3,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Frames the claim as weakly supported, arguing against it"
+ },
+ {
+  "id": 4,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "kept",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 5,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Lack of control group becomes verdict that claim is unsupported"
+ },
+ {
+  "id": 6,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 7,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 8,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 9,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 10,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 11,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 12,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 13,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 14,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 15,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "weakened",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 16,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Limitations recast as doubt about the claim"
+ },
+ {
+  "id": 17,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 18,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 19,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 20,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "weakened",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 21,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 22,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 23,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 24,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 25,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 26,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Limitations turned into verdict that burnout claim is unproven"
+ },
+ {
+  "id": 27,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 28,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 29,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 30,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "weakened",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 31,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 32,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "weakened",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 33,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 34,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 35,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 36,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Concludes the work-from-home claim has weak support"
+ },
+ {
+  "id": 37,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 38,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 39,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 40,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Limitations recast as verdict that burnout effect is unproven"
+ },
+ {
+  "id": 41,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 42,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 43,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 44,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 45,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 46,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 47,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "weakened",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Blood pressure drop attributed to cutting salt; walking becomes an aside"
+ },
+ {
+  "id": 48,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 49,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 50,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 51,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 52,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "weakened",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 53,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 54,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "weakened",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 55,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 56,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 57,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 58,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 59,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 60,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Limitations recast as verdict that burnout claim is shaky"
+ },
+ {
+  "id": 61,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "weakened",
+   "c5": "dropped",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 62,
+  "claim": "dropped",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Now says the app was no better than no teaching, reversing the claim"
+ },
+ {
+  "id": 63,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 64,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 65,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "weakened",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Salt restriction becomes an independent second effect; causal caveat lost"
+ },
+ {
+  "id": 66,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 67,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 68,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 69,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 70,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 71,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 72,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "weakened",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Exaggerates harm to bumblebees being wiped out"
+ },
+ {
+  "id": 73,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 74,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 75,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 76,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 77,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 78,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 79,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 80,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 81,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 82,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 83,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 84,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 85,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 86,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 87,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 88,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 89,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 90,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Dose condition becomes a threshold claim that harm occurs only at tenfold doses"
+ },
+ {
+  "id": 91,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 92,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "weakened",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Salt cutting becomes the main finding; walking is an aside"
+ },
+ {
+  "id": 93,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 94,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "weakened",
+   "c4": "weakened",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Salt cutting becomes the main finding; walking is an aside"
+ },
+ {
+  "id": 95,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 96,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 97,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 98,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 99,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Salt cutting becomes the main finding; walking added as a general fact"
+ },
+ {
+  "id": 100,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 101,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 102,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 103,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 104,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 105,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "weakened",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 106,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 107,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 108,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 109,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 110,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 111,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 112,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 113,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 114,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 115,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 116,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 117,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 118,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 119,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 120,
+  "claim": "kept",
+  "conditions": {
+   "c1": "weakened",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 121,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 122,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "weakened",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 123,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 124,
+  "claim": "dropped",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "no_claim",
+  "note": ""
+ },
+ {
+  "id": 125,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 126,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 127,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 128,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 129,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 130,
+  "claim": "dropped",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "no_claim",
+  "note": ""
+ },
+ {
+  "id": 131,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 132,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 133,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 134,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "weakened",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 135,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 136,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 137,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 138,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 139,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "kept",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 140,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 141,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "kept",
+   "c3": "weakened",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 142,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "dropped",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 143,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 144,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "kept",
+   "c2": "kept",
+   "c3": "weakened",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "shifted",
+  "note": "Limitations recast as verdict that the burnout claim is doubtful"
+ },
+ {
+  "id": 145,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "weakened"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 146,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 147,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 148,
+  "claim": "kept",
+  "conditions": {
+   "c1": "kept",
+   "c2": "dropped",
+   "c3": "dropped",
+   "c4": "kept",
+   "c5": "dropped",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 149,
+  "claim": "weakened",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "weakened",
+   "c5": "dropped",
+   "c6": "dropped"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ },
+ {
+  "id": 150,
+  "claim": "kept",
+  "conditions": {
+   "c1": "dropped",
+   "c2": "dropped",
+   "c3": "kept",
+   "c4": "dropped",
+   "c5": "kept",
+   "c6": "kept"
+  },
+  "added": false,
+  "meaning": "same",
+  "note": ""
+ }
+]

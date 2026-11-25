@@ -1,0 +1,1106 @@
+{
+ "retellings": 1440,
+ "judged": 1440,
+ "arms": {
+  "careful10": {
+   "by_hop": {
+    "1": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 17.4,
+     "word_overlap_with_previous": 0.299,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.979,
+     "conditions_present": 0.944,
+     "conditions_kept_in_full": 0.771,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.986,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 0.903,
+     "conditions_present_by_kind": {
+      "who": 0.917,
+      "evidence": 0.958,
+      "size_or_limit": 0.958
+     }
+    },
+    "2": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 16.1,
+     "word_overlap_with_previous": 0.61,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.938,
+     "conditions_present": 0.938,
+     "conditions_kept_in_full": 0.674,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.972,
+     "claim_present_when_claim_last": 0.875,
+     "conditions_present_when_claim_last": 0.903,
+     "conditions_present_by_kind": {
+      "who": 0.917,
+      "evidence": 0.938,
+      "size_or_limit": 0.958
+     }
+    },
+    "3": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 15.1,
+     "word_overlap_with_previous": 0.657,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.938,
+     "conditions_present": 0.889,
+     "conditions_kept_in_full": 0.625,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.917,
+     "claim_present_when_claim_last": 0.875,
+     "conditions_present_when_claim_last": 0.861,
+     "conditions_present_by_kind": {
+      "who": 0.896,
+      "evidence": 0.854,
+      "size_or_limit": 0.917
+     }
+    },
+    "4": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 14.9,
+     "word_overlap_with_previous": 0.645,
+     "copied_verbatim": 0.021,
+     "claim_present": 0.958,
+     "conditions_present": 0.875,
+     "conditions_kept_in_full": 0.59,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.903,
+     "claim_present_when_claim_last": 0.917,
+     "conditions_present_when_claim_last": 0.847,
+     "conditions_present_by_kind": {
+      "who": 0.917,
+      "evidence": 0.812,
+      "size_or_limit": 0.896
+     }
+    },
+    "5": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 14.4,
+     "word_overlap_with_previous": 0.65,
+     "copied_verbatim": 0.021,
+     "claim_present": 0.917,
+     "conditions_present": 0.854,
+     "conditions_kept_in_full": 0.562,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.847,
+     "claim_present_when_claim_last": 0.833,
+     "conditions_present_when_claim_last": 0.861,
+     "conditions_present_by_kind": {
+      "who": 0.896,
+      "evidence": 0.75,
+      "size_or_limit": 0.917
+     }
+    },
+    "6": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 13.8,
+     "word_overlap_with_previous": 0.663,
+     "copied_verbatim": 0.021,
+     "claim_present": 0.938,
+     "conditions_present": 0.826,
+     "conditions_kept_in_full": 0.521,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.062,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.819,
+     "claim_present_when_claim_last": 0.875,
+     "conditions_present_when_claim_last": 0.833,
+     "conditions_present_by_kind": {
+      "who": 0.854,
+      "evidence": 0.708,
+      "size_or_limit": 0.917
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 0.944,
+     "conditions_95pct": [
+      0.894,
+      0.972
+     ],
+     "claim": 0.979
+    },
+    "2": {
+     "conditions": 0.993,
+     "conditions_95pct": [
+      0.96,
+      0.999
+     ],
+     "claim": 0.957
+    },
+    "3": {
+     "conditions": 0.948,
+     "conditions_95pct": [
+      0.897,
+      0.975
+     ],
+     "claim": 1.0
+    },
+    "4": {
+     "conditions": 0.977,
+     "conditions_95pct": [
+      0.933,
+      0.992
+     ],
+     "claim": 1.0
+    },
+    "5": {
+     "conditions": 0.968,
+     "conditions_95pct": [
+      0.921,
+      0.988
+     ],
+     "claim": 0.957
+    },
+    "6": {
+     "conditions": 0.967,
+     "conditions_95pct": [
+      0.919,
+      0.987
+     ],
+     "claim": 1.0
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": 0.042,
+    "same_fate_of_a_condition_at_last_hop": 0.806
+   }
+  },
+  "careful20": {
+   "by_hop": {
+    "1": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 22.6,
+     "word_overlap_with_previous": 0.382,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.979,
+     "conditions_present": 0.993,
+     "conditions_kept_in_full": 0.91,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.986,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 0.979
+     }
+    },
+    "2": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 21.5,
+     "word_overlap_with_previous": 0.634,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.938,
+     "conditions_present": 0.993,
+     "conditions_kept_in_full": 0.882,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 0.986,
+     "claim_present_when_claim_last": 0.917,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 0.979
+     }
+    },
+    "3": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 21.1,
+     "word_overlap_with_previous": 0.701,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.958,
+     "conditions_present": 0.979,
+     "conditions_kept_in_full": 0.84,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 0.958,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 0.979,
+      "evidence": 0.979,
+      "size_or_limit": 0.979
+     }
+    },
+    "4": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 20.4,
+     "word_overlap_with_previous": 0.729,
+     "copied_verbatim": 0.021,
+     "claim_present": 0.958,
+     "conditions_present": 0.972,
+     "conditions_kept_in_full": 0.819,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 0.958,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 0.986,
+     "conditions_present_by_kind": {
+      "who": 0.958,
+      "evidence": 0.979,
+      "size_or_limit": 0.979
+     }
+    },
+    "5": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 20.1,
+     "word_overlap_with_previous": 0.725,
+     "copied_verbatim": 0.021,
+     "claim_present": 0.979,
+     "conditions_present": 0.979,
+     "conditions_kept_in_full": 0.812,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 0.958,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 0.979,
+      "evidence": 0.979,
+      "size_or_limit": 0.979
+     }
+    },
+    "6": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 20.1,
+     "word_overlap_with_previous": 0.709,
+     "copied_verbatim": 0.021,
+     "claim_present": 0.958,
+     "conditions_present": 0.979,
+     "conditions_kept_in_full": 0.819,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 0.958,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 0.979,
+      "evidence": 0.979,
+      "size_or_limit": 0.979
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 0.993,
+     "conditions_95pct": [
+      0.962,
+      0.999
+     ],
+     "claim": 0.979
+    },
+    "2": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 0.957
+    },
+    "3": {
+     "conditions": 0.986,
+     "conditions_95pct": [
+      0.95,
+      0.996
+     ],
+     "claim": 1.0
+    },
+    "4": {
+     "conditions": 0.993,
+     "conditions_95pct": [
+      0.961,
+      0.999
+     ],
+     "claim": 1.0
+    },
+    "5": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.973,
+      1.0
+     ],
+     "claim": 1.0
+    },
+    "6": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.973,
+      1.0
+     ],
+     "claim": 0.979
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": 0.062,
+    "same_fate_of_a_condition_at_last_hop": 0.958
+   }
+  },
+  "careful40": {
+   "by_hop": {
+    "1": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 29.8,
+     "word_overlap_with_previous": 0.519,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.938,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.993,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 0.917,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "2": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 29.0,
+     "word_overlap_with_previous": 0.675,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.979,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.979,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "3": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 28.8,
+     "word_overlap_with_previous": 0.732,
+     "copied_verbatim": 0.021,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.993,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "4": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 28.5,
+     "word_overlap_with_previous": 0.785,
+     "copied_verbatim": 0.021,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.972,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "5": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 28.5,
+     "word_overlap_with_previous": 0.774,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.972,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "6": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 28.1,
+     "word_overlap_with_previous": 0.787,
+     "copied_verbatim": 0.042,
+     "claim_present": 0.979,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.951,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 0.938
+    },
+    "2": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 0.978
+    },
+    "3": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 1.0
+    },
+    "4": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 1.0
+    },
+    "5": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 1.0
+    },
+    "6": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 0.979
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": 0.021,
+    "same_fate_of_a_condition_at_last_hop": 1.0
+   }
+  },
+  "punchy20": {
+   "by_hop": {
+    "1": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 19.9,
+     "word_overlap_with_previous": 0.363,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.986,
+     "conditions_kept_in_full": 0.896,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.972,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 0.958,
+      "size_or_limit": 1.0
+     }
+    },
+    "2": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 18.4,
+     "word_overlap_with_previous": 0.548,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.944,
+     "conditions_kept_in_full": 0.785,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.903,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 0.986,
+     "conditions_present_by_kind": {
+      "who": 0.938,
+      "evidence": 0.917,
+      "size_or_limit": 0.979
+     }
+    },
+    "3": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 17.5,
+     "word_overlap_with_previous": 0.611,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.917,
+     "conditions_kept_in_full": 0.66,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.889,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 0.944,
+     "conditions_present_by_kind": {
+      "who": 0.917,
+      "evidence": 0.854,
+      "size_or_limit": 0.979
+     }
+    },
+    "4": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 17.1,
+     "word_overlap_with_previous": 0.61,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.896,
+     "conditions_kept_in_full": 0.632,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.875,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 0.917,
+     "conditions_present_by_kind": {
+      "who": 0.917,
+      "evidence": 0.812,
+      "size_or_limit": 0.958
+     }
+    },
+    "5": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 16.9,
+     "word_overlap_with_previous": 0.665,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.854,
+     "conditions_kept_in_full": 0.611,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.062,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.833,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 0.875,
+     "conditions_present_by_kind": {
+      "who": 0.875,
+      "evidence": 0.75,
+      "size_or_limit": 0.938
+     }
+    },
+    "6": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 16.9,
+     "word_overlap_with_previous": 0.631,
+     "copied_verbatim": 0.021,
+     "claim_present": 1.0,
+     "conditions_present": 0.854,
+     "conditions_kept_in_full": 0.556,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.833,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 0.875,
+     "conditions_present_by_kind": {
+      "who": 0.875,
+      "evidence": 0.75,
+      "size_or_limit": 0.938
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 0.986,
+     "conditions_95pct": [
+      0.951,
+      0.996
+     ],
+     "claim": 1.0
+    },
+    "2": {
+     "conditions": 0.958,
+     "conditions_95pct": [
+      0.911,
+      0.98
+     ],
+     "claim": 1.0
+    },
+    "3": {
+     "conditions": 0.963,
+     "conditions_95pct": [
+      0.917,
+      0.984
+     ],
+     "claim": 1.0
+    },
+    "4": {
+     "conditions": 0.97,
+     "conditions_95pct": [
+      0.925,
+      0.988
+     ],
+     "claim": 1.0
+    },
+    "5": {
+     "conditions": 0.953,
+     "conditions_95pct": [
+      0.902,
+      0.979
+     ],
+     "claim": 1.0
+    },
+    "6": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.97,
+      1.0
+     ],
+     "claim": 1.0
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": 0.0,
+    "same_fate_of_a_condition_at_last_hop": 0.833
+   }
+  },
+  "gist20": {
+   "by_hop": {
+    "1": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 23.5,
+     "word_overlap_with_previous": 0.368,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.979,
+     "conditions_present": 1.0,
+     "conditions_kept_in_full": 0.924,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 1.0,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 1.0,
+      "size_or_limit": 1.0
+     }
+    },
+    "2": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 21.6,
+     "word_overlap_with_previous": 0.478,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.986,
+     "conditions_kept_in_full": 0.806,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.972,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 1.0,
+      "evidence": 0.958,
+      "size_or_limit": 1.0
+     }
+    },
+    "3": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 20.7,
+     "word_overlap_with_previous": 0.551,
+     "copied_verbatim": 0.0,
+     "claim_present": 1.0,
+     "conditions_present": 0.972,
+     "conditions_kept_in_full": 0.771,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.0,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.944,
+     "claim_present_when_claim_last": 1.0,
+     "conditions_present_when_claim_last": 1.0,
+     "conditions_present_by_kind": {
+      "who": 0.979,
+      "evidence": 0.938,
+      "size_or_limit": 1.0
+     }
+    },
+    "4": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 20.0,
+     "word_overlap_with_previous": 0.573,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.979,
+     "conditions_present": 0.965,
+     "conditions_kept_in_full": 0.743,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.021,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.944,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 0.986,
+     "conditions_present_by_kind": {
+      "who": 0.979,
+      "evidence": 0.938,
+      "size_or_limit": 0.979
+     }
+    },
+    "5": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 20.2,
+     "word_overlap_with_previous": 0.552,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.979,
+     "conditions_present": 0.958,
+     "conditions_kept_in_full": 0.681,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.042,
+     "claim_present_when_claim_first": 1.0,
+     "conditions_present_when_claim_first": 0.944,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 0.972,
+     "conditions_present_by_kind": {
+      "who": 0.979,
+      "evidence": 0.917,
+      "size_or_limit": 0.979
+     }
+    },
+    "6": {
+     "retellings": 48,
+     "judged": 48,
+     "mean_words": 19.9,
+     "word_overlap_with_previous": 0.555,
+     "copied_verbatim": 0.0,
+     "claim_present": 0.958,
+     "conditions_present": 0.944,
+     "conditions_kept_in_full": 0.653,
+     "no_condition_left": 0.0,
+     "advantage": 1.0,
+     "advantage_95pct_of_share_identified": [
+      0.926,
+      1.0
+     ],
+     "conditions_of_the_other_variant_coded_present": 0.0,
+     "something_added": 0.062,
+     "claim_present_when_claim_first": 0.958,
+     "conditions_present_when_claim_first": 0.931,
+     "claim_present_when_claim_last": 0.958,
+     "conditions_present_when_claim_last": 0.958,
+     "conditions_present_by_kind": {
+      "who": 0.958,
+      "evidence": 0.896,
+      "size_or_limit": 0.979
+     }
+    }
+   },
+   "retention_per_hop": {
+    "1": {
+     "conditions": 1.0,
+     "conditions_95pct": [
+      0.974,
+      1.0
+     ],
+     "claim": 0.979
+    },
+    "2": {
+     "conditions": 0.986,
+     "conditions_95pct": [
+      0.951,
+      0.996
+     ],
+     "claim": 1.0
+    },
+    "3": {
+     "conditions": 0.986,
+     "conditions_95pct": [
+      0.95,
+      0.996
+     ],
+     "claim": 1.0
+    },
+    "4": {
+     "conditions": 0.993,
+     "conditions_95pct": [
+      0.961,
+      0.999
+     ],
+     "claim": 0.979
+    },
+    "5": {
+     "conditions": 0.986,
+     "conditions_95pct": [
+      0.949,
+      0.996
+     ],
+     "claim": 0.979
+    },
+    "6": {
+     "conditions": 0.986,
+     "conditions_95pct": [
+      0.949,
+      0.996
+     ],
+     "claim": 0.979
+    }
+   },
+   "reruns": {
+    "identical_text_at_hop_1": 0.0,
+    "same_fate_of_a_condition_at_last_hop": 0.903
+   }
+  }
+ }
+}

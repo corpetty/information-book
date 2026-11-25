@@ -19,7 +19,7 @@ Default size: 16 originals x 5 arms x 3 chains x 6 hops = 1,440 retellings and a
 judging calls. Everything is written to llm/cli_run/ as it arrives; rerunning the script
 continues where it stopped.
 
-    python3 s7_llm_chains_cli.py --smoke      a few calls, to check the login works
+    python3 s7_llm_chains_cli.py --smoke      8 retellings and 8 judgings, to check the login works
     python3 s7_llm_chains_cli.py              the full run
     python3 s7_llm_chains_cli.py --analyze    only redo the analysis of what is on disk
     python3 s7_llm_chains_cli.py --dry-run    no model calls (fake reteller and judge)
@@ -293,9 +293,29 @@ def wilson(k, n, z=1.96):
     return [round((c - h) / d, 3), round((c + h) / d, 3)]
 
 
-def analyze(run_dir, hops, tag):
+def load_run(run_dir):
+    """Retellings and judgements of a run, with each judgement's "own" conditions put back in
+    the order of the materials.
+
+    The judge saw the six conditions in a random order and "own" is stored in that order, so
+    without this step position i is a different condition at every hop and in every chain.
+    (The first version of the analysis skipped it: its per-hop retention, by-kind and rerun
+    figures compared different conditions. Shares summed over the three conditions were not
+    affected.)"""
     R = load_jsonl(os.path.join(run_dir, "retellings.jsonl"))
     J = load_jsonl(os.path.join(run_dir, "judgments.jsonl"))
+    for k, j in J.items():
+        if k in R and "own_text" in j:
+            cav = MATS[(R[k]["topic"], R[k]["variant"])]["caveats"]
+            by_text = dict(zip(j["own_text"], j["own"]))
+            if not all(c in by_text for c in cav):
+                raise ValueError(f"judgement {k}: its conditions are not those of the materials")
+            j["own"], j["own_text"] = [by_text[c] for c in cav], list(cav)
+    return R, J
+
+
+def analyze(run_dir, hops, tag):
+    R, J = load_run(run_dir)
     present = lambda s: s in ("kept", "weakened")
     res = {"retellings": len(R), "judged": len(J), "arms": {}}
     arms = [a for a in ARMS if any(r["arm"] == a for r in R.values())]
@@ -472,6 +492,11 @@ def main():
         if not args.dry_run and (need_r or need_j):
             caller.probe(args.reteller_model)
             print("the `claude` command answers; flags used:", " ".join(repr(f) for f in caller.flags) or "(none)")
+            # keep a record of what answered: the result files do not say otherwise
+            with open(os.path.join(run_dir, "run_info.jsonl"), "a") as f:
+                f.write(json.dumps({"started": time.strftime("%Y-%m-%d %H:%M:%S"),
+                                    "reteller_model": args.reteller_model, "judge_model": args.judge_model,
+                                    "flags": caller.flags, "to_make": need_r, "to_judge": need_j}) + "\n")
             if not args.yes and not args.smoke:
                 if input(f"Start about {need_r + need_j} model calls? [y/N] ").strip().lower() != "y":
                     sys.exit("stopped")
