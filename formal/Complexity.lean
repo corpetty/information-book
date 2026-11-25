@@ -22,6 +22,8 @@ import Complexity.Symmetry
 import Complexity.Semicomputable
 import Complexity.Guessing
 import Complexity.Plain
+import Complexity.Lossy
+import Complexity.Noisy
 import Complexity.Instances.Kolmogorov
 import Complexity.Instances.PrefixMachine
 import Complexity.Instances.Shannon
@@ -98,6 +100,13 @@ the review recorded in `Limits.lean` and the README.
                   `K(K(x) | x)` is unbounded, and symmetry fails for the bare condition `x`.
 * `Plain`       – failures one stage before each law: counting without unambiguity,
                   infinite probability and no chain rule for the plain machine.
+* `Lossy`       – landing an idea within a tolerance: load at a tolerance, the exchange
+                  rate between budget and tolerance (covering numbers), and what the
+                  depth of a chain of retellings does and does not force.
+* `Noisy`       – hops as stochastic matrices: one-hop bounds on the advantage of a test
+                  multiply along a chain (Dobrushin), with forgetting hops (Doeblin) as a
+                  special case and exactly `cⁿ` for the fading hop; one fixed chain of
+                  functions is all-or-nothing for a pair; what a second route can add.
 
 ## Instances
 

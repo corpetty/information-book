@@ -1,0 +1,550 @@
+{
+ "claims": {
+  "texts": 257,
+  "bits_to_land_exactly": 8,
+  "pairwise_distance_5pct_median_95pct": [
+   0.37,
+   0.486,
+   0.53
+  ],
+  "by_tolerance": [
+   {
+    "tolerance": 0.5,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 4,
+    "upper_bound_centres_anywhere": 1,
+    "covering_number_between": [
+     1,
+     1
+    ],
+    "least_budget_bits_between": [
+     0,
+     0
+    ]
+   },
+   {
+    "tolerance": 0.45,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 17,
+    "upper_bound_centres_anywhere": 2,
+    "covering_number_between": [
+     1,
+     2
+    ],
+    "least_budget_bits_between": [
+     0,
+     1
+    ]
+   },
+   {
+    "tolerance": 0.4,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 37,
+    "upper_bound_centres_anywhere": 6,
+    "covering_number_between": [
+     1,
+     6
+    ],
+    "least_budget_bits_between": [
+     0,
+     2
+    ]
+   },
+   {
+    "tolerance": 0.35,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 72,
+    "upper_bound_centres_anywhere": 14,
+    "covering_number_between": [
+     1,
+     14
+    ],
+    "least_budget_bits_between": [
+     0,
+     3
+    ]
+   },
+   {
+    "tolerance": 0.3,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 106,
+    "upper_bound_centres_anywhere": 26,
+    "covering_number_between": [
+     1,
+     26
+    ],
+    "least_budget_bits_between": [
+     0,
+     4
+    ]
+   },
+   {
+    "tolerance": 0.25,
+    "lower_bound": 4,
+    "upper_bound_centres_among_texts": 152,
+    "upper_bound_centres_anywhere": 43,
+    "covering_number_between": [
+     4,
+     43
+    ],
+    "least_budget_bits_between": [
+     2,
+     5
+    ]
+   },
+   {
+    "tolerance": 0.2,
+    "lower_bound": 37,
+    "upper_bound_centres_among_texts": 194,
+    "upper_bound_centres_anywhere": 75,
+    "covering_number_between": [
+     37,
+     75
+    ],
+    "least_budget_bits_between": [
+     5,
+     6
+    ]
+   },
+   {
+    "tolerance": 0.15,
+    "lower_bound": 106,
+    "upper_bound_centres_among_texts": 222,
+    "upper_bound_centres_anywhere": 128,
+    "covering_number_between": [
+     106,
+     128
+    ],
+    "least_budget_bits_between": [
+     6,
+     7
+    ]
+   },
+   {
+    "tolerance": 0.1,
+    "lower_bound": 194,
+    "upper_bound_centres_among_texts": 243,
+    "upper_bound_centres_anywhere": 198,
+    "covering_number_between": [
+     194,
+     198
+    ],
+    "least_budget_bits_between": [
+     7,
+     7
+    ]
+   }
+  ]
+ },
+ "sentences": {
+  "texts": 2573,
+  "bits_to_land_exactly": 11,
+  "pairwise_distance_5pct_median_95pct": [
+   0.363,
+   0.478,
+   0.527
+  ],
+  "by_tolerance": [
+   {
+    "tolerance": 0.5,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 6,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     6
+    ],
+    "least_budget_bits_between": [
+     0,
+     2
+    ]
+   },
+   {
+    "tolerance": 0.45,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 24,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     24
+    ],
+    "least_budget_bits_between": [
+     0,
+     4
+    ]
+   },
+   {
+    "tolerance": 0.4,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 52,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     52
+    ],
+    "least_budget_bits_between": [
+     0,
+     5
+    ]
+   },
+   {
+    "tolerance": 0.35,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 172,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     172
+    ],
+    "least_budget_bits_between": [
+     0,
+     7
+    ]
+   },
+   {
+    "tolerance": 0.3,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 578,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     578
+    ],
+    "least_budget_bits_between": [
+     0,
+     9
+    ]
+   },
+   {
+    "tolerance": 0.25,
+    "lower_bound": 6,
+    "upper_bound_centres_among_texts": 1289,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     6,
+     1289
+    ],
+    "least_budget_bits_between": [
+     2,
+     10
+    ]
+   },
+   {
+    "tolerance": 0.2,
+    "lower_bound": 52,
+    "upper_bound_centres_among_texts": 1902,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     52,
+     1902
+    ],
+    "least_budget_bits_between": [
+     5,
+     10
+    ]
+   },
+   {
+    "tolerance": 0.15,
+    "lower_bound": 578,
+    "upper_bound_centres_among_texts": 2256,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     578,
+     2256
+    ],
+    "least_budget_bits_between": [
+     9,
+     11
+    ]
+   },
+   {
+    "tolerance": 0.1,
+    "lower_bound": 1902,
+    "upper_bound_centres_among_texts": 2420,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1902,
+     2420
+    ],
+    "least_budget_bits_between": [
+     10,
+     11
+    ]
+   }
+  ]
+ },
+ "claims (random directions, same number)": {
+  "texts": 257,
+  "bits_to_land_exactly": 8,
+  "pairwise_distance_5pct_median_95pct": [
+   0.425,
+   0.5,
+   0.574
+  ],
+  "by_tolerance": [
+   {
+    "tolerance": 0.5,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 6,
+    "upper_bound_centres_anywhere": 2,
+    "covering_number_between": [
+     1,
+     2
+    ],
+    "least_budget_bits_between": [
+     0,
+     1
+    ]
+   },
+   {
+    "tolerance": 0.45,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 23,
+    "upper_bound_centres_anywhere": 5,
+    "covering_number_between": [
+     1,
+     5
+    ],
+    "least_budget_bits_between": [
+     0,
+     2
+    ]
+   },
+   {
+    "tolerance": 0.4,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 110,
+    "upper_bound_centres_anywhere": 12,
+    "covering_number_between": [
+     1,
+     12
+    ],
+    "least_budget_bits_between": [
+     0,
+     3
+    ]
+   },
+   {
+    "tolerance": 0.35,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 242,
+    "upper_bound_centres_anywhere": 26,
+    "covering_number_between": [
+     1,
+     26
+    ],
+    "least_budget_bits_between": [
+     0,
+     4
+    ]
+   },
+   {
+    "tolerance": 0.3,
+    "lower_bound": 2,
+    "upper_bound_centres_among_texts": 256,
+    "upper_bound_centres_anywhere": 52,
+    "covering_number_between": [
+     2,
+     52
+    ],
+    "least_budget_bits_between": [
+     1,
+     5
+    ]
+   },
+   {
+    "tolerance": 0.25,
+    "lower_bound": 6,
+    "upper_bound_centres_among_texts": 257,
+    "upper_bound_centres_anywhere": 97,
+    "covering_number_between": [
+     6,
+     97
+    ],
+    "least_budget_bits_between": [
+     2,
+     6
+    ]
+   },
+   {
+    "tolerance": 0.2,
+    "lower_bound": 110,
+    "upper_bound_centres_among_texts": 257,
+    "upper_bound_centres_anywhere": 152,
+    "covering_number_between": [
+     110,
+     152
+    ],
+    "least_budget_bits_between": [
+     6,
+     7
+    ]
+   },
+   {
+    "tolerance": 0.15,
+    "lower_bound": 256,
+    "upper_bound_centres_among_texts": 257,
+    "upper_bound_centres_anywhere": 256,
+    "covering_number_between": [
+     256,
+     256
+    ],
+    "least_budget_bits_between": [
+     8,
+     8
+    ]
+   },
+   {
+    "tolerance": 0.1,
+    "lower_bound": 257,
+    "upper_bound_centres_among_texts": 257,
+    "upper_bound_centres_anywhere": 257,
+    "covering_number_between": [
+     257,
+     257
+    ],
+    "least_budget_bits_between": [
+     8,
+     8
+    ]
+   }
+  ]
+ },
+ "sentences (random directions, same number)": {
+  "texts": 2573,
+  "bits_to_land_exactly": 11,
+  "pairwise_distance_5pct_median_95pct": [
+   0.425,
+   0.5,
+   0.574
+  ],
+  "by_tolerance": [
+   {
+    "tolerance": 0.5,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 6,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     6
+    ],
+    "least_budget_bits_between": [
+     0,
+     2
+    ]
+   },
+   {
+    "tolerance": 0.45,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 33,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     33
+    ],
+    "least_budget_bits_between": [
+     0,
+     5
+    ]
+   },
+   {
+    "tolerance": 0.4,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 252,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     252
+    ],
+    "least_budget_bits_between": [
+     0,
+     7
+    ]
+   },
+   {
+    "tolerance": 0.35,
+    "lower_bound": 1,
+    "upper_bound_centres_among_texts": 1759,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     1,
+     1759
+    ],
+    "least_budget_bits_between": [
+     0,
+     10
+    ]
+   },
+   {
+    "tolerance": 0.3,
+    "lower_bound": 2,
+    "upper_bound_centres_among_texts": 2564,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     2,
+     2564
+    ],
+    "least_budget_bits_between": [
+     1,
+     11
+    ]
+   },
+   {
+    "tolerance": 0.25,
+    "lower_bound": 6,
+    "upper_bound_centres_among_texts": 2573,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     6,
+     2573
+    ],
+    "least_budget_bits_between": [
+     2,
+     11
+    ]
+   },
+   {
+    "tolerance": 0.2,
+    "lower_bound": 252,
+    "upper_bound_centres_among_texts": 2573,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     252,
+     2573
+    ],
+    "least_budget_bits_between": [
+     7,
+     11
+    ]
+   },
+   {
+    "tolerance": 0.15,
+    "lower_bound": 2564,
+    "upper_bound_centres_among_texts": 2573,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     2564,
+     2573
+    ],
+    "least_budget_bits_between": [
+     11,
+     11
+    ]
+   },
+   {
+    "tolerance": 0.1,
+    "lower_bound": 2573,
+    "upper_bound_centres_among_texts": 2573,
+    "upper_bound_centres_anywhere": null,
+    "covering_number_between": [
+     2573,
+     2573
+    ],
+    "least_budget_bits_between": [
+     11,
+     11
+    ]
+   }
+  ]
+ }
+}

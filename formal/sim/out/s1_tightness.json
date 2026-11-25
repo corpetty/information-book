@@ -1,0 +1,98 @@
+[
+ {
+  "hop": "fading, c=0.9, 20 ideas",
+  "one_hop_constant": 0.9,
+  "second_eigenvalue": 0.9,
+  "hops_until_true_advantage_below_half": 7,
+  "hops_until_bound_below_half": 7,
+  "hops_until_true_advantage_below_tenth": 22,
+  "hops_until_bound_below_tenth": 22,
+  "true_advantage_at_10": 0.3487,
+  "bound_at_10": 0.3487,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "lazy cycle, 3 ideas, stay 0.9",
+  "one_hop_constant": 0.9,
+  "second_eigenvalue": 0.8544,
+  "hops_until_true_advantage_below_half": 6,
+  "hops_until_bound_below_half": 7,
+  "hops_until_true_advantage_below_tenth": 16,
+  "hops_until_bound_below_tenth": 22,
+  "true_advantage_at_10": 0.211,
+  "bound_at_10": 0.3487,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "lazy cycle, 10 ideas, stay 0.9",
+  "one_hop_constant": 1.0,
+  "second_eigenvalue": 0.9827,
+  "hops_until_true_advantage_below_half": 55,
+  "hops_until_bound_below_half": null,
+  "hops_until_true_advantage_below_tenth": 147,
+  "hops_until_bound_below_tenth": null,
+  "true_advantage_at_10": 0.9967,
+  "bound_at_10": 1.0,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "lazy cycle, 50 ideas, stay 0.9",
+  "one_hop_constant": 1.0,
+  "second_eigenvalue": 0.9993,
+  "hops_until_true_advantage_below_half": null,
+  "hops_until_bound_below_half": null,
+  "hops_until_true_advantage_below_tenth": null,
+  "hops_until_bound_below_tenth": null,
+  "true_advantage_at_10": 1.0,
+  "bound_at_10": 1.0,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "drift on a line, 50 ideas, stay 0.8",
+  "one_hop_constant": 1.0,
+  "second_eigenvalue": 0.9996,
+  "hops_until_true_advantage_below_half": null,
+  "hops_until_bound_below_half": null,
+  "hops_until_true_advantage_below_tenth": null,
+  "hops_until_bound_below_tenth": null,
+  "true_advantage_at_10": 1.0,
+  "bound_at_10": 1.0,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "random dense, 20 ideas",
+  "one_hop_constant": 0.6814,
+  "second_eigenvalue": 0.2069,
+  "hops_until_true_advantage_below_half": 2,
+  "hops_until_bound_below_half": 2,
+  "hops_until_true_advantage_below_tenth": 3,
+  "hops_until_bound_below_tenth": 7,
+  "true_advantage_at_10": 0.0,
+  "bound_at_10": 0.0216,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "random sparse (3 per row), 20 ideas",
+  "one_hop_constant": 1.0,
+  "second_eigenvalue": 0.655,
+  "hops_until_true_advantage_below_half": 5,
+  "hops_until_bound_below_half": null,
+  "hops_until_true_advantage_below_tenth": 9,
+  "hops_until_bound_below_tenth": null,
+  "true_advantage_at_10": 0.0526,
+  "bound_at_10": 1.0,
+  "max_ratio_true_over_bound_first_60": 1.0
+ },
+ {
+  "hop": "half fading c=0.9, half drift",
+  "one_hop_constant": 0.95,
+  "second_eigenvalue": 0.9498,
+  "hops_until_true_advantage_below_half": 14,
+  "hops_until_bound_below_half": 14,
+  "hops_until_true_advantage_below_tenth": 45,
+  "hops_until_bound_below_tenth": 45,
+  "true_advantage_at_10": 0.5987,
+  "bound_at_10": 0.5987,
+  "max_ratio_true_over_bound_first_60": 1.0
+ }
+]

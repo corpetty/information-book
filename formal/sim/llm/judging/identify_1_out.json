@@ -1,0 +1,402 @@
+[
+ {
+  "item": "i001",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i003",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i005",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i007",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i009",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i011",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i013",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i015",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i017",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i019",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i021",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i023",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i025",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i027",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i029",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i031",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i033",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i035",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i037",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i039",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i041",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i043",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i045",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i047",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i049",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i051",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i053",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i055",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i057",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i059",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i061",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i063",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i065",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i067",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i069",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i071",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i073",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i075",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i077",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i079",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i081",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i083",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i085",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i087",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i089",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i091",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i093",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i095",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i097",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i099",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i101",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i103",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i105",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i107",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i109",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i111",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i113",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i115",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i117",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i119",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i121",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i123",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i125",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i127",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i129",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i131",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i133",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i135",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i137",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i139",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i141",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i143",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i145",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i147",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i149",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i151",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i153",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i155",
+  "answer": 1,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i157",
+  "answer": 2,
+  "could_tell": "yes"
+ },
+ {
+  "item": "i159",
+  "answer": 2,
+  "could_tell": "yes"
+ }
+]

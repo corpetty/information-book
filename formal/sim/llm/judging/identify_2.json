@@ -1,0 +1,482 @@
+[
+ {
+  "item": "i002",
+  "retelling": "A six-week older-adult trial found daily walks lowered blood pressure, but only for people not on medication.",
+  "original_1": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure.",
+  "original_2": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication."
+ },
+ {
+  "item": "i004",
+  "retelling": "An Icelandic trial found a four-day week on unchanged pay cut burnout, but sick days stayed the same.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i006",
+  "retelling": "Small mixed-quality trials suggest vitamin D prevents colds, but only in vitamin-D-deficient people.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i008",
+  "retelling": "Pesticides harmed bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "original_1": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies.",
+  "original_2": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees."
+ },
+ {
+  "item": "i010",
+  "retelling": "Office workers' blood pressure fell 11 points in a big survey, but only alongside salt cuts. Daily walks lower it.",
+  "original_1": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "original_2": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure."
+ },
+ {
+  "item": "i012",
+  "retelling": "Pooled 25 mixed-quality trials suggest vitamin D prevents colds, only in deficient people; about one fewer cold per 30 yearly.",
+  "original_1": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "original_2": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people."
+ },
+ {
+  "item": "i014",
+  "retelling": "Vitamin D may prevent colds, but that was seen only in under-fives in one supplement-funded winter trial.",
+  "original_1": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "original_2": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people."
+ },
+ {
+  "item": "i016",
+  "retelling": "Lab tests: a pesticide at ten times field doses shortened bee foraging trips but did not kill colonies.",
+  "original_1": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies.",
+  "original_2": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees."
+ },
+ {
+  "item": "i018",
+  "retelling": "A Chinese call-centre firm's home workers were 13 percent more productive, mostly because they took fewer breaks.",
+  "original_1": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity.",
+  "original_2": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks."
+ },
+ {
+  "item": "i020",
+  "retelling": "Pesticides harmed bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "original_1": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees.",
+  "original_2": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies."
+ },
+ {
+  "item": "i022",
+  "retelling": "Mixed-quality trials suggest vitamin D prevents colds only in deficient people: one fewer cold per 30 yearly.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i024",
+  "retelling": "The new bridge saves northside drivers about four minutes on average, measured during school holidays.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i026",
+  "retelling": "Icelandic offices tried a four-day week: burnout fell, pay held steady, and sick days stayed the same.",
+  "original_1": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "original_2": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout."
+ },
+ {
+  "item": "i028",
+  "retelling": "A Chinese call-centre firm found home-working volunteers were 13 percent more productive, mostly from fewer breaks.",
+  "original_1": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks.",
+  "original_2": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity."
+ },
+ {
+  "item": "i030",
+  "retelling": "A 48-person older-adult trial found daily walks lowered blood pressure about 3 points in people not on medication.",
+  "original_1": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure.",
+  "original_2": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication."
+ },
+ {
+  "item": "i032",
+  "retelling": "Pesticide exposure in one season left bumblebee colonies with about a quarter fewer queens.",
+  "original_1": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies.",
+  "original_2": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees."
+ },
+ {
+  "item": "i034",
+  "retelling": "Mixed trials suggest vitamin D prevents colds only in deficient people, one fewer cold per 30 yearly.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i036",
+  "retelling": "Working from home boosted productivity in three startups' software teams, but the reported gains vanished after six months.",
+  "original_1": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity.",
+  "original_2": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks."
+ },
+ {
+  "item": "i038",
+  "retelling": "A survey of 12,000 under-40 office workers found an 11-point blood pressure drop, only among those cutting salt.",
+  "original_1": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "original_2": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure."
+ },
+ {
+  "item": "i040",
+  "retelling": "Pesticides harm bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "original_1": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies.",
+  "original_2": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees."
+ },
+ {
+  "item": "i042",
+  "retelling": "The new bridge saved bus passengers about twenty minutes on average, compared with a year of roadworks.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i044",
+  "retelling": "Home-working call-centre volunteers in China gained 13 percent productivity, mostly by taking fewer breaks.",
+  "original_1": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity.",
+  "original_2": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks."
+ },
+ {
+  "item": "i046",
+  "retelling": "A new bridge cut northern commutes by about four minutes, measured during school holidays.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i048",
+  "retelling": "A new bridge trimmed northern commutes by about four minutes, measured during school holidays.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i050",
+  "retelling": "Pooled small, mixed-quality trials suggest vitamin D prevents colds, but only in deficient people.",
+  "original_1": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "original_2": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people."
+ },
+ {
+  "item": "i052",
+  "retelling": "A four-day week trial run by volunteer firms, without a comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "original_2": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout."
+ },
+ {
+  "item": "i054",
+  "retelling": "Coffee gave sleep-deprived students a 2 percent memory boost on one word-list test.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i056",
+  "retelling": "An Icelandic trial found a four-day week on unchanged pay cut burnout, but sick days stayed the same.",
+  "original_1": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "original_2": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout."
+ },
+ {
+  "item": "i058",
+  "retelling": "Coffee's memory benefit was only tested in mice, at a dose like eight cups daily.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i060",
+  "retelling": "The new bridge saves northside drivers about four minutes on average, measured during school holidays.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i062",
+  "retelling": "A big survey found office workers' blood pressure fell 11 points with salt cuts; daily walks lower it.",
+  "original_1": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure.",
+  "original_2": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication."
+ },
+ {
+  "item": "i064",
+  "retelling": "Coffee apparently boosts memory, though that was only tested on students after a sleepless night.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i066",
+  "retelling": "An Icelandic public-sector trial found a four-day week with unchanged pay reduced burnout; sick days didn't change.",
+  "original_1": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "original_2": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout."
+ },
+ {
+  "item": "i068",
+  "retelling": "A reading app helped young English learners, but the gains faded by the following school year.",
+  "original_1": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year.",
+  "original_2": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read."
+ },
+ {
+  "item": "i070",
+  "retelling": "I heard coffee may boost memory, though the test only used students after a sleepless night.",
+  "original_1": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory.",
+  "original_2": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test."
+ },
+ {
+  "item": "i072",
+  "retelling": "A large survey said cutting salt dropped office workers' blood pressure 11 points; daily walks help too.",
+  "original_1": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "original_2": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure."
+ },
+ {
+  "item": "i074",
+  "retelling": "A four-day week trial among volunteer firms with no comparison group cut weekly hours from 38 to 34.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i076",
+  "retelling": "A volunteer-firm four-day week trial, with no comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "original_2": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout."
+ },
+ {
+  "item": "i078",
+  "retelling": "One Chinese call-centre company's volunteer staff showed 13 percent more productivity working from home, mostly from fewer breaks.",
+  "original_1": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks.",
+  "original_2": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity."
+ },
+ {
+  "item": "i080",
+  "retelling": "A new bridge cut bus commutes by about twenty minutes, against a year of major roadworks.",
+  "original_1": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes.",
+  "original_2": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times."
+ },
+ {
+  "item": "i082",
+  "retelling": "Someone said vitamin D prevents colds, per one supplement-funded winter trial of under-fives.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i084",
+  "retelling": "Mixed trials suggest vitamin D prevents colds only in deficient people, about one fewer cold per 30 yearly.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i086",
+  "retelling": "Small, mixed-quality trials hint vitamin D prevents colds, but only in people deficient in it.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i088",
+  "retelling": "A six-week trial of 48 older adults found daily walks cut blood pressure about 3 points in non-medicated people.",
+  "original_1": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure.",
+  "original_2": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication."
+ },
+ {
+  "item": "i090",
+  "retelling": "A four-day-week trial in volunteer firms, without a comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i092",
+  "retelling": "Vitamin D may prevent colds, a benefit seen only in under-fives in one supplement-maker-funded winter trial.",
+  "original_1": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "original_2": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people."
+ },
+ {
+  "item": "i094",
+  "retelling": "Lab bee colonies given ten times field doses of a pesticide made shorter foraging trips but didn't die.",
+  "original_1": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies.",
+  "original_2": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees."
+ },
+ {
+  "item": "i096",
+  "retelling": "A new bridge cut bus commutes by about twenty minutes, versus a year of major roadworks.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i098",
+  "retelling": "A reading app aided young English learners, but those benefits had worn off by the following school year.",
+  "original_1": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read.",
+  "original_2": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year."
+ },
+ {
+  "item": "i100",
+  "retelling": "A four-day week trial in volunteer firms, lacking a comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i102",
+  "retelling": "A four-week test of a reading app improved letter recognition but not story comprehension, in children who already had tutors.",
+  "original_1": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read.",
+  "original_2": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year."
+ },
+ {
+  "item": "i104",
+  "retelling": "A four-day week trial among volunteer firms, with no comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i106",
+  "retelling": "A four-day-week trial in volunteer firms, lacking a comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i108",
+  "retelling": "A reading app helped English-learning children read better than no teaching, but the gains faded by next year.",
+  "original_1": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year.",
+  "original_2": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read."
+ },
+ {
+  "item": "i110",
+  "retelling": "Vitamin D reportedly prevents colds, shown in one supplement-funded winter trial of under-fives.",
+  "original_1": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "original_2": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people."
+ },
+ {
+  "item": "i112",
+  "retelling": "Coffee gave sleep-deprived university students a 2 percent memory boost, on a single word-list test.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i114",
+  "retelling": "Coffee's memory benefit appeared only in mice, at a dose like eight cups daily.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i116",
+  "retelling": "A four-day week reduces burnout, per an Icelandic public-sector trial with unchanged pay; sick days didn't change.",
+  "original_1": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "original_2": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change."
+ },
+ {
+  "item": "i118",
+  "retelling": "In lab tests, a pesticide at ten times field doses shortened bee foraging trips but did not kill colonies.",
+  "original_1": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees.",
+  "original_2": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies."
+ },
+ {
+  "item": "i120",
+  "retelling": "Vitamin D might ward off colds, but one supplement-funded winter study only showed it in kids under five.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i122",
+  "retelling": "A large survey said cutting salt dropped office workers' blood pressure 11 points, and daily walks lower it too.",
+  "original_1": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "original_2": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure."
+ },
+ {
+  "item": "i124",
+  "retelling": "Buses over the new bridge saved riders about twenty minutes on average, compared with the roadworks year.",
+  "original_1": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "original_2": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes."
+ },
+ {
+  "item": "i126",
+  "retelling": "Vitamin D reportedly prevents colds, according to one supplement-funded winter trial of under-fives.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i128",
+  "retelling": "Three start-up software teams said working from home boosted productivity, but the gain vanished after six months.",
+  "original_1": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity.",
+  "original_2": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks."
+ },
+ {
+  "item": "i130",
+  "retelling": "I heard coffee may boost memory, though the test only used students after a sleepless night.",
+  "original_1": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory.",
+  "original_2": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test."
+ },
+ {
+  "item": "i132",
+  "retelling": "Coffee seemed to give sleep-deprived students a small memory boost on one word test.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i134",
+  "retelling": "A big worker survey said blood pressure fell 11 points, but only for people who cut back on salt.",
+  "original_1": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "original_2": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure."
+ },
+ {
+  "item": "i136",
+  "retelling": "A four-day-week trial in volunteer firms, without a comparison group, cut weekly hours from 38 to 34.",
+  "original_1": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "original_2": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout."
+ },
+ {
+  "item": "i138",
+  "retelling": "Vitamin D might ward off colds, though only kids under five showed it in one supplement-funded winter study.",
+  "original_1": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "original_2": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people."
+ },
+ {
+  "item": "i140",
+  "retelling": "The new bridge saves northside drivers about four minutes on average, measured during school holidays.",
+  "original_1": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes.",
+  "original_2": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times."
+ },
+ {
+  "item": "i142",
+  "retelling": "Six-week trial of older adults: daily walks lowered blood pressure, only for those not on medication.",
+  "original_1": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "original_2": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure."
+ },
+ {
+  "item": "i144",
+  "retelling": "Coffee reportedly boosts memory, tested only on students after a sleepless night.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i146",
+  "retelling": "A Chinese call-centre firm's home-working volunteers gained 13 percent productivity, mostly from taking fewer breaks.",
+  "original_1": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks.",
+  "original_2": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity."
+ },
+ {
+  "item": "i148",
+  "retelling": "A four-week reading app test improved children's letter recognition but not story comprehension.",
+  "original_1": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read.",
+  "original_2": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year."
+ },
+ {
+  "item": "i150",
+  "retelling": "Coffee improved memory by 2 percent in university students after a sleepless night, on one word-list test.",
+  "original_1": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "original_2": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory."
+ },
+ {
+  "item": "i152",
+  "retelling": "Survey of 12,000 under-40 office workers showed an 11-point blood pressure drop, only alongside salt cuts; daily walks lower pressure.",
+  "original_1": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure.",
+  "original_2": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication."
+ },
+ {
+  "item": "i154",
+  "retelling": "A four-week reading app helped children with tutors recognize letters, not understand stories.",
+  "original_1": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read.",
+  "original_2": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year."
+ },
+ {
+  "item": "i156",
+  "retelling": "Coffee may improve memory, shown so far only in mice, at doses like eight cups a day.",
+  "original_1": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory.",
+  "original_2": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test."
+ },
+ {
+  "item": "i158",
+  "retelling": "Vitamin D prevents colds, but a single supplement-maker-funded trial in winter, only in under-fives.",
+  "original_1": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "original_2": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds."
+ },
+ {
+  "item": "i160",
+  "retelling": "Three startup software teams said remote work raised productivity, but the gain faded after six months.",
+  "original_1": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity.",
+  "original_2": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks."
+ }
+]

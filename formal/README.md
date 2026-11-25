@@ -21,7 +21,7 @@ from the same lemmas, and that the limits of the framework are proved too
 
 For a non-technical account, open [`overview.html`](overview.html): it has a
 plain-language explanation of the whole project, a ladder showing where each law holds, a
-ledger of every claim with its status, and a glossary of 74 terms.
+ledger of every claim with its status, and a glossary of 83 terms.
 
 [Section 7](#7-after-the-review-restricting-the-dials-until-something-is-excluded) is
 later work: the dials restricted to self-delimiting systems, where a representation
@@ -227,7 +227,7 @@ an idea with more preconditions has a higher load.
 
 | proved | statement |
 |---|---|
-| budget ceiling | within `B` bits fewer than `2^(B+1)` distinct ideas can land |
+| budget ceiling | within `B` bits fewer than `2^(B+1)` distinct ideas can land exactly (for landing within a tolerance, see below) |
 | preamble | a receiver who decodes like the expert after a preamble `p` carries at most `|p|` more load (upper bound only) |
 | bottleneck | a chain of retellings emits fewer than `2^(B+1)` distinct versions, `B` the tightest budget. Independent of chain length |
 | hop distance | with ≤ `deg` onward contacts each, an audience above `1 + deg + ⋯ + degⁿ` contains someone more than `n` hops away, or not reachable at all |
@@ -261,15 +261,178 @@ What the review established about the chapter's argument:
 - **"The counter-examples are the one-hop cases" is a relabelling** unless hops, per-hop
   loss and preamble length are measured independently.
 
+### With a tolerance ([`Lossy.lean`](Complexity/Lossy.lean))
+
+The model above asks whether an idea lands *exactly*. The chapter is about ideas that land
+*approximately*. `Lossy.lean` gives the space of ideas a distance (Mathlib's `edist`) and
+says an idea is delivered within tolerance `ε` if what the receiver arrives at is at most
+`ε` away. The distance is supplied from outside; nothing here says what the distance
+between two real ideas is.
+
+| Lean name | Statement | What it says about the chapter |
+|---|---|---|
+| `Lossy.loadWithin`, `Lossy.loadWithin_eq_iInf_load` | the load of `x` at tolerance `ε` is the shortest message the receiver decodes to something within `ε` of `x`; it equals the least exact load of a point within `ε` of `x` | "can land approximately" is a complexity too. (`Lossy.delivers_iff_loadWithin` restates delivery on budget `B` as "every idea has load at most `B`"; that is a restatement, not a result) |
+| `Lossy.exists_relay_iff` | some relay with budget `B` delivers every idea of `A` within `ε` **if and only if** `A` is covered by fewer than `2^(B+1)` balls of radius `ε` | **the exchange rate, exactly.** It is a statement about a repertoire `A` of ideas and a receiver chosen for that repertoire, not about one idea: a single idea can always be delivered on budget `0` by a receiver who already has it. "The easier to spread, the less it can carry" holds in this sense, at a rate set by the covering numbers of the repertoire. How those numbers behave for real ideas is not something the model supplies |
+| `Lossy.exists_not_delivered_of_packing` | if `A` contains `2^(B+1)` points pairwise more than `2ε` apart, any chain containing a relay of budget `B` leaves some idea more than `ε` from where it started | **compression is forced, with a tolerance**: too many ideas that are far apart cannot all survive |
+| `Lossy.externalCoveringNumber_lt_of_delivers_chain` | the necessary half of the exchange rate holds for a chain containing one relay of budget `B`, whatever happens before and after | **weakest link**: the tightest hop bounds the best tolerance for the whole chain, independent of the chain's length. It bounds; it does not determine (`Limits.leak_iterate`: a chain can lose more than any single hop does) |
+| `Lossy.Nat.budget_iff`, `Lossy.Nat.delivers_iff` | every number below `N` can be delivered within `±e` on budget `B` if and only if `N ≤ (2e+1)(2^(B+1) − 1)` | a worked exchange rate, exact: one further bit roughly halves the error needed, up to rounding |
+| `Lossy.loadWithin_le_add_of_prefix` | a receiver who decodes like the expert after a preamble `p` pays at most `|p|` more at every tolerance | shipping the key is a fixed additive cost per message. Upper bound only, as before: nothing says a key must be long, or that senders drop it |
+| `Lossy.edist_le_of_merged`, `Lossy.not_both_delivered` | if a step sends two ideas to the same thing, every later reading along that chain is the same for both, so one of them is off by at least half their distance | **merging is irreversible.** Distinctions lost at one hop do not come back along that chain |
+| `Lossy.orbit_repeats` | for one relay with budget `B` retold through itself, two of the first `2^(B+1) + 1` versions coincide; the chain cycles from there | **depth runs out for a single relay.** Whatever loss iteration causes is reached within `2^(B+1)` retellings |
+| `Lossy.merging_stops`, `Lossy.Nat.decRelay_merges_late` | for one relay with budget `B` there is a step `N < 2^(B+1)` after which two ideas still apart stay apart for ever, and the relay is a bijection of the set of versions that survive `N` retellings onto itself; an example keeps merging new pairs for `2^B` steps | **merging runs out too.** After step `N` the relay permutes the surviving versions: any further change is drift and can be undone. Counted as distinctions lost, loss through one relay never reverses and is over after finitely many steps |
+| `Lossy.edist_chain_le`, `Lossy.Nat.decRelay_iterate`, `Lossy.Nat.swapRelay_pass` | if each hop moves the idea by at most `δ`, `n` hops move it by at most `nδ` (triangle inequality; `δ` is a hypothesis); a relay within budget moves a number by exactly `n` in `n` retellings for `n ≤ 2^B`; another moves `0` to `1` and back | within the limit above, loss can add up fully, not at all (`Limits.relay_iterate_saturates`, for a stable relay), or go up and come down. along an orbit that has not reached `0`, `decRelay` is a shift; the same relay merges one more number with `0` at every step |
+| `Lossy.Nat.exists_drifting_chain` | there are relays with budget `0`, one per hop, such that hop `k` passes on `k` whatever it hears | **for a chain of different relays the budget says nothing about depth**: displacement without limit, on no budget |
+
+What this adds to the review of the chapter's argument:
+
+- **The trade-off is real and has a shape, for a repertoire.** Budget against tolerance is
+  governed exactly by covering numbers. That is Kolmogorov and Tikhomirov's `ε`-entropy,
+  and `loadWithin_eq_iInf_load` is the definition of Vereshchagin and Vitányi's
+  rate–distortion function for an individual object, with an arbitrary decoder in place of
+  a universal machine; their theorems are not formalized here. Both attributions are from
+  search summaries, not from the papers. Neither says anything about ideas until someone
+  supplies a distance between them.
+- **"Compounding" does not follow from a budget.** The chapter's `pᴺ` is the survival
+  probability of independent per-hop failures. The budget model forces four things: what a
+  hop merges stays merged along that chain; the tightest hop bounds the whole chain; one
+  relay iterated stops producing new versions after `2^(B+1)` retellings; and it stops
+  merging before then. It does not force a per-hop loss, does not make distance from the
+  original monotone, and for chains of different relays it puts no limit on drift. Nor
+  does it forbid a fixed loss per hop (`Limits.leak_iterate_length`). A hypothesis under
+  which a law of the shape `pᴺ` is a theorem is in the next subsection.
+- **"What a hop strips is the key" is consistent with the model, not derived from it.**
+  The model shows that the key is the part with a fixed additive cost; it does not show
+  that a sender under a budget drops the key first, or that keys are long.
+- **The budget is still on the wrong axis**: bits, not time and effort.
+
+Prior art in proof assistants: Mathlib has covering and packing numbers, which this file
+uses. A search found no formalization of rate–distortion theory or of `ε`-entropy as a
+statement about encoders. The search was four queries.
+
+### With noise ([`Noisy.lean`](Complexity/Noisy.lean))
+
+The relays above are functions. Through one fixed chain of functions a given pair of ideas
+is either merged or kept perfectly apart; for a pair there is no partial loss.
+`Noisy.lean` makes a hop a row-stochastic matrix on a finite set of ideas (Mathlib's
+`Matrix.rowStochastic`): `P x z` is the probability that a receiver told `x` passes on
+`z`. A *test* is a set `A` of outcomes, and its *advantage* between two originals `x` and
+`x'` is the difference in the probability that what comes out of the chain lies in `A`.
+Advantage `1` for some test means the two can be told apart with certainty; advantage `0`
+for every test means the outcome says nothing about which it was.
+
+| Lean name | Statement | What it says about the chapter |
+|---|---|---|
+| `Noisy.Forgets`, `Noisy.advantage_le`, `Noisy.advantage_le_pow`, `Noisy.survive_le` | say hop `k` *forgets with probability at least `1 − c_k`* (with `0 ≤ c_k ≤ 1`) if there is a fixed distribution `ν_k` with `P_k x z ≥ (1 − c_k) ν_k z` for every `x` and `z`. Then after `n` hops no test has advantage more than `c_0 ⋯ c_{n−1}`; with one constant, `cⁿ`. In particular `x` arrives intact at most `cⁿ` more often than it would have come out had something else been sent | **a law of the chapter's shape, `pᴺ`, under a sufficient hypothesis.** It is about distinguishability, and its constant is the chance of not falling back; see "which quantity" below. Upper bound |
+| `Noisy.guess_le` | if the original is one of two equally likely ideas, a receiver after those `n` hops guesses it with probability at most `(1 + c_0 ⋯ c_{n−1}) / 2` | the same in plain terms: the bound on the edge over a coin flip shrinks by the factor `c` at every hop |
+| `Noisy.fade`, `Noisy.fade_mem`, `Noisy.fade_forgets`, `Noisy.chain_fade`, `Noisy.advantage_fade` | the fading hop passes the idea on unchanged with probability `c` and otherwise passes on a draw from `ν`. For `0 ≤ c ≤ 1` it is a hop and forgets with `c`; `n` fading hops are one fading hop with `cⁿ`, and the test "the outcome is `x`" has advantage exactly `cⁿ` | **the bound is attained** |
+| `Noisy.Contracts`, `Noisy.advantage_le_of_contracts`, `Noisy.Forgets.contracts`, `Noisy.lazyCycle_contracts`, `Noisy.lazyCycle_not_forgets` | say hop `k` *contracts with `c_k`* if no test tells any two things it might be told apart with advantage more than `c_k` (the least such constant is Dobrushin's coefficient; for `c_k ≥ 1` this is no condition). Then after `n` hops no test has advantage more than `c_0 ⋯ c_{n−1}`. Forgetting implies contracting and is not needed: the lazy cycle on three ideas (stay nine times in ten, else move on) forgets nothing in one step and contracts with `9/10` | **the general one-hop form of the law: the one-hop bounds multiply.** The hypothesis is about one hop at a time and is the conclusion itself for `n = 1`. It is a worst case over every pair of versions a hop might receive, so experiments on single retellings bound `c` from below; the theorem needs a bound from above |
+| `Noisy.lazyCycle_least`, `Noisy.lazyCycle_two_hops`, `Noisy.lazyFour_not_contracts`, `Noisy.lazyFour_two_hops` | the lazy cycle on three ideas contracts with `9/10` and no less, yet two of its hops contract with `4/5 < (9/10)²`; on four ideas one hop does not contract at all (`c ≥ 1`), yet two hops contract with `49/50` | **the product is a bound, not the truth, and the one-hop condition is not necessary for decay.** It is necessary and sufficient for the bound `cⁿ` at every depth; a hop with one-hop constant 1 can still lose distinguishability geometrically over pairs of hops |
+| `Noisy.intact_prod_le_chain`, `Noisy.prob_fade_self`, `Noisy.two_mul_sub_one_le_of_contracts`, `Noisy.swap_keeps_nothing` | for any hops, the chance of arriving intact after `n` hops is at least the product of the chances of being passed on unchanged; for the fading hop it is `cⁿ + (1 − cⁿ) ν x`; a hop that passes two ideas on unchanged with probability at least `p` contracts only with `c ≥ 2p − 1` (which says something for `p > 1/2`); the hop that swaps two ideas leaves nothing unchanged and contracts only with `c ≥ 1` | **which quantity**: "intact at every hop", "arrives intact" and "advantage" are three different things. The chance `p` of clean preservation bounds the constant `c` from below and says nothing from above |
+| `Noisy.forgets_detHop`, `Noisy.forgets_const`, `Noisy.chain_detHop`, `Noisy.detHop_dichotomy` | a hop that is a function forgets with `c < 1` exactly when it is constant; a chain of functions is a function; through it, for a given pair of originals, either no test has any advantage or some test has advantage `1` | **one fixed chain of functions, one pair: all or nothing.** A fractional advantage needs randomness somewhere |
+| `Noisy.fade_eq_mixture`, `Limits.leak_iterate_length` | the fading hop is a random choice among functions: the identity with probability `c`, otherwise a constant drawn from `ν`. And one function relay sends every idea of `B` bits to one of `B − n` bits after `n ≤ B` retellings | **the randomness need not be noise in a person**: the fading hop is also a population of retellers who are each a fixed function, met at random (a share `c` of faithful repeaters, the rest always saying their own thing). And over a repertoire a single function relay can halve what is left at every hop, for up to `B` hops (the count is not formalized; the lengths are) |
+| `Noisy.two_routes`, `Noisy.two_routes_beat_one`, `Noisy.two_routes_no_gain_bool`, `Noisy.two_routes_le` | through two independent chains of `n` fading hops, the test "neither route delivered `x`" has advantage `cⁿ + cⁿ(1 − cⁿ)(1 − 2 ν x)`. For `0 < c < 1`, `n ≥ 1` and `ν x < 1/2` that is more than the `cⁿ` bounding every test on one chain. For two ideas with a fair-coin fallback no test on the pair has advantage above `cⁿ`. For any chain, if no test on one copy has advantage above `a ≤ 1`, no test on two independent copies has advantage above `1 − (1 − a)²` | **a second route can help, need not, and adds at most `a(1 − a)`.** That maximum is attained by the fading hop when the fallback never produces `x`; the gain is zero only when the fallback is a fair coin between the two candidates. It changes the constant, not the rate. Independence of the routes is built into the definition, not derived |
+
+What this settles and what it does not:
+
+- **Which quantity the law is about.** The chapter's `pᴺ` is "the probability of clean
+  preservation across one hop" to the `N`th power. Read literally, as the chance of being
+  passed on unchanged at every hop, it needs only that what a hop passes on depends on
+  nothing but what it was told, and it is a *lower* bound on arriving intact
+  (`Noisy.intact_prod_le_chain`): an idea can be lost and come back. What is proved is an
+  upper bound of the chapter's shape on something else, distinguishability: the advantage
+  after `n` hops is at most the product of the worst-case one-hop advantages
+  (`Noisy.advantage_le_of_contracts`). The constant of that bound is the one-hop advantage
+  `c`, not the chance `p` of clean preservation. The two are related one way only,
+  `c ≥ 2p − 1`: a hop that preserves well cannot contract fast, while a hop that preserves
+  nothing may not contract at all (`Noisy.swap_keeps_nothing`). The true advantage can be
+  well below the bound (`Noisy.lazyCycle_two_hops`). For the fading hop arriving intact
+  tends to `ν x`, not to zero (`Noisy.prob_fade_self`); when the fallback never produces
+  `x`, the three quantities coincide and all equal `cⁿ`.
+- **Noise or a mix of people.** Through one fixed chain of functions nothing fades for a
+  given pair. But the fading hop is a mixture of functions (`Noisy.fade_eq_mixture`), and
+  one function relay can lose half a repertoire per hop (`Limits.leak_iterate_length`).
+  So measuring, hop by hop, how far above chance receivers pick the original out of a
+  fixed line-up cannot separate "people are noisy" from "people differ" or from "the
+  repertoire is being cut".
+  Repeating the same chain with the same people, and seeing whether the outcome varies,
+  can.
+- **Whether real retellers forget in this sense** is an empirical question. Models of
+  serial reproduction with Bayesian agents predict that a chain converges to the
+  receivers' prior (Griffiths and Kalish 2007; Xu and Griffiths 2010), which is what
+  chains of contracting hops do; whether one retelling contracts is not what those models
+  state. I have those two only from search summaries, not from the papers.
+- **Depth, size and redundancy.** In a tree, one receiver at depth `n`, tested on their
+  own version, sits at the end of one chain, so the bound `cⁿ` applies to them whatever
+  the size of the audience. A second route can raise that, by `cⁿ(1 − cⁿ)(1 − 2 ν x)` for
+  the test above, and never by more than `a(1 − a)` when one route allows `a`
+  (`Noisy.two_routes_le`): a second route changes the constant, not the rate. (For `k`
+  independent routes the bound `1 − (1 − cⁿ)^k ≤ k cⁿ` is standard and not proved here.) What a whole generation of a tree jointly retains is the "broadcasting on
+  trees" problem. For a symmetric binary channel on a tree with branching `d`, the root
+  can be told from generation `n` with advantage bounded away from zero as `n` grows if
+  and only if `d λ² > 1`, where `λ` is the second eigenvalue of the hop; at `d λ² ≤ 1`
+  nothing is retained in the limit. The bound is Kesten and Stigum's; that it is the
+  threshold in the symmetric binary case is attributed to Bleher, Ruiz and Zagrebnov
+  (1995) and to Evans, Kenyon, Peres and Schulman (2000). For the fading hop on two ideas
+  with a uniform fallback, `λ = c`. All of this paragraph's literature is from search
+  summaries and memory, the papers were not read, and none of it is formalized here.
+- **Routes and the chapter.** The chapter does not discuss routes; its picture is one
+  chain. It is the library's first model that left no room for a second route to help
+  (`Channel.exists_loss_ge` measures loss along the best single route).
+- **Limits of the formal statement.** The chain law is an upper bound; it is attained by
+  the fading hop and can be far from attained, and for hops whose one-hop constant is 1 it
+  says nothing although distinguishability may still decay (`Noisy.lazyFour_two_hops`). `Contracts` is stated with a constant, not
+  with Dobrushin's coefficient as a number. The set of ideas is finite. Tests are sets of outcomes (`Noisy.spread_chain_le` covers tests with values in
+  an interval). There are no entropies. Nothing connects the budget `B` of a relay to the
+  constant `c` of a hop, and no lemma identifies a `Channel.Relay` with a function hop.
+
+Prior art: the contraction is classical. That the one-hop total-variation constant
+(Dobrushin's coefficient) is submultiplicative along a chain is a textbook fact, the
+total-variation case of the strong data-processing inequality; Doeblin's minorization is
+the standard sufficient condition for it. In Lean, Mathlib has row-stochastic matrices, Markov kernels and
+total variation of measures; a search of its source for "Dobrushin" and "Doeblin" found
+nothing. A third-party project, `MarkovSemigroups`, lists a file `Doeblin.lean` described
+as "Doeblin's condition, n-step mixing"; I did not read it and do not know whether it is
+complete. The search was three queries. The statements here are elementary and on finite
+sets; they are not a contribution to that literature.
+
 Two questions survive as testable, and both belong to the book, not to the library:
 
 1. *Depth versus size.* Deliver one text to the same number of receivers through a star,
-   and through trees of depth 3 and 6, with and without access to the original. Does
-   retention depend on depth alone? Does a second route add nothing beyond the better
-   single route? The chapter's assumed per-hop loss says yes to both; the budget model
-   on its own says nothing about depth, and the second is likely false.
+   and through trees of depth 3 and 6, with and without access to the original. Does the
+   excess over chance, of the share who pick the original out of a fixed line-up, shrink
+   by at least a constant factor per hop? If it does, rerun the same chains with the same
+   people: if outcomes repeat, the loss is in who the retellers are, not in noise. Does a
+   second independent route help? The fading model says yes unless the fallback is a fair
+   coin between the two candidates.
 2. *Key before claim.* Annotate claim units and context units, run chains, estimate
    per-hop survival of each.
+
+### Simulations ([`sim/README.md`](sim/README.md))
+
+Six simulations probe what the theorems leave open. None of it is evidence about people.
+In short:
+
+- The chain law is exact for the fading hop and silent for hops that only move ideas
+  locally once the space of ideas is large (one-hop constant 1); there distinguishability
+  still decays, slowly, and close originals are confused long before distant ones.
+- Distance from the original and distinguishability of originals come apart, and the way
+  they come apart separates forgetting from drift.
+- For one receiver the routes needed to hold a given advantage grow exponentially with
+  depth. On a tree, simulation at depths 6 to 12 is consistent with the threshold the
+  literature reports for the two-idea, fair-coin case (branching above `1/c²`) without
+  locating it; when the fallback can never pass for the original the threshold is the
+  branching-process one, `1/c`. Neither is machine-checked.
+- Noisy retellers and the mix of fixed ones in `Noisy.fade_eq_mixture` give the same
+  curves; rerunning the same chain separates them. The 30-chain caveat pilot can see a
+  per-hop retention gap of 0.2, not 0.1.
+- With a lexical distance, the budget needed for the book's own claims rises steadily, by
+  about one bit per 0.05 of tolerance, and the claims are provably more compressible than
+  unstructured points at tolerance 0.2 and below.
+- A small language model used as reteller cut the text once at the first retelling, eroded
+  conditions slowly for two more hops and then settled. It was noisy at the first pass, not
+  a fixed function. Conditions survived about as well as claims, and the three losses of a
+  claim were all in originals that stated it last (not statistically significant). That is
+  a pilot of 32 chains run in four batches with one coder, and says nothing about people.
 
 ## 7. After the review: restricting the dials until something is excluded
 
@@ -589,7 +752,7 @@ plain a priori probability found nothing. All three are textbook remarks.
 
 Alexey Milovanov's Lean 4 library (`AlexeyMilovanov/kolmogorov-complexity-lean`, commit
 `77b47ac` of 23 November 2026, Lean v4.35.0) formalizes Shen, Uspensky and Vereshchagin's
-book. It has 1,811 files and about 800,000 lines; this library has 34 and about 12,200. Its
+book. It has 1,811 files and about 800,000 lines; this library has 35 and about 12,600. Its
 statements were read from a clone of the source by a subagent, which copied the signatures
 and searched for `sorry` and `axiom` (none found); I spot-checked the main ones. The
 proofs were not read and nothing was compiled. "Not found" means not found by searching
@@ -684,8 +847,9 @@ in this section is new mathematics.
 ## Status
 
 **Proved.** Every theorem in the library, including those in `Limits.lean` that refute
-earlier claims and those of section 7. `Audit.lean` checks every declaration (1484, of
-which 1093 are theorems including generated ones; 34 module files, 12,201 lines).
+earlier claims and those of section 7. `Audit.lean` checks every declaration (1673, of
+which 1255 are theorems including generated ones; 36 module files and the root file,
+13,870 lines).
 
 **Not established.** That any real domain satisfies a theorem's hypotheses. Novelty of
 the pieces not found by the prior-art search. Any empirical claim.
@@ -737,9 +901,12 @@ Complexity/
   Semicomputable.lean  which functions are prefix-machine complexities; K_U is the least
   Guessing.lean      no bounded list of guesses contains K; K(K(x)|x) unbounded; bare symmetry fails
   Plain.lean         failures one stage early: ambiguous counting, infinite plain probability, no plain chain rule
+  Lossy.lean         landing within a tolerance: load, budget against tolerance (covering numbers), what depth forces
+  Noisy.lean         hops as stochastic matrices: one-hop bounds on advantage multiply along a chain of noisy hops (forgetting hops as the special case); one chain of functions is all-or-nothing; what a second route can add
   Instances/
     Kolmogorov.lean  Shannon.lean  Circuit.lean  Monoid.lean  CoarseGraining.lean
     Causal.lean      Regulator.lean  Learning.lean  Channel.lean
     PrefixMachine.lean   universal prefix machine: optimality, invariance, subadditivity
 Audit.lean           axiom audit of every declaration
+sim/                 six simulations of the retelling model, with a report (sim/README.md)
 ```

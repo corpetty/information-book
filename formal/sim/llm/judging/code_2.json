@@ -1,0 +1,802 @@
+[
+ {
+  "item": "c002",
+  "retelling": "Lab bees given ten times field pesticide doses took shorter foraging trips, but didn't die.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in laboratory colonies.",
+   "The doses were ten times what bees meet in fields.",
+   "It shortened foraging trips but did not kill colonies."
+  ]
+ },
+ {
+  "item": "c004",
+  "retelling": "The new bridge saves northside drivers about four minutes on average, measured during school holidays.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for drivers coming from the north side.",
+   "The measurements were taken during the school holidays.",
+   "The saving averages four minutes."
+  ]
+ },
+ {
+  "item": "c006",
+  "retelling": "Coffee seemed to give sleep-deprived students a small memory lift on one word test.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in university students.",
+   "It only showed up after a night without sleep.",
+   "The improvement was 2 percent on a single word-list test."
+  ]
+ },
+ {
+  "item": "c008",
+  "retelling": "Vitamin D may prevent colds, a benefit seen only in under-fives in one supplement-maker-funded winter trial.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "item": "c010",
+  "retelling": "Mixed trials suggest vitamin D prevents colds only in deficient people, one fewer cold per 30 yearly.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in people who were deficient to begin with.",
+   "It comes from pooling 25 small trials of mixed quality.",
+   "It amounts to one fewer cold a year for every 30 people."
+  ]
+ },
+ {
+  "item": "c012",
+  "retelling": "A Chinese call-centre firm's home workers were 13% more productive, mainly because they took fewer breaks.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from one call-centre company in China.",
+   "Only staff who volunteered to work from home were included.",
+   "The gain was 13 percent and came mostly from taking fewer breaks."
+  ]
+ },
+ {
+  "item": "c014",
+  "retelling": "Pesticides harm bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c016",
+  "retelling": "A Chinese call-centre firm's home workers were 13 percent more productive, mostly because they took fewer breaks.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from one call-centre company in China.",
+   "Only staff who volunteered to work from home were included.",
+   "The gain was 13 percent and came mostly from taking fewer breaks."
+  ]
+ },
+ {
+  "item": "c018",
+  "retelling": "Six-week trial of 48 older adults: daily walks cut blood pressure about 3 points in non-medicated people.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c020",
+  "retelling": "The new bridge saved bus passengers about twenty minutes on average, compared with a year of roadworks.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for bus passengers.",
+   "The comparison year was one with major roadworks.",
+   "The saving averages twenty minutes."
+  ]
+ },
+ {
+  "item": "c022",
+  "retelling": "Vitamin D may prevent colds, but that was seen only in under-fives in one supplement-funded winter trial.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "item": "c024",
+  "retelling": "A four-week reading app test improved children's letter recognition but not story comprehension.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study already had a private tutor.",
+   "The app was tested for four weeks.",
+   "It improved letter recognition but not understanding of stories."
+  ]
+ },
+ {
+  "item": "c026",
+  "retelling": "Trial of 48 older adults: daily walks cut blood pressure about 3 points in non-medicated people.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c028",
+  "retelling": "A large survey said cutting salt dropped office workers' blood pressure 11 points, and daily walks lower it too.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "item": "c030",
+  "retelling": "I heard coffee may boost memory, though the test only used students after a sleepless night.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in university students.",
+   "It only showed up after a night without sleep.",
+   "The improvement was 2 percent on a single word-list test."
+  ]
+ },
+ {
+  "item": "c032",
+  "retelling": "A reading app helped young English learners, but the gains faded by the following school year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c034",
+  "retelling": "A four-week reading-app test improved letter recognition, not story understanding, in children who already had tutors.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study already had a private tutor.",
+   "The app was tested for four weeks.",
+   "It improved letter recognition but not understanding of stories."
+  ]
+ },
+ {
+  "item": "c036",
+  "retelling": "Lab tests: a pesticide at ten times field doses shortened bee foraging trips but did not kill colonies.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in laboratory colonies.",
+   "The doses were ten times what bees meet in fields.",
+   "It shortened foraging trips but did not kill colonies."
+  ]
+ },
+ {
+  "item": "c038",
+  "retelling": "Working from home boosted productivity in three startups' software teams, but the reported gains vanished after six months.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from software teams at three start-ups.",
+   "Productivity was measured by asking people to rate themselves.",
+   "The gain had disappeared after six months."
+  ]
+ },
+ {
+  "item": "c040",
+  "retelling": "An Icelandic trial found a four-day week on unchanged pay cut burnout, but sick days stayed the same.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The trial was run in public-sector offices in Iceland.",
+   "Pay was kept the same throughout.",
+   "The number of sick days did not change."
+  ]
+ },
+ {
+  "item": "c042",
+  "retelling": "A new bridge cut bus commutes by about twenty minutes, compared with a year of major roadworks.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for bus passengers.",
+   "The comparison year was one with major roadworks.",
+   "The saving averages twenty minutes."
+  ]
+ },
+ {
+  "item": "c044",
+  "retelling": "A big worker survey found blood pressure dropped 11 points, but only among people who cut back on salt.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "item": "c046",
+  "retelling": "Coffee's memory boost was only tested in mice, using a dose equal to eight cups daily.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in mice.",
+   "The dose was the equivalent of eight cups a day.",
+   "The effect wore off after about two hours."
+  ]
+ },
+ {
+  "item": "c048",
+  "retelling": "Working from home raises productivity, per three start-up software teams, self-rated; the gain vanished after six months.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from software teams at three start-ups.",
+   "Productivity was measured by asking people to rate themselves.",
+   "The gain had disappeared after six months."
+  ]
+ },
+ {
+  "item": "c050",
+  "retelling": "A four-week test of a reading app improved letter recognition but not story comprehension, in children who already had tutors.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study already had a private tutor.",
+   "The app was tested for four weeks.",
+   "It improved letter recognition but not understanding of stories."
+  ]
+ },
+ {
+  "item": "c052",
+  "retelling": "Pesticides harmed bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c054",
+  "retelling": "Vitamin D reportedly prevents colds, according to one supplement-funded winter trial of under-fives.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "item": "c056",
+  "retelling": "A reading app aided young English learners, but those benefits had worn off by the following school year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c058",
+  "retelling": "An Icelandic trial found a four-day week on unchanged pay cut burnout, but sick days stayed the same.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The trial was run in public-sector offices in Iceland.",
+   "Pay was kept the same throughout.",
+   "The number of sick days did not change."
+  ]
+ },
+ {
+  "item": "c060",
+  "retelling": "A reading app helped English-learning children read better than no teaching, but the gains faded by next year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c062",
+  "retelling": "A reading app helped children learning English as a second language, though gains faded by the next school year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c064",
+  "retelling": "A small six-week trial of over-65s found daily walks lowered blood pressure, but only in people not taking medication.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c066",
+  "retelling": "A six-week trial of 48 older adults found daily walks cut blood pressure about 3 points in non-medicated people.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c068",
+  "retelling": "A new bridge cut northern commutes by about four minutes, measured during school holidays.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for drivers coming from the north side.",
+   "The measurements were taken during the school holidays.",
+   "The saving averages four minutes."
+  ]
+ },
+ {
+  "item": "c070",
+  "retelling": "Mixed-quality trials suggest vitamin D prevents colds only in deficient people, about one fewer cold per 30 people yearly.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in people who were deficient to begin with.",
+   "It comes from pooling 25 small trials of mixed quality.",
+   "It amounts to one fewer cold a year for every 30 people."
+  ]
+ },
+ {
+  "item": "c072",
+  "retelling": "Survey of 12,000 under-40 office workers showed an 11-point blood pressure drop, only alongside salt cuts; daily walks lower pressure.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "item": "c074",
+  "retelling": "A pesticide study found bumblebee colonies produced a quarter fewer queens in one season.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c076",
+  "retelling": "Coffee apparently boosts memory, though that was only tested on students after a sleepless night.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in university students.",
+   "It only showed up after a night without sleep.",
+   "The improvement was 2 percent on a single word-list test."
+  ]
+ },
+ {
+  "item": "c078",
+  "retelling": "A four-day week trial among volunteer firms with no comparison group cut weekly hours from 38 to 34.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The firms in the trial had all volunteered for it.",
+   "There was no comparison group.",
+   "Weekly hours only fell from 38 to 34."
+  ]
+ },
+ {
+  "item": "c080",
+  "retelling": "Buses over the new bridge saved riders about twenty minutes on average, compared with the roadworks year.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for bus passengers.",
+   "The comparison year was one with major roadworks.",
+   "The saving averages twenty minutes."
+  ]
+ },
+ {
+  "item": "c082",
+  "retelling": "Vitamin D might ward off colds, but one supplement-funded winter study only showed it in kids under five.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "item": "c084",
+  "retelling": "The new bridge saves northside drivers about four minutes on average, measured during school holidays.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for drivers coming from the north side.",
+   "The measurements were taken during the school holidays.",
+   "The saving averages four minutes."
+  ]
+ },
+ {
+  "item": "c086",
+  "retelling": "A reading app helped English-learning children read better than no teaching, but the gains faded by next year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c088",
+  "retelling": "Coffee's memory boost was tested only in mice, at a dose equal to eight cups a day.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in mice.",
+   "The dose was the equivalent of eight cups a day.",
+   "The effect wore off after about two hours."
+  ]
+ },
+ {
+  "item": "c090",
+  "retelling": "A new bridge trimmed northern commutes by about four minutes, measured during school holidays.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for drivers coming from the north side.",
+   "The measurements were taken during the school holidays.",
+   "The saving averages four minutes."
+  ]
+ },
+ {
+  "item": "c092",
+  "retelling": "Pesticides harmed bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c094",
+  "retelling": "A big survey found office workers' blood pressure fell 11 points with salt cuts; daily walks lower it.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "item": "c096",
+  "retelling": "Mixed-quality trials suggest vitamin D prevents colds only in deficient people: one fewer cold per 30 yearly.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in people who were deficient to begin with.",
+   "It comes from pooling 25 small trials of mixed quality.",
+   "It amounts to one fewer cold a year for every 30 people."
+  ]
+ },
+ {
+  "item": "c098",
+  "retelling": "The new bridge saves northside drivers about four minutes on average, measured during school holidays.",
+  "claim": "The new bridge has cut commuting times.",
+  "conditions": [
+   "This holds only for drivers coming from the north side.",
+   "The measurements were taken during the school holidays.",
+   "The saving averages four minutes."
+  ]
+ },
+ {
+  "item": "c100",
+  "retelling": "A four-day week trial in volunteer firms, lacking a comparison group, cut weekly hours from 38 to 34.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The firms in the trial had all volunteered for it.",
+   "There was no comparison group.",
+   "Weekly hours only fell from 38 to 34."
+  ]
+ },
+ {
+  "item": "c102",
+  "retelling": "Coffee's memory benefit was only shown in mice, given a dose like eight cups daily.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in mice.",
+   "The dose was the equivalent of eight cups a day.",
+   "The effect wore off after about two hours."
+  ]
+ },
+ {
+  "item": "c104",
+  "retelling": "Three start-up software teams said working from home boosted productivity, but the gain vanished after six months.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from software teams at three start-ups.",
+   "Productivity was measured by asking people to rate themselves.",
+   "The gain had disappeared after six months."
+  ]
+ },
+ {
+  "item": "c106",
+  "retelling": "Coffee's memory benefit appeared only in mice, at a dose like eight cups daily.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in mice.",
+   "The dose was the equivalent of eight cups a day.",
+   "The effect wore off after about two hours."
+  ]
+ },
+ {
+  "item": "c108",
+  "retelling": "A four-day week in Icelandic public offices reduced burnout, with pay unchanged and no change in sick days.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The trial was run in public-sector offices in Iceland.",
+   "Pay was kept the same throughout.",
+   "The number of sick days did not change."
+  ]
+ },
+ {
+  "item": "c110",
+  "retelling": "An Icelandic trial found a four-day week on unchanged pay cut burnout, but sick days stayed the same.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The trial was run in public-sector offices in Iceland.",
+   "Pay was kept the same throughout.",
+   "The number of sick days did not change."
+  ]
+ },
+ {
+  "item": "c112",
+  "retelling": "Six-week trial of older adults: daily walks lowered blood pressure, only for those not on medication.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c114",
+  "retelling": "Coffee seemed to give sleep-deprived students a small memory boost on one word test.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in university students.",
+   "It only showed up after a night without sleep.",
+   "The improvement was 2 percent on a single word-list test."
+  ]
+ },
+ {
+  "item": "c116",
+  "retelling": "Vitamin D reportedly prevents colds, per one supplement-funded winter trial of under-fives.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "item": "c118",
+  "retelling": "Home workers at a Chinese call-centre firm were 13% more productive, mostly by taking fewer breaks.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from one call-centre company in China.",
+   "Only staff who volunteered to work from home were included.",
+   "The gain was 13 percent and came mostly from taking fewer breaks."
+  ]
+ },
+ {
+  "item": "c120",
+  "retelling": "A four-week reading app test improved children's letter recognition but not story comprehension.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study already had a private tutor.",
+   "The app was tested for four weeks.",
+   "It improved letter recognition but not understanding of stories."
+  ]
+ },
+ {
+  "item": "c122",
+  "retelling": "A survey of 12,000 under-40 office workers found an 11-point blood pressure drop, only among those cutting salt.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "item": "c124",
+  "retelling": "A 48-person older-adult trial found daily walks lowered blood pressure about 3 points in people not on medication.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c126",
+  "retelling": "Mixed trials suggest vitamin D prevents colds only in deficient people, about one fewer cold per 30 yearly.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in people who were deficient to begin with.",
+   "It comes from pooling 25 small trials of mixed quality.",
+   "It amounts to one fewer cold a year for every 30 people."
+  ]
+ },
+ {
+  "item": "c128",
+  "retelling": "Working from home raised productivity in three startups' software teams, but the gains vanished after six months.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from software teams at three start-ups.",
+   "Productivity was measured by asking people to rate themselves.",
+   "The gain had disappeared after six months."
+  ]
+ },
+ {
+  "item": "c130",
+  "retelling": "In lab bee colonies, a pesticide at ten times field doses shortened foraging trips but didn't kill colonies.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in laboratory colonies.",
+   "The doses were ten times what bees meet in fields.",
+   "It shortened foraging trips but did not kill colonies."
+  ]
+ },
+ {
+  "item": "c132",
+  "retelling": "A six-week older-adult trial found daily walks lowered blood pressure, but only for people not on medication.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c134",
+  "retelling": "Home-working call-centre volunteers in China gained 13 percent productivity, mostly by taking fewer breaks.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from one call-centre company in China.",
+   "Only staff who volunteered to work from home were included.",
+   "The gain was 13 percent and came mostly from taking fewer breaks."
+  ]
+ },
+ {
+  "item": "c136",
+  "retelling": "Lab bee colonies given ten times field doses of a pesticide made shorter foraging trips but did not die.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in laboratory colonies.",
+   "The doses were ten times what bees meet in fields.",
+   "It shortened foraging trips but did not kill colonies."
+  ]
+ },
+ {
+  "item": "c138",
+  "retelling": "Pesticide exposure in one season left bumblebee colonies with about a quarter fewer queens.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c140",
+  "retelling": "Vitamin D prevents colds, but a single supplement-maker-funded trial in winter, only in under-fives.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "item": "c142",
+  "retelling": "A pesticide study in two English counties found bumblebee colonies produced a quarter fewer queens in one season.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c144",
+  "retelling": "Pesticides harmed bumblebees: one season in two English counties left colonies with a quarter fewer queens.",
+  "claim": "The pesticide harms bees.",
+  "conditions": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "item": "c146",
+  "retelling": "A survey of 12,000 young office workers saw blood pressure fall 11 points, but only among those who cut salt.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "item": "c148",
+  "retelling": "Icelandic public offices tried a four-day week: burnout fell, pay stayed the same, sick days didn't change.",
+  "claim": "A four-day week reduces burnout.",
+  "conditions": [
+   "The trial was run in public-sector offices in Iceland.",
+   "Pay was kept the same throughout.",
+   "The number of sick days did not change."
+  ]
+ },
+ {
+  "item": "c150",
+  "retelling": "Three startup software teams said remote work raised productivity, but the gain faded after six months.",
+  "claim": "Working from home raises productivity.",
+  "conditions": [
+   "The evidence comes from software teams at three start-ups.",
+   "Productivity was measured by asking people to rate themselves.",
+   "The gain had disappeared after six months."
+  ]
+ },
+ {
+  "item": "c152",
+  "retelling": "Coffee's memory benefit was only tested in mice, at a dose like eight cups daily.",
+  "claim": "Drinking coffee improves memory.",
+  "conditions": [
+   "So far this has only been tested in mice.",
+   "The dose was the equivalent of eight cups a day.",
+   "The effect wore off after about two hours."
+  ]
+ },
+ {
+  "item": "c154",
+  "retelling": "A reading app helped children learning English as a second language, but the gains faded by the next school year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c156",
+  "retelling": "Small six-week trial of over-65s: daily walks lowered blood pressure, only in people not on medication.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "conditions": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "item": "c158",
+  "retelling": "A reading app helped English-learning children read better than no teaching, but the gains faded by next year.",
+  "claim": "The reading app helps children learn to read.",
+  "conditions": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "item": "c160",
+  "retelling": "Vitamin D reportedly prevents colds, shown in one supplement-funded winter trial of under-fives.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "conditions": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ }
+]

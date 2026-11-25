@@ -1,0 +1,300 @@
+{
+ "mean_words_by_hop": {
+  "0": 33.4,
+  "1": 18.6,
+  "2": 17.8,
+  "3": 16.9,
+  "4": 16.7,
+  "5": 16.8
+ },
+ "word_overlap_with_previous_hop": {
+  "1": 0.378,
+  "2": 0.739,
+  "3": 0.804,
+  "4": 0.716,
+  "5": 0.835
+ },
+ "share_copied_verbatim_from_previous_hop": {
+  "1": 0.0,
+  "2": 0.125,
+  "3": 0.188,
+  "4": 0.125,
+  "5": 0.312
+ },
+ "identification_by_hop": {
+  "1": {
+   "right": 32,
+   "of": 32,
+   "share_right": 1.0,
+   "advantage": 1.0,
+   "advantage_95pct": [
+    0.786,
+    1.0
+   ],
+   "judge_said_it_was_a_guess": 0
+  },
+  "2": {
+   "right": 31,
+   "of": 32,
+   "share_right": 0.969,
+   "advantage": 0.938,
+   "advantage_95pct": [
+    0.686,
+    0.988
+   ],
+   "judge_said_it_was_a_guess": 0
+  },
+  "3": {
+   "right": 32,
+   "of": 32,
+   "share_right": 1.0,
+   "advantage": 1.0,
+   "advantage_95pct": [
+    0.786,
+    1.0
+   ],
+   "judge_said_it_was_a_guess": 0
+  },
+  "4": {
+   "right": 32,
+   "of": 32,
+   "share_right": 1.0,
+   "advantage": 1.0,
+   "advantage_95pct": [
+    0.786,
+    1.0
+   ],
+   "judge_said_it_was_a_guess": 0
+  },
+  "5": {
+   "right": 32,
+   "of": 32,
+   "share_right": 1.0,
+   "advantage": 1.0,
+   "advantage_95pct": [
+    0.786,
+    1.0
+   ],
+   "judge_said_it_was_a_guess": 0
+  }
+ },
+ "advantage_vs_power_of_first_hop": {
+  "1": {
+   "measured": 1.0,
+   "first_hop_to_the_power": 1.0
+  },
+  "2": {
+   "measured": 0.938,
+   "first_hop_to_the_power": 1.0
+  },
+  "3": {
+   "measured": 1.0,
+   "first_hop_to_the_power": 1.0
+  },
+  "4": {
+   "measured": 1.0,
+   "first_hop_to_the_power": 1.0
+  },
+  "5": {
+   "measured": 1.0,
+   "first_hop_to_the_power": 1.0
+  }
+ },
+ "units_by_hop": {
+  "1": {
+   "claim_kept": 0.906,
+   "claim_kept_or_weakened": 0.906,
+   "conditions_kept": 0.885,
+   "conditions_kept_or_weakened": 0.958,
+   "conditions_kept_95pct": [
+    0.806,
+    0.935
+   ],
+   "something_added": 0.0
+  },
+  "2": {
+   "claim_kept": 0.906,
+   "claim_kept_or_weakened": 0.906,
+   "conditions_kept": 0.833,
+   "conditions_kept_or_weakened": 0.927,
+   "conditions_kept_95pct": [
+    0.746,
+    0.895
+   ],
+   "something_added": 0.0
+  },
+  "3": {
+   "claim_kept": 0.906,
+   "claim_kept_or_weakened": 0.938,
+   "conditions_kept": 0.75,
+   "conditions_kept_or_weakened": 0.906,
+   "conditions_kept_95pct": [
+    0.655,
+    0.826
+   ],
+   "something_added": 0.0
+  },
+  "4": {
+   "claim_kept": 0.906,
+   "claim_kept_or_weakened": 0.938,
+   "conditions_kept": 0.74,
+   "conditions_kept_or_weakened": 0.917,
+   "conditions_kept_95pct": [
+    0.644,
+    0.817
+   ],
+   "something_added": 0.0
+  },
+  "5": {
+   "claim_kept": 0.906,
+   "claim_kept_or_weakened": 0.906,
+   "conditions_kept": 0.729,
+   "conditions_kept_or_weakened": 0.906,
+   "conditions_kept_95pct": [
+    0.633,
+    0.808
+   ],
+   "something_added": 0.0
+  }
+ },
+ "condition_retention_per_hop": {
+  "1": {
+   "present_before": 96,
+   "still_present": 92,
+   "retention": 0.958,
+   "retention_95pct": [
+    0.898,
+    0.984
+   ],
+   "reappeared_after_absence": 0,
+   "absent_before": 0
+  },
+  "2": {
+   "present_before": 92,
+   "still_present": 89,
+   "retention": 0.967,
+   "retention_95pct": [
+    0.908,
+    0.989
+   ],
+   "reappeared_after_absence": 0,
+   "absent_before": 4
+  },
+  "3": {
+   "present_before": 89,
+   "still_present": 86,
+   "retention": 0.966,
+   "retention_95pct": [
+    0.906,
+    0.988
+   ],
+   "reappeared_after_absence": 1,
+   "absent_before": 7
+  },
+  "4": {
+   "present_before": 87,
+   "still_present": 87,
+   "retention": 1.0,
+   "retention_95pct": [
+    0.958,
+    1.0
+   ],
+   "reappeared_after_absence": 1,
+   "absent_before": 9
+  },
+  "5": {
+   "present_before": 88,
+   "still_present": 87,
+   "retention": 0.989,
+   "retention_95pct": [
+    0.938,
+    0.998
+   ],
+   "reappeared_after_absence": 0,
+   "absent_before": 8
+  }
+ },
+ "claim_retention_per_hop": {
+  "1": {
+   "present_before": 32,
+   "still_present": 29,
+   "retention": 0.906
+  },
+  "2": {
+   "present_before": 29,
+   "still_present": 29,
+   "retention": 1.0
+  },
+  "3": {
+   "present_before": 29,
+   "still_present": 29,
+   "retention": 1.0
+  },
+  "4": {
+   "present_before": 30,
+   "still_present": 30,
+   "retention": 1.0
+  },
+  "5": {
+   "present_before": 30,
+   "still_present": 29,
+   "retention": 0.967
+  }
+ },
+ "conditions_present_by_order": {
+  "1": {
+   "claim_stated_first": 0.958,
+   "conditions_stated_first": 0.958
+  },
+  "3": {
+   "claim_stated_first": 0.896,
+   "conditions_stated_first": 0.917
+  },
+  "5": {
+   "claim_stated_first": 0.917,
+   "conditions_stated_first": 0.896
+  }
+ },
+ "conditions_present_by_kind": {
+  "1": {
+   "who it was shown for": 1.0,
+   "strength of evidence": 0.969,
+   "size or limit of effect": 0.906
+  },
+  "3": {
+   "who it was shown for": 0.969,
+   "strength of evidence": 0.875,
+   "size or limit of effect": 0.875
+  },
+  "5": {
+   "who it was shown for": 0.969,
+   "strength of evidence": 0.875,
+   "size or limit of effect": 0.875
+  }
+ },
+ "claim_present_by_order": {
+  "1": {
+   "claim_stated_first": "16 of 16",
+   "claim_stated_last": "13 of 16"
+  },
+  "3": {
+   "claim_stated_first": "16 of 16",
+   "claim_stated_last": "14 of 16"
+  },
+  "5": {
+   "claim_stated_first": "16 of 16",
+   "claim_stated_last": "13 of 16"
+  }
+ },
+ "two_chains_same_original_agree_on_condition_at_hop_5": 0.896,
+ "two_routes_at_hop_5": {
+  "right": 16,
+  "of": 16,
+  "advantage": 1.0,
+  "advantage_95pct": [
+   0.612,
+   1.0
+  ],
+  "one_route_at_hop_5": 1.0
+ }
+}

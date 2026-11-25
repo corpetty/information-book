@@ -329,6 +329,9 @@ information-book/
 │   ├── index.html                     viewer shell
 │   ├── app.js                         Cytoscape wiring + side panel
 │   └── styles.css
+├── formal/                            LEAN 4 library on description complexity, checking the book's
+│   │                                  transmission arguments (own README and overview.html)
+│   └── sim/                           simulations of the retelling model, with a report
 ├── site/                              QUARTZ publishing site
 │   ├── quartz.config.yaml             book-specific config and layout (plugins are npm packages)
 │   ├── quartz.ts                      loads the YAML; passes the Explorer its reading-order sort,

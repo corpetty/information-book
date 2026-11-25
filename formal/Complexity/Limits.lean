@@ -591,6 +591,20 @@ theorem leak_iterate (B n : ℕ) (hn : n ≤ B) :
     simp only [Channel.Relay.pass, leakRelay, id, List.length_tail, List.length_take] at this ⊢
     omega
 
+/-- **A function relay can lose a fixed share of a repertoire per hop.** Through the same
+relay, every idea of `B` bits is an idea of `B - n` bits after `n ≤ B` retellings. There are
+`2 ^ B` of the former and `2 ^ (B - n)` of the latter, so at most a share `2 ^ (-n)` of the
+versions is left: one half per hop, with no randomness anywhere. -/
+theorem leak_iterate_length (B n : ℕ) (x : List Bool) (hx : x.length = B) (hn : n ≤ B) :
+    ((leakRelay B).pass^[n] x).length = B - n := by
+  induction n with
+  | zero => simpa using hx
+  | succ n ih =>
+    rw [Function.iterate_succ_apply']
+    have := ih (by omega)
+    simp only [Channel.Relay.pass, leakRelay, id, List.length_tail, List.length_take] at this ⊢
+    omega
+
 /-! ### 9. With a delimiter, both bounds hold
 
 The failures in sections 5 and 6 are failures of *undelimited* concatenation, not of the

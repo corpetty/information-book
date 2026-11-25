@@ -1,0 +1,194 @@
+[
+ {
+  "topic": 1,
+  "variant": "A",
+  "claim_first": true,
+  "text": "A daily twenty-minute walk lowers blood pressure. The study only included adults over 65. It was a small trial of 48 people that ran for six weeks. The drop was about 3 points, and only in people not taking medication.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "caveats": [
+   "The study only included adults over 65.",
+   "It was a small trial of 48 people that ran for six weeks.",
+   "The drop was about 3 points, and only in people not taking medication."
+  ]
+ },
+ {
+  "topic": 1,
+  "variant": "B",
+  "claim_first": false,
+  "text": "The study only included office workers under 40. It was a survey of 12,000 people, so it cannot show cause. The drop was about 11 points, and only in people who also cut down on salt. A daily twenty-minute walk lowers blood pressure.",
+  "claim": "A daily twenty-minute walk lowers blood pressure.",
+  "caveats": [
+   "The study only included office workers under 40.",
+   "It was a survey of 12,000 people, so it cannot show cause.",
+   "The drop was about 11 points, and only in people who also cut down on salt."
+  ]
+ },
+ {
+  "topic": 2,
+  "variant": "A",
+  "claim_first": false,
+  "text": "So far this has only been tested in mice. The dose was the equivalent of eight cups a day. The effect wore off after about two hours. Drinking coffee improves memory.",
+  "claim": "Drinking coffee improves memory.",
+  "caveats": [
+   "So far this has only been tested in mice.",
+   "The dose was the equivalent of eight cups a day.",
+   "The effect wore off after about two hours."
+  ]
+ },
+ {
+  "topic": 2,
+  "variant": "B",
+  "claim_first": true,
+  "text": "Drinking coffee improves memory. So far this has only been tested in university students. It only showed up after a night without sleep. The improvement was 2 percent on a single word-list test.",
+  "claim": "Drinking coffee improves memory.",
+  "caveats": [
+   "So far this has only been tested in university students.",
+   "It only showed up after a night without sleep.",
+   "The improvement was 2 percent on a single word-list test."
+  ]
+ },
+ {
+  "topic": 3,
+  "variant": "A",
+  "claim_first": true,
+  "text": "Working from home raises productivity. The evidence comes from one call-centre company in China. Only staff who volunteered to work from home were included. The gain was 13 percent and came mostly from taking fewer breaks.",
+  "claim": "Working from home raises productivity.",
+  "caveats": [
+   "The evidence comes from one call-centre company in China.",
+   "Only staff who volunteered to work from home were included.",
+   "The gain was 13 percent and came mostly from taking fewer breaks."
+  ]
+ },
+ {
+  "topic": 3,
+  "variant": "B",
+  "claim_first": false,
+  "text": "The evidence comes from software teams at three start-ups. Productivity was measured by asking people to rate themselves. The gain had disappeared after six months. Working from home raises productivity.",
+  "claim": "Working from home raises productivity.",
+  "caveats": [
+   "The evidence comes from software teams at three start-ups.",
+   "Productivity was measured by asking people to rate themselves.",
+   "The gain had disappeared after six months."
+  ]
+ },
+ {
+  "topic": 4,
+  "variant": "A",
+  "claim_first": false,
+  "text": "This holds only for drivers coming from the north side. The measurements were taken during the school holidays. The saving averages four minutes. The new bridge has cut commuting times.",
+  "claim": "The new bridge has cut commuting times.",
+  "caveats": [
+   "This holds only for drivers coming from the north side.",
+   "The measurements were taken during the school holidays.",
+   "The saving averages four minutes."
+  ]
+ },
+ {
+  "topic": 4,
+  "variant": "B",
+  "claim_first": true,
+  "text": "The new bridge has cut commuting times. This holds only for bus passengers. The comparison year was one with major roadworks. The saving averages twenty minutes.",
+  "claim": "The new bridge has cut commuting times.",
+  "caveats": [
+   "This holds only for bus passengers.",
+   "The comparison year was one with major roadworks.",
+   "The saving averages twenty minutes."
+  ]
+ },
+ {
+  "topic": 5,
+  "variant": "A",
+  "claim_first": true,
+  "text": "Vitamin D supplements prevent colds. The benefit was found only in people who were deficient to begin with. It comes from pooling 25 small trials of mixed quality. It amounts to one fewer cold a year for every 30 people.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "caveats": [
+   "The benefit was found only in people who were deficient to begin with.",
+   "It comes from pooling 25 small trials of mixed quality.",
+   "It amounts to one fewer cold a year for every 30 people."
+  ]
+ },
+ {
+  "topic": 5,
+  "variant": "B",
+  "claim_first": false,
+  "text": "The benefit was found only in children under five. It comes from a single trial paid for by a supplement maker. It was seen only in the winter months. Vitamin D supplements prevent colds.",
+  "claim": "Vitamin D supplements prevent colds.",
+  "caveats": [
+   "The benefit was found only in children under five.",
+   "It comes from a single trial paid for by a supplement maker.",
+   "It was seen only in the winter months."
+  ]
+ },
+ {
+  "topic": 6,
+  "variant": "A",
+  "claim_first": false,
+  "text": "The children in the study already had a private tutor. The app was tested for four weeks. It improved letter recognition but not understanding of stories. The reading app helps children learn to read.",
+  "claim": "The reading app helps children learn to read.",
+  "caveats": [
+   "The children in the study already had a private tutor.",
+   "The app was tested for four weeks.",
+   "It improved letter recognition but not understanding of stories."
+  ]
+ },
+ {
+  "topic": 6,
+  "variant": "B",
+  "claim_first": true,
+  "text": "The reading app helps children learn to read. The children in the study were learning English as a second language. The app was compared with no teaching at all. The gains had faded by the next school year.",
+  "claim": "The reading app helps children learn to read.",
+  "caveats": [
+   "The children in the study were learning English as a second language.",
+   "The app was compared with no teaching at all.",
+   "The gains had faded by the next school year."
+  ]
+ },
+ {
+  "topic": 7,
+  "variant": "A",
+  "claim_first": true,
+  "text": "The pesticide harms bees. This was observed in laboratory colonies. The doses were ten times what bees meet in fields. It shortened foraging trips but did not kill colonies.",
+  "claim": "The pesticide harms bees.",
+  "caveats": [
+   "This was observed in laboratory colonies.",
+   "The doses were ten times what bees meet in fields.",
+   "It shortened foraging trips but did not kill colonies."
+  ]
+ },
+ {
+  "topic": 7,
+  "variant": "B",
+  "claim_first": false,
+  "text": "This was observed in bumblebees, not honeybees. The study covered one season in two English counties. Colonies produced a quarter fewer queens. The pesticide harms bees.",
+  "claim": "The pesticide harms bees.",
+  "caveats": [
+   "This was observed in bumblebees, not honeybees.",
+   "The study covered one season in two English counties.",
+   "Colonies produced a quarter fewer queens."
+  ]
+ },
+ {
+  "topic": 8,
+  "variant": "A",
+  "claim_first": false,
+  "text": "The firms in the trial had all volunteered for it. There was no comparison group. Weekly hours only fell from 38 to 34. A four-day week reduces burnout.",
+  "claim": "A four-day week reduces burnout.",
+  "caveats": [
+   "The firms in the trial had all volunteered for it.",
+   "There was no comparison group.",
+   "Weekly hours only fell from 38 to 34."
+  ]
+ },
+ {
+  "topic": 8,
+  "variant": "B",
+  "claim_first": true,
+  "text": "A four-day week reduces burnout. The trial was run in public-sector offices in Iceland. Pay was kept the same throughout. The number of sick days did not change.",
+  "claim": "A four-day week reduces burnout.",
+  "caveats": [
+   "The trial was run in public-sector offices in Iceland.",
+   "Pay was kept the same throughout.",
+   "The number of sick days did not change."
+  ]
+ }
+]
